@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nocturne / Pearl Fleet</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1015;--panel:#141921;--edge:#2c3440;--ink:#dfd8cd;--muted:#a2adaf;--lilac:#baabca;--teal:#a2c5ba;--copper:#cdb291}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,sans-serif}button,input,select,textarea{font:inherit}button,select,input[type=number],textarea{background:#19212a;color:var(--ink);border:1px solid var(--edge);border-radius:6px;padding:7px 10px}button{cursor:pointer}button:hover{border-color:var(--teal);background:#24313a}button:focus-visible,select:focus-visible,input:focus-visible,canvas:focus-visible,textarea:focus-visible{outline:2px solid var(--teal);outline-offset:3px}input[type=range]{width:100%;accent-color:var(--teal)}input[type=checkbox]{accent-color:var(--teal)}header{max-width:1900px;margin:auto;padding:22px 26px 18px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--edge)}.eyebrow{font:11px/1.5 ui-monospace,monospace;letter-spacing:.19em;text-transform:uppercase;color:var(--teal)}h1{font-size:29px;letter-spacing:-.045em;margin:2px 0 3px;font-weight:550}header p{margin:0;color:var(--muted);font-size:13px}.pill{font:11px ui-monospace,monospace;letter-spacing:.1em;background:#202729;border:1px solid #3a4846;color:var(--teal);padding:8px 12px;border-radius:20px;white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1fr) 242px;gap:20px;padding:22px 26px;max-width:1900px;margin:auto}main{min-width:0}.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}.toolbar .space{flex:1}.quiet{color:var(--muted);font-size:12px}.stageFrame{border:1px solid #37404c;border-radius:10px;background:#101218;padding:12px;overflow:auto}.stageFrame canvas{display:block;max-width:100%;height:auto;cursor:crosshair}.meterbar{display:flex;gap:20px;flex-wrap:wrap;font:11px ui-monospace,monospace;color:var(--muted);padding:10px 2px}.meterbar b{color:var(--teal);font-weight:400}.agentLinks{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 14px}.agentLinks button{font:11px ui-monospace,monospace;padding:5px 9px;color:var(--muted)}.agentLinks button[aria-selected=true]{border-color:#6a8c85;color:var(--teal);background:#22302f}.composer{display:flex;gap:8px;align-items:stretch;border-top:1px solid var(--edge);padding-top:14px}.composer textarea{flex:1;min-width:0;resize:vertical;min-height:44px;height:46px;max-height:180px;font:13px/1.5 ui-monospace,monospace}.composer button{padding-inline:18px}.under{margin:10px 0 0;color:var(--muted);font-size:12px}.under strong{color:var(--copper);font-weight:500}.desk{border-left:1px solid var(--edge);padding-left:20px}.desk h2{font-size:15px;margin:0 0 18px}.control{margin-bottom:19px}.control label{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:6px}.control select{width:100%}.control output{font:11px ui-monospace,monospace;color:var(--teal)}.control .check{justify-content:flex-start;gap:8px}.swatches{display:flex;height:10px;gap:3px;margin-top:10px}.swatches span{flex:1;border-radius:2px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:8px}.twocol input{width:100%}details{margin-top:16px;border-top:1px solid var(--edge);padding-top:12px}summary{cursor:pointer;color:var(--lilac);font-size:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.7 ui-monospace,monospace;color:var(--ink);background:#10151b;padding:14px;border-radius:6px;max-height:440px;overflow:auto}.error{color:#efaca8;min-height:20px;font-size:12px}.footer{color:#819092;font-size:11px;padding:5px 26px 28px;max-width:1900px;margin:auto}.desk p{font-size:11px;color:#8f9b9c}.exports{display:flex;flex-wrap:wrap;gap:6px}.exports button{font-size:11px}.status{color:var(--teal);min-height:18px;font-size:12px}.legend{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.legend div{padding:12px 14px;border:1px solid #27313c;border-radius:8px;color:var(--muted);font-size:12px}.legend strong{color:var(--lilac);display:block;font-size:12px;margin-bottom:5px;font-weight:500} @media(max-width:1050px){.layout{grid-template-columns:1fr}.desk{border-left:0;border-top:1px solid var(--edge);padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}.desk h2,.desk details,.desk p{grid-column:1/-1}header{align-items:flex-start}.pill{display:none}} @media(max-width:600px){.layout{padding:12px}header{padding:16px}.legend{grid-template-columns:1fr}}
+</style></head><body>
+<header><div><div class="eyebrow">Nocturne / volume 03 / interactive cell art</div><h1>Pearl Fleet</h1><p>Many minds in motion. One place to see, follow, and speak.</p></div><div class="pill" id="sourcePill">OFFLINE DEMO · NO AGENTS CONNECTED</div></header>
+<div class="layout"><main>
+<div class="toolbar"><button id="overview">Fleet overview</button><button id="expand">Open selected agent</button><button id="motion">Hold motion</button><label class="quiet">FPS <select id="fps"><option>30</option><option selected>60</option><option>90</option><option>120</option></select></label><label class="quiet"><input id="feed" type="checkbox" checked> Demo data</label><span class="space"></span><span class="quiet" id="viewCaption">144 × 48 cells / 2:1 geometry</span></div>
+<div class="stageFrame"><canvas id="stage" tabindex="0" role="application" aria-label="Fleet terminal preview. Tab selects agents; Enter expands; Escape returns; Page Up and Down scroll conversation. All agents are also available as buttons below."></canvas></div>
+<div class="meterbar"><span>MODEL <b id="revision">0</b></span><span>MOTION <b id="motionTime">0</b></span><span>RENDER <b id="renderCost">0</b></span><span>DATA PAINTS <b id="dataPaints">0</b></span><span>FRAME <b id="frameCount">0</b></span></div>
+<div class="agentLinks" id="agents" role="tablist" aria-label="Agent workspaces"></div>
+<div class="composer"><textarea id="draft" aria-label="Message the selected agent" placeholder="Message ATLAS. Enter sends; Shift+Enter adds a line."></textarea><button id="send">Send note</button></div>
+<p class="under"><strong id="recipient">ATLAS</strong> · This study uses a local demo reply driver. Messages are never shell commands. In an embedding, delivery belongs to your explicit adapter.</p>
+<div class="status" id="status" role="status" aria-live="polite"></div><div class="error" id="error" role="alert"></div>
+<div class="legend"><div><strong>Enter an agent's space.</strong>Click a tile or tab. Its surface expands into a conversation and telemetry workspace. Escape folds it back. Drafts and reading positions stay with their agents.</div><div><strong>Let text arrive, not pop.</strong>New stream chunks dissolve into view. Near the top, text softens to 76% ink. Click a message to restore full emphasis; errors never lose emphasis.</div></div>
+<details id="transcriptDetails"><summary>Readable transcript / unfaded, selectable text</summary><pre id="transcript"></pre></details>
+<details><summary>Application handoff / scene and data export</summary><p class="quiet">Scene JSON contains the current normalized primitives and authoritative values. Event records include their presentation timestamps. No network, account, or credential is involved.</p><div class="exports"><button id="exportScene">Export native scene</button><button id="exportSnapshot">Export model snapshot</button><button id="exportEvents">Export retained events</button><button id="exportText">Export transcript</button></div></details>
+</main><aside class="desk"><h2>The surface desk</h2>
+<div class="control"><label for="palette">Color story</label><select id="palette"></select><div class="swatches" id="swatches"></div></div>
+<div class="control"><label for="expandMs">Workspace expansion <output id="expandMsOut"></output></label><input id="expandMs" type="range" min="0" max="1400" step="20" value="560"></div>
+<div class="control"><label for="arrivalMs">New text dissolve <output id="arrivalMsOut"></output></label><input id="arrivalMs" type="range" min="0" max="1400" step="20" value="520"></div>
+<div class="control"><label for="horizonMinimum">Top-edge ink floor <output id="horizonMinimumOut"></output></label><input id="horizonMinimum" type="range" min="500" max="1000" step="10" value="760"></div>
+<div class="control"><label for="horizonRows">Soft horizon depth <output id="horizonRowsOut"></output></label><input id="horizonRows" type="range" min="0" max="14" value="6"></div>
+<div class="control"><label for="backgroundBrightness">Background light <output id="backgroundBrightnessOut"></output></label><input id="backgroundBrightness" type="range" min="0" max="600" value="110"></div>
+<div class="control"><label class="check"><input type="checkbox" id="dense"> Dense matrix view</label><label class="check"><input type="checkbox" id="readMode"> Reading mode / full ink</label><label class="check"><input type="checkbox" id="reducedMotion"> Reduced decorative motion</label></div>
+<div class="control"><label>Terminal dimensions</label><div class="twocol"><input id="cols" type="number" min="38" max="240" value="144" aria-label="Columns"><input id="rows" type="number" min="16" max="100" value="48" aria-label="Rows"></div></div>
+<details><summary>What is live here?</summary><p>Telemetry is a deterministic synthetic source, labeled as such. The plots draw those samples. Messages are stream events, not a prerecorded movie. Motion aims at 30 Hz. Input/data repaint synchronously at the last sampled motion time.</p><p>Holding motion reveals incoming text immediately. Returning to live tail is explicit when you have scrolled into history. Pausing demo data is independent of pausing motion.</p></details>
+<p>All art inside the terminal is emitted cell geometry: braille, line art, blocks and RGB ink. No shader, blur, glow, or CSS transformation is added to its animation.</p>
+</aside></div><div class="footer">Source SDK preview · Application-owned terminal surface · Retained text is never altered by fading · Keyboard and pointer interaction · No provider connection or shell execution</div>
+<script id="fleetData" type="application/json">__FLEET_DATA__</script><script>
+__STUDIO_ENGINE__
+__FLEET_MODEL__
+__FLEET_VIEW__
+__FLEET_CONTROLLER__
+(async()=>{
+'use strict';
+const DATA=JSON.parse(document.getElementById('fleetData').textContent),$=id=>document.getElementById(id);
+const engine=await StudioEngine.create(Uint8Array.from(atob(DATA.wasm),c=>c.charCodeAt(0)),DATA.schema);
+const c=new FleetController(engine,createDemoFleet());c.setPresentationFps(60);let presentationFps=60;let auto=true,frames=0,dataPaints=0,lastScene=null,lastFrame=null,lastDOMRevision=-1,lastAgent='',sourceMs=10000;
+let lastWall=performance.now(),motionAccumulator=0,lastMotionPaint=0;
+function color(n){return '#'+(n>>>0).toString(16).padStart(6,'0');}
+function paintCells(frame){
+ const cv=$('stage'),cw=9,ch=18,ratio=Math.min(devicePixelRatio||1,2),width=frame.width*cw,height=frame.height*ch;
+ if(cv.width!==Math.round(width*ratio)||cv.height!==Math.round(height*ratio)){cv.width=Math.round(width*ratio);cv.height=Math.round(height*ratio);cv.style.width=width+'px';}
+ const ctx=cv.getContext('2d',{alpha:false});ctx.setTransform(ratio,0,0,ratio,0,0);ctx.font='14px "DejaVu Sans Mono","SFMono-Regular",Consolas,monospace';ctx.textBaseline='middle';ctx.textAlign='center';
+ for(let y=0;y<frame.height;y++)for(let x=0;x<frame.width;x++){
+  const i=(y*frame.width+x)*4,g=frame.cells[i],px=x*cw,py=y*ch;ctx.fillStyle=color(frame.cells[i+2]);ctx.fillRect(px,py,cw,ch);if(!g||g===32)continue;ctx.fillStyle=color(frame.cells[i+1]);
+  if(g===0x2580)ctx.fillRect(px,py,cw,ch/2);else if(g===0x2584)ctx.fillRect(px,py+ch/2,cw,ch/2);else if(g===0x2588)ctx.fillRect(px,py,cw,ch);else if(g>=0x2581&&g<=0x2587){const h=(g-0x2580)*ch/8;ctx.fillRect(px,py+ch-h,cw,h);}else if(g>=0x2589&&g<=0x258f)ctx.fillRect(px,py,cw*(0x2590-g)/8,ch);else if(g>=0x2800&&g<=0x28ff){const bits=[1,8,2,16,4,32,64,128];for(let k=0;k<8;k++)if((g-0x2800)&bits[k]){ctx.beginPath();ctx.arc(px+cw*(k%2?.7:.3),py+ch*(Math.floor(k/2)+.5)/4,Math.max(.65,cw*.105),0,Math.PI*2);ctx.fill();}}else ctx.fillText(String.fromCodePoint(g),px+cw/2,py+ch*.51);
+ }
+}
+function paint(reason='motion'){
+ const start=performance.now();lastScene=c.compose();lastFrame=engine.render(lastScene.config,lastScene.timeMs,lastScene.nodes,lastScene.events);paintCells(lastFrame);frames++;if(reason==='data')dataPaints++;
+ $('revision').textContent=String(c.model.revision);$('motionTime').textContent=c.motionMs+' ms';$('renderCost').textContent=(performance.now()-start).toFixed(1)+' ms incl. canvas';$('frameCount').textContent=String(frames);$('dataPaints').textContent=String(dataPaints);
+ $('viewCaption').textContent=`${c.width} × ${c.height} cells / ${c.opened?c.model.agent(c.selectedId).name:'fleet overview'}`;
+ if(lastAgent!==c.selectedId){$('draft').value=c.draft;$('draft').placeholder='Message '+c.model.agent(c.selectedId).name+'. Enter sends; Shift+Enter adds a line.';$('recipient').textContent=c.model.agent(c.selectedId).name;lastAgent=c.selectedId;}
+ for(const button of $('agents').children)button.setAttribute('aria-selected',String(button.dataset.agent===c.selectedId));
+ if(lastDOMRevision!==c.model.revision||$('transcript').dataset.agent!==c.selectedId){$('transcript').textContent=c.model.transcript(c.selectedId);$('transcript').dataset.agent=c.selectedId;lastDOMRevision=c.model.revision;}
+ window.fleetMetrics={revision:c.model.revision,motionMs:c.motionMs,frames,dataPaints,selectedId:c.selectedId,opened:c.opened,paused:c.paused,nodeCount:lastScene.nodes.length,scrollOffset:c.scrollOffset};
+}
+function act(fn,message=''){try{$('error').textContent='';fn();paint('data');if(message)$('status').textContent=message;}catch(e){$('error').textContent=String(e.message||e);}}
+function choosePalette(id){const p=DATA.palettes.find(p=>p.id===id);c.config.palette=p.colors.slice();c.config.values.baseColor=parseInt(p.background.slice(1),16);c.config.values.inkColor=parseInt(p.ink.slice(1),16);$('swatches').replaceChildren(...p.colors.map(s=>{const el=document.createElement('span');el.style.background=s;el.title=s;return el;}));}
+for(const p of DATA.palettes){const o=document.createElement('option');o.value=p.id;o.textContent=p.name;$('palette').append(o);} $('palette').value='smart-dark';choosePalette('smart-dark');$('palette').onchange=()=>act(()=>choosePalette($('palette').value));
+for(const a of c.model.agents){const b=document.createElement('button');b.textContent=a.name;b.dataset.agent=a.id;b.setAttribute('role','tab');b.setAttribute('aria-selected',String(a.id===c.selectedId));b.onclick=()=>act(()=>c.openAgent(a.id));$('agents').append(b);}
+for(const key of ['expandMs','arrivalMs','horizonMinimum','horizonRows','backgroundBrightness']){
+ const update=()=>{$(key+'Out').textContent=key.endsWith('Ms')?$(''+key).value+' ms':key==='horizonMinimum'?Math.round(Number($(key).value)/10)+'%':$(key).value;};update();$(key).oninput=()=>act(()=>{c.configure({[key]:Number($(key).value)});update();});
+}
+for(const key of ['dense','readMode','reducedMotion'])$(key).onchange=()=>act(()=>c.configure({[key]:$(key).checked}));
+function resize(){act(()=>c.resize(Number($('cols').value),Number($('rows').value)));} $('cols').onchange=resize;$('rows').onchange=resize;
+$('overview').onclick=()=>act(()=>c.closeAgent());$('expand').onclick=()=>act(()=>c.openAgent(c.selectedId));
+$('motion').onclick=()=>act(()=>{c.setPaused(!c.paused);$('motion').textContent=c.paused?'Resume motion':'Hold motion';});
+$('draft').oninput=()=>act(()=>c.setDraft($('draft').value));
+function send(){act(()=>{if(!c.opened)c.openAgent(c.selectedId);c.send($('draft').value);$('draft').value='';},'Note placed in the local outbox. Demo replies are simulated.');}
+$('send').onclick=send;$('draft').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();send();}if(e.key==='Escape'){$('stage').focus();}};
+$('stage').onkeydown=e=>{
+ if(e.ctrlKey&&e.key.toLowerCase()==='p'){e.preventDefault();$('motion').click();return;}
+ if(e.key==='Tab'){e.preventDefault();act(()=>c.nextAgent(e.shiftKey?-1:1));}
+ else if(e.key==='Enter'){e.preventDefault();if(c.opened)$('draft').focus();else act(()=>c.openAgent(c.selectedId));}
+ else if(e.key==='Escape'){e.preventDefault();act(()=>c.closeAgent());}
+ else if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();act(()=>c.nextAgent(e.key==='ArrowRight'?1:-1));}
+ else if(e.key==='PageUp'||e.key==='PageDown'){e.preventDefault();act(()=>c.scroll(e.key==='PageUp'?8:-8));}
+ else if(e.key==='End'){e.preventDefault();act(()=>c.liveTail());}
+ else if(/^[1-8]$/.test(e.key)){const a=c.model.agents[Number(e.key)-1];if(a)act(()=>c.openAgent(a.id));}
+ else if(!e.ctrlKey&&!e.metaKey&&e.key.length===1){$('draft').focus();$('draft').value+=e.key;act(()=>c.setDraft($('draft').value));}
+};
+$('stage').onclick=e=>{const r=$('stage').getBoundingClientRect(),x=Math.floor((e.clientX-r.left)/r.width*c.width),y=Math.floor((e.clientY-r.top)/r.height*c.height);act(()=>{const action=c.click(x,y);if(action==='compose')$('draft').focus();});};
+$('stage').addEventListener('wheel',e=>{if(!c.hasWorkspace)return;e.preventDefault();act(()=>c.scroll(e.deltaY<0?3:-3));},{passive:false});
+function download(name,value,type='application/json'){const blob=new Blob([typeof value==='string'?value:JSON.stringify(value,null,2)],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('exportScene').onclick=()=>download('pearl-fleet.scene.json',c.compose());$('exportSnapshot').onclick=()=>download('pearl-fleet.model.json',c.model.snapshot());$('exportEvents').onclick=()=>download('pearl-fleet.events.json',{version:1,droppedEvents:c.model.droppedEvents,records:c.model.eventLog});$('exportText').onclick=()=>download(c.selectedId+'-transcript.txt',c.model.transcript(c.selectedId),'text/plain');
+$('fps').onchange=()=>{presentationFps=Number($('fps').value);c.setPresentationFps(presentationFps);paint();};
+function dataTick(){sourceMs+=80;act(()=>c.advanceDemo(sourceMs));}
+const feedTimer=setInterval(()=>{if(auto&&$('feed').checked)dataTick();},80);
+function loop(now){const delta=Math.max(0,now-lastWall);lastWall=now;if(auto&&!c.paused)motionAccumulator+=delta;if(auto&&!c.paused&&!c.options.readMode&&!c.options.reducedMotion&&now-lastMotionPaint>=1000/presentationFps){c.setTime(Math.floor(motionAccumulator));try{paint();}catch(e){$('error').textContent=String(e.message||e);}lastMotionPaint+=Math.floor((now-lastMotionPaint)/(1000/presentationFps))*(1000/presentationFps);}requestAnimationFrame(loop);}
+// Tools for deterministic tests, recordings, and embedding examples. No hidden fetches.
+window.fleetApp={controller:c,engine,paint:()=>paint('data'),scene:()=>c.compose(),frame:()=>lastFrame,
+ stop:()=>{auto=false;$('feed').checked=false;},step:t=>{c.setPaused(false);c.setTime(t);motionAccumulator=t;paint();},
+ ingest:event=>act(()=>c.ingest(event)),dataTick,open:id=>act(()=>c.openAgent(id)),close:()=>act(()=>c.closeAgent()),
+ setPalette:id=>act(()=>{choosePalette(id);$('palette').value=id;}),dispose:()=>{auto=false;clearInterval(feedTimer);}};
+paint();requestAnimationFrame(loop);
+})().catch(e=>{document.getElementById('error').textContent=String(e.stack||e);});
+</script></body></html>

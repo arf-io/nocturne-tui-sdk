@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {NativeScene} from '../bindings/typescript/native_scene.mjs';
+const wasm=fs.readFileSync(new URL('../dist/nocturne_native.wasm',import.meta.url));
+const s=await NativeScene.create(wasm,2030);
+s.command({op:'resize',width:100,height:40});s.command({op:'prompt',presentation:'framed'});
+const text='A'.repeat(65535)+'🌧';
+s.command({op:'draft',text,emitWeather:false});
+assert.equal(s.infoComplete().prompt.text,text);assert.equal(s.textRunSource(0,0),text);
+assert.equal(s.textRunClusters(0,0).length,65536);assert.equal(s.textRunLayout(0,0,80).length,65536);
+assert.ok(s.textRunClip(0,0,80,0,0,80,1).length);
+assert.ok([...s.render().cells].includes('🌧'.codePointAt(0)));
+const snap=s.snapshot();assert.throws(()=>s.command({op:'input',text:'X'}));assert.deepEqual(s.snapshot(),snap);
+s.command({op:'select',anchor:65535,caret:65536});s.command({op:'input',text:'Z'});
+assert.equal(s.infoComplete().prompt.text,text.slice(0,-2)+'Z');s.restore(snap);assert.equal(s.infoComplete().prompt.text,text);
+console.log(JSON.stringify({status:'PASS',scalars:65536,checks:['draft','metadata','source','clusters','layout','clip','render','atomic overflow','selection replacement','snapshot restore'],schema:s.info().contract.snapshotSchema}));

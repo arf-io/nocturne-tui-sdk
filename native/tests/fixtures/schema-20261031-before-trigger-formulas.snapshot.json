@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "b33dc66bd8605ee195d43199adcde44c4ab20d77",
+  "schema": "0x20261031",
+  "snapshotBytes": 5266424,
+  "snapshotSha256": "ec9c570501fd35fea27db7de8720b49340e6ab438f3e907da3abc46c715a919f",
+  "librarySha256": "348785922925219c3392d6bed7b00c21b6c36d4e06c3d36bf1f4d3b936cf73ff",
+  "scope": "Actual previous-core snapshot; constant trigger migration oracle."
+}

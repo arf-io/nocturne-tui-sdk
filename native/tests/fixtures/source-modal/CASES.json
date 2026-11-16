@@ -1,0 +1,7988 @@
+[
+  {
+    "id": "source-modal-center",
+    "name": "Original modal / center",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "center",
+          "title": "INTERFACE / CENTER",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 6,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / CENTER ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 9,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 32,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal center",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "center",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CENTER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CENTER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-fullscreen",
+    "name": "Original modal / fullscreen",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "fullscreen",
+          "title": "INTERFACE / FULLSCREEN",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 2,
+        "y": 6,
+        "width": 96,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / FULLSCREEN ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 5,
+        "y": 9,
+        "width": 90,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 4,
+        "y": 32,
+        "width": 92,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal fullscreen",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "fullscreen",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 2,
+              "y": 6,
+              "width": 96,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / FULLSCREEN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 5,
+              "y": 9,
+              "width": 90,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 4,
+              "y": 32,
+              "width": 92,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 2,
+              "y": 6,
+              "width": 96,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / FULLSCREEN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 5,
+              "y": 9,
+              "width": 90,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 4,
+              "y": 32,
+              "width": 92,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-left",
+    "name": "Original modal / drawer-left",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-left",
+          "title": "INTERFACE / DRAWER-LEFT",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": -48,
+        "y": 6,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-LEFT ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": -45,
+        "y": 9,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": -46,
+        "y": 32,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-left",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "drawer-left",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": -23,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-LEFT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": -20,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": -21,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 2,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-LEFT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 5,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 4,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-right",
+    "name": "Original modal / drawer-right",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-right",
+          "title": "INTERFACE / DRAWER-RIGHT",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 93,
+        "y": 6,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-RIGHT ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 96,
+        "y": 9,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 95,
+        "y": 32,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-right",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "drawer-right",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 68,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-RIGHT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 71,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 70,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 43,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-RIGHT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 46,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 45,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-top",
+    "name": "Original modal / drawer-top",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-top",
+          "title": "INTERFACE / DRAWER-TOP",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 22,
+        "y": -21,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-TOP ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 25,
+        "y": -18,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 24,
+        "y": 5,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-top",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "drawer-top",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": -9,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-TOP ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": -6,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 17,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 4,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-TOP ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 7,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 30,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-bottom",
+    "name": "Original modal / drawer-bottom",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-bottom",
+          "title": "INTERFACE / DRAWER-BOTTOM",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 22,
+        "y": 32,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-BOTTOM ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 25,
+        "y": 35,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 24,
+        "y": 58,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-bottom",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "drawer-bottom",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 20,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-BOTTOM ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 23,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 46,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 7,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-BOTTOM ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 10,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 33,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-corner",
+    "name": "Original modal / corner",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "corner",
+          "title": "INTERFACE / CORNER",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 22,
+        "y": 7,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / CORNER ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 25,
+        "y": 10,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 24,
+        "y": 33,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal corner",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "corner",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 7,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CORNER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 10,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 33,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 7,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CORNER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 10,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 33,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-toast",
+    "name": "Original modal / toast",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "toast",
+          "title": "INTERFACE / TOAST",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 17,
+        "width": 76,
+        "height": 6,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / TOAST ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 20,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 21,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal toast",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "toast",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 17,
+              "width": 76,
+              "height": 6,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / TOAST ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 20,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 21,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 17,
+              "width": 76,
+              "height": 6,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / TOAST ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 20,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 21,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-error",
+    "name": "Original modal / error",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "error",
+          "title": "INTERFACE / ERROR",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 6,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / ERROR ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 9,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 32,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal error",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "error",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / ERROR ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / ERROR ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-confirmation",
+    "name": "Original modal / confirmation",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "confirmation",
+          "title": "INTERFACE / CONFIRMATION",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 6,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / CONFIRMATION ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 9,
+        "width": 70,
+        "height": 4,
+        "text": "This specimen does not authorize an external action. Confirm applies only to the local demonstration.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47800,
+        "kind": "item",
+        "x": 14,
+        "y": 30,
+        "width": 72,
+        "height": 1,
+        "text": "✓ Confirm local demonstration",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60003,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 32,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002,
+          60003
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal confirmation",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "confirmation",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CONFIRMATION ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "This specimen does not authorize an external action. Confirm applies only to the local demonstration.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47800,
+              "kind": "item",
+              "x": 14,
+              "y": 30,
+              "width": 72,
+              "height": 1,
+              "text": "✓ Confirm local demonstration",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60003,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 0
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CONFIRMATION ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "This specimen does not authorize an external action. Confirm applies only to the local demonstration.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47800,
+              "kind": "item",
+              "x": 14,
+              "y": 30,
+              "width": 72,
+              "height": 1,
+              "text": "✓ Confirm local demonstration",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60003,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 0
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-dropdown",
+    "name": "Original modal / dropdown",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "dropdown",
+          "title": "INTERFACE / DROPDOWN",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 14,
+        "width": 76,
+        "height": 12,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DROPDOWN ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 17,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 24,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal dropdown",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "originalKind": "dropdown",
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 14,
+              "width": 76,
+              "height": 12,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DROPDOWN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 17,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 24,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 14,
+              "width": 76,
+              "height": 12,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DROPDOWN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 17,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 24,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-eight-layers",
+    "name": "Original modal / eight retained layers",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "commands",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "edit",
+        "context": "commands",
+        "query": "restored query",
+        "selected": 3,
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal eight retained layers",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "expectedSourceModal": {
+      "depth": 8
+    }
+  },
+  {
+    "id": "source-modal-dismiss",
+    "name": "Original modal / restore one context",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "commands",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "edit",
+        "query": "restored query",
+        "selected": 3
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal restore one context",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "source-modal",
+          "action": "dismiss"
+        }
+      }
+    ],
+    "expectedSourceModal": {
+      "depth": 1,
+      "context": "commands",
+      "query": "restored query",
+      "selected": 3
+    }
+  },
+  {
+    "id": "source-modal-clear",
+    "name": "Original modal / clear the active stack",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "commands",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "edit",
+        "query": "restored query",
+        "selected": 3
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal clear the active stack",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "source-modal",
+          "action": "clear"
+        }
+      }
+    ],
+    "expectedSourceModal": {
+      "depth": 0
+    }
+  },
+  {
+    "id": "source-modal-nondismissible",
+    "name": "Original modal / retain a nondismissible layer",
+    "subtitle": "Original Workbench modal composition and native stack ownership.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "presentation": "canvas",
+        "stars": 0,
+        "background": 2179941
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": false
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "isolated",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal retain a nondismissible layer",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192"
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "source-modal",
+          "action": "dismiss"
+        }
+      }
+    ],
+    "expectedSourceModal": {
+      "depth": 1
+    }
+  },
+  {
+    "id": "source-modal-center-application",
+    "name": "Original modal / center / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "center",
+          "title": "INTERFACE / CENTER",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 6,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / CENTER ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 9,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 32,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal center",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CENTER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CENTER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-fullscreen-application",
+    "name": "Original modal / fullscreen / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "fullscreen",
+          "title": "INTERFACE / FULLSCREEN",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 2,
+        "y": 6,
+        "width": 96,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / FULLSCREEN ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 5,
+        "y": 9,
+        "width": 90,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 4,
+        "y": 32,
+        "width": 92,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal fullscreen",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 2,
+              "y": 6,
+              "width": 96,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / FULLSCREEN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 5,
+              "y": 9,
+              "width": 90,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 4,
+              "y": 32,
+              "width": 92,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 2,
+              "y": 6,
+              "width": 96,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / FULLSCREEN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 5,
+              "y": 9,
+              "width": 90,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 4,
+              "y": 32,
+              "width": 92,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-left-application",
+    "name": "Original modal / drawer-left / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-left",
+          "title": "INTERFACE / DRAWER-LEFT",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": -48,
+        "y": 6,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-LEFT ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": -45,
+        "y": 9,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": -46,
+        "y": 32,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-left",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": -23,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-LEFT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": -20,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": -21,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 2,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-LEFT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 5,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 4,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-right-application",
+    "name": "Original modal / drawer-right / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-right",
+          "title": "INTERFACE / DRAWER-RIGHT",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 93,
+        "y": 6,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-RIGHT ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 96,
+        "y": 9,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 95,
+        "y": 32,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-right",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 68,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-RIGHT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 71,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 70,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 43,
+              "y": 6,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-RIGHT ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 46,
+              "y": 9,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 45,
+              "y": 32,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-top-application",
+    "name": "Original modal / drawer-top / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-top",
+          "title": "INTERFACE / DRAWER-TOP",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 22,
+        "y": -21,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-TOP ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 25,
+        "y": -18,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 24,
+        "y": 5,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-top",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": -9,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-TOP ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": -6,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 17,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 4,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-TOP ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 7,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 30,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-drawer-bottom-application",
+    "name": "Original modal / drawer-bottom / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "drawer-bottom",
+          "title": "INTERFACE / DRAWER-BOTTOM",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 22,
+        "y": 32,
+        "width": 55,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DRAWER-BOTTOM ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 25,
+        "y": 35,
+        "width": 49,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 24,
+        "y": 58,
+        "width": 51,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal drawer-bottom",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 20,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-BOTTOM ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 23,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 46,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 7,
+              "width": 55,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DRAWER-BOTTOM ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 10,
+              "width": 49,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 33,
+              "width": 51,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-corner-application",
+    "name": "Original modal / corner / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "corner",
+          "title": "INTERFACE / CORNER",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 22,
+        "y": 7,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / CORNER ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 25,
+        "y": 10,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 24,
+        "y": 33,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal corner",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 7,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CORNER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 10,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 33,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 22,
+              "y": 7,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CORNER ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 25,
+              "y": 10,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 24,
+              "y": 33,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-toast-application",
+    "name": "Original modal / toast / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "toast",
+          "title": "INTERFACE / TOAST",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 17,
+        "width": 76,
+        "height": 6,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / TOAST ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 20,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 21,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal toast",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 17,
+              "width": 76,
+              "height": 6,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / TOAST ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 20,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 21,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 17,
+              "width": 76,
+              "height": 6,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / TOAST ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 20,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 21,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-error-application",
+    "name": "Original modal / error / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "error",
+          "title": "INTERFACE / ERROR",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 6,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / ERROR ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 9,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 32,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal error",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / ERROR ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / ERROR ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-confirmation-application",
+    "name": "Original modal / confirmation / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "confirmation",
+          "title": "INTERFACE / CONFIRMATION",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 6,
+        "width": 76,
+        "height": 28,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / CONFIRMATION ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 9,
+        "width": 70,
+        "height": 4,
+        "text": "This specimen does not authorize an external action. Confirm applies only to the local demonstration.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47800,
+        "kind": "item",
+        "x": 14,
+        "y": 30,
+        "width": 72,
+        "height": 1,
+        "text": "✓ Confirm local demonstration",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60003,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 32,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002,
+          60003
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal confirmation",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CONFIRMATION ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "This specimen does not authorize an external action. Confirm applies only to the local demonstration.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47800,
+              "kind": "item",
+              "x": 14,
+              "y": 30,
+              "width": 72,
+              "height": 1,
+              "text": "✓ Confirm local demonstration",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60003,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 0
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 6,
+              "width": 76,
+              "height": 28,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / CONFIRMATION ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 9,
+              "width": 70,
+              "height": 4,
+              "text": "This specimen does not authorize an external action. Confirm applies only to the local demonstration.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47800,
+              "kind": "item",
+              "x": 14,
+              "y": 30,
+              "width": 72,
+              "height": 1,
+              "text": "✓ Confirm local demonstration",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60003,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 32,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 0
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-dropdown-application",
+    "name": "Original modal / dropdown / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "modal-11",
+          "kind": "dropdown",
+          "title": "INTERFACE / DROPDOWN",
+          "body": "Every action also has a visible control. Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "specimen",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60000,
+        "legacyFlags": 49999,
+        "kind": "box",
+        "x": 12,
+        "y": 14,
+        "width": 76,
+        "height": 12,
+        "fg": 10276095,
+        "bg": 1054497,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "text": " INTERFACE / DROPDOWN ",
+        "style": 0
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60001,
+        "legacyFlags": 0,
+        "kind": "text",
+        "x": 15,
+        "y": 17,
+        "width": 70,
+        "height": 4,
+        "text": "Every action also has a visible control. Escape dismisses one layer.",
+        "fg": 14670028,
+        "fgOpacity": 1000
+      },
+      {
+        "op": "source-stage-component",
+        "id": 60002,
+        "legacyFlags": 47999,
+        "kind": "item",
+        "x": 14,
+        "y": 24,
+        "width": 72,
+        "height": 1,
+        "text": "× Close / Escape",
+        "fg": 7855562,
+        "bg": 2242629,
+        "bgOpacity": 900,
+        "fgOpacity": 1000,
+        "state": 2
+      },
+      {
+        "op": "source-modal",
+        "action": "associate",
+        "componentIds": [
+          60000,
+          60001,
+          60002
+        ],
+        "boxId": 60000
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal dropdown",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 14,
+              "width": 76,
+              "height": 12,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DROPDOWN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 17,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 24,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      },
+      {
+        "timeUs": 400000,
+        "command": {
+          "op": "batch",
+          "commands": [
+            {
+              "op": "source-stage-component",
+              "id": 60000,
+              "legacyFlags": 49999,
+              "kind": "box",
+              "x": 12,
+              "y": 14,
+              "width": 76,
+              "height": 12,
+              "fg": 10276095,
+              "bg": 1054497,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "text": " INTERFACE / DROPDOWN ",
+              "style": 0
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60001,
+              "legacyFlags": 0,
+              "kind": "text",
+              "x": 15,
+              "y": 17,
+              "width": 70,
+              "height": 4,
+              "text": "Every action also has a visible control. Escape dismisses one layer.",
+              "fg": 14670028,
+              "fgOpacity": 1000
+            },
+            {
+              "op": "source-stage-component",
+              "id": 60002,
+              "legacyFlags": 47999,
+              "kind": "item",
+              "x": 14,
+              "y": 24,
+              "width": 72,
+              "height": 1,
+              "text": "× Close / Escape",
+              "fg": 7855562,
+              "bg": 2242629,
+              "bgOpacity": 900,
+              "fgOpacity": 1000,
+              "state": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "source-modal-eight-layers-application",
+    "name": "Original modal / eight retained layers / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "commands",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "edit",
+        "context": "commands",
+        "query": "restored query",
+        "selected": 3,
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal eight retained layers",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "expectedSourceModal": {
+      "depth": 8
+    }
+  },
+  {
+    "id": "source-modal-dismiss-application",
+    "name": "Original modal / restore one context / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "commands",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "edit",
+        "query": "restored query",
+        "selected": 3
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal restore one context",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "source-modal",
+          "action": "dismiss"
+        }
+      }
+    ],
+    "expectedSourceModal": {
+      "depth": 1,
+      "context": "commands",
+      "query": "restored query",
+      "selected": 3
+    }
+  },
+  {
+    "id": "source-modal-clear-application",
+    "name": "Original modal / clear the active stack / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "commands",
+        "workspace": "windows"
+      },
+      {
+        "op": "source-modal",
+        "action": "edit",
+        "query": "restored query",
+        "selected": 3
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": true
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal clear the active stack",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "source-modal",
+          "action": "clear"
+        }
+      }
+    ],
+    "expectedSourceModal": {
+      "depth": 0
+    }
+  },
+  {
+    "id": "source-modal-nondismissible-application",
+    "name": "Original modal / retain a nondismissible layer / original Atelier application",
+    "subtitle": "Original modal controls over the restored Atelier window application.",
+    "viewport": {
+      "width": 100,
+      "height": 40
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "presentation": "canvas"
+      },
+      {
+        "op": "floor",
+        "visible": false
+      },
+      {
+        "op": "prompt",
+        "active": false
+      },
+      {
+        "op": "draft",
+        "text": "",
+        "emitWeather": false
+      },
+      {
+        "op": "camera",
+        "profile": "original",
+        "position": [
+          0,
+          0,
+          74.128048425637
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "fov": 68,
+        "near": 0.2,
+        "far": 20000
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "PEARL / SIGNAL",
+        "shape": "rounded",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          -19.0,
+          -1.0,
+          0
+        ],
+        "width": 52,
+        "height": 46,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 1,
+        "profile": "atelier",
+        "label": "w1",
+        "sourceIndex": 0,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "ATLAS / OPS",
+        "shape": "hexagon",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          32.0,
+          -11.0,
+          -5
+        ],
+        "width": 56,
+        "height": 42,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 2,
+        "profile": "atelier",
+        "label": "w2",
+        "sourceIndex": 1,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "durationMs": 950
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "IRIS / ARCHIVE",
+        "shape": "ellipse",
+        "effect": "window-transition/ribbon-genie",
+        "position": [
+          57.0,
+          8.0,
+          -14
+        ],
+        "width": 42,
+        "height": 36,
+        "durationMs": 0,
+        "alpha": 0.88,
+        "overshoot": 0.18,
+        "scatter": 24,
+        "bend": 9,
+        "seed": 6001
+      },
+      {
+        "op": "window-content",
+        "id": 3,
+        "profile": "atelier",
+        "label": "w3",
+        "sourceIndex": 2,
+        "brightness": 0.16
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "durationMs": 950
+      },
+      {
+        "op": "window-action",
+        "id": 1,
+        "action": "restore",
+        "durationMs": 0
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "durationMs": 950
+      },
+      {
+        "op": "window-application",
+        "paletteWindowId": 1,
+        "scene": "atelier-windows",
+        "starDensity": 0.024,
+        "novaRegularity": 0
+      },
+      {
+        "op": "source-modal",
+        "action": "push",
+        "entry": {
+          "id": "same",
+          "kind": "center",
+          "title": "Original stack",
+          "body": "Escape dismisses one layer.",
+          "atMs": 0,
+          "dismissible": false
+        },
+        "context": "modal",
+        "workspace": "windows"
+      }
+    ],
+    "demonstrates": {
+      "feature": "source-modal"
+    },
+    "demo": true,
+    "mode": "application",
+    "sampleTimesUs": [
+      0,
+      140000,
+      400000
+    ],
+    "provenance": {
+      "release": "Workbench / Black Hole",
+      "component": "Original modal retain a nondismissible layer",
+      "sourceSha256": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+      "wholeSceneHistoricalParity": false
+    },
+    "actions": [
+      {
+        "timeUs": 140000,
+        "command": {
+          "op": "source-modal",
+          "action": "dismiss"
+        }
+      }
+    ],
+    "expectedSourceModal": {
+      "depth": 1
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{"op":"reset","seed":2030}
+{"op":"resize","width":160,"height":52}
+{"op":"environment","presentation":"canvas","style":"solid","stars":0,"background":1053465,"sampling":"braille"}
+{"op":"floor","enabled":false,"visible":false}
+{"op":"prompt","active":false}
+{"op":"scene-art","scene":"tidal-glass","width":160,"height":52,"timeMs":0,"controls":{"cameraX":-68,"cameraY":48,"cameraZ":-96,"yaw":35,"pitch":-22,"roll":0,"fov":62,"projection":1,"span":220,"flow":1,"travel":0,"seed":2030,"redshift":0.8,"discTilt":12,"detail":1,"waterAlpha":0.94,"background":1053465,"ink":0,"accent":0,"secondary":0,"sampling":1},"detail":{"waveHeight":1.3984375,"wavelength":34,"windAngle":22,"crossSwell":0.48,"choppiness":0.43,"foam":0.62,"waveSpeed":1,"joinRiver":1}}
+{"op":"camera","profile":"original","navigation":"orbit","target":[0,0,0]}
+{"op":"camera-controls","enabled":true,"rig":"orbit","mode":"orbit","anchor":null}
+{"op":"resize","width":160,"height":52}
+{"op":"prompt","alpha":0.22,"mode":"marquee"}
+{"op":"accessibility","reducedMotion":false,"screenReader":false}
+{"op":"pause","paused":false}
+{"op":"scene-art","timeMs":0,"controls":{"flow":1,"travel":0.0}}

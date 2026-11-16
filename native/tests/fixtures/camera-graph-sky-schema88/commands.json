@@ -1,0 +1,116 @@
+{
+  "commands": [
+    {
+      "op": "resize",
+      "width": 100,
+      "height": 40
+    },
+    {
+      "op": "environment",
+      "stars": 0,
+      "presentation": "canvas",
+      "background": 461588,
+      "style": "solid"
+    },
+    {
+      "op": "floor",
+      "visible": false
+    },
+    {
+      "op": "prompt",
+      "active": false
+    },
+    {
+      "op": "node",
+      "id": 1,
+      "label": "Original source layout",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "op": "node",
+      "id": 2,
+      "label": "Native graph identity"
+    },
+    {
+      "op": "node",
+      "id": 3,
+      "label": "Shared contract"
+    },
+    {
+      "op": "edge",
+      "from": 1,
+      "to": 2
+    },
+    {
+      "op": "edge",
+      "from": 2,
+      "to": 3
+    },
+    {
+      "op": "layout",
+      "profile": "source",
+      "mode": "layered",
+      "dimensions": 3,
+      "nodeSizes": [
+        {
+          "id": 1,
+          "width": 8,
+          "height": 4
+        }
+      ],
+      "edgeWeights": [
+        {
+          "from": 1,
+          "to": 2,
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "op": "camera",
+      "profile": "original",
+      "fov": 70,
+      "near": 0.1,
+      "far": 1000
+    },
+    {
+      "op": "camera-action",
+      "action": "view",
+      "name": "iso"
+    },
+    {
+      "op": "camera-action",
+      "action": "fit"
+    },
+    {
+      "op": "environment",
+      "starProfile": "source",
+      "worldSeed": 2030,
+      "skyDensity": 9,
+      "skyRadius": 280,
+      "skyExposure": 6500,
+      "trailMs": 100
+    }
+  ],
+  "timeUs": 900000,
+  "drag": [
+    {
+      "op": "pointer",
+      "phase": "down",
+      "button": 1,
+      "x": 22.3,
+      "y": 13.2
+    },
+    {
+      "op": "pointer",
+      "phase": "move",
+      "button": 1,
+      "x": 27.4,
+      "y": 16.1
+    }
+  ]
+}

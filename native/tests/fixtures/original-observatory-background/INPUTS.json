@@ -1,0 +1,38 @@
+{
+  "schema": "nocturne.observatory-reference-inputs.v1",
+  "createdAt": "2026-10-15T06:05:32.339700+00:00",
+  "originalSourceSha256": "c221beb6e719f47f2c4744fce7cf70fcf918a31b436b6f0f1fca4df63f283904",
+  "files": [
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/observatory-original.mjs",
+      "sha256": "c221beb6e719f47f2c4744fce7cf70fcf918a31b436b6f0f1fca4df63f283904",
+      "bytes": 75571
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/observatory-engine-original.mjs",
+      "sha256": "7aced89498d5b8542e88e450e42673f2a1aefcd89dae957c70ac7b2c0cd84eec",
+      "bytes": 231570
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/OBSERVATORY-PAIR-PROOF.json",
+      "sha256": "7aa8a0eade738de7835aa5500324247648c829a551c1c1fdc0e051d455411e71",
+      "bytes": 1595
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/SOURCE-MANIFEST.json",
+      "sha256": "0358f5a2895d18791889db31bd22fb15cf3f7719583143d0149c89e2b7272802",
+      "bytes": 1725164
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/OBSERVATORY-ORACLE.json",
+      "sha256": "4f340c5dcca4d14fe12cb35efca8ccec106a900a4426d39247fc3d62a4160db9",
+      "bytes": 6387762
+    },
+    {
+      "path": "<workspace>/wt-core-repairs-20261015/native/src/window_application.c",
+      "sha256": "2823e354488fad37bc1f77004d47395b8af244f23f8f603c468acf43c0cec758",
+      "bytes": 26039
+    }
+  ],
+  "productionParityPassed": false
+}

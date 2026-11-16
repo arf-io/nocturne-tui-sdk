@@ -1,0 +1,155 @@
+{
+  "schema": "nocturne.example-road/v1",
+  "commands": [
+    {
+      "op": "surface",
+      "id": 1,
+      "wetnessDarkening": 0.6,
+      "wetnessGain": 1
+    },
+    {
+      "op": "surface",
+      "id": 2,
+      "wetnessDarkening": 0.3
+    },
+    {
+      "op": "surface",
+      "id": 3,
+      "wetnessDarkening": 0.5
+    },
+    {
+      "op": "surface",
+      "id": 4,
+      "collisionEnabled": false
+    },
+    {
+      "op": "ribbon",
+      "append": true,
+      "points": [
+        [
+          0,
+          -0.025,
+          0
+        ],
+        [
+          0,
+          -0.025,
+          -10
+        ]
+      ],
+      "width": 4.8,
+      "surfaceId": 2,
+      "color": 6848674,
+      "alpha": 1
+    },
+    {
+      "op": "ribbon",
+      "append": true,
+      "points": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -10
+        ]
+      ],
+      "width": 4,
+      "surfaceId": 1,
+      "color": 3159873,
+      "alpha": 1
+    },
+    {
+      "op": "ribbon",
+      "append": true,
+      "points": [
+        [
+          0,
+          0.005,
+          0
+        ],
+        [
+          0,
+          0.005,
+          -10
+        ]
+      ],
+      "width": 0.08,
+      "surfaceId": 4,
+      "color": 15719584,
+      "alpha": 1
+    },
+    {
+      "op": "mesh",
+      "append": true,
+      "triangles": [
+        {
+          "a": [
+            -10,
+            -0.5,
+            -20
+          ],
+          "b": [
+            -10,
+            -0.5,
+            10
+          ],
+          "c": [
+            10,
+            -0.5,
+            -20
+          ],
+          "surfaceId": 3,
+          "color": 3297082,
+          "alpha": 1
+        },
+        {
+          "a": [
+            10,
+            -0.5,
+            -20
+          ],
+          "b": [
+            -10,
+            -0.5,
+            10
+          ],
+          "c": [
+            10,
+            -0.5,
+            10
+          ],
+          "surfaceId": 3,
+          "color": 3297082,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "op": "path-travel",
+      "id": 1,
+      "target": {
+        "family": "camera",
+        "id": 0
+      },
+      "points": [
+        [
+          0,
+          1.7,
+          0
+        ],
+        [
+          0,
+          1.7,
+          -10
+        ]
+      ],
+      "speed": 2,
+      "distance": 0,
+      "mode": "clamp"
+    }
+  ]
+}

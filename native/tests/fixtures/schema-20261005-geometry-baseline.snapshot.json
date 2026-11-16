@@ -1,0 +1,83 @@
+{
+  "baseline": "c7deb564c70b3f778d538fbed115d71ad49879e2",
+  "schema": "0x20261005",
+  "payloadBytes": 4498608,
+  "snapshotSha256": "e438db0a9c032a41dac3b5e3bd028b9f4dc238e395a3a5cfb90e9f47b4332a64",
+  "commands": [
+    {
+      "op": "floor",
+      "enabled": false
+    },
+    {
+      "op": "draft",
+      "text": "geometry baseline retained",
+      "emitWeather": false
+    },
+    {
+      "op": "mesh",
+      "triangles": [
+        {
+          "a": [
+            0,
+            -10,
+            -10
+          ],
+          "b": [
+            0,
+            10,
+            -10
+          ],
+          "c": [
+            0,
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "op": "emitter",
+      "id": 1,
+      "effect": "weather/autumn-drift",
+      "count": 1,
+      "runningTimeMs": 0,
+      "shape": "point",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "velocity": [
+        -240,
+        0,
+        0
+      ],
+      "spread": [
+        0,
+        0,
+        0
+      ],
+      "gravity": [
+        0,
+        0,
+        0
+      ],
+      "wind": [
+        0,
+        0,
+        0
+      ],
+      "windVariation": [
+        0,
+        0,
+        0
+      ],
+      "drag": 0,
+      "lift": 0,
+      "flutterAmount": 0,
+      "deposit": false,
+      "lifetimeMinMs": 10000,
+      "lifetimeMaxMs": 10000
+    }
+  ]
+}

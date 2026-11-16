@@ -1,0 +1,4 @@
+export interface PearlConfig {values:Record<string,number>;palette:string[];starPalette:string[];glyphs:string[];novaGlyphs:string[];}
+export interface PearlNode {kind:'text'|'box'|'rule'|'button'|'item'|'cursor'|'progress'|'bars'|'pie'|'donut'|'scatter'|'line'|'digits'|'edge';id?:number;x:number;y:number;width:number;height:number;text?:string;data?:number[];fg?:number|string;bg?:number|string;[field:string]:string|number|number[]|undefined;}
+export interface PearlPalette {id:string;name:string;colors:string[];background:string;ink:string;group?:string;note?:string;}
+export const pearlAuthoredData:{defaults:Record<string,number>;palette:string[];starPalette:string[];glyphs:string[];novaGlyphs:string[];studioScenes:{id:string;name:string;config:Record<string,number>;nodes:PearlNode[]}[];studioPalettes:PearlPalette[]};

@@ -1,0 +1,3738 @@
+{
+  "schema": "nocturne.reference-captures.v1",
+  "scope": "Actual finite component/state captures; native snapshot replay equals WASM cells for every listed image. No exhaustive parameter or temporal claim.",
+  "sources": {
+    "native/Nocturne-RC4-Source-Build.html": "55ef466de1d293e92923f0ce015f23803a03a457d6670631abc1d67ab2df06f3",
+    "docs/current/components.json": "c439ed01e5f2563170d518bfa2b20e24818768e195122857cdd894aee4c24a36",
+    "native/dist/libnocturne_native.dylib": "48393be7bee5d92f4504b747d8fbc3f8dc3bcf6c959c13711a61984855a107aa",
+    "native/dist/nocturne_native.wasm": "602056a5bb6584d66d5f7e1ca9683c553b43a13d58997700ad586d2065d59ad3"
+  },
+  "captureCount": 100,
+  "uniqueImages": 92,
+  "captures": [
+    {
+      "component": "widget-text",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "text",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Text",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-text-default.png",
+      "pngSha256": "0fad3d9121aa1d3d4af106efefa3c2709e6eac01c32aebbefbcc6b705e43d0be",
+      "cellSha256": "40e7e2ad1efb1fa486b39b01b1386bf0c106e072b42359136e3d328186db8c1e",
+      "nativeCellSha256": "40e7e2ad1efb1fa486b39b01b1386bf0c106e072b42359136e3d328186db8c1e",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "cdacfb6e9c95b29cd90b879c821cc6fea7962e9ea04e299b57148b3f1d8b7650",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-text",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "text",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Text",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Text active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-text-active.png",
+      "pngSha256": "528166b6a0c9876e7aa3b28d86fd0892bdb7c8184fec1b06147a7c4c28bfdc6e",
+      "cellSha256": "57ee9308b71d15423cda48cf7d59e8ec50a5ba9e729a55e177e485ce6796c0d0",
+      "nativeCellSha256": "57ee9308b71d15423cda48cf7d59e8ec50a5ba9e729a55e177e485ce6796c0d0",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "abf137cd9c080f4aabc6fbf03f8453e182d3bf1a783883751c8990fcc54c5dee",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-box",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "box",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Box",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-box-default.png",
+      "pngSha256": "d5affc1ff649c9715f31e2c0c4b3bf0246b48e22883ac640bcb8fe6dce24350d",
+      "cellSha256": "1c4ec2cf786f7bbc66cd1f82c45bcd87f61a45db912923a62a007ca4e22cd61a",
+      "nativeCellSha256": "1c4ec2cf786f7bbc66cd1f82c45bcd87f61a45db912923a62a007ca4e22cd61a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "f9b1ca98b18668891840ad8c5deb8d476b235a3b74a71695259fb07ba09438a3",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-box",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "box",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Box",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Box active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-box-active.png",
+      "pngSha256": "f4dafa84de64bf92d383f6aae65a4290c145ed3c83a455074dc1a07ddb377294",
+      "cellSha256": "0696a3a85eee5be1ca3df98bf96fc34d1ae217dc8479f457d9a5f6891627e72f",
+      "nativeCellSha256": "0696a3a85eee5be1ca3df98bf96fc34d1ae217dc8479f457d9a5f6891627e72f",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "bcd4b661a87481c84d97f46afec52d8bc459837a19ec747932a6fe121384e4a2",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-rule",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "rule",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Rule",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-rule-default.png",
+      "pngSha256": "38534457dbf85ea01f99af2659462f42d23ae372d26252fe5cf78bcbbd009204",
+      "cellSha256": "ce9e129be1ae37a828788bd3dcfe00d78ac15bcdc7d2fb3a045e7cae9093a0ab",
+      "nativeCellSha256": "ce9e129be1ae37a828788bd3dcfe00d78ac15bcdc7d2fb3a045e7cae9093a0ab",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "f6becc396649cd8c26bc65c015f1043d6d49082d3d3a299d2deb59e72b08abd6",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-rule",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "rule",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Rule",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Rule active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-rule-active.png",
+      "pngSha256": "3631ebd076f3175023c8c42ddc31fd68d92ad05d65922a3507a74f2c80b673f5",
+      "cellSha256": "f2a2520cd8caf7a68214ff0f04b5c2b324634302865c7e0ee532235cb329b492",
+      "nativeCellSha256": "f2a2520cd8caf7a68214ff0f04b5c2b324634302865c7e0ee532235cb329b492",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "738e2446ede5519106a54c76dda6c390c0f062784151a5f1398ea1271362dfe8",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-button",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "button",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Button",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-button-default.png",
+      "pngSha256": "edb622d3fea8606324b9a323a4ed9505486d280923765fbcd71fcc8cebdfa858",
+      "cellSha256": "65ea3240178422d30f44f1c67d56e945c704412c0e54eed4d4bd791ebc6954d6",
+      "nativeCellSha256": "65ea3240178422d30f44f1c67d56e945c704412c0e54eed4d4bd791ebc6954d6",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "aab3144ab268981503f15306e362d8d6e3a6980eb6347ac83dc1cce8fa0bc328",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-button",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "button",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Button",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Button active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-button-active.png",
+      "pngSha256": "bad05fc821c6c23a5e9ad0cd33c4eae69b899c8c4b66e0bdb3f1b0b4c6168c20",
+      "cellSha256": "23942b88787638fc65e0eab6c8f42f6268e276f9ebe38c2565e33f3eeae6b381",
+      "nativeCellSha256": "23942b88787638fc65e0eab6c8f42f6268e276f9ebe38c2565e33f3eeae6b381",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "eb5e66b3301a3fa86818b2a7a424c4f1ab242b9a7bdd7528ffd104b9a4c762ca",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-item",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "item",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Item",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-item-default.png",
+      "pngSha256": "30cfcfeb23f916e6dae3baca7ee6bd27935c051a4b3b3500287115d4d3c788f5",
+      "cellSha256": "9616a90166052decb54761a57fce63722bd411fa90eda08f4dceec56b9d66868",
+      "nativeCellSha256": "9616a90166052decb54761a57fce63722bd411fa90eda08f4dceec56b9d66868",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "ec387e0e725d78a53c489b9c9c48b4502e23916b7d0e5cc61e914dd20a2b919a",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-item",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "item",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Item",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Item active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-item-active.png",
+      "pngSha256": "72318569ce5600e4d1dce06e8c099fa5da6f66906be6151388e27e7d05b64abc",
+      "cellSha256": "774a782ec26930275de4954492a740af5aec2e24cc020aca5b791a374eb5b2ce",
+      "nativeCellSha256": "774a782ec26930275de4954492a740af5aec2e24cc020aca5b791a374eb5b2ce",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "0c0dc7979d42bd88ec71b369a7548285fde7eba8d88cffa75f061fc97d2a4bb3",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-cursor",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "cursor",
+            "x": 8,
+            "y": 5,
+            "width": 2,
+            "height": 2,
+            "text": "Cursor",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3,
+            "mode": 0
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-cursor-default.png",
+      "pngSha256": "2026f28f70c52564f6320905015eb2553263d59860e7603da5a8760b6f7abe05",
+      "cellSha256": "18aacb71d2b7e1f7e5485d172f49b15e8b12106a054c4e7fbb6cd86bada7b6a9",
+      "nativeCellSha256": "18aacb71d2b7e1f7e5485d172f49b15e8b12106a054c4e7fbb6cd86bada7b6a9",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "f379e2af2801d0d5366be740aa0554991e08cc1cb642b501e96199ca4492b833",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-cursor",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "cursor",
+            "x": 8,
+            "y": 5,
+            "width": 2,
+            "height": 2,
+            "text": "Cursor",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3,
+            "mode": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Cursor active",
+            "mode": 2
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-cursor-active.png",
+      "pngSha256": "e1597833ccfc4152bbfa1b2aa02513cc2f9e852dceafe01734d598cec5cdd939",
+      "cellSha256": "499c6c3ad85e6e9b751758a75509868ae866062872653e9797426a7f569ba6b4",
+      "nativeCellSha256": "499c6c3ad85e6e9b751758a75509868ae866062872653e9797426a7f569ba6b4",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "59e4b592a5cd2361624dd3a437b6ea7aa54564be1e5433a8c418f70d78e7928c",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-progress",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "progress",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Progress",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-progress-default.png",
+      "pngSha256": "34fa57d995075755503c4275a1f618274e93a007970b371856cc82a21ad28456",
+      "cellSha256": "d66b7d918ff81b02ccc4b380c43427c0b79190719045bfa0d33842dd4ba6903d",
+      "nativeCellSha256": "d66b7d918ff81b02ccc4b380c43427c0b79190719045bfa0d33842dd4ba6903d",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "f83457fd798eac011743ec2b4c9eab6bd43e3f238ccc2532d5500b56c22ab264",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-progress",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "progress",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Progress",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Progress active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-progress-active.png",
+      "pngSha256": "50ef65f7e623c3dda7354c9ebfdec28fe06bf4b6338748560d57d9304159b525",
+      "cellSha256": "823e9317c765494bbfa1fda5d9a702b0de18d13c4e63544d20128bf1ec5495fc",
+      "nativeCellSha256": "823e9317c765494bbfa1fda5d9a702b0de18d13c4e63544d20128bf1ec5495fc",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "0c0163c32c78442cada41506c751094c5ae34e9026436fbf17fb2348be4796c1",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-bars",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "bars",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Bars",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-bars-default.png",
+      "pngSha256": "92c3bb2ec7516138d46d2c320b7da25f2bd2ac8901de358e047cd3e44a4b2df9",
+      "cellSha256": "29ae12c8333445afdcbd8bf2c9f1804b4e99181084fbcb213f9c2fdd0bab3022",
+      "nativeCellSha256": "29ae12c8333445afdcbd8bf2c9f1804b4e99181084fbcb213f9c2fdd0bab3022",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "5fd2e7665d97a99ed905b43027550bdc9b95056df63a97257a356bc18484394e",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-bars",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "bars",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Bars",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Bars active",
+            "data": [
+              0.65,
+              0.35,
+              0.8,
+              0.15
+            ]
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-bars-active.png",
+      "pngSha256": "c324fa6fade1a350e04763157981e6be6f33c4d8f467cba0d393396abcec0d10",
+      "cellSha256": "482276b1c1bfc9c909cabbfa1213c82ea43a769ca9062172db148cc24b78ac13",
+      "nativeCellSha256": "482276b1c1bfc9c909cabbfa1213c82ea43a769ca9062172db148cc24b78ac13",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "244c0692dca3579901f04b956ee08fad110eb9cbc3393a5ce68bc2e904e7d071",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-pie",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "pie",
+            "x": 8,
+            "y": 5,
+            "width": 28,
+            "height": 12,
+            "text": "Pie",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              3,
+              5,
+              2,
+              4
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-pie-default.png",
+      "pngSha256": "823a41f083adf62103380795f021796fb67b2970cf6982980b76d65ac988aade",
+      "cellSha256": "f8f932229493fca261726ef3d931881169eba4c5a247639a3782cf99c40d3820",
+      "nativeCellSha256": "f8f932229493fca261726ef3d931881169eba4c5a247639a3782cf99c40d3820",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "a59224072b18735b7bb6fa2a30b20fe15a1a4bfeda939e1fa66a7f7c4dd7d301",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-pie",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "pie",
+            "x": 8,
+            "y": 5,
+            "width": 28,
+            "height": 12,
+            "text": "Pie",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              3,
+              5,
+              2,
+              4
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Pie active",
+            "data": [
+              4,
+              2,
+              5,
+              3
+            ]
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-pie-active.png",
+      "pngSha256": "31ecdd53b8f2b9b8c55477880d8336a58450eafe659d8316117f2fd8dd420bc3",
+      "cellSha256": "dfb199b08ba3b453641cf8bf0a9ad8d8e0c0fe7fc32e5ff1b6e3de6ebf765661",
+      "nativeCellSha256": "dfb199b08ba3b453641cf8bf0a9ad8d8e0c0fe7fc32e5ff1b6e3de6ebf765661",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "b9cedf3e80c708dbf77c15b9442fe5caf4c6fa5a36421d207dbccd03c5b94356",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-donut",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "donut",
+            "x": 8,
+            "y": 5,
+            "width": 28,
+            "height": 12,
+            "text": "Donut",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              3,
+              5,
+              2,
+              4
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-donut-default.png",
+      "pngSha256": "ce5106fd0c93359da698316751de1eb18f85075d6c205ef1124422dec690ab53",
+      "cellSha256": "95e15c44996e4e950784c1a31f09b2bacd67f071e37d41587b4b46b9022ed8b7",
+      "nativeCellSha256": "95e15c44996e4e950784c1a31f09b2bacd67f071e37d41587b4b46b9022ed8b7",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "8e45a021cd10b3558acd80c64825e455bf4a2f4b1248b48c1e3f0f3c03d054d7",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-donut",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "donut",
+            "x": 8,
+            "y": 5,
+            "width": 28,
+            "height": 12,
+            "text": "Donut",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              3,
+              5,
+              2,
+              4
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Donut active",
+            "data": [
+              4,
+              2,
+              5,
+              3
+            ]
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-donut-active.png",
+      "pngSha256": "3cdbe0d275a10f67e26950aee068ac506aef6d38b1ee69d7a744eb3b5bbf2d39",
+      "cellSha256": "c0ca97c5f4a8726163b2a0f594bba94dbaa1bf44815bb3f8473e9758f887da7f",
+      "nativeCellSha256": "c0ca97c5f4a8726163b2a0f594bba94dbaa1bf44815bb3f8473e9758f887da7f",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "336ed19904a54e37b680f79b75c7741d4abffa2587478c7905d58a4552a192f3",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-scatter",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "scatter",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Scatter",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.1,
+              0.3,
+              0.4,
+              0.8,
+              0.7,
+              0.2,
+              0.9,
+              0.7
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-scatter-default.png",
+      "pngSha256": "0db8e4295102f6c7fa2058353e1d691bb798d2f5d588031ab5aae74ccdf555bc",
+      "cellSha256": "8e66644eacf44d9e2511977163c3fcfe255be21e20335a9849d23979964251ec",
+      "nativeCellSha256": "8e66644eacf44d9e2511977163c3fcfe255be21e20335a9849d23979964251ec",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "e42f9baac5d7906e4d47fa251f724127cd16635898dc3e1d10b9ea0721e7f616",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-scatter",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "scatter",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Scatter",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.1,
+              0.3,
+              0.4,
+              0.8,
+              0.7,
+              0.2,
+              0.9,
+              0.7
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Scatter active",
+            "data": [
+              0.7,
+              0.9,
+              0.2,
+              0.7,
+              0.8,
+              0.4,
+              0.3,
+              0.1
+            ]
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-scatter-active.png",
+      "pngSha256": "f40a49f21381a9287057c66b33d476b5c17ca95b631576adbfeb4b16cb79a665",
+      "cellSha256": "9cb33e535203ece6f1c98cb351585d9bbd31a31f5a2587513d64cbeea8e144a9",
+      "nativeCellSha256": "9cb33e535203ece6f1c98cb351585d9bbd31a31f5a2587513d64cbeea8e144a9",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "57fbc7ffb2a98dfbb1fac1658752284823fe4d98017303bcc8aea3236b97be01",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-line",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "line",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Line",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-line-default.png",
+      "pngSha256": "ea3ac2c3898331d087b0ddb5de483433760e8de8dd51744708a90a6923a92dd5",
+      "cellSha256": "9284cba10bed3bd7dcb1b9dedfdb8bb26a7c2dac71f67c74c1a57ad17284af32",
+      "nativeCellSha256": "9284cba10bed3bd7dcb1b9dedfdb8bb26a7c2dac71f67c74c1a57ad17284af32",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "7a271c6637871764a91b1fbc5aec9b9ab79da24a5ae88db14d7eb7ee55008da5",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-line",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "line",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Line",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Line active",
+            "data": [
+              0.65,
+              0.35,
+              0.8,
+              0.15
+            ]
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-line-active.png",
+      "pngSha256": "249bcfe3267e02b1b4803980e6d53e0fff86aebc5479b5dfcef1858650aefc20",
+      "cellSha256": "91e6407212d0834cff5ad05a3aa92843413a5c80a832c9cc4e6c415e34b58bc0",
+      "nativeCellSha256": "91e6407212d0834cff5ad05a3aa92843413a5c80a832c9cc4e6c415e34b58bc0",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "2ca20abf5c8f60c48014d8fd5622ec45b7f97c9293f7a19b8f356ea9210ca651",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-digits",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "digits",
+            "x": 8,
+            "y": 5,
+            "width": 30,
+            "height": 10,
+            "text": "Digits",
+            "value": 67,
+            "min": 0,
+            "max": 100,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-digits-default.png",
+      "pngSha256": "39c66fbb61a45c403ce3aa4e5d26353c8d3b1bf98ff57180e347f4a8c44bf264",
+      "cellSha256": "359c08652f330e2065dd07251d7405d7b38e32dd69490a71419cb1fb940360fd",
+      "nativeCellSha256": "359c08652f330e2065dd07251d7405d7b38e32dd69490a71419cb1fb940360fd",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "2c3e4a7a24cf5909d7e1d02c5ea893d3e1bb629868c68e832bbd9b02e356405e",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-digits",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "digits",
+            "x": 8,
+            "y": 5,
+            "width": 30,
+            "height": 10,
+            "text": "Digits",
+            "value": 67,
+            "min": 0,
+            "max": 100,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 92,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Digits active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-digits-active.png",
+      "pngSha256": "0ff83f77c95089ed7a255978d6e49659329ad1ef9eb6604989727ade68f9db8a",
+      "cellSha256": "d673ad422e51e3d5bb46a5a5e4dbe8d5e7fbd47aa34ec73c50cbfbb8903e45a2",
+      "nativeCellSha256": "d673ad422e51e3d5bb46a5a5e4dbe8d5e7fbd47aa34ec73c50cbfbb8903e45a2",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "ce071a3afc7d7570e0ea981fe083a10675b63751e64b5c15d59a6dad2ba4535b",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-edge",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "edge",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Edge",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-edge-default.png",
+      "pngSha256": "6ad788385afc248573c720d3d32a4fb43ba5baed4ea6850c736a87baefe9ec45",
+      "cellSha256": "a59100389e8c6ca024fdcd0031d260e8c59e3f966b7a04ab20a4e48b38ea9fbe",
+      "nativeCellSha256": "a59100389e8c6ca024fdcd0031d260e8c59e3f966b7a04ab20a4e48b38ea9fbe",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "b5eb4b9423c0eda6b91d8953a0a8a29c87fbac10fdd9e49e4289c10214b3d4e7",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-edge",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "edge",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 10,
+            "text": "Edge",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "sampling": "braille",
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Edge active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-edge-active.png",
+      "pngSha256": "07a94e350f2b3ea110c602d509a4987d2ed22a417e0bb7e7ab89427fd38763b2",
+      "cellSha256": "32c09adf1201de3993e5234187524930ef03cf4ca52157bf68520860efbc39ea",
+      "nativeCellSha256": "32c09adf1201de3993e5234187524930ef03cf4ca52157bf68520860efbc39ea",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "dcc38d2967bf26056edea9a21386e899b516edb0b4f3e312c0c18bc53721f379",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-checkbox",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "checkbox",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Checkbox",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-checkbox-default.png",
+      "pngSha256": "9d91ccfc620531d271b556fbf4067d0f716660c152d4a82e50162e4559a0c804",
+      "cellSha256": "a8d963e0655fa7be35fc0e1a6564e12c05befd62b0bb51890ec0f271e5d35e6c",
+      "nativeCellSha256": "a8d963e0655fa7be35fc0e1a6564e12c05befd62b0bb51890ec0f271e5d35e6c",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "422b88152ec895cf689de3e8c425ac32634e646f0dc8dc8d24ab096a60cf2201",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-checkbox",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "checkbox",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Checkbox",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Checkbox active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-checkbox-active.png",
+      "pngSha256": "f6a7fb5a913347becb07316f3d4a9f209526762a6382911603a37f12d2612712",
+      "cellSha256": "7f71d65ae67ad1da26b2f8b385028be1bd385204ade5fad7f60ba9263a29d6d0",
+      "nativeCellSha256": "7f71d65ae67ad1da26b2f8b385028be1bd385204ade5fad7f60ba9263a29d6d0",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "2d2bd341372b1adc2f29acd4945ce8cfb814da78c8aa1349dd4b0f1a9afb5c2a",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-radio",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "radio",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Radio",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-radio-default.png",
+      "pngSha256": "8689186cdfb812fbccc21d89b9c8777757b9bed67426d4b1e76ccfa783fa2bb1",
+      "cellSha256": "f0ab77a9489774cdf8377fed52295ff39d85209c833592ffd5051f2c66edf7c9",
+      "nativeCellSha256": "f0ab77a9489774cdf8377fed52295ff39d85209c833592ffd5051f2c66edf7c9",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "ef1e99173498f7cb4489dafb0d09c73d30371706772f847a12e2bb2fa92a4ca2",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-radio",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "radio",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Radio",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Radio active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-radio-active.png",
+      "pngSha256": "e89deb449b5fe5c66816aee17135a996419e7633b4b27fe944428b86fa08d29e",
+      "cellSha256": "c7257a786ea959b44efb118c449d5a43255aceb794422ddfb0ae3facf2b75c3e",
+      "nativeCellSha256": "c7257a786ea959b44efb118c449d5a43255aceb794422ddfb0ae3facf2b75c3e",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "baf65dd84a4149a06b3f63b6bd96a523df53c166106899eb2c339c4933df361a",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-select",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "select",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Select",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-select-default.png",
+      "pngSha256": "56b9cb98bd1f5758d9bc26f8cec7d4e8a17071716a4d2aa1e3d532310efdc1dc",
+      "cellSha256": "3e8a66f43f2075cf635c6bcfdef139aaa137309e2e1cbb8622705e25eb3ee319",
+      "nativeCellSha256": "3e8a66f43f2075cf635c6bcfdef139aaa137309e2e1cbb8622705e25eb3ee319",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "aedbc6523c3cff03691f1ce8d02a20bc7752f3503a4aeb20ae991a2123478b39",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-select",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "select",
+            "x": 8,
+            "y": 5,
+            "width": 60,
+            "height": 3,
+            "text": "Select",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Select active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-select-active.png",
+      "pngSha256": "a0865e93f831b0da5b549cfe699d73028531b796e789f65e91d388584ad66737",
+      "cellSha256": "c8a68cc1937d304e15d23888d8dc7db4d0f741d3fb280a8b5c216d2cf81cc6b0",
+      "nativeCellSha256": "c8a68cc1937d304e15d23888d8dc7db4d0f741d3fb280a8b5c216d2cf81cc6b0",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "6a9942610cfe96d081a2a61b65c3bf4affcc57af78ecdb67d11b21157388e0e6",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-scrollbar",
+      "state": "default",
+      "label": "Default",
+      "request": {
+        "id": "default",
+        "label": "Default",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "scrollbar",
+            "x": 8,
+            "y": 5,
+            "width": 2,
+            "height": 12,
+            "text": "Scrollbar",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "widget-scrollbar-default.png",
+      "pngSha256": "17306310a0b70d9500384b94960c7fdbb7f82229afd524e8fe445135c74bb72a",
+      "cellSha256": "975e075f93d157e40b93dce6ffd41ea4dc5dcbbe5bd9e85824d562121f4ae524",
+      "nativeCellSha256": "975e075f93d157e40b93dce6ffd41ea4dc5dcbbe5bd9e85824d562121f4ae524",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "e2453c440af8447900e0ad21472d025308ccf2e176b6784ca42f31d710809492",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "widget-scrollbar",
+      "state": "active",
+      "label": "Updated value / active",
+      "request": {
+        "id": "active",
+        "label": "Updated value / active",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "environment",
+            "style": "solid",
+            "background": 1053465,
+            "stars": 0
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "kind": "scrollbar",
+            "x": 8,
+            "y": 5,
+            "width": 2,
+            "height": 12,
+            "text": "Scrollbar",
+            "value": 0.35,
+            "min": 0,
+            "max": 1,
+            "data": [
+              0.15,
+              0.8,
+              0.35,
+              0.65
+            ],
+            "alpha": 0.3
+          },
+          {
+            "op": "widget",
+            "id": 1,
+            "value": 0.8,
+            "selected": true,
+            "alpha": 0.7,
+            "text": "Scrollbar active"
+          }
+        ],
+        "timeUs": 650000
+      },
+      "image": "widget-scrollbar-active.png",
+      "pngSha256": "67a65d11cb2494260197d8895909db813199020d99579adf226ea04bfa2b9440",
+      "cellSha256": "77426c7dfc248a8d3e9c50651c284f8853c2806de5d56fe42bc65b6d4cf32223",
+      "nativeCellSha256": "77426c7dfc248a8d3e9c50651c284f8853c2806de5d56fe42bc65b6d4cf32223",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "36effb439fd7557fb6399da2391aa06a614086628df5669e33a1423cd843ea6b",
+      "width": 80,
+      "height": 24,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "window",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "windows",
+        "timeUs": 0
+      },
+      "image": "window-default.png",
+      "pngSha256": "59f4635b37a8e85d12328e7b6c5bb4d25f9796c48068c36248f3470269071bc1",
+      "cellSha256": "7add5b40bc5dfc3fa3ce148f53d9b4d8f44f47abc301cd58a353146cd642b77d",
+      "nativeCellSha256": "7add5b40bc5dfc3fa3ce148f53d9b4d8f44f47abc301cd58a353146cd642b77d",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "b096b5c77a384192328bf779eb23e24541139fdeee7b29f4036b5ab2b8d41278",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "window",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "windows",
+        "timeUs": 1200000
+      },
+      "image": "window-advanced.png",
+      "pngSha256": "e7e095b4804f40cb94e724dc0d14c2ec824efb64a36ec7c08c9b8373575e1ef2",
+      "cellSha256": "884a3f50ec0e3df1730812e0546cf7702d5749fb239e82f0c21adc0e409eb078",
+      "nativeCellSha256": "884a3f50ec0e3df1730812e0546cf7702d5749fb239e82f0c21adc0e409eb078",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "a66f69df84b7da6e3a6bf740007171367bd77d980851297d38807edfc8573515",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "prompt",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "screen-prompt-marquee-isolated",
+        "timeUs": 0
+      },
+      "image": "prompt-default.png",
+      "pngSha256": "9eeedac9719b2ca19375d06b68ac4545d5700105eea1521144670d3c59b37cb6",
+      "cellSha256": "61f541ee8134662a5171c61234267722eb711eed790a5fb14113e547a2d8bde5",
+      "nativeCellSha256": "61f541ee8134662a5171c61234267722eb711eed790a5fb14113e547a2d8bde5",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504680,
+      "snapshotSha256": "5c08dd14a4cef6acbffa887b43100a81880f0762c19c7ac3536ca8fcf76c8e5e",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "prompt",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "screen-prompt-marquee-isolated",
+        "timeUs": 1200000
+      },
+      "image": "prompt-advanced.png",
+      "pngSha256": "f9909a031894fa3ca9f3a71aa18e657f0d04943e6fbd3ab66d09dfd0e7bc994f",
+      "cellSha256": "37c293e70f70d39f848ce60097590e41cfd4563b5a3d14a082e3db027b4602bb",
+      "nativeCellSha256": "37c293e70f70d39f848ce60097590e41cfd4563b5a3d14a082e3db027b4602bb",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504680,
+      "snapshotSha256": "26f5b9ac7366c2638e40ad98fcca6e0af2067ce14955c925d72fe0061dc2cd29",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "prompt",
+      "state": "cursor",
+      "label": "Steady custom cursor",
+      "request": {
+        "id": "cursor",
+        "label": "Steady custom cursor",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "draft",
+            "text": "Write a message",
+            "caret": 15
+          },
+          {
+            "op": "prompt-appearance",
+            "cursor": {
+              "shape": "bar",
+              "color": "#a3cabe",
+              "blinkMs": 0
+            },
+            "weather": {
+              "style": "embers",
+              "intensity": 0.6,
+              "paste": "burst"
+            }
+          }
+        ],
+        "timeUs": 0
+      },
+      "image": "prompt-cursor.png",
+      "pngSha256": "99d795f90d697df404df3d64861431325b76d107967b5eebc6408f6052c561c4",
+      "cellSha256": "5250151591fc704698f73c9c46aadea597bbd08f7676b5842cc3546de3e514de",
+      "nativeCellSha256": "5250151591fc704698f73c9c46aadea597bbd08f7676b5842cc3546de3e514de",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504260,
+      "snapshotSha256": "a0b03ff09bd09b8e8330bbc58dd8f5a4dd616f5266bb6fc274fe808791365d1d",
+      "width": 80,
+      "height": 24,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "prompt",
+      "state": "typing-weather",
+      "label": "Accepted input with embers",
+      "request": {
+        "id": "typing-weather",
+        "label": "Accepted input with embers",
+        "commands": [
+          {
+            "op": "resize",
+            "width": 80,
+            "height": 24
+          },
+          {
+            "op": "draft",
+            "text": "Write a message",
+            "caret": 15
+          },
+          {
+            "op": "prompt-appearance",
+            "cursor": {
+              "shape": "bar",
+              "color": "#a3cabe",
+              "blinkMs": 0
+            },
+            "weather": {
+              "style": "embers",
+              "intensity": 0.6,
+              "paste": "burst"
+            }
+          },
+          {
+            "op": "input",
+            "text": "!"
+          }
+        ],
+        "timeUs": 350000
+      },
+      "image": "prompt-typing-weather.png",
+      "pngSha256": "bf3ee892d91e653dd06624813be1ed7675d13ad98d05fcc5eec69c4baad6d8d4",
+      "cellSha256": "d2cb20f3b41ec4b8dce25d817529130e30812229a5abc7f6e5c01be455d3ff7d",
+      "nativeCellSha256": "d2cb20f3b41ec4b8dce25d817529130e30812229a5abc7f6e5c01be455d3ff7d",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504332,
+      "snapshotSha256": "172e0b29897e6b019dcf245e78e0eb9295804343c872b313a95b61a6d3b8c131",
+      "width": 80,
+      "height": 24,
+      "timeUs": 350000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "text",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "text",
+        "timeUs": 0
+      },
+      "image": "text-default.png",
+      "pngSha256": "7b38a092fe8fe05a94c02994dcfaf7e6a1780b26a358272d6a7ffcdd14a74b2c",
+      "cellSha256": "c1cc27fca5aba6ddabb382ab942c72535e5f049364eff06002a10eede3dcb557",
+      "nativeCellSha256": "c1cc27fca5aba6ddabb382ab942c72535e5f049364eff06002a10eede3dcb557",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "78a329fcecc787858a9564cb8a488023049d859a1e8b5c3a1da993a528f64d6c",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "text",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "text",
+        "timeUs": 1200000
+      },
+      "image": "text-advanced.png",
+      "pngSha256": "0e8ee6c78cef7b2893f751de73b73979a350d4875a57fe90fc43cd62ccc41faa",
+      "cellSha256": "5838af42383dd84e12ff565a5e7d872177fa800070598a2294f7e7c0e7291b84",
+      "nativeCellSha256": "5838af42383dd84e12ff565a5e7d872177fa800070598a2294f7e7c0e7291b84",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "d0b4f9c0d8082d64e55f15e148f7b3766fa0608a8ddddd4c8a98915d3d17c8dd",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "graph",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "work-graph",
+        "timeUs": 0
+      },
+      "image": "graph-default.png",
+      "pngSha256": "7d99b09f51192665a1d9e7f175484b3eafbef2aedce865af94c706984a4ed105",
+      "cellSha256": "aa40be693ad5e683adeb9f5160a1d143bdf00db6bfcb0f2a254e0c8be1e637be",
+      "nativeCellSha256": "aa40be693ad5e683adeb9f5160a1d143bdf00db6bfcb0f2a254e0c8be1e637be",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "01c4f416d2f6676c8d1391affdbbde076c960f568634e6d2d694cfaf112d6df1",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.5",
+      "schema": 539365526
+    },
+    {
+      "component": "graph",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "work-graph",
+        "timeUs": 1200000
+      },
+      "image": "graph-advanced.png",
+      "pngSha256": "bd6087617192273694e27a27a6dee30c801f06a50cddd8bcde915a3afeac92f2",
+      "cellSha256": "45ebcbf73216965ba484c609b281a95fbd7e27af33ca209740f4dbf501aa4a74",
+      "nativeCellSha256": "45ebcbf73216965ba484c609b281a95fbd7e27af33ca209740f4dbf501aa4a74",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "6ae43caf4fe98ce0915b7f0eb695353d722dcbbf2765de7463fcce15a58ba104",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.5",
+      "schema": 539365526
+    },
+    {
+      "component": "emitter",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "autumn",
+        "timeUs": 0
+      },
+      "image": "emitter-default.png",
+      "pngSha256": "38b9ffacff635350eb8535c7b24187c4a1c5b0b5971be6b372ebb3ab6f81ea86",
+      "cellSha256": "86f2149cb77b3b6db9deb4fb4d31b75612fd836addcfbaacb5c5683c0e3ed292",
+      "nativeCellSha256": "86f2149cb77b3b6db9deb4fb4d31b75612fd836addcfbaacb5c5683c0e3ed292",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "20d7ebfb865c11a55f0a645bd54e4a787482224dc1e4ea6c87a9577c8f917cfe",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "emitter",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "autumn",
+        "timeUs": 1200000
+      },
+      "image": "emitter-advanced.png",
+      "pngSha256": "11c9d68aa0b1134cb3ba826adb53d2152e040013afeb43ec2d9ddc23b004b902",
+      "cellSha256": "e6749402fc64b9e6b8fa7a8e4db9a5ca90faee5ef88d0dab0b8175701f3127d0",
+      "nativeCellSha256": "e6749402fc64b9e6b8fa7a8e4db9a5ca90faee5ef88d0dab0b8175701f3127d0",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "da3387a32ca3f55ef352aa5ff7ab51433f945abf9c0d01eaee3d95928fe4a98e",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "field",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "silk",
+        "timeUs": 0
+      },
+      "image": "field-default.png",
+      "pngSha256": "e7010e9f7fc94319566e80dab37feeae68e417e6ee8f4a42d734b1659717de1e",
+      "cellSha256": "5cc7b6b3fc747059409797cde45e41d3f5d97edd308c6072584efbc050385b0c",
+      "nativeCellSha256": "5cc7b6b3fc747059409797cde45e41d3f5d97edd308c6072584efbc050385b0c",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504932,
+      "snapshotSha256": "cd8d574de8e67723171dec9abe2694e6204aeaa67b89b7578f70e045c66a17f1",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "field",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "silk",
+        "timeUs": 1200000
+      },
+      "image": "field-advanced.png",
+      "pngSha256": "01e8db21b1e4c5cee255b5d43c64b16e0b9e64583783102aac3a7a1411f0db64",
+      "cellSha256": "607d1f3cdd260bf0b58b8c1cf448aac89c4a174fee319d807bf3be0bbcf1afbe",
+      "nativeCellSha256": "607d1f3cdd260bf0b58b8c1cf448aac89c4a174fee319d807bf3be0bbcf1afbe",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504932,
+      "snapshotSha256": "200100c4e9be98f11ab5be5033de9c7be41bb91bb83c5d8f734d8e40988de46a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "floor",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "leaf-anatomy",
+        "timeUs": 0
+      },
+      "image": "floor-default.png",
+      "pngSha256": "b79c8503117eac32708bdd24d4a850f7aaeaac217827c58b4d742ff452a3180e",
+      "cellSha256": "82164bd4c602fdfbf626d4dd989e3a151d55515f5a91e4307f6809ee2bd37345",
+      "nativeCellSha256": "82164bd4c602fdfbf626d4dd989e3a151d55515f5a91e4307f6809ee2bd37345",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "8eeefca0020392ce102eeb8cf3827c37e67fe57d42332bb8284ac6e176d3930b",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "floor",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "leaf-anatomy",
+        "timeUs": 1200000
+      },
+      "image": "floor-advanced.png",
+      "pngSha256": "018673867489f476780f94cf1afd4c1c81bad224ee84cb6513d03825a932809a",
+      "cellSha256": "e95c280c32d2e47b636bfdfeb5a79539ade0fa24ce4d38fb5588f0192812dc62",
+      "nativeCellSha256": "e95c280c32d2e47b636bfdfeb5a79539ade0fa24ce4d38fb5588f0192812dc62",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "606080bead2e88cb344084f6df5c07cba04ffc3161027e4ee35a988f26f83756",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "surface",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "surface-lab",
+        "timeUs": 0
+      },
+      "image": "surface-default.png",
+      "pngSha256": "6a170a6578b7897500f119e36a0d48743a5cb9e756cdf0407b72ecaa75a0bc0b",
+      "cellSha256": "1292d131db13cb0a1cca977a1babe5da8345261c5ebd341898d8f655f1ef4e0a",
+      "nativeCellSha256": "1292d131db13cb0a1cca977a1babe5da8345261c5ebd341898d8f655f1ef4e0a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "76d3ca3ccabd738ffdcdd22f8244b9e600b0e9ddaf496de39ee327a498c2e78a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "surface",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "surface-lab",
+        "timeUs": 1200000
+      },
+      "image": "surface-advanced.png",
+      "pngSha256": "b59ca0531eff7c40b2a2b692f17fd4adb2b2acf1b5ce0813c3e477d1fb60b3e1",
+      "cellSha256": "084bade65d231558049ec18e8a774ea732d8b2c54d7cc2c2852944971d31a0e4",
+      "nativeCellSha256": "084bade65d231558049ec18e8a774ea732d8b2c54d7cc2c2852944971d31a0e4",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "9adbc68d13a0c98ba710779b9991b15de70a4ed1f404d1ed27bd79856d6c9385",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "flow",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "scenic-spatial-water-isolated",
+        "timeUs": 0
+      },
+      "image": "flow-default.png",
+      "pngSha256": "7c1f68fe04804f02b3094662aac0509dae8d104935066eb527739e721e9fa981",
+      "cellSha256": "137d40dc97f9b0c4b1974b7e480edb2a2c927c2865e67a8ab69897a305ba96c8",
+      "nativeCellSha256": "137d40dc97f9b0c4b1974b7e480edb2a2c927c2865e67a8ab69897a305ba96c8",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "48a970aa89c754f0a5a3f200434160f1065126aaed41f01b3fb88469f6124e4f",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "flow",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "scenic-spatial-water-isolated",
+        "timeUs": 1200000
+      },
+      "image": "flow-advanced.png",
+      "pngSha256": "46a4c614d0262f42229ede0923ec318877f04102f0aa504089b175f29915c66b",
+      "cellSha256": "dcdd2a4d4ad03657f9bb9acae2a0e285a2efb735792c0651b793998d9d4b1b2e",
+      "nativeCellSha256": "dcdd2a4d4ad03657f9bb9acae2a0e285a2efb735792c0651b793998d9d4b1b2e",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "64197b5e7e5aa7d7a680eaec2099debdf772f812dfb841c54bdaa2e1bb754e42",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "float",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "scenic-shared-ocean-isolated",
+        "timeUs": 0
+      },
+      "image": "float-default.png",
+      "pngSha256": "4c124c7e31c00fb83d4d76a22ebd399cdfe4ee4287fc735f10c0a360f4bf2ecc",
+      "cellSha256": "567d0d8de780d515dad32267473bfef4a94dee2fd3e636d0187f455daefc5bd2",
+      "nativeCellSha256": "567d0d8de780d515dad32267473bfef4a94dee2fd3e636d0187f455daefc5bd2",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "67ddea85bfd092b34de08103969aa8737972bdb18dc9667a736670e1be52cb66",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "float",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "scenic-shared-ocean-isolated",
+        "timeUs": 1200000
+      },
+      "image": "float-advanced.png",
+      "pngSha256": "7f62db9cbbb3570291f0788fe367748be8c34dadccc4a362834874b02d18a6a9",
+      "cellSha256": "ac78646d3dd0e058d71524b21687cb30ebbcaa25263776a1608c0f0ae1eddf6a",
+      "nativeCellSha256": "ac78646d3dd0e058d71524b21687cb30ebbcaa25263776a1608c0f0ae1eddf6a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "810f42a416c0f89cb08e4b6066566934bc21f65905f71b943f03d69c99cfc635",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "path",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "scenic-shared-ocean-isolated",
+        "timeUs": 0
+      },
+      "image": "float-default.png",
+      "pngSha256": "4c124c7e31c00fb83d4d76a22ebd399cdfe4ee4287fc735f10c0a360f4bf2ecc",
+      "cellSha256": "567d0d8de780d515dad32267473bfef4a94dee2fd3e636d0187f455daefc5bd2",
+      "nativeCellSha256": "567d0d8de780d515dad32267473bfef4a94dee2fd3e636d0187f455daefc5bd2",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "67ddea85bfd092b34de08103969aa8737972bdb18dc9667a736670e1be52cb66",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "path",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "scenic-shared-ocean-isolated",
+        "timeUs": 1200000
+      },
+      "image": "float-advanced.png",
+      "pngSha256": "7f62db9cbbb3570291f0788fe367748be8c34dadccc4a362834874b02d18a6a9",
+      "cellSha256": "ac78646d3dd0e058d71524b21687cb30ebbcaa25263776a1608c0f0ae1eddf6a",
+      "nativeCellSha256": "ac78646d3dd0e058d71524b21687cb30ebbcaa25263776a1608c0f0ae1eddf6a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "810f42a416c0f89cb08e4b6066566934bc21f65905f71b943f03d69c99cfc635",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "cell-art",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "screen-cell-art-background-isolated",
+        "timeUs": 0
+      },
+      "image": "cell-art-default.png",
+      "pngSha256": "5de273172ed1c4ccf6f1dc834667164a565b61570510a8bf74d47d770fd9e154",
+      "cellSha256": "4276a2c71c86fb839e19a0324eaa925d85558060354b6b1d6849d507dadb9f7f",
+      "nativeCellSha256": "4276a2c71c86fb839e19a0324eaa925d85558060354b6b1d6849d507dadb9f7f",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "147a77aa102a251bc850aad4429ae72c5ce7a64064575700172818ebce898743",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "cell-art",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "screen-cell-art-background-isolated",
+        "timeUs": 1200000
+      },
+      "image": "cell-art-advanced.png",
+      "pngSha256": "97d690405c461ed352d94f3ebe2e4934d7b2675d3403518edcc91a65c1e57184",
+      "cellSha256": "393743442972b571e7e66459e043c421b5e7709fc35abd6cb01084c1b823076e",
+      "nativeCellSha256": "393743442972b571e7e66459e043c421b5e7709fc35abd6cb01084c1b823076e",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "8b5f80040331b37dc0bd96ae90818a8b272e56e052f03a9cf0853985f27ce1f8",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "status",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "notifications",
+        "timeUs": 0
+      },
+      "image": "status-default.png",
+      "pngSha256": "300054ca1d563420c6ba0018084927f759936481754bbb67a2e8f8905106df1f",
+      "cellSha256": "799f8d654d6bc9d8c300a91f63701838d8753d465a8a174d911ff678f23cf5ab",
+      "nativeCellSha256": "799f8d654d6bc9d8c300a91f63701838d8753d465a8a174d911ff678f23cf5ab",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "a241acce3149e53deedf74476902193c6454dc5271b8e67842be81512e2c61d1",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "status",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "notifications",
+        "timeUs": 1200000
+      },
+      "image": "status-advanced.png",
+      "pngSha256": "f87788cc912009e50321dded7886c42d355448ab3593001931bac18720a6dcbf",
+      "cellSha256": "227ad24de816841905c2e119b2707eb94635831b6080093d7a1a16c1e52f79bd",
+      "nativeCellSha256": "227ad24de816841905c2e119b2707eb94635831b6080093d7a1a16c1e52f79bd",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "a978d1025838912fcf46ea0974dbfd2cc08c1e1ce8b3fd406206c19bbc383934",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "indicator",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "status",
+        "timeUs": 0
+      },
+      "image": "indicator-default.png",
+      "pngSha256": "d34190c51d420de833c2d2a4bf9af6e6ddb2b9ae0a89a6486817f762a70f51a5",
+      "cellSha256": "c8ed14357b756f5d8a910b66e14b9a599ee80b721daf9dfb59f47cec44acb3f3",
+      "nativeCellSha256": "c8ed14357b756f5d8a910b66e14b9a599ee80b721daf9dfb59f47cec44acb3f3",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "830c018ee56c014d2526fc91985cd682e57195b0288d8069924b2146777a4bea",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "indicator",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "status",
+        "timeUs": 1200000
+      },
+      "image": "indicator-advanced.png",
+      "pngSha256": "421129703f503e18421312c84f04572665847eeaf8ecf880505ee214a613f63d",
+      "cellSha256": "ba053af99e11103ab6a692b353828d111d01b62a90a71efa2eeac15b9512c91a",
+      "nativeCellSha256": "ba053af99e11103ab6a692b353828d111d01b62a90a71efa2eeac15b9512c91a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "c9f47dac55817855e406959fae060bc106322c7caae0dea290b58d1b4142b751",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "area",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "status",
+        "timeUs": 0
+      },
+      "image": "indicator-default.png",
+      "pngSha256": "d34190c51d420de833c2d2a4bf9af6e6ddb2b9ae0a89a6486817f762a70f51a5",
+      "cellSha256": "c8ed14357b756f5d8a910b66e14b9a599ee80b721daf9dfb59f47cec44acb3f3",
+      "nativeCellSha256": "c8ed14357b756f5d8a910b66e14b9a599ee80b721daf9dfb59f47cec44acb3f3",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "830c018ee56c014d2526fc91985cd682e57195b0288d8069924b2146777a4bea",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "area",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "status",
+        "timeUs": 1200000
+      },
+      "image": "indicator-advanced.png",
+      "pngSha256": "421129703f503e18421312c84f04572665847eeaf8ecf880505ee214a613f63d",
+      "cellSha256": "ba053af99e11103ab6a692b353828d111d01b62a90a71efa2eeac15b9512c91a",
+      "nativeCellSha256": "ba053af99e11103ab6a692b353828d111d01b62a90a71efa2eeac15b9512c91a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "c9f47dac55817855e406959fae060bc106322c7caae0dea290b58d1b4142b751",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "modal",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "source-modal-center",
+        "timeUs": 0
+      },
+      "image": "modal-default.png",
+      "pngSha256": "07597f695dc7d9af23978a2a6010dd77ffdba05c457c5f8b9a4b6f6bedd5e205",
+      "cellSha256": "ea02d2394900591404f42e05e615af538438992ee28af01204b12ce8d3a94f18",
+      "nativeCellSha256": "ea02d2394900591404f42e05e615af538438992ee28af01204b12ce8d3a94f18",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504484,
+      "snapshotSha256": "c7bdc5595806b7babb94bde872523223bbdb34dbfbe273533fa3934321b7b017",
+      "width": 100,
+      "height": 40,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "modal",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "source-modal-center",
+        "timeUs": 1200000
+      },
+      "image": "modal-default.png",
+      "pngSha256": "07597f695dc7d9af23978a2a6010dd77ffdba05c457c5f8b9a4b6f6bedd5e205",
+      "cellSha256": "ea02d2394900591404f42e05e615af538438992ee28af01204b12ce8d3a94f18",
+      "nativeCellSha256": "ea02d2394900591404f42e05e615af538438992ee28af01204b12ce8d3a94f18",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504484,
+      "snapshotSha256": "c5d95acefe021ddebbcda8ab4ab40bf9b5c6b07c42bbcbdf68823c2a0734a879",
+      "width": 100,
+      "height": 40,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "reader",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "input-workflow-reader-owner-isolated",
+        "timeUs": 0
+      },
+      "image": "reader-default.png",
+      "pngSha256": "24ccf9c67503ddef058422e419ec2536c9ace96696cf75451edc8ae5b4b63e42",
+      "cellSha256": "6c41736be236b0f0354ca4b359a2b4daf4504ae4bbd399d37ea4f58d601520fb",
+      "nativeCellSha256": "6c41736be236b0f0354ca4b359a2b4daf4504ae4bbd399d37ea4f58d601520fb",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504176,
+      "snapshotSha256": "3cd265eee84ef343a9ea0ee7b87910aad50eb5bf4865946fbdbc350c5e6f1495",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "reader",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "input-workflow-reader-owner-isolated",
+        "timeUs": 1200000
+      },
+      "image": "reader-advanced.png",
+      "pngSha256": "4f73fc5ac44d4d97930a6116312642e079f0181c696043549300e13b7225f19f",
+      "cellSha256": "5989b81dba7806fdc341da76160b4f5690185740634a5b7871dee42d83f61a29",
+      "nativeCellSha256": "5989b81dba7806fdc341da76160b4f5690185740634a5b7871dee42d83f61a29",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504176,
+      "snapshotSha256": "7486b7ea098aeed50202581dca079dae48cab82410a3d7629276a3700462d407",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "material",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "mixed-materials",
+        "timeUs": 0
+      },
+      "image": "material-default.png",
+      "pngSha256": "cea4ca7e0d0c1dc07507f8697b347d19f0608d12e0ee3aaad6045568ce614b05",
+      "cellSha256": "93ea8af5befd94527e1cc947b05197d3df1786fd898aa7fce57b5cf1dffe123c",
+      "nativeCellSha256": "93ea8af5befd94527e1cc947b05197d3df1786fd898aa7fce57b5cf1dffe123c",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "d4a9970163326a0b8836290a2321446331d2b4f39ac8807b7b58eefc3be37d0a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "material",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "mixed-materials",
+        "timeUs": 1200000
+      },
+      "image": "material-advanced.png",
+      "pngSha256": "8886565a7f304a839e5123a2e8686bb1a41c6937087406d99ce5d22d1ce1285a",
+      "cellSha256": "0d2102c620a89681dbe80d6945f9c5648989cca37ca7310c143843238e4fb7c4",
+      "nativeCellSha256": "0d2102c620a89681dbe80d6945f9c5648989cca37ca7310c143843238e4fb7c4",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "78510796b067dff62f0eec0210f9f6671ce84757a26207825dc9f4471f97c586",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "background",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "silk",
+        "timeUs": 0
+      },
+      "image": "field-default.png",
+      "pngSha256": "e7010e9f7fc94319566e80dab37feeae68e417e6ee8f4a42d734b1659717de1e",
+      "cellSha256": "5cc7b6b3fc747059409797cde45e41d3f5d97edd308c6072584efbc050385b0c",
+      "nativeCellSha256": "5cc7b6b3fc747059409797cde45e41d3f5d97edd308c6072584efbc050385b0c",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504932,
+      "snapshotSha256": "cd8d574de8e67723171dec9abe2694e6204aeaa67b89b7578f70e045c66a17f1",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "background",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "silk",
+        "timeUs": 1200000
+      },
+      "image": "field-advanced.png",
+      "pngSha256": "01e8db21b1e4c5cee255b5d43c64b16e0b9e64583783102aac3a7a1411f0db64",
+      "cellSha256": "607d1f3cdd260bf0b58b8c1cf448aac89c4a174fee319d807bf3be0bbcf1afbe",
+      "nativeCellSha256": "607d1f3cdd260bf0b58b8c1cf448aac89c4a174fee319d807bf3be0bbcf1afbe",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504932,
+      "snapshotSha256": "200100c4e9be98f11ab5be5033de9c7be41bb91bb83c5d8f734d8e40988de46a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "camera",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "flight",
+        "timeUs": 0
+      },
+      "image": "camera-default.png",
+      "pngSha256": "c5cf344ac6e9eef9b23d028f4276babb9e99bd9ef004bfdf948408df46a1c162",
+      "cellSha256": "bc205578fd87333232a22c54e55bd62c4ab5371eade38883314aed0af0a528c9",
+      "nativeCellSha256": "bc205578fd87333232a22c54e55bd62c4ab5371eade38883314aed0af0a528c9",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "e00379c4cd52efc7061733030b745bdb14f33e2ff4714bab7acd9427e6e8a6d2",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "camera",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "flight",
+        "timeUs": 1200000
+      },
+      "image": "camera-advanced.png",
+      "pngSha256": "97be37d7dda96455f05b6de18bd2235dc0abe55b72749a4c9812e1d0799fb0d0",
+      "cellSha256": "59093fd605295afea8efb0aacefe231b36a83c86fee9fd4cfc9c591cb77b2d86",
+      "nativeCellSha256": "59093fd605295afea8efb0aacefe231b36a83c86fee9fd4cfc9c591cb77b2d86",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "ed75bbfb5396ad80607f02931d45b876d7d7ab315fff72aef9552aef989649bd",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "flight",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "flight-banked",
+        "timeUs": 0
+      },
+      "image": "flight-default.png",
+      "pngSha256": "9b1a807d9040ffb33d8686273751de2a42f103dbbe67edbf1b33b84ea02c1066",
+      "cellSha256": "fc561335ce458380ae26272bd63ba290976042cefd34d5cfd112e532ca76d5a3",
+      "nativeCellSha256": "fc561335ce458380ae26272bd63ba290976042cefd34d5cfd112e532ca76d5a3",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "8835719b3fbbbe32c08e9d4bdded5df6c06c3a2c7b3dd9529ca4b947c418d6ef",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "flight",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "flight-banked",
+        "timeUs": 1200000
+      },
+      "image": "flight-advanced.png",
+      "pngSha256": "2ce349e209b33ffd4df22c3646f9e5eb26844729a620e5dd58506d813eceaf78",
+      "cellSha256": "9fe4e05f418e39235ccea5ad202138feffd1e2ab91c741c52cb9e7d6585634f7",
+      "nativeCellSha256": "9fe4e05f418e39235ccea5ad202138feffd1e2ab91c741c52cb9e7d6585634f7",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "43dac04076b89b128bf3aead3a21588cb1df08cc5a291103dd7fc7023f0f273d",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "pearl-cascade",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "original-pearl-cascade",
+        "timeUs": 0
+      },
+      "image": "pearl-cascade-default.png",
+      "pngSha256": "22d1e61101e5f68318904f3e6f28a622b5cc23e42bfc0a89853ca86ec767239d",
+      "cellSha256": "8e42205481cc798e4685c6d5c7814832bfdbec30db511db2a68fa237987a01e4",
+      "nativeCellSha256": "8e42205481cc798e4685c6d5c7814832bfdbec30db511db2a68fa237987a01e4",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "9bdaec8aa88a065766c76a60a0211ba34600c8f39a1ea45376c46c53e878c82a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "pearl-cascade",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "original-pearl-cascade",
+        "timeUs": 1200000
+      },
+      "image": "pearl-cascade-advanced.png",
+      "pngSha256": "0187bf89cfc8345725558e9df5c32319f25d9ead8919dd2a6640b3175e212135",
+      "cellSha256": "724b7163233aa0416a1a483c032f35836a1b17647750fe8052c8f62a7db05499",
+      "nativeCellSha256": "724b7163233aa0416a1a483c032f35836a1b17647750fe8052c8f62a7db05499",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "81e33631fceb7dec10044d094ba2bfce13139182cc7433dd280d1f3a1a29c9f4",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "copper-causeway",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "original-copper-causeway",
+        "timeUs": 0
+      },
+      "image": "copper-causeway-default.png",
+      "pngSha256": "626a60e03fb35ad67c2f6c37c5d70cbf88b8904db0c0b074d3b90e1c353d4268",
+      "cellSha256": "6e71b0b757dac6b9242192ac74a261d70089af78487704295df3026d93dd246e",
+      "nativeCellSha256": "6e71b0b757dac6b9242192ac74a261d70089af78487704295df3026d93dd246e",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "434bb38c49a0126aa658c1efb659c610bd07e6856b7012246c407e56d77cf1c3",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "copper-causeway",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "original-copper-causeway",
+        "timeUs": 1200000
+      },
+      "image": "copper-causeway-advanced.png",
+      "pngSha256": "96897bf5799f505c92d4320321d7595e1162e166f094ef86e469bbb7122ff513",
+      "cellSha256": "bb18f85578b5d6bbe32fe91f19caddf64894a488fe37aed42248ef208504fd5f",
+      "nativeCellSha256": "bb18f85578b5d6bbe32fe91f19caddf64894a488fe37aed42248ef208504fd5f",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "590373e00f5fe601985614131dd5e43911890f24c068f1a35a6db68fed85088a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "tidal-glass",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "original-tidal-glass",
+        "timeUs": 0
+      },
+      "image": "tidal-glass-default.png",
+      "pngSha256": "5b4b9007d29c59fc71e2def31da0b993acb3e9721657d18b352ff2ad7a909fde",
+      "cellSha256": "965c94ef9877a2d0696cdc3d7a4b03fd2de6032225bd79f4711fcf9ccf462f24",
+      "nativeCellSha256": "965c94ef9877a2d0696cdc3d7a4b03fd2de6032225bd79f4711fcf9ccf462f24",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "32e920286bac58f826555aace1c62489ca46dad3031a0fd66f9f4003891d456a",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "tidal-glass",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "original-tidal-glass",
+        "timeUs": 1200000
+      },
+      "image": "tidal-glass-advanced.png",
+      "pngSha256": "3976b610f3931df5785a7c36dc57dc4c56e39b04faeb02d223aaa872f7adf006",
+      "cellSha256": "c469b18bd187d3715a4901288b8aefe1cf8e32a154fa17e1bba7576068d1f303",
+      "nativeCellSha256": "c469b18bd187d3715a4901288b8aefe1cf8e32a154fa17e1bba7576068d1f303",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "199ad9e153ce39ef963edfe15122a3fd1bfbcd7446509cb458209701d8dfff2f",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "silt",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "original-silt",
+        "timeUs": 0
+      },
+      "image": "silt-default.png",
+      "pngSha256": "a6e36ad8021749cca6f9119eb41dc75fa860bb84f406f2c8718afcd4147403ab",
+      "cellSha256": "4e4145374ba7d8c53531bf295dcfb87106b208dd3dab1d84fbbb5dae656bc9cd",
+      "nativeCellSha256": "4e4145374ba7d8c53531bf295dcfb87106b208dd3dab1d84fbbb5dae656bc9cd",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "bdad4889b219125d1cbe622a6c41d279d2a6beb8b81641319fba563340ade6fe",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "silt",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "original-silt",
+        "timeUs": 1200000
+      },
+      "image": "silt-advanced.png",
+      "pngSha256": "b43aeca402d1468e193d0a4339d6871cf24eaddbc7aaf61ade360469ae812012",
+      "cellSha256": "7ae7dc593199f37f9e7ae1c45edda351467c30621d6f78491f8e8aa64a8e6b47",
+      "nativeCellSha256": "7ae7dc593199f37f9e7ae1c45edda351467c30621d6f78491f8e8aa64a8e6b47",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "8ef619f0bd3b23dcf164e4c56e04e941117d4baf7c3f44a270bc87d35789174d",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "model",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "original-orbital-loom",
+        "timeUs": 0
+      },
+      "image": "model-default.png",
+      "pngSha256": "33deffe560d5862e7f37fef3f98ce3ad3d3283cc1685064a4441eb95530575a5",
+      "cellSha256": "6cf63f1196eb8f523d151d47b98900c769ef1fc93cc52e9052f6bdfd72008fb4",
+      "nativeCellSha256": "6cf63f1196eb8f523d151d47b98900c769ef1fc93cc52e9052f6bdfd72008fb4",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30688400,
+      "snapshotSha256": "efe024c6fb77304db539b767a0ded6e77c378061fe523a13ce6cc6437a0cd763",
+      "width": 80,
+      "height": 32,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "model",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "original-orbital-loom",
+        "timeUs": 1200000
+      },
+      "image": "model-default.png",
+      "pngSha256": "33deffe560d5862e7f37fef3f98ce3ad3d3283cc1685064a4441eb95530575a5",
+      "cellSha256": "6cf63f1196eb8f523d151d47b98900c769ef1fc93cc52e9052f6bdfd72008fb4",
+      "nativeCellSha256": "6cf63f1196eb8f523d151d47b98900c769ef1fc93cc52e9052f6bdfd72008fb4",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30688400,
+      "snapshotSha256": "3db7f819fc2d42bb4753173167dc5a266b113561f9d0e0056c0fabcbcb0f168c",
+      "width": 80,
+      "height": 32,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "stage",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "pearl-fleet-original",
+        "timeUs": 0
+      },
+      "image": "stage-default.png",
+      "pngSha256": "e2714f5bde2475a3a04a5e00efaa73294476f33d4cb0bc91dde364f0bd6ec2a0",
+      "cellSha256": "573365b6ae42994ce848c557767226a9e070a51f910238f8c182abcf79c3eb44",
+      "nativeCellSha256": "573365b6ae42994ce848c557767226a9e070a51f910238f8c182abcf79c3eb44",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "2a8d1b126e0407245515df1c1ca0b37e2689c40d27192e4a56ce89794546cd85",
+      "width": 144,
+      "height": 48,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "stage",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "pearl-fleet-original",
+        "timeUs": 1200000
+      },
+      "image": "stage-advanced.png",
+      "pngSha256": "ad4d9198d387a10b42f7933713d8c535bcb51c1dcd0a773897f899f406e16bf0",
+      "cellSha256": "6eed0c49ac705d1d1e27d8d01623d61b10df7e7988cf24f1175522ee7543432a",
+      "nativeCellSha256": "6eed0c49ac705d1d1e27d8d01623d61b10df7e7988cf24f1175522ee7543432a",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504080,
+      "snapshotSha256": "f2e0a43af5c112d6ac55d32296da8bbb7eea2dc2139530252e26982d1ff67a12",
+      "width": 144,
+      "height": 48,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "electrical",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "recipeId": "electrical-graphs-connected-leaders-isolated",
+        "timeUs": 0
+      },
+      "image": "electrical-default.png",
+      "pngSha256": "02c2df01040e8c0ee2d0c35864800b8f5db538ddd802b4f8ca0019385259d02b",
+      "cellSha256": "a35293f4a3f3af47ace32532b67ba3d802db878c7608e1d245107727372cd644",
+      "nativeCellSha256": "a35293f4a3f3af47ace32532b67ba3d802db878c7608e1d245107727372cd644",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504620,
+      "snapshotSha256": "2cb21d07116287bd4c58bda42a2f63b50c75730c6bed5f00ec7cf86e98f63bf8",
+      "width": 160,
+      "height": 52,
+      "timeUs": 0,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "electrical",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "recipeId": "electrical-graphs-connected-leaders-isolated",
+        "timeUs": 1200000
+      },
+      "image": "electrical-advanced.png",
+      "pngSha256": "ac8fe263f71d18f2e7ce0fd1baa6c5bb006d24abcdd4573b111e4c30501c4bf7",
+      "cellSha256": "c520d324ac064b3caed74544802b10d4326a1e91e9ffa7f49795e0fbfe0d08f2",
+      "nativeCellSha256": "c520d324ac064b3caed74544802b10d4326a1e91e9ffa7f49795e0fbfe0d08f2",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504620,
+      "snapshotSha256": "374e00dc52f43deb7c7bd80cf34871fc0572f31d71c4773e40eb2c8aa7d6a164",
+      "width": 160,
+      "height": 52,
+      "timeUs": 1200000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "project-signal-desk",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "projectId": "signal-desk",
+        "timeUs": 0
+      },
+      "image": "project-signal-desk-default.png",
+      "pngSha256": "fb466375b7e33d344602cdbd832c6858ae1f30dacab59dde11cd04e5f0f71893",
+      "cellSha256": "d932a2779d3f1c490d8ee6e098572afefa8472671b4ffa1b376a978c18c2c0d3",
+      "nativeCellSha256": "d932a2779d3f1c490d8ee6e098572afefa8472671b4ffa1b376a978c18c2c0d3",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504416,
+      "snapshotSha256": "4eb6af64e3be252f92f062d5f68a14c9589afa674dd924e1b183d5d3efa57b4e",
+      "width": 120,
+      "height": 40,
+      "timeUs": 650000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "project-signal-desk",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "projectId": "signal-desk",
+        "timeUs": 1200000
+      },
+      "image": "project-signal-desk-advanced.png",
+      "pngSha256": "ea370fa98a5b53c362eb6e1c56151f56a0024bb49b3b72c4d5fee84c96d558ff",
+      "cellSha256": "938ad526fe2af2d8838150ef7a951c8cc7b7f958fedf3e05b5f2c93985d531db",
+      "nativeCellSha256": "938ad526fe2af2d8838150ef7a951c8cc7b7f958fedf3e05b5f2c93985d531db",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504416,
+      "snapshotSha256": "e0a26f986ca10d420785f3c9932eee4752934091bf6167bd7c7fca7d40a6148b",
+      "width": 120,
+      "height": 40,
+      "timeUs": 1850000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "project-flight-deck",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "projectId": "flight-deck",
+        "timeUs": 0
+      },
+      "image": "project-flight-deck-default.png",
+      "pngSha256": "1ec16eb6fd2c92f080e55242d93d496a5e29fffff1f2df8a0456b80b403c7867",
+      "cellSha256": "e6d66ff3b5ccf4fd8d9a05a9c84d50650c872956a9438af4f9b4194ed7a4d544",
+      "nativeCellSha256": "e6d66ff3b5ccf4fd8d9a05a9c84d50650c872956a9438af4f9b4194ed7a4d544",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504296,
+      "snapshotSha256": "e27b448f9bc36cda2c28d070fcb60b915568f97e8f00f46c2e9cdee71eedb88b",
+      "width": 120,
+      "height": 40,
+      "timeUs": 800000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "project-flight-deck",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "projectId": "flight-deck",
+        "timeUs": 1200000
+      },
+      "image": "project-flight-deck-advanced.png",
+      "pngSha256": "f1b48f3df4898e5f626098bbd86605fdd2f170337572fe1db274e9b2e9858762",
+      "cellSha256": "541077c5b5a423a28e227bae1038f25e7ef2d3dcf31abc33c0d1de44e009719f",
+      "nativeCellSha256": "541077c5b5a423a28e227bae1038f25e7ef2d3dcf31abc33c0d1de44e009719f",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504296,
+      "snapshotSha256": "9c4ca69f8c4f5ddb45938d19cdc8343e794c90ca7ae2a6952956f47e479dd643",
+      "width": 120,
+      "height": 40,
+      "timeUs": 2000000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "project-tidal-console",
+      "state": "default",
+      "label": "Initial presentation",
+      "request": {
+        "id": "default",
+        "label": "Initial presentation",
+        "projectId": "tidal-console",
+        "timeUs": 0
+      },
+      "image": "project-tidal-console-default.png",
+      "pngSha256": "2baf5792c9543c4c8adec0dc106ccbebbca8bb64daef340a9b6f8b866934853a",
+      "cellSha256": "5388323630bc1893cd0cf873c40b51fbbed229c8ad329b0c21605f7817c889a5",
+      "nativeCellSha256": "5388323630bc1893cd0cf873c40b51fbbed229c8ad329b0c21605f7817c889a5",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504380,
+      "snapshotSha256": "a44076720364c8774d0a698a633e2bce934579689c75a4e3446e2e8d149b3a5b",
+      "width": 120,
+      "height": 40,
+      "timeUs": 900000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    },
+    {
+      "component": "project-tidal-console",
+      "state": "advanced",
+      "label": "At 1.2 seconds",
+      "request": {
+        "id": "advanced",
+        "label": "At 1.2 seconds",
+        "projectId": "tidal-console",
+        "timeUs": 1200000
+      },
+      "image": "project-tidal-console-advanced.png",
+      "pngSha256": "0b02f6d9b8cb6f07b62d31d45518ff654e9f2c24d50b658485630b5c333dcb6d",
+      "cellSha256": "a7e0bdeeafc68f60a20126095ace293bc4544df4a65947a55e003d050b0fdcec",
+      "nativeCellSha256": "a7e0bdeeafc68f60a20126095ace293bc4544df4a65947a55e003d050b0fdcec",
+      "nativeWasmEqual": true,
+      "snapshotBytes": 30504380,
+      "snapshotSha256": "6b79eb82f063e89c17cd331fcfe2e697766f4a1d68c3a2c817151ff174332bd8",
+      "width": 120,
+      "height": 40,
+      "timeUs": 2100000,
+      "build": "1.0.0-rc.2",
+      "schema": 539365526
+    }
+  ],
+  "pageErrors": [],
+  "partialRecaptures": [
+    {
+      "components": [
+        "graph"
+      ],
+      "reason": "the original recipe was renamed work-graph with neutral labels for the public SDK (2026-11-14)",
+      "sources": {
+        "native/Nocturne-RC4-Source-Build.html": "c13449d7b3913813b84d0761fdaaceb4800f37f9192f75d24f361e1de21b84a5",
+        "docs/current/components.json": "062c74c4bd670d95e9bb2cdb5a1d8bd63ccf2e3cd301dbc470eb7ef750f04a02",
+        "native/dist/libnocturne_native.dylib": "5611ef7fe8fa2a64e9e9f6edb0756c3d7ec5a497154d1256807468194ffcd225",
+        "native/dist/nocturne_native.wasm": "d4040afcd185593a60eb1e3114ca070168598ca693883d0e397f24483473f920"
+      }
+    }
+  ]
+}

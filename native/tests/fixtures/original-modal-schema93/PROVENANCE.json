@@ -1,0 +1,20 @@
+{
+  "schema": "0x20261093",
+  "fixedPrefixBytes": 30499432,
+  "modalOffset": 30494248,
+  "modalBytes": 5184,
+  "entryBytes": 128,
+  "writerLibrary": "<workspace>/wt-source-modal-20261015/native/dist/libnocturne_native.dylib",
+  "writerSha256": "e4224a71ec477d0b4f374ed44d0ea1c64323ea63d356d0afc16c30a2ba92ee9b",
+  "writerWasmSha256": "402bdbefbe96ce49901d664e1df6ada361a0f8d7091fe145e0f52c121ceb6da0",
+  "writerBase": "84be5c51c1e4a86f82d9a21a025b6a629a6fd0dd",
+  "writerDirtyImplementation": true,
+  "snapshotSha256": "f98615e1f53b1dcfa7d4cf3262a84697d04e37fad64ec85fc361968ad76715ae",
+  "frameSha256": "e9c20ab3b01cac839eee67f0a607739af8a6468572c2d89fdd9da169d80aa323",
+  "genuine92Source": "<workspace>/wt-source-modal-20261015/native/tests/fixtures/original-observatory-schema92/PROVENANCE.json",
+  "old92Rejects93Atomically": true,
+  "modalDepth": 2,
+  "documentScalars": 70005,
+  "sourceModelTriangles": 4608,
+  "releasePassed": false
+}

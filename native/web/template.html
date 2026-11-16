@@ -1,0 +1,1305 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="nocturne-source-baseline" content="c7deb564c70b3f778d538fbed115d71ad49879e2"><meta name="nocturne-full-rc4-qualified" content="false"><title>Nocturne / @@BUILD@@</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--panel:#141d27;--line:#2b3949;--ink:#dfd8c9;--muted:#9dafb9;--a:#a3cabe;--b:#c7aed7;scrollbar-color:var(--line) var(--bg);scrollbar-width:thin;scrollbar-gutter:stable}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 30% 0,#1a2430 0,transparent 52%),var(--bg);color:var(--ink);font:15px/1.5 system-ui,sans-serif}header,main{max-width:1440px;margin:auto;padding:20px 26px}header{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px}h1{font-size:27px;font-weight:500;letter-spacing:.09em;margin:0}h2{font-size:19px;font-weight:500;margin:0 0 12px}small,.muted{color:var(--muted)}.tag{font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:20px;padding:5px 12px;color:var(--a)}.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.toolbar>*{flex:none}button,select,input,textarea{font:inherit;background:#182430;border:1px solid #384b5c;color:var(--ink);border-radius:6px;padding:7px 10px}button{cursor:pointer}button:hover{border-color:var(--a);background:#243741}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--a);outline-offset:2px}.accent{background:#29443f;color:#d9eee5;border-color:#779e91}.scene-buttons{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0;max-height:min(35vh,320px);overflow:auto;padding:3px;scrollbar-gutter:stable}.scene-buttons button{font-size:13px}.scene-buttons .active{border-color:var(--b);color:#ecdbf6;background:#352e40}.stage{background:#080b10;border:1px solid #2d3a47;border-radius:12px;overflow:hidden;box-shadow:0 15px 55px #0005}.caption{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;align-items:center}.caption strong{font-weight:500;color:#cbded6}canvas{display:block;max-width:100%;height:auto;margin:auto;touch-action:none;cursor:grab;outline:none}.stage canvas{max-height:calc(100svh - 96px);width:auto}canvas:active{cursor:grabbing}.metrics{font:11px/1.7 ui-monospace,monospace;padding:8px 16px;color:#9ab0b5;border-top:1px solid var(--line);background:#101821;white-space:pre-wrap}.composer{display:flex;gap:10px;align-items:center;padding:12px 0}.composer textarea{flex:1;resize:none;min-height:46px;font:14px ui-monospace,monospace;background:#101b24}.notice{border-left:2px solid #9a7f58;padding:8px 14px;margin:12px 0;font-size:13px;color:#c9bda8;background:#2a21191f}.grids{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}details{border:1px solid var(--line);border-radius:9px;background:#101923;padding:13px 16px;margin-bottom:14px}summary{cursor:pointer;color:var(--a);font-size:15px}details[open]>summary{margin-bottom:16px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px}.fields label{display:flex;flex-direction:column;font-size:12px;color:var(--muted);gap:4px}.fields input,.fields select{width:100%;font-size:14px}.full{grid-column:1/-1}input[type=range]{padding:0;accent-color:var(--a)}textarea.code{resize:none;font:12px/1.5 ui-monospace,monospace;width:100%;min-height:240px;tab-size:2}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}pre{overflow:auto;max-height:280px;white-space:pre-wrap;font:12px/1.55 ui-monospace,monospace;color:#afc6ce}#error{color:#f1abb4;font:13px ui-monospace,monospace;min-height:22px}.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0 24px}.legend strong{display:block;color:var(--b);font-weight:500}footer{border-top:1px solid var(--line);padding:20px;color:var(--muted);font-size:12px}a{color:var(--a)}@media(max-width:850px){header,main{padding-left:12px;padding-right:12px}.grids,.legend{grid-template-columns:1fr}.caption{display:block}h1{font-size:22px}}
+.recovery{padding:16px;border:1px solid var(--line);border-radius:9px;background:#101923;margin:12px 0}.recovery h2{font-size:16px;margin:0 0 10px}.recovery label{display:inline-flex;align-items:center;gap:6px}.recovery select{max-width:min(100%,36rem)}.recovery p{margin:9px 0}.semantic-record{padding:10px 12px;border:1px solid var(--line);border-radius:6px;margin:8px 0}.semantic-record h3{font-size:14px;margin:0 0 6px}.semantic-source{white-space:pre-wrap;overflow-wrap:anywhere;unicode-bidi:plaintext}.semantic-record button[aria-disabled=true]{opacity:.6;cursor:default}.recovery pre{max-height:none}canvas:focus-visible{outline:2px solid var(--a);outline-offset:-3px}#readable{unicode-bidi:plaintext}#selection-summary{overflow-wrap:anywhere}@media(max-width:850px){.composer{flex-wrap:wrap}.composer textarea{flex-basis:100%}.recovery select{width:100%}}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--a);outline-offset:2px}button:disabled{opacity:.55;cursor:wait}.grids>*{min-width:0}.fields label{min-width:0}.fields small{overflow-wrap:anywhere}#workshop-status{min-height:3em}#workshop-preview{white-space:pre;max-width:100%}
+header{padding:8px 18px;min-height:64px}header h1{font-size:20px}header small{font-size:12px}main{padding-top:0}.stage{height:calc(100svh - 88px);display:flex;flex-direction:column}.caption{flex:none;display:block;padding:8px 14px}.demo-menu{display:flex;gap:10px;align-items:center}.demo-menu label{font-size:12px;color:var(--muted)}#scenes{flex:1;min-width:0;max-width:100%;font-size:13px}#attract{font-size:12px;white-space:nowrap}.demo-title{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin-top:6px}.demo-title strong{font-size:14px}#subtitle{font-size:11px}#demo-provenance{font:10px ui-monospace,monospace;color:var(--muted)}.canvas-frame{flex:1;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#080b10}.stage .canvas-frame canvas{max-height:100%;max-width:100%;width:auto;height:auto;flex:none}.stage .metrics{flex:none;max-height:3.4em;overflow:auto;font-size:10px;padding:4px 12px}@media(max-width:600px){header{min-height:64px;padding:8px 12px}header .tag{font-size:9px}#subtitle{display:none}.demo-menu{gap:6px}.caption{padding:6px 8px}#attract{padding:6px;font-size:11px}header h1{font-size:16px}}
+
+/* The artwork and controls have separate scroll ownership. */
+html,body{height:100%;overflow:hidden}header,main{max-width:none}header{height:64px}main{height:calc(100dvh - 64px);padding:0 18px 12px;display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:16px;overflow:hidden}.stage-column{min-width:0;min-height:0;display:flex;flex-direction:column}.stage{height:auto;flex:1;min-height:0}.study-controls{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 5px 16px 0;scrollbar-gutter:stable}.study-controls>.demo-menu{border:1px solid var(--line);border-radius:9px;background:#101923;padding:12px;margin-bottom:14px;flex-wrap:wrap}.study-controls>.demo-menu label{flex-basis:100%}.study-controls>h2{font-size:14px;margin:0 0 10px;color:var(--a)}.study-controls .grids,.study-controls .legend{display:block}.study-controls .legend>div{margin-bottom:12px}.study-controls .fields{gap:10px}.study-controls .toolbar{gap:6px}.study-controls .toolbar>*{max-width:100%}.study-controls .recovery{margin-top:0}.study-controls details{padding:12px}.study-controls footer{padding:12px}.composer{flex:none;flex-wrap:wrap;padding:8px 0 0;margin:0}.composer textarea{min-width:120px;min-height:42px}.composer label{display:flex;align-items:center;gap:6px}.composer input[type=range]{width:80px}.composer select{max-width:150px;font-size:12px}#motion-panel{flex:none;margin:8px 0 0;padding:6px 10px}#motion-panel summary{font-size:12px}#motion-panel[open]>summary{margin-bottom:6px}#motion-panel .toolbar{gap:6px}#motion-panel button,#motion-panel select{font-size:12px;padding:4px 8px}#error:empty{min-height:0}#error{flex:none;max-height:4em;overflow:auto}.study-controls .recovery select{max-width:100%}
+@media(max-width:1000px){main{grid-template-columns:minmax(0,1fr) 310px;gap:10px;padding:0 12px 8px}.composer textarea{flex-basis:100%}}
+@media(max-width:760px){main{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,60%) minmax(0,1fr);gap:10px}.study-controls{border-top:1px solid var(--line);padding-top:10px}.composer{gap:6px}.composer textarea{min-height:36px}.composer label{font-size:11px}.stage .metrics{max-height:2.1em}.stage-column #motion-panel{margin-top:5px}.demo-title{margin-top:3px}.stage .caption{padding:5px 8px}}
+
+.study-controls #motion-panel{margin:0 0 12px}.study-controls #prompt-appearance{margin-top:12px}.study-controls #prompt-appearance label{display:flex;flex-direction:column;font-size:12px;color:var(--muted)}.composer textarea{width:100%;flex-basis:100%}.study-controls #prompt-appearance select{max-width:100%}
+@media(max-width:760px) and (max-height:500px){header small{display:none}header{height:44px;min-height:44px}main{height:calc(100dvh - 44px);grid-template-rows:minmax(0,72%) minmax(0,1fr)}.demo-title{display:none}.stage .metrics{font-size:9px}.composer textarea{height:36px;min-height:36px}}
+
+#palette-swatches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}.palette-swatch{min-width:0;padding:8px;text-align:left;font-size:11px;line-height:1.4}.palette-swatch[aria-pressed=true]{border-color:var(--a);outline:1px solid var(--a)}.palette-swatch .palette-colors{display:flex;height:24px;margin-top:6px;overflow:hidden;border-radius:3px}.palette-swatch [data-color]{flex:1;min-width:0}.palette-swatch .palette-name{display:block;min-height:2.8em}#typing-weather-status{font-size:12px}#typing-weather{max-width:100%}#palette-panel>label{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+
+#camera-controls-panel fieldset{min-width:0;border:1px solid var(--line);border-radius:6px;margin:10px 0;padding:8px}#camera-controls-panel legend{font-size:12px;color:var(--a);padding:0 4px}#camera-controls-panel label{font-size:12px;color:var(--muted)}#camera-controls-panel .camera-axis>label{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}#camera-controls-panel select,#camera-controls-panel input[type=number]{min-width:0;width:100%;font-size:13px}#camera-controls-panel .camera-check,#camera-controls-panel .camera-checks label{display:flex;align-items:center;gap:6px;margin:7px 0}#camera-controls-panel .camera-checks input,#camera-controls-panel .camera-check input{width:auto}.camera-vector-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.camera-vector-fields label{display:flex;flex-direction:column;gap:4px}#camera-controls-status{font-size:12px;overflow-wrap:anywhere}#camera-controls-panel [hidden]{display:none!important}#camera-controls-panel details{margin-top:10px;margin-bottom:0}
+
+textarea{resize:none;max-width:100%}
+#project-panel label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);margin:9px 0}#project-panel select,#project-panel input{min-width:0;max-width:100%}#project-panel fieldset{min-width:0;border:1px solid var(--line);margin:12px 0;padding:10px}#project-panel legend{font-size:12px;color:var(--a)}#project-panel details{margin-top:10px;padding:8px}#project-panel .code{min-height:100px}#project-panel small{font-size:11px}#project-layers{width:100%;font-size:12px}#project-status{font-size:12px;overflow-wrap:anywhere}.project-toolbar{display:flex;gap:6px;flex-wrap:wrap;align-items:end}.project-toolbar label{flex:1}#project-catalog{display:flex;gap:5px;flex-wrap:wrap;max-height:120px;overflow:auto;margin:8px 0}#project-catalog button{font-size:11px;padding:4px 7px;cursor:grab}#project-selection{position:fixed;z-index:20;border:1px dashed var(--a);pointer-events:none;box-shadow:0 0 0 1px #0008}#project-selection[hidden]{display:none}#project-resize{position:absolute;right:-6px;bottom:-6px;width:13px;height:13px;padding:0;border:1px solid var(--ink);background:var(--a);border-radius:0;cursor:nwse-resize;pointer-events:auto}#project-panel button:disabled{cursor:default}
+</style></head><body><header><div><h1>Nocturne</h1><small>Gallery / Workshop</small></div><span class="tag" id="runtime-build">@@BUILD@@</span></header>
+<main>
+<div class="stage-column"><section class="stage" aria-label="Live demo"><div class="caption"><div class="demo-title"><strong id="title">Loading the native core…</strong><small id="subtitle"></small><small id="demo-provenance"></small></div></div><div class="canvas-frame"><canvas id="canvas" width="1200" height="800" tabindex="0" aria-label="Interactive native terminal canvas" aria-describedby="canvas-help"></canvas><canvas id="canvas-gl" width="1200" height="800" tabindex="0" style="display:none;" aria-label="Interactive native terminal canvas (WebGL)" aria-describedby="canvas-help"></canvas></div><div class="metrics" id="metrics"></div></section>
+
+<div class="composer"><textarea id="draft" rows="1" aria-label="Immediate shared prompt" placeholder="Type a message"></textarea></div>
+<div id="error" role="alert" aria-atomic="true"></div>
+</div><aside class="study-controls" aria-label="Gallery controls"><h2>Gallery</h2><div class="demo-menu"><label for="scenes-search">Find a scene<input id="scenes-search" type="search" placeholder="Name or component"></label><label for="scene-collection">Collection<select id="scene-collection"><option value="showcase">Showcase</option><option value="3d">3D scenes</option><option value="components">Components</option><option value="all">All API studies</option></select></label><button id="scenes-clear">Clear search</button><label for="scenes">Scene</label><select id="scenes"></select><button id="attract" aria-pressed="true">Demo rotation on</button></div>
+<details id="project-panel"></details>
+<template id="occlusion-look-template"><fieldset id="occlusion-look"><legend>Hidden particles</legend><label>Occlusion tint <output id="occlusion-tint-value" for="occlusion-tint">1.00</output><input id="occlusion-tint" type="range" min="0" max="1" step="0.05" value="1" aria-describedby="occlusion-look-help"></label><label>Occluded dots<select id="occluded-dots" aria-describedby="occlusion-look-help"><option value="hidden">Hidden</option><option value="merge">Merge</option></select></label><small id="occlusion-look-help">Braille particles behind the front one in a cell. Tint sets how much they colour the cell background: 1 full, 0 only the scene behind. Merge adds their dots to the cell. Changes apply at once.</small></fieldset></template>
+<details id="motion-panel"><summary>Motion and playback controls</summary><div class="toolbar"><button id="play" class="accent">Hold motion</button><button id="replay">Replay scene</button><button id="brake">Brake flight</button><button id="home">Home camera</button><label><small>FPS </small><select id="fps"><option>30</option><option selected>60</option><option>90</option><option>120</option></select></label><span class="muted" id="clock">00:00.000</span></div></details>
+<details id="prompt-appearance" open><summary>Prompt appearance and typing weather</summary><label>Prompt surface <select id="first-prompt-style" aria-label="Prompt surface"><option value="">Current presentation</option><option value="custom" disabled>Custom surface</option></select></label><label>Surface cursor <select id="first-prompt-cursor" aria-label="Surface cursor" disabled><option value="0">Left half block</option><option value="1">Underline</option><option value="2">Vertical bar</option><option value="3">Braille orbit</option></select></label><details id="prompt-cursor-controls" open><summary>Cursor</summary><div class="fields"><label>Shape<select id="cursor-shape"><option>inherit</option><option>none</option><option>block</option><option>half</option><option>underline</option><option>bar</option><option>braille</option><option>custom</option></select></label><label>Glyph<input id="cursor-glyph" value="▏"></label><label>Color<input id="cursor-color" type="color" value="#dfd8c9"></label><label>Second color<input id="cursor-secondary" type="color" value="#8aa9c9"></label><label>Blink ms<input id="cursor-blink" type="number" value="0" min="0" max="60000"></label><label>Visible fraction<input id="cursor-duty" type="number" value="0.5" min="0" max="1" step=".05"></label><label>Color motion<select id="cursor-color-mode"><option>fixed</option><option>pulse</option><option>cycle</option></select></label><label>Color period ms<input id="cursor-period" type="number" min="40" max="60000" value="1000"></label></div></details><details id="prompt-weather-controls" open><summary>Typing weather</summary><div class="fields"><label>Weather<select id="prompt-weather-style"><option>off</option><option>embers</option><option>sparks</option><option>nova</option><option>rain</option><option>snow</option><option>ripples</option></select></label><label>Intensity<input id="prompt-weather-intensity" type="number" min="0" max="1" step=".05" value="0.6"></label><label>Life ms<input id="prompt-weather-life" type="number" min="200" max="8000" value="1800"></label><label>Speed<input id="prompt-weather-speed" type="number" min="1" max="50" value="12"></label><label>Paste<select id="prompt-weather-paste"><option>each</option><option>burst</option><option>off</option></select></label></div></details><button id="prompt-style-apply">Apply cursor and weather</button><p id="prompt-style-status" role="status"></p><div class="toolbar"><label><small>Surface α</small><input id="prompt-alpha" type="range" min="0" max="1" value="0.22" step=".01"></label><select id="prompt-mode" aria-label="Prompt mode"><option value="marquee">Scrolling line</option><option value="grow">Bounded growth</option><option value="vim-inline">Vim-style inline</option><option value="vim-full">Vim-style full</option></select></div></details>
+
+
+<details id="typography"><summary>Typography</summary><label>Local OpenType or TrueType font <input id="font-file" type="file" accept=".otf,.ttf,font/otf,font/ttf"></label><button id="font-default">Use default font</button><p id="font-status" class="muted" role="status" data-sha256="">System monospace · browser OpenType</p><label>TDF cell-art JSON <input id="tdf-import" type="file" accept=".json,application/json"></label><p id="tdf-status" class="muted" role="status">Import cell-art.json from the TDF example.</p></details>
+<details id="model-panel"><summary>OBJ models</summary><label>Local OBJ model <input id="model-file" type="file" accept=".obj,text/plain"></label><div class="fields"><label>Up axis <select id="model-up"><option>Y</option><option>Z</option></select></label><label>Model size <input id="model-size" type="number" value="60" min=".1" max="1000" step="1"></label></div><div class="actions"><button id="model-original">Orbital Loom</button><button id="model-clear">Clear imported model</button></div><p id="model-status" class="muted" role="status">Import OBJ polygon geometry and vertex colors. External textures and materials are not fetched.</p></details>
+<div class="grids"><section>
+<details><summary>Native effect catalogue • all port identities</summary><select id="effect" style="width:100%"></select><div class="actions"><button id="effect-play">Play selected</button><button id="effect-peak">Inspect at 900 ms</button><button id="text-show">Show text</button><button id="text-hide">Hide text</button><button id="window-hide">Minimize window</button><button id="window-show">Restore window</button></div><p class="muted">Choose an effect, then play it or inspect a fixed moment.</p></details>
+<details id="palette-panel"><summary>Palette swatches</summary><label>Native indexed material <select id="palette"><option value="">Authored recipe colors</option></select></label><div id="palette-swatches" aria-label="All authored palette colors"></div></details>
+<details><summary>Weather / wind / material response</summary><div class="fields">
+<label>Wind X <input id="wind-x" type="number" value="2.2" min="-128" max="128" step=".2"></label><label>Wind Y <input id="wind-y" type="number" value="0" min="-128" max="128" step=".2"></label><label>Wind Z <input id="wind-z" type="number" value="1.3" min="-128" max="128" step=".2"></label><label>Gravity Y <input id="gravity" type="number" value="-4.2" min="-64" max="64" step=".2"></label><label>Heat <input id="heat" type="number" value="12" min="0" max="64" step="1"></label><label>Stop treatment <select id="tail"><option>drain</option><option>settle</option><option>dissolve</option><option>gust</option><option>quench</option><option>disperse</option></select></label>
+</div><div class="actions"><button id="forces">Apply forces</button><button id="stop">Stop emission</button><button id="floor">Toggle visible floor</button><button id="clear-deposits">Clear deposits explicitly</button></div><small>Wind is a velocity field; drag acts on relative air velocity. Stopping the emitter does not erase its accumulated surface state.</small></details>
+<details id="camera-controls-panel"><summary>Camera rigs and controls</summary>
+<label class="camera-check"><input id="camera-controls-enabled" type="checkbox"> Use rig controls</label>
+<div class="fields"><label>Camera rig<select id="camera-rig"><option value="head">Head</option><option value="dolly">Dolly</option><option value="crane">Crane / jib</option><option value="follow">Follow / chase</option><option value="spacecraft">Head in spacecraft</option><option value="orbit">Anchored orbit</option></select></label><label>Navigation<select id="camera-mode"><option value="orbit">Anchor / orbit</option><option value="pan">Pan</option><option value="fly">Fly / rotate</option></select></label><label>Input controls<select id="camera-input-target"><option value="body">Body / rig</option><option value="head">Head within rig</option></select></label></div>
+<p id="camera-controls-status" class="muted" role="status"></p>
+<details class="camera-axes" open><summary>Input axes · pan, orbit, rotate and roll</summary><fieldset class="camera-axis"><legend>Input X</legend><label>Action<select id="camera-axis-x-action"><option value="disabled">Disabled</option><option value="orbit-x">Orbit X · pitch</option><option value="orbit-y">Orbit Y · yaw</option><option value="orbit-z">Orbit Z · roll</option><option value="pan-x">Pan X</option><option value="pan-y">Pan Y</option><option value="pan-z">Pan Z</option><option value="look-x">Look X · pitch</option><option value="look-y">Look Y · yaw</option><option value="look-z">Look Z · roll</option></select></label><div class="fields"><label>Sensitivity<input id="camera-axis-x-sensitivity" type="number" min="0" max="1000" step=".1" value="1"></label><div class="camera-checks"><label><input id="camera-axis-x-enabled" type="checkbox" checked> Enabled</label><label><input id="camera-axis-x-invert" type="checkbox"> Invert</label></div></div></fieldset><fieldset class="camera-axis"><legend>Input Y</legend><label>Action<select id="camera-axis-y-action"><option value="disabled">Disabled</option><option value="orbit-x">Orbit X · pitch</option><option value="orbit-y">Orbit Y · yaw</option><option value="orbit-z">Orbit Z · roll</option><option value="pan-x">Pan X</option><option value="pan-y">Pan Y</option><option value="pan-z">Pan Z</option><option value="look-x">Look X · pitch</option><option value="look-y">Look Y · yaw</option><option value="look-z">Look Z · roll</option></select></label><div class="fields"><label>Sensitivity<input id="camera-axis-y-sensitivity" type="number" min="0" max="1000" step=".1" value="1"></label><div class="camera-checks"><label><input id="camera-axis-y-enabled" type="checkbox" checked> Enabled</label><label><input id="camera-axis-y-invert" type="checkbox"> Invert</label></div></div></fieldset><fieldset class="camera-axis"><legend>Input Z</legend><label>Action<select id="camera-axis-z-action"><option value="disabled">Disabled</option><option value="orbit-x">Orbit X · pitch</option><option value="orbit-y">Orbit Y · yaw</option><option value="orbit-z">Orbit Z · roll</option><option value="pan-x">Pan X</option><option value="pan-y">Pan Y</option><option value="pan-z">Pan Z</option><option value="look-x">Look X · pitch</option><option value="look-y">Look Y · yaw</option><option value="look-z">Look Z · roll</option></select></label><div class="fields"><label>Sensitivity<input id="camera-axis-z-sensitivity" type="number" min="0" max="1000" step=".1" value="1"></label><div class="camera-checks"><label><input id="camera-axis-z-enabled" type="checkbox" checked> Enabled</label><label><input id="camera-axis-z-invert" type="checkbox"> Invert</label></div></div></fieldset></details>
+<div id="camera-head-fields"><fieldset class="camera-vector"><legend>Head offset</legend><div class="camera-vector-fields"><label>X<input id="camera-head-position-x" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Y<input id="camera-head-position-y" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Z<input id="camera-head-position-z" type="number" min="-100000" max="100000" step="1" value="0"></label></div></fieldset><fieldset class="camera-vector"><legend>Head rotation</legend><div class="camera-vector-fields"><label>Pitch<input id="camera-head-rotation-x" type="number" min="-36000" max="36000" step="1" value="0"></label><label>Yaw<input id="camera-head-rotation-y" type="number" min="-36000" max="36000" step="1" value="0"></label><label>Roll<input id="camera-head-rotation-z" type="number" min="-36000" max="36000" step="1" value="0"></label></div></fieldset></div>
+<div id="camera-crane-fields"><fieldset class="camera-vector"><legend>Crane pivot</legend><div class="camera-vector-fields"><label>X<input id="camera-crane-pivot-x" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Y<input id="camera-crane-pivot-y" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Z<input id="camera-crane-pivot-z" type="number" min="-100000" max="100000" step="1" value="0"></label></div></fieldset><fieldset class="camera-vector"><legend>Crane boom</legend><div class="camera-vector-fields"><label>X<input id="camera-crane-boom-x" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Y<input id="camera-crane-boom-y" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Z<input id="camera-crane-boom-z" type="number" min="-100000" max="100000" step="1" value="0"></label></div></fieldset></div>
+<div id="camera-follow-fields"><div class="fields"><label>Follow target<select id="camera-follow-kind"><option value="point">World point</option><option value="node">Graph node</option></select></label><label id="camera-follow-node-field">Node ID<input id="camera-follow-id" type="number" min="1" max="65535" step="1" value="1"></label></div><div id="camera-follow-point-fields"><fieldset class="camera-vector"><legend>Target point</legend><div class="camera-vector-fields"><label>X<input id="camera-follow-point-x" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Y<input id="camera-follow-point-y" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Z<input id="camera-follow-point-z" type="number" min="-100000" max="100000" step="1" value="0"></label></div></fieldset></div><fieldset class="camera-vector"><legend>Follow offset</legend><div class="camera-vector-fields"><label>X<input id="camera-follow-offset-x" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Y<input id="camera-follow-offset-y" type="number" min="-100000" max="100000" step="1" value="0"></label><label>Z<input id="camera-follow-offset-z" type="number" min="-100000" max="100000" step="1" value="0"></label></div></fieldset><label class="camera-check"><input id="camera-follow-track" type="checkbox"> Aim at target</label></div>
+<label class="camera-check"><input id="camera-anchor-enabled" type="checkbox"> Use a fixed anchor</label><fieldset class="camera-vector"><legend>Anchor point</legend><div class="camera-vector-fields"><label>X<input id="camera-anchor-x" type="number" min="-1000000000" max="1000000000" step="1" value="0"></label><label>Y<input id="camera-anchor-y" type="number" min="-1000000000" max="1000000000" step="1" value="0"></label><label>Z<input id="camera-anchor-z" type="number" min="-1000000000" max="1000000000" step="1" value="0"></label></div></fieldset>
+<div class="actions"><button id="camera-controls-apply" class="accent">Apply camera controls</button><button id="camera-controls-read">Read current camera</button></div><fieldset class="camera-vector"><legend>Apply input through the configured axes</legend><div class="camera-vector-fields"><label>Δ X<input id="camera-input-x" type="number" min="-100000" max="100000" value="0" step="1"></label><label>Δ Y<input id="camera-input-y" type="number" min="-100000" max="100000" value="0" step="1"></label><label>Δ Z<input id="camera-input-z" type="number" min="-100000" max="100000" value="0" step="1"></label></div><label class="camera-check"><input id="camera-input-pan" type="checkbox"> Pan override</label><button id="camera-input-apply">Apply input</button></fieldset>
+<details class="camera-pose"><summary>Carrier / body pose and scripted flight</summary><div class="fields"><label>X <input id="camera-x" type="number" value="25" step="1"></label><label>Y <input id="camera-y" type="number" value="19" step="1"></label><label>Z <input id="camera-z" type="number" value="45" step="1"></label><label>Yaw <input id="camera-yaw" type="number" value="-29" step="1"></label><label>Pitch <input id="camera-pitch" type="number" value="-16" step="1"></label><label>Roll <input id="camera-roll" type="number" value="0" step="1"></label><label>Orbit radius <input id="radius" type="number" value="40" min="1" max="512"></label><label>Path <select id="orbit"><option>orbit</option><option>escape</option><option>falling</option></select></label></div><div class="actions"><button id="camera-apply">Apply pose</button><button id="orbit-start">Begin target orbit</button><button id="flat">2D graph</button><button id="spatial">3D graph</button><button id="gather">Gather windows</button></div></details></details>
+</section><section>
+<details id="readability-panel"><summary>Graph cards and readable windows</summary>
+<p class="muted">These controls issue native transactions. Applying metadata does not reset a graph's in-progress movement. Zero SHA prefix means display the full supplied hash.</p>
+<div class="fields">
+<label>Node ID (0 = all current nodes)<input id="card-id" type="number" min="0" value="0"></label>
+<label>Minimum columns<input id="card-min" type="number" value="22" min="8" max="236"></label>
+<label>Maximum columns<input id="card-max" type="number" value="52" min="8" max="236"></label>
+<label>Padding<input id="card-padding" type="number" value="1" min="0" max="8"></label>
+<label>SHA prefix length<input id="card-sha" type="number" value="12" min="0" max="128"></label>
+<label>Show type<input id="card-kind" type="checkbox" checked></label>
+<label>Show status<input id="card-status" type="checkbox" checked></label>
+<label>Show SHA<input id="card-hash" type="checkbox" checked></label>
+<label>Show details<input id="card-detail" type="checkbox" checked></label>
+</div><div class="actions"><button id="card-apply">Apply graph-card treatment</button></div>
+<div class="fields" style="margin-top:20px">
+<label>Window ID (0 = all current windows)<input id="window-id" type="number" min="0" value="0"></label>
+<label>Padding<input id="window-padding" type="number" min="0" max="8" value="1"></label>
+<label>Border<select id="window-border"><option>rounded</option><option>square</option><option>double</option><option>heavy</option><option>none</option></select></label>
+<label>Control width in cells<input id="window-chrome" type="number" min="1" max="5" value="3"></label>
+<label>Full-opacity size ratio<input id="window-fade-start" type="number" min=".01" max="8" step=".05" value="1"></label>
+<label>Invisible size ratio<input id="window-fade-end" type="number" min="0" max="7.99" step=".05" value=".22"></label>
+</div><div class="actions"><button id="readability-apply">Apply window treatment</button><button id="open-reader">Open selected full reader (F6)</button></div>
+<p class="muted">Window text remains available in the document reader.</p>
+</details>
+<details id="notification-panel"><summary>Notifications / retained intentions</summary>
+<p>Click a native notification action in the canvas. It records an intention here without executing a provider action.</p>
+<div class="actions"><button id="notifications-load">Open Notification Atelier</button><button id="notifications-repeat">Repeat telemetry</button><button id="intents-ack">Acknowledge displayed intentions</button><button id="notice-ack">Acknowledge important record</button></div>
+<pre id="intent-log" aria-live="polite">No pending intentions.</pre>
+<small>Acknowledging an intention only removes it from this local queue. Acknowledging an important record does not delete its content.</small>
+</details>
+<details id="workshop-panel"><summary>Composition workshop</summary>
+<p>Choose a command and enter its parameter values as JSON. Blank fields are omitted. Edit nested expressions and dynamic records in the complete document.</p>
+<div class="fields"><label>Command operation<select id="workshop-operation" aria-label="Command operation"></select></label><label>Seed<input id="workshop-seed" value="2030" inputmode="numeric" aria-label="Composition seed"></label></div>
+<div id="workshop-fields" class="fields"></div>
+<div class="actions"><button id="workshop-add">Add command</button></div>
+<label for="workshop-document">Composition document</label><textarea id="workshop-document" class="code" aria-describedby="workshop-status"></textarea>
+<div class="actions"><button id="workshop-validate">Validate composition</button><button id="workshop-apply">Replace panel</button><button id="workshop-insert">Insert commands</button><button id="workshop-export">Export composition</button><button id="workshop-import">Import composition</button></div>
+<input id="workshop-file" type="file" accept="application/json,.json" hidden>
+<p id="workshop-status" role="status" aria-live="polite">Add commands to create a composition.</p>
+<pre id="workshop-preview" aria-label="Composition cell preview"></pre>
+</details>
+<details><summary>Configuration • exact native transactions</summary><textarea id="config" class="code" spellcheck="false" aria-label="Native command array"></textarea><div class="actions"><button id="apply">Reset and apply</button><button id="execute">Apply one command</button><button id="export">Export commands</button></div><small>Unknown fields and invalid bounds reject. The editor accepts either one command or an array. No command executes a shell or opens a file.</small></details>
+<details id="readable-panel"><summary>Readable content / metadata / current state</summary><textarea id="readable" class="code" readonly dir="auto" aria-label="Complete retained text"></textarea><pre id="metadata"></pre></details>
+<details id="braille-panel"><summary>Braille fidelity • Pearl curves and plots</summary>
+<p>Choose a sampling mode for the selected plots.</p>
+<div class="fields"><label>Plot sampling <select id="plot-sampling"><option value="inherit">Inherit scene</option><option value="braille" selected>Braille</option><option value="cell">Full cells</option><option value="half">Half blocks</option><option value="hybrid">Hybrid</option></select></label>
+<label>Cell height / width <input id="plot-aspect" type="number" value="2" min=".5" max="4" step=".1"></label>
+<label>Donut inner radius <input id="plot-inner" type="number" value=".72" min="0" max=".98" step=".02"></label>
+<label>Circular sweep ° <input id="plot-sweep" type="number" value="360" min="0" max="360" step="15"></label>
+<label>Reveal milliseconds <input id="plot-reveal" type="number" value="1600" min="0" max="60000" step="100"></label></div>
+<label class="pearl-source">Pearl signal source <select id="pearl-data-source" disabled><option value="original">Synthetic signal · 20 Hz</option><option value="authored">Authored samples · held</option></select></label><p id="pearl-source-status" class="muted">Select Pearl Instruments or Pearl Curves.</p>
+<div class="actions"><button id="plot-apply">Apply to visible plots</button><button id="plot-replay">Replay plot reveals</button><button id="plot-open">Open Pearl curves</button></div>
+<small>Reveal duration uses scene time.</small></details>
+<details id="scenic-source-panel"><summary>Water, terrain and travel</summary>
+<p id="scenic-source-status">Choose Pearl Cascade, Copper Causeway, Tidal Glass or Silt from the normal Study selector.</p>
+<div class="actions"><button data-scenic-open="pearl-cascade">Pearl Cascade</button><button data-scenic-open="copper-causeway">Copper Causeway</button><button data-scenic-open="tidal-glass">Tidal Glass</button><button data-scenic-open="silt">Silt</button><button id="scenic-frame">Frame the diorama</button></div>
+<div class="fields"><label>Surface travel / mph<input id="scenic-landscapeSpeed" type="number" min="0" max="160" step="1" value="100"></label><label>Waterfall flow / 0 stops<input id="scenic-waterFlow" type="number" min="0" max="2" step=".05" value="1"></label></div><button id="scenic-apply-rates">Apply continuous motion rates</button>
+<div id="scenic-world-controls" class="fields"></div><button id="scenic-apply-world">Apply world appearance</button>
+<div id="scenic-detail-controls" class="fields"></div><button id="scenic-apply-detail">Apply wave geometry</button>
+<div class="fields"><label>Tidal Glass preset<select id="scenic-preset"><option value="moonlight">Moonlight</option><option value="winter-swell">Winter swell</option></select></label></div><button id="scenic-apply-preset">Apply preset</button>
+<div class="actions"><button id="scenic-save">Save scenic workspace</button><label>Restore scenic workspace<input id="scenic-file" type="file" accept="application/json,.json"></label></div>
+<small>Use the camera panel or drag the artwork to inspect the real geometry. Hold freezes both source clocks. A scenic workspace saves rate history with its native snapshot; a plain native snapshot retains the picture and detaches the source controller.</small></details>
+<details id="source-modal-panel"><summary>Modal controls</summary>
+<label>Modal shape<select id="source-modal-kind"></select></label><label>Context<select id="source-modal-context"><option value="modal">Message</option><option value="windows">Window switcher</option><option value="commands">Commands</option></select></label>
+<div class="actions"><button id="source-modal-open">Open layer</button><button id="source-modal-pop">Dismiss one layer</button><button id="source-modal-clear">Clear layers</button></div>
+<label>Layer query<input id="source-modal-query" autocomplete="off"></label><p id="source-modal-status"></p></details>
+<details id="pearl-live-panel"><summary>Pearl and Fleet</summary>
+<p>Local simulated data. Hold pauses updates. Save a workspace to retain its controller state.</p>
+<div class="actions"><button id="pearl-studio-open">Studio</button><button id="pearl-fleet-open-scene">Fleet</button></div>
+<div id="pearl-observer-controls" hidden>
+<label>Observatory scene<select id="pearl-observer-scenes"></select></label>
+<label>Local draft<textarea id="pearl-observer-draft" rows="3"></textarea></label>
+<div class="actions"><button id="pearl-observer-send">Store local note</button><button id="pearl-observer-commands">Commands</button><button id="pearl-observer-save">Save Observatory workspace</button><label>Restore workspace<input id="pearl-observer-file" type="file" accept=".json,application/json"></label></div>
+<label id="pearl-observer-editor-label" hidden>Local scratch document<textarea id="pearl-observer-editor" rows="8" spellcheck="false"></textarea></label>
+<label>Palette<select id="pearl-observer-palette"></select></label><div class="fields" id="pearl-observer-options"></div>
+<details><summary>Source controls</summary><div class="fields" id="pearl-observer-numbers"></div></details>
+<details><summary>Signals and explicit routing</summary><p>Synthetic source data is labeled. Imported measurements retain their supplied source and timestamps.</p><label>Synthetic demo<input id="pearl-observer-demo" type="checkbox" checked></label>
+<div class="actions"><button id="pearl-observer-microphone">Start microphone</button><button id="pearl-observer-display-audio">Share audio source</button><button id="pearl-observer-stop-audio">Stop capture</button></div><p id="pearl-observer-audio-status">No capture active. Device access starts only after your explicit action.</p>
+<div class="actions"><button id="pearl-observer-bind-demo">Route synthetic audio to brightness</button><button id="pearl-observer-clear-routes">Clear routes</button></div>
+<div class="fields"><label>Source<input id="pearl-observer-route-source" value="demo.audio"></label><label>Target<select id="pearl-observer-route-target"></select></label><label>Input minimum<input id="pearl-observer-in-min" type="number" value="0"></label><label>Input maximum<input id="pearl-observer-in-max" type="number" value="0.7"></label><label>Output minimum<input id="pearl-observer-out-min" type="number" value="0.1"></label><label>Output maximum<input id="pearl-observer-out-max" type="number" value="0.55"></label></div><button id="pearl-observer-bind">Bind source</button>
+<label>Measurement or waveform JSON<textarea id="pearl-observer-measurement" rows="3"></textarea></label><button id="pearl-observer-ingest">Commit supplied measurement</button><pre id="pearl-observer-routes"></pre></details>
+</div>
+<div id="pearl-studio-controls" hidden><label>Studio target / thousandths<input id="pearl-studio-value" type="range" min="0" max="1000" value="670"></label></div>
+<div id="pearl-fleet-controls" hidden>
+<label>Agent<select id="pearl-fleet-agent"></select></label>
+<div class="actions"><button id="pearl-fleet-open">Open workspace</button><button id="pearl-fleet-close">Close workspace</button><button id="pearl-fleet-tail">Live tail</button></div>
+<label>Agent-local draft<textarea id="pearl-fleet-draft" rows="3" aria-label="Fleet agent-local draft"></textarea></label>
+<div class="actions"><button id="pearl-fleet-send">Queue local note</button><button id="pearl-fleet-drain">Export and drain outbox</button><button id="pearl-fleet-transcript">Export transcript</button><button id="pearl-fleet-save">Save Fleet workspace</button><label>Restore Fleet workspace <input id="pearl-fleet-file" type="file" accept=".json,application/json"></label></div>
+<div class="fields"><label>Read mode<input id="pearl-fleet-read" type="checkbox"></label><label>Reduced motion<input id="pearl-fleet-reduced" type="checkbox"></label><label>Dense overview<input id="pearl-fleet-dense" type="checkbox"></label>
+<label>Workspace transition / ms<input id="pearl-fleet-expand" type="number" min="0" max="4000" value="560"></label><label>Arrival / ms<input id="pearl-fleet-arrival" type="number" min="0" max="4000" value="520"></label><label>Top horizon / rows<input id="pearl-fleet-horizon" type="number" min="0" max="32" value="6"></label><label>Minimum horizon ink / thousandths<input id="pearl-fleet-minimum" type="number" min="0" max="1000" value="760"></label><label>Backdrop / thousandths<input id="pearl-fleet-brightness" type="number" min="0" max="1000" value="110"></label><label>Rule color speed<input id="pearl-fleet-color-speed" type="number" min="-120" max="120" value="8"></label></div>
+<button id="pearl-fleet-options">Apply options</button>
+<small>Tab and arrows select agents. Enter opens a workspace; Page Up / Down scroll history; End follows the live tail. Notes stay in the local outbox and receive explicitly simulated replies.</small>
+</div><pre id="pearl-data-state" aria-live="off">No data source attached.</pre></details>
+<details id="layer-panel"><summary>Mixed layers / leaf anatomy</summary>
+<div class="fields"><label>Emitter ID<input id="layer-emitter" type="number" min="1" max="65535" value="1"></label>
+<label>Object sampling<select id="layer-sampling"><option>cell</option><option>half</option><option selected>braille</option><option>hybrid</option></select></label>
+<label>Leaf blade opacity<input id="layer-surface" type="number" min="0" max="1" step=".05" value=".12"></label>
+<label>Leaf vein contrast<input id="layer-veins" type="number" min="0" max="1" step=".1" value="1"></label>
+<label>Floor sampling<select id="layer-floor"><option>cell</option><option selected>half</option><option>braille</option><option>hybrid</option></select></label></div>
+<div class="actions"><button id="layer-apply">Apply leaf style</button><button id="layer-floor-apply">Apply floor style</button><button id="anatomy-open">Open leaf anatomy</button><button id="mixed-open">Open mixed materials</button></div>
+<small>Blade opacity and vein contrast control leaf appearance.</small></details>
+<details id="condition-panel"><summary>Compound conditions / retained events</summary>
+<div class="fields"><label>Synthetic temperature<input id="condition-heat" type="number" value="20"></label>
+<label>Synthetic pressure<input id="condition-pressure" type="number" value="10"></label>
+<label>Enabled<select id="condition-enabled"><option value="1">Yes</option><option value="0">No</option></select></label></div>
+<div class="actions"><button id="condition-open">Open condition console</button><button id="condition-set">Commit input batch</button><button id="condition-rearm">Re-arm Inspect action</button></div>
+<pre id="condition-state" aria-live="polite"></pre><small>ALL / ANY / NOT and the matching retained action payload (value ≥ 7) evaluate in the native core. A batch uses final values, never an intermediate combination. Rules do not acknowledge host intentions.</small></details>
+
+<details id="selector-panel"><summary>Selector Studio / native states and reversible appearance</summary>
+<p>Move the pointer over a control, press, release, and leave it. The core resolves the selected, hovered, pressed and disabled states.</p>
+<div class="fields"><label>Synthetic load (0–100)<input id="selector-load" type="number" min="0" max="100" value="35"></label>
+<label>Fault condition<select id="selector-fault"><option value="0">Clear</option><option value="1">Alarm</option></select></label>
+<label>Disable middle control<input id="selector-disable" type="checkbox"></label></div>
+<div class="actions"><button id="selector-open">Open / restore Selector Studio</button><button id="selector-set">Commit load and fault</button><button id="selector-base">Author violet controls</button><button id="selector-remove">Remove appearance rules</button></div>
+<pre id="selector-state" aria-live="polite"></pre><small>Values are synthetic. The displayed authored and effective styles come from native metadata. Alpha retains each component's existing meaning; on widgets it controls the background matte.</small></details>
+<details><summary>Snapshots and presentation</summary><div class="fields"><label>Columns <input id="columns" type="number" value="160" min="1"></label><label>Rows <input id="rows" type="number" value="48" min="1"></label><label>Cells <select id="sampling"><option>cell</option><option>half</option><option>braille</option><option selected>hybrid</option></select></label><label>Seek forward seconds <input id="seek" type="number" value="5" min="0" max="120" step=".1"></label></div><div class="actions"><button id="resize">Resize</button><button id="step">Step 1/120 s</button><button id="seek-button">Advance</button><button id="save">Save full checkpoint</button><button id="restore">Restore checkpoint</button><input id="snapshot-file" type="file" hidden></div><small>Snapshots are versioned native-state bytes with a checksum; they include source text. They are not encrypted. Rendering is excluded from saved state.</small></details>
+</section></div>
+<details id="navigation-guide"><summary>Navigation and runtime notes</summary><div class="legend"><div><strong>Navigate the space</strong><small>Drag to orbit. Shift-drag or right-drag to pan. Wheel moves toward/away. Click visible graph cards to retarget.</small></div><div><strong>Rendering</strong><small>The native SDK renders the canvas.</small></div><div><strong>Playback</strong><small>120 Hz rational simulation; separate presentation. Hold does not block editing. Exact snapshots include particles, deposits and clocks.</small></div></div></details>
+<section class="recovery" aria-labelledby="recovery-title">
+<h2 id="recovery-title">Reading</h2>
+<p id="canvas-help" class="muted">Canvas keys: F1 help, F6 next window reader, Escape leave reader/help, Page Up/Down scroll. Tab leaves the canvas for ordinary controls. Use the prompt text box for composition, selection and copy.</p>
+<div class="toolbar"><label><input id="reduced-motion" type="checkbox">Reduced motion</label><label><input id="screen-reader" type="checkbox">Announce selected content</label><button id="read-all">Read all retained content</button></div>
+<div class="toolbar" style="margin-top:10px"><label for="recovery-window">Window</label><select id="recovery-window"><option value="">No retained windows</option></select><button id="recovery-open">Open chosen reader</button><button id="recovery-next">Next reader (F6)</button><button id="reader-prev">Previous page</button><button id="reader-next">Next page</button><button id="reader-exit">Leave reader (Esc)</button></div>
+<div class="toolbar" style="margin-top:10px"><button id="metadata-recover">Read complete metadata</button><button id="metadata-download" disabled>Save JSON</button></div>
+<p id="metadata-recovery-status" role="status" aria-live="polite">Read all metadata, including retained source text.</p>
+<details id="metadata-complete-panel"><summary>Complete metadata</summary><p class="muted">This view updates when you select Read complete metadata.</p><textarea id="metadata-complete" class="code" readonly dir="auto" aria-label="Frozen complete metadata JSON"></textarea></details>
+<p id="selection-summary" role="status" aria-live="off" aria-atomic="true">No selected graph node.</p>
+<details id="semantic-panel" open><summary>Retained notifications and keyboard actions</summary><div id="semantic-records" aria-label="Retained notification records"></div></details>
+<small>Reduced motion holds automatic playback and keeps native waiting indicators visible. Explicit steps and Resume motion remain available. Text and notification actions below use the same native source as the canvas.</small>
+</section>
+<a id="reference-link" href="docs/rendered/README.html">Reference</a><footer data-wasm-sha256="@@WASM_SHA256@@">Nocturne SDK · C / WASM</footer></aside></main>
+<script type="module">
+@@BINDING@@
+@@WORKSHOP_MODEL@@
+@@COMPOSITION_EDITOR@@
+const workshopMetadata=@@WORKSHOP_FIELDS@@;
+const workshopHelp=@@WORKSHOP_HELP@@;
+@@GALLERY_LOCATION@@
+@@GALLERY_ATTRACT@@
+const recipes=@@RECIPES@@;
+// SDK feature examples the Workshop panels open. Not artwork: never in the Gallery picker or attract rotation.
+const workshopExamples=@@WORKSHOP_EXAMPLES@@;
+const example=id=>recipes.find(r=>r.id===id)||workshopExamples.find(r=>r.id===id);
+const displayName=value=>String(value??'').replace(/\b(?:original|restored|recovered|first-version)\s*/gi,'').replace(/\s*[·/]\s*source edition/gi,'').trim();
+@@CANVAS_BRAILLE@@
+@@FONT_GALLERY@@
+@@OBJ_MODEL@@
+@@OBJ_EXAMPLE@@
+@@GALLERY_RESOURCES@@
+@@PEARL_DATA@@
+@@SOURCE_MODAL@@
+@@SCENIC_ORIGINAL@@
+const palettes=@@PALETTES@@;
+const $=id=>document.getElementById(id),canvas=$('canvas'),canvasGL=$('canvas-gl'),ctx=canvas.getContext('2d',{alpha:false});
+let webglRenderer=null;
+const paintUrlParam=new URLSearchParams(window.location.search).get('paint');
+let paintMode=paintUrlParam==='webgl'?'webgl':'canvas2d';
+const fontGallery=createFontGallery();let fontRequest=0,tdfRequest=0,modelRequest=0;
+const workshopWasm=Uint8Array.from(atob('@@WASM@@'),c=>c.charCodeAt(0));
+const scene=await NativeScene.create(workshopWasm);
+const runtimeBuild=scene.info().build;document.title='Nocturne / '+runtimeBuild;$('runtime-build').textContent=runtimeBuild;
+let autoActions=[],nextAutoAction=0;let projectEditor=null;
+let pearlSource=null,pearlSampleUs=-1,pearlSession=null,scenicSession=null;
+let active=recipes[0],running=true,fps=60,logicalUs=0,lastWall=performance.now(),lastPaint=0,seed=2030,floorVisible=true,lastFrame=null,capture=null,saved=null,renderMs=0,paintMs=0,lastPerf={renderMs:0,paintMs:0,totalMs:0,paintMode},steps=0;
+// Live frame pacing state; the policy is described beside liveAdvance().
+const pacing={pendingUs:0,base:0,behindUs:0,hiddenUs:0,frames:0,nextPaint:0,advanceMs:0,rate:null,fps:0,stepsPerSecond:0,behindMsPerSecond:0};
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+let presentationIntent={reducedMotion:motionPreference.matches,screenReader:false},followSystemMotion=true,composing=false;
+let windowSignature='',semanticSignature='',lastSelectedWindow=null,metadataUnavailable=false;
+const glyphCache=new Map();
+const color=n=>'#'+n.toString(16).padStart(6,'0');
+let workshopRequest=0;
+const workshopStatus=message=>{$('workshop-status').textContent=message;};
+$('workshop-document').value=exportProject(createProject());
+for(const operation of workshopMetadata.operations){const option=document.createElement('option');option.value=operation;option.textContent=operation;$('workshop-operation').append(option);}
+function workshopFields(){
+ $('workshop-fields').replaceChildren();
+ for(const field of workshopMetadata.fields.filter(row=>row.op===$('workshop-operation').value)){
+  const label=document.createElement('label'),input=document.createElement('input'),help=document.createElement('small');
+  input.type='text';input.dataset.workshopField=field.field;input.setAttribute('aria-label',field.field+' parameter');
+  label.append(document.createTextNode(field.field),input);help.textContent=field.types.join(' / ')+(field.choices.length?' • Choices: '+field.choices.map(v=>JSON.stringify(v)).join(', '):'')+(field.field.includes('[]')?' • Enter an array of element values, matching the parent array length.':'');
+  const reference=workshopHelp.parameters[field.op+'.'+field.field];
+  if(reference){
+   const grouped=reference.sourceFields.length>1?' • Reference fields: '+reference.sourceFields.join(', '):'';
+   const defaults=reference.default===null?'':' • '+reference.defaultLabel+': '+reference.default;
+   help.textContent+=grouped+defaults+' • '+reference.description+' • Manual: '+reference.section;
+  }else help.textContent+=' • See Reference → Commands.';
+  help.id='workshop-field-help-'+$('workshop-fields').children.length;input.setAttribute('aria-describedby',help.id+' workshop-status');label.append(help);$('workshop-fields').append(label);
+ }
+}
+$('workshop-operation').onchange=workshopFields;workshopFields();
+function workshopDocument(){const text=$('workshop-document').value;return JSON.parse(text).schema==='nocturne.project.v1'?importProject(text):importComposition(text);}
+function workshopProject(document){return document.schema==='nocturne.project.v1'?document:projectFromCommands(document.commands,{seed:document.seed,name:'Workshop panel'});}
+function workshopFailure(error){workshopStatus(String(error.message??error));$('workshop-document').setAttribute('aria-invalid','true');}
+$('workshop-document').oninput=()=>{workshopRequest++;$('workshop-document').removeAttribute('aria-invalid');workshopStatus('Document changed. Validate the composition again.');};
+$('workshop-add').onclick=()=>{
+ try{
+  let command={op:$('workshop-operation').value};
+  for(const input of $('workshop-fields').querySelectorAll('input')){
+   if(!input.value.trim())continue;
+   let value;try{value=JSON.parse(input.value);}catch{input.setAttribute('aria-invalid','true');input.focus();throw Error(input.dataset.workshopField+': enter a JSON value, such as 1, true or "text"');}
+   try{command=assignCompositionField(command,input.dataset.workshopField,value);input.removeAttribute('aria-invalid');}
+   catch(error){input.setAttribute('aria-invalid','true');input.focus();throw error;}
+  }
+  const document=workshopDocument();document.seed=Number($('workshop-seed').value);document.commands.push(command);
+  $('workshop-document').value=exportProject(workshopProject(document));workshopRequest++;workshopStatus('Command added. Validate the composition before applying it.');
+ }catch(error){workshopFailure(error);}
+};
+$('workshop-validate').onclick=async()=>{
+ const request=++workshopRequest;const button=$('workshop-validate');button.disabled=true;button.setAttribute('aria-busy','true');workshopStatus('Validating composition…');
+ try{
+  const document=workshopDocument(),preview=prepareProject(projectValidator,workshopProject(document));if(request!==workshopRequest)return;
+  const rows=[];for(let y=0;y<preview.frame.height;y++){let line='';for(let x=0;x<preview.frame.width;x++){const scalar=preview.frame.cells[(y*preview.frame.width+x)*4];line+=String.fromCodePoint(scalar||32);}rows.push(line);}
+  $('workshop-preview').textContent=rows.join('\n');$('workshop-document').removeAttribute('aria-invalid');workshopStatus('Composition valid. Cell preview updated.');
+ }catch(error){if(request===workshopRequest)workshopFailure(error);}
+ finally{button.disabled=false;button.removeAttribute('aria-busy');}
+};
+$('workshop-apply').onclick=()=>{try{const document=workshopDocument();projectEditor.replace(workshopProject(document));repaint();$('workshop-document').removeAttribute('aria-invalid');workshopStatus('Composition applied.');}catch(error){workshopFailure(error);}};
+$('workshop-insert').onclick=()=>{try{const document=workshopProject(workshopDocument());if(document.elements.length||Object.keys(document.resources).length)throw Error('Use Design Insert elements or Replace for a complete project');projectEditor.insertCommands(document.commands);workshopStatus('Commands inserted.');}catch(error){workshopFailure(error);}};
+$('workshop-export').onclick=()=>{try{download('project.json',exportProject(workshopProject(workshopDocument())),'application/json');workshopStatus('Composition exported.');}catch(error){workshopFailure(error);}};
+$('workshop-import').onclick=()=>$('workshop-file').click();
+$('workshop-file').onchange=async()=>{const file=$('workshop-file').files[0];if(!file)return;const request=++workshopRequest;try{const text=await file.text(),document=JSON.parse(text).schema==='nocturne.project.v1'?importProject(text):importComposition(text);if(request!==workshopRequest)return;$('workshop-document').value=exportProject(workshopProject(document));$('workshop-seed').value=String(document.seed);$('workshop-document').removeAttribute('aria-invalid');workshopStatus('Composition imported. Validate before applying.');}catch(error){if(request===workshopRequest)workshopFailure(error);}finally{$('workshop-file').value='';}};
+
+function report(e){const message=String(e?.message??e);if($('error').textContent!==message)$('error').textContent=message;}
+function clearError(){$('error').textContent='';}
+function cmd(value){let pending=scene.command(value);while(pending===1)pending=scene.command(value);projectEditor?.recordCommand(value);}
+function readInfo(){const info=scene.infoComplete();if(info.error)throw Error(info.error+'; export a full checkpoint to retain all source.');return info;}
+function syncOcclusionLook(info){const e=info.environment;if(!$('occlusion-tint')||typeof e?.occlusionTint!=='number')return;if(+$('occlusion-tint').value!==e.occlusionTint)$('occlusion-tint').value=String(e.occlusionTint);setText('occlusion-tint-value',e.occlusionTint.toFixed(2));if($('occluded-dots').value!==e.occludedDots)$('occluded-dots').value=e.occludedDots;}
+function setText(id,text){if($(id).textContent!==text)$(id).textContent=text;}
+/** Return one visible scalar-cell symbol; preserve canonical glyphs and source.
+ * Width is measured in the configured system font. Every painted symbol is
+ * additionally clipped to its owned cell, including the replacement glyph. */
+function canvasGlyph(glyph,width){
+ if(glyphCache.has(glyph))return glyphCache.get(glyph);
+ let symbol=String.fromCodePoint(glyph<=0x10ffff?glyph:0xfffd);
+ if(glyph<32||(glyph>=0x7f&&glyph<=0x9f)||(glyph>=0xd800&&glyph<=0xdfff)||/[\p{Mark}\p{Default_Ignorable_Code_Point}]/u.test(symbol)||ctx.measureText(symbol).width>width+.25)symbol='\ufffd';
+ if(glyphCache.size>=8192)glyphCache.clear();glyphCache.set(glyph,symbol);return symbol;
+}
+
+class WebGLTilemapRenderer {
+  constructor(canvas, fontGallery) {
+    this.canvas = canvas;
+    this.fontGallery = fontGallery;
+    this.cw = 10;
+    this.ch = 20;
+    this.atlasCols = 64;
+    this.atlasRows = 64;
+    this.atlasWidth = this.atlasCols * this.cw;
+    this.atlasHeight = this.atlasRows * this.ch;
+    this.glyphToSlot = new Map();
+    this.nextSlot = 1;
+    this.atlasDirty = false;
+
+    const glOpts = { alpha: false, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: true };
+    let gl = canvas.getContext('webgl2', glOpts);
+    let isWebGL2 = true;
+    let extInstanced = null;
+    if (!gl) {
+      gl = canvas.getContext('webgl', glOpts) || canvas.getContext('experimental-webgl', glOpts);
+      isWebGL2 = false;
+      if (gl) {
+        extInstanced = gl.getExtension('ANGLE_instanced_arrays');
+        if (!extInstanced) throw new Error('WebGL instanced arrays not supported');
+      }
+    }
+    if (!gl) throw new Error('WebGL not supported');
+
+    this.gl = gl;
+    this.isWebGL2 = isWebGL2;
+    this.extInstanced = extInstanced;
+
+    this.drawArraysInstanced = (mode, first, count, primcount) => {
+      if (this.isWebGL2) this.gl.drawArraysInstanced(mode, first, count, primcount);
+      else this.extInstanced.drawArraysInstancedANGLE(mode, first, count, primcount);
+    };
+    this.vertexAttribDivisor = (index, divisor) => {
+      if (this.isWebGL2) this.gl.vertexAttribDivisor(index, divisor);
+      else this.extInstanced.vertexAttribDivisorANGLE(index, divisor);
+    };
+
+    this.atlasCanvas = document.createElement('canvas');
+    this.atlasCanvas.width = this.atlasWidth;
+    this.atlasCanvas.height = this.atlasHeight;
+    this.atlasCtx = this.atlasCanvas.getContext('2d', { willReadFrequently: true });
+
+    this._initProgram();
+    this._initBuffers();
+    this._initAtlas();
+  }
+
+  _initProgram() {
+    const gl = this.gl;
+    const vsSource = `
+      attribute vec2 a_quad;
+      attribute vec2 a_cellCoord;
+      attribute vec4 a_bgColor;
+      attribute vec4 a_fgColor;
+      attribute vec2 a_atlasCoord;
+
+      uniform vec2 u_gridSize;
+      uniform vec2 u_cellSize;
+      uniform vec2 u_atlasSize;
+
+      varying vec4 v_bgColor;
+      varying vec4 v_fgColor;
+      varying vec2 v_uv;
+
+      void main() {
+        vec2 pixelPos = (a_cellCoord + a_quad) * u_cellSize;
+        vec2 screenSize = u_gridSize * u_cellSize;
+        vec2 clipPos = (pixelPos / screenSize) * 2.0 - 1.0;
+        gl_Position = vec4(clipPos.x, -clipPos.y, 0.0, 1.0);
+
+        vec2 atlasPixelPos = (a_atlasCoord + a_quad) * u_cellSize;
+        v_uv = atlasPixelPos / u_atlasSize;
+        v_bgColor = a_bgColor;
+        v_fgColor = a_fgColor;
+      }
+    `;
+
+    const fsSource = `
+      precision mediump float;
+      uniform sampler2D u_atlas;
+
+      varying vec4 v_bgColor;
+      varying vec4 v_fgColor;
+      varying vec2 v_uv;
+
+      void main() {
+        float glyphAlpha = texture2D(u_atlas, v_uv).a;
+        vec3 color = mix(v_bgColor.rgb, v_fgColor.rgb, glyphAlpha);
+        gl_FragColor = vec4(color, 1.0);
+      }
+    `;
+
+    const vs = this._compileShader(gl.VERTEX_SHADER, vsSource);
+    const fs = this._compileShader(gl.FRAGMENT_SHADER, fsSource);
+    const program = gl.createProgram();
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      throw new Error('Program link failed: ' + gl.getProgramInfoLog(program));
+    }
+    this.program = program;
+
+    this.a_quad = gl.getAttribLocation(program, 'a_quad');
+    this.a_cellCoord = gl.getAttribLocation(program, 'a_cellCoord');
+    this.a_bgColor = gl.getAttribLocation(program, 'a_bgColor');
+    this.a_fgColor = gl.getAttribLocation(program, 'a_fgColor');
+    this.a_atlasCoord = gl.getAttribLocation(program, 'a_atlasCoord');
+
+    this.u_gridSize = gl.getUniformLocation(program, 'u_gridSize');
+    this.u_cellSize = gl.getUniformLocation(program, 'u_cellSize');
+    this.u_atlasSize = gl.getUniformLocation(program, 'u_atlasSize');
+    this.u_atlas = gl.getUniformLocation(program, 'u_atlas');
+  }
+
+  _compileShader(type, source) {
+    const gl = this.gl;
+    const shader = gl.createShader(type);
+    gl.shaderSource(shader, source);
+    gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      const err = gl.getShaderInfoLog(shader);
+      gl.deleteShader(shader);
+      throw new Error('Shader compile failed: ' + err);
+    }
+    return shader;
+  }
+
+  _initBuffers() {
+    const gl = this.gl;
+    const quadVertices = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
+    this.quadBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.quadBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, quadVertices, gl.STATIC_DRAW);
+
+    this.instanceBuffer = gl.createBuffer();
+    this.maxInstances = 0;
+    this.instanceData = null;
+  }
+
+  _initAtlas() {
+    const gl = this.gl;
+    const ctx = this.atlasCtx;
+    ctx.clearRect(0, 0, this.atlasWidth, this.atlasHeight);
+
+    this.glyphToSlot.set(0, 0);
+    this.glyphToSlot.set(32, 0);
+
+    for (let c = 33; c <= 126; c++) {
+      this._bakeTextGlyph(c, String.fromCharCode(c));
+    }
+
+    const dots = [[.2,.1],[.2,.3],[.2,.55],[.7,.1],[.7,.3],[.7,.55],[.2,.8],[.7,.8]];
+    for (let mask = 0; mask <= 255; mask++) {
+      const glyph = 0x2800 + mask;
+      const slot = this._allocSlot(glyph);
+      const { x, y } = this._slotPos(slot);
+      ctx.fillStyle = '#ffffff';
+      for (let bit = 0; bit < 8; bit++) {
+        if (mask & (1 << bit)) {
+          const [column, row] = dots[bit];
+          ctx.fillRect(x + column * this.cw, y + row * this.ch, this.cw * .2, this.ch * .1);
+        }
+      }
+    }
+
+    for (let glyph = 0x2580; glyph <= 0x259f; glyph++) {
+      const slot = this._allocSlot(glyph);
+      const { x, y } = this._slotPos(slot);
+      ctx.fillStyle = '#ffffff';
+      switch (glyph) {
+        case 0x2588: ctx.fillRect(x, y, this.cw, this.ch); break;
+        case 0x2580: ctx.fillRect(x, y, this.cw, this.ch / 2); break;
+        case 0x2584: ctx.fillRect(x, y + this.ch / 2, this.cw, this.ch / 2); break;
+        case 0x258c: ctx.fillRect(x, y, this.cw / 2, this.ch); break;
+        case 0x2590: ctx.fillRect(x + this.cw / 2, y, this.cw / 2, this.ch); break;
+        case 0x2581: ctx.fillRect(x, y + this.ch * 7 / 8, this.cw, this.ch / 8); break;
+        case 0x2582: ctx.fillRect(x, y + this.ch * 6 / 8, this.cw, this.ch * 2 / 8); break;
+        case 0x2583: ctx.fillRect(x, y + this.ch * 5 / 8, this.cw, this.ch * 3 / 8); break;
+        case 0x2585: ctx.fillRect(x, y + this.ch * 3 / 8, this.cw, this.ch * 5 / 8); break;
+        case 0x2586: ctx.fillRect(x, y + this.ch * 2 / 8, this.cw, this.ch * 6 / 8); break;
+        case 0x2587: ctx.fillRect(x, y + this.ch * 1 / 8, this.cw, this.ch * 7 / 8); break;
+        case 0x2589: ctx.fillRect(x, y, this.cw * 7 / 8, this.ch); break;
+        case 0x258a: ctx.fillRect(x, y, this.cw * 6 / 8, this.ch); break;
+        case 0x258b: ctx.fillRect(x, y, this.cw * 5 / 8, this.ch); break;
+        case 0x258d: ctx.fillRect(x, y, this.cw * 3 / 8, this.ch); break;
+        case 0x258e: ctx.fillRect(x, y, this.cw * 2 / 8, this.ch); break;
+        case 0x258f: ctx.fillRect(x, y, this.cw * 1 / 8, this.ch); break;
+        case 0x2594: ctx.fillRect(x, y, this.cw, this.ch / 8); break;
+        case 0x2595: ctx.fillRect(x + this.cw * 7 / 8, y, this.cw / 8, this.ch); break;
+        default: this._drawTextIntoCell(x, y, String.fromCodePoint(glyph)); break;
+      }
+    }
+
+    for (let glyph = 0x2500; glyph <= 0x257f; glyph++) {
+      this._bakeTextGlyph(glyph, String.fromCodePoint(glyph));
+    }
+
+    this.atlasTexture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, this.atlasTexture);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, this.atlasCanvas);
+  }
+
+  _allocSlot(glyph) {
+    if (this.glyphToSlot.has(glyph)) return this.glyphToSlot.get(glyph);
+    if (this.nextSlot >= this.atlasCols * this.atlasRows) {
+      this.nextSlot = 512;
+    }
+    const slot = this.nextSlot++;
+    this.glyphToSlot.set(glyph, slot);
+    return slot;
+  }
+
+  _slotPos(slot) {
+    const col = slot % this.atlasCols;
+    const row = Math.floor(slot / this.atlasCols);
+    return { col, row, x: col * this.cw, y: row * this.ch };
+  }
+
+  _drawTextIntoCell(x, y, text) {
+    const ctx = this.atlasCtx;
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(x, y, this.cw, this.ch);
+    ctx.clip();
+    ctx.font = this.fontGallery ? this.fontGallery.canvasFont(16) : '16px monospace';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText(text, x, y + this.ch / 2 + 1);
+    ctx.restore();
+  }
+
+  _bakeTextGlyph(glyph, char) {
+    const slot = this._allocSlot(glyph);
+    const { x, y } = this._slotPos(slot);
+    this._drawTextIntoCell(x, y, char);
+    return slot;
+  }
+
+  getGlyphSlot(glyph) {
+    if (glyph === 0 || glyph === 32) return 0;
+    if (this.glyphToSlot.has(glyph)) return this.glyphToSlot.get(glyph);
+
+    const slot = this._allocSlot(glyph);
+    const { x, y } = this._slotPos(slot);
+    const char = canvasGlyph(glyph, this.cw);
+
+    this.atlasCtx.clearRect(x, y, this.cw, this.ch);
+    this._drawTextIntoCell(x, y, char);
+    this.atlasDirty = true;
+    return slot;
+  }
+
+  ensureCapacity(numCells) {
+    if (numCells <= this.maxInstances) return;
+    const gl = this.gl;
+    this.maxInstances = Math.max(numCells, 7680);
+    this.instanceStride = 24;
+    this.instanceBufferBytes = this.maxInstances * this.instanceStride;
+    this.instanceData = new ArrayBuffer(this.instanceBufferBytes);
+    this.f32View = new Float32Array(this.instanceData);
+    this.u32View = new Uint32Array(this.instanceData);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.instanceBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, this.instanceBufferBytes, gl.DYNAMIC_DRAW);
+  }
+
+  render(frame, promptSpans = [], promptSource = []) {
+    const gl = this.gl;
+    const width = frame.width;
+    const height = frame.height;
+    const numCells = width * height;
+    const cw = this.cw;
+    const ch = this.ch;
+
+    if (this.canvas.width !== width * cw || this.canvas.height !== height * ch) {
+      this.canvas.width = width * cw;
+      this.canvas.height = height * ch;
+    }
+    gl.viewport(0, 0, this.canvas.width, this.canvas.height);
+
+    this.ensureCapacity(numCells);
+
+    const covered = new Map();
+    for (const r of promptSpans) {
+      if (r[7]) {
+        for (let j = 0; j < r[4]; j++) {
+          const idx = r[6] * width + r[5] + j;
+          if (frame.cells[idx * 4 + 3] === 0x40000000) {
+            covered.set(idx, { span: r, offset: j });
+          }
+        }
+      }
+    }
+
+    const f32 = this.f32View;
+    const u32 = this.u32View;
+    const atlasCols = this.atlasCols;
+    const cells = frame.cells;
+
+    let ptr = 0;
+    for (let i = 0; i < numCells; i++) {
+      const baseIdx = i * 4;
+      const col = i % width;
+      const row = Math.floor(i / width);
+      let g = cells[baseIdx];
+      let fg = cells[baseIdx + 1];
+      const bg = cells[baseIdx + 2];
+
+      if (covered.has(i)) {
+        const info = covered.get(i);
+        const r = info.span;
+        const scalars = promptSource.slice(r[0], r[1]);
+        if (scalars.length) scalars[0] = String.fromCodePoint(r[9]);
+        const text = scalars.join('');
+        if (info.offset < text.length) {
+          g = text.codePointAt(info.offset) || 32;
+          fg = cells[(r[6] * width + r[5]) * 4 + 1];
+        } else {
+          g = 32;
+        }
+      }
+
+      const slot = (g === 0 || g === 32) ? 0 : this.getGlyphSlot(g);
+      const atlasCol = slot % atlasCols;
+      const atlasRow = Math.floor(slot / atlasCols);
+
+      const bgR = (bg >> 16) & 0xff;
+      const bgG = (bg >> 8) & 0xff;
+      const bgB = bg & 0xff;
+      const bgPack = (0xff << 24) | (bgB << 16) | (bgG << 8) | bgR;
+
+      const fgR = (fg >> 16) & 0xff;
+      const fgG = (fg >> 8) & 0xff;
+      const fgB = fg & 0xff;
+      const fgPack = (0xff << 24) | (fgB << 16) | (fgG << 8) | fgR;
+
+      f32[ptr] = col;
+      f32[ptr + 1] = row;
+      u32[ptr + 2] = bgPack;
+      u32[ptr + 3] = fgPack;
+      f32[ptr + 4] = atlasCol;
+      f32[ptr + 5] = atlasRow;
+
+      ptr += 6;
+    }
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.instanceBuffer);
+    gl.bufferSubData(gl.ARRAY_BUFFER, 0, f32.subarray(0, ptr));
+
+    gl.useProgram(this.program);
+
+    gl.uniform2f(this.u_gridSize, width, height);
+    gl.uniform2f(this.u_cellSize, cw, ch);
+    gl.uniform2f(this.u_atlasSize, this.atlasWidth, this.atlasHeight);
+
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, this.atlasTexture);
+    if (this.atlasDirty) {
+      gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, gl.RGBA, gl.UNSIGNED_BYTE, this.atlasCanvas);
+      this.atlasDirty = false;
+    }
+    gl.uniform1i(this.u_atlas, 0);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.quadBuffer);
+    gl.enableVertexAttribArray(this.a_quad);
+    gl.vertexAttribPointer(this.a_quad, 2, gl.FLOAT, false, 8, 0);
+    this.vertexAttribDivisor(this.a_quad, 0);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.instanceBuffer);
+    const stride = 24;
+
+    gl.enableVertexAttribArray(this.a_cellCoord);
+    gl.vertexAttribPointer(this.a_cellCoord, 2, gl.FLOAT, false, stride, 0);
+    this.vertexAttribDivisor(this.a_cellCoord, 1);
+
+    gl.enableVertexAttribArray(this.a_bgColor);
+    gl.vertexAttribPointer(this.a_bgColor, 4, gl.UNSIGNED_BYTE, true, stride, 8);
+    this.vertexAttribDivisor(this.a_bgColor, 1);
+
+    gl.enableVertexAttribArray(this.a_fgColor);
+    gl.vertexAttribPointer(this.a_fgColor, 4, gl.UNSIGNED_BYTE, true, stride, 12);
+    this.vertexAttribDivisor(this.a_fgColor, 1);
+
+    gl.enableVertexAttribArray(this.a_atlasCoord);
+    gl.vertexAttribPointer(this.a_atlasCoord, 2, gl.FLOAT, false, stride, 16);
+    this.vertexAttribDivisor(this.a_atlasCoord, 1);
+
+    this.drawArraysInstanced(gl.TRIANGLE_STRIP, 0, 4, numCells);
+  }
+}
+
+function setPaintMode(mode){
+  paintMode = mode === 'webgl' ? 'webgl' : 'canvas2d';
+  if (paintMode === 'webgl') {
+    if (!webglRenderer) {
+      webglRenderer = new WebGLTilemapRenderer(canvasGL, fontGallery);
+    }
+    canvasGL.style.display = 'block';
+    canvas.style.display = 'none';
+  } else {
+    canvas.style.display = 'block';
+    canvasGL.style.display = 'none';
+  }
+  repaint();
+}
+
+// Retained Canvas2D paint. A cell's pixels depend only on its own glyph, fg, bg and id words and on
+// the prompt spans over it: backgrounds and block/braille geometry are integer-aligned opaque rects
+// inside the cell, and glyph and span text are clipped to their cell or span rectangle. So a frame
+// repaints only the cells whose words changed since the last painted frame, plus every cell under a
+// prompt span in this frame or the last (span text is drawn from the prompt source, not from cells),
+// in the full pass's order: backgrounds, then glyphs, then span text. Backgrounds merge each
+// horizontal run of repainted cells sharing a colour into one fillRect. Everything the cells do not
+// describe forces a full repaint: the first frame, a canvas or frame size change, a font change, a
+// switch to and from WebGL, a restored context, finished font loads, and nativeLab.invalidatePaint().
+const canvasPaint={valid:false,cells:null,width:0,height:0,font:'',spans:[],dirty:null,covered:null,colors:new Map(),painted:0,full:false};
+function invalidateCanvasPaint(){canvasPaint.valid=false;}
+canvas.addEventListener('contextrestored',invalidateCanvasPaint);
+if(document.fonts&&document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',invalidateCanvasPaint);
+function canvasColor(n){const colors=canvasPaint.colors;let s=colors.get(n);if(s===undefined){if(colors.size>=4096)colors.clear();s=color(n);colors.set(n,s);}return s;}
+function paintCanvas2d(frame,promptSpans,promptSource,forceFull){
+  const P=canvasPaint,cw=10,ch=20,w=frame.width,h=frame.height,cells=frame.cells,n=w*h;
+  if(canvas.width!==w*cw||canvas.height!==h*ch){canvas.width=w*cw;canvas.height=h*ch;P.valid=false;}
+  const font=fontGallery.canvasFont(16);
+  ctx.font=font;ctx.textBaseline='middle';ctx.textAlign='left';ctx.direction='ltr';
+  const full=forceFull||!P.valid||P.width!==w||P.height!==h||P.font!==font||!P.cells||P.cells.length!==cells.length;
+  if(!P.dirty||P.dirty.length!==n){P.dirty=new Uint8Array(n);P.covered=new Uint8Array(n);}
+  const dirty=P.dirty,covered=P.covered,spans=[];
+  covered.fill(0);
+  for(const r of promptSpans){
+    if(!r[7])continue;
+    spans.push(r[6]*w+r[5],r[4]);
+    for(let j=0;j<r[4];j++){const k=r[6]*w+r[5]+j;if(cells[k*4+3]===0x40000000)covered[k]=1;}
+  }
+  let painted=0;
+  if(full){dirty.fill(1);painted=n;}
+  else{
+    const prev=P.cells;
+    for(let k=0,i=0;k<n;k++,i+=4)dirty[k]=cells[i]!==prev[i]||cells[i+1]!==prev[i+1]||cells[i+2]!==prev[i+2]||cells[i+3]!==prev[i+3]?1:0;
+    for(const list of [P.spans,spans])for(let s=0;s<list.length;s+=2)for(let j=0;j<list[s+1];j++){const k=list[s]+j;if(k>=0&&k<n)dirty[k]=1;}
+    for(let k=0;k<n;k++)painted+=dirty[k];
+  }
+  let previous=-1;
+  if(painted)for(let y=0,row=0;y<h;y++,row+=w){
+    for(let x=0;x<w;){
+      if(!dirty[row+x]){x++;continue;}
+      const b=cells[(row+x)*4+2];let end=x+1;
+      while(end<w&&dirty[row+end]&&cells[(row+end)*4+2]===b)end++;
+      if(b!==previous){ctx.fillStyle=canvasColor(b);previous=b;}
+      ctx.fillRect(x*cw,y*ch,(end-x)*cw,ch);
+      x=end;
+    }
+  }
+  previous=-1;
+  if(painted)for(let k=0,i=0;k<n;k++,i+=4){
+    if(!dirty[k]||covered[k])continue;
+    const g=cells[i];
+    if(g===32||g===0)continue;
+    const x=k%w*cw,y=Math.floor(k/w)*ch,f=cells[i+1];
+    if(f!==previous){ctx.fillStyle=canvasColor(f);previous=f;}
+    if(paintBraille(ctx,g,x,y,cw,ch)||paintBlock(ctx,g,x,y,cw,ch)){}
+    else{
+      ctx.save();ctx.beginPath();ctx.rect(x,y,cw,ch);ctx.clip();
+      ctx.fillText(canvasGlyph(g,cw),x,y+ch/2+1);
+      ctx.restore();
+    }
+  }
+  window.nativePromptPaint=[];
+  for(const r of promptSpans){
+    if(!r[7]||cells[(r[6]*w+r[5])*4+3]!==0x40000000)continue;
+    const scalars=promptSource.slice(r[0],r[1]);
+    if(scalars.length)scalars[0]=String.fromCodePoint(r[9]);
+    const text=scalars.join('');
+    if(text==='\t')continue;
+    ctx.save();ctx.beginPath();ctx.rect(r[5]*cw,r[6]*ch,r[4]*cw,ch);ctx.clip();
+    ctx.fillStyle=canvasColor(cells[(r[6]*w+r[5])*4+1]);
+    ctx.fillText(text,r[5]*cw,r[6]*ch+ch/2+1);
+    ctx.restore();
+    window.nativePromptPaint.push({text,span:r.slice()});
+  }
+  if(!P.cells||P.cells.length!==cells.length)P.cells=new cells.constructor(cells.length);
+  P.cells.set(cells);P.spans=spans;P.width=w;P.height=h;P.font=font;P.valid=true;P.painted=painted;P.full=full;
+}
+
+// The unmodified full Canvas2D pass, kept as the reference the retained path is tested against
+// (nativeLab.paintReference()); never used by the live loop.
+function paintCanvas2dReference(frame,promptSpans,promptSource){
+  const cw = 10, ch = 20;
+  if (canvas.width !== frame.width*cw || canvas.height !== frame.height*ch) {
+    canvas.width = frame.width*cw;
+    canvas.height = frame.height*ch;
+  }
+  ctx.font = fontGallery.canvasFont(16);
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'left';
+  ctx.direction = 'ltr';
+  let previous = -1;
+  for (let i = 0; i < frame.cells.length; i += 4) {
+    const n = i / 4, x = n % frame.width * cw, y = Math.floor(n / frame.width) * ch, b = frame.cells[i + 2];
+    if (b !== previous) { ctx.fillStyle = color(b); previous = b; }
+    ctx.fillRect(x, y, cw, ch);
+  }
+  const covered = new Set();
+  for (const r of promptSpans)
+    if (r[7])
+      for (let j = 0; j < r[4]; j++)
+        if (frame.cells[(r[6] * frame.width + r[5] + j) * 4 + 3] === 0x40000000)
+          covered.add(r[6] * frame.width + r[5] + j);
+  previous = -1;
+  for (let i = 0; i < frame.cells.length; i += 4) {
+    if (covered.has(i / 4)) continue;
+    const g = frame.cells[i];
+    if (g === 32 || g === 0) continue;
+    const n = i / 4, x = n % frame.width * cw, y = Math.floor(n / frame.width) * ch, f = frame.cells[i + 1];
+    if (f !== previous) { ctx.fillStyle = color(f); previous = f; }
+    if (paintBraille(ctx, g, x, y, cw, ch) || paintBlock(ctx, g, x, y, cw, ch)) {}
+    else {
+      ctx.save(); ctx.beginPath(); ctx.rect(x, y, cw, ch); ctx.clip();
+      ctx.fillText(canvasGlyph(g, cw), x, y + ch / 2 + 1);
+      ctx.restore();
+    }
+  }
+  window.nativePromptPaint = [];
+  for (const r of promptSpans) {
+    if (!r[7] || frame.cells[(r[6] * frame.width + r[5]) * 4 + 3] !== 0x40000000) continue;
+    const scalars = promptSource.slice(r[0], r[1]);
+    if (scalars.length) scalars[0] = String.fromCodePoint(r[9]);
+    const text = scalars.join('');
+    if (text === '\t') continue;
+    ctx.save(); ctx.beginPath(); ctx.rect(r[5] * cw, r[6] * ch, r[4] * cw, ch); ctx.clip();
+    ctx.fillStyle = color(frame.cells[(r[6] * frame.width + r[5]) * 4 + 1]);
+    ctx.fillText(text, r[5] * cw, r[6] * ch + ch / 2 + 1);
+    ctx.restore();
+    window.nativePromptPaint.push({ text, span: r.slice() });
+  }
+}
+
+function draw(){
+  modalController.compose();
+  syncSourceModal();
+  const tRender0 = performance.now();
+  const frame = scene.render();
+  renderMs = performance.now() - tRender0;
+  lastFrame = frame;
+
+  const tPaint0 = performance.now();
+  const promptSpans = scene.promptVisualLayout();
+  const promptSource = promptSpans.length ? Array.from(scene.textRunSource(0,0)) : [];
+
+  if (paintMode === 'webgl') {
+    if (!webglRenderer) {
+      webglRenderer = new WebGLTilemapRenderer(canvasGL, fontGallery);
+    }
+    webglRenderer.render(frame, promptSpans, promptSource);
+    invalidateCanvasPaint();
+    window.nativePromptPaint = [];
+    for (const r of promptSpans) {
+      if (!r[7] || frame.cells[(r[6]*frame.width+r[5])*4+3] !== 0x40000000) continue;
+      const scalars = promptSource.slice(r[0], r[1]);
+      if (scalars.length) scalars[0] = String.fromCodePoint(r[9]);
+      const text = scalars.join('');
+      if (text === '\t') continue;
+      window.nativePromptPaint.push({ text, span: r.slice() });
+    }
+  } else if (canvasPaint.reference) {
+    canvasPaint.reference = false;
+    paintCanvas2dReference(frame, promptSpans, promptSource);
+    invalidateCanvasPaint();
+    canvasPaint.painted = frame.width * frame.height;
+    canvasPaint.full = true;
+  } else {
+    paintCanvas2d(frame, promptSpans, promptSource, false);
+  }
+  paintMs = performance.now() - tPaint0;
+  lastPerf = { renderMs, paintMs, totalMs: renderMs + paintMs, paintMode, paintedCells: paintMode === 'webgl' ? null : canvasPaint.painted, fullPaint: paintMode === 'webgl' ? null : canvasPaint.full };
+  steps++;
+}
+
+const modalController=new SourceModalController(scene,{timeMs:()=>scene.infoComplete().clock.timeUs/1000,workspace:()=>active.id,windows:()=>scene.infoComplete().windows.map(w=>({...w,state:w.reader?'reader':'open'})),commands:()=>[{id:'help',chord:'F1',label:'Help / searchable commands'},{id:'escape',chord:'Escape',label:'Dismiss topmost overlay, then open menu'},{id:'windows',chord:'F6',label:'Window switcher'}],onAction:action=>{if(action.kind==='focus-window'){cmd({op:'window-action',id:action.value,action:'reader'});modalController.dismiss();}else if(action.kind==='shortcut'){if(action.value==='escape')modalController.dismiss();else if(action.value==='windows')modalController.push('center','windows');else cmd({op:'key',key:'F1'});}else if(action.kind==='confirm')modalController.dismiss();}});
+for(const kind of SOURCE_MODAL_KINDS){const option=document.createElement('option');option.value=kind;option.textContent=kind;$('source-modal-kind').append(option);}
+function syncSourceModal(){const m=modalController.current();if(document.activeElement!==$('source-modal-query'))$('source-modal-query').value=m.query;setText('source-modal-status',m.depth+' / 8 layers · '+(m.blocking?'Modal owns input':m.depth?'Inspector input scope':'Normal input'));}
+$('source-modal-open').onclick=()=>act(()=>{cancelPointer();modalController.push($('source-modal-kind').value,$('source-modal-context').value);});
+$('source-modal-pop').onclick=()=>act(()=>modalController.dismiss());$('source-modal-clear').onclick=()=>act(()=>modalController.clear());
+$('source-modal-query').oninput=()=>act(()=>modalController.edit({query:$('source-modal-query').value,selected:0}));
+function sourceModalPointer(e,activate=false){const info=scene.infoComplete(),m=info.sourceModal;if(!m.depth||info.modal)return false;const p=point(e),box=modalController.view.nodes[0];if(!m.blocking&&!(m.associated&&box&&p.x>=box.x&&p.y>=box.y&&p.x<box.x+box.width&&p.y<box.y+box.height))return false;if(activate)modalController.activate(Math.floor(p.x),Math.floor(p.y));return true;}
+
+function retainedText(info){return [
+ 'PROMPT\n'+scene.textRunSource(0,0),
+ ...info.textRuns.map(t=>'TEXT '+t.id+' ('+t.phase+')\n'+scene.textRunSource(1,t.id)),
+ ...info.windows.map(w=>'WINDOW '+w.id+'\n'+scene.textRunSource(3,w.id)+'\n'+scene.textRunSource(2,w.id)),
+ ...info.nodes.map(n=>[(n.id===info.selection?'SELECTED NODE ':'NODE ')+n.id,n.label,n.kind,n.status,n.sha,n.detail].join('\n')),
+ ...info.widgets.map(w=>'WIDGET '+w.id+'\n'+w.text),
+ ...info.messages.map(m=>['NOTIFICATION '+m.id+' ('+m.state+')',m.text,...m.actions.map(a=>'Action '+a.id+': '+a.label+' ['+a.event+']')].join('\n'))
+ ].join('\n\n');}
+function syncWindows(info){
+ const picker=$('recovery-window'),signature=JSON.stringify(info.windows.map(w=>[w.id,w.title]));
+ let selected=picker.value;if(lastSelectedWindow!==info.selectedWindow)selected=String(info.selectedWindow);lastSelectedWindow=info.selectedWindow;
+ if(signature!==windowSignature){windowSignature=signature;picker.replaceChildren();for(const w of info.windows){const option=document.createElement('option');option.value=w.id;option.textContent=w.id+': '+w.title;picker.append(option);}if(!info.windows.length){const option=document.createElement('option');option.value='';option.textContent='No retained windows';picker.append(option);}}
+ if(info.windows.some(w=>String(w.id)===selected))picker.value=selected;
+ const hasWindows=info.windows.length>0;picker.disabled=!hasWindows;$('recovery-open').disabled=!hasWindows;$('recovery-next').disabled=!hasWindows;
+ const reader=info.windows.find(w=>w.id===info.selectedWindow&&w.reader&&w.visible>0);
+ for(const id of ['reader-prev','reader-next','reader-exit'])$(id).disabled=!reader;
+}
+function syncRecords(info){
+ const signature=JSON.stringify(info.messages);if(signature===semanticSignature)return;semanticSignature=signature;
+ const container=$('semantic-records'),focusKey=document.activeElement?.dataset.focusKey,fragment=document.createDocumentFragment();
+ for(const message of info.messages){
+  const article=document.createElement('article');article.className='semantic-record';
+  const heading=document.createElement('h3');heading.textContent='Notification '+message.id+' · '+message.state+(message.important?' · important':'');article.append(heading);
+  const body=document.createElement('p');body.className='semantic-source';body.dir='auto';body.textContent=message.text||'(Intentional blank message)';article.append(body);
+  const actions=document.createElement('div');actions.className='actions';
+  for(const action of message.actions){const button=document.createElement('button');button.textContent=action.label;button.dataset.messageId=message.id;button.dataset.focusKey='notice-'+message.id+'-'+message.sequence+'-'+action.id;button.setAttribute('aria-disabled',String(action.activated||message.state!=='active'));button.onclick=()=>{if(button.getAttribute('aria-disabled')==='true')return;act(()=>cmd({op:'notification-action',id:message.id,actionId:action.id}));};actions.append(button);}
+  article.append(actions);fragment.append(article);
+ }
+ if(!info.messages.length){const empty=document.createElement('p');empty.textContent='No retained notifications.';fragment.append(empty);}
+ container.replaceChildren(fragment);
+ if(focusKey){const target=container.querySelector('[data-focus-key="'+focusKey+'"]');if(target)target.focus({preventScroll:true});}
+}
+function showMetadataRefusal(info){
+ const message=info.error+'. Full retained text is unavailable in this bounded metadata view. Use Read complete metadata for an on-demand copy, or save a full checkpoint to preserve all source. F6 and reader page controls remain available.';
+ metadataUnavailable=true;running=false;report(message);$('play').textContent='Resume motion';
+ for(const id of ['play','step','seek-button'])$(id).disabled=true;
+ for(const id of ['metrics','selection-summary','semantic-records','selector-state','condition-state','intent-log'])setText(id,message);
+ setText('metadata',JSON.stringify(info,null,2));
+ if($('readable').value!==message)$('readable').value=message;$('readable').setAttribute('aria-invalid','true');
+ windowSignature='';semanticSignature='';const picker=$('recovery-window');
+ if(picker.options.length!==1||picker.options[0].value!==''){const option=document.createElement('option');option.value='';option.textContent='Unavailable: metadata capacity';picker.replaceChildren(option);}
+ picker.disabled=true;$('recovery-open').disabled=true;
+ for(const id of ['recovery-next','reader-prev','reader-next','reader-exit'])$(id).disabled=false;
+}
+function sync(){const info=scene.info();if(info.error){showMetadataRefusal(info);return;}syncPromptAppearance(info);syncFirstPrompt(info);syncCameraControls(info);syncOcclusionLook(info);if(metadataUnavailable){metadataUnavailable=false;logicalUs=info.clock.timeUs;lastWall=performance.now();for(const id of ['play','step','seek-button'])$(id).disabled=false;clearError();}$('readable').removeAttribute('aria-invalid');const p=info.particles;setText('selector-state',JSON.stringify({registered:info.registeredStates,rules:info.styleRules},null,2));setText('condition-state',JSON.stringify({values:info.values,rules:info.triggers},null,2));setText('metrics',`${liveMetrics(info)}  |  C/WASM ${renderMs.toFixed(2)} ms + ${paintMode} paint ${paintMs.toFixed(2)} ms  |  sim ${info.clock.step} steps / catch-up ${Math.max(0,(info.clock.targetUs-info.clock.timeUs)/1000).toFixed(1)} ms  |  airborne ${p.active}  deposits ${p.deposited} + ${p.aggregated} aggregated  |  fragments limited ${info.render.fragmentOverflow}  |  complete text needs reader ${info.render.contentNeedsReader}`);setText('metadata',JSON.stringify(info,null,2));setText('intent-log',info.intents.length?JSON.stringify(info.intents,null,2):'No pending intentions.');const text=retainedText(info);if($('readable').value!==text)$('readable').value=text;setText('clock',(info.clock.timeUs/1e6).toFixed(3)+' s');const node=info.nodes.find(n=>n.id===info.selection);setText('selection-summary',node?'Selected node '+node.id+': '+node.label+'\n'+[node.kind,node.status,node.sha,node.detail].filter(Boolean).join('\n'):'No selected graph node.');$('selection-summary').setAttribute('aria-live',info.accessibility.screenReader?'polite':'off');$('reduced-motion').checked=info.accessibility.reducedMotion;$('screen-reader').checked=info.accessibility.screenReader;syncWindows(info);syncRecords(info);}
+function repaint(){draw();sync();window.nativeView={scene,frame:lastFrame};}
+function act(fn){try{clearError();fn();repaint();}catch(e){report(e);}}
+
+// ObservatoryModel.demoData and composeObservatory scope mapping, original Workbench
+// source c221beb6e719f47f2c4744fce7cf70fcf918a31b436b6f0f1fca4df63f283904.
+// The original host samples at 50 ms; the current host keys that cadence to scene time.
+function syncPearlControls(){
+ $('pearl-observer-controls').hidden=pearlSession?.family!=='observatory';if(pearlSession?.family==='observatory')syncObservatoryControls();$('pearl-studio-controls').hidden=!pearlSession?.studio;$('pearl-fleet-controls').hidden=!pearlSession?.fleet;
+ if(pearlSession?.studio){$('pearl-studio-value').value=String(pearlSession.studio.value);setText('pearl-data-state',JSON.stringify(pearlSession.studio.snapshot(),null,2));}
+ else if(pearlSession?.fleet){const c=pearlSession.fleet,picker=$('pearl-fleet-agent');if(picker.options.length!==c.model.agents.length)picker.replaceChildren(...c.model.agents.map(a=>{const o=document.createElement('option');o.value=a.id;o.textContent=a.name+' / '+a.role;return o;}));picker.value=c.selectedId;if($('pearl-fleet-draft').value!==c.draft)$('pearl-fleet-draft').value=c.draft;for(const [id,key]of [['read','readMode'],['reduced','reducedMotion'],['dense','dense']])$('pearl-fleet-'+id).checked=c.options[key];setText('pearl-data-state',JSON.stringify({source:'Fleet / synthetic',dataTick:c.demoTick,motionMs:c.motionMs,selected:c.selectedId,historyUnread:c.historyUnread,scrollOffset:c.scrollOffset,outbox:c.commands.length,streamingReplies:c.replies.length,inspection:c.inspection},null,2));}
+}
+function stopPearlSource(){observerAudio.stop().catch(report);pearlSource=null;pearlSession=null;pearlSampleUs=-1;$('pearl-data-source').disabled=true;$('pearl-source-status').textContent='Select Pearl Instruments or Pearl Curves.';$('pearl-data-state').textContent='No data source attached.';syncPearlControls();}
+function updatePearlSource(timeUs){
+ if(!pearlSource||$('pearl-data-source').value!=='original')return;
+ const elapsedMs=Math.floor(timeUs/1000),data=pearlSource.studio.advanceTo(elapsedMs),sampleUs=Math.floor(timeUs/50000)*50000;
+ if(active.id==='instruments')cmd({op:'batch',commands:[{op:'widget',id:1,value:Math.round(data.value/10)},{op:'set',path:'/demo/level',value:data.displayValue/1000}]});
+ if(sampleUs!==pearlSampleUs){const sample=observatorySample(sampleUs/1000);pearlSource.sample=sample;cmd({op:'batch',commands:[{op:'widget',id:pearlSource.widget,data:sample.waveform.map(v=>Math.max(0,Math.min(1,.5+v*.42)))},{op:'widget',id:65000,data:sample.reference,alpha:pearlSource.reference.alpha??1},...sample.bus.map(row=>({op:'set',path:'/pearl/'+row.source,value:row.value}))]});pearlSampleUs=sampleUs;}
+ setText('pearl-data-state',JSON.stringify({source:'Synthetic signals',studioCommits:data.dataCount,studioTarget:data.value,studioDisplay:data.displayValue,bus:pearlSource.sample.bus},null,2));
+ $('pearl-source-status').textContent='Observatory signals / '+(sampleUs/1000000).toFixed(2)+' s · Studio '+data.dataCount+' data commits. Hold pauses source time.';
+}
+function pearlCommands(recipe){if(recipe.id!=='instruments'&&recipe.id!=='pearl-curves')return recipe.commands;const widget=recipe.id==='instruments'?2:8,source=recipe.commands.find(c=>c.op==='widget'&&c.id===widget),reference={...source,id:65000,material:15,data:observatorySample(0).reference};return [...observatorySample(0).bus.map(row=>({op:'define',path:'/pearl/'+row.source,value:row.value})),...recipe.commands.flatMap(c=>c===source?[{op:'material',id:15,space:'oklch',channels:{l:.83,c:.1,h:300}},reference,c]:[c])];}
+function startPearlSource(recipe){
+ if(recipe.pearlSource){pearlSession=recipe.pearlSource.family==='observatory'?new PearlObservatorySession(scene,recipe.pearlSource):new PearlStageSession(scene,recipe.pearlSource.family,recipe.pearlSource);syncPearlControls();return;}
+ if(recipe.id!=='instruments'&&recipe.id!=='pearl-curves')return;
+ const widget=recipe.id==='instruments'?2:8,authored=recipe.commands.find(c=>c.op==='widget'&&c.id===widget);pearlSource={widget,authored:authored.data.slice(),reference:{...authored,id:65000},studio:new StudioDataSource(),sample:observatorySample(0)};pearlSampleUs=-1;
+ $('pearl-data-source').disabled=false;$('pearl-data-source').value='original';updatePearlSource(0);
+}
+function advancePearlTo(timeUs,budget){
+ if(projectEditor?.isActive())return projectEditor.advanceTo(timeUs,budget);
+ if(scenicSession)return scenicSession.advanceTo(timeUs,budget);
+ if(pearlSession){const result=budget===undefined?(pearlSession.advanceTo(Math.floor(timeUs/1000)),0):pearlSession.advanceBudgetedTo(Math.floor(timeUs/1000),budget);syncPearlControls();return result;}
+ if(pearlSource&&$('pearl-data-source').value==='original'){
+  let result=0;do{const next=Math.min(timeUs,pearlSource.studio.nextMs*1000,pearlSampleUs+50000);result=scene.command({op:'time',timeUs:next,...(budget===undefined?{}:{budget})});if(result===1)return 1;updatePearlSource(scene.infoComplete().clock.timeUs);if(next>=timeUs)return 0;if(budget!==undefined)return 1;}while(true);
+ }
+ if(budget===undefined){scene.advanceTo(timeUs);return 0;}
+ return scene.command({op:'time',timeUs,budget});
+}
+$('pearl-data-source').onchange=()=>act(()=>{if(!pearlSource)return;if($('pearl-data-source').value==='authored'){const commands=[{op:'widget',id:pearlSource.widget,data:pearlSource.authored},{op:'widget',id:65000,alpha:0}];if(active.id==='instruments')for(const id of [1,3])commands.push(active.commands.find(c=>c.op==='widget'&&c.id===id));cmd({op:'batch',commands});$('pearl-source-status').textContent='Authored recipe samples retained. Native reveal and color controls remain available.';}else{pearlSampleUs=-1;updatePearlSource(scene.infoComplete().clock.timeUs);}});
+let observerSelection=-1;
+const observerAudio=createObservatoryAudio({session:()=>pearlSession?.family==='observatory'?pearlSession:null,running:()=>running,changed:()=>{syncPearlControls();repaint();setText('pearl-observer-audio-status',observerAudio.active?pearlSession.model.sourceLabel:'Capture stopped; audio tracks closed. Old samples expire.');},error:report});
+for(const [id,kind]of [['microphone','microphone'],['display-audio','display']])$('pearl-observer-'+id).onclick=async()=>{try{await observerAudio.start(kind);}catch(error){report(error);}};$('pearl-observer-stop-audio').onclick=()=>observerAudio.stop().catch(report);window.addEventListener('pagehide',()=>observerAudio.stop().catch(()=>{}));
+const observerEnums={backgroundStyle:['linear','double-axis','wave','plasma','caustics','vortex','contours','aurora','woven','moire','tunnel','diamond','bilinear','checker','warp'],weatherStyle:['ripples','rain','snow','embers','sparks','nova'],orbitMode:['spin','pendulum'],sampling:['cell','half','vertical','braille']};
+function observerAct(action){act(()=>{if(pearlSession?.family!=='observatory')throw Error('Open an Observatory scene first');if(typeof action==='function'){action(pearlSession.model);pearlSession.commit();}else pearlSession.action(action);syncPearlControls();});}
+function observerOption(key,input){input.id='pearl-observer-'+key;input.onchange=()=>observerAct({op:'configure',patch:{[key]:input.type==='checkbox'?input.checked:input.type==='number'?Number(input.value):key==='stopWidths'?JSON.parse(input.value):input.value}});return input;}
+for(const row of PearlObservatoryOriginal.OBSERVATORY_SCENES){const o=document.createElement('option');o.value=row.id;o.textContent=row.name;$('pearl-observer-scenes').append(o);}
+for(const [key,values]of Object.entries(observerEnums)){const label=document.createElement('label'),input=document.createElement('select');label.textContent=key;for(const value of values){const o=document.createElement('option');o.value=value;o.textContent=value;input.append(o);}label.append(observerOption(key,input));$('pearl-observer-options').append(label);}
+for(const key of ['motion','typedColor','flatNavigation','lockLightness']){const label=document.createElement('label'),input=document.createElement('input');label.textContent=key;input.type='checkbox';label.append(observerOption(key,input));$('pearl-observer-options').append(label);}
+for(const [key,title]of [['starGlyphs','Star glyphs'],['stopWidths','Palette stop widths / JSON array']]){const label=document.createElement('label'),input=document.createElement('input');label.textContent=title;input.type='text';label.append(observerOption(key,input));$('pearl-observer-options').append(label);}
+for(const [key,rule]of Object.entries(PearlObservatoryOriginal.OBSERVATORY_CONTROLS)){const label=document.createElement('label'),input=document.createElement('input');label.textContent=rule.label+(rule.unit?' / '+rule.unit:'');input.type='number';input.min=String(rule.min);input.max=String(rule.max);input.step=String(rule.step);label.append(observerOption(key,input));$('pearl-observer-numbers').append(label);}
+for(const palette of palettes){const option=document.createElement('option');option.value=palette.id;option.textContent=palette.name;$('pearl-observer-palette').append(option);}
+for(const target of PearlObservatoryOriginal.MODULATION_TARGETS){const option=document.createElement('option');option.value=target;option.textContent=target;$('pearl-observer-route-target').append(option);}$('pearl-observer-route-target').value='brightness';
+function syncObservatoryControls(){const m=pearlSession.model;$('pearl-observer-scenes').value=m.scene;$('pearl-observer-palette').value=m.palette.id;$('pearl-observer-demo').checked=m.simulation;for(const id of ['draft','editor'])if($('pearl-observer-'+id).value!==m[id])$('pearl-observer-'+id).value=m[id];$('pearl-observer-editor-label').hidden=!['nano','pico'].includes(m.scene);for(const [key,value]of Object.entries(m.options)){const input=$('pearl-observer-'+key);if(input){if(input.type==='checkbox')input.checked=value;else if(document.activeElement!==input)input.value=key==='stopWidths'?JSON.stringify(value):String(value);}}setText('pearl-observer-routes',JSON.stringify({bindings:m.bus.bindings,samples:[...m.bus.samples.values()]},null,2));setText('pearl-data-state',JSON.stringify({source:m.sourceLabel,scene:m.scene,motionMs:m.motionMs,dataMs:m.dataMs,events:m.events.length,documents:{draftScalars:[...m.draft].length,scratchScalars:[...m.editor].length},notice:m.notice},null,2));}
+$('pearl-observer-scenes').onchange=()=>observerAct({op:'activate',id:100+PearlObservatoryOriginal.OBSERVATORY_SCENES.findIndex(r=>r.id===$('pearl-observer-scenes').value)});
+$('pearl-observer-draft').oninput=()=>observerAct({op:'replaceDraft',text:$('pearl-observer-draft').value});$('pearl-observer-send').onclick=()=>observerAct({op:'send'});$('pearl-observer-commands').onclick=()=>observerAct({op:'activate',id:8801});
+$('pearl-observer-editor').oninput=()=>observerAct(m=>{const value=$('pearl-observer-editor').value;for(const ch of value){const n=ch.codePointAt(0);if(n>=0xd800&&n<=0xdfff)throw Error('Valid Unicode text required');}m.editor=value;m.editorCursor=$('pearl-observer-editor').selectionStart;m.revision++;});$('pearl-observer-editor').onselect=()=>{if(pearlSession?.family==='observatory')observerAct(m=>m.editorCursor=$('pearl-observer-editor').selectionStart);};
+$('pearl-observer-palette').onchange=()=>observerAct(m=>{const palette=palettes.find(p=>p.id===$('pearl-observer-palette').value);if(!palette)throw Error('Palette required');m.palette=structuredClone(palette);m.revision++;});
+$('pearl-observer-demo').onchange=()=>observerAct(m=>{m.simulation=$('pearl-observer-demo').checked;m.sourceLabel=m.simulation?'SYNTHETIC / demo data':'EXTERNAL / waiting for supplied measurements';});$('pearl-observer-bind-demo').onclick=()=>observerAct({op:'activate',id:7100});$('pearl-observer-clear-routes').onclick=()=>observerAct({op:'activate',id:7101});
+$('pearl-observer-bind').onclick=()=>observerAct(m=>{m.bus.bind({source:$('pearl-observer-route-source').value.trim(),target:$('pearl-observer-route-target').value,inputMin:Number($('pearl-observer-in-min').value),inputMax:Number($('pearl-observer-in-max').value),outputMin:Number($('pearl-observer-out-min').value),outputMax:Number($('pearl-observer-out-max').value),attackMs:m.options.sensorAttack,releaseMs:m.options.sensorRelease,ttlMs:2000});m.routeRates(m.dataMs);});
+$('pearl-observer-ingest').onclick=()=>observerAct(()=>{const sample=JSON.parse($('pearl-observer-measurement').value);pearlSession.action({op:Array.isArray(sample.samples)?'waveform':'ingest',sample});});
+$('pearl-observer-save').onclick=()=>observerAct(()=>{const value=pearlSession.checkpoint();let binary='';for(let i=0;i<value.native.length;i+=32768)binary+=String.fromCharCode(...value.native.subarray(i,i+32768));value.native=btoa(binary);download('pearl-observatory-workspace.json',JSON.stringify(value),'application/json');});
+$('pearl-observer-file').onchange=async()=>{try{const file=$('pearl-observer-file').files[0];if(!file)return;if(pearlSession?.family!=='observatory')throw Error('Open an Observatory scene first');pearlSession.restoreCheckpoint(JSON.parse(await file.text()));logicalUs=pearlSession.elapsedMs*1000;autoActions=[];nextAutoAction=0;running=false;cmd({op:'pause',paused:true});syncPearlControls();repaint();}catch(error){report(error);}};
+function observerKey(e){const m=pearlSession.model,available=()=>pearlSession.compose().semantics.filter(s=>!s.disabled),clamp=(n,a,b)=>Math.max(a,Math.min(b,n));let handled=true;
+ if(!m.showPalette&&['nano','pico'].includes(m.scene)&&!e.ctrlKey&&!e.metaKey&&!e.altKey){const map={Enter:'insert',Backspace:'backspace',Delete:'delete',ArrowLeft:'left',ArrowRight:'right',ArrowUp:'up',ArrowDown:'down',Home:'home',End:'end'},action=map[e.key];if(action||[...e.key].length===1){e.preventDefault();observerAct({op:'scratch',action:action||'insert',value:e.key==='Enter'?'\n':action?'':e.key});return;}}
+ observerAct(()=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){m.showPalette=!m.showPalette;m.paletteQuery='';observerSelection=-1;}else if(e.key==='Escape'){m.showPalette=false;m.paletteQuery='';observerSelection=-1;}else if(e.altKey&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){m.configure({cameraYaw:clamp(m.options.cameraYaw+(e.key==='ArrowLeft'?-3:e.key==='ArrowRight'?3:0),-180,180),cameraPitch:clamp(m.options.cameraPitch+(e.key==='ArrowUp'?3:e.key==='ArrowDown'?-3:0),-89,89)});}else if(['Tab','ArrowDown','ArrowUp'].includes(e.key)){const a=available(),dir=e.shiftKey||e.key==='ArrowUp'?-1:1;if(a.length){observerSelection=(observerSelection+dir+a.length)%a.length;const id=a[observerSelection].id;m.focusId=id;m.selected=m.showPalette?observerSelection:id>=5000&&id<5008?id-5000:id>=200&&id<204?id-200:observerSelection;m.notice='Selected: '+a[observerSelection].label;}}else if(e.key==='Enter'){const a=available();if(observerSelection>=0&&a[observerSelection])PearlObservatoryOriginal.activateObservatory(m,a[observerSelection].id);else if(m.showPalette&&a.length)PearlObservatoryOriginal.activateObservatory(m,a[m.selected%a.length].id);else m.send();observerSelection=-1;}else if(e.key==='Backspace'){if(m.showPalette)m.paletteQuery=[...m.paletteQuery].slice(0,-1).join('');else m.backspace();}else if(e.key==='PageUp'||e.key==='PageDown')m.scroll=Math.max(0,m.scroll+(e.key==='PageUp'?5:-5));else if(e.key==='End')m.scroll=0;else if(!e.ctrlKey&&!e.metaKey&&[...e.key].length===1){if(m.showPalette){m.paletteQuery=(m.paletteQuery+e.key).slice(0,64);m.selected=0;observerSelection=-1;}else m.input(e.key);}else handled=false;if(handled){e.preventDefault();m.revision++;}});
+}
+function fleetAct(action){act(()=>{if(!pearlSession?.fleet)throw Error('Fleet first');action(pearlSession.fleet);pearlSession.commit();syncPearlControls();});}
+$('pearl-studio-open').onclick=()=>act(()=>load(recipes.find(r=>r.id==='pearl-studio-original')));$('pearl-fleet-open-scene').onclick=()=>act(()=>load(recipes.find(r=>r.id==='pearl-fleet-original')));
+$('pearl-studio-value').oninput=()=>act(()=>{pearlSession.setValue(Number($('pearl-studio-value').value));syncPearlControls();});
+$('pearl-fleet-agent').onchange=()=>fleetAct(c=>{c.hasWorkspace?c.openAgent($('pearl-fleet-agent').value):c.selectAgent($('pearl-fleet-agent').value);});
+$('pearl-fleet-open').onclick=()=>fleetAct(c=>c.openAgent(c.selectedId));$('pearl-fleet-close').onclick=()=>fleetAct(c=>c.closeAgent());$('pearl-fleet-tail').onclick=()=>fleetAct(c=>c.liveTail());
+$('pearl-fleet-draft').oninput=()=>fleetAct(c=>c.setDraft($('pearl-fleet-draft').value));
+function fleetSend(){fleetAct(c=>{if(!c.opened)c.openAgent(c.selectedId);c.send($('pearl-fleet-draft').value);});}
+$('pearl-fleet-send').onclick=fleetSend;$('pearl-fleet-draft').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();fleetSend();}if(e.key==='Escape')canvas.focus();};
+for(const [id,key]of [['read','readMode'],['reduced','reducedMotion'],['dense','dense']])$('pearl-fleet-'+id).onchange=()=>fleetAct(c=>c.configure({[key]:$('pearl-fleet-'+id).checked}));
+$('pearl-fleet-options').onclick=()=>fleetAct(c=>c.configure(Object.fromEntries([['expand','expandMs'],['arrival','arrivalMs'],['horizon','horizonRows'],['minimum','horizonMinimum'],['brightness','backgroundBrightness'],['color-speed','scopeColorSpeed']].map(([id,key])=>[key,Number($('pearl-fleet-'+id).value)]))));
+$('pearl-fleet-drain').onclick=()=>fleetAct(c=>download('pearl-fleet-local-outbox.json',JSON.stringify(c.drainCommands(),null,2),'application/json'));
+$('pearl-fleet-save').onclick=()=>act(()=>{if(!pearlSession?.fleet)throw Error('Fleet first');const saved=pearlSession.checkpoint();let binary='';for(let i=0;i<saved.native.length;i+=32768)binary+=String.fromCharCode(...saved.native.subarray(i,i+32768));saved.native=btoa(binary);download('pearl-fleet-workspace.json',JSON.stringify(saved),'application/json');});
+$('pearl-fleet-file').onchange=async()=>{try{const file=$('pearl-fleet-file').files[0];if(!file)return;if(!pearlSession?.fleet)throw Error('Fleet first');pearlSession.restoreCheckpoint(JSON.parse(await file.text()));logicalUs=pearlSession.elapsedMs*1000;autoActions=[];nextAutoAction=0;running=false;cmd({op:'pause',paused:true});syncPearlControls();repaint();}catch(error){report(error);}};
+$('pearl-fleet-transcript').onclick=()=>fleetAct(c=>download(c.selectedId+'-transcript.txt',c.model.transcript(c.selectedId),'text/plain'));
+
+function reset(commands,keepDraft=true,modelRecords=null){modelRequest++;scenicSession=null;stopPearlSource();syncPaletteChoice();const draft=keepDraft?scene.info().prompt.text:'';cmd({op:'reset',seed});if(modelRecords!==null)scene.setModelRecords(modelRecords);for(const command of commands)cmd(command);if(draft)cmd({op:'draft',text:draft,emitWeather:false});cmd({op:'resize',width:+$('columns').value,height:+$('rows').value});const authoredPrompt=[...commands].reverse().find(command=>command.op==='prompt');if(authoredPrompt?.mode!==undefined)$('prompt-mode').value=authoredPrompt.mode;if(authoredPrompt?.alpha!==undefined)$('prompt-alpha').value=String(authoredPrompt.alpha);cmd({op:'prompt',alpha:+$('prompt-alpha').value,mode:$('prompt-mode').value});cmd({op:'accessibility',...presentationIntent});logicalUs=0;autoActions=[];nextAutoAction=0;lastWall=performance.now();running=!presentationIntent.reducedMotion;cmd({op:'pause',paused:!running});$('play').textContent=running?'Hold motion':'Resume motion';$('draft').value=scene.info().prompt.text;composing=false;}
+function budgetedTime(timeUs){return advancePearlTo(timeUs,liveBudget());}
+function load(recipe){projectEditor?.detach();const modelRecords=decodeGalleryModel(recipe);active=recipe;if(recipe.viewport){$('columns').value=String(recipe.viewport.width);$('rows').value=String(recipe.viewport.height);}reset(pearlCommands(recipe),true,modelRecords);startPearlSource(recipe);if(recipe.originalScenic)scenicSession=new ScenicOriginalSession(scene,recipe.originalScenic);syncScenicControls();if(modelRecords!==null)showModelStatus({vertexCount:recipe.provenance.vertices,warnings:[]},recipe.name);else showModelStatus(null,'');autoActions=recipe.autoActions?(recipe.actions||[]).slice().sort((a,b)=>a.timeUs-b.timeUs):[];$('config').value=JSON.stringify(recipe.commands,null,2);$('title').textContent=displayName(recipe.name);$('subtitle').textContent='';$('scenes').value=recipe.id;$('demo-provenance').textContent=recipeProvenance(recipe);syncCamera();}
+function syncCamera(){const c=scene.info().camera.carrier;for(const [i,k]of ['x','y','z'].entries())$('camera-'+k).value=c.position[i];for(const k of ['yaw','pitch','roll'])$('camera-'+k).value=c[k];}
+let cameraControlsSignature='';
+function cameraRigFields(){const rig=$('camera-rig').value;$('camera-head-fields').hidden=!['head','spacecraft'].includes(rig);$('camera-crane-fields').hidden=rig!=='crane';$('camera-follow-fields').hidden=rig!=='follow';const node=$('camera-follow-kind').value==='node';$('camera-follow-node-field').hidden=!node;$('camera-follow-point-fields').hidden=node;}
+function syncCameraControls(info,force=false){
+ const c=info.camera.controls;if(!c){$('camera-controls-status').textContent='Camera rig controls are unavailable in this native build.';return;}
+ const signature=JSON.stringify(c);if(!force&&(signature===cameraControlsSignature||$('camera-controls-panel').contains(document.activeElement)))return;
+ cameraControlsSignature=signature;$('camera-controls-enabled').checked=c.enabled;$('camera-rig').value=c.rig;$('camera-mode').value=c.mode;$('camera-input-target').value=c.inputTarget;
+ for(const axis of ['x','y','z']){const a=c.inputAxes[axis];$('camera-axis-'+axis+'-action').value=a.action;$('camera-axis-'+axis+'-sensitivity').value=String(a.sensitivity);$('camera-axis-'+axis+'-enabled').checked=a.enabled;$('camera-axis-'+axis+'-invert').checked=a.invert;}
+ const vector=(key,values)=>['x','y','z'].forEach((axis,i)=>$('camera-'+key+'-'+axis).value=String(values[i]));
+ vector('head-position',c.head.position);vector('head-rotation',c.head.rotation);vector('crane-pivot',c.crane.pivot);vector('crane-boom',c.crane.boom);vector('follow-offset',c.follow.offset);
+ $('camera-follow-kind').value=c.follow.target.kind;$('camera-follow-id').value=String(c.follow.target.kind==='node'?c.follow.target.id:1);vector('follow-point',c.follow.target.kind==='point'?c.follow.target.point:[0,0,0]);$('camera-follow-track').checked=c.follow.track;
+ $('camera-anchor-enabled').checked=c.anchor!==null;vector('anchor',c.anchor??info.camera.target??[0,0,0]);cameraRigFields();$('camera-controls-status').textContent=c.enabled?'Native camera: '+c.rig+' · '+c.mode+' · input to '+c.inputTarget:'Rig controls off · existing camera navigation remains available.';
+}
+function applyCameraControls(){
+ const vector=key=>['x','y','z'].map(axis=>{const input=$('camera-'+key+'-'+axis);if(input.value.trim()==='')throw Error('Enter all '+key+' coordinates.');const value=Number(input.value);if(!Number.isFinite(value))throw Error('Camera coordinates must be finite.');return value;});
+ const inputAxes={};for(const axis of ['x','y','z']){const input=$('camera-axis-'+axis+'-sensitivity');if(input.value.trim()===''||!Number.isFinite(Number(input.value)))throw Error('Enter a finite camera sensitivity.');inputAxes[axis]={action:$('camera-axis-'+axis+'-action').value,sensitivity:Number(input.value),enabled:$('camera-axis-'+axis+'-enabled').checked,invert:$('camera-axis-'+axis+'-invert').checked};}
+ const command={op:'camera-controls',enabled:true,rig:$('camera-rig').value,mode:$('camera-mode').value,inputTarget:$('camera-input-target').value,inputAxes,anchor:$('camera-anchor-enabled').checked?vector('anchor'):null};
+ if(['head','spacecraft'].includes(command.rig))command.head={position:vector('head-position'),rotation:vector('head-rotation')};
+ if(command.rig==='crane')command.crane={pivot:vector('crane-pivot'),boom:vector('crane-boom')};
+ if(command.rig==='follow')command.follow={target:$('camera-follow-kind').value==='node'?{kind:'node',id:Number($('camera-follow-id').value)}:{kind:'point',point:vector('follow-point')},offset:vector('follow-offset'),track:$('camera-follow-track').checked};
+ cmd(command);syncCameraControls(scene.info(),true);syncCamera();
+}
+
+function requireScenic(){if(!scenicSession)throw Error('Open a spatial scene first');return scenicSession;}
+function syncScenicControls(){const info=scene.info().sceneArt;const enabled=!!scenicSession;for(const element of $('scenic-source-panel').querySelectorAll('input,select,button:not([data-scenic-open])'))element.disabled=!enabled;if(!enabled){$('scenic-source-status').textContent='Select a spatial scene.';return;}$('scenic-source-status').textContent=active.name+'';$('scenic-landscapeSpeed').value=String(scenicSession.clock.landscapeSpeed);$('scenic-waterFlow').value=String(scenicSession.clock.waterFlow);for(const [fields,values]of [[SCENIC_WORLD_FIELDS,info.effective.controls],[SCENIC_DETAIL_FIELDS,info.detail]])for(const field of fields)$('scenic-'+field.name).value=String(values[field.name]);}
+for(const [fields,id]of [[SCENIC_WORLD_FIELDS,'scenic-world-controls'],[SCENIC_DETAIL_FIELDS,'scenic-detail-controls']])for(const field of fields){const label=document.createElement('label'),input=document.createElement('input');label.textContent=field.name+(field.name==='projection'?' / 0 perspective, 1 orthographic':field.name==='sampling'?' / 0 half, 1 braille':'');input.type='number';input.id='scenic-'+field.name;input.min=field.min;input.max=field.max;input.step=field.scale===1?'1':'any';input.value=field.default;label.append(input);$(id).append(label);}
+for(const button of document.querySelectorAll('[data-scenic-open]'))button.onclick=()=>{setAttract(false);act(()=>load(recipes.find(r=>r.originalScenic===button.dataset.scenicOpen)));};
+$('scenic-apply-rates').onclick=()=>act(()=>{requireScenic().configure({landscapeSpeed:Number($('scenic-landscapeSpeed').value),waterFlow:Number($('scenic-waterFlow').value)});syncScenicControls();});
+function scenicFields(fields){return Object.fromEntries(fields.map(f=>{const input=$('scenic-'+f.name);if(!input.value.trim())throw Error('Enter '+f.name);return [f.name,Number(input.value)];}));}
+$('scenic-apply-world').onclick=()=>act(()=>{requireScenic();const values=scenicFields(SCENIC_WORLD_FIELDS),current=scene.info().sceneArt.effective.controls,controls=Object.fromEntries(Object.entries(values).filter(([key,value])=>value!==current[key]));cmd({op:'scene-art',controls});syncScenicControls();syncCamera();});
+$('scenic-apply-detail').onclick=()=>act(()=>{requireScenic();cmd({op:'scene-art',detail:scenicFields(SCENIC_DETAIL_FIELDS)});syncScenicControls();});
+$('scenic-apply-preset').onclick=()=>act(()=>{requireScenic();cmd({op:'scene-art',detail:SCENIC_PRESETS[$('scenic-preset').value]});syncScenicControls();});
+$('scenic-frame').onclick=()=>act(()=>{requireScenic();const authored=active.commands.find(c=>c.op==='scene-art').controls;const controls=Object.fromEntries(['cameraX','cameraY','cameraZ','yaw','pitch','roll','fov','span'].map(k=>[k,authored[k]]));cmd({op:'scene-art',controls});cmd({op:'camera',profile:'original',navigation:'orbit',target:[0,active.originalScenic==='pearl-cascade'?10:0,0]});syncScenicControls();syncCamera();});
+$('scenic-save').onclick=()=>act(()=>{const saved=requireScenic().checkpoint();let binary='';for(let i=0;i<saved.native.length;i+=32768)binary+=String.fromCharCode(...saved.native.subarray(i,i+32768));download('nocturne-scenic-workspace.json',JSON.stringify({...saved,native:btoa(binary)}),'application/json');});
+$('scenic-file').onchange=async()=>{try{const file=$('scenic-file').files[0];if(!file)return;const saved=JSON.parse(await file.text());if(typeof saved.native!=='string')throw Error('Scenic workspace native bytes');saved.native=Uint8Array.from(atob(saved.native),c=>c.charCodeAt(0));requireScenic().restore(saved);active=recipes.find(r=>r.originalScenic===scenicSession.clock.scene);logicalUs=scene.info().clock.timeUs;autoActions=[];nextAutoAction=0;running=false;cmd({op:'pause',paused:true});$('scenes').value=active.id;$('title').textContent=displayName(active.name);$('subtitle').textContent='';$('demo-provenance').textContent=recipeProvenance(active);syncScenicControls();syncCamera();repaint();}catch(error){report(error);}};
+
+const scenicFeatures=new Set(GALLERY_SCENIC_FEATURES);
+const demoRecipes=recipes.filter(isAttractRecipe);
+const attractRotation=createAttractRotation(demoRecipes,Math.random);
+const recipeGroups=new Map(['Scenes','3D scenes','Examples','API studies'].map(label=>{const group=document.createElement('optgroup');group.label=label;$('scenes').append(group);return [label,group];}));
+for(const recipe of recipes){const option=document.createElement('option');option.textContent=displayName(recipe.name);option.value=recipe.id;const group=recipe.provenance?'Scenes':!recipe.demonstrates?'Examples':recipe.mode==='isolated'&&scenicFeatures.has(recipe.demonstrates.feature)?'3D scenes':'API studies';recipeGroups.get(group).append(option);}
+let attractEnabled=!motionPreference.matches,attractDeadline=performance.now()+12000;
+function setAttract(enabled){attractEnabled=enabled;attractDeadline=performance.now()+12000;$('attract').setAttribute('aria-pressed',String(enabled));$('attract').textContent=enabled?'Demo rotation on':'Resume demos';}
+const projectGroup=document.createElement('optgroup');projectGroup.label='Projects';const currentProjectOption=document.createElement('option');currentProjectOption.value='project:current';currentProjectOption.hidden=true;projectGroup.append(currentProjectOption);for(const p of PROJECT_PRESETS){const o=document.createElement('option');o.value='project:'+p.id;o.textContent=p.name;projectGroup.append(o);}$('scenes').prepend(projectGroup);
+const sceneById=new Map(recipes.map(r=>[r.id,r])),showcaseIds=new Set(demoRecipes.map(r=>r.id));
+function filterScenes(){const words=$('scenes-search').value.trim().toLowerCase().split(/\s+/).filter(Boolean),collection=$('scene-collection').value;for(const o of $('scenes').options){if(o.value==='project:current'&&!projectEditor?.isActive()){o.hidden=true;continue;}const r=sceneById.get(o.value),isProject=o.value.startsWith('project:'),showcase=isProject||!!r&&(showcaseIds.has(r.id)||r.demo||r.originalScenic||r.pearlSource),is3D=!!r&&(r.originalScenic||r.id==='original-orbital-loom'||scenicFeatures.has(r.demonstrates?.feature)),text=(o.textContent+' '+o.value).toLowerCase().replaceAll('-',' ');o.hidden=words.length?!words.every(w=>text.includes(w)):!(collection==='all'||collection==='showcase'&&showcase||collection==='3d'&&is3D||collection==='components'&&r&&r.demonstrates&&!is3D);if(o.selected)o.hidden=false;}for(const g of $('scenes').children)g.hidden=[...g.children].every(o=>o.hidden);}
+$('scenes-search').oninput=filterScenes;$('scene-collection').onchange=filterScenes;$('scenes-clear').onclick=()=>{$('scenes-search').value='';filterScenes();};filterScenes();
+$('scenes').onchange=()=>{setAttract(false);act(()=>{const id=$('scenes').value;if(id==='project:current')return;if(id.startsWith('project:')){projectEditor.replace(createPreset(id.slice(8)));$('project-panel').open=true;}else load(recipes.find(recipe=>recipe.id===id));filterScenes();});};
+$('attract').onclick=()=>setAttract(!attractEnabled);
+for(const type of ['pointerdown','keydown','input'])document.addEventListener(type,event=>{if(event.target.closest('#attract'))return;setAttract(false);});
+setAttract(attractEnabled);
+
+function syncPaletteChoice(id=''){ $('palette').value=id;for(const button of $('palette-swatches').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.palette===id));}
+function applyPalette(id){const p=palettes.find(p=>p.id===id);if(!p)return;cmd({op:'material',id:1,space:'indexed',colors:p.colors.map(s=>parseInt(s.slice(1),16)),scope:'characters',channels:{i:{initial:0,step:.71,rate:.15,min:0,max:p.colors.length,boundary:'loop'}}});syncPaletteChoice(id);}
+for(const p of palettes){
+ const option=document.createElement('option');option.value=p.id;option.textContent=p.name;$('palette').append(option);
+ const button=document.createElement('button');button.className='palette-swatch';button.dataset.palette=p.id;button.setAttribute('aria-label','Use '+p.name);button.setAttribute('aria-pressed','false');
+ const name=document.createElement('span');name.className='palette-name';name.textContent=p.name;const colors=document.createElement('span');colors.className='palette-colors';
+ for(const color of p.colors){const chip=document.createElement('span');chip.dataset.color=color;chip.style.backgroundColor=color;chip.title=color;chip.setAttribute('aria-label',color);colors.append(chip);}button.append(name,colors);button.onclick=()=>act(()=>applyPalette(p.id));$('palette-swatches').append(button);
+}
+$('palette').onchange=()=>act(()=>applyPalette($('palette').value));
+const promptAppearanceFields={cursor:{shape:'cursor-shape',glyph:'cursor-glyph',color:'cursor-color',secondaryColor:'cursor-secondary',blinkMs:'cursor-blink',duty:'cursor-duty',colorMode:'cursor-color-mode',colorPeriodMs:'cursor-period'},weather:{style:'prompt-weather-style',intensity:'prompt-weather-intensity',lifeMs:'prompt-weather-life',speed:'prompt-weather-speed',paste:'prompt-weather-paste'}};
+let promptAppearanceSignature='';
+function syncPromptAppearance(info){const appearance=info.prompt.appearance;if(!appearance)return;$('prompt-style-status').textContent=appearance.weather.eventCount+' active weather events';const signature=JSON.stringify([appearance.cursor,...['style','intensity','lifeMs','speed','paste'].map(k=>appearance.weather[k])]);if(signature===promptAppearanceSignature)return;promptAppearanceSignature=signature;for(const [group,fields]of Object.entries(promptAppearanceFields))for(const [key,id]of Object.entries(fields)){const input=$(id);if(document.activeElement!==input){const value=appearance[group][key];input.value=input.type==='color'&&typeof value==='number'?color(value):value;}}$('prompt-style-status').textContent=appearance.weather.eventCount+' active weather events';}
+function applyPromptAppearance(){act(()=>{const appearance={};for(const [group,fields]of Object.entries(promptAppearanceFields)){appearance[group]={};for(const [key,id]of Object.entries(fields)){const input=$(id);appearance[group][key]=input.type==='number'?Number(input.value):input.value;}}cmd({op:'prompt-appearance',...appearance});projectEditor?.refresh();});}
+$('prompt-style-apply').onclick=applyPromptAppearance;
+// Every cursor and weather field applies as soon as it changes; the button remains for re-applying the whole set.
+for(const fields of Object.values(promptAppearanceFields))for(const id of Object.values(fields))$(id).addEventListener('change',applyPromptAppearance);
+const firstPromptPresets=recipes.filter(recipe=>recipe.firstPromptPreset);
+for(const recipe of firstPromptPresets){const option=document.createElement('option');option.value=recipe.id;option.dataset.sourcePreset='true';option.textContent=displayName(recipe.name);$('first-prompt-style').append(option);}
+function syncFirstPrompt(info){const source=info.prompt.firstPromptSource;$('first-prompt-cursor').disabled=!source;if(!source){$('first-prompt-style').value='';return;}$('first-prompt-cursor').value=String(source.values[32]);if(!firstPromptPresets.some(recipe=>recipe.id===$('first-prompt-style').value))$('first-prompt-style').value='custom';}
+$('first-prompt-style').onchange=()=>act(()=>{const id=$('first-prompt-style').value;if(!id){cmd({op:'prompt-source',enabled:false});return;}const recipe=firstPromptPresets.find(recipe=>recipe.id===id);if(!recipe)throw Error('Unknown prompt preset');cmd({op:'prompt-source',enabled:false});cmd(recipe.firstPromptPreset);});
+$('first-prompt-cursor').onchange=()=>act(()=>cmd({op:'prompt-source',values:{cursorMode:+$('first-prompt-cursor').value}}));
+function showFontMetadata(metadata){const status=$('font-status');status.dataset.sha256=metadata.sha256||'';status.dataset.error='false';status.textContent=metadata.family?`${metadata.fileName} · ${metadata.format} · ${metadata.engine} · SHA-256 ${metadata.sha256.slice(0,12)}`:'System monospace · browser OpenType';}
+$('font-file').onchange=async()=>{const file=$('font-file').files[0],request=++fontRequest;if(!file)return;try{clearError();const bytes=new Uint8Array(await file.arrayBuffer());if(request!==fontRequest)return;const metadata=await fontGallery.load(bytes,file.name);if(request!==fontRequest||!metadata.applied)return;showFontMetadata(metadata);repaint();}catch(error){if(request!==fontRequest)return;$('font-status').dataset.error='true';$('font-status').textContent=`Font unchanged: ${error.message}`;report(error);}};
+$('font-default').onclick=()=>act(()=>{fontRequest++;$('font-file').value='';showFontMetadata(fontGallery.reset());});
+$('tdf-import').onchange=async()=>{const file=$('tdf-import').files[0],request=++tdfRequest;if(!file)return;try{clearError();const text=await file.text();if(request!==tdfRequest)return;const command=parseTdfCellArtImport(JSON.parse(text));cmd(command);$('tdf-status').dataset.imported='true';$('tdf-status').dataset.error='false';$('tdf-status').textContent=`${file.name} · ${command.commands.length} cell-art surface${command.commands.length===1?'':'s'}`;repaint();}catch(error){if(request!==tdfRequest)return;$('tdf-status').dataset.error='true';$('tdf-status').dataset.imported='false';$('tdf-status').textContent=`Import unchanged: ${error.message}`;report(error);}};
+function showModelStatus(asset,fileName){const status=$('model-status');status.dataset.fileName=fileName;status.dataset.error='false';const triangles=scene.info().sourceModel.triangles;status.dataset.triangles=String(triangles);status.textContent=asset?`${fileName} · ${asset.vertexCount} vertices · ${triangles} triangles${asset.warnings.length?' · '+asset.warnings.join(' '):''}`:'Import OBJ polygon geometry and vertex colors. External textures and materials are not fetched.';}
+function installObjModel(text,fileName){const asset=parseOBJ(text,{name:fileName,size:Number($('model-size').value),upAxis:$('model-up').value}),records=modelRecordsFromTriangles(asset.triangles),saved=scene.snapshot(),info=scene.info();try{scene.setModelRecords(records);cmd({op:'model-view',width:+$('columns').value,height:+$('rows').value,controls:{cameraX:0,cameraY:8,cameraZ:-85,yaw:0,pitch:0,roll:0,fov:62,projection:0,span:100,sampling:info.sceneArt?.controls.sampling??1}});}catch(error){scene.restore(saved);throw error;}showModelStatus(asset,fileName);syncCamera();repaint();}
+$('model-file').onchange=async()=>{const file=$('model-file').files[0],request=++modelRequest;if(!file)return;$('model-status').dataset.error='false';try{clearError();const text=await file.text();if(request!==modelRequest)return;installObjModel(text,file.name);}catch(error){if(request!==modelRequest)return;$('model-status').dataset.error='true';$('model-status').textContent=`Model unchanged: ${error.message}`;report(error);}};
+$('model-original').onclick=()=>act(()=>{setAttract(false);load(recipes.find(recipe=>recipe.id==='original-orbital-loom'));installObjModel(EXAMPLE_OBJ,'Orbital Loom.obj');});
+$('model-clear').onclick=()=>act(()=>{modelRequest++;cmd({op:'remove-model-view'});scene.setModelRecords(new Uint8Array());showModelStatus(null,'');});
+for(const e of scene.catalogue()){const o=document.createElement('option');o.value=e.id;o.textContent=e.contract+' / '+e.name;$('effect').append(o);}
+function selectEffect(){const id=$('effect').value,e=scene.catalogue().find(e=>e.id===id);const original=recipes.find(recipe=>recipe.catalogueEffect===id&&recipe.mode==='application');if(original){load(original);return;}let commands=[{op:'environment',style:'plasma',stars:80}];if(e.contract==='ParticleEmitter')commands.push({op:'emitter',id:1,effect:id});else if(e.contract==='SurfaceField')commands.push({op:'field',effect:id,x:60,y:18,lifeMs:7000,strength:.65,width:1.3});else if(e.contract==='TextTransition')commands.push({op:'text',id:1,text:'Text transition',effect:id,x:12,y:14,width:90,durationMs:1500,staggerMs:20});else commands.push({op:'window',id:1,title:e.name,text:'Window document',effect:id,position:[0,8,0],width:35,height:24},{op:'window-action',id:1,action:'minimize',durationMs:0},{op:'window-action',id:1,action:'restore',durationMs:1700});reset(commands);$('title').textContent=e.name;$('subtitle').textContent=e.contract+'';$('demo-provenance').textContent='';$('config').value=JSON.stringify(commands,null,2);}
+$('effect-play').onclick=()=>act(()=>{seed++;selectEffect();});$('effect-peak').onclick=()=>act(()=>{selectEffect();advance(900000);running=false;cmd({op:'pause',paused:true});$('play').textContent='Resume motion';});
+$('text-show').onclick=()=>act(()=>cmd({op:'text',id:1,phase:'show'}));$('text-hide').onclick=()=>act(()=>cmd({op:'text',id:1,phase:'hide'}));$('window-hide').onclick=()=>act(()=>cmd({op:'window-action',id:1,action:'minimize'}));$('window-show').onclick=()=>act(()=>cmd({op:'window-action',id:1,action:'restore'}));
+$('play').onclick=()=>act(()=>{running=!running;cmd({op:'pause',paused:!running});lastWall=performance.now();$('play').textContent=running?'Hold motion':'Resume motion';});$('replay').onclick=()=>act(()=>{if(projectEditor?.isActive()){const p=projectEditor.document();p.timeUs=0;projectEditor.replace(p);}else{seed++;load(active);}});$('brake').onclick=()=>act(()=>cmd({op:'brake'}));$('home').onclick=()=>act(()=>{if(projectEditor?.isActive()){const p=projectEditor.document(),c=prepareProject(projectValidator,{...p,timeUs:0,timeline:[],final:[]}).info.camera,pose={op:'camera',...c.carrier};for(const key of ['near','far','fov','span','orthographic','profile','navigation','target','moveSpeed','turnSpeed','sensitivity'])if(c[key]!==undefined)pose[key]=c[key];cmd({op:'batch',commands:[{op:'camera-controls',enabled:false},pose,c.controls.enabled?{op:'camera-controls',...c.controls}:{op:'camera-controls',enabled:false}]});}else{const command=active.commands.find(c=>c.op==='camera')??{op:'camera',position:[0,8,46],yaw:0,pitch:-7,roll:0};cmd(command);}syncCamera();});$('fps').onchange=()=>fps=+$('fps').value;
+/** Commit only accepted composition output. Browser preedit remains local until
+ * compositionend, and a duplicate final input event cannot add an undo record. */
+function commitDraft(){const draft=$('draft'),text=draft.value,caret=[...text.slice(0,draft.selectionStart)].length,prompt=readInfo().prompt;try{if(text!==prompt.text||caret!==prompt.caret)cmd({op:'draft',text,caret});draft.removeAttribute('aria-invalid');}catch(error){draft.setAttribute('aria-invalid','true');throw error;}}
+function syncDraft(){if(composing)return;const prompt=readInfo().prompt,draft=$('draft');draft.value=prompt.text;const position=[...prompt.text].slice(0,prompt.caret).join('').length,anchor=prompt.anchor<0?position:[...prompt.text].slice(0,prompt.anchor).join('').length;draft.setSelectionRange(Math.min(anchor,position),Math.max(anchor,position),position<anchor?'backward':'forward');draft.removeAttribute('aria-invalid');}
+function syncNativeSelection(){
+ if(composing)return;
+ const draft=$('draft'),prompt=readInfo().prompt;if(draft.value!==prompt.text)return;
+ const offset=position=>{let units=0,scalars=0;for(const c of draft.value){if(units+c.length>position)break;units+=c.length;scalars++;}return scalars;};
+ const first=offset(draft.selectionStart),last=offset(draft.selectionEnd),back=draft.selectionDirection==='backward';
+ const caret=back?first:last,anchor=first===last?-1:back?last:first;
+ if(prompt.caret===caret&&prompt.anchor===anchor)return;
+ act(()=>cmd({op:'select',anchor:anchor<0?caret:anchor,caret}));
+}
+$('draft').addEventListener('select',syncNativeSelection);
+$('draft').addEventListener('paste',event=>{if(composing)return;const text=event.clipboardData?.getData('text/plain');if(text===undefined)return;event.preventDefault();act(()=>{syncNativeSelection();cmd({op:'paste',text});syncDraft();});});
+$('draft').addEventListener('compositionstart',()=>{composing=true;});
+$('draft').addEventListener('compositionend',()=>{composing=false;act(commitDraft);});
+$('draft').addEventListener('input',event=>{if(!composing&&!event.isComposing)act(commitDraft);});
+$('draft').addEventListener('keydown',e=>{if(composing||e.isComposing)return;if(e.ctrlKey&&(e.key==='a'||e.key==='e')){e.preventDefault();act(()=>{cmd({op:'key',key:e.key,ctrl:true});const caret=scene.info().prompt.caret,pos=[...$('draft').value].slice(0,caret).join('').length;$('draft').setSelectionRange(pos,pos);});}});
+$('prompt-alpha').oninput=()=>act(()=>cmd({op:'prompt',alpha:+$('prompt-alpha').value}));$('prompt-mode').onchange=()=>act(()=>cmd({op:'prompt',mode:$('prompt-mode').value}));
+function applyPresentationIntent(){cmd({op:'accessibility',...presentationIntent});if(presentationIntent.reducedMotion){running=false;cmd({op:'pause',paused:true});$('play').textContent='Resume motion';}}
+$('reduced-motion').onchange=()=>act(()=>{followSystemMotion=false;presentationIntent.reducedMotion=$('reduced-motion').checked;applyPresentationIntent();});
+$('screen-reader').onchange=()=>act(()=>{presentationIntent.screenReader=$('screen-reader').checked;applyPresentationIntent();});
+motionPreference.addEventListener('change',event=>{if(event.matches)setAttract(false);if(followSystemMotion)act(()=>{presentationIntent.reducedMotion=event.matches;applyPresentationIntent();});});
+$('read-all').onclick=()=>act(()=>{$('readable-panel').open=true;$('readable').focus();});
+let recoveredMetadataJSON=null;
+$('metadata-recover').onclick=()=>{
+ try {
+  const info=scene.infoComplete();
+  recoveredMetadataJSON=JSON.stringify(info,null,2);
+  $('metadata-complete').value=recoveredMetadataJSON;
+  $('metadata-complete-panel').open=true;$('metadata-download').disabled=false;
+  $('metadata-recovery-status').textContent=`Complete metadata at scene time ${info.clock.timeUs} µs: ${info.textRuns.length} text runs and ${info.windows.length} windows. Refresh explicitly after edits.`;
+  $('metadata-complete').focus();
+ }catch(error){$('metadata-recovery-status').textContent='Complete metadata recovery failed: '+String(error);}
+};
+$('metadata-download').onclick=()=>{if(recoveredMetadataJSON!==null)download('nocturne-complete-metadata.json',recoveredMetadataJSON,'application/json');};
+$('recovery-open').onclick=()=>act(()=>{const id=+$('recovery-window').value;if(id)cmd({op:'window-action',id,action:'read'});});
+$('recovery-next').onclick=()=>act(()=>cmd({op:'key',key:'F6'}));
+$('reader-prev').onclick=()=>act(()=>cmd({op:'key',key:'PageUp'}));
+$('reader-next').onclick=()=>act(()=>cmd({op:'key',key:'PageDown'}));
+$('reader-exit').onclick=()=>act(()=>cmd({op:'key',key:'Escape'}));
+$('forces').onclick=()=>act(()=>cmd({op:'forces',id:1,wind:[+$('wind-x').value,+$('wind-y').value,+$('wind-z').value],gravity:[0,+$('gravity').value,0],heat:+$('heat').value}));$('stop').onclick=()=>act(()=>cmd({op:'stop',id:1,style:$('tail').value,tailMs:4500}));$('floor').onclick=()=>act(()=>{floorVisible=!floorVisible;cmd({op:'floor',visible:floorVisible});});$('clear-deposits').onclick=()=>act(()=>cmd({op:'clear',scope:'deposits'}));
+$('camera-rig').onchange=()=>act(()=>{cmd({op:'camera-controls',enabled:true,rig:$('camera-rig').value});syncCameraControls(scene.info(),true);syncCamera();});
+$('camera-mode').onchange=()=>act(()=>{cmd({op:'camera-controls',enabled:true,mode:$('camera-mode').value});syncCameraControls(scene.info(),true);syncCamera();});
+$('camera-controls-enabled').onchange=()=>act(()=>{cmd($('camera-controls-enabled').checked?{op:'camera-controls',enabled:true,rig:$('camera-rig').value}:{op:'camera-controls',enabled:false});syncCameraControls(scene.info(),true);syncCamera();});
+$('camera-follow-kind').onchange=cameraRigFields;
+$('camera-controls-apply').onclick=()=>act(applyCameraControls);
+$('camera-controls-read').onclick=()=>act(()=>{syncCameraControls(scene.info(),true);syncCamera();});
+$('camera-input-apply').onclick=()=>act(()=>{const delta=['x','y','z'].map(axis=>{const input=$('camera-input-'+axis);if(input.value.trim()===''||!Number.isFinite(Number(input.value)))throw Error('Enter a finite input delta.');return Number(input.value);});cmd({op:'camera-input',delta,pan:$('camera-input-pan').checked});syncCameraControls(scene.info(),true);syncCamera();});
+$('camera-apply').onclick=()=>act(()=>cmd({op:'camera',position:['x','y','z'].map(k=>+$('camera-'+k).value),yaw:+$('camera-yaw').value,pitch:+$('camera-pitch').value,roll:+$('camera-roll').value}));$('orbit-start').onclick=()=>act(()=>cmd({op:'flight',steps:[{kind:$('orbit').value,durationMs:45000,yaw:360,target:[0,8,0],radius:+$('radius').value}]}));function applySourceGraph(dimensions){cmd({op:'batch',commands:[{op:'layout',profile:'source',mode:'layered',dimensions},{op:'camera',profile:'original',navigation:'orbit'},{op:'camera-action',action:'view',name:dimensions===3?'iso':'front'},{op:'camera-action',action:'fit'}]});}$('flat').onclick=()=>act(()=>applySourceGraph(2));$('spatial').onclick=()=>act(()=>applySourceGraph(3));$('gather').onclick=()=>act(()=>cmd({op:'gather'}));
+function applyCardTreatment(){
+ const info=scene.info(),id=+$('card-id').value;
+ const nodes=info.nodes.filter(n=>!id||n.id===id);
+ if(!nodes.length)throw Error('Load Work Graph or Git Relationships, then select an existing node ID.');
+ const options={minColumns:+$('card-min').value,maxColumns:+$('card-max').value,padding:+$('card-padding').value,shaPrefix:+$('card-sha').value,showKind:$('card-kind').checked,showStatus:$('card-status').checked,showSha:$('card-hash').checked,showDetail:$('card-detail').checked};
+ cmd({op:'batch',commands:nodes.map(n=>({op:'node',id:n.id,...options}))});
+}
+function applyWindowTreatment(){
+ const info=scene.info(),id=+$('window-id').value;
+ const windows=info.windows.filter(w=>!id||w.id===id);
+ if(!windows.length)throw Error('Load Readable Windows, then select an existing window ID.');
+ const options={padding:+$('window-padding').value,border:$('window-border').value,chromeSize:+$('window-chrome').value,fadeStartRatio:+$('window-fade-start').value,fadeEndRatio:+$('window-fade-end').value};
+ cmd({op:'batch',commands:windows.map(w=>({op:'window',id:w.id,...options}))});
+}
+$('notifications-load').onclick=()=>act(()=>load(example('notifications')));
+$('notifications-repeat').onclick=()=>act(()=>cmd({op:'status',area:3,text:'Telemetry: identical updates share this record; repetitions are counted.',mode:'horizontal-fade',durationMs:14000,key:'agent-health',coalesce:'count'}));
+$('intents-ack').onclick=()=>act(()=>{for(const intent of scene.info().intents)cmd({op:'ack-intent',id:intent.id});});
+$('notice-ack').onclick=()=>act(()=>cmd({op:'ack-status',id:40}));
+$('card-apply').onclick=()=>act(applyCardTreatment);
+$('readability-apply').onclick=()=>act(applyWindowTreatment);
+$('open-reader').onclick=()=>act(()=>{const id=+$('window-id').value||readInfo().selectedWindow||+$('recovery-window').value;if(!id)throw Error('No retained window is available.');cmd({op:'window-action',id,action:'read'});});
+$('apply').onclick=()=>act(()=>{const value=JSON.parse($('config').value);reset(Array.isArray(value)?value:[value]);});$('execute').onclick=()=>act(()=>{const value=JSON.parse($('config').value);if(Array.isArray(value))for(const c of value)cmd(c);else cmd(value);});
+function download(name,data,type='application/octet-stream'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function restorePresentation(){scenicSession=null;syncScenicControls();stopPearlSource();syncPaletteChoice();const info=scene.info();composing=false;if(info.error){showMetadataRefusal(info);return;}logicalUs=info.clock.timeUs;running=!info.clock.paused;lastWall=performance.now();presentationIntent={...info.accessibility};followSystemMotion=false;syncDraft();$('play').textContent=running?'Hold motion':'Resume motion';}
+$('export').onclick=()=>download('nocturne-native-commands.json',$('config').value,'application/json');$('save').onclick=()=>act(()=>{saved={bytes:scene.snapshot(),actions:structuredClone(autoActions),nextAction:nextAutoAction};download('nocturne-native.nrstate',saved.bytes);});$('restore').onclick=()=>{if(saved)act(()=>{scene.restore(saved.bytes);autoActions=structuredClone(saved.actions);nextAutoAction=saved.nextAction;restorePresentation();});else $('snapshot-file').click();};$('snapshot-file').onchange=async()=>{try{const file=$('snapshot-file').files[0];if(!file)return;scene.restore(new Uint8Array(await file.arrayBuffer()));autoActions=[];nextAutoAction=0;restorePresentation();repaint();}catch(e){report(e);}};
+function plotCommands(replay){return scene.info().widgets.filter(w=>w.kind>=6&&w.kind<=13).map(w=>{const c={op:'widget',id:w.id,sampling:$('plot-sampling').value,revealMs:+$('plot-reveal').value,replay};if(w.kind===8||w.kind===9){c.cellAspect=+$('plot-aspect').value;c.sweepAngle=+$('plot-sweep').value;}if(w.kind===9)c.innerRadius=+$('plot-inner').value;return c;});}
+$('plot-apply').onclick=()=>act(()=>{const edits=plotCommands(false);if(!edits.length)throw Error('Open Pearl Instruments or Pearl Curves to configure plots.');cmd({op:'batch',commands:edits});});
+$('plot-replay').onclick=()=>act(()=>{const edits=plotCommands(true);if(!edits.length)throw Error('This scene has no plot.');cmd({op:'batch',commands:edits});});
+$('plot-open').onclick=()=>act(()=>load(example('pearl-curves')));
+$('layer-apply').onclick=()=>act(()=>cmd({op:'emitter-style',id:+$('layer-emitter').value,sampling:$('layer-sampling').value,surfaceAlpha:+$('layer-surface').value,veinContrast:+$('layer-veins').value}));
+$('layer-floor-apply').onclick=()=>act(()=>cmd({op:'floor',sampling:$('layer-floor').value}));
+$('anatomy-open').onclick=()=>act(()=>load(example('leaf-anatomy')));
+$('mixed-open').onclick=()=>act(()=>load(example('mixed-materials')));
+$('condition-open').onclick=()=>act(()=>load(example('condition-console')));
+$('condition-set').onclick=()=>act(()=>cmd({op:'batch',commands:[{op:'set',path:'/demo/heat',value:+$('condition-heat').value},{op:'set',path:'/demo/pressure',value:+$('condition-pressure').value},{op:'set',path:'/demo/enabled',value:+$('condition-enabled').value}]}));
+$('condition-rearm').onclick=()=>act(()=>cmd(example('condition-console').commands.find(c=>c.op==='status'&&c.id===600)));
+$('selector-open').onclick=()=>act(()=>{load(example('selector-studio'));$('selector-load').value='35';$('selector-fault').value='0';$('selector-disable').checked=false;});
+$('selector-set').onclick=()=>act(()=>cmd({op:'batch',commands:[{op:'set',path:'/studio/load',value:+$('selector-load').value},{op:'set',path:'/studio/fault',value:+$('selector-fault').value}]}));
+$('selector-disable').onchange=()=>act(()=>cmd({op:'widget',id:2,enabled:!$('selector-disable').checked}));
+$('selector-base').onclick=()=>act(()=>cmd({op:'batch',commands:[1,2,3].map(id=>({op:'widget',id,material:3,alpha:.35}))}));
+$('selector-remove').onclick=()=>act(()=>{const rules=scene.info().styleRules;if(!rules.length)throw Error('No active appearance rules to remove.');cmd({op:'batch',commands:rules.map(r=>({op:'remove-style-rule',id:r.id}))});});
+$('resize').onclick=()=>act(()=>{if(pearlSession)pearlSession.resize(+$('columns').value,+$('rows').value);else cmd({op:'resize',width:+$('columns').value,height:+$('rows').value});});$('sampling').onchange=()=>act(()=>cmd({op:'environment',sampling:$('sampling').value}));
+function applyScriptAction(action,depth=0){if('hostSteps' in action){if(!Array.isArray(action.hostSteps)||!action.hostSteps.length||action.hostSteps.length>32||depth>=8||!action.hostSteps.every(s=>s&&typeof s==='object'&&!Array.isArray(s)))throw Error('Invalid ordered host steps');for(const step of action.hostSteps)applyScriptAction(step,depth+1);}
+const expected=action.expectedError;if(expected!==undefined&&(typeof expected!=='string'||!expected.length))throw Error('Nonempty expected error required');const before=expected?scene.snapshot():null;let failure=null;try{cmd(action.command);}catch(e){failure=e;}
+if(expected){if(!failure||!String(failure.message).includes(expected))throw Error('Expected rejection: '+expected);const after=scene.snapshot();if(!before.every((v,i)=>v===after[i]))throw Error('Rejected action mutated state');}else if(failure)throw failure;}
+function applyAutoActions(targetUs){while(nextAutoAction<autoActions.length&&autoActions[nextAutoAction].timeUs<=targetUs){const action=autoActions[nextAutoAction];advancePearlTo(action.timeUs);scene.render();applyScriptAction(action);nextAutoAction++;}}
+function advance(amount){cmd({op:'pause',paused:false});logicalUs+=amount;applyAutoActions(Math.floor(logicalUs));advancePearlTo(Math.floor(logicalUs));cmd({op:'pause',paused:!running});lastWall=performance.now();}
+$('step').onclick=()=>act(()=>advance(pearlSession?Math.floor((Math.floor(logicalUs*120/1000000)+1)*1000000/120)-logicalUs:Math.floor((scene.info().clock.step+1)*1000000/120)-logicalUs));$('seek-button').onclick=()=>act(()=>advance(+$('seek').value*1e6));
+function point(event){const target=event.currentTarget||(paintMode==='webgl'?canvasGL:canvas);const r=target.getBoundingClientRect();return {x:(event.clientX-r.left)*lastFrame.width/r.width,y:(event.clientY-r.top)*lastFrame.height/r.height};}
+function cancelPointer(){
+ const previous=capture;capture=null;
+ if(pearlSession?.family==='observatory'){if(pearlSession.model.drag)observerAct({op:'dragEnd'});}
+ else if(!pearlSession?.fleet)act(()=>cmd({op:'pointer',phase:'cancel',x:-1,y:-1}));
+ if(previous!==null){
+  if(canvas.hasPointerCapture(previous))canvas.releasePointerCapture(previous);
+  if(canvasGL.hasPointerCapture(previous))canvasGL.releasePointerCapture(previous);
+ }
+}
+for (const c of [canvas, canvasGL]) {
+ c.addEventListener('pointerdown',e=>{
+  e.preventDefault();c.focus({preventScroll:true});capture=e.pointerId;
+  c.setPointerCapture(e.pointerId);
+  if(sourceModalPointer(e)){repaint();return;}
+  if(pearlSession?.family==='observatory'){observerAct(m=>{const p=point(e),hit=scene.sourceStageHit(Math.floor(p.x),Math.floor(p.y)),node=hit&&pearlSession.compose().nodes.find(n=>n.id===hit.id);if(hit&&hit.id>=2100&&hit.id<2103&&Math.floor(p.y)===node?.y)pearlSession.action({op:'dragStart',index:hit.id-2100,point:p});else if(hit)PearlObservatoryOriginal.activateObservatory(m,hit.id);else m.emit(p.x,p.y,'*',e.shiftKey?'nova':m.options.weatherStyle);});return;}
+  if(pearlSession?.fleet)return;
+  act(()=>cmd({op:'pointer',phase:'down',...point(e),button:e.button,shift:e.shiftKey,alt:e.altKey}));
+ });
+ c.addEventListener('pointermove',e=>{
+  if(capture!==null&&capture!==e.pointerId)return;
+  if(sourceModalPointer(e))return;
+  if(pearlSession?.family==='observatory'){if(pearlSession.model.drag)observerAct({op:'dragMove',point:point(e)});return;}
+  if(pearlSession?.fleet)return;
+  act(()=>cmd({op:'pointer',phase:'move',...point(e)}));
+ });
+ c.addEventListener('pointerup',e=>{
+  if(capture!==e.pointerId)return;
+  capture=null;if(sourceModalPointer(e,true)){if(c.hasPointerCapture(e.pointerId))c.releasePointerCapture(e.pointerId);repaint();return;}if(pearlSession?.family==='observatory'){if(pearlSession.model.drag)observerAct({op:'dragEnd'});if(c.hasPointerCapture(e.pointerId))c.releasePointerCapture(e.pointerId);return;}if(pearlSession?.fleet){act(()=>{const p=point(e),action=pearlSession.click(p.x,p.y);syncPearlControls();if(action==='compose')$('pearl-fleet-draft').focus();});return;}act(()=>cmd({op:'pointer',phase:'up',...point(e)}));
+ });
+ c.addEventListener('pointercancel',cancelPointer);
+ c.addEventListener('lostpointercapture',()=>{if(capture!==null)cancelPointer();});
+ c.addEventListener('pointerleave',()=>{if(capture===null)cancelPointer();});
+ c.addEventListener('contextmenu',e=>e.preventDefault());
+ c.addEventListener('wheel',e=>{e.preventDefault();if(sourceModalPointer(e))return;const delta=e.deltaY||e.deltaX;if(pearlSession?.family==='observatory'){observerAct(m=>{if(['warp','dag','spatial-menu'].includes(m.scene))m.configure({cameraZ:Math.max(-30,Math.min(30,m.options.cameraZ+(delta>0?1:-1)))});else m.scroll=Math.max(0,m.scroll+(delta>0?3:-3));});return;}if(pearlSession?.fleet){if(pearlSession.fleet.hasWorkspace&&delta)fleetAct(c2=>c2.scroll(delta<0?3:-3));return;}if(delta)act(()=>cmd({op:'wheel',delta:-Math.sign(delta),shift:e.shiftKey,...point(e)}));},{passive:false});
+ c.addEventListener('copy',event=>{
+  event.preventDefault();if(composing||!event.clipboardData)return;
+  act(()=>{const info=readInfo();if(clipboardPrompt(info)){const p=info.prompt;event.clipboardData.setData('text/plain',p.anchor>=0?(scene.selectedText()??''):p.text);}});
+ });
+ c.addEventListener('cut',event=>{
+  event.preventDefault();if(composing||!event.clipboardData)return;
+  act(()=>{const info=readInfo(),p=info.prompt;if(!clipboardPrompt(info)||p.anchor<0||p.anchor===p.caret)return;
+  event.clipboardData.setData('text/plain',scene.selectedText()??'');
+  cmd({op:'key',key:'Delete'});syncDraft();});
+ });
+ c.addEventListener('paste',event=>{
+  event.preventDefault();if(composing||!event.clipboardData)return;
+  act(()=>{const text=event.clipboardData.getData('text/plain');if(text){const info=scene.infoComplete();if(info.sourceModal.depth){if(!info.modal)modalController.edit({query:info.sourceModal.query+text,selected:0});return;}if(pearlSession?.family==='observatory'){pearlSession.action(['nano','pico'].includes(pearlSession.model.scene)?{op:'scratch',action:'insert',value:text}:{op:'input',text});syncPearlControls();}else if(pearlSession?.fleet){pearlSession.fleet.setDraft(pearlSession.fleet.draft+text);pearlSession.commit();syncPearlControls();}else{cmd({op:'paste',text});syncDraft();}}
+  });
+ });
+ c.addEventListener('keydown',event=>{
+  if(composing||event.isComposing||event.key==='Process'||event.key==='Dead')return;
+  const owner=scene.infoComplete();if(owner.sourceModal.depth||owner.modal){if(owner.modal||event.key==='F1'){event.preventDefault();act(()=>cmd({op:'key',key:event.key,ctrl:event.ctrlKey,alt:event.altKey,meta:event.metaKey}));return;}if(event.ctrlKey||event.altKey||event.metaKey){if(owner.sourceModal.blocking){event.preventDefault();return;}}else if(modalController.key(event.key)){event.preventDefault();repaint();return;}}
+  if(pearlSession?.family==='observatory'){observerKey(event);return;}
+  if(pearlSession?.fleet){const c2=pearlSession.fleet;let action=null;if(event.key==='Tab')action=()=>c2.nextAgent(event.shiftKey?-1:1);else if(event.key==='Enter')action=()=>{if(c2.opened)$('pearl-fleet-draft').focus();else c2.openAgent(c2.selectedId);};else if(event.key==='Escape')action=()=>c2.closeAgent();else if(['ArrowRight','ArrowLeft'].includes(event.key))action=()=>c2.nextAgent(event.key==='ArrowRight'?1:-1);else if(['PageUp','PageDown'].includes(event.key))action=()=>c2.scroll(event.key==='PageUp'?8:-8);else if(event.key==='End')action=()=>c2.liveTail();else if(/^[1-8]$/.test(event.key))action=()=>{const a=c2.model.agents[Number(event.key)-1];if(a)c2.openAgent(a.id);};else if(!event.ctrlKey&&!event.metaKey&&[...event.key].length===1)action=()=>{$('pearl-fleet-draft').focus();c2.setDraft(c2.draft+event.key);};if(action){event.preventDefault();fleetAct(action);}return;}
+  if(event.metaKey&&!event.ctrlKey&&!event.altKey&&event.key.toLowerCase()==='a'){event.preventDefault();act(()=>{cmd({op:'key',key:'SelectAll'});syncDraft();});return;}
+  const control=event.ctrlKey&&!event.altKey&&!event.metaKey&&['a','e','z'].includes(event.key.toLowerCase());
+  const special=['Escape','F1','F6','PageUp','PageDown','Backspace','Delete','Enter','ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key);
+  const printable=[...event.key].length===1&&!event.ctrlKey&&!event.altKey&&!event.metaKey;
+  if(!control&&!special&&!printable)return; // Tab and browser copy shortcuts retain host ownership.
+  event.preventDefault();act(()=>{cmd({op:'key',key:control?event.key.toLowerCase():event.key,ctrl:event.ctrlKey,shift:event.shiftKey,alt:event.altKey,meta:event.metaKey});syncDraft();});
+ });
+}
+window.addEventListener('blur',cancelPointer);
+const projectValidator=await NativeScene.create(workshopWasm);
+projectEditor=bindCompositionEditor({scene,validator:projectValidator,canvas,panel:$('project-panel'),baseScenes:recipes.filter(r=>!r.pearlSource&&!['instruments','pearl-curves'].includes(r.id)&&(!r.actions?.length||r.autoActions||r.originalScenic)).map(r=>({id:r.id,name:displayName(r.name),project:()=>projectFromCommands(r.commands.map(c=>r.originalScenic&&c.op==='scene-art'?{...c,timeMs:null}:c),{name:displayName(r.name),timeline:r.autoActions?(r.actions||[]).filter(a=>!a.expectedError).map(({timeUs,command})=>({timeUs,command})):[],seed:r.seed??2030,width:r.viewport?.width??120,height:r.viewport?.height??40,...(r.modelRecords?{modelRecords:r.modelRecords}:{} )})})),modelResource:()=>{const bytes=scene.modelRecords();if(!bytes.length)return null;let text='';for(let i=0;i<bytes.length;i+=32768)text+=String.fromCharCode(...bytes.subarray(i,i+32768));return {name:'Model panel',modelRecords:btoa(text),width:scene.render().width,height:scene.render().height,seed,commands:[{op:'model-view',width:scene.render().width,height:scene.render().height,controls:{cameraX:0,cameraY:8,cameraZ:-85,yaw:0,pitch:0,roll:0,fov:62,projection:0,span:100,sampling:1}}]};},beforeAdopt:()=>{setAttract(false);running=false;stopPearlSource();scenicSession=null;autoActions=[];nextAutoAction=0;clearError();},afterAdopt:project=>{currentProjectOption.textContent=project.name;currentProjectOption.hidden=false;$('scenes').value='project:current';filterScenes();logicalUs=scene.infoComplete().clock.timeUs;lastWall=performance.now();$('draft').value=project.prompt.text;$('columns').value=project.width;$('rows').value=project.height;$('title').textContent=project.name;$('subtitle').textContent='';$('demo-provenance').textContent='';$('play').textContent='Resume motion';},repaint,onError:report});
+// Hidden-particle look (environment occlusionTint and occludedDots) in the Design panel. Dragging previews through the
+// scene; releasing the slider or choosing a mode applies the command through cmd(), so an open project records it.
+$('project-panel').append($('occlusion-look-template').content.cloneNode(true));
+$('occlusion-tint').oninput=()=>act(()=>{const occlusionTint=+$('occlusion-tint').value;scene.command({op:'environment',occlusionTint});});
+$('occlusion-tint').onchange=()=>act(()=>cmd({op:'environment',occlusionTint:+$('occlusion-tint').value}));
+$('occluded-dots').onchange=()=>act(()=>cmd({op:'environment',occludedDots:$('occluded-dots').value}));
+// Live pacing, host only. The core steps deterministically at 120 Hz and moves only through the public
+// time command; the host chooses each frame's target. A painted frame accrues the wall time since the
+// previous frame, at most one frame budget of logical time less the backlog it already holds, so the
+// backlog never exceeds one frame budget; nothing accrues while the page is hidden. Wall time beyond that
+// is not simulated and not replayed: the simulation is reported behind by that much (pacing.behindUs; the
+// metrics line leads with it), so the scene stays live instead of replaying the past. Hidden time is not
+// behind: it is counted separately (pacing.hiddenUs) and visibilitychange restarts the wall clock.
+// The frame budget is fixed, never estimated: the recipe's frameBudget, else 24 steps (200 ms).
+// The simulation therefore keeps real time down to 5 painted frames per second, and under heavier load
+// presentation slows before the simulation does (native/docs/ARCHITECTURE.md section 5).
+// Each painted frame makes one bounded native call, budgetedTime() at liveBudget(), the helper the
+// browser clock checks call; explicit advance, step, seek and autoActions still drain completely.
+const LIVE_FRAME_BUDGET=24;
+function liveBudget(){return active.frameBudget??LIVE_FRAME_BUDGET;}
+function liveClockUs(){if(pearlSession)return pearlSession.elapsedMs*1000;const info=scene.info();return info.error?null:info.clock.timeUs;}
+function liveAccrue(elapsedMs){if(Math.abs(logicalUs-pacing.pendingUs-pacing.base)>.5){pacing.pendingUs=0;pacing.base=logicalUs;}const wanted=elapsedMs*1000,taken=Math.min(wanted,Math.max(0,liveBudget()*1000000/120-pacing.pendingUs));pacing.pendingUs+=taken;logicalUs+=taken;pacing.behindUs+=wanted-taken;}
+function liveAdvance(){const budget=liveBudget(),limit=budget*1000000/120,target=Math.floor(logicalUs);applyAutoActions(target);const start=performance.now(),result=budgetedTime(target);pacing.advanceMs=performance.now()-start;let reached=target;if(result===1){const clockUs=liveClockUs();if(clockUs===null){showMetadataRefusal(scene.info());return;}reached=clockUs;if(logicalUs-reached>limit){pacing.behindUs+=logicalUs-reached-limit;logicalUs=reached+limit;}}pacing.pendingUs=logicalUs-reached;pacing.base=reached;}
+function liveMetrics(info){const now=performance.now(),r=pacing.rate;if(!r||info.clock.step<r.step||now-r.t>=1000){if(r&&info.clock.step>=r.step&&now>r.t){const s=(now-r.t)/1000;pacing.fps=(pacing.frames-r.frames)/s;pacing.stepsPerSecond=(info.clock.step-r.step)/s;pacing.behindMsPerSecond=(pacing.behindUs-r.behindUs)/1000/s;}pacing.rate={t:now,step:info.clock.step,frames:pacing.frames,behindUs:pacing.behindUs};}return `${Math.round(pacing.stepsPerSecond)} of 120 steps/s, behind ${Math.round(pacing.behindMsPerSecond)} ms/s (${Math.round(pacing.behindUs/1000)} ms total)  |  live ${pacing.fps.toFixed(1)} fps  |  hidden ${(pacing.hiddenUs/1e6).toFixed(1)} s  |  budget ${liveBudget()} steps, advance ${pacing.advanceMs.toFixed(1)} ms`;}
+function livePacing(){let clockUs=null;try{clockUs=liveClockUs();}catch(error){}const budget=liveBudget();return {budget,authored:active.frameBudget!==undefined,frameBudgetUs:budget*1000000/120,advanceMs:pacing.advanceMs,backlogUs:clockUs===null?null:logicalUs-clockUs,behindUs:pacing.behindUs,hiddenUs:pacing.hiddenUs,fps:pacing.fps,stepsPerSecond:pacing.stepsPerSecond,behindMsPerSecond:pacing.behindMsPerSecond};}
+document.addEventListener('visibilitychange',()=>{const now=performance.now();if(running&&!document.hidden)pacing.hiddenUs+=Math.max(0,now-lastWall)*1000;lastWall=now;});
+try {
+ const selection=resolveGalleryLocation(location.hash,recipes);
+ if(selection)active=selection.recipe;
+ load(active);
+ if(selection){setAttract(false);running=false;advance(selection.timeUs);$('play').textContent='Resume motion';}
+ repaint();
+ if(selection){(paintMode==='webgl'?canvasGL:canvas).focus({preventScroll:true});}
+ if(paintMode==='webgl')setPaintMode('webgl');
+} catch(error) {report(error);scene.close();throw error;}
+let lastSync=0;function tick(now){if(attractEnabled&&now>=attractDeadline){attractDeadline=now+12000;const next=attractRotation.next(active.id);if(next)act(()=>load(next));}const elapsed=Math.max(0,now-lastWall);lastWall=Math.max(now,lastWall);if(running){if(document.hidden)pacing.hiddenUs+=elapsed*1000;else liveAccrue(elapsed);}if(!document.hidden&&now>=pacing.nextPaint-2){pacing.nextPaint=Math.max(pacing.nextPaint+1000/fps,now);lastPaint=now;try{if(running)liveAdvance();draw();pacing.frames++;if(now-lastSync>240){sync();lastSync=now;}window.nativeView={scene,frame:lastFrame};}catch(e){report(e);running=false;}}requestAnimationFrame(tick);}requestAnimationFrame(tick);window.nativeLab={scene,project:projectEditor,modalController,recipes,examples:workshopExamples,example,demoRecipes,load,draw:repaint,hold:()=>{setAttract(false);running=false;cmd({op:'pause',paused:true});},advance,selectEffect,budgetedTime,pacing:livePacing,paintMode:()=>paintMode,setPaintMode,perf:()=>lastPerf,lastPerf:()=>lastPerf,activeCanvas:()=>paintMode==='webgl'?canvasGL:canvas,glRenderer:()=>webglRenderer,invalidatePaint:invalidateCanvasPaint,paintReference:()=>{canvasPaint.reference=true;repaint();},WebGLTilemapRenderer,pearlSession:()=>pearlSession,scenicSession:()=>scenicSession,observerAudio:()=>observerAudio,pearlSignals:()=>pearlSource?{sample:structuredClone(pearlSource.sample),studio:pearlSource.studio.snapshot()}:null};
+</script></body></html>

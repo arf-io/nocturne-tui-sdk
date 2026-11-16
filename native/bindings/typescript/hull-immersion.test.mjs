@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {NativeScene} from './native_scene.mjs';
+const scene=await NativeScene.create(readFileSync(new URL('../../dist/nocturne_native.wasm',import.meta.url)));
+const vertices=[[0,0,0],[1,0,0],[0,1,0],[0,0,1]],faces=[[0,2,1],[0,1,3],[0,3,2],[1,2,3]];
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} != ${b}`);
+try {
+ const before=scene.snapshot(),expected=[1/6,7/48,15/56,11/56,15/56];
+ const row=scene.hullImmersion(vertices,faces,.5);row.forEach((x,i)=>near(x,expected[i]));
+ row[0]=999;near(scene.hullImmersion(vertices,faces,.5)[0],1/6);
+ const shifted=vertices.map(([x,y,z])=>[x+100,y+20,z-50]);
+ scene.hullImmersion(shifted,faces,20.5).forEach((x,i)=>near(x,[1/6,7/48,100+15/56,20+11/56,-50+15/56][i]));
+ for(const bad of [faces.slice(1),faces.map(row=>row.toReversed()),[[0,2,1],[0,1,3],[0,3,2],[1,2,99]]])assert.throws(()=>scene.hullImmersion(vertices,bad,.5));
+ assert.throws(()=>scene.hullImmersion(vertices,faces,NaN));
+ scene.hullImmersion(vertices,faces,.5);
+ const output=scene.particleBuffer;new Float64Array(scene.exports.memory.buffer,output,5).fill(777);
+ const indices=scene.input+vertices.length*24;
+ assert.equal(scene.exports.nrHullImmersion(scene.input,4,indices,4,.5,output,4),-1);
+ assert.deepEqual(Array.from(new Float64Array(scene.exports.memory.buffer,output,5)),Array(5).fill(777));
+ assert.equal(scene.exports.nrHullImmersion(scene.input,4,indices,4,.5,scene.input,5),1);
+ Array.from(new Float64Array(scene.exports.memory.buffer,scene.input,5)).forEach((x,i)=>near(x,expected[i]));
+ const box=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+ const boxFaces=[[0,2,1],[0,3,2],[4,5,6],[4,6,7],[0,1,5],[0,5,4],[3,7,6],[3,6,2],[0,4,7],[0,7,3],[1,2,6],[1,6,5]];
+ const owned=scene.hullImmersionPlane(box,boxFaces,[0,0,0],[-1,1,0]);owned.forEach((value,i)=>near(value,[8,4,1/3,-1/3,0][i]));owned[1]=999;
+ scene.hullImmersionPlane(box,boxFaces,[0,0,0],[-10,10,0]).forEach((value,i)=>near(value,[8,4,1/3,-1/3,0][i]));
+ const options={density:1000,gravity:10,mass:4000,centerOfMass:[0,0,0]};
+ scene.hullBuoyancyPlane(box,boxFaces,[0,0,0],[-1,1,0],options).forEach((value,i)=>near(value,[8,4,1/3,-1/3,0,0,0,0,0,0,40000/3][i]));
+ assert.throws(()=>scene.hullImmersionPlane(box,boxFaces,[0,0,0],[0,0,0]));assert.throws(()=>scene.hullBuoyancyPlane(box,boxFaces,[0,0,0],[-1,1,0],{...options,mass:0}));
+ const facePointer=scene.input+192,pointPointer=scene.input+336,normalPointer=scene.input+360;
+ new Float64Array(scene.exports.memory.buffer,scene.input,24).set(box.flat());
+ new Uint32Array(scene.exports.memory.buffer,facePointer,36).set(boxFaces.flat());
+ new Float64Array(scene.exports.memory.buffer,pointPointer,3).set([0,0,0]);
+ for(const [normal,expected] of [[[-1,1,0],[8,4,1/3,-1/3,0]],[[1,-1,0],[8,4,-1/3,1/3,0]],[[-10,10,0],[8,4,1/3,-1/3,0]]]){
+  new Float64Array(scene.exports.memory.buffer,normalPointer,3).set(normal);
+  assert.equal(scene.exports.nrHullImmersionPlane(scene.input,8,facePointer,12,pointPointer,normalPointer,output,5),1);
+  Array.from(new Float64Array(scene.exports.memory.buffer,output,5)).forEach((x,i)=>near(x,expected[i]));
+ }
+ new Float64Array(scene.exports.memory.buffer,normalPointer,3).fill(0);new Float64Array(scene.exports.memory.buffer,output,5).fill(777);
+ assert.equal(scene.exports.nrHullImmersionPlane(scene.input,8,facePointer,12,pointPointer,normalPointer,output,5),-1);
+ assert.deepEqual(Array.from(new Float64Array(scene.exports.memory.buffer,output,5)),Array(5).fill(777));
+ const centerPointer=scene.input+384,wrenchOutput=scene.checkpoint;
+ new Float64Array(scene.exports.memory.buffer,normalPointer,3).set([-1,1,0]);
+ new Float64Array(scene.exports.memory.buffer,centerPointer,3).fill(0);
+ assert.equal(scene.exports.nrHullBuoyancyPlane(scene.input,8,facePointer,12,pointPointer,normalPointer,1000,10,4000,centerPointer,wrenchOutput,11),1);
+ Array.from(new Float64Array(scene.exports.memory.buffer,wrenchOutput,11)).forEach((x,i)=>near(x,[8,4,1/3,-1/3,0,0,0,0,0,0,40000/3][i]));
+ new Float64Array(scene.exports.memory.buffer,normalPointer,3).fill(0);new Float64Array(scene.exports.memory.buffer,wrenchOutput,11).fill(777);
+ assert.equal(scene.exports.nrHullBuoyancyPlane(scene.input,8,facePointer,12,pointPointer,normalPointer,1000,10,4000,centerPointer,wrenchOutput,11),-1);
+ assert.deepEqual(Array.from(new Float64Array(scene.exports.memory.buffer,wrenchOutput,11)),Array(11).fill(777));
+ assert.deepEqual(scene.snapshot(),before);
+} finally {scene.close();}
+console.log('PASS convex hull analytic immersion, translation, ownership, aliasing and atomic rejection');

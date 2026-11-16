@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2020","module":"ES2020","strict":true,"declaration":true,"lib":["ES2020","DOM"],"outDir":"dist/typescript"},"include":["bindings/typescript/*.ts"]}

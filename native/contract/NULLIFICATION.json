@@ -1,0 +1,21 @@
+{
+  "schema": "nocturne.nullification.v1",
+  "decisions": [
+    {
+      "scope": "current-identity",
+      "key": "weather/silver-squall",
+      "name": "Silver Squall",
+      "reason": "Added on 2026-09-25 for 1.0.0-rc.4 with no source in the original explorations",
+      "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer); reversible",
+      "decidedAt": "2026-11-14T19:50:00Z"
+    },
+    {
+      "scope": "current-identity",
+      "key": "weather/snowglobe",
+      "name": "Snowglobe",
+      "reason": "Added on 2026-09-25 for 1.0.0-rc.4 with no source in the original explorations",
+      "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer); reversible",
+      "decidedAt": "2026-11-14T19:50:00Z"
+    }
+  ]
+}

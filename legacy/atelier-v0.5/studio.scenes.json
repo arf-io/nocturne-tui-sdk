@@ -1,0 +1,2087 @@
+{
+  "version": 2,
+  "baseWidth": 100,
+  "baseHeight": 32,
+  "scenes": [
+    {
+      "id": "starwrite",
+      "name": "Starwrite",
+      "tagline": "Quiet glyphs. Rare novas. Character-origin shockwaves.",
+      "config": {
+        "pattern": 0,
+        "starDensity": 65,
+        "brightness": 220,
+        "rippleOpacity": 400,
+        "pixelMode": 1
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "N O C T U R N E  /  S T A R W R I T E",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Every keystroke leaves a little weather behind.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 12,
+          "width": 89,
+          "height": 1,
+          "text": "A quiet sky. One glyph per star. A rare, expanding nova.",
+          "fg": "#b8acbd"
+        },
+        {
+          "kind": "box",
+          "x": 3,
+          "y": 16,
+          "width": 94,
+          "height": 7,
+          "text": "  THE PROMPT  ",
+          "bgOpacity": 150,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 19,
+          "width": 87,
+          "height": 1,
+          "text": "",
+          "id": 100
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 27,
+          "width": 89,
+          "height": 1,
+          "text": "TYPE in the prompt below  /  CLICK for ripples  /  SHIFT+CLICK for a nova",
+          "fg": "#9f91a6"
+        }
+      ],
+      "category": "surface"
+    },
+    {
+      "id": "row-current",
+      "name": "Horizontal Current",
+      "tagline": "The current row moves fastest. Each neighbor runs at half speed.",
+      "config": {
+        "pattern": 3,
+        "focusMode": 1,
+        "focusY": 4864,
+        "focusX": 5120,
+        "periodMs": 1400,
+        "brightness": 530,
+        "saturation": 1000,
+        "starDensity": 12,
+        "pixelMode": 1
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "HORIZONTAL CURRENT",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "The current row moves fastest. Each neighbor runs at half speed.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 10,
+          "width": 89,
+          "height": 1,
+          "text": "build  /  observe  /  understand"
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 12,
+          "width": 89,
+          "height": 1,
+          "text": "data commits are not animation frames",
+          "fg": "#aaa1b0"
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 19,
+          "width": 87,
+          "height": 1,
+          "text": "",
+          "id": 100
+        },
+        {
+          "kind": "rule",
+          "x": 4,
+          "y": 22,
+          "width": 90,
+          "height": 1,
+          "text": "",
+          "style": 8,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 27,
+          "width": 89,
+          "height": 1,
+          "text": "Move the focus by clicking. Type without waiting for an animation tick.",
+          "fg": "#a49aad"
+        }
+      ],
+      "category": "surface"
+    },
+    {
+      "id": "column-current",
+      "name": "Vertical Current",
+      "tagline": "The active column becomes a river; adjacent columns slow exponentially.",
+      "config": {
+        "pattern": 3,
+        "focusMode": 2,
+        "focusY": 4864,
+        "focusX": 5120,
+        "periodMs": 1400,
+        "brightness": 530,
+        "saturation": 1000,
+        "starDensity": 12,
+        "pixelMode": 1
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "VERTICAL CURRENT",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "The active column becomes a river; adjacent columns slow exponentially.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 10,
+          "width": 89,
+          "height": 1,
+          "text": "build  /  observe  /  understand"
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 12,
+          "width": 89,
+          "height": 1,
+          "text": "data commits are not animation frames",
+          "fg": "#aaa1b0"
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 19,
+          "width": 87,
+          "height": 1,
+          "text": "",
+          "id": 100
+        },
+        {
+          "kind": "rule",
+          "x": 4,
+          "y": 22,
+          "width": 90,
+          "height": 1,
+          "text": "",
+          "style": 8,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 27,
+          "width": 89,
+          "height": 1,
+          "text": "Move the focus by clicking. Type without waiting for an animation tick.",
+          "fg": "#a49aad"
+        }
+      ],
+      "category": "surface"
+    },
+    {
+      "id": "centricity",
+      "name": "Centricity",
+      "tagline": "The cursor is a bright center, with distance-aware clocks and saturation.",
+      "config": {
+        "pattern": 6,
+        "focusMode": 3,
+        "focusY": 4864,
+        "focusX": 5120,
+        "periodMs": 1400,
+        "brightness": 530,
+        "saturation": 1000,
+        "starDensity": 12,
+        "pixelMode": 1
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "CENTRICITY",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "The cursor is a bright center, with distance-aware clocks and saturation.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 10,
+          "width": 89,
+          "height": 1,
+          "text": "build  /  observe  /  understand"
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 12,
+          "width": 89,
+          "height": 1,
+          "text": "data commits are not animation frames",
+          "fg": "#aaa1b0"
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 19,
+          "width": 87,
+          "height": 1,
+          "text": "",
+          "id": 100
+        },
+        {
+          "kind": "rule",
+          "x": 4,
+          "y": 22,
+          "width": 90,
+          "height": 1,
+          "text": "",
+          "style": 8,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 27,
+          "width": 89,
+          "height": 1,
+          "text": "Move the focus by clicking. Type without waiting for an animation tick.",
+          "fg": "#a49aad"
+        }
+      ],
+      "category": "surface"
+    },
+    {
+      "id": "pivot-room",
+      "name": "The Pivot Room",
+      "tagline": "A rotating linear field, including offscreen and eased pendulum axes.",
+      "config": {
+        "pattern": 4,
+        "rotationMode": 2,
+        "pivotX": -3840,
+        "pivotY": 2048,
+        "rotationPeriodMs": 14000,
+        "swing": 85000,
+        "brightness": 500,
+        "stars": 0,
+        "gradientWrap": 1
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "THE PIVOT ROOM",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "The axis can be somewhere else entirely.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "box",
+          "x": 22,
+          "y": 11,
+          "width": 57,
+          "height": 12,
+          "text": "  OFFSCREEN PIVOT  ",
+          "bgOpacity": 260,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 27,
+          "y": 15,
+          "width": 67,
+          "height": 1,
+          "text": "linear light / sinusoidal pendulum"
+        },
+        {
+          "kind": "text",
+          "x": 27,
+          "y": 18,
+          "width": 67,
+          "height": 1,
+          "text": "No geometry moves. Only the color field."
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 27,
+          "width": 89,
+          "height": 1,
+          "text": "Adjust pivot, angle, rotation mode and period in the parameter editor.",
+          "fg": "#a99dab"
+        }
+      ],
+      "category": "surface"
+    },
+    {
+      "id": "plasma-lab",
+      "name": "Plasma Observatory",
+      "tagline": "Interference, moire, aurora, braille and half-cell color fields.",
+      "config": {
+        "pattern": 5,
+        "brightness": 540,
+        "saturation": 900,
+        "pixelMode": 3,
+        "starDensity": 10
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "P L A S M A  O B S E R V A T O R Y",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "An integer field, rendered in cells. No blur, shader or image protocol.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "line",
+          "x": 5,
+          "y": 10,
+          "width": 90,
+          "height": 13,
+          "text": "",
+          "data": [
+            500,
+            711,
+            836,
+            844,
+            773,
+            690,
+            635,
+            594,
+            518,
+            381,
+            215,
+            96,
+            96,
+            226,
+            424,
+            600,
+            698,
+            724,
+            727,
+            748,
+            777,
+            761,
+            652,
+            458,
+            248,
+            115,
+            110,
+            213,
+            350,
+            456,
+            518,
+            572,
+            661,
+            781,
+            876,
+            874,
+            746,
+            534,
+            331,
+            213,
+            198,
+            241,
+            284,
+            304,
+            334,
+            422,
+            585,
+            775,
+            905,
+            909,
+            788,
+            609,
+            456,
+            371,
+            335,
+            299,
+            236,
+            177,
+            184,
+            302
+          ],
+          "colorAnimation": 1,
+          "hueSaturation": 440
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 27,
+          "width": 89,
+          "height": 1,
+          "text": "Try moire / aurora / interference. Change cell sampling to half blocks.",
+          "fg": "#c1b4bc"
+        }
+      ],
+      "category": "surface"
+    },
+    {
+      "id": "rules",
+      "name": "Information Filaments",
+      "tagline": "Animated rules, particles, chevrons, rails and braided separators.",
+      "config": {
+        "pattern": 8,
+        "brightness": 130,
+        "stars": 0
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "RULES / THE SPACE BETWEEN THINGS",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Twelve separators, not twelve copies of a horizontal line.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 9,
+          "width": 15,
+          "height": 1,
+          "text": "hairline",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 21,
+          "y": 9,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 0,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 12,
+          "width": 15,
+          "height": 1,
+          "text": "heavy light",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 21,
+          "y": 12,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 1,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 15,
+          "width": 15,
+          "height": 1,
+          "text": "double rail",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 21,
+          "y": 15,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 2,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 18,
+          "width": 15,
+          "height": 1,
+          "text": "fine particles",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 21,
+          "y": 18,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 3,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 21,
+          "width": 15,
+          "height": 1,
+          "text": "braille traffic",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 21,
+          "y": 21,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 24,
+          "width": 15,
+          "height": 1,
+          "text": "wavelet",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 21,
+          "y": 24,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 5,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 9,
+          "width": 15,
+          "height": 1,
+          "text": "chevron flow",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 69,
+          "y": 9,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 6,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 12,
+          "width": 15,
+          "height": 1,
+          "text": "split neon",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 69,
+          "y": 12,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 7,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 15,
+          "width": 15,
+          "height": 1,
+          "text": "broken silk",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 69,
+          "y": 15,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 8,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 18,
+          "width": 15,
+          "height": 1,
+          "text": "cross weave",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 69,
+          "y": 18,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 9,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 21,
+          "width": 15,
+          "height": 1,
+          "text": "comet train",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 69,
+          "y": 21,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 10,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 24,
+          "width": 15,
+          "height": 1,
+          "text": "orbit chain",
+          "fg": "#a79baa"
+        },
+        {
+          "kind": "rule",
+          "x": 69,
+          "y": 24,
+          "width": 25,
+          "height": 1,
+          "text": "",
+          "style": 11,
+          "colorAnimation": 2,
+          "hueSpeed": 25
+        }
+      ],
+      "category": "component"
+    },
+    {
+      "id": "controls",
+      "name": "Quiet Machinery II",
+      "tagline": "Menus, five cursors, stateful selections, progress and glass overlays.",
+      "config": {
+        "pattern": 5,
+        "brightness": 160,
+        "stars": 1,
+        "starDensity": 25
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "QUIET MACHINERY / INTERACTION LAB",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Focusable is not selected. Disabled is not merely a different color.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 10,
+          "width": 42,
+          "height": 2,
+          "text": "Agents / active",
+          "id": 11,
+          "state": 1,
+          "bgOpacity": 200,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 13,
+          "width": 42,
+          "height": 2,
+          "text": "Knowledge / ready",
+          "id": 12,
+          "state": 0,
+          "bgOpacity": 0,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 16,
+          "width": 42,
+          "height": 2,
+          "text": "Storage / selected",
+          "id": 13,
+          "state": 2,
+          "bgOpacity": 320,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 19,
+          "width": 42,
+          "height": 2,
+          "text": "Destructive action / disabled",
+          "id": 14,
+          "state": 3,
+          "bgOpacity": 0,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "cursor",
+          "x": 54,
+          "y": 12,
+          "width": 1,
+          "height": 1,
+          "text": "",
+          "style": 0,
+          "colorAnimation": 1
+        },
+        {
+          "kind": "text",
+          "x": 52,
+          "y": 15,
+          "width": 7,
+          "height": 1,
+          "text": "block",
+          "fg": "#a599a8"
+        },
+        {
+          "kind": "cursor",
+          "x": 62,
+          "y": 12,
+          "width": 1,
+          "height": 1,
+          "text": "",
+          "style": 1,
+          "colorAnimation": 1
+        },
+        {
+          "kind": "text",
+          "x": 60,
+          "y": 15,
+          "width": 7,
+          "height": 1,
+          "text": "rail",
+          "fg": "#a599a8"
+        },
+        {
+          "kind": "cursor",
+          "x": 70,
+          "y": 12,
+          "width": 1,
+          "height": 1,
+          "text": "",
+          "style": 2,
+          "colorAnimation": 1
+        },
+        {
+          "kind": "text",
+          "x": 68,
+          "y": 15,
+          "width": 7,
+          "height": 1,
+          "text": "beam",
+          "fg": "#a599a8"
+        },
+        {
+          "kind": "cursor",
+          "x": 78,
+          "y": 12,
+          "width": 1,
+          "height": 1,
+          "text": "",
+          "style": 3,
+          "colorAnimation": 1
+        },
+        {
+          "kind": "text",
+          "x": 76,
+          "y": 15,
+          "width": 7,
+          "height": 1,
+          "text": "arrow",
+          "fg": "#a599a8"
+        },
+        {
+          "kind": "cursor",
+          "x": 86,
+          "y": 12,
+          "width": 1,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 1
+        },
+        {
+          "kind": "text",
+          "x": 84,
+          "y": 15,
+          "width": 7,
+          "height": 1,
+          "text": "braille",
+          "fg": "#a599a8"
+        },
+        {
+          "kind": "progress",
+          "x": 52,
+          "y": 20,
+          "width": 40,
+          "height": 2,
+          "text": "",
+          "value": 670,
+          "colorAnimation": 2,
+          "id": 50
+        },
+        {
+          "kind": "text",
+          "x": 53,
+          "y": 23,
+          "width": 41,
+          "height": 1,
+          "text": "67%  /  target commits immediately",
+          "fg": "#b8b2a5"
+        },
+        {
+          "kind": "button",
+          "x": 58,
+          "y": 26,
+          "width": 27,
+          "height": 3,
+          "text": "OPEN GLASS MODAL",
+          "id": 60,
+          "colorAnimation": 2
+        }
+      ],
+      "category": "component"
+    },
+    {
+      "id": "dashboard",
+      "name": "Velvet Terminal",
+      "tagline": "Large numerals, braille rings, bars and time-series drilldown.",
+      "config": {
+        "pattern": 8,
+        "brightness": 150,
+        "stars": 0
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "DASHBOARD / DENSE, NOT CHAOTIC",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Mock telemetry. Every plotted region can be inspected by mouse or keyboard.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "digits",
+          "x": 5,
+          "y": 9,
+          "width": 40,
+          "height": 5,
+          "text": "067",
+          "colorAnimation": 2,
+          "id": 70
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 15,
+          "width": 88,
+          "height": 1,
+          "text": "FLEET COMPLETION / percent",
+          "fg": "#b5a793"
+        },
+        {
+          "kind": "progress",
+          "x": 5,
+          "y": 17,
+          "width": 40,
+          "height": 1,
+          "text": "",
+          "value": 670,
+          "colorAnimation": 2,
+          "id": 50
+        },
+        {
+          "kind": "donut",
+          "x": 55,
+          "y": 8,
+          "width": 32,
+          "height": 10,
+          "text": "",
+          "data": [
+            670,
+            210,
+            120
+          ],
+          "id": 71,
+          "fgOpacity": 950
+        },
+        {
+          "kind": "bars",
+          "x": 5,
+          "y": 21,
+          "width": 42,
+          "height": 7,
+          "text": "",
+          "data": [
+            430,
+            720,
+            620,
+            900,
+            540,
+            810,
+            670
+          ],
+          "colorAnimation": 2,
+          "id": 72
+        },
+        {
+          "kind": "line",
+          "x": 53,
+          "y": 22,
+          "width": 40,
+          "height": 6,
+          "text": "",
+          "data": [
+            400,
+            600,
+            300,
+            720,
+            550,
+            840,
+            660,
+            880,
+            680,
+            780,
+            640,
+            920
+          ],
+          "colorAnimation": 2,
+          "id": 73
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 29,
+          "width": 89,
+          "height": 1,
+          "text": "PEAKS / seven workers",
+          "fg": "#9f92a4"
+        },
+        {
+          "kind": "text",
+          "x": 53,
+          "y": 29,
+          "width": 41,
+          "height": 1,
+          "text": "LATENCY / normalized samples",
+          "fg": "#9f92a4"
+        }
+      ],
+      "category": "application"
+    },
+    {
+      "id": "charts",
+      "name": "The Chart Room",
+      "tagline": "Actual sample arrays, geometric picking and inspectable values.",
+      "config": {
+        "pattern": 5,
+        "brightness": 120,
+        "stars": 0
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "CHART ROOM / MORE THAN SPARKLINES",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Bar, pie, donut, scatter, line. Braille gives each cell eight sample positions.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "pie",
+          "x": 3,
+          "y": 9,
+          "width": 22,
+          "height": 8,
+          "text": "",
+          "data": [
+            230,
+            440,
+            330
+          ],
+          "id": 71,
+          "colorAnimation": 2,
+          "style": 1
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 18,
+          "width": 22,
+          "height": 1,
+          "text": "PIE / shares",
+          "fg": "#a89caa"
+        },
+        {
+          "kind": "donut",
+          "x": 29,
+          "y": 9,
+          "width": 22,
+          "height": 8,
+          "text": "",
+          "data": [
+            500,
+            320,
+            180
+          ],
+          "id": 72,
+          "colorAnimation": 2,
+          "style": 1
+        },
+        {
+          "kind": "text",
+          "x": 29,
+          "y": 18,
+          "width": 22,
+          "height": 1,
+          "text": "DONUT / shares",
+          "fg": "#a89caa"
+        },
+        {
+          "kind": "scatter",
+          "x": 58,
+          "y": 9,
+          "width": 36,
+          "height": 8,
+          "text": "",
+          "data": [
+            120,
+            200,
+            300,
+            620,
+            400,
+            400,
+            650,
+            820,
+            860,
+            560,
+            750,
+            720
+          ],
+          "id": 73,
+          "colorAnimation": 2,
+          "style": 1
+        },
+        {
+          "kind": "text",
+          "x": 58,
+          "y": 18,
+          "width": 36,
+          "height": 1,
+          "text": "SCATTER / x,y",
+          "fg": "#a89caa"
+        },
+        {
+          "kind": "bars",
+          "x": 4,
+          "y": 21,
+          "width": 40,
+          "height": 7,
+          "text": "",
+          "data": [
+            160,
+            570,
+            850,
+            630,
+            720,
+            350,
+            930
+          ],
+          "id": 74,
+          "colorAnimation": 2,
+          "style": 1
+        },
+        {
+          "kind": "text",
+          "x": 4,
+          "y": 29,
+          "width": 40,
+          "height": 1,
+          "text": "BARS / workers",
+          "fg": "#a89caa"
+        },
+        {
+          "kind": "line",
+          "x": 54,
+          "y": 21,
+          "width": 40,
+          "height": 7,
+          "text": "",
+          "data": [
+            200,
+            400,
+            300,
+            680,
+            570,
+            700,
+            470,
+            620,
+            900,
+            750,
+            920
+          ],
+          "id": 75,
+          "colorAnimation": 2,
+          "style": 1
+        },
+        {
+          "kind": "text",
+          "x": 54,
+          "y": 29,
+          "width": 40,
+          "height": 1,
+          "text": "LINE / samples",
+          "fg": "#a89caa"
+        }
+      ],
+      "category": "component"
+    },
+    {
+      "id": "fleet",
+      "name": "Agent Constellation",
+      "tagline": "A genuine small DAG with multiple parents, selectable nodes and moving edge signals.",
+      "config": {
+        "pattern": 5,
+        "brightness": 130,
+        "stars": 1,
+        "starDensity": 26
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "AGENT FLEET / MULTI-PARENT DAG",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "planner + researcher both feed synthesis. Selection keeps both parent links.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "edge",
+          "x": 24,
+          "y": 11,
+          "width": 16,
+          "height": 6,
+          "text": "",
+          "data": [
+            0,
+            0,
+            1000,
+            1000
+          ],
+          "colorAnimation": 2,
+          "fgOpacity": 700
+        },
+        {
+          "kind": "edge",
+          "x": 24,
+          "y": 16,
+          "width": 16,
+          "height": 6,
+          "text": "",
+          "data": [
+            0,
+            1000,
+            1000,
+            0
+          ],
+          "colorAnimation": 2,
+          "fgOpacity": 700
+        },
+        {
+          "kind": "edge",
+          "x": 57,
+          "y": 11,
+          "width": 17,
+          "height": 6,
+          "text": "",
+          "data": [
+            0,
+            1000,
+            1000,
+            0
+          ],
+          "colorAnimation": 2,
+          "fgOpacity": 700
+        },
+        {
+          "kind": "edge",
+          "x": 57,
+          "y": 16,
+          "width": 17,
+          "height": 6,
+          "text": "",
+          "data": [
+            0,
+            0,
+            1000,
+            1000
+          ],
+          "colorAnimation": 2,
+          "fgOpacity": 700
+        },
+        {
+          "kind": "edge",
+          "x": 82,
+          "y": 11,
+          "width": 2,
+          "height": 11,
+          "text": "",
+          "data": [
+            500,
+            0,
+            500,
+            1000
+          ],
+          "colorAnimation": 2,
+          "fgOpacity": 700
+        },
+        {
+          "kind": "button",
+          "x": 6,
+          "y": 10,
+          "width": 19,
+          "height": 3,
+          "text": "PLANNER",
+          "id": 21,
+          "colorAnimation": 2,
+          "bgOpacity": 600,
+          "state": 0
+        },
+        {
+          "kind": "button",
+          "x": 6,
+          "y": 20,
+          "width": 19,
+          "height": 3,
+          "text": "RESEARCH",
+          "id": 22,
+          "colorAnimation": 2,
+          "bgOpacity": 600,
+          "state": 0
+        },
+        {
+          "kind": "button",
+          "x": 39,
+          "y": 15,
+          "width": 19,
+          "height": 3,
+          "text": "SYNTHESIS",
+          "id": 23,
+          "colorAnimation": 2,
+          "bgOpacity": 600,
+          "state": 1
+        },
+        {
+          "kind": "button",
+          "x": 73,
+          "y": 10,
+          "width": 19,
+          "height": 3,
+          "text": "REVIEW",
+          "id": 24,
+          "colorAnimation": 2,
+          "bgOpacity": 600,
+          "state": 0
+        },
+        {
+          "kind": "button",
+          "x": 73,
+          "y": 20,
+          "width": 19,
+          "height": 3,
+          "text": "PUBLISH",
+          "id": 25,
+          "colorAnimation": 2,
+          "bgOpacity": 600,
+          "state": 0
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 28,
+          "width": 88,
+          "height": 1,
+          "text": "5 nodes / 5 directed edges / 2 multi-parent nodes / no duplicated identities",
+          "fg": "#ab9caa"
+        }
+      ],
+      "category": "application",
+      "dag": [
+        {
+          "id": 21,
+          "label": "PLANNER",
+          "x": 6,
+          "y": 10,
+          "parents": []
+        },
+        {
+          "id": 22,
+          "label": "RESEARCH",
+          "x": 6,
+          "y": 20,
+          "parents": []
+        },
+        {
+          "id": 23,
+          "label": "SYNTHESIS",
+          "x": 39,
+          "y": 15,
+          "parents": [
+            21,
+            22
+          ]
+        },
+        {
+          "id": 24,
+          "label": "REVIEW",
+          "x": 73,
+          "y": 10,
+          "parents": [
+            23
+          ]
+        },
+        {
+          "id": 25,
+          "label": "PUBLISH",
+          "x": 73,
+          "y": 20,
+          "parents": [
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "partyline",
+      "name": "Party Line",
+      "tagline": "Navigable messages, data arrival pulses, a live prompt and agent context.",
+      "config": {
+        "pattern": 3,
+        "focusMode": 1,
+        "focusY": 6912,
+        "brightness": 250,
+        "periodMs": 1800,
+        "stars": 1,
+        "starDensity": 20
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "PARTY LINE / AGENTS IN CONVERSATION",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Synthetic messages. Select a message to inspect its sender and payload.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 9,
+          "width": 90,
+          "height": 2,
+          "text": "planner      Break the task into independent cells.",
+          "id": 30,
+          "colorAnimation": 2,
+          "bgOpacity": 80
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 12,
+          "width": 90,
+          "height": 2,
+          "text": "researcher   Two upstream sources are ready.",
+          "id": 31,
+          "colorAnimation": 2,
+          "bgOpacity": 80
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 15,
+          "width": 90,
+          "height": 2,
+          "text": "synthesis    Both parents received. Building the response.",
+          "id": 32,
+          "colorAnimation": 2,
+          "bgOpacity": 80
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 18,
+          "width": 90,
+          "height": 2,
+          "text": "reviewer     The waveform is attractive. The data stays honest.",
+          "id": 33,
+          "colorAnimation": 2,
+          "bgOpacity": 80
+        },
+        {
+          "kind": "item",
+          "x": 5,
+          "y": 21,
+          "width": 90,
+          "height": 2,
+          "text": "archive      Snapshot stored. No input was executed.",
+          "id": 34,
+          "colorAnimation": 2,
+          "bgOpacity": 80
+        },
+        {
+          "kind": "text",
+          "x": 6,
+          "y": 27,
+          "width": 87,
+          "height": 1,
+          "text": "",
+          "id": 100
+        }
+      ],
+      "category": "application"
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Lantern",
+      "tagline": "Expandable tree navigation and a layered document preview.",
+      "config": {
+        "pattern": 8,
+        "brightness": 130,
+        "stars": 1,
+        "starDensity": 14
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "KNOWLEDGE / ARCHIVE AT NIGHT",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Static content can be quiet while selection and activity remain expressive.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 9,
+          "width": 39,
+          "height": 2,
+          "text": "\u25be  Research",
+          "id": 40,
+          "colorAnimation": 2,
+          "state": 0,
+          "bgOpacity": 0
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 12,
+          "width": 39,
+          "height": 2,
+          "text": "   \u25b8  Provenance",
+          "id": 41,
+          "colorAnimation": 2,
+          "state": 0,
+          "bgOpacity": 0
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 15,
+          "width": 39,
+          "height": 2,
+          "text": "   \u25b8  Model evaluations",
+          "id": 42,
+          "colorAnimation": 2,
+          "state": 2,
+          "bgOpacity": 180
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 18,
+          "width": 39,
+          "height": 2,
+          "text": "\u25be  Infrastructure",
+          "id": 43,
+          "colorAnimation": 2,
+          "state": 0,
+          "bgOpacity": 0
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 21,
+          "width": 39,
+          "height": 2,
+          "text": "   \u25b8  Storage ledger",
+          "id": 44,
+          "colorAnimation": 2,
+          "state": 0,
+          "bgOpacity": 0
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 24,
+          "width": 39,
+          "height": 2,
+          "text": "   \u25b8  Network topology",
+          "id": 45,
+          "colorAnimation": 2,
+          "state": 0,
+          "bgOpacity": 0
+        },
+        {
+          "kind": "box",
+          "x": 47,
+          "y": 9,
+          "width": 49,
+          "height": 19,
+          "text": "  DOCUMENT PREVIEW  ",
+          "bgOpacity": 420,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 50,
+          "y": 12,
+          "width": 42,
+          "height": 13,
+          "text": "A cell has one foreground and one background.\n\nPseudo-alpha is a deliberate composition operation, not a terminal escape.\n\nKeep data truthful. Let decoration dance.",
+          "fg": "#cec3b4"
+        }
+      ],
+      "category": "application"
+    },
+    {
+      "id": "logwatch",
+      "name": "Log Watch",
+      "tagline": "High-density rows, immediate arrivals and animated activity indicators.",
+      "config": {
+        "pattern": 1,
+        "brightness": 110,
+        "stars": 0
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "LOG WATCH / THE SIGNAL, NOT THE NOISE",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Synthetic log stream. Keyboard or mouse selects a row without stopping arrivals.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 9,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:00  INFO   worker-02 connected",
+          "id": 80,
+          "fg": "#a4b6aa",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 11,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:01  TRACE  frame 412 rendered in 2.4ms",
+          "id": 81,
+          "fg": "#9892ac",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 13,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:02  INFO   semantic payload committed",
+          "id": 82,
+          "fg": "#a4b6aa",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 15,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:03  WARN   transport backpressure; skipping decorative frame",
+          "id": 83,
+          "fg": "#d0aa78",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 17,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:04  INFO   data event took the immediate path",
+          "id": 84,
+          "fg": "#a4b6aa",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 19,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:05  TRACE  cache hit / typography raster",
+          "id": 85,
+          "fg": "#9892ac",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "item",
+          "x": 4,
+          "y": 21,
+          "width": 91,
+          "height": 1,
+          "text": "12:04:06  INFO   all dependency inputs ready",
+          "id": 86,
+          "fg": "#a4b6aa",
+          "bgOpacity": 40
+        },
+        {
+          "kind": "progress",
+          "x": 5,
+          "y": 26,
+          "width": 88,
+          "height": 1,
+          "text": "",
+          "value": 760,
+          "colorAnimation": 2,
+          "id": 50
+        },
+        {
+          "kind": "text",
+          "x": 5,
+          "y": 29,
+          "width": 89,
+          "height": 1,
+          "text": "Typing and data updates remain live while decorative motion is paused.",
+          "fg": "#a79aaa"
+        }
+      ],
+      "category": "application"
+    },
+    {
+      "id": "typography",
+      "name": "Chromatic Type Studio",
+      "tagline": "Animate the raster, not a shell subprocess per frame.",
+      "config": {
+        "pattern": 4,
+        "rotationMode": 1,
+        "brightness": 180,
+        "stars": 1,
+        "starDensity": 24
+      },
+      "nodes": [
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 2,
+          "width": 91,
+          "height": 1,
+          "text": "TYPE / LIGHT WITHIN THE LETTERS",
+          "colorAnimation": 2
+        },
+        {
+          "kind": "text",
+          "x": 3,
+          "y": 4,
+          "width": 91,
+          "height": 1,
+          "text": "Original seven-segment numerals below. Import locally rendered TD Figlet cell art.",
+          "fg": "#9e96a6"
+        },
+        {
+          "kind": "rule",
+          "x": 3,
+          "y": 6,
+          "width": 94,
+          "height": 1,
+          "text": "",
+          "style": 4,
+          "colorAnimation": 2
+        },
+        {
+          "kind": "digits",
+          "x": 10,
+          "y": 10,
+          "width": 80,
+          "height": 10,
+          "text": "2026",
+          "zoom": 2,
+          "colorAnimation": 2,
+          "hueStep": 27
+        },
+        {
+          "kind": "text",
+          "x": 7,
+          "y": 25,
+          "width": 87,
+          "height": 1,
+          "text": "Per-cell hue / palette sweeps / scalar keyframes / reveal / integer zoom",
+          "fg": "#c3b5b9"
+        },
+        {
+          "kind": "text",
+          "x": 7,
+          "y": 28,
+          "width": 87,
+          "height": 1,
+          "text": "No external font files are embedded or distributed with this gallery.",
+          "fg": "#9b90a4"
+        }
+      ],
+      "category": "component"
+    }
+  ]
+}

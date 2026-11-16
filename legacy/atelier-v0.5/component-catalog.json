@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "components": [
+    {
+      "kind": "text",
+      "index": 0,
+      "description": "Glyph text with wrapping/reveal and per-character color motion.",
+      "data": "text; newlines wrap within rectangle",
+      "hit": "rectangle",
+      "notes": "revealMs, colorAnimation, hueStep, hueSpeed"
+    },
+    {
+      "kind": "box",
+      "index": 1,
+      "description": "Clipped information enclosure with title and optional blended fill.",
+      "data": "text title",
+      "hit": "rectangle",
+      "notes": "style 0 rounded,1 square,2 double,3 heavy"
+    },
+    {
+      "kind": "rule",
+      "index": 2,
+      "description": "Animated horizontal/vertical information rule; longer axis chooses direction.",
+      "data": "none",
+      "hit": "rectangle",
+      "notes": "style 0..11, hue/palette motion"
+    },
+    {
+      "kind": "button",
+      "index": 3,
+      "description": "Framed centered label; disabled/focus/selection are explicit states.",
+      "data": "text label",
+      "hit": "rectangle",
+      "notes": "style, state, alpha, colorAnimation"
+    },
+    {
+      "kind": "item",
+      "index": 4,
+      "description": "Menu/tree item with state marker; semantic hierarchy belongs to host.",
+      "data": "text label",
+      "hit": "rectangle",
+      "notes": "state 0 normal,1 focus,2 selected,3 disabled"
+    },
+    {
+      "kind": "cursor",
+      "index": 5,
+      "description": "Five cursor treatments, including a text-preserving block highlight.",
+      "data": "optional glyph scalar",
+      "hit": "rectangle",
+      "notes": "style 0 block,1 underline,2 thin bar,3 pointer,4 braille"
+    },
+    {
+      "kind": "progress",
+      "index": 6,
+      "description": "Fractional progress with an eased decorative target transition.",
+      "data": "value/fromValue 0..1000 displayed range",
+      "hit": "rectangle",
+      "notes": "style 0 eighth-block,1 lower-half rail,2 squares; durationMs"
+    },
+    {
+      "kind": "bars",
+      "index": 7,
+      "description": "Vertical normalized bar series with eased entrance.",
+      "data": "data array; each value clamped to0..1000",
+      "hit": "rendered bar index",
+      "notes": "durationMs, colorAnimation"
+    },
+    {
+      "kind": "pie",
+      "index": 8,
+      "description": "Braille disk partitioned by positive weights with angular entrance.",
+      "data": "data weights; nonpositive omitted",
+      "hit": "geometric sector index",
+      "notes": "durationMs; current material palette supplies sectors"
+    },
+    {
+      "kind": "donut",
+      "index": 9,
+      "description": "Braille ring with empty center and sector hit testing.",
+      "data": "same as pie",
+      "hit": "geometric ring sector; no center hit",
+      "notes": "durationMs; fixed inner-radius policy"
+    },
+    {
+      "kind": "scatter",
+      "index": 10,
+      "description": "Braille sample marks with optional plus-shaped points.",
+      "data": "interleaved x,y normalized0..1000; odd tail ignored",
+      "hit": "nearest sample pair index",
+      "notes": "style 0 dot,1 plus; colorAnimation"
+    },
+    {
+      "kind": "line",
+      "index": 11,
+      "description": "Braille line trace connecting normalized samples.",
+      "data": "data normalized0..1000",
+      "hit": "sample index along the plot",
+      "notes": "colorAnimation; sample x evenly spaced"
+    },
+    {
+      "kind": "digits",
+      "index": 12,
+      "description": "Original seven-segment display geometry, not a bundled font.",
+      "data": "text digits0..9 or minus",
+      "hit": "rectangle",
+      "notes": "zoom1..4; hue/palette rotation"
+    },
+    {
+      "kind": "edge",
+      "index": 13,
+      "description": "Braille routed connector with traveling highlight.",
+      "data": "interleaved normalized x,y path points",
+      "hit": "rectangle",
+      "notes": "colorAnimation; fixed2400ms traveling highlight cycle"
+    }
+  ],
+  "hostResponsibilities": [
+    "layout",
+    "semantic identity",
+    "keyboard focus",
+    "authorized actions",
+    "application data",
+    "output transport",
+    "clock"
+  ]
+}

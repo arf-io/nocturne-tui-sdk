@@ -1,0 +1,678 @@
+{
+  "version": 4,
+  "title": "Nocturne Observatory host model",
+  "nativeAbiVersion": 2,
+  "numericControls": {
+    "fps": {
+      "label": "Presentation ceiling",
+      "group": "Timing",
+      "min": 1,
+      "max": 120,
+      "step": 1,
+      "default": 60,
+      "unit": "fps"
+    },
+    "gradientScreens": {
+      "label": "Distance between adjacent stops",
+      "group": "Gradient",
+      "min": 0.05,
+      "max": 8,
+      "step": 0.05,
+      "default": 0.75,
+      "unit": "screens"
+    },
+    "gradientAngle": {
+      "label": "Primary angle",
+      "group": "Gradient",
+      "min": -360,
+      "max": 360,
+      "step": 1,
+      "default": -18,
+      "unit": "degrees"
+    },
+    "gradientSpeed": {
+      "label": "Gradient travel",
+      "group": "Gradient",
+      "min": -2,
+      "max": 2,
+      "step": 0.01,
+      "default": 0.06,
+      "unit": "screens/s"
+    },
+    "gradientPhase": {
+      "label": "Phase",
+      "group": "Gradient",
+      "min": -8,
+      "max": 8,
+      "step": 0.05,
+      "default": 0,
+      "unit": "screens"
+    },
+    "feather": {
+      "label": "Transition feather",
+      "group": "Gradient",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "default": 1,
+      "unit": ""
+    },
+    "pivotX": {
+      "label": "Pivot X / outside is allowed",
+      "group": "Axes",
+      "min": -3,
+      "max": 4,
+      "step": 0.05,
+      "default": 0.5,
+      "unit": "screens"
+    },
+    "pivotY": {
+      "label": "Pivot Y",
+      "group": "Axes",
+      "min": -3,
+      "max": 4,
+      "step": 0.05,
+      "default": 0.5,
+      "unit": "screens"
+    },
+    "axisPitch": {
+      "label": "Second-axis starting tilt",
+      "group": "Axes",
+      "min": -180,
+      "max": 180,
+      "step": 1,
+      "default": 20,
+      "unit": "degrees"
+    },
+    "rotationSpeed": {
+      "label": "Primary-axis rotation",
+      "group": "Axes",
+      "min": -90,
+      "max": 90,
+      "step": 0.5,
+      "default": 4,
+      "unit": "degrees/s"
+    },
+    "secondAxisSpeed": {
+      "label": "Second-axis rotation",
+      "group": "Axes",
+      "min": -90,
+      "max": 90,
+      "step": 0.5,
+      "default": 2,
+      "unit": "degrees/s"
+    },
+    "swingAngle": {
+      "label": "Pendulum half-swing",
+      "group": "Axes",
+      "min": 0,
+      "max": 180,
+      "step": 1,
+      "default": 60,
+      "unit": "degrees"
+    },
+    "swingSeconds": {
+      "label": "Pendulum full cycle",
+      "group": "Axes",
+      "min": 0.5,
+      "max": 90,
+      "step": 0.5,
+      "default": 16,
+      "unit": "seconds"
+    },
+    "lightness": {
+      "label": "Oklab lightness L",
+      "group": "Color",
+      "min": 0.05,
+      "max": 0.95,
+      "step": 0.01,
+      "default": 0.62,
+      "unit": ""
+    },
+    "chroma": {
+      "label": "OKLCh chroma ceiling",
+      "group": "Color",
+      "min": 0,
+      "max": 0.4,
+      "step": 0.005,
+      "default": 0.14,
+      "unit": ""
+    },
+    "brightness": {
+      "label": "Background mix",
+      "group": "Color",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "default": 0.28,
+      "unit": ""
+    },
+    "hueOffset": {
+      "label": "Hue offset",
+      "group": "Color",
+      "min": -360,
+      "max": 360,
+      "step": 1,
+      "default": 0,
+      "unit": "degrees"
+    },
+    "textLightness": {
+      "label": "Text lightness",
+      "group": "Typography",
+      "min": 0.35,
+      "max": 0.95,
+      "step": 0.01,
+      "default": 0.83,
+      "unit": ""
+    },
+    "textChroma": {
+      "label": "Text chroma",
+      "group": "Typography",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.005,
+      "default": 0.1,
+      "unit": ""
+    },
+    "hueStep": {
+      "label": "Adjacent character hue distance",
+      "group": "Typography",
+      "min": -90,
+      "max": 90,
+      "step": 1,
+      "default": 13,
+      "unit": "degrees"
+    },
+    "textHueSpeed": {
+      "label": "Text hue sweep",
+      "group": "Typography",
+      "min": -90,
+      "max": 90,
+      "step": 1,
+      "default": 12,
+      "unit": "degrees/s"
+    },
+    "arrivalMs": {
+      "label": "Remote text arrival",
+      "group": "Typography",
+      "min": 0,
+      "max": 2500,
+      "step": 20,
+      "default": 520,
+      "unit": "ms"
+    },
+    "topFade": {
+      "label": "Top-edge attenuation",
+      "group": "Typography",
+      "min": 0,
+      "max": 0.65,
+      "step": 0.01,
+      "default": 0.18,
+      "unit": ""
+    },
+    "fallMs": {
+      "label": "Falling glyph travel",
+      "group": "Typography",
+      "min": 0,
+      "max": 4000,
+      "step": 20,
+      "default": 1100,
+      "unit": "ms"
+    },
+    "tickerSpeed": {
+      "label": "Ticker velocity",
+      "group": "Typography",
+      "min": 0,
+      "max": 30,
+      "step": 0.5,
+      "default": 7,
+      "unit": "cells/s"
+    },
+    "starDensity": {
+      "label": "Twinkle occupation",
+      "group": "Stars",
+      "min": 0,
+      "max": 0.3,
+      "step": 0.002,
+      "default": 0.035,
+      "unit": ""
+    },
+    "starCount": {
+      "label": "Warp points",
+      "group": "Stars",
+      "min": 0,
+      "max": 1200,
+      "step": 10,
+      "default": 420,
+      "unit": ""
+    },
+    "starSpeed": {
+      "label": "Travel velocity",
+      "group": "Stars",
+      "min": 0,
+      "max": 40,
+      "step": 0.25,
+      "default": 5,
+      "unit": "units/s"
+    },
+    "trailMs": {
+      "label": "Trail exposure",
+      "group": "Stars",
+      "min": 0,
+      "max": 250,
+      "step": 5,
+      "default": 65,
+      "unit": "ms"
+    },
+    "novaRegularity": {
+      "label": "Automatic nova cadence",
+      "group": "Stars",
+      "min": 0,
+      "max": 60,
+      "step": 0.5,
+      "default": 3,
+      "unit": "per minute"
+    },
+    "novaStrength": {
+      "label": "Nova glow",
+      "group": "Stars",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "default": 0.28,
+      "unit": ""
+    },
+    "cameraYaw": {
+      "label": "Camera yaw",
+      "group": "3D",
+      "min": -180,
+      "max": 180,
+      "step": 1,
+      "default": 0,
+      "unit": "degrees"
+    },
+    "cameraPitch": {
+      "label": "Camera pitch",
+      "group": "3D",
+      "min": -89,
+      "max": 89,
+      "step": 1,
+      "default": 0,
+      "unit": "degrees"
+    },
+    "cameraRoll": {
+      "label": "Camera roll",
+      "group": "3D",
+      "min": -180,
+      "max": 180,
+      "step": 1,
+      "default": 0,
+      "unit": "degrees"
+    },
+    "cameraX": {
+      "label": "Camera X",
+      "group": "3D",
+      "min": -30,
+      "max": 30,
+      "step": 0.25,
+      "default": 0,
+      "unit": ""
+    },
+    "cameraY": {
+      "label": "Camera Y",
+      "group": "3D",
+      "min": -30,
+      "max": 30,
+      "step": 0.25,
+      "default": 0,
+      "unit": ""
+    },
+    "cameraZ": {
+      "label": "Camera Z",
+      "group": "3D",
+      "min": -30,
+      "max": 30,
+      "step": 0.25,
+      "default": 0,
+      "unit": ""
+    },
+    "travelYaw": {
+      "label": "Travel heading",
+      "group": "3D",
+      "min": -180,
+      "max": 180,
+      "step": 1,
+      "default": 0,
+      "unit": "degrees"
+    },
+    "travelPitch": {
+      "label": "Travel elevation",
+      "group": "3D",
+      "min": -89,
+      "max": 89,
+      "step": 1,
+      "default": 0,
+      "unit": "degrees"
+    },
+    "fov": {
+      "label": "Horizontal field of view",
+      "group": "3D",
+      "min": 25,
+      "max": 120,
+      "step": 1,
+      "default": 70,
+      "unit": "degrees"
+    },
+    "weatherIntensity": {
+      "label": "Keystroke / pointer weather",
+      "group": "Weather",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "default": 0.38,
+      "unit": ""
+    },
+    "weatherLifeMs": {
+      "label": "Weather lifetime",
+      "group": "Weather",
+      "min": 200,
+      "max": 8000,
+      "step": 100,
+      "default": 2400,
+      "unit": "ms"
+    },
+    "weatherSpeed": {
+      "label": "Weather propagation",
+      "group": "Weather",
+      "min": 1,
+      "max": 50,
+      "step": 0.5,
+      "default": 12,
+      "unit": "cells/s"
+    },
+    "windowOpacity": {
+      "label": "Window background opacity",
+      "group": "Windows",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "default": 0.78,
+      "unit": ""
+    },
+    "transitionMs": {
+      "label": "Window transition",
+      "group": "Windows",
+      "min": 0,
+      "max": 2000,
+      "step": 20,
+      "default": 560,
+      "unit": "ms"
+    },
+    "ruleSpeed": {
+      "label": "Rule motion",
+      "group": "Windows",
+      "min": 0,
+      "max": 30,
+      "step": 0.5,
+      "default": 6,
+      "unit": "cells/s"
+    },
+    "scopeGain": {
+      "label": "Scope gain",
+      "group": "Sensors",
+      "min": 0.1,
+      "max": 10,
+      "step": 0.1,
+      "default": 1,
+      "unit": ""
+    },
+    "sensorAttack": {
+      "label": "Routing attack",
+      "group": "Sensors",
+      "min": 0,
+      "max": 2000,
+      "step": 10,
+      "default": 60,
+      "unit": "ms"
+    },
+    "sensorRelease": {
+      "label": "Routing release",
+      "group": "Sensors",
+      "min": 0,
+      "max": 5000,
+      "step": 20,
+      "default": 420,
+      "unit": "ms"
+    }
+  },
+  "defaults": {
+    "fps": 60,
+    "gradientScreens": 0.75,
+    "gradientAngle": -18,
+    "gradientSpeed": 0.06,
+    "gradientPhase": 0,
+    "feather": 1,
+    "pivotX": 0.5,
+    "pivotY": 0.5,
+    "axisPitch": 20,
+    "rotationSpeed": 4,
+    "secondAxisSpeed": 2,
+    "swingAngle": 60,
+    "swingSeconds": 16,
+    "lightness": 0.62,
+    "chroma": 0.14,
+    "brightness": 0.28,
+    "hueOffset": 0,
+    "textLightness": 0.83,
+    "textChroma": 0.1,
+    "hueStep": 13,
+    "textHueSpeed": 12,
+    "arrivalMs": 520,
+    "topFade": 0.18,
+    "fallMs": 1100,
+    "tickerSpeed": 7,
+    "starDensity": 0.035,
+    "starCount": 420,
+    "starSpeed": 5,
+    "trailMs": 65,
+    "novaRegularity": 3,
+    "novaStrength": 0.28,
+    "cameraYaw": 0,
+    "cameraPitch": 0,
+    "cameraRoll": 0,
+    "cameraX": 0,
+    "cameraY": 0,
+    "cameraZ": 0,
+    "travelYaw": 0,
+    "travelPitch": 0,
+    "fov": 70,
+    "weatherIntensity": 0.38,
+    "weatherLifeMs": 2400,
+    "weatherSpeed": 12,
+    "windowOpacity": 0.78,
+    "transitionMs": 560,
+    "ruleSpeed": 6,
+    "scopeGain": 1,
+    "sensorAttack": 60,
+    "sensorRelease": 420,
+    "backgroundStyle": "double-axis",
+    "weatherStyle": "ripples",
+    "orbitMode": "spin",
+    "sampling": "half",
+    "lockLightness": true,
+    "flatNavigation": false,
+    "typedColor": true,
+    "motion": true,
+    "stopWidths": [],
+    "starGlyphs": ".·∙⋅⠁⠂⠄⡀⠈⠐⠠⢀"
+  },
+  "enums": {
+    "backgroundStyle": [
+      "linear",
+      "double-axis",
+      "wave",
+      "plasma",
+      "caustics",
+      "vortex",
+      "contours",
+      "aurora",
+      "woven",
+      "moire",
+      "tunnel",
+      "diamond",
+      "bilinear",
+      "checker",
+      "warp"
+    ],
+    "weatherStyle": [
+      "ripples",
+      "rain",
+      "snow",
+      "embers",
+      "sparks",
+      "nova"
+    ],
+    "orbitMode": [
+      "spin",
+      "pendulum"
+    ],
+    "sampling": [
+      "cell",
+      "half",
+      "vertical",
+      "braille"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "chat",
+      "name": "AI CHAT / Pearl conversation"
+    },
+    {
+      "id": "scope",
+      "name": "PEARL / reactive signal"
+    },
+    {
+      "id": "warp",
+      "name": "WARP / free-vector starflight"
+    },
+    {
+      "id": "dag",
+      "name": "DAG / orbital knowledge"
+    },
+    {
+      "id": "spatial-menu",
+      "name": "MENU / spatial constellation"
+    },
+    {
+      "id": "bbs",
+      "name": "BBS / Starfall exchange"
+    },
+    {
+      "id": "bbs-config",
+      "name": "BBS / configuration desk"
+    },
+    {
+      "id": "windows",
+      "name": "WINDOWS / glass workspaces"
+    },
+    {
+      "id": "lynx",
+      "name": "LYNX / text browser study"
+    },
+    {
+      "id": "nano",
+      "name": "NANO / editor study"
+    },
+    {
+      "id": "pico",
+      "name": "PICO / correspondence study"
+    },
+    {
+      "id": "tmux",
+      "name": "TMUX / pane composition"
+    },
+    {
+      "id": "controls",
+      "name": "ATELIER / controls + rules"
+    },
+    {
+      "id": "sensors",
+      "name": "SENSORS / modulation routing"
+    },
+    {
+      "id": "logs",
+      "name": "LOG WATCH / observability"
+    },
+    {
+      "id": "text",
+      "name": "TYPOGRAPHY / falling light"
+    }
+  ],
+  "modulationTargets": [
+    "brightness",
+    "lightness",
+    "chroma",
+    "hueOffset",
+    "gradientSpeed",
+    "rotationSpeed",
+    "secondAxisSpeed",
+    "starCount",
+    "starSpeed",
+    "starDensity",
+    "novaRegularity",
+    "weatherIntensity",
+    "scopeGain",
+    "windowOpacity",
+    "gradientScreens",
+    "gradientAngle",
+    "axisPitch",
+    "pivotX",
+    "pivotY",
+    "cameraYaw",
+    "cameraPitch",
+    "cameraRoll",
+    "cameraX",
+    "cameraY",
+    "cameraZ",
+    "travelYaw",
+    "travelPitch",
+    "trailMs",
+    "weatherSpeed",
+    "tickerSpeed",
+    "hueStep",
+    "textHueSpeed"
+  ],
+  "limits": {
+    "columns": [
+      36,
+      240
+    ],
+    "rows": [
+      18,
+      100
+    ],
+    "draftScalars": 4096,
+    "messages": 256,
+    "weatherEvents": 128,
+    "activeWeatherRenderLimit": 24,
+    "sensorSources": 128,
+    "modulationRoutes": 16,
+    "rateCheckpoints": 256,
+    "scratchUtf16Units": 32768,
+    "waveformInputSamples": [
+      2,
+      1024
+    ]
+  },
+  "nativeOklch": {
+    "L": "integer 0..1000 = L/1000",
+    "C": "integer 0..4000 = C/10000",
+    "h": "signed millidegrees",
+    "gamut": "fixed L/h, chroma reduction to encoded sRGB"
+  },
+  "notes": [
+    "This is an authoring contract, not JSON Schema draft syntax.",
+    "Spatial composition is TypeScript; native color conversion and widget ABI are shared."
+  ]
+}

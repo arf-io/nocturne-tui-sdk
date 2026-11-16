@@ -1,0 +1,95 @@
+{
+  "schema": "nocturne.workbench-pointer-independent-verification.v1",
+  "at": "2026-10-15T07:15:30.892551+00:00",
+  "principal": "<account>",
+  "authority": "Direct operator original behavior restoration; parent test ownership. No operator signature claimed.",
+  "passed": true,
+  "releaseQualified": false,
+  "nativeMethods": 9,
+  "canonicalUnittestSeconds": 8.717,
+  "scope": "Three exact Workbench public gesture repairs plus protected primary/middle/prompt/modal behavior, clamps, cancel/up, banked-flight snapshot replay and late invalid batch. Actual WASM replays all8 behavior methods:22 contexts328 public calls34 whole-frame hashes6 snapshot hashes2 rejections. These are native/WASM parity; original5 source-renderer wholeframes retained but no new-native-to-old wholeframe equivalence claim.",
+  "original": {
+    "cases": 5,
+    "dependencyFiles": 34,
+    "allDependencyBytesMatchedRetainedOriginalNamedTipTrees": true,
+    "fixtureSha256": "e14578317a28cd9b5cec3c16ccc1a159c6465ca5f0ea45ae3a00cd28e46e9358"
+  },
+  "runtimes": [
+    {
+      "path": "<workspace>/wt-original-workbench-pointer-20261015/native/dist/libnocturne_native.dylib",
+      "sha256": "a8844154f69368fe28b3ea1fd3f0a717b84ef19490383fa6af4aa74d401a8ec0",
+      "bytes": 1544392
+    },
+    {
+      "path": "<workspace>/wt-original-workbench-pointer-20261015/native/dist/nocturne_native.wasm",
+      "sha256": "c4f480bd028fc78f5fbbadfd5663c7a2be3ba4c53f2d9c065f243ddc8d05942d",
+      "bytes": 1604679
+    }
+  ],
+  "testSources": [
+    {
+      "relativePath": "native/tests/test_workbench_pointer_preservation.py",
+      "sha256": "3aa0ab9d972359054a8989dad4cfc5b3b83526709b8747013d60eb2ba3c21cc6",
+      "bytes": 8437
+    },
+    {
+      "relativePath": "native/tests/workbench_pointer_trace.py",
+      "sha256": "452ca960383e9f9d3e30953ce9c3d20eadb8c31dd2fec288d315ebe22d6d08a7",
+      "bytes": 2196
+    },
+    {
+      "relativePath": "native/tests/original_workbench_pointer_wasm.mjs",
+      "sha256": "cd5468d58964ea1ef01ee3a35f2961308a20cb5fb2be78066d888229e11f0cf9",
+      "bytes": 1504
+    },
+    {
+      "relativePath": "native/tests/fixtures/original-workbench-pointer/ORIGINAL-GESTURE-ORACLE.json.gz",
+      "sha256": "e14578317a28cd9b5cec3c16ccc1a159c6465ca5f0ea45ae3a00cd28e46e9358",
+      "bytes": 61691
+    },
+    {
+      "relativePath": "native/tests/fixtures/original-workbench-pointer/PROVENANCE.json",
+      "sha256": "4d40fb7a1991c49fc775657e1f3f118d6370acbcced9998ad06f7dd7bddc3a71",
+      "bytes": 70244
+    },
+    {
+      "relativePath": "native/tests/fixtures/original-workbench-pointer/capture_original.mjs",
+      "sha256": "0ffb42a7958214b25c178eb7a1b450771252324c7084494826c32648ca3fbb6f",
+      "bytes": 3897
+    }
+  ],
+  "evidence": [
+    {
+      "path": "<workspace>/recovery-20261014/workbench-pointer-disposition-20261015/NATIVE-RED-01.log",
+      "sha256": "c339c1e3510025c528f763b11df11c6ce99c031554ca8637ab31dbe99c4600c4",
+      "bytes": 6859
+    },
+    {
+      "path": "<workspace>/recovery-20261014/workbench-pointer-disposition-20261015/NATIVE-EXPANDED-OLD-RUNTIME-RED-02.log",
+      "sha256": "f7c7eb1767b778341dc9a0677d7520511241bd58d0489e62626e361bfbaa29f6",
+      "bytes": 20774
+    },
+    {
+      "path": "<workspace>/recovery-20261014/workbench-pointer-disposition-20261015/NATIVE-GREEN-03.log",
+      "sha256": "018ec3abad2232c6cfde99ab019338d0ffcdfc6990348dbdb7831a1534c2faf9",
+      "bytes": 1426
+    },
+    {
+      "path": "<workspace>/recovery-20261014/workbench-pointer-disposition-20261015/WASM-PARITY-03.json",
+      "sha256": "b38695d2b6f183804a511289477a849b9e3f0db47e5b40b6f905c8f5ee6852cf",
+      "bytes": 555
+    },
+    {
+      "path": "<workspace>/recovery-20261014/workbench-pointer-disposition-20261015/CORRUPT-TRACE-NEGATIVE.log",
+      "sha256": "9f266f9ebcd06b868549551d2381e9a55c625faf3fd5dbeddc65006e44497634",
+      "bytes": 713
+    },
+    {
+      "path": "<workspace>/recovery-20261014/workbench-pointer-disposition-20261015/CANONICAL-NATIVE-WASM-GREEN-04.log",
+      "sha256": "c13db2d5d7f1dad86f83d70a7d32c573b6591087aa66fb45dff2d47c196f0db4",
+      "bytes": 1535
+    }
+  ],
+  "timingHonesty": "Original3-path RED preceded root C edits. Expanded lifecycle/clamp tests were authored after root began implementation and run first against unchanged retained old DSO, then new DSO. No altered test chronology claimed.",
+  "negativeControl": "Real WASM replay with one intentionally corrupted expected frame hash failed exit1 and produced no PASS result."
+}

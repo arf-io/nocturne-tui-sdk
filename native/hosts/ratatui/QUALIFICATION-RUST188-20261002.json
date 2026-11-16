@@ -1,0 +1,103 @@
+{
+  "schema": "nocturne.sdk.rustdoc188-qualification.v1",
+  "worktree": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+  "sourceHead": "9673524b57738146d50df903cbc85396f4022847",
+  "sourceStatus": "",
+  "rustcVersion": "rustc 1.88.0 (6b00bc388 2025-06-23)\nbinary: rustc\ncommit-hash: 6b00bc3880198600130e1cf62b8f8a93494488cc\ncommit-date: 2025-06-23\nhost: x86_64-unknown-linux-gnu\nrelease: 1.88.0\nLLVM version: 20.1.5",
+  "cargoVersion": "cargo 1.88.0 (873a06493 2025-05-10)",
+  "rustdocVersion": "rustdoc 1.88.0 (6b00bc388 2025-06-23)",
+  "toolchainArchiveSha256": "6f5e70d483a1252b007c6e4cea1c9faecb2f7f1546b2933ed01440a9a1e39792",
+  "sourceManifestSha256": "e0d149167f49b325319698cb212ec487455f73b3f494bd2d88b5d0d07d6fecb1",
+  "vendorArchiveSha256": "2ffeae783e93d4e023193c16d075150d06e972eabbdc1857c35d032fb7341fc9",
+  "vendorManifestSha256": "e7716a21f0afbf3062b7ee36fb473142bed0a35db88005d7e946f73025f6f66d",
+  "commandResults": [
+    {
+      "name": "all-targets",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSha256": "0be25e6077a1154fc6beee2335490d4e2f7c549a486c3abb4d191c979a4f203c"
+    },
+    {
+      "name": "docs",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSha256": "3e2d5546beaee1c28e3a5eec63b0174e66f1d56ade39ada99515b1a3ba3ad3b0"
+    },
+    {
+      "name": "doctests",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSha256": "a2da55b369932172e70f7ad21bb66c3c2bf0a4dcdad1c675526af998fa5df3ae"
+    },
+    {
+      "name": "metadata",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSha256": "4a3844bdc3f7597ae140d931e2371e1c78199bb6b52bd7cbfe37cdd5d1dcd253"
+    },
+    {
+      "name": "qualification-example",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSha256": "b69903cc66b1686e29fec378d403545beda2ec299c4d36648f1d26de6040ee9e"
+    }
+  ],
+  "ptyResults": [
+    {
+      "name": "pty-input-resize-ctrlq",
+      "status": "PASS",
+      "exitCode": 0,
+      "receiptSha256": "92b81814d369ce9ad800bdd59ce88a8ebafaeccd8fce95eb5d7b7dacc766290d",
+      "transcriptSha256": "1a13a368880bf79b457d74b976d8273c5dc4b4b7a4868901d5223e0368c6eb6d",
+      "traceSha256": "49d9a941375661446eb5a8225b0d4a6244239cad65abe8cb063790cd457def73",
+      "binarySha256": "dd3300001c2355c1879f41c84e7aa3855ae8f564ea99d6644871314c7b32c46a"
+    },
+    {
+      "name": "pty-pointer-focus",
+      "status": "PASS",
+      "exitCode": 0,
+      "receiptSha256": "8921615819296821c3d0841c7c3e3f7058fe7aa9fd3ba999ffe6233f75472d88",
+      "transcriptSha256": "c8a6b6790613935cbaba750f1d6646e9a2dce1c97a9399e71c4bbe5a4ff3705a",
+      "traceSha256": "ca8fa7667a8e56437117ed49249b91800fadd60c843f24aecbabc71c424c1eb8",
+      "binarySha256": "dd3300001c2355c1879f41c84e7aa3855ae8f564ea99d6644871314c7b32c46a"
+    },
+    {
+      "name": "pty-ctrlc",
+      "status": "PASS",
+      "exitCode": 0,
+      "receiptSha256": "bb4e25a619c967b1b83df73d09978da59a13f6c7d0baab8e730a6be4d4c0097d",
+      "transcriptSha256": "c5d970d67226db8914bc35cfc24217be96295e609fdb3684c7f5fc91b943d158",
+      "traceSha256": "3fe3c0aba0c2b95d319fb61bd572bd48dab10c183528c5587b2f40fee8fe8135",
+      "binarySha256": "dd3300001c2355c1879f41c84e7aa3855ae8f564ea99d6644871314c7b32c46a"
+    },
+    {
+      "name": "pty-error",
+      "status": "PASS",
+      "exitCode": 1,
+      "receiptSha256": "6fdf1ed06346e9fcc965e877ccf8300fe27c830b8e95d6e4435679adef65cb13",
+      "transcriptSha256": "94d51018714fbb09198eb4231ba768c3260a7c169e8f43bef4172f39753f2fab",
+      "traceSha256": "cbaaeb00e234fbf63ac05fcdf3224d5ee5b27e34efa340fbe7a8aadbb783fec0",
+      "binarySha256": "dd3300001c2355c1879f41c84e7aa3855ae8f564ea99d6644871314c7b32c46a"
+    },
+    {
+      "name": "pty-panic",
+      "status": "PASS",
+      "exitCode": 101,
+      "receiptSha256": "3bead92a73307ac9fbc6c2405d1e8df550a164df5fa7c49648eb048bda7a9b77",
+      "transcriptSha256": "372e57e47821308c8b81f11aea9440bbc67fcdfad5223edbec0b50127a0bb37b",
+      "traceSha256": "0bf405943b9bd1fe64de4729a25f2504960293b31be66b20910e9ea190184737",
+      "binarySha256": "dd3300001c2355c1879f41c84e7aa3855ae8f564ea99d6644871314c7b32c46a"
+    },
+    {
+      "name": "pty-partial-setup",
+      "status": "PASS",
+      "exitCode": 1,
+      "receiptSha256": "879f1ddbda2ef0f5973261df096322db911498a33f21188ae3a60b12ea606a3c",
+      "transcriptSha256": "0536a198d56009a20619f9ef39a8d0835309c5b6e4b7aef725617859f0dc53e9",
+      "traceSha256": "b35702dfa4d8dbe4a89ec2640efe878a479f33d8f28fd14af7f298e6af4ff6a2",
+      "binarySha256": "dd3300001c2355c1879f41c84e7aa3855ae8f564ea99d6644871314c7b32c46a"
+    }
+  ],
+  "status": "PASS",
+  "finishedAt": "2026-10-02T00:27:36.325938+00:00"
+}

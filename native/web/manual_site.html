@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nocturne SDK manual</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--ink:#dfd8c9;--action:#a3cabe;scrollbar-color:#2b3949 #0b1016}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-monospace,monospace}
+canvas{display:block;max-width:100%;margin:16px auto;cursor:pointer;outline-offset:4px}
+canvas:focus-visible{outline:2px solid var(--action)}
+.accessible{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:pre-wrap}
+#status.failure{position:static;width:auto;height:auto;clip-path:none;padding:16px}
+</style>
+<canvas tabindex="0" aria-label="Nocturne manual. Left and right change chapters. Page Up and Page Down change pages."></canvas>
+<nav class="accessible" aria-label="Manual navigation">
+<button id="previous-chapter" onclick="manualSite.previousChapter()">Previous chapter</button><button id="next-chapter" onclick="manualSite.nextChapter()">Next chapter</button>
+<button id="previous-page" onclick="manualSite.previousPage()">Previous page</button><button id="next-page" onclick="manualSite.nextPage()">Next page</button>
+<button data-widget="8" onclick="manualSite.contents()">Contents</button>
+</nav>
+<p id="status" class="accessible" role="status" aria-live="polite">Loading Nocturne manual</p>
+<article id="source" class="accessible" aria-label="Complete chapter source"></article>
+<nav id="references" class="accessible" aria-label="Chapter references"></nav>
+<noscript>This manual needs JavaScript and WebAssembly. Read native/docs/manual/README.md in the source SDK.</noscript>
+<script>
+@@BINDING@@
+const data=@@DATA@@,canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');
+const site={ready:false,scene:null,chapter:null,page:0,columns:100,regions:{},error:null,focusId:0,focusLink:''};window.manualSite=site;
+let chapterIndex=0,lines=[],pages=1;const rows=34,cw=10,ch=19;
+function targetChapter(target){
+ try{const url=new URL(target,'https://nocturne.invalid/'+site.chapter.sourcePath);if(url.origin!=='https://nocturne.invalid')return null;return data.chapters.find(c=>'/'+c.sourcePath===decodeURIComponent(url.pathname))||null;}catch{return null;}
+}
+function linkSpans(body){
+ const spans=[];for(const match of body.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)){
+  const target=targetChapter(match[2].replace(/\n/g,''));if(!target)continue;
+  spans.push({id:target.id,label:match[1].replace(/\n/g,''),start:Array.from(body.slice(0,match.index)).length,end:Array.from(body.slice(0,match.index+match[0].length)).length});
+ }return spans;
+}
+function fail(message){site.error=message;const status=document.querySelector('#status');status.textContent=message;status.classList.add('failure');}
+function wrapped(source,width){
+ const output=[];
+ for(const line of source.split('\n')){
+  const scalars=Array.from(line);if(!scalars.length)output.push('');
+  for(let i=0;i<scalars.length;i+=width)output.push(scalars.slice(i,i+width).join(''));
+ }return output;
+}
+function paint(){
+ const frame=site.scene.render();canvas.width=frame.width*cw;canvas.height=frame.height*ch;
+ const words=frame.cells;ctx.font='14px ui-monospace, monospace';ctx.textBaseline='top';
+ const color=value=>'#'+value.toString(16).padStart(6,'0');
+ for(let y=0;y<frame.height;y++)for(let x=0;x<frame.width;x++){
+  const i=(y*frame.width+x)*4;ctx.fillStyle=color(words[i+2]);ctx.fillRect(x*cw,y*ch,cw,ch);
+  if(words[i]){ctx.fillStyle=color(words[i+1]);ctx.fillText(String.fromCodePoint(words[i]),x*cw,y*ch);}
+ }
+}
+function draw(){
+ lines=wrapped(site.chapter.source,site.columns-4);pages=Math.max(1,Math.ceil(lines.length/24));site.page=Math.min(site.page,pages-1);
+ const body=lines.slice(site.page*24,(site.page+1)*24).join('\n');site.links=linkSpans(site.chapter.source);site.visibleLinks=[];
+ const spans=linkSpans(body);let offset=0;
+ body.split('\n').forEach((line,row)=>{const length=Array.from(line).length;for(const span of spans){if(span.start>=offset&&span.start<offset+length)site.visibleLinks.push({...span,x:(2+span.start-offset+.5)*cw,y:(6+row+.5)*ch});}offset+=length+1;});
+ site.pageLinkSpans=spans;site.body=body;
+ const quarter=Math.floor(site.columns/4),commands=[{op:'resize',width:site.columns,height:rows},
+  {op:'widget',id:1,kind:'text',x:2,y:1,width:site.columns-4,height:1,text:'NOCTURNE SDK / '+site.chapter.title,alpha:1,material:1},
+  {op:'widget',id:6,kind:'text',x:2,y:6,width:site.columns-4,height:24,text:body,alpha:1,material:1},
+  {op:'widget',id:7,kind:'text',x:2,y:32,width:site.columns-4,height:1,text:'Chapter '+(chapterIndex+1)+'/'+data.chapters.length+'  Page '+(site.page+1)+'/'+pages,alpha:1,material:2},
+  {op:'widget',id:8,kind:'button',x:2,y:30,width:20,height:1,text:'Contents (Home)',alpha:1,material:2,selected:site.focusId===8},
+  {op:'widget',id:9,kind:'text',x:2,y:31,width:site.columns-4,height:1,text:site.focusLink?'Link: '+site.focusLink:'',alpha:1,material:2}];
+ const controls=[['previousChapter','< Chapter'],['nextChapter','Chapter >'],['previousPage','< Page'],['nextPage','Page >']];
+ controls.forEach(([name,label],i)=>{commands.push({op:'widget',id:i+2,kind:'button',x:i*quarter,y:3,width:quarter,height:2,text:label,alpha:1,material:2,selected:site.focusId===i+2});site.regions[name]={x:(i*quarter+quarter/2)*cw,y:4*ch};});
+ site.scene.command({op:'batch',commands});paint();
+ document.querySelector('#source').textContent=site.chapter.source;
+ const references=document.querySelector('#references');
+ if(references.dataset.chapter!==site.chapter.id){
+  references.dataset.chapter=site.chapter.id;references.replaceChildren();
+  for(const link of site.links){const anchor=document.createElement('a');anchor.href='#'+link.id;anchor.textContent=link.label;
+   anchor.onfocus=()=>{const all=wrapped(site.chapter.source,site.columns-4).join('\n'),span=linkSpans(all).find(s=>s.id===link.id&&s.label===link.label);
+    if(span){const row=Array.from(all).slice(0,span.start).join('').split('\n').length-1;site.page=Math.floor(row/24);}
+    site.focusLink=link.label;site.focusId=0;draw();};
+   references.append(anchor,document.createTextNode(' '));
+  }
+ }
+ document.querySelector('#status').textContent=site.chapter.title+', page '+(site.page+1)+' of '+pages;
+ document.querySelector('#previous-page').disabled=site.page===0;document.querySelector('#next-page').disabled=site.page===pages-1;
+}
+function chapter(delta){chapterIndex=(chapterIndex+delta+data.chapters.length)%data.chapters.length;site.page=0;location.hash=data.chapters[chapterIndex].id;adopt();}
+function page(delta){site.page=Math.max(0,Math.min(pages-1,site.page+delta));draw();}
+function contents(){site.page=0;location.hash='contents';adopt();}
+function adopt(){
+ const id=location.hash.slice(1)||data.chapters[0].id,index=data.chapters.findIndex(c=>c.id===id);
+ if(index<0){fail('Unknown chapter: '+id+'. Use the chapter controls to return to the manual.');return;}
+ if(site.chapter?.id!==id){site.page=0;site.focusLink='';}
+ chapterIndex=index;site.chapter=data.chapters[index];site.error=null;document.querySelector('#status').classList.remove('failure');draw();
+}
+site.previousChapter=()=>chapter(-1);site.nextChapter=()=>chapter(1);site.previousPage=()=>page(-1);site.nextPage=()=>page(1);
+site.contents=contents;
+document.querySelectorAll('nav button').forEach((button,index)=>{button.onfocus=()=>{site.focusLink='';site.focusId=Number(button.dataset.widget)||index+2;if(site.ready)draw();};button.onblur=()=>{site.focusId=0;if(site.ready)draw();};});
+canvas.onclick=event=>{const box=canvas.getBoundingClientRect(),x=(event.clientX-box.left)*canvas.width/box.width,y=(event.clientY-box.top)*canvas.height/box.height;if(y>=3*ch&&y<5*ch){const action=Math.floor(x/(Math.floor(site.columns/4)*cw));[()=>chapter(-1),()=>chapter(1),()=>page(-1),()=>page(1)][action]?.();return;}
+ if(y>=30*ch&&y<31*ch&&x>=2*cw&&x<22*cw){contents();return;}
+ const row=Math.floor(y/ch)-6,column=Math.floor(x/cw)-2,bodyLines=site.body.split('\n');if(row<0||row>=bodyLines.length||column<0||column>=Array.from(bodyLines[row]).length)return;
+ const index=bodyLines.slice(0,row).reduce((sum,line)=>sum+Array.from(line).length+1,0)+column,link=site.pageLinkSpans.find(span=>index>=span.start&&index<span.end);if(link)location.hash=link.id;
+};
+window.addEventListener('keydown',event=>{const action={ArrowLeft:()=>chapter(-1),ArrowRight:()=>chapter(1),PageUp:()=>page(-1),PageDown:()=>page(1),Home:contents}[event.key];if(action&&site.ready){event.preventDefault();action();}});
+window.addEventListener('hashchange',()=>{if(site.ready)adopt();});
+window.addEventListener('resize',()=>{if(site.ready){site.columns=Math.max(32,Math.min(100,Math.floor(innerWidth/cw)));draw();}});
+(async()=>{try{
+ const bytes=Uint8Array.from(atob('@@WASM@@'),c=>c.charCodeAt(0));
+ const hash=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(value=>value.toString(16).padStart(2,'0')).join('');
+ const digest=await hash(bytes);
+ if(digest!==data.wasmSha256)throw Error('Embedded runtime identity differs from the recorded WASM');
+ site.runtimeVerified=true;
+ const ids=new Set(),paths=new Set();
+ for(const chapter of data.chapters){
+  if(ids.has(chapter.id)||paths.has(chapter.sourcePath)||await hash(new TextEncoder().encode(chapter.source))!==chapter.sha256)throw Error('Embedded chapter identity differs: '+chapter.id);
+  ids.add(chapter.id);paths.add(chapter.sourcePath);
+ }
+ site.contentVerified=true;site.scene=await NativeScene.create(bytes,2030);
+ site.scene.command({op:'batch',commands:[{op:'prompt',active:false},{op:'environment',background:0x0b1016,stars:0,style:'solid'},
+  {op:'material',id:1,space:'rgb',channels:{r:223/255,g:216/255,b:201/255}},
+  {op:'material',id:2,space:'rgb',channels:{r:163/255,g:202/255,b:190/255}}]});
+ site.columns=Math.max(32,Math.min(100,Math.floor(innerWidth/cw)));site.ready=true;adopt();canvas.focus();
+ }catch(error){fail('Manual could not load: '+error.message);}})();
+</script></html>

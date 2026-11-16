@@ -1,0 +1,9 @@
+[package]
+name = "nocturne-surfaces"
+version = "0.4.0"
+edition = "2021"
+description = "Rust facade for the deterministic Nocturne terminal material kernel"
+build = "build.rs"
+
+[lib]
+path = "src/lib.rs"

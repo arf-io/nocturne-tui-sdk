@@ -1,0 +1,12 @@
+{
+  "schema": "0x20261097",
+  "sourceCommit": "9aa27afd15b8a6e7b7041ae8b5255d7333812a63",
+  "runtimeSha256": "fad68b362fd7dc057bc66b7fd608d70f549f1d496a42b1666d5c4b7a11427f6a",
+  "snapshotSha256": "c166e1ac9d8d95766244451c1a2974e1f7cf32bb659242dd9992c1cb9c6cbdc7",
+  "frameSha256": "5a95b978050e95889009e2747dcf59023490b61411e724192ca28d69bea11c8e",
+  "scene": "composite + tidepool (full viewport)",
+  "timeUs": 2000000,
+  "promptText": "stream the agent window",
+  "weatherEvents": 23,
+  "actualRuntimeExecution": true
+}

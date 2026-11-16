@@ -1,0 +1,801 @@
+{
+ "method": "NativeScene(seed=2030); resize 160x48; recipe commands from native/recipes.json (pending loop); optional environment command; advance_to(timeUs); sha256 of render().bytes. tinted = background max-min channel > 40; braille = glyph U+2800..U+28FF.",
+ "base": {
+  "sourceCommit": "0edf36f805fe79e35569f915eb026fbf831ac4d7",
+  "frames": {
+   "autumn@2000000": {
+    "sha256": "66d7a847177fae4c0b93480e615a6bbc5d1c55ecdd8156f36443b1db1127db66",
+    "tinted": 9,
+    "braille": 121
+   },
+   "autumn@30000000": {
+    "sha256": "4b483eb25bf37341a126d12315df83f444da7d4d964c17b4f0d4bed933c193ed",
+    "tinted": 85,
+    "braille": 511
+   },
+   "rain@2000000": {
+    "sha256": "4675677849e331c903d90d97a09c2ef32f8fd70ef215f403a5c65b3264ec420e",
+    "tinted": 0,
+    "braille": 449
+   },
+   "rain@30000000": {
+    "sha256": "1f17c0ef4e3abc5db15c1761ad4ddb023464ecb49285af6879a0f96bb54a83e9",
+    "tinted": 0,
+    "braille": 32
+   },
+   "snow@2000000": {
+    "sha256": "6a57ba5328fd38b2f72d971ff84b6e3a6af9072fdd03e374494c7af26baf9d12",
+    "tinted": 0,
+    "braille": 151
+   },
+   "snow@30000000": {
+    "sha256": "f4f0b18849ded9fdf5820dfa049d8fd7324b157e8f743c9fbaffae648cd59ccb",
+    "tinted": 0,
+    "braille": 385
+   },
+   "embers@2000000": {
+    "sha256": "aba1e1a54964fa314ab430dde7fe895a93a9916b7b100fd28bc4b9ccd4d6b2c0",
+    "tinted": 9,
+    "braille": 69
+   },
+   "embers@30000000": {
+    "sha256": "841b987d07dbff6247a927ac6e49cf4f08404a98f1e505639a18649b81535c6b",
+    "tinted": 14,
+    "braille": 49
+   },
+   "chrysanthemum@2000000": {
+    "sha256": "d74ddd2e97e3bce10e25f3827272ca2cd9cab4336021c07704f520cc58b7cbfc",
+    "tinted": 0,
+    "braille": 95
+   },
+   "chrysanthemum@30000000": {
+    "sha256": "fa981db2f715f51200a7a0e8f816755c65e108479c6dde2c434764869412058a",
+    "tinted": 0,
+    "braille": 32
+   },
+   "shell@2000000": {
+    "sha256": "4c17a3c70fbe8faa2b4036df0b259435b208f2af87bb57b3972470a704b2667c",
+    "tinted": 0,
+    "braille": 337
+   },
+   "shell@30000000": {
+    "sha256": "73ae04f4ef1c2fa5d524429eed1797467184517c3d8637a540fcb3551fc766aa",
+    "tinted": 0,
+    "braille": 33
+   },
+   "arcs@2000000": {
+    "sha256": "b7fa3250567aff1cf19f21a6e6d4a2daf8ebf6f03652cfae1e10f1f52816c47e",
+    "tinted": 0,
+    "braille": 96
+   },
+   "arcs@30000000": {
+    "sha256": "66579aba25282fee5befd992349042b1bf0f76b4cf8a2dee7adf13de5eab849a",
+    "tinted": 0,
+    "braille": 32
+   },
+   "silk@2000000": {
+    "sha256": "c46448fa5c7a3fc6dd8b4afd6a5c6c6b584f5b663e170e62e16c4318042b9718",
+    "tinted": 0,
+    "braille": 668
+   },
+   "silk@30000000": {
+    "sha256": "016b9e11dcac5c4ea973c4b9b87c067c3ee471e6d1cd1bc0cc2dc430fdbbfe1c",
+    "tinted": 0,
+    "braille": 31
+   },
+   "flight@2000000": {
+    "sha256": "7f9cd65a37aff67d2970dcc97df838fd27b28eceb30c58dc4731a3e489505dd3",
+    "tinted": 0,
+    "braille": 97
+   },
+   "flight@30000000": {
+    "sha256": "e8124a43e02bf6c324993a035c8c1548ce12d8bf336406fdac00e5ea9d6ad28f",
+    "tinted": 0,
+    "braille": 97
+   },
+   "text@2000000": {
+    "sha256": "40b58f9a907183f65a6600d0f3dc66fe5cc333fddc4788721fbddc3a3eb29b71",
+    "tinted": 0,
+    "braille": 32
+   },
+   "text@30000000": {
+    "sha256": "b481fe69539ec4f65004e57233bda8ec09b61973d7a9c14d20afb56b5fc07d7b",
+    "tinted": 0,
+    "braille": 32
+   },
+   "windows@2000000": {
+    "sha256": "9133f4daa00a6d853f3d73e1e37acb6aaebf7b8152ca85bc28dea374b99f28d2",
+    "tinted": 39,
+    "braille": 37
+   },
+   "windows@30000000": {
+    "sha256": "fced17053638745905985e0f2c3b8971555f2153eaa3f445c50f67930dfd3b6e",
+    "tinted": 56,
+    "braille": 37
+   },
+   "work-graph@2000000": {
+    "sha256": "a736663a8e0cc2a02f142b0944d9536e4061f6682135e5e7d73f7164144cd110",
+    "tinted": 0,
+    "braille": 61
+   },
+   "work-graph@30000000": {
+    "sha256": "39636dfa7cab7a2f03e17c9330cfe00ba926b606f236b20442b3bee2f975851c",
+    "tinted": 0,
+    "braille": 61
+   },
+   "git@2000000": {
+    "sha256": "0974affe1b8fd113c1f4acaaf912255fd07909f57bbb870093656f62406e13c6",
+    "tinted": 0,
+    "braille": 73
+   },
+   "git@30000000": {
+    "sha256": "968cb0efa2c607fe650943f9ab9f613198d1116c63daacfaec90916904828466",
+    "tinted": 0,
+    "braille": 73
+   },
+   "status@2000000": {
+    "sha256": "804b559d1791c55e7e6074a6e7b054deb701637ba633466231c25ef8e8084d12",
+    "tinted": 0,
+    "braille": 16
+   },
+   "status@30000000": {
+    "sha256": "6b299deee5eda8493ad0c21074d47755b00c8a5873525b085654e484b08f2983",
+    "tinted": 0,
+    "braille": 16
+   },
+   "instruments@2000000": {
+    "sha256": "e02473b44175626b44164a051ea946a1cf0cb68d620c4a1a5dfee5c7e4ed16f1",
+    "tinted": 0,
+    "braille": 827
+   },
+   "instruments@30000000": {
+    "sha256": "92e3ad852ac855303e9c69572b8b889f2c9ad5e9dd9455dc566d0592a691077f",
+    "tinted": 1,
+    "braille": 827
+   },
+   "notifications@2000000": {
+    "sha256": "0aa2fdbfab39f26655db8ff40e01bb3133a2edecdfb1c5f16a4cb71db3323268",
+    "tinted": 0,
+    "braille": 16
+   },
+   "notifications@30000000": {
+    "sha256": "95c15e283cb2d3702b3301fc36f1827fcc7784817388ca8adce13fc77f5ee94e",
+    "tinted": 0,
+    "braille": 16
+   },
+   "pearl-curves@2000000": {
+    "sha256": "c1f7408b80ad40ef58fefbeeca01835b5764c3f1a7f110316618274f989aa0f6",
+    "tinted": 0,
+    "braille": 1019
+   },
+   "pearl-curves@30000000": {
+    "sha256": "33520bd526a0157871b3257acae0be9a427e90716d449b4b2eb4c45f5e37cbf9",
+    "tinted": 0,
+    "braille": 1019
+   },
+   "leaf-anatomy@2000000": {
+    "sha256": "04664a2d437d7e438ea6b1f2c068e1c374ca0bb2cce5d1ec7071b7f1974e995e",
+    "tinted": 0,
+    "braille": 321
+   },
+   "leaf-anatomy@30000000": {
+    "sha256": "4dc988d59e7bbed492c5c19c7e0eb959aa0c3d505f4b412fa23ebb2e3467c0db",
+    "tinted": 0,
+    "braille": 321
+   },
+   "mixed-materials@2000000": {
+    "sha256": "e42793cd82f5e214e5de96a93c1dbc801451105bdbd1428d5ea5eba33e5396d5",
+    "tinted": 262,
+    "braille": 439
+   },
+   "mixed-materials@30000000": {
+    "sha256": "2b7d288c9c5a5b6da2d619b7ba6f836d12cc580893916aefcec13ce2a9147c46",
+    "tinted": 252,
+    "braille": 439
+   },
+   "condition-console@2000000": {
+    "sha256": "c210396e377384d648c7770715981b8b2754afb0a78da07cd8a2103b285936d2",
+    "tinted": 0,
+    "braille": 129
+   },
+   "condition-console@30000000": {
+    "sha256": "cfcc61d47e733e0593dd0f35c98b4a88dccb0114a1fe3a7e1312545ba7fa1250",
+    "tinted": 0,
+    "braille": 129
+   },
+   "weather-authoring@2000000": {
+    "sha256": "bfb57e023886b7eca0562680cf35b118f1d391c86c9bc4e12cbea026d4ebb98e",
+    "tinted": 0,
+    "braille": 61
+   },
+   "weather-authoring@30000000": {
+    "sha256": "cec686b98e239d31319585f1d5f497982b43f535cdb598f6416014a41f0454de",
+    "tinted": 0,
+    "braille": 29
+   },
+   "selector-studio@2000000": {
+    "sha256": "e3354878c7a2d1db9796f622da81a6605e041d4fda7dbdda6316e956b0429284",
+    "tinted": 47,
+    "braille": 14
+   },
+   "selector-studio@30000000": {
+    "sha256": "f7bc760953aa6bb93fef4493b205d10d036f90dc17fd6bd8a75dc15c17e9051c",
+    "tinted": 47,
+    "braille": 14
+   },
+   "task-graph@2000000": {
+    "sha256": "d5c7c5e36d99c3405981f189924354332a21997ae4476569a815a661a8e6186d",
+    "tinted": 0,
+    "braille": 97
+   },
+   "task-graph@30000000": {
+    "sha256": "1463980a01d749e41f6ba643cc31e3e553b2708530bb3069412f567d8875bc82",
+    "tinted": 0,
+    "braille": 97
+   },
+   "surface-lab@2000000": {
+    "sha256": "3d2194e617bd4a44c290b57083f0dc11cff141cf9afd6cd1bb8103fafcd2f5fe",
+    "tinted": 8,
+    "braille": 54
+   },
+   "surface-lab@30000000": {
+    "sha256": "d9965b0cdc56fb4850e2dc6f2ad8ed03213069c66b078f60594810f8dde03bbf",
+    "tinted": 96,
+    "braille": 44
+   },
+   "chrysanthemum-generic@2000000": {
+    "sha256": "430599bc7f7f8a964082f381d445c58fc9ce1dd85e07b548d4e2de0f5e566229",
+    "tinted": 0,
+    "braille": 513
+   },
+   "chrysanthemum-generic@30000000": {
+    "sha256": "fa981db2f715f51200a7a0e8f816755c65e108479c6dde2c434764869412058a",
+    "tinted": 0,
+    "braille": 32
+   },
+   "arcs-generic@2000000": {
+    "sha256": "eee2c537ab9b7a57aa720ab6abc60ea19374e816a100bdef7606c2d03662fbd5",
+    "tinted": 0,
+    "braille": 32
+   },
+   "arcs-generic@30000000": {
+    "sha256": "66579aba25282fee5befd992349042b1bf0f76b4cf8a2dee7adf13de5eab849a",
+    "tinted": 0,
+    "braille": 32
+   },
+   "flight-eased@2000000": {
+    "sha256": "7354ea95ba77c5c8949cb7306a60306c9e6cf57711edf9ef9f6f5d3fceb7d48c",
+    "tinted": 0,
+    "braille": 75
+   },
+   "flight-eased@30000000": {
+    "sha256": "a3f4d05c58c1beeeb4ae8196d9527c2a0439b62cfa793094941b99cc559f7d79",
+    "tinted": 0,
+    "braille": 81
+   },
+   "flight-banked@2000000": {
+    "sha256": "94ba65d655dfe8737e6fc982ef7b80e3ffce38f069062d6ecdef0eca563e1266",
+    "tinted": 0,
+    "braille": 119
+   },
+   "flight-banked@30000000": {
+    "sha256": "aa058508ae0f1166198ad235c4222b33b9da12b7f375ffb2cb7fb4bd27f5fbbd",
+    "tinted": 0,
+    "braille": 46
+   },
+   "flight-flat@2000000": {
+    "sha256": "97cd574f93a60d29abe57f50cd7dc60710cbd74ad5872f40aae56855eddc83e7",
+    "tinted": 0,
+    "braille": 142
+   },
+   "flight-flat@30000000": {
+    "sha256": "5e01ff12165f8ce8ee1a6dbd9cb389c582e11051c2be03c60cdbbe1b4251ce76",
+    "tinted": 0,
+    "braille": 32
+   },
+   "flight-climb-roll-dive@2000000": {
+    "sha256": "0a4a4fe37ac5af204df9a64ca35a9f07fc92b516364e8a6861e53536dae09c58",
+    "tinted": 0,
+    "braille": 75
+   },
+   "flight-climb-roll-dive@30000000": {
+    "sha256": "91ed7ec8d647b67c3ec7ca37a5cc3dabd308cd195d5e5bcb7f2b1ce53d5f9fff",
+    "tinted": 0,
+    "braille": 32
+   }
+  }
+ },
+ "prototypes": {
+  "tintCommit": "05c7013144f4f7f9251cfdbee04cc4fb9fd365ca",
+  "mergeCommit": "59a8f067e4559c7100730f4095cc61675f780090",
+  "note": "Built from 05c70131 (which contains 59a8f067) with NOCTURNE_MERGE_OCCLUDED=1 and/or NOCTURNE_OCCLUDED_TINT=s; only frames that differ from base are listed.",
+  "variants": {
+   "merge": {
+    "environment": {
+     "occludedDots": "merge"
+    },
+    "frames": {
+     "autumn@2000000": {
+      "sha256": "dd8ae6d54e4e31e3ce4db63f35700675fc36c78b21fe55bfab6598ab38d3a898",
+      "tinted": 0,
+      "braille": 121
+     },
+     "autumn@30000000": {
+      "sha256": "6137c02732a96361d1d8ea98c3b08160ce91749ed5dc52f2f2929e07235a6c33",
+      "tinted": 2,
+      "braille": 511
+     },
+     "rain@2000000": {
+      "sha256": "193b8dfec5e8a8114274e9072669d83b9042bb9126516f719ba8f93ab815485b",
+      "tinted": 0,
+      "braille": 449
+     },
+     "snow@2000000": {
+      "sha256": "dccf62fc9216ba105541a79fdc654b3e4590ba8db7e532fd46513742ce948b35",
+      "tinted": 0,
+      "braille": 151
+     },
+     "snow@30000000": {
+      "sha256": "4be9b39cfe349c98dcfb50a2fbdca7815c50490b442ba44def69463aa00d7752",
+      "tinted": 0,
+      "braille": 385
+     },
+     "embers@2000000": {
+      "sha256": "3c49fdf1cb7dec624eca8b77e13b08e3913891ed7b12b1ce5dbfa695aa41cd9e",
+      "tinted": 0,
+      "braille": 69
+     },
+     "embers@30000000": {
+      "sha256": "1b42f563595a88e58496c531c65762a7a97b06200c9dfbc464351024eff855e9",
+      "tinted": 9,
+      "braille": 49
+     },
+     "shell@2000000": {
+      "sha256": "a3d63bd817efc0b21d9eb8c513760a689368af7ef0273d0cb2bae02ddfd81f7b",
+      "tinted": 0,
+      "braille": 337
+     },
+     "work-graph@2000000": {
+      "sha256": "96603cbac949a67f51aa6bb83b91edea15f22eaa9a2a37c63e36ee5a1c261390",
+      "tinted": 0,
+      "braille": 61
+     },
+     "work-graph@30000000": {
+      "sha256": "22685336c2531b5d2e2990564351c1a856a5aeaba168d7fc65da8dae1c3e81ba",
+      "tinted": 0,
+      "braille": 61
+     },
+     "git@2000000": {
+      "sha256": "c37c5d090fccdcaf92108c3347725cf8ce3a134bdce9535d3f2d8748211378b8",
+      "tinted": 0,
+      "braille": 73
+     },
+     "git@30000000": {
+      "sha256": "f66c5be1240a0a3279f65f46dc39f0e9d6c540d75b3c97905ba89ff617a84930",
+      "tinted": 0,
+      "braille": 73
+     },
+     "weather-authoring@2000000": {
+      "sha256": "fd4b1c81a3e0be3caa569f4c3ae0f15e304fc0ec473c0e787c4946c567088115",
+      "tinted": 0,
+      "braille": 61
+     },
+     "task-graph@2000000": {
+      "sha256": "9da3522456714cc7c032328042f1a8c097f8475fec25e0056c211f536061282d",
+      "tinted": 0,
+      "braille": 97
+     },
+     "task-graph@30000000": {
+      "sha256": "b58ce2414682530839615904a1b17effdf7279d959d86d52c793117cb7a8440d",
+      "tinted": 0,
+      "braille": 97
+     },
+     "surface-lab@2000000": {
+      "sha256": "7b99d9e8cef54b2a2c5dbc9bd2340c9764b5080da5914d842444ee05dc31a0ae",
+      "tinted": 3,
+      "braille": 54
+     },
+     "surface-lab@30000000": {
+      "sha256": "1d99c735129fcaa5b542ff5cdb100bd826238e81155684778248346ef7312fc5",
+      "tinted": 96,
+      "braille": 44
+     },
+     "chrysanthemum-generic@2000000": {
+      "sha256": "223f2786775c0a4472136c6575a210f5e5eea211bf0ca285c9f6ac1a0bfc608d",
+      "tinted": 0,
+      "braille": 513
+     }
+    }
+   },
+   "tint-0.35": {
+    "environment": {
+     "occlusionTint": 0.35
+    },
+    "frames": {
+     "autumn@2000000": {
+      "sha256": "702883e7e93348ba45b51d316f98fc5b1900613bb15977d1fdec239c672209c4",
+      "tinted": 0,
+      "braille": 121
+     },
+     "autumn@30000000": {
+      "sha256": "9302924055a8b879054905ac0907187e3ad459fde730f2fd812c0661bb62372a",
+      "tinted": 0,
+      "braille": 511
+     },
+     "rain@2000000": {
+      "sha256": "56014c112bd5b2b095bba7860510e4b59dd39d05a580f7cb0be2a0bd88a4b408",
+      "tinted": 0,
+      "braille": 449
+     },
+     "snow@2000000": {
+      "sha256": "3d6132c6fbb48808c7e88c21cf34d4d88486d1ec8f89c08db89f26e6ddf005e3",
+      "tinted": 0,
+      "braille": 151
+     },
+     "snow@30000000": {
+      "sha256": "88151246fd26d83f0201ec304e156269bbce95a201fdf2a9d96bf81f5f790c18",
+      "tinted": 0,
+      "braille": 385
+     },
+     "embers@2000000": {
+      "sha256": "7e510a1c23fb0698f245fb8aea69ca33cda0fa2d5c97cd9baa36b878e861d023",
+      "tinted": 0,
+      "braille": 69
+     },
+     "embers@30000000": {
+      "sha256": "d238ddd376723a22658706071018f9ccc5bb8a3ab78b1147d4f9dcb3f34a9eb2",
+      "tinted": 13,
+      "braille": 49
+     },
+     "shell@2000000": {
+      "sha256": "9d7575e132f0ea4d65f387aa60dba87ea24924ebd720e14a3ae58028bb3b6a45",
+      "tinted": 0,
+      "braille": 337
+     },
+     "work-graph@2000000": {
+      "sha256": "a12a4a606bc189df0876c5bed582479e5d2a8e09188485eb299c796d513214e2",
+      "tinted": 0,
+      "braille": 61
+     },
+     "work-graph@30000000": {
+      "sha256": "e19bf83bd75cb912f1792c5e224fb11ec81308b56aeb85fd44be9bee89fe7cfb",
+      "tinted": 0,
+      "braille": 61
+     },
+     "git@2000000": {
+      "sha256": "2d1bcbc79f7b0fc6a970a55d659486e896095959f287c7593f4cb926799de449",
+      "tinted": 0,
+      "braille": 73
+     },
+     "git@30000000": {
+      "sha256": "e9252668ec81afd9fd8a6acaa17ae08da744061259f81daa92c6bb5c17b033ed",
+      "tinted": 0,
+      "braille": 73
+     },
+     "weather-authoring@2000000": {
+      "sha256": "a129d0fb25d74fb39452dee559781b561b460aed8e4fd5c9d3a637e88d55bfbc",
+      "tinted": 0,
+      "braille": 61
+     },
+     "task-graph@2000000": {
+      "sha256": "d225e4528602dadedac0a85a658f9f8f6c3913063cc2781338a68106e0feaf7b",
+      "tinted": 0,
+      "braille": 97
+     },
+     "task-graph@30000000": {
+      "sha256": "33d1bbb635eefc6e7eb41431d6f548b64c2ae8e7f896023af94491610c5f06e5",
+      "tinted": 0,
+      "braille": 97
+     },
+     "surface-lab@2000000": {
+      "sha256": "b8941ac9262e2afd9cca3ba5bee3051c7ef02a8f06490715d8a40e2fd559e37a",
+      "tinted": 3,
+      "braille": 54
+     },
+     "surface-lab@30000000": {
+      "sha256": "d33890827e5bb33e6697444ac239405be044fa95cfd385e9e7162a3823d99396",
+      "tinted": 96,
+      "braille": 44
+     },
+     "chrysanthemum-generic@2000000": {
+      "sha256": "a137bde4823ec7252a582985cdee37b3849e6aa31640e3a382794ef0cca146b6",
+      "tinted": 0,
+      "braille": 513
+     }
+    }
+   },
+   "tint-0.6": {
+    "environment": {
+     "occlusionTint": 0.6
+    },
+    "frames": {
+     "autumn@2000000": {
+      "sha256": "6d044a2af31c4676905506e1ce7c11eff67a49b0306d63202c872c29d0b41977",
+      "tinted": 2,
+      "braille": 121
+     },
+     "autumn@30000000": {
+      "sha256": "bd03d9ba231a713fda21d5734c9603c842497cb92258cc4a9b0574b004ffe184",
+      "tinted": 27,
+      "braille": 511
+     },
+     "rain@2000000": {
+      "sha256": "d7d066b09d257a5da40bd342eac80081900f82d2d338900b8519af8dd09b0c8f",
+      "tinted": 0,
+      "braille": 449
+     },
+     "snow@2000000": {
+      "sha256": "5e1a4425f8a80ca87aa42558b5010e5bb9eec2deed6b4e36b8375f4264c94a78",
+      "tinted": 0,
+      "braille": 151
+     },
+     "snow@30000000": {
+      "sha256": "2e1da0a1b8afb1606f877f781ff12c332cf294d1b619bc34e39d2a2610253199",
+      "tinted": 0,
+      "braille": 385
+     },
+     "embers@2000000": {
+      "sha256": "17ea61b902c8d981e8424dc89f9869a5f94e2c2f67cc115769ea60851ed2b4b1",
+      "tinted": 0,
+      "braille": 69
+     },
+     "embers@30000000": {
+      "sha256": "818631017a1bc82ea401abae6d97e1e31da196b6472a8df61dfa7c3a66f98fef",
+      "tinted": 13,
+      "braille": 49
+     },
+     "shell@2000000": {
+      "sha256": "6b15566b1efe88501775afae436594d6893069f0d815ddfc2303cdde530948db",
+      "tinted": 0,
+      "braille": 337
+     },
+     "work-graph@2000000": {
+      "sha256": "0b2ae1f3060e0da46960e2b02895a3223d628b37f798fe98795fd93ab4087122",
+      "tinted": 0,
+      "braille": 61
+     },
+     "work-graph@30000000": {
+      "sha256": "41a73133e42d62ed973ab86cb6cb01704237668d261dbadfc2d3cc61ffa6f79d",
+      "tinted": 0,
+      "braille": 61
+     },
+     "git@2000000": {
+      "sha256": "4b2fdfbdcef976d3104d2797a26025dea0b982802087e3f958419fe674dcf3c3",
+      "tinted": 0,
+      "braille": 73
+     },
+     "git@30000000": {
+      "sha256": "a29d2521965d0c1fe1d834bd4808295f1bf3613b472f65ed0ea8fdee55bd4fc7",
+      "tinted": 0,
+      "braille": 73
+     },
+     "weather-authoring@2000000": {
+      "sha256": "dcdc719dea04eba0f7ad36e1f1a926316c0f5dc2f433167cba48ce7c44b508b9",
+      "tinted": 0,
+      "braille": 61
+     },
+     "task-graph@2000000": {
+      "sha256": "97af7910281eed9f30194259e689cfc890b72c181b74e239d879c2c2d2c1ae30",
+      "tinted": 0,
+      "braille": 97
+     },
+     "task-graph@30000000": {
+      "sha256": "c20e20d46a90e8d5bca6a17aa956083d2efa510e570c9102406bc41be37dc4f4",
+      "tinted": 0,
+      "braille": 97
+     },
+     "surface-lab@2000000": {
+      "sha256": "196c243a30f1495e06730e2afdc567367882fd83c2ba2993d1d39d737f6ffa32",
+      "tinted": 3,
+      "braille": 54
+     },
+     "surface-lab@30000000": {
+      "sha256": "13a78f6a873c71b2fd3fc2eec5d6465509e1a7e864527b001e321ce63cd58aa3",
+      "tinted": 96,
+      "braille": 44
+     },
+     "chrysanthemum-generic@2000000": {
+      "sha256": "44eaeed4a13a917ab78f9bbb4db42688ce577dcd480aa8fb661ed81771c7b537",
+      "tinted": 0,
+      "braille": 513
+     }
+    }
+   },
+   "tint-0": {
+    "environment": {
+     "occlusionTint": 0
+    },
+    "frames": {
+     "autumn@2000000": {
+      "sha256": "f1de75c5a6fd4ddddededaa408b4664277b5ff363352e299ac88fa296ce29c89",
+      "tinted": 0,
+      "braille": 121
+     },
+     "autumn@30000000": {
+      "sha256": "818f1b8cbc74dda99483a80db4e8670c7f3ad15bab22fe047624ea4cda067f3f",
+      "tinted": 0,
+      "braille": 511
+     },
+     "rain@2000000": {
+      "sha256": "8b47108b07b3473caa300a7327fce51f65d4c33f4012153b40227dd4089f0286",
+      "tinted": 0,
+      "braille": 449
+     },
+     "snow@2000000": {
+      "sha256": "37bad82dbcba94c8a598d75d232714ff747b1be755e2ccfb39e190f1e1f80198",
+      "tinted": 0,
+      "braille": 151
+     },
+     "snow@30000000": {
+      "sha256": "abd0681c5f16128ec82f089f1af13adaac490f7a5f7126a6fd0fbe02c6255dfe",
+      "tinted": 0,
+      "braille": 385
+     },
+     "embers@2000000": {
+      "sha256": "704393557b25ad109f777c45a9e2754ac8bd5f8606a169e5e6f9636c6b5177f7",
+      "tinted": 0,
+      "braille": 69
+     },
+     "embers@30000000": {
+      "sha256": "5cafad4b3750db3ac4a240174ed5eb1ff36a97eed26747200d5f95df7b13af30",
+      "tinted": 9,
+      "braille": 49
+     },
+     "shell@2000000": {
+      "sha256": "226986ca79b649623836db83214dfbe5880e1e8a0d6ede551df35f58513e2406",
+      "tinted": 0,
+      "braille": 337
+     },
+     "work-graph@2000000": {
+      "sha256": "5fe015ec6c83f002ce95f1cd0164a7a7db54799bce9fd5b6b4c56bf2ff23a2db",
+      "tinted": 0,
+      "braille": 61
+     },
+     "work-graph@30000000": {
+      "sha256": "596c5265dd0c5e62cdd028d51d52484006d85188843f9e410ab92090aa9f4b97",
+      "tinted": 0,
+      "braille": 61
+     },
+     "git@2000000": {
+      "sha256": "df44334ec4b0276ceef68327346edf2b532a7ac55257b7a108c5a219c187d38a",
+      "tinted": 0,
+      "braille": 73
+     },
+     "git@30000000": {
+      "sha256": "b6fc5f486105033514b50cbe6b7cda8aae6a003470d755c19a7361439191948d",
+      "tinted": 0,
+      "braille": 73
+     },
+     "weather-authoring@2000000": {
+      "sha256": "114e5718b3b66ab6373ff1ab0a056a8a3836a3d75e48277c56399cb60a04801c",
+      "tinted": 0,
+      "braille": 61
+     },
+     "task-graph@2000000": {
+      "sha256": "2df3eb5ed7e1385bfb77d6e2865c8331dea6dbe1797473b145189b1b960cc16e",
+      "tinted": 0,
+      "braille": 97
+     },
+     "task-graph@30000000": {
+      "sha256": "4f08340cac4c04dec5e322fd7153ece07611d73c014af7b2c4e2ee2338c32638",
+      "tinted": 0,
+      "braille": 97
+     },
+     "surface-lab@2000000": {
+      "sha256": "17e8a5754f799994b833d1488cb1b36538dc59645028b906d9bd92607027558d",
+      "tinted": 3,
+      "braille": 54
+     },
+     "surface-lab@30000000": {
+      "sha256": "04775c7f3f7c1bf5b125cb70ae17eaeae02b809c2dc6c15eda3006c7b7c4e245",
+      "tinted": 96,
+      "braille": 44
+     },
+     "chrysanthemum-generic@2000000": {
+      "sha256": "7b06c4504231f2e2c075caf9b3cd44a2abdae20f8391727da538c8e8ba607654",
+      "tinted": 0,
+      "braille": 513
+     }
+    }
+   },
+   "merge-tint-0.35": {
+    "environment": {
+     "occludedDots": "merge",
+     "occlusionTint": 0.35
+    },
+    "frames": {
+     "autumn@2000000": {
+      "sha256": "d4ac3be52a200fba6a3c28a90bccecbef7e9abf5f8003d9e07d5897aa272f43e",
+      "tinted": 0,
+      "braille": 121
+     },
+     "autumn@30000000": {
+      "sha256": "3c7eaced075b752fb23fcf8583de5d45906d7b1e9c7c62397eff07b44280bc6a",
+      "tinted": 0,
+      "braille": 511
+     },
+     "rain@2000000": {
+      "sha256": "193b8dfec5e8a8114274e9072669d83b9042bb9126516f719ba8f93ab815485b",
+      "tinted": 0,
+      "braille": 449
+     },
+     "snow@2000000": {
+      "sha256": "dccf62fc9216ba105541a79fdc654b3e4590ba8db7e532fd46513742ce948b35",
+      "tinted": 0,
+      "braille": 151
+     },
+     "snow@30000000": {
+      "sha256": "4be9b39cfe349c98dcfb50a2fbdca7815c50490b442ba44def69463aa00d7752",
+      "tinted": 0,
+      "braille": 385
+     },
+     "embers@2000000": {
+      "sha256": "3c49fdf1cb7dec624eca8b77e13b08e3913891ed7b12b1ce5dbfa695aa41cd9e",
+      "tinted": 0,
+      "braille": 69
+     },
+     "embers@30000000": {
+      "sha256": "1b42f563595a88e58496c531c65762a7a97b06200c9dfbc464351024eff855e9",
+      "tinted": 9,
+      "braille": 49
+     },
+     "shell@2000000": {
+      "sha256": "a3d63bd817efc0b21d9eb8c513760a689368af7ef0273d0cb2bae02ddfd81f7b",
+      "tinted": 0,
+      "braille": 337
+     },
+     "work-graph@2000000": {
+      "sha256": "96603cbac949a67f51aa6bb83b91edea15f22eaa9a2a37c63e36ee5a1c261390",
+      "tinted": 0,
+      "braille": 61
+     },
+     "work-graph@30000000": {
+      "sha256": "22685336c2531b5d2e2990564351c1a856a5aeaba168d7fc65da8dae1c3e81ba",
+      "tinted": 0,
+      "braille": 61
+     },
+     "git@2000000": {
+      "sha256": "c37c5d090fccdcaf92108c3347725cf8ce3a134bdce9535d3f2d8748211378b8",
+      "tinted": 0,
+      "braille": 73
+     },
+     "git@30000000": {
+      "sha256": "f66c5be1240a0a3279f65f46dc39f0e9d6c540d75b3c97905ba89ff617a84930",
+      "tinted": 0,
+      "braille": 73
+     },
+     "weather-authoring@2000000": {
+      "sha256": "fd4b1c81a3e0be3caa569f4c3ae0f15e304fc0ec473c0e787c4946c567088115",
+      "tinted": 0,
+      "braille": 61
+     },
+     "task-graph@2000000": {
+      "sha256": "9da3522456714cc7c032328042f1a8c097f8475fec25e0056c211f536061282d",
+      "tinted": 0,
+      "braille": 97
+     },
+     "task-graph@30000000": {
+      "sha256": "b58ce2414682530839615904a1b17effdf7279d959d86d52c793117cb7a8440d",
+      "tinted": 0,
+      "braille": 97
+     },
+     "surface-lab@2000000": {
+      "sha256": "25e94e0d0fc91922402f4ea408c8e98d8832e0ed60156d829679ae7d4f2839d0",
+      "tinted": 3,
+      "braille": 54
+     },
+     "surface-lab@30000000": {
+      "sha256": "c08b414c6cfe8acdc11744e9324ff77e43c4455dcb1542790a0e3b9d42d7bad4",
+      "tinted": 96,
+      "braille": 44
+     },
+     "chrysanthemum-generic@2000000": {
+      "sha256": "223f2786775c0a4472136c6575a210f5e5eea211bf0ca285c9f6ac1a0bfc608d",
+      "tinted": 0,
+      "braille": 513
+     }
+    }
+   }
+  }
+ }
+}

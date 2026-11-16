@@ -1,0 +1,25 @@
+[
+  {
+    "op": "resize",
+    "width": 96,
+    "height": 40
+  },
+  {
+    "op": "prompt-source",
+    "values": {
+      "layout": 1,
+      "stars": 0,
+      "effect": 1,
+      "cursorMode": 2
+    }
+  },
+  {
+    "op": "draft",
+    "text": "Genuine schema89 \ud83d\udcdc \u05d0\u05d1",
+    "emitWeather": false
+  },
+  {
+    "op": "time",
+    "timeUs": 1200000
+  }
+]

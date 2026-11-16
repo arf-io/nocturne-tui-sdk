@@ -1,0 +1,3 @@
+package native
+import("testing";"bytes")
+func TestPromptPresentationOwned(t *testing.T){s,e:=New(42);if e!=nil{t.Fatal(e)};defer s.Close();for _,c:=range []string{`{"op":"resize","width":8,"height":18}`,`{"op":"prompt","layout":"grapheme","mode":"grow","minRows":2}`,`{"op":"draft","text":"Aé界Z","emitWeather":false}`}{if _,e=s.CommandRaw([]byte(c));e!=nil{t.Fatal(e)}};b,_:=s.Snapshot();rows,e:=s.PromptLayout();if e!=nil||len(rows)!=4||rows[1][1]!=3||rows[2][4]!=2||rows[3][3]!=1{t.Fatal(rows,e)};rows[0][0]=99;again,_:=s.PromptLayout();if again[0][0]!=0{t.Fatal("borrowed")};after,_:=s.Snapshot();if !bytes.Equal(b,after){t.Fatal("mutated")}}

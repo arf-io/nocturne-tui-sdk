@@ -1,0 +1,192 @@
+name: Nocturne qualification and SDK delivery
+on:
+  push:
+    paths-ignore: [tools/ci/coverage-ratchet.json]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 1800
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: ${{ github.workspace }}
+      CARGO_NET_OFFLINE: 'true'
+      CARGO_HOME: ${{ runner.temp }}/nocturne-cargo
+      CARGO_TARGET_DIR: ${{ runner.temp }}/nocturne-targets/native
+      CARGO_TERM_COLOR: never
+      GOTOOLCHAIN: local
+      CC: clang
+      NOCTURNE_COVERAGE: '1'
+      LLVM_PROFILE_FILE: ${{ runner.temp }}/nocturne-ci/profiles/core-%p-%m.profraw
+      GOMODCACHE: ${{ runner.temp }}/nocturne-go-modules
+      GOCACHE: ${{ runner.temp }}/nocturne-go-build
+    steps:
+      - uses: https://github.com/actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # verified v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: https://github.com/actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # verified v5
+        with: {python-version: '3.13'}
+      - uses: https://github.com/actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # verified v4
+        with: {node-version: '22.16.0'}
+      - uses: https://github.com/actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # verified v5
+        with: {go-version: '1.23.2', cache: false}
+      - name: Linux native prerequisites
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential clang llvm lld ffmpeg cmake
+      - name: MacOS native prerequisites
+        if: runner.os == 'macOS'
+        run: |
+          brew install llvm ffmpeg
+          printf '%s\n' "$(brew --prefix llvm)/bin" >> "$GITHUB_PATH"
+      - name: Exact Rust 1.88 compiler
+        shell: bash
+        run: |
+          rustup toolchain install 1.88.0 --profile minimal --component rustfmt --component clippy
+          rustBin="$(dirname "$(rustup which --toolchain 1.88.0 rustc)")"
+          export PATH="$rustBin:$PATH"
+          printf '%s\n' "$rustBin" >> "$GITHUB_PATH"
+          printf 'RUSTC=%s\nRUSTDOC=%s\nNOCTURNE_RUST_BIN=%s\n' \
+            "$rustBin/rustc" "$rustBin/rustdoc" "$rustBin" >> "$GITHUB_ENV"
+          test "$(rustc --version | cut -d ' ' -f 2)" = 1.88.0
+          test "$(cargo --version | cut -d ' ' -f 2)" = 1.88.0
+          rustc -vV
+          cargo --version
+          rustdoc --version
+      - name: Pinned qualification packages
+        shell: bash
+        run: |
+          python3 -m pip install -r tools/requirements-qualification.txt
+          if [ "$RUNNER_OS" = Linux ]; then
+            python3 -m playwright install --with-deps chromium
+          else
+            python3 -m playwright install chromium
+          fi
+          npm install --global typescript@5.8.3
+          npm ci --prefix native/hosts/terminal-kit
+      - name: Release CI policy
+        run: |
+          python3 native/tests/test_release_ci_policy.py
+          python3 -m unittest discover -s tools/ci -p 'test_*.py' -v
+      - name: Provision locked dependency closures
+        shell: bash
+        run: |
+          CARGO_NET_OFFLINE=false cargo fetch --locked --manifest-path native/hosts/ratatui/Cargo.toml
+          (
+            cd native/hosts/bubbletea
+            go mod download
+            nocturne_verify_workspace="$(mktemp -d "$RUNNER_TEMP/nocturne-go-verify.XXXXXX")"
+            nocturne_bubbletea_source="$(pwd -P)"
+            (
+              cd "$nocturne_verify_workspace"
+              GOWORK=off go work init "$nocturne_bubbletea_source" "$nocturne_bubbletea_source/../../bindings/go"
+            )
+            GOWORK="$nocturne_verify_workspace/go.work" go mod verify
+          )
+          git diff --exit-code -- native/hosts/ratatui/Cargo.toml native/hosts/ratatui/Cargo.lock \
+            native/hosts/bubbletea/go.mod native/hosts/bubbletea/go.sum \
+            native/hosts/terminal-kit/package.json native/hosts/terminal-kit/package-lock.json \
+            tools/requirements-qualification.txt
+      - name: Provision verified external shaping fixtures
+        run: python3 tools/ci/prepare_shaping.py "$RUNNER_TEMP/nocturne-shaping"
+      - name: Build external shaping dependency
+        run: |
+          sh native/scripts/build_external_shaping.sh "$RUNNER_TEMP/nocturne-shaping/harfbuzz-11.2.1" "$RUNNER_TEMP/nocturne-shaping/install"
+          printf 'NOCTURNE_HARFBUZZ_LIBRARY=%s\nNOCTURNE_SHAPING_FONT=%s\n' "$RUNNER_TEMP/nocturne-shaping/install/lib/libharfbuzz.so" "$RUNNER_TEMP/nocturne-shaping/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf" >> "$GITHUB_ENV"
+      - name: Strict native and four-language checks
+        run: |
+          sh qualify-native.sh --strict --capture --step-timeout 7200 \
+            --rust-bin "$NOCTURNE_RUST_BIN" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/native"
+      - name: Actual TDF isolated and application scenes
+        if: ${{ vars.NOCTURNE_TDFIGLET_REPOSITORY != '' }}
+        env:
+          NOCTURNE_TDFIGLET_REPOSITORY: ${{ vars.NOCTURNE_TDFIGLET_REPOSITORY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          nocturne_tdf_source="$RUNNER_TEMP/nocturne-tdfiglet"
+          nocturne_tdf_evidence="$RUNNER_TEMP/nocturne-ci/tdfiglet"
+          mkdir -p "$nocturne_tdf_evidence"
+          git init "$nocturne_tdf_source"
+          git -C "$nocturne_tdf_source" remote add origin "https://github.com/$NOCTURNE_TDFIGLET_REPOSITORY.git"
+          git -C "$nocturne_tdf_source" fetch --depth 1 origin 94e212569244229f78b23aade9053940e6dcb6fa
+          git -C "$nocturne_tdf_source" checkout --detach FETCH_HEAD
+          test "$(git -C "$nocturne_tdf_source" rev-parse HEAD)" = 94e212569244229f78b23aade9053940e6dcb6fa
+          export NOCTURNE_TDF_FONT="$nocturne_tdf_source/unused-fonts/tdfonts-2.tdf"
+          python3 - <<'PYTDF'
+          import hashlib, os
+          from pathlib import Path
+          font = Path(os.environ['NOCTURNE_TDF_FONT'])
+          if hashlib.sha256(font.read_bytes()).hexdigest() != 'a947aadf36337988a5961846dd0cfe51454d478ed7e2862e12e44f5c80c251af':
+              raise SystemExit('TDF font digest mismatch')
+          PYTDF
+          make -C "$nocturne_tdf_source" > "$nocturne_tdf_evidence/build.log" 2>&1
+          git -C "$nocturne_tdf_source" rev-parse HEAD > "$nocturne_tdf_evidence/source-commit.txt"
+          sha256sum "$nocturne_tdf_source/tdfiglet" "$NOCTURNE_TDF_FONT" > "$nocturne_tdf_evidence/input-sha256.txt"
+          python3 tools/ci/check_tdfiglet.py --binary "$nocturne_tdf_source/tdfiglet" \
+            --font "$NOCTURNE_TDF_FONT" --output "$nocturne_tdf_evidence/scenes"
+      - name: Real Terminal Kit and Bubble Tea hosts
+        if: runner.os == 'Linux'
+        run: |
+          python3 native/scripts/qualify_dependency_hosts.py \
+            --target-dir "$RUNNER_TEMP/nocturne-targets/dependency-hosts" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/dependency-hosts"
+      - name: Real Ratatui host
+        run: |
+          python3 native/hosts/ratatui/qualify.py \
+            --rust-bin "$NOCTURNE_RUST_BIN" \
+            --target-dir "$RUNNER_TEMP/nocturne-targets/ratatui" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/ratatui" \
+            --timeout 180
+      - name: Real host input contracts
+        if: runner.os == 'Linux'
+        run: |
+          python3 native/scripts/check_host_inputs.py --host prompt-toolkit \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-prompt-toolkit"
+          python3 native/scripts/check_host_inputs.py --host terminal-kit \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-terminal-kit"
+          python3 native/scripts/check_host_inputs.py --host bubbletea \
+            --binary "$RUNNER_TEMP/nocturne-targets/dependency-hosts/bubbletea-fixture" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-bubbletea"
+          python3 native/scripts/check_host_inputs.py --host ratatui \
+            --binary "$RUNNER_TEMP/nocturne-targets/ratatui/debug/examples/qualification" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-ratatui"
+      - name: All retained root test entry points
+        if: always()
+        run: python3 tools/ci/run_historical_tests.py "$RUNNER_TEMP/nocturne-ci/historical-tests"
+      - name: Native coverage floor and ratchet
+        if: always()
+        run: python3 tools/ci/coverage_gate.py --profiles "$RUNNER_TEMP/nocturne-ci/profiles" --output "$RUNNER_TEMP/nocturne-ci/coverage"
+      - name: Package and independently verify SDK
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          NOCTURNE_COVERAGE: '0'
+        run: |
+          sh qualify-native.sh --strict --capture --step-timeout 7200 --rust-bin "$NOCTURNE_RUST_BIN" --evidence-dir "$RUNNER_TEMP/nocturne-ci/shipping-native"
+          python3 native/scripts/package_contracts.py --capture --output "$RUNNER_TEMP/nocturne-sdk"
+          python3 tools/ci/verify_packages.py "$RUNNER_TEMP/nocturne-sdk" "$RUNNER_TEMP/nocturne-extracted" "$RUNNER_TEMP/nocturne-ci/package"
+      - name: Ratchet accepted protected-branch coverage
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/integration')
+        env:
+          NOCTURNE_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/ci/ratchet_coverage.py "$RUNNER_TEMP/nocturne-ci/coverage/coverage-ratchet.next.json"
+      - name: Retain receipts on failure
+        if: always()
+        uses: https://code.forgejo.org/forgejo/upload-artifact@16871d9e8cfcf27ff31822cac382bbb5450f1e1e # verified v4
+        with:
+          name: rc4-native-evidence-${{ matrix.os }}
+          path: |
+            ${{ runner.temp }}/nocturne-ci/
+            native/evidence/
+            ${{ runner.temp }}/nocturne-sdk/
+          if-no-files-found: error

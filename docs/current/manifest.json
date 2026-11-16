@@ -1,0 +1,64 @@
+{
+  "schema": "nocturne.reference.v1",
+  "title": "Nocturne SDK Reference",
+  "pages": [
+    "README.md",
+    "Contract.md",
+    "Getting-Started.md",
+    "Composition.md",
+    "Components.md",
+    "Catalogue.md",
+    "Catalogue-Weather.md",
+    "Catalogue-Surface-Fields.md",
+    "Catalogue-Text.md",
+    "Catalogue-Windows.md",
+    "Nullification.md",
+    "Input-and-Motion.md",
+    "Materials-and-Rendering.md",
+    "C.md",
+    "WASM-TypeScript.md",
+    "Python.md",
+    "Go.md",
+    "Rust.md",
+    "Web.md",
+    "Nocturne-GUI-SDK-Prompt.md",
+    "Commands.md"
+  ],
+  "pdfs": {
+    "Nocturne-C-Reference.pdf": [
+      "C.md",
+      "Commands.md"
+    ],
+    "Nocturne-WASM-TypeScript-Reference.pdf": [
+      "WASM-TypeScript.md",
+      "Commands.md"
+    ],
+    "Nocturne-Python-Reference.pdf": [
+      "Python.md",
+      "Commands.md"
+    ],
+    "Nocturne-Go-Reference.pdf": [
+      "Go.md",
+      "Commands.md"
+    ],
+    "Nocturne-Rust-Reference.pdf": [
+      "Rust.md",
+      "Commands.md"
+    ],
+    "Nocturne-Web-Reference.pdf": [
+      "Web.md"
+    ],
+    "Nocturne-Guide.pdf": [
+      "README.md",
+      "Contract.md",
+      "Getting-Started.md",
+      "Composition.md",
+      "Components.md",
+      "Input-and-Motion.md",
+      "Materials-and-Rendering.md"
+    ],
+    "Nocturne-GUI-SDK-Prompt.pdf": [
+      "Nocturne-GUI-SDK-Prompt.md"
+    ]
+  }
+}

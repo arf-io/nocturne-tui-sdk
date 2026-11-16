@@ -1,0 +1,4 @@
+[
+  {"id":"coordinator","name":"COORDINATOR","role":"Task orchestration","description":"External synthetic pipe demonstration"},
+  {"id":"research","name":"RESEARCH","role":"Evidence gathering","description":"Replace this producer with your authenticated source"}
+]

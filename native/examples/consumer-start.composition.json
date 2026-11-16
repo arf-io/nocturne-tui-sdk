@@ -1,0 +1,11 @@
+{
+  "schema": "nocturne.composition.v1",
+  "seed": 73,
+  "commands": [
+    {"op": "resize", "width": 64, "height": 24},
+    {"op": "environment", "stars": 0, "style": "solid", "background": 726043},
+    {"op": "widget", "id": 1, "kind": "text", "x": 2, "y": 1, "width": 60, "height": 2, "text": "Nocturne consuming application"},
+    {"op": "widget", "id": 2, "kind": "text", "x": 2, "y": 5, "width": 60, "height": 3, "text": "The host owns service data, input and the clock."},
+    {"op": "input", "text": "Reusable consumer screen"}
+  ]
+}

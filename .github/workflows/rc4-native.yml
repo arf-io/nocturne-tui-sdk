@@ -1,0 +1,152 @@
+name: RC4 native qualification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-14]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: ${{ github.workspace }}
+      CARGO_NET_OFFLINE: 'true'
+      CARGO_TERM_COLOR: never
+      GOTOOLCHAIN: local
+    steps:
+      - name: Task-scoped manual-runner paths
+        shell: bash
+        run: |
+          printf 'CARGO_HOME=%s/nocturne-cargo\nCARGO_TARGET_DIR=%s/nocturne-targets/native\nGOMODCACHE=%s/nocturne-go-modules\nGOCACHE=%s/nocturne-go-build\n' \
+            "$RUNNER_TEMP" "$RUNNER_TEMP" "$RUNNER_TEMP" "$RUNNER_TEMP" >> "$GITHUB_ENV"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # verified v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # verified v5
+        with: {python-version: '3.13'}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # verified v4
+        with: {node-version: '22.16.0'}
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # verified v5
+        with: {go-version: '1.23.2', cache: false}
+      - name: Release CI policy
+        run: python3 native/tests/test_release_ci_policy.py
+      - name: Linux native prerequisites
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential clang lld ffmpeg
+      - name: MacOS native prerequisites
+        if: runner.os == 'macOS'
+        run: |
+          brew install llvm ffmpeg
+          printf '%s\n' "$(brew --prefix llvm)/bin" >> "$GITHUB_PATH"
+      - name: Exact Rust 1.88 compiler
+        shell: bash
+        run: |
+          rustup toolchain install 1.88.0 --profile minimal --component rustfmt --component clippy
+          rustBin="$(dirname "$(rustup which --toolchain 1.88.0 rustc)")"
+          export PATH="$rustBin:$PATH"
+          printf '%s\n' "$rustBin" >> "$GITHUB_PATH"
+          printf 'RUSTC=%s\nRUSTDOC=%s\nNOCTURNE_RUST_BIN=%s\n' \
+            "$rustBin/rustc" "$rustBin/rustdoc" "$rustBin" >> "$GITHUB_ENV"
+          test "$(rustc --version | cut -d ' ' -f 2)" = 1.88.0
+          test "$(cargo --version | cut -d ' ' -f 2)" = 1.88.0
+          rustc -vV
+          cargo --version
+          rustdoc --version
+      - name: Pinned qualification packages
+        shell: bash
+        run: |
+          python3 -m pip install -r tools/requirements-qualification.txt
+          if [ "$RUNNER_OS" = Linux ]; then
+            python3 -m playwright install --with-deps chromium
+          else
+            python3 -m playwright install chromium
+          fi
+          npm install --global typescript@5.8.3
+          npm ci --prefix native/hosts/terminal-kit
+      - name: Provision locked dependency closures
+        shell: bash
+        run: |
+          CARGO_NET_OFFLINE=false cargo fetch --locked --manifest-path native/hosts/ratatui/Cargo.toml
+          (
+            cd native/hosts/bubbletea
+            go mod download
+            nocturne_verify_workspace="$(mktemp -d "$RUNNER_TEMP/nocturne-go-verify.XXXXXX")"
+            nocturne_bubbletea_source="$(pwd -P)"
+            (
+              cd "$nocturne_verify_workspace"
+              GOWORK=off go work init "$nocturne_bubbletea_source" "$nocturne_bubbletea_source/../../bindings/go"
+            )
+            GOWORK="$nocturne_verify_workspace/go.work" go mod verify
+          )
+          git diff --exit-code -- native/hosts/ratatui/Cargo.toml native/hosts/ratatui/Cargo.lock \
+            native/hosts/bubbletea/go.mod native/hosts/bubbletea/go.sum \
+            native/hosts/terminal-kit/package.json native/hosts/terminal-kit/package-lock.json \
+            tools/requirements-qualification.txt
+      - name: Build native core and portable gallery
+        run: sh build-native.sh
+      - name: Strict native and four-language checks
+        run: |
+          sh qualify-native.sh --strict --capture \
+            --rust-bin "$NOCTURNE_RUST_BIN" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/native"
+      - name: Real Terminal Kit and Bubble Tea hosts
+        if: runner.os == 'Linux'
+        run: |
+          python3 native/scripts/qualify_dependency_hosts.py \
+            --target-dir "$RUNNER_TEMP/nocturne-targets/dependency-hosts" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/dependency-hosts"
+      - name: Real Ratatui host
+        run: |
+          python3 native/hosts/ratatui/qualify.py \
+            --rust-bin "$NOCTURNE_RUST_BIN" \
+            --target-dir "$RUNNER_TEMP/nocturne-targets/ratatui" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/ratatui" \
+            --timeout 180
+      - name: Real host input contracts
+        if: runner.os == 'Linux'
+        run: |
+          python3 native/scripts/check_host_inputs.py --host prompt-toolkit \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-prompt-toolkit"
+          python3 native/scripts/check_host_inputs.py --host terminal-kit \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-terminal-kit"
+          python3 native/scripts/check_host_inputs.py --host bubbletea \
+            --binary "$RUNNER_TEMP/nocturne-targets/dependency-hosts/bubbletea-fixture" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-bubbletea"
+          python3 native/scripts/check_host_inputs.py --host ratatui \
+            --binary "$RUNNER_TEMP/nocturne-targets/ratatui/debug/examples/qualification" \
+            --evidence-dir "$RUNNER_TEMP/nocturne-ci/input-ratatui"
+      - name: MacOS framework qualification remains blocked
+        if: always() && runner.os == 'macOS'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, os
+          output = Path(os.environ["RUNNER_TEMP"]) / "nocturne-ci/macos-framework-gap.json"
+          output.parent.mkdir(parents=True, exist_ok=True)
+          output.write_text(json.dumps({
+              "schema": "nocturne.ci.target-gap.v1",
+              "platform": "macOS",
+              "status": "BLOCKED",
+              "fullRC4Qualified": False,
+              "reason": "Terminal Kit/Bubble Tea dependency PTY gate and extended host input qualification require Linux; native and Ratatui results remain separate.",
+              "requiredRun": "Port and execute all dependency-host lifecycle and input PTYs on an actual macOS runner; preserve per-case receipts."
+          }, indent=2) + "\n")
+          PY
+          exit 3
+      - name: Retain receipts on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # verified v4
+        with:
+          name: rc4-native-evidence-${{ matrix.os }}
+          path: |
+            ${{ runner.temp }}/nocturne-ci/
+            native/evidence/
+          if-no-files-found: error

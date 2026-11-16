@@ -1,0 +1,60 @@
+{
+  "sourceCommit": "888d3d777e3bfe66138db04b72cb8b859f3fe0bc",
+  "seed": 991,
+  "commands": [
+    {
+      "op": "emitter",
+      "id": 1,
+      "count": 2048,
+      "runningTimeMs": 0,
+      "lifetimeMinMs": 300,
+      "lifetimeMaxMs": 300,
+      "collision": false,
+      "deposit": false
+    },
+    {
+      "op": "emitter",
+      "id": 2,
+      "seed": 991,
+      "count": 5000,
+      "runningTimeMs": 100,
+      "cycles": 2,
+      "gapMs": 50,
+      "schedule": "seeded-jitter",
+      "collision": false,
+      "deposit": false
+    },
+    {
+      "op": "emitter",
+      "id": 3,
+      "seed": 82,
+      "rate": 200,
+      "runningTimeMs": 0,
+      "lifetimeMinMs": 1000,
+      "lifetimeMaxMs": 1000,
+      "initialOrientation": [
+        10,
+        20,
+        30
+      ],
+      "angularVelocity": [
+        0,
+        45,
+        0
+      ],
+      "collision": false,
+      "deposit": false
+    }
+  ],
+  "timeUs": 600000,
+  "snapshotSha256": "ccea0fe39967848a57e39150a335df3dcd2c87ada1e6f149e0fc9f7e73463aa9",
+  "frameSha256": "1a65927cab1da8bc487d45ee98cd36bc46e23a304d5c5381a8bb562645db94b6",
+  "particles": {
+    "active": 59,
+    "deposited": 0,
+    "aggregated": 0,
+    "born": 2107,
+    "rejected": 10061,
+    "depositRejected": 0
+  }
+}

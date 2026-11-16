@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scenarios": 9,
+  "actionRows": 159,
+  "rawBytes": 62474624,
+  "sourceHtmlSha256": "1253681a9166715a1f4fe11454fb5fc52fdf7d481b4e0200809bb1fd24cae9ae",
+  "caseIds": [
+    "full-560ms-expansion",
+    "interrupted-expansion-return-reopen",
+    "agent-drafts-send-outbox-demo-replies",
+    "stream-seven-scalars-and-arrival",
+    "scroll-anchor-high-id-read-tail",
+    "arrival-520ms-horizon",
+    "pause-data-resize-read-reduced-dense",
+    "click-card-and-small-empty-layout",
+    "invalid-config-atomic"
+  ]
+}

@@ -1,0 +1,62 @@
+/** Original Pearl host state authors the current native source-stage contract.
+ * No historical renderer/runtime is instantiated by this module. */
+import {PearlFleetOriginal} from './pearl_fleet_original.mjs';
+import {pearlAuthoredData} from './pearl_authored_data.mjs';
+import {StudioDataSource} from './pearl_data.mjs';
+const copy=value=>structuredClone(value);
+const color=value=>{if(typeof value==='number'&&Number.isInteger(value)&&value>=0&&value<=0xffffff)return value;if(typeof value==='string'&&/^#[0-9a-f]{6}$/i.test(value))return parseInt(value.slice(1),16);throw TypeError('RGB color required');};
+const glyph=value=>{if(typeof value!=='string'||[...value].length!==1)throw TypeError('Scalar glyph required');return value.codePointAt(0);};
+export function pearlStageDefaults(overrides={}){return {values:{...pearlAuthoredData.defaults,...overrides},palette:[...pearlAuthoredData.palette],starPalette:[...pearlAuthoredData.starPalette],glyphs:[...pearlAuthoredData.glyphs],novaGlyphs:[...pearlAuthoredData.novaGlyphs]};}
+export function pearlStageConfig(config){return {values:{...config.values,paletteCount:config.palette.length,starColorCount:config.starPalette.length,starGlyphCount:config.glyphs.length,novaGlyphCount:config.novaGlyphs.length},palette:config.palette.map(color),starPalette:config.starPalette.map(color),glyphs:config.glyphs.map(glyph),novaGlyphs:config.novaGlyphs.map(glyph)};}
+export function pearlStageNodes(nodes,firstId=60000){if(!Array.isArray(nodes)||nodes.length>512)throw RangeError('Stage node capacity');return nodes.map((node,index)=>{const {id=0,fg,bg,...fields}=node;return {op:'source-stage-component',...fields,id:firstId+index,legacyFlags:id,...(fg===undefined?{}:{fg:color(fg)}),...(bg===undefined?{}:{bg:color(bg)})};});}
+function safeTime(value){if(!Number.isSafeInteger(value)||value<0)throw RangeError('Nonnegative integer source milliseconds required');return value;}
+export class PearlStageSession{
+ constructor(scene,family,{studioScene='dashboard',revision='later'}={}){
+  if(!['studio','fleet'].includes(family))throw RangeError('Pearl family required');
+  for(const method of ['sourceStageTween','sourceStageInkOpacity','sourceStageHit'])if(typeof scene[method]!=='function')throw Error('Current native '+method+' is required');
+  this.scene=scene;this.family=family;this.elapsedMs=0;this.count=0;this.previousNodes=[];this.previousSize=null;this.nextMs=family==='studio'?47:80;this.events=[];
+  this.bridge={defaults:pearlStageDefaults,tween:(...args)=>scene.sourceStageTween(...args),inkOpacity:(...args)=>scene.sourceStageInkOpacity(...args),hit:(_nodes,x,y)=>scene.sourceStageHit(x,y)};
+  if(family==='fleet'){this.fleet=new PearlFleetOriginal.FleetController(this.bridge,PearlFleetOriginal.createDemoFleet());if(!['initial','later'].includes(revision))throw RangeError('Fleet revision required');this.fleet.sourceRevision=revision;this.config=this.fleet.config;}
+  else{this.studio=new StudioDataSource();this.authored=copy(pearlAuthoredData.studioScenes.find(row=>row.id===studioScene));if(!this.authored)throw RangeError('Studio scene required');this.config=pearlStageDefaults(this.authored.config);this.palette=copy(pearlAuthoredData.studioPalettes[0]);this.applyStudioPalette(this.palette);}
+  const width=this.config.values.width,height=this.config.values.height;
+  scene.command({op:'batch',commands:[{op:'resize',width,height},{op:'prompt',active:false},{op:'environment',presentation:'canvas',stars:0,background:this.config.values.baseColor},{op:'floor',enabled:false,visible:false}]});
+  this.commit();
+ }
+ applyStudioPalette(palette){this.config.palette=palette.colors.slice();this.config.starPalette=palette.id==='stellar'?palette.colors.slice():palette.colors.map(c=>{const n=color(c),r=Math.round((n>>16)*.65+245*.35),g=Math.round(((n>>8)&255)*.65+226*.35),b=Math.round((n&255)*.65+240*.35);return '#'+((r<<16)|(g<<8)|b).toString(16).padStart(6,'0');});this.config.values.baseColor=color(palette.background);this.config.values.inkColor=color(palette.ink);}
+ compose(){
+  if(this.fleet)return this.fleet.compose();
+  const s=this.studio,nodes=copy(this.authored.nodes);
+  for(const n of nodes){if(['bars','pie','donut'].includes(n.kind)){n.changedMs=5000;n.durationMs=s.playing?850:0;}if(n.id===100)n.text='› '+s.prompt;if(n.kind==='digits'&&this.authored.id==='dashboard')n.text=String(Math.round(s.value/10)).padStart(3,'0');if(n.kind==='progress'){n.value=s.value;n.fromValue=s.fromValue;n.changedMs=s.changedMs;n.durationMs=s.playing?500:0;}if(n.text?.startsWith('67%'))n.text=(s.value/10).toFixed(1)+'%  /  target commits immediately';}
+  return {timeMs:s.motionMs,config:copy(this.config),nodes,events:copy(this.events)};
+ }
+ commit(){const source=this.compose();if(!source.config.values.width||!source.config.values.height)return source;
+  const size=[source.config.values.width,source.config.values.height],commands=[];
+  if(!this.previousSize||size.some((v,i)=>v!==this.previousSize[i]))commands.push({op:'resize',width:size[0],height:size[1]});
+  commands.push({op:'source-stage',config:pearlStageConfig(source.config),timeMs:source.timeMs,events:source.events});
+  const nodes=pearlStageNodes(source.nodes),encoded=nodes.map(node=>JSON.stringify(node));for(let i=0;i<nodes.length;i++)if(encoded[i]!==this.previousNodes[i])commands.push(nodes[i]);for(let i=nodes.length;i<this.count;i++)commands.push({op:'remove-source-stage-component',id:60000+i});
+  const saved=commands.length>64?this.scene.snapshot():null;try{for(let i=0;i<commands.length;i+=64)this.scene.command({op:'batch',commands:commands.slice(i,i+64)});}catch(error){if(saved)this.scene.restore(saved);throw error;}
+  this.count=nodes.length;this.previousNodes=encoded;this.previousSize=size;return source;
+ }
+
+ advanceBudgetedTo(elapsedMs,budget=12){safeTime(elapsedMs);if(elapsedMs<this.elapsedMs)throw RangeError('Unordered Pearl source time');const boundary=Math.min(elapsedMs,this.nextMs);if(this.scene.command({op:'time',timeUs:boundary*1000,budget})===1)return 1;if(boundary===this.nextMs){if(this.fleet){this.fleet.setTime(boundary);this.fleet.advanceDemo(10000+boundary);}else this.studio.advanceTo(boundary);this.nextMs+=this.family==='studio'?47:80;}this.elapsedMs=boundary;if(this.fleet)this.fleet.setTime(boundary);else this.studio.advanceTo(boundary);this.commit();return boundary<elapsedMs?1:0;}
+ advanceTo(elapsedMs){safeTime(elapsedMs);if(elapsedMs<this.elapsedMs)throw RangeError('Unordered Pearl source time');
+  while(this.nextMs<=elapsedMs){this.scene.advanceTo(this.nextMs*1000);if(this.fleet){this.fleet.setTime(this.nextMs);this.fleet.advanceDemo(10000+this.nextMs);}else this.studio.advanceTo(this.nextMs);this.elapsedMs=this.nextMs;this.nextMs+=this.family==='studio'?47:80;this.commit();}
+  this.scene.advanceTo(elapsedMs*1000);this.elapsedMs=elapsedMs;if(this.fleet)this.fleet.setTime(elapsedMs);else this.studio.advanceTo(elapsedMs);return this.commit();
+ }
+ click(x,y){if(!this.fleet)return '';this.commit();const result=this.fleet.click(Math.floor(x),Math.floor(y));this.commit();return result;}
+ setValue(value){if(!this.studio)throw Error('Studio source required');this.studio.setValue(value);return this.commit();}
+ promptCommit(text){if(!this.studio)throw Error('Studio source required');this.studio.promptCommit(text);return this.commit();}
+ resize(width,height){if(this.fleet)this.fleet.resize(width,height);else{this.config.values.width=width;this.config.values.height=height;}return this.commit();}
+ checkpoint(){if(!this.fleet)throw Error('Fleet host checkpoint required');const controller={};for(const [key,value] of Object.entries(this.fleet))if(!['engine','model','views'].includes(key))controller[key]=copy(value);controller.views=copy([...this.fleet.views]);return {schema:'nocturne.pearl-fleet-checkpoint.v1',family:this.family,elapsedMs:this.elapsedMs,nextMs:this.nextMs,source:copy(this.compose()),host:{controller,model:copy({...this.fleet.model})},native:this.scene.snapshot().slice()};}
+ restoreCheckpoint(input){
+  if(!this.fleet)throw Error('Fleet host checkpoint required');
+  const checkpoint=copy(input),exact=(value,keys,label)=>{if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).sort().join('\0')!==[...keys].sort().join('\0'))throw TypeError('Invalid '+label+' fields');};
+  exact(checkpoint,['schema','family','elapsedMs','nextMs','source','host','native'],'checkpoint');if(checkpoint.schema!=='nocturne.pearl-fleet-checkpoint.v1'||checkpoint.family!=='fleet')throw TypeError('Fleet checkpoint schema');safeTime(checkpoint.elapsedMs);safeTime(checkpoint.nextMs);if(checkpoint.nextMs<=checkpoint.elapsedMs||checkpoint.nextMs%80)throw RangeError('Fleet checkpoint heartbeat');
+  exact(checkpoint.host,['controller','model'],'host');const current=this.checkpoint();exact(checkpoint.host.controller,Object.keys(current.host.controller),'controller');exact(checkpoint.host.model,Object.keys(current.host.model),'model');
+  const data=value=>{if(value===null||typeof value==='boolean')return;if(typeof value==='number'){if(!Number.isFinite(value))throw TypeError('Nonfinite host value');return;}if(typeof value==='string'){for(const scalar of value){const n=scalar.codePointAt(0);if(n>=0xd800&&n<=0xdfff)throw TypeError('Invalid host Unicode');}return;}if(Array.isArray(value)){for(const child of value)data(child);return;}if(value&&Object.getPrototypeOf(value)===Object.prototype){for(const [key,child] of Object.entries(value)){if(['__proto__','constructor','prototype'].includes(key))throw TypeError('Invalid host property');data(child);}return;}throw TypeError('Plain host data required');};data(checkpoint.host);
+  const c=Object.create(PearlFleetOriginal.FleetController.prototype),m=Object.create(PearlFleetOriginal.FleetModel.prototype);Object.assign(c,checkpoint.host.controller);Object.assign(m,checkpoint.host.model);c.model=m;c.engine=this.bridge;c.views=new Map(c.views);if(c.views.size!==m.agents.length)throw TypeError('Fleet view identities');new PearlFleetOriginal.FleetModel(m.agents);m.agent(c.selectedId);c.configure(c.options);for(const a of m.agents){const v=c.views.get(a.id);if(!v||typeof v.draft!=='string')throw TypeError('Fleet draft identity');if(!Array.isArray(a.messages)||a.messages.length>PearlFleetOriginal.FLEET_LIMITS.messages)throw TypeError('Fleet messages');for(const message of a.messages){if(typeof message.text!=='string'||!Array.isArray(message.chunks)||message.chunks.map(row=>row.text).join('')!==message.text)throw TypeError('Fleet retained text chunks');}}if(!['initial','later'].includes(c.sourceRevision))throw TypeError('Fleet revision');if(!Number.isInteger(c.width)||!Number.isInteger(c.height)||c.width<0||c.width>512||c.height<0||c.height>256)throw RangeError('Fleet viewport');
+  const candidate=Object.create(PearlStageSession.prototype);Object.assign(candidate,this,{fleet:c,config:c.config,elapsedMs:checkpoint.elapsedMs,nextMs:checkpoint.nextMs,previousNodes:[],previousSize:null,count:checkpoint.source.nodes.length});if(JSON.stringify(candidate.compose())!==JSON.stringify(checkpoint.source))throw TypeError('Fleet checkpoint source mismatch');
+  let bytes=checkpoint.native;if(typeof bytes==='string'){const raw=atob(bytes);if(btoa(raw)!==bytes)throw TypeError('Canonical native checkpoint base64');bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));}if(Array.isArray(bytes)){if(bytes.some(n=>!Number.isInteger(n)||n<0||n>255))throw TypeError('Native checkpoint bytes');bytes=Uint8Array.from(bytes);}if(!(bytes instanceof Uint8Array))throw TypeError('Native checkpoint bytes');const saved=this.scene.snapshot();try{this.scene.restore(bytes);const before=this.scene.render().cells.slice();candidate.commit();const after=this.scene.render().cells;if(before.length!==after.length||before.some((n,i)=>n!==after[i]))throw TypeError('Fleet checkpoint native/source mismatch');this.scene.restore(bytes);}catch(error){this.scene.restore(saved);throw error;}Object.assign(this,candidate);return this.snapshot();
+ }
+ snapshot(){return {family:this.family,elapsedMs:this.elapsedMs,nextMs:this.nextMs,source:this.compose(),...(this.studio?{data:this.studio.snapshot()}:{selectedId:this.fleet.selectedId,demoTick:this.fleet.demoTick,options:{...this.fleet.options},draft:this.fleet.draft,scrollOffset:this.fleet.scrollOffset,historyUnread:this.fleet.historyUnread,readKey:this.fleet.readKey,commands:copy(this.fleet.commands),replies:copy(this.fleet.replies)})};}
+}

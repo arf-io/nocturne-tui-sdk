@@ -1,0 +1,50 @@
+{
+  "schema": "nocturne.exact-decoded-fixtures/1",
+  "provenance": "Exact gzip decompression of existing original snapshot fixtures. No source fields, header, schema, checksum or payload bytes modified. Companions permit dependency-free C sanitizer fixture reads and reproduce offline.",
+  "fixtures": [
+    {
+      "compressed": "schema-20261002-retained-event-debounce.snapshot.gz",
+      "compressed_sha256": "45099fceb1dce967b1451741122f920d97667f8adf53a42cf4e782d27f98b47a",
+      "raw": "schema-20261002-retained-event-debounce.snapshot",
+      "raw_sha256": "433640100b34badd85c3b62ae7b6da21ed2afba48a989b15bb1aa1f8ca452a99",
+      "raw_bytes": 4414400,
+      "abi": 1,
+      "schema": "0x20261002",
+      "payload_bytes": 4414376,
+      "crc32": "0x10a02557"
+    },
+    {
+      "compressed": "schema-20261003-retained-intent-selector.snapshot.gz",
+      "compressed_sha256": "11f4824535f22bbde2ef143f84050c1eeffdd82bb5d1522362c141a47ae7d7ea",
+      "raw": "schema-20261003-retained-intent-selector.snapshot",
+      "raw_sha256": "0429fc4761cf949a697e96512c21f6872c1af5057490a178d82b5221473bae9a",
+      "raw_bytes": 4414400,
+      "abi": 1,
+      "schema": "0x20261003",
+      "payload_bytes": 4414376,
+      "crc32": "0xe281d072"
+    },
+    {
+      "compressed": "schema-20261004-intent-action.snapshot.gz",
+      "compressed_sha256": "28e7f8be85e38d2598038415a0e3d844e705df98bd7c53bbf3be90b7a24361cd",
+      "raw": "schema-20261004-intent-action.snapshot",
+      "raw_sha256": "d23901a37fb89d829db72110791cbf2fbf28fbb49d0428ee969be4a94f896722",
+      "raw_bytes": 4414400,
+      "abi": 1,
+      "schema": "0x20261004",
+      "payload_bytes": 4414376,
+      "crc32": "0x230cd2c3"
+    },
+    {
+      "compressed": "schema-20261003-contracts7-registered-style.snapshot.gz",
+      "compressed_sha256": "4104dae44baf5b524e77c3b01e5f5d2616685e34db2b7db0856e3c31ef896fc8",
+      "raw": "schema-20261003-contracts7-registered-style.snapshot",
+      "raw_sha256": "ddbbc3c9edc9206bb4ea6db7b168416703fcee65058f76c6c7c62d05436e4a97",
+      "raw_bytes": 4498632,
+      "abi": 1,
+      "schema": "0x20261003",
+      "payload_bytes": 4498608,
+      "crc32": "0x517a1370"
+    }
+  ]
+}

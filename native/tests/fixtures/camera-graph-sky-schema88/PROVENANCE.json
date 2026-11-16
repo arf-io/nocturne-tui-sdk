@@ -1,0 +1,23 @@
+{
+  "genuineWriter": true,
+  "schema": "0x20261088",
+  "writerHead": "c38b7dcd7d5373da5d69aff3558b2cbb00da7c0c",
+  "snapshotSha256": "16baec782c595a7410d2ec771a4187bc3f29ce05a1034bc68772bfc2e19bb7c8",
+  "frameSha256": "ff1f3055847b2aed9b75dea064ec7fd3e52e6234a1154420b95ff2bda11ac425",
+  "writerNativeSha256": "a7067a4f7eec8110b5c5b8fe9930388a7d2745f51ad0c12a4132fa21fd073eaa",
+  "writerWasmSha256": "16594d2adacad04faf64d7c0f34baea6c63d7520fa660854271a4f9445f1f171",
+  "old87Reader": {
+    "path": "<workspace>/recovery-20261014/camera-graph-spatial-prototype-20261015/libnocturne-schema87.dylib",
+    "sha256": "69581dc8871512e8266c3f133c80163591727171f8be4d2dcee14540846c009f",
+    "rejected88": true,
+    "reason": "Snapshot rejected",
+    "rejectionAtomic": true
+  },
+  "files": {
+    "commands.json": "9d8be84105bbe688cbb2577d959eee7b0123e29031022418c1ca9a2b1dce05e8",
+    "frame.gz": "139695e60750b4ae3a4e01d3266702a3c0cc1e78eb444ac2d32d3106aa14f80e",
+    "LAYOUT.json": "61c61de0b69eac4e585bf3812ba292fc9838a79d6714b124406d805a995525d7",
+    "info.json": "9e8019c3d3b2e1082a367fe957a028b6a1df0fca448a8580914358a2a9eb94c7",
+    "snapshot.gz": "599b5262e9fc57dd67eaf9179dc59688a6d6ec17e8f1b018961b055e598dd1fc"
+  }
+}

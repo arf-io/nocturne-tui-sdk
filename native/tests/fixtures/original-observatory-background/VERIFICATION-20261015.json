@@ -1,0 +1,109 @@
+{
+  "schema": "nocturne.original-observatory-background-verification.v1",
+  "atUtc": "2026-10-15T06:41:47.861341+00:00",
+  "status": "PASS",
+  "principal": "<account>",
+  "sourceSchema": 91,
+  "sourceModuleSha256": "c221beb6e719f47f2c4744fce7cf70fcf918a31b436b6f0f1fca4df63f283904",
+  "sourceWasmSha256": "aa04c1705a5982b924d420971bfcbc7bbedd49f1ea527a9900531b61b0c92a09",
+  "actualMethods": 7,
+  "durationSeconds": 146.795,
+  "scope": {
+    "originalBaseSurfaceCases": 205,
+    "additionalOriginalQueueCases": 6,
+    "nativeExactSurfaces": 211,
+    "wasmExactSurfaces": 211,
+    "nativeExactFullCompositions": 6,
+    "wasmExactFullCompositions": 6,
+    "visualWordsPerCell": [
+      "glyph",
+      "foreground",
+      "background"
+    ],
+    "visualMasks": false,
+    "surfaceHitWords": "all zero asserted",
+    "composedHitWords": "New source-stage IDs differ from original flags; semantic routing is separately qualified and is not proved by these visual comparisons."
+  },
+  "checks": [
+    "native/WASM snapshot-pure render",
+    "actual native/WASM snapshot roundtrip",
+    "late batch failure atomicity",
+    "original weather bounds and defaults",
+    "equal/conflicting nested aliases",
+    "partial edit preservation",
+    "invalid types and raw nonfinite input atomicity",
+    "actual C-layout-derived explicitly test-constructed schema90: reject new scene atomically, accept old Windows mode",
+    "live filter before original last24 event selection",
+    "automatic and authored event overlap"
+  ],
+  "inputs": [
+    {
+      "path": "<workspace>/wt-original-observatory-background-20261015/native/dist/libnocturne_native.dylib",
+      "sha256": "5c4a1eeeb5d6c6ee52a72d6ecf1b4870af7f071f19643be02a2b7e82d928d028",
+      "bytes": 1544392
+    },
+    {
+      "path": "<workspace>/wt-original-observatory-background-20261015/native/dist/nocturne_native.wasm",
+      "sha256": "cb0d8409e5a4927cb8c50d73e54113e412a0fb9cfa3130291e863bb82cdf0bf4",
+      "bytes": 1604235
+    },
+    {
+      "path": "<workspace>/wt-original-observatory-background-20261015/native/tests/test_original_observatory_background.py",
+      "sha256": "3f791948bf9e6a84960a607cb5f35fa7bd63caf7e1455d7f8f2db9f5e1dec29d",
+      "bytes": 12298
+    },
+    {
+      "path": "<workspace>/wt-original-observatory-background-20261015/native/tests/original_observatory_background_wasm.mjs",
+      "sha256": "c7238d5f6e1dd392ba7694dd90ed0d32f1e36052f0c3b2b0476a805db7cdf8c4",
+      "bytes": 4761
+    },
+    {
+      "path": "<workspace>/wt-original-observatory-background-20261015/native/tests/fixtures/original-observatory-background/ORIGINAL-FRAMES-V2.json.gz",
+      "sha256": "b5ca5d11831a4c88a2fe15d10872b1acf9bb2718191f856392dcf1b1fa32a386",
+      "bytes": 928189
+    },
+    {
+      "path": "<workspace>/wt-original-observatory-background-20261015/native/tests/fixtures/original-observatory-background/ORIGINAL-QUEUE-FRAMES.json.gz",
+      "sha256": "c41aea9633ed00a6c7e0c405755c734d8768de9b2656fdd4cfdbf5a4292e9810",
+      "bytes": 41653
+    }
+  ],
+  "inputsUnchangedAfterRun": true,
+  "log": {
+    "path": "<workspace>/recovery-20261014/original-observatory-background-20261015/independent-background-02.log",
+    "sha256": "69a15a895ac17d0b27b34aa67515d2a1689ae1495b590d00a50ae202e325f08d",
+    "bytes": 1352
+  },
+  "capturedFullBuffers": [
+    {
+      "path": "<workspace>/recovery-20261014/original-observatory-background-20261015/actual-background-02/native-compositions.json.gz",
+      "sha256": "bfa6a8c4e5b91c085fed2779da9c197877bd5f65d79b4c003ef6a5483e7c3bb5",
+      "bytes": 43865
+    },
+    {
+      "path": "<workspace>/recovery-20261014/original-observatory-background-20261015/actual-background-02/native-surfaces.json.gz",
+      "sha256": "b2d84423fecdc5806c6d5124d5ae612fa74af132a9a4045253f3f7a237063b47",
+      "bytes": 633253
+    },
+    {
+      "path": "<workspace>/recovery-20261014/original-observatory-background-20261015/actual-background-02/wasm.json.gz",
+      "sha256": "12c0e11e831e347399378146bc226e38b39c45d418b18a0d97fe4eb923680ed4",
+      "bytes": 1266540
+    }
+  ],
+  "failureHistory": [
+    {
+      "path": "<workspace>/recovery-20261014/original-observatory-background-20261015/independent-background-01.log",
+      "sha256": "ff6076bfa8de8765076b90aeb222d98414a8ac6175c80ee9f342274e19cb4b85",
+      "bytes": 19281
+    },
+    {
+      "path": "<workspace>/recovery-20261014/original-observatory-background-20261015/warp-readback-diagnostic-01.json",
+      "sha256": "fda44eaadc4ec35febfcb3ee2bfd701e98a7bd5b93232759c71b614668c70bd0",
+      "bytes": 50015
+    }
+  ],
+  "releaseComplete": false,
+  "allOriginalScenesQualified": false,
+  "fullRetentionComplete": false
+}

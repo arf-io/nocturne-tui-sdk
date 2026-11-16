@@ -1,0 +1,11 @@
+{
+  "head": "375a2473cf16b29ac790357b2d807ea1ce09129d",
+  "writer": "<workspace>/wt-core-repairs-20261015/native/dist/libnocturne_native.dylib",
+  "writerSha256": "62275f6b4dd1de96c9dccbcbe3d89d10494882795c78c2d1c92e3d48c4eec427",
+  "schema": 539365520,
+  "snapshotSha256": "280a3d6cc809f005ebcf4b13fb366381078856f4043ed7ca662fea6946684878",
+  "modelSha256": "39a58a50a29f7b94a014178595ed6b45907a12e246b9680600ea18ecd9bd91b2",
+  "modelTriangles": 4608,
+  "documentScalars": 70005,
+  "frameSha256": "02d5462e946a9b8aa823490e8f5b8d2e4b29971bf5f063e9aa324b8bb117c545"
+}

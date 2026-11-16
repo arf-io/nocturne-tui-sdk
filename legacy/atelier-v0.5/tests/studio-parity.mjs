@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {StudioEngine} from '../dist/typescript/studio.js';
+const schema=JSON.parse(fs.readFileSync(new URL('../studio.schema.json',import.meta.url)));const engine=await StudioEngine.create(new Uint8Array(fs.readFileSync(new URL('../dist/nocturne.wasm',import.meta.url))),schema);const fixtures=JSON.parse(fs.readFileSync(new URL('./studio.fixtures.json',import.meta.url)));
+for(const c of fixtures){const frame=engine.render(engine.defaults(c.config),c.timeMs,c.nodes,c.events);const bytes=Buffer.alloc(frame.cells.length*4);frame.cells.forEach((v,i)=>bytes.writeUInt32LE(v,i*4));assert.equal(createHash('sha256').update(bytes).digest('hex'),c.sha256,c.name);}
+const config=engine.defaults({width:20,height:10});const a=engine.render(config,2000),b=engine.render(config,8000);assert.deepEqual(engine.composite(a,b,0,0,0,0),a);assert.equal(engine.tween(0,670,1000,1000,1),670);
+assert.throws(()=>engine.render(config,-1));assert.throws(()=>engine.render(config,0,[{kind:'unknown',x:0,y:0,width:1,height:1}]));assert.throws(()=>engine.render({...config,glyphs:['\ud800']},0));assert.throws(()=>engine.render({...config,values:{...config.values,width:-1}},0));
+const button={kind:'button',x:1,y:1,width:10,height:3,id:7};assert.equal(engine.hit([button],2,2).id,7);assert.equal(engine.hit([button,{...button,id:8,state:3}],2,2),null);
+console.log(JSON.stringify({binding:'TypeScript/WASM',referenceFrames:fixtures.length,additionalAssertions:8,status:'PASS'}));

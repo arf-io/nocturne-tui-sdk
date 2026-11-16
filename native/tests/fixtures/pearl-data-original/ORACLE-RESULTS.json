@@ -1,0 +1,43 @@
+{
+  "schema": "nocturne.original-data-oracle.results.v1",
+  "originalExecutionsPassed": true,
+  "productionParityPassed": false,
+  "results": [
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/FLEET-ORACLE.json",
+      "sha256": "dcef68244ad96491930035705c5aab47e6c95dd446ae92b2b9e9deb56ddd97fe",
+      "bytes": 7439090
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/STUDIO-ORACLE.json",
+      "sha256": "68b4f8636d757538aec57f8135853edbce16bcf0807c6c5bcad2cadfd0412163",
+      "bytes": 3014744
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/OBSERVATORY-ORACLE.json",
+      "sha256": "4f340c5dcca4d14fe12cb35efca8ccec106a900a4426d39247fc3d62a4160db9",
+      "bytes": 6387762
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/SOURCE-MANIFEST.json",
+      "sha256": "0358f5a2895d18791889db31bd22fb15cf3f7719583143d0149c89e2b7272802",
+      "bytes": 1725164
+    },
+    {
+      "path": "<workspace>/recovery-20261014/pearl-original-data-oracles-20261015/OBSERVATORY-PAIR-PROOF.json",
+      "sha256": "7aa8a0eade738de7835aa5500324247648c829a551c1c1fdc0e051d455411e71",
+      "bytes": 1595
+    }
+  ],
+  "studioActualBrowserOutput": {
+    "passed": true,
+    "rows": 32,
+    "mixedRows": 8,
+    "frameWords": 512000
+  },
+  "limitations": [
+    "No whole-release qualification claim",
+    "Original Fleet maximums are historical behavior, not authority to add new limits",
+    "All historical branches are not yet exhaustively reconciled"
+  ]
+}

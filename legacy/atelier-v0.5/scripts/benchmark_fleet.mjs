@@ -1,0 +1,6 @@
+/** Local render-path timings only; excludes terminal transport and physical display. */
+import fs from 'node:fs';import {performance} from 'node:perf_hooks';
+import {StudioEngine} from '../dist/typescript/studio.js';import {FleetController,createDemoFleet} from '../dist/typescript/fleet.js';
+const engine=await StudioEngine.create(fs.readFileSync('dist/nocturne.wasm'),JSON.parse(fs.readFileSync('studio.schema.json'))),c=new FleetController(engine,createDemoFleet());
+const results=[];for(const mode of ['overview','workspace']){if(mode==='workspace')c.openAgent('atlas');const times=[];for(let i=0;i<150;i++){c.setTime(10000+i*33);const start=performance.now(),s=c.compose();engine.render(s.config,s.timeMs,s.nodes,s.events);if(i>=30)times.push(performance.now()-start);}times.sort((a,b)=>a-b);results.push({mode,width:144,height:48,samples:times.length,medianMs:times[Math.floor(times.length*.5)],p95Ms:times[Math.floor(times.length*.95)]});}
+const report={scope:'composition + WASM cell rendering; excludes browser rasterization, terminal writes, display, provider latency',runtime:process.version,results};fs.writeFileSync('dist/fleet/benchmark.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

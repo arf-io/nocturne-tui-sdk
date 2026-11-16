@@ -1,0 +1,228 @@
+{
+  "schema": "nocturne.example-waterfall/v1",
+  "commands": [
+    {
+      "op": "surface",
+      "id": 1,
+      "wetnessDarkening": 0.25
+    },
+    {
+      "op": "surface",
+      "id": 2,
+      "wetnessDarkening": 0.25
+    },
+    {
+      "op": "surface",
+      "id": 3,
+      "restitution": 0,
+      "friction": 0.8,
+      "settleSpeed": 1,
+      "wetnessGain": 1,
+      "wetnessDarkening": 0.6
+    },
+    {
+      "op": "ribbon",
+      "append": true,
+      "points": [
+        [
+          0,
+          3,
+          -6
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "width": 4,
+      "surfaceId": 1,
+      "color": 6666966,
+      "alpha": 0.8
+    },
+    {
+      "op": "flow",
+      "id": 1,
+      "flux": 2,
+      "stages": [
+        {
+          "name": "channel",
+          "delayUs": 250000,
+          "tailUs": 0
+        },
+        {
+          "name": "sheet",
+          "delayUs": 250000,
+          "tailUs": 0
+        }
+      ]
+    },
+    {
+      "op": "waterfall",
+      "channelSurfaceId": 1,
+      "sheetSurfaceId": 2,
+      "flowId": 1,
+      "channelStage": "channel",
+      "sheetStage": "sheet",
+      "referenceFlux": 2,
+      "drop": 3,
+      "color": 6666966,
+      "alpha": 0.8
+    },
+    {
+      "op": "mesh",
+      "append": true,
+      "triangles": [
+        {
+          "a": [
+            -4.0,
+            0,
+            -2
+          ],
+          "b": [
+            -4.0,
+            0,
+            4
+          ],
+          "c": [
+            4.0,
+            0,
+            -2
+          ],
+          "surfaceId": 3,
+          "color": 4613749,
+          "alpha": 1
+        },
+        {
+          "a": [
+            4.0,
+            0,
+            -2
+          ],
+          "b": [
+            -4.0,
+            0,
+            4
+          ],
+          "c": [
+            4.0,
+            0,
+            4
+          ],
+          "surfaceId": 3,
+          "color": 4613749,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "op": "flow-thickness",
+      "surfaceId": 1,
+      "width": 4,
+      "speed": 2,
+      "maxDepth": 1,
+      "direction": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "op": "flow-thickness",
+      "surfaceId": 2,
+      "width": 4,
+      "speed": 4,
+      "maxDepth": 1,
+      "direction": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "op": "surface-water",
+      "surfaceId": 3,
+      "capacity": 10,
+      "evaporationUs": 0
+    },
+    {
+      "op": "emitter",
+      "id": 1,
+      "effect": "weather/rain-threads",
+      "count": 0,
+      "seed": 73,
+      "shape": "point",
+      "position": [
+        0,
+        1.5,
+        0.1
+      ],
+      "extent": [
+        0,
+        0,
+        0
+      ],
+      "velocity": [
+        0,
+        -4,
+        0
+      ],
+      "spread": [
+        0.3,
+        0.1,
+        0.3
+      ],
+      "gravity": [
+        0,
+        -9.8,
+        0
+      ],
+      "wind": [
+        0,
+        0,
+        0
+      ],
+      "windVariation": [
+        0,
+        0,
+        0
+      ],
+      "collision": true,
+      "deposit": true,
+      "colliders": {
+        "floor": false,
+        "surfaces": [
+          3
+        ]
+      },
+      "lifetimeMinMs": 5000,
+      "lifetimeMaxMs": 5000,
+      "alpha": 0.8
+    },
+    {
+      "op": "flow-sink",
+      "surfaceId": 3,
+      "flowId": 1,
+      "fraction": 0.75,
+      "capacity": 10,
+      "evaporationUs": 0
+    },
+    {
+      "op": "flow-spray",
+      "flowId": 1,
+      "emitterId": 1,
+      "fraction": 0.25,
+      "particleVolume": 0.025
+    },
+    {
+      "op": "define",
+      "path": "/waterfall/flux",
+      "value": 2,
+      "binding": {
+        "family": "flow",
+        "id": 1,
+        "field": "flux"
+      }
+    }
+  ]
+}

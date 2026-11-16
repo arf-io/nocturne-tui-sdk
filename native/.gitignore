@@ -1,0 +1,15 @@
+/dist/
+/Nocturne-RC4-Source-Build.html
+/evidence/capture/
+/evidence/screens/
+/evidence/*-launch.log
+/evidence/*-run.log
+/evidence/parity-*.jsonl
+/evidence/parity-*.stderr
+/evidence/terminal-output.bin
+/bindings/rust/target/
+__pycache__/
+*.pyc
+preview.cells
+/evidence/test-failures/
+/Nocturne-Test-Harness.html

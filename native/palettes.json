@@ -1,0 +1,716 @@
+[
+  {
+    "id": "smart-dark",
+    "name": "Smart Dark / velvet circuitry",
+    "group": "signature",
+    "background": "#111018",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#31354f",
+      "#655679",
+      "#4e7875",
+      "#a77d64",
+      "#7e7096"
+    ],
+    "note": ""
+  },
+  {
+    "id": "black-creme",
+    "name": "Black Creme",
+    "group": "signature",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#665d55",
+      "#b6a4c4",
+      "#9fb9b0",
+      "#c7bca7",
+      "#9cacca"
+    ],
+    "note": ""
+  },
+  {
+    "id": "lavender-hush",
+    "name": "Lavender Hush",
+    "group": "signature",
+    "background": "#121016",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#51435e",
+      "#857695",
+      "#b4a4c6",
+      "#8799b1"
+    ],
+    "note": ""
+  },
+  {
+    "id": "sage-embers",
+    "name": "Sage Embers",
+    "group": "signature",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#475e55",
+      "#91a78e",
+      "#c5b69b",
+      "#b88270"
+    ],
+    "note": ""
+  },
+  {
+    "id": "molten-lava",
+    "name": "Molten Lava",
+    "group": "elemental",
+    "background": "#100b0b",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#240b15",
+      "#741c27",
+      "#c13e26",
+      "#ee7f2d",
+      "#ffca71"
+    ],
+    "note": ""
+  },
+  {
+    "id": "neon-dreams",
+    "name": "Neon Dreams",
+    "group": "neon",
+    "background": "#100e1b",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#693cc7",
+      "#ec509d",
+      "#ff9966",
+      "#42aebb",
+      "#8c67d8"
+    ],
+    "note": ""
+  },
+  {
+    "id": "primary-kitsch",
+    "name": "Primary Kitsch",
+    "group": "playful",
+    "background": "#151216",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#e1524a",
+      "#e1be48",
+      "#487ace",
+      "#4dab91"
+    ],
+    "note": ""
+  },
+  {
+    "id": "millennial-gray",
+    "name": "Millennial Gray / aggressively agreeable",
+    "group": "neutral",
+    "background": "#141415",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#414145",
+      "#67676b",
+      "#8d8d90",
+      "#adaba9",
+      "#78787c"
+    ],
+    "note": ""
+  },
+  {
+    "id": "rainbow-bright",
+    "name": "Rainbow Bright",
+    "group": "playful",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#dc6470",
+      "#e9a05c",
+      "#e5ce77",
+      "#78b394",
+      "#71a7d7",
+      "#a78acd",
+      "#d38bb3"
+    ],
+    "note": ""
+  },
+  {
+    "id": "saas-blue",
+    "name": "SaaS Blue / enterprise feelings",
+    "group": "corporate",
+    "background": "#0b111c",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#162c58",
+      "#2857a0",
+      "#4288c6",
+      "#8fbbde",
+      "#46648c"
+    ],
+    "note": ""
+  },
+  {
+    "id": "copper",
+    "name": "Copper After Hours",
+    "group": "metal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#392824",
+      "#714a38",
+      "#ac7050",
+      "#d4a477",
+      "#9c6450"
+    ],
+    "note": ""
+  },
+  {
+    "id": "gold",
+    "name": "Soft Gold / quiet money",
+    "group": "metal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#453b25",
+      "#8f7441",
+      "#b79855",
+      "#d5c493",
+      "#f2dfb4"
+    ],
+    "note": ""
+  },
+  {
+    "id": "rose-gold",
+    "name": "Rose Gold",
+    "group": "metal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#5e4144",
+      "#997074",
+      "#c29d93",
+      "#e5c2a9"
+    ],
+    "note": ""
+  },
+  {
+    "id": "titanium",
+    "name": "Titanium",
+    "group": "metal",
+    "background": "#11151a",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#343e47",
+      "#6c7b86",
+      "#a1adb4",
+      "#d3d7d1"
+    ],
+    "note": ""
+  },
+  {
+    "id": "oxidized",
+    "name": "Oxidized Copper",
+    "group": "metal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#49312c",
+      "#8d6448",
+      "#648a75",
+      "#9cbeaa"
+    ],
+    "note": ""
+  },
+  {
+    "id": "autumn",
+    "name": "Autumn / last light",
+    "group": "seasonal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#59423a",
+      "#935345",
+      "#c38448",
+      "#baaa68",
+      "#756c51"
+    ],
+    "note": ""
+  },
+  {
+    "id": "winter",
+    "name": "Winter / blue hour",
+    "group": "seasonal",
+    "background": "#101319",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#253744",
+      "#597589",
+      "#8aa8b6",
+      "#bdccc9",
+      "#a09fbd"
+    ],
+    "note": ""
+  },
+  {
+    "id": "spring",
+    "name": "Spring / wet stone",
+    "group": "seasonal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#566856",
+      "#8caa77",
+      "#c5c6a0",
+      "#c392a1",
+      "#b5a3c7"
+    ],
+    "note": ""
+  },
+  {
+    "id": "summer",
+    "name": "Summer / peach static",
+    "group": "seasonal",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#896047",
+      "#cf886c",
+      "#e9bc83",
+      "#b7c28e",
+      "#75a9ac"
+    ],
+    "note": ""
+  },
+  {
+    "id": "stellar",
+    "name": "Stellar Temperatures / artistic",
+    "group": "cosmic",
+    "background": "#0c0e15",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#9dbbff",
+      "#d9e3ff",
+      "#f4f0dc",
+      "#f4d0ab",
+      "#e79e82"
+    ],
+    "note": "Qualitative hot-blue to cool-orange sequence, not calibrated photometry or a Kelvin-to-sRGB model."
+  },
+  {
+    "id": "redshift",
+    "name": "Redshift Velvet",
+    "group": "cosmic",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#392747",
+      "#854b78",
+      "#d56c97",
+      "#efaa81"
+    ],
+    "note": ""
+  },
+  {
+    "id": "ion",
+    "name": "Ion Violet",
+    "group": "cosmic",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#322444",
+      "#7657b8",
+      "#b78cd7",
+      "#d8b4cf",
+      "#907acf"
+    ],
+    "note": ""
+  },
+  {
+    "id": "nebula",
+    "name": "Nebula Sorbet",
+    "group": "cosmic",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#6c4a91",
+      "#b977b2",
+      "#e7a390",
+      "#89b0bd"
+    ],
+    "note": ""
+  },
+  {
+    "id": "event-horizon",
+    "name": "Event Horizon",
+    "group": "subtle",
+    "background": "#0b0b12",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#151928",
+      "#282d47",
+      "#494362",
+      "#686083"
+    ],
+    "note": ""
+  },
+  {
+    "id": "vapor",
+    "name": "Vapor Receipt",
+    "group": "neon",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#664d95",
+      "#d587c1",
+      "#a5cddd",
+      "#9e9ddb"
+    ],
+    "note": ""
+  },
+  {
+    "id": "acid-lime",
+    "name": "Acid Lime / supervised",
+    "group": "neon",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#303d32",
+      "#70874a",
+      "#bdcb70",
+      "#8aa58a"
+    ],
+    "note": ""
+  },
+  {
+    "id": "hotline",
+    "name": "Hotline Pink",
+    "group": "neon",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#522648",
+      "#aa386c",
+      "#f06b9f",
+      "#ebafa6"
+    ],
+    "note": ""
+  },
+  {
+    "id": "arcade",
+    "name": "Arcade Aftercare",
+    "group": "neon",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#633d9b",
+      "#bd61b1",
+      "#e5978e",
+      "#59aaa6"
+    ],
+    "note": ""
+  },
+  {
+    "id": "opal",
+    "name": "Opal Interference",
+    "group": "subtle",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#889eae",
+      "#b7a7bf",
+      "#d1c1a4",
+      "#a4bdb0"
+    ],
+    "note": ""
+  },
+  {
+    "id": "pearl",
+    "name": "Pearl on Carbon",
+    "group": "neutral",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#6b6966",
+      "#9d9990",
+      "#cac2b3",
+      "#ddd7c8"
+    ],
+    "note": ""
+  },
+  {
+    "id": "cashmere",
+    "name": "Cashmere Control Room",
+    "group": "neutral",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#504547",
+      "#7e6c6c",
+      "#aa9484",
+      "#c8b7a1"
+    ],
+    "note": ""
+  },
+  {
+    "id": "inkwash",
+    "name": "Indigo Ink Wash",
+    "group": "subtle",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#222b48",
+      "#3d4969",
+      "#637793",
+      "#9fa8b5"
+    ],
+    "note": ""
+  },
+  {
+    "id": "moss",
+    "name": "Moss Protocol",
+    "group": "elemental",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#263a32",
+      "#416252",
+      "#719079",
+      "#a8b39a"
+    ],
+    "note": ""
+  },
+  {
+    "id": "tidal",
+    "name": "Tidal Glass",
+    "group": "elemental",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#183c46",
+      "#376f78",
+      "#74a7a4",
+      "#aac5b9"
+    ],
+    "note": ""
+  },
+  {
+    "id": "storm",
+    "name": "Storm Linen",
+    "group": "elemental",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#363a49",
+      "#5b667e",
+      "#8994a4",
+      "#babeb8"
+    ],
+    "note": ""
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora Boreal",
+    "group": "cosmic",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#386865",
+      "#70b793",
+      "#889bc5",
+      "#b790c7"
+    ],
+    "note": ""
+  },
+  {
+    "id": "ember",
+    "name": "Ember Archive",
+    "group": "elemental",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#51312d",
+      "#8f5140",
+      "#b87558",
+      "#dba981"
+    ],
+    "note": ""
+  },
+  {
+    "id": "amethyst",
+    "name": "Amethyst & Tea",
+    "group": "signature",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#513a6b",
+      "#94749e",
+      "#c2a6b6",
+      "#d1b792"
+    ],
+    "note": ""
+  },
+  {
+    "id": "pistachio",
+    "name": "Pistachio Firmware",
+    "group": "playful",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#597366",
+      "#94a989",
+      "#c2c3a0",
+      "#ccb39d"
+    ],
+    "note": ""
+  },
+  {
+    "id": "blueberry",
+    "name": "Blueberry Terminal",
+    "group": "playful",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#3f375a",
+      "#6c5c91",
+      "#a08bc0",
+      "#c5a7ba"
+    ],
+    "note": ""
+  },
+  {
+    "id": "sunset",
+    "name": "Sunset Exception",
+    "group": "cosmic",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#70416e",
+      "#b0678d",
+      "#d98e77",
+      "#eac292"
+    ],
+    "note": ""
+  },
+  {
+    "id": "ansi16",
+    "name": "ANSI 16 / canonical reference",
+    "group": "legacy",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#000000",
+      "#aa0000",
+      "#00aa00",
+      "#aa5500",
+      "#0000aa",
+      "#aa00aa",
+      "#00aaaa",
+      "#aaaaaa",
+      "#555555",
+      "#ff5555",
+      "#55ff55",
+      "#ffff55",
+      "#5555ff",
+      "#ff55ff",
+      "#55ffff",
+      "#ffffff"
+    ],
+    "note": "Canonical reference RGB values; terminal-configured ANSI slots may differ."
+  },
+  {
+    "id": "ansi-earth",
+    "name": "ANSI Earth / remapped",
+    "group": "legacy",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#222024",
+      "#914e52",
+      "#71895c",
+      "#b49a66",
+      "#5d7296",
+      "#946e9e",
+      "#5c8f91",
+      "#bcb3a5",
+      "#615963",
+      "#c47778",
+      "#9fb581",
+      "#dac18b",
+      "#8fa8d0",
+      "#be98c9",
+      "#8bbdc0",
+      "#e8dfcf"
+    ],
+    "note": ""
+  },
+  {
+    "id": "phosphor",
+    "name": "Phosphor / soft green",
+    "group": "legacy",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#153f26",
+      "#367344",
+      "#69a768",
+      "#b1c795"
+    ],
+    "note": ""
+  },
+  {
+    "id": "amber",
+    "name": "Amber Account",
+    "group": "legacy",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#443010",
+      "#876026",
+      "#be904c",
+      "#e5c28a"
+    ],
+    "note": ""
+  },
+  {
+    "id": "mono-blue",
+    "name": "Monochrome Blue",
+    "group": "legacy",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#1a2c3f",
+      "#354e68",
+      "#5c7e9c",
+      "#9bb5c9"
+    ],
+    "note": ""
+  },
+  {
+    "id": "blackberry",
+    "name": "Blackberry Chrome",
+    "group": "subtle",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#332e3d",
+      "#57455e",
+      "#876277",
+      "#b48d9a"
+    ],
+    "note": ""
+  },
+  {
+    "id": "warm-shadow",
+    "name": "Warm Shadow / barely there",
+    "group": "subtle",
+    "background": "#11100e",
+    "ink": "#e2d9c9",
+    "colors": [
+      "#191716",
+      "#22201e",
+      "#2e2926",
+      "#3a332e",
+      "#2b2724"
+    ],
+    "note": ""
+  }
+]

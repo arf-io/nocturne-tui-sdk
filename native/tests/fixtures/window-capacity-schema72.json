@@ -1,0 +1,8 @@
+{
+  "method": "Public NativeScene commands for original 32-window application, followed by advance_to(1700000), snapshot and render. Captured from the implementation committed with this fixture.",
+  "schema": "0x20261072",
+  "payloadBytes": 18416192,
+  "snapshotSha256": "d0c0ea853002a1b8e773a58475434887e61c0039d1039f6ac109da95da5782a1",
+  "frameSha256": "2e12f0fa62c730b67477e053f387e59edbb1999154b49e94c29cdce3c389f7eb",
+  "windowCount": 32
+}

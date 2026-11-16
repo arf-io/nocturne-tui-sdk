@@ -1,0 +1,24 @@
+{
+  "name": "nocturne-surfaces",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic terminal material and interactive cell scene SDK",
+  "scripts": {
+    "build:ts": "tsc -p tsconfig.json",
+    "test:wasm": "node tests/wasm-parity.mjs",
+    "test": "node tests/wasm-parity.mjs && node tests/studio-parity.mjs",
+    "test:studio": "node tests/studio-parity.mjs",
+    "gallery:studio": "python3 scripts/build_studio_gallery.py",
+    "test:fleet": "node tests/fleet/contract.mjs && node tests/fleet/robustness.mjs && node tests/fleet/input.mjs && node tests/fleet/parity.mjs",
+    "gallery:fleet": "python3 scripts/build_fleet_gallery.py",
+    "test:observatory": "node tests/observatory/contracts.mjs && node tests/observatory/rendering.mjs && node tests/observatory/lifecycle.mjs",
+    "gallery:observatory": "python3 scripts/build_observatory_gallery.py",
+    "test:atelier": "node --test tests/atelier/contracts.mjs tests/atelier/settings.mjs tests/atelier/rendering.mjs",
+    "gallery:atelier": "python3 scripts/build_atelier_gallery.py",
+    "check:all": "sh scripts/check_atelier.sh"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

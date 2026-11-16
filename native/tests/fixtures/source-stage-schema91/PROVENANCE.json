@@ -1,0 +1,14 @@
+{
+  "schema": 539365521,
+  "actualWriter": "<workspace>/wt-source-stage-fleet-20261015/native/dist/libnocturne_native.dylib",
+  "writerSha256": "5509f96526e85de8b72e39e459bce692f31e0587fb1356245c6042cbcbce6224",
+  "snapshotSha256": "37195929b91565491e09a81d581c85be4c579cb7f24ed1ad73989810f976fab8",
+  "frameSha256": "d9bbf14b81b066c7725a6021058271e0b0885e9db513146c194931a91bebf8d3",
+  "old90ReaderSha256": "62275f6b4dd1de96c9dccbcbe3d89d10494882795c78c2d1c92e3d48c4eec427",
+  "old90Rejected91Atomically": true,
+  "modelSha256": "39a58a50a29f7b94a014178595ed6b45907a12e246b9680600ea18ecd9bd91b2",
+  "documentScalars": 70005,
+  "appendedOffset": 30489392,
+  "appendedBytes": 4816,
+  "newFixedPrefix": 30494208
+}

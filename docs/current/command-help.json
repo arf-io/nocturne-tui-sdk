@@ -1,0 +1,3103 @@
+{
+  "schema": "nocturne.workshop-help.v1",
+  "sourceSha256": "7106c4a1b0cd32eae51430c6b98aae9fc646cfda4546d86822fa2012da4faaa8",
+  "parameters": {
+    "define.path": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Absolute value identity beginning with `/`, at most 127 UTF-8 bytes. Define rejects duplicates; bind requires an existing path. Paths identify retained application values, not files.",
+      "sourceFields": [
+        "define.path",
+        "bind.path"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.type": {
+      "default": "Inferred from value; number when omitted",
+      "defaultLabel": "Default",
+      "description": "`number`, `boolean`, `string` or `json`. Fixed until removal/redefinition; explicit JSON preserves any valid JSON root.",
+      "sourceFields": [
+        "define.type"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.value": {
+      "default": "0 for number; required for other kinds",
+      "defaultLabel": "Default",
+      "description": "Initial owned value. Finite unbound number within \u00b11e12; boolean/string/JSON must match their declared kind and storage budgets. Bound values must also satisfy the target contract.",
+      "sourceFields": [
+        "define.value"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.readonly": {
+      "default": "false",
+      "defaultLabel": "Default",
+      "description": "Boolean flag preventing subsequent set operations. Owner-controlled rebinding and explicit removal remain available.",
+      "sourceFields": [
+        "define.readonly"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.binding": {
+      "default": "Unbound when omitted",
+      "defaultLabel": "Default",
+      "description": "Binding descriptor object; initializes the target immediately. Omit this member for an unbound definition. Null detachment belongs to bind. Invalid target existence, kind or domain rejects the whole definition.",
+      "sourceFields": [
+        "define.binding"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.binding.family": {
+      "default": "Required in descriptor",
+      "defaultLabel": "Default",
+      "description": "Native target family, with family-specific fields and value types. Choose from material, emitter, widget, camera, window, text, area, floor, state, node, indicator, prompt, environment, field, flow, surface, surface-wave, float-body, surface-foam, mesh, triangle, cell-art, accessibility or electrical-arc.",
+      "sourceFields": [
+        "define.binding.family",
+        "bind.binding.family"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.binding.id": {
+      "default": "0 when omitted",
+      "defaultLabel": "Default",
+      "description": "Target identity; family-dependent domain. Most identified resources require 1..65535, field supports 1..4294967295, and singleton families use 0. Material uses its slot domain. Camera ignores the optional ID. Omission cannot create a missing identified resource.",
+      "sourceFields": [
+        "define.binding.id",
+        "bind.binding.id"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "define.binding.field": {
+      "default": "Required in descriptor",
+      "defaultLabel": "Default",
+      "description": "Exact family-specific property name, at most 31 UTF-8 bytes. Nested property names such as position.x and channels.r are literal addresses. Unknown fields or incompatible numeric/boolean/string/JSON targets reject; consult the binding references below.",
+      "sourceFields": [
+        "define.binding.field",
+        "bind.binding.field"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "bind.path": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Absolute value identity beginning with `/`, at most 127 UTF-8 bytes. Define rejects duplicates; bind requires an existing path. Paths identify retained application values, not files.",
+      "sourceFields": [
+        "define.path",
+        "bind.path"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "bind.binding": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Replacement descriptor object or explicit null to detach. Replacement immediately applies the retained value to the new target; incompatible values reject atomically. Old target property is preserved.",
+      "sourceFields": [
+        "bind.binding"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "bind.binding.family": {
+      "default": "Required in descriptor",
+      "defaultLabel": "Default",
+      "description": "Native target family, with family-specific fields and value types. Choose from material, emitter, widget, camera, window, text, area, floor, state, node, indicator, prompt, environment, field, flow, surface, surface-wave, float-body, surface-foam, mesh, triangle, cell-art, accessibility or electrical-arc.",
+      "sourceFields": [
+        "define.binding.family",
+        "bind.binding.family"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "bind.binding.id": {
+      "default": "0 when omitted",
+      "defaultLabel": "Default",
+      "description": "Target identity; family-dependent domain. Most identified resources require 1..65535, field supports 1..4294967295, and singleton families use 0. Material uses its slot domain. Camera ignores the optional ID. Omission cannot create a missing identified resource.",
+      "sourceFields": [
+        "define.binding.id",
+        "bind.binding.id"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "bind.binding.field": {
+      "default": "Required in descriptor",
+      "defaultLabel": "Default",
+      "description": "Exact family-specific property name, at most 31 UTF-8 bytes. Nested property names such as position.x and channels.r are literal addresses. Unknown fields or incompatible numeric/boolean/string/JSON targets reject; consult the binding references below.",
+      "sourceFields": [
+        "define.binding.field",
+        "bind.binding.field"
+      ],
+      "section": "Define, bind and edit a value"
+    },
+    "remove-value.path": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Absolute identity beginning with `/`, at most 127 UTF-8 bytes. Existing trigger, style-rule or scheduled consumers prevent removal. An absent valid path is a no-op. Successful removal preserves the target component's last authored property.",
+      "sourceFields": [
+        "remove-value.path"
+      ],
+      "section": "Teardown and rollback"
+    },
+    "schedule.id": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Integer 1..65535; unique among pending commands. Reusing a pending identity rejects.",
+      "sourceFields": [
+        "schedule.id"
+      ],
+      "section": "Scheduling and retained triggers"
+    },
+    "schedule.atUs": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Absolute integer scene microseconds, 0..86400000000, at or after the current clock. Past times and fractions reject. Execution belongs to clock advancement; rendering does not fire it.",
+      "sourceFields": [
+        "schedule.atUs"
+      ],
+      "section": "Scheduling and retained triggers"
+    },
+    "schedule.command": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Owned native command object or allowed batch, at most 4095 UTF-8 bytes. Invalid current-state dependencies and operations excluded from scheduling reject; see the transaction reference for the allowed-operation contract.",
+      "sourceFields": [
+        "schedule.command"
+      ],
+      "section": "Scheduling and retained triggers"
+    },
+    "cancel-schedule.id": {
+      "default": "Required",
+      "defaultLabel": "Default",
+      "description": "Identity of an existing pending command. Missing identities reject; cancellation neither executes the command nor reverses earlier work.",
+      "sourceFields": [
+        "cancel-schedule.id"
+      ],
+      "section": "Scheduling and retained triggers"
+    },
+    "floor.enabled": {
+      "default": "true",
+      "defaultLabel": "Initial default",
+      "description": "Boolean; enables the floor receiver for eligible particle collisions.",
+      "sourceFields": [
+        "enabled"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.visible": {
+      "default": "false",
+      "defaultLabel": "Initial default",
+      "description": "Boolean; draws the floor guide independently of whether collisions are enabled.",
+      "sourceFields": [
+        "visible"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.height": {
+      "default": "0",
+      "defaultLabel": "Initial default",
+      "description": "\u22121000..1000 world units; horizontal collision plane and guide height.",
+      "sourceFields": [
+        "height"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.restitution": {
+      "default": "0.18",
+      "defaultLabel": "Initial default",
+      "description": "0..1; scales the outgoing vertical speed on bounce.",
+      "sourceFields": [
+        "restitution"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.friction": {
+      "default": "0.65",
+      "defaultLabel": "Initial default",
+      "description": "0..1; scales tangential bounce velocity by `1-friction`.",
+      "sourceFields": [
+        "friction"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.settleSpeed": {
+      "default": "0.6",
+      "defaultLabel": "Initial default",
+      "description": "0..30; participates in the effect-dependent collision settling condition. It is not a universal hard speed cutoff.",
+      "sourceFields": [
+        "settleSpeed"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.reentrainWindSpeed": {
+      "default": "6",
+      "defaultLabel": "Initial default",
+      "description": "0..256; tangential wind magnitude above which an eligible individual deposit can return to live motion; zero disables this re-entrainment path.",
+      "sourceFields": [
+        "reentrainWindSpeed"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.maxIndividual": {
+      "default": "256",
+      "defaultLabel": "Initial default",
+      "description": "Integer 0..512; individual-deposit limit for the floor receiver, subject to the shared scene pool.",
+      "sourceFields": [
+        "maxIndividual"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.maxTiles": {
+      "default": "128",
+      "defaultLabel": "Initial default",
+      "description": "Integer 0..256; aggregate-tile limit for the floor receiver, subject to the shared scene pool.",
+      "sourceFields": [
+        "maxTiles"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.overflow": {
+      "default": "`merge-to-field`",
+      "defaultLabel": "Initial default",
+      "description": "`reject-new` or `merge-to-field`; selects rejection or compatible aggregation when individual deposits cannot be allocated.",
+      "sourceFields": [
+        "overflow"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.retentionMs": {
+      "default": "0",
+      "defaultLabel": "Initial default",
+      "description": "0..86400000 milliseconds; zero disables timed expiry, otherwise deposits/tiles expire at their retained age limit.",
+      "sourceFields": [
+        "retentionMs"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.fadeMs": {
+      "default": "0",
+      "defaultLabel": "Initial default",
+      "description": "0..60000 milliseconds; fade interval at the end of a nonzero retention period. Must fit within that period.",
+      "sourceFields": [
+        "fadeMs"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.evaporation": {
+      "default": "0.04",
+      "defaultLabel": "Initial default",
+      "description": "0..10; wetness reduction per simulation second, clamped at zero. This is distinct from deposit expiry.",
+      "sourceFields": [
+        "evaporation"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.cellSize": {
+      "default": "3",
+      "defaultLabel": "Initial default",
+      "description": "0.1..100 world units; X/Z bucket size for floor aggregates and their drawn footprint.",
+      "sourceFields": [
+        "cellSize"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.alpha": {
+      "default": "0.15",
+      "defaultLabel": "Initial default",
+      "description": "0..1; opacity of the visible floor guide. Individual and aggregate deposits have their own opacity calculation.",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Complete floor reference"
+    },
+    "floor.sampling": {
+      "default": "`half`",
+      "defaultLabel": "Initial default",
+      "description": "`cell`, `half`, `braille` or `hybrid`; floor presentation policy, including its aggregate drawing.",
+      "sourceFields": [
+        "sampling"
+      ],
+      "section": "Complete floor reference"
+    },
+    "environment.background": {
+      "default": "`0x111018`",
+      "defaultLabel": "Initial default",
+      "description": "Integer 0..16777215, packed 24-bit RGB. It supplies the solid color or base tint of the procedural palette.",
+      "sourceFields": [
+        "background"
+      ],
+      "section": "Complete environment reference"
+    },
+    "environment.stars": {
+      "default": "150",
+      "defaultLabel": "Initial default",
+      "description": "Integer 0..2000; controls seeded star density. Zero disables star drawing. This is not a promise of that exact number of visible stars.",
+      "sourceFields": [
+        "stars"
+      ],
+      "section": "Complete environment reference"
+    },
+    "environment.starFar": {
+      "default": "150",
+      "defaultLabel": "Initial default",
+      "description": "20..1000 world units; star distance limit around the camera, with distance-dependent exposure/fade.",
+      "sourceFields": [
+        "starFar"
+      ],
+      "section": "Complete environment reference"
+    },
+    "environment.sampling": {
+      "default": "`hybrid`",
+      "defaultLabel": "Initial default",
+      "description": "`cell`, `half`, `braille` or `hybrid`; shared environment sampling policy. Component-specific sampling remains separate.",
+      "sourceFields": [
+        "sampling"
+      ],
+      "section": "Complete environment reference"
+    },
+    "environment.style": {
+      "default": "`solid`",
+      "defaultLabel": "Initial default",
+      "description": "`solid`, `linear`, `plasma`, `wave`, `caustic` or `contours`; selects the screen-space background formula.",
+      "sourceFields": [
+        "style"
+      ],
+      "section": "Complete environment reference"
+    },
+    "environment.occlusionTint": {
+      "default": "1",
+      "defaultLabel": "Initial default",
+      "description": "0..1; how strongly braille particles hidden behind the front particle in a cell tint that cell's background. 1 is the full tint, 0 shows only the scene behind them.",
+      "sourceFields": [
+        "occlusionTint"
+      ],
+      "section": "Complete environment reference"
+    },
+    "environment.occludedDots": {
+      "default": "`hidden`",
+      "defaultLabel": "Initial default",
+      "description": "`hidden` or `merge`; `hidden` keeps particles behind the front one out of the cell's dots, `merge` adds their dots to it.",
+      "sourceFields": [
+        "occludedDots"
+      ],
+      "section": "Complete environment reference"
+    },
+    "surface.id": {
+      "default": "required",
+      "defaultLabel": "Default",
+      "description": "Integer 1\u201316",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.collisionEnabled": {
+      "default": "true",
+      "defaultLabel": "Default",
+      "description": "Contact-query admission",
+      "sourceFields": [
+        "collisionEnabled"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.renderVisible": {
+      "default": "true",
+      "defaultLabel": "Default",
+      "description": "Assigned mesh visibility",
+      "sourceFields": [
+        "renderVisible"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.restitution": {
+      "default": "0.18",
+      "defaultLabel": "Default",
+      "description": "0\u20131; reflected normal velocity fraction",
+      "sourceFields": [
+        "restitution"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.friction": {
+      "default": "0.65",
+      "defaultLabel": "Default",
+      "description": "0\u20131; tangential velocity loss",
+      "sourceFields": [
+        "friction"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.settleSpeed": {
+      "default": "0.6",
+      "defaultLabel": "Default",
+      "description": "0\u201330; contact settle control",
+      "sourceFields": [
+        "settleSpeed"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.reentrainWindSpeed": {
+      "default": "6",
+      "defaultLabel": "Default",
+      "description": "0\u2013256; tangential wind threshold, zero disables",
+      "sourceFields": [
+        "reentrainWindSpeed"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.maxIndividual": {
+      "default": "256",
+      "defaultLabel": "Default",
+      "description": "Integer 0\u2013512; deposit admission",
+      "sourceFields": [
+        "maxIndividual"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.maxTiles": {
+      "default": "128",
+      "defaultLabel": "Default",
+      "description": "Integer 0\u2013256; aggregate admission",
+      "sourceFields": [
+        "maxTiles"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.overflow": {
+      "default": "merge-to-field",
+      "defaultLabel": "Default",
+      "description": "merge-to-field or reject-new",
+      "sourceFields": [
+        "overflow"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.retentionMs": {
+      "default": "0",
+      "defaultLabel": "Default",
+      "description": "0\u201386400000 ms; zero retains until clear",
+      "sourceFields": [
+        "retentionMs"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.fadeMs": {
+      "default": "0",
+      "defaultLabel": "Default",
+      "description": "0\u201360000 ms; cannot exceed nonzero retention",
+      "sourceFields": [
+        "fadeMs"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.wetnessGain": {
+      "default": "0.03",
+      "defaultLabel": "Default",
+      "description": "0\u201310; normalized response gain",
+      "sourceFields": [
+        "wetnessGain"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.evaporation": {
+      "default": "0.04",
+      "defaultLabel": "Default",
+      "description": "0\u201310; normalized wetness loss per second",
+      "sourceFields": [
+        "evaporation"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.heatGain": {
+      "default": "0.02",
+      "defaultLabel": "Default",
+      "description": "0\u201310; normalized heat response gain",
+      "sourceFields": [
+        "heatGain"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.cooling": {
+      "default": "0.1",
+      "defaultLabel": "Default",
+      "description": "0\u201310; normalized heat loss per second",
+      "sourceFields": [
+        "cooling"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.thermalEvaporation": {
+      "default": "0.25",
+      "defaultLabel": "Default",
+      "description": "0\u201310; extra wetness loss per heat unit",
+      "sourceFields": [
+        "thermalEvaporation"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.wetnessDarkening": {
+      "default": "0.35",
+      "defaultLabel": "Default",
+      "description": "0\u20131; darkening at full wetness",
+      "sourceFields": [
+        "wetnessDarkening"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.heatColor": {
+      "default": "0xff8844",
+      "defaultLabel": "Default",
+      "description": "RGB24 integer",
+      "sourceFields": [
+        "heatColor"
+      ],
+      "section": "Surface settings"
+    },
+    "surface.heatTintStrength": {
+      "default": "0.4",
+      "defaultLabel": "Default",
+      "description": "0\u20131; color tint at full heat",
+      "sourceFields": [
+        "heatTintStrength"
+      ],
+      "section": "Surface settings"
+    },
+    "camera.position": {
+      "default": "`[0,10,48]`",
+      "defaultLabel": "Native reset default",
+      "description": "XYZ scene units, each \u221216000..16000",
+      "sourceFields": [
+        "position"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.yaw": {
+      "default": "0",
+      "defaultLabel": "Native reset default",
+      "description": "\u221236000..36000 degrees",
+      "sourceFields": [
+        "yaw"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.pitch": {
+      "default": "\u22128",
+      "defaultLabel": "Native reset default",
+      "description": "\u221289.9..89.9 degrees",
+      "sourceFields": [
+        "pitch"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.roll": {
+      "default": "0",
+      "defaultLabel": "Native reset default",
+      "description": "\u221236000..36000 degrees",
+      "sourceFields": [
+        "roll"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.near": {
+      "default": "0.15",
+      "defaultLabel": "Native reset default",
+      "description": "0.001..100 scene units",
+      "sourceFields": [
+        "near"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.far": {
+      "default": "500",
+      "defaultLabel": "Native reset default",
+      "description": "0.01..1000000 scene units; greater than near",
+      "sourceFields": [
+        "far"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.fov": {
+      "default": "65",
+      "defaultLabel": "Native reset default",
+      "description": "10..150 degrees",
+      "sourceFields": [
+        "fov"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.span": {
+      "default": "65",
+      "defaultLabel": "Native reset default",
+      "description": "0.1..2000; orthographic projection span",
+      "sourceFields": [
+        "span"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "camera.orthographic": {
+      "default": "`false`",
+      "defaultLabel": "Native reset default",
+      "description": "Boolean",
+      "sourceFields": [
+        "orthographic"
+      ],
+      "section": "Direct pose and projection"
+    },
+    "flight.steps[].durationMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Positive, at most 3600000 milliseconds",
+      "sourceFields": [
+        "durationMs"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].speed": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u2212100..100; movement speed control",
+      "sourceFields": [
+        "speed"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].yaw": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u22123600..3600 degrees",
+      "sourceFields": [
+        "yaw",
+        "roll"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].roll": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u22123600..3600 degrees",
+      "sourceFields": [
+        "yaw",
+        "roll"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].pitch": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u221289..89 degrees",
+      "sourceFields": [
+        "pitch"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].bank": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u221285..85 degrees",
+      "sourceFields": [
+        "bank"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].radius": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "1..2000 scene units",
+      "sourceFields": [
+        "radius"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].target": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "XYZ, each \u221210000..10000 scene units",
+      "sourceFields": [
+        "target"
+      ],
+      "section": "Authored flight steps"
+    },
+    "flight.steps[].coordinated": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean",
+      "sourceFields": [
+        "coordinated"
+      ],
+      "section": "Authored flight steps"
+    },
+    "widget.id": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Required identified resource; reserve it in the application",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Widget families"
+    },
+    "widget.kind": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "One of the families above; a fresh widget defaults to text",
+      "sourceFields": [
+        "kind"
+      ],
+      "section": "Widget families"
+    },
+    "widget.x": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer layout coordinates; default 0",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Widget families"
+    },
+    "widget.y": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer layout coordinates; default 0",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Widget families"
+    },
+    "widget.width": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Positive integer dimensions; defaults 20 and 3",
+      "sourceFields": [
+        "width",
+        "height"
+      ],
+      "section": "Widget families"
+    },
+    "widget.height": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Positive integer dimensions; defaults 20 and 3",
+      "sourceFields": [
+        "width",
+        "height"
+      ],
+      "section": "Widget families"
+    },
+    "widget.padding": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u20138; default 0",
+      "sourceFields": [
+        "padding"
+      ],
+      "section": "Widget families"
+    },
+    "widget.alpha": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Coverage 0\u20131; default 0.25",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Widget families"
+    },
+    "widget.border": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "none, rounded, square, double, heavy; default none",
+      "sourceFields": [
+        "border"
+      ],
+      "section": "Widget families"
+    },
+    "widget.material": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201315; default 2",
+      "sourceFields": [
+        "material"
+      ],
+      "section": "Widget families"
+    },
+    "widget.backgroundMaterial": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer \u22121\u201315; default \u22121",
+      "sourceFields": [
+        "backgroundMaterial"
+      ],
+      "section": "Widget families"
+    },
+    "widget.enabled": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean flags; defaults true, false, false",
+      "sourceFields": [
+        "enabled",
+        "selected",
+        "active"
+      ],
+      "section": "Widget families"
+    },
+    "widget.selected": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean flags; defaults true, false, false",
+      "sourceFields": [
+        "enabled",
+        "selected",
+        "active"
+      ],
+      "section": "Widget families"
+    },
+    "widget.active": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean flags; defaults true, false, false",
+      "sourceFields": [
+        "enabled",
+        "selected",
+        "active"
+      ],
+      "section": "Widget families"
+    },
+    "widget.text": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Retained Unicode text within native text capacity; initially empty",
+      "sourceFields": [
+        "text"
+      ],
+      "section": "Widget families"
+    },
+    "widget.value": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Finite \u22121,000,000\u20131,000,000; defaults 0, 0, 1; max must exceed min",
+      "sourceFields": [
+        "value",
+        "min",
+        "max"
+      ],
+      "section": "Widget families"
+    },
+    "widget.min": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Finite \u22121,000,000\u20131,000,000; defaults 0, 0, 1; max must exceed min",
+      "sourceFields": [
+        "value",
+        "min",
+        "max"
+      ],
+      "section": "Widget families"
+    },
+    "widget.max": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Finite \u22121,000,000\u20131,000,000; defaults 0, 0, 1; max must exceed min",
+      "sourceFields": [
+        "value",
+        "min",
+        "max"
+      ],
+      "section": "Widget families"
+    },
+    "widget.data": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Up to 128 finite values, each \u22121,000,000\u20131,000,000; initially empty",
+      "sourceFields": [
+        "data"
+      ],
+      "section": "Widget families"
+    },
+    "widget.mode": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201315; default 0; interpretation belongs to the kind",
+      "sourceFields": [
+        "mode"
+      ],
+      "section": "Widget families"
+    },
+    "widget.pulseMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Duration through 60000 ms; default 1000 ms",
+      "sourceFields": [
+        "pulseMs"
+      ],
+      "section": "Widget families"
+    },
+    "widget.sampling": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "inherit, cell, half, braille, hybrid; default inherit; geometric widgets only",
+      "sourceFields": [
+        "sampling"
+      ],
+      "section": "Widget families"
+    },
+    "widget.cellAspect": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0.5\u20134; default 2; pie/donut only",
+      "sourceFields": [
+        "cellAspect"
+      ],
+      "section": "Widget families"
+    },
+    "widget.innerRadius": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u20130.98; default approximately 0.6164414; donut only",
+      "sourceFields": [
+        "innerRadius"
+      ],
+      "section": "Widget families"
+    },
+    "widget.startAngle": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u221236000\u201336000 degrees; default 0; pie/donut only",
+      "sourceFields": [
+        "startAngle"
+      ],
+      "section": "Widget families"
+    },
+    "widget.sweepAngle": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u2013360 degrees; default 360; pie/donut only",
+      "sourceFields": [
+        "sweepAngle"
+      ],
+      "section": "Widget families"
+    },
+    "widget.revealMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Duration through 60000 ms; default 0; geometric widgets only",
+      "sourceFields": [
+        "revealMs"
+      ],
+      "section": "Widget families"
+    },
+    "widget.replay": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean command option; true restarts reveal at current scene time",
+      "sourceFields": [
+        "replay"
+      ],
+      "section": "Widget families"
+    },
+    "status.id": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Optional explicit message identity",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.area": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Owning layout/clipping area",
+      "sourceFields": [
+        "area"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.text": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Required retained message source",
+      "sourceFields": [
+        "text"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.durationMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Fixed dwell; default 6000 ms; zero prevents automatic expiry",
+      "sourceFields": [
+        "durationMs"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.mode": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "static, horizontal, vertical, fade, pop, horizontal-fade, vertical-fade; default static",
+      "sourceFields": [
+        "mode"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.priority": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u2013100; chooses next queued record, not preemption",
+      "sourceFields": [
+        "priority"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.startTimeUs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Exact integer native timestamp, 0\u201386400000000; defaults to current time",
+      "sourceFields": [
+        "startTimeUs"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.x": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Area-relative layout placement",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.y": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Area-relative layout placement",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.key": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Optional grouping key, at most 63 UTF-8 bytes, scoped to area",
+      "sourceFields": [
+        "key"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.coalesce": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "none, count, replace-queued; default none; merging requires a nonempty key",
+      "sourceFields": [
+        "coalesce"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.important": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Default false; important history requires explicit acknowledgment",
+      "sourceFields": [
+        "important"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.actions": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "At most four uniquely identified action records",
+      "sourceFields": [
+        "actions"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.dwellPerCharacterMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201360000 ms per retained scalar",
+      "sourceFields": [
+        "dwellPerCharacterMs"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.minDurationMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Derived-dwell bounds; defaults 1000 and 60000 ms; each 0\u201386400000 ms",
+      "sourceFields": [
+        "minDurationMs",
+        "maxDurationMs"
+      ],
+      "section": "Notification authoring"
+    },
+    "status.maxDurationMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Derived-dwell bounds; defaults 1000 and 60000 ms; each 0\u201386400000 ms",
+      "sourceFields": [
+        "minDurationMs",
+        "maxDurationMs"
+      ],
+      "section": "Notification authoring"
+    },
+    "text.id": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Required integer 1\u201365535; caller-reserved text resource",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.text": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Retained Unicode source within native text capacity",
+      "sourceFields": [
+        "text"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.effect": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Exact text-family catalogue identity; unknown/wrong-family names reject",
+      "sourceFields": [
+        "effect"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.phase": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "show or hide",
+      "sourceFields": [
+        "phase"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.local": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean local presentation option",
+      "sourceFields": [
+        "local"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.x": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer layout coordinates",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.y": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer layout coordinates",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.width": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Positive integer layout width",
+      "sourceFields": [
+        "width"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.durationMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Treatment duration, 0\u201360000 ms",
+      "sourceFields": [
+        "durationMs"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.staggerMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Per-glyph progression offset, 0\u201310000 ms",
+      "sourceFields": [
+        "staggerMs"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.jitterMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Authored progression jitter, 0\u201310000 ms",
+      "sourceFields": [
+        "jitterMs"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.batchSize": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 1\u2013128",
+      "sourceFields": [
+        "batchSize"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.distance": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u2013100",
+      "sourceFields": [
+        "distance"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.scatter": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u2013120",
+      "sourceFields": [
+        "scatter"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.variation": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u20132",
+      "sourceFields": [
+        "variation"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.wind": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u2212100\u2013100",
+      "sourceFields": [
+        "wind"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.overshoot": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u20133",
+      "sourceFields": [
+        "overshoot"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.cycles": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u201350",
+      "sourceFields": [
+        "cycles"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.scrambleHz": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "0\u2013120 Hz",
+      "sourceFields": [
+        "scrambleHz"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.hueSpread": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u2212360\u2013360 degrees",
+      "sourceFields": [
+        "hueSpread"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.material": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201315",
+      "sourceFields": [
+        "material"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.seed": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Unsigned 32-bit integer, including 0 and 4294967295",
+      "sourceFields": [
+        "seed"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.alphabet": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "1\u2013256 printable Unicode scalars for substitutions",
+      "sourceFields": [
+        "alphabet"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.easing": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "linear, ease-in, ease-out, smooth, smoother, sine, step, cubic, back, bounce",
+      "sourceFields": [
+        "easing"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.delayMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Start delay, 0\u201360000 ms",
+      "sourceFields": [
+        "delayMs"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.reverseOrder": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean reverse progression order",
+      "sourceFields": [
+        "reverseOrder"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.randomOrder": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean seeded random progression order",
+      "sourceFields": [
+        "randomOrder"
+      ],
+      "section": "Authoring fields"
+    },
+    "text.trailLength": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u20138",
+      "sourceFields": [
+        "trailLength"
+      ],
+      "section": "Authoring fields"
+    },
+    "material.id": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201315; omitted ID is 0",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Every material option"
+    },
+    "material.space": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "One of the eight spaces above",
+      "sourceFields": [
+        "space"
+      ],
+      "section": "Every material option"
+    },
+    "material.channels": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Space-specific scalar values or track objects",
+      "sourceFields": [
+        "channels"
+      ],
+      "section": "Every material option"
+    },
+    "material.alpha": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Scalar or track in 0\u20131",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Every material option"
+    },
+    "material.hueStep": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u2212360\u2013360 degrees of authored hue offset",
+      "sourceFields": [
+        "hueStep"
+      ],
+      "section": "Every material option"
+    },
+    "material.scope": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "uniform or characters",
+      "sourceFields": [
+        "scope"
+      ],
+      "section": "Every material option"
+    },
+    "material.blend": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "One of the named modes below",
+      "sourceFields": [
+        "blend"
+      ],
+      "section": "Every material option"
+    },
+    "material.gradient": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "At most 16 stops, exactly three numbers per stop",
+      "sourceFields": [
+        "gradient"
+      ],
+      "section": "Every material option"
+    },
+    "material.spacing": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "\u2212100\u2013100; spatial offset for gradient sampling",
+      "sourceFields": [
+        "spacing"
+      ],
+      "section": "Every material option"
+    },
+    "material.index": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Scalar/track in \u221210000\u201310000, used for gradient sampling",
+      "sourceFields": [
+        "index"
+      ],
+      "section": "Every material option"
+    },
+    "material.colors": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "1\u201364 integer RGB24 values, each 0\u20130xffffff",
+      "sourceFields": [
+        "colors"
+      ],
+      "section": "Every material option"
+    },
+    "material.alpha.initial": {
+      "default": "Retain existing initial value",
+      "defaultLabel": "Omitted member",
+      "description": "Target channel domain; base value at scene time zero before index offset and boundary/easing.",
+      "sourceFields": [
+        "initial"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.rate": {
+      "default": "Retain existing rate",
+      "defaultLabel": "Omitted member",
+      "description": "\u221210000..10000 target units per period; not necessarily units per second.",
+      "sourceFields": [
+        "rate"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.min": {
+      "default": "Retain existing range",
+      "defaultLabel": "Omitted member",
+      "description": "Target channel domain, ordered bounds; equal bounds produce the minimum constant.",
+      "sourceFields": [
+        "min",
+        "max"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.max": {
+      "default": "Retain existing range",
+      "defaultLabel": "Omitted member",
+      "description": "Target channel domain, ordered bounds; equal bounds produce the minimum constant.",
+      "sourceFields": [
+        "min",
+        "max"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.step": {
+      "default": "Retain existing step",
+      "defaultLabel": "Omitted member",
+      "description": "\u221210000..10000 target units per sampled index; uniform material scope uses index zero.",
+      "sourceFields": [
+        "step"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.periodMs": {
+      "default": "Retain existing period",
+      "defaultLabel": "Omitted member",
+      "description": "Positive, at most 3600000 milliseconds, exactly representable in whole microseconds; fresh tracks use 1000 ms.",
+      "sourceFields": [
+        "periodMs"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.boundary": {
+      "default": "Retain existing boundary",
+      "defaultLabel": "Omitted member",
+      "description": "clamp, loop, reverse, random or smooth-random; fresh alpha clamps, gradient index loops.",
+      "sourceFields": [
+        "boundary"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.easing": {
+      "default": "Retain existing easing",
+      "defaultLabel": "Omitted member",
+      "description": "linear, ease-in, ease-out, smooth, smoother, sine or step; fresh tracks use linear.",
+      "sourceFields": [
+        "easing"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.alpha.seed": {
+      "default": "Retain existing seed",
+      "defaultLabel": "Omitted member",
+      "description": "Integer 0..4294967295; fresh tracks use 1; supplies deterministic random-boundary values.",
+      "sourceFields": [
+        "seed"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.initial": {
+      "default": "Retain existing initial value",
+      "defaultLabel": "Omitted member",
+      "description": "Target channel domain; base value at scene time zero before index offset and boundary/easing.",
+      "sourceFields": [
+        "initial"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.rate": {
+      "default": "Retain existing rate",
+      "defaultLabel": "Omitted member",
+      "description": "\u221210000..10000 target units per period; not necessarily units per second.",
+      "sourceFields": [
+        "rate"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.min": {
+      "default": "Retain existing range",
+      "defaultLabel": "Omitted member",
+      "description": "Target channel domain, ordered bounds; equal bounds produce the minimum constant.",
+      "sourceFields": [
+        "min",
+        "max"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.max": {
+      "default": "Retain existing range",
+      "defaultLabel": "Omitted member",
+      "description": "Target channel domain, ordered bounds; equal bounds produce the minimum constant.",
+      "sourceFields": [
+        "min",
+        "max"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.step": {
+      "default": "Retain existing step",
+      "defaultLabel": "Omitted member",
+      "description": "\u221210000..10000 target units per sampled index; uniform material scope uses index zero.",
+      "sourceFields": [
+        "step"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.periodMs": {
+      "default": "Retain existing period",
+      "defaultLabel": "Omitted member",
+      "description": "Positive, at most 3600000 milliseconds, exactly representable in whole microseconds; fresh tracks use 1000 ms.",
+      "sourceFields": [
+        "periodMs"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.boundary": {
+      "default": "Retain existing boundary",
+      "defaultLabel": "Omitted member",
+      "description": "clamp, loop, reverse, random or smooth-random; fresh alpha clamps, gradient index loops.",
+      "sourceFields": [
+        "boundary"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.easing": {
+      "default": "Retain existing easing",
+      "defaultLabel": "Omitted member",
+      "description": "linear, ease-in, ease-out, smooth, smoother, sine or step; fresh tracks use linear.",
+      "sourceFields": [
+        "easing"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "material.index.seed": {
+      "default": "Retain existing seed",
+      "defaultLabel": "Omitted member",
+      "description": "Integer 0..4294967295; fresh tracks use 1; supplies deterministic random-boundary values.",
+      "sourceFields": [
+        "seed"
+      ],
+      "section": "Tracks and partial edits"
+    },
+    "window.title": {
+      "default": "Empty",
+      "defaultLabel": "New-window default",
+      "description": "Up to 160 Unicode scalars",
+      "sourceFields": [
+        "title"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.text": {
+      "default": "Empty",
+      "defaultLabel": "New-window default",
+      "description": "Up to 2048 Unicode scalars",
+      "sourceFields": [
+        "text"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.effect": {
+      "default": "`window-transition/glass-dissolve`",
+      "defaultLabel": "New-window default",
+      "description": "Current WindowTransition identity",
+      "sourceFields": [
+        "effect"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.position": {
+      "default": "Slot-dependent arrangement",
+      "defaultLabel": "New-window default",
+      "description": "XYZ scene units, each \u221216000..16000",
+      "sourceFields": [
+        "position"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.yaw": {
+      "default": "0",
+      "defaultLabel": "New-window default",
+      "description": "Each \u221236000..36000 degrees",
+      "sourceFields": [
+        "yaw",
+        "pitch",
+        "roll"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.pitch": {
+      "default": "0",
+      "defaultLabel": "New-window default",
+      "description": "Each \u221236000..36000 degrees",
+      "sourceFields": [
+        "yaw",
+        "pitch",
+        "roll"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.roll": {
+      "default": "0",
+      "defaultLabel": "New-window default",
+      "description": "Each \u221236000..36000 degrees",
+      "sourceFields": [
+        "yaw",
+        "pitch",
+        "roll"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.width": {
+      "default": "28,22",
+      "defaultLabel": "New-window default",
+      "description": "1..2147483647; world geometry dimensions",
+      "sourceFields": [
+        "width",
+        "height"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.height": {
+      "default": "28,22",
+      "defaultLabel": "New-window default",
+      "description": "1..2147483647; world geometry dimensions",
+      "sourceFields": [
+        "width",
+        "height"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.alpha": {
+      "default": "0.8",
+      "defaultLabel": "New-window default",
+      "description": "0..1",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.material": {
+      "default": "2",
+      "defaultLabel": "New-window default",
+      "description": "Integer0..15",
+      "sourceFields": [
+        "material"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.durationMs": {
+      "default": "600",
+      "defaultLabel": "New-window default",
+      "description": "0..60000 milliseconds",
+      "sourceFields": [
+        "durationMs"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.group": {
+      "default": "0",
+      "defaultLabel": "New-window default",
+      "description": "Integer0..65535",
+      "sourceFields": [
+        "group"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.shape": {
+      "default": "`rectangle`",
+      "defaultLabel": "New-window default",
+      "description": "Rectangle, rounded, ellipse, hexagon, diamond, capsule, ticket, squircle, petal, wave, cloud or polygon",
+      "sourceFields": [
+        "shape"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.sourceGeometry": {
+      "default": "`false`",
+      "defaultLabel": "New-window default",
+      "description": "Boolean; opts into preserved source geometry",
+      "sourceFields": [
+        "sourceGeometry"
+      ],
+      "section": "Create and edit a window"
+    },
+    "window.minColumns": {
+      "default": "30,78",
+      "defaultLabel": "New-window default",
+      "description": "Integers8..2147483647; ordered; minimum strictly greater than `2*(padding+1)`",
+      "sourceFields": [
+        "minColumns",
+        "maxColumns"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.maxColumns": {
+      "default": "30,78",
+      "defaultLabel": "New-window default",
+      "description": "Integers8..2147483647; ordered; minimum strictly greater than `2*(padding+1)`",
+      "sourceFields": [
+        "minColumns",
+        "maxColumns"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.padding": {
+      "default": "1",
+      "defaultLabel": "New-window default",
+      "description": "Integer0..8",
+      "sourceFields": [
+        "padding"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.border": {
+      "default": "`rounded`",
+      "defaultLabel": "New-window default",
+      "description": "`none`, `rounded`, `square`, `double`, `heavy`",
+      "sourceFields": [
+        "border"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.chromeSize": {
+      "default": "3",
+      "defaultLabel": "New-window default",
+      "description": "Integer1..5",
+      "sourceFields": [
+        "chromeSize"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.fadeStartRatio": {
+      "default": "1,0.22",
+      "defaultLabel": "New-window default",
+      "description": "Start0.001..8, end0..8; end strictly below start",
+      "sourceFields": [
+        "fadeStartRatio",
+        "fadeEndRatio"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.fadeEndRatio": {
+      "default": "1,0.22",
+      "defaultLabel": "New-window default",
+      "description": "Start0.001..8, end0..8; end strictly below start",
+      "sourceFields": [
+        "fadeStartRatio",
+        "fadeEndRatio"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.anchorX": {
+      "default": "0.5,1.15",
+      "defaultLabel": "New-window default",
+      "description": "\u22122..3",
+      "sourceFields": [
+        "anchorX",
+        "anchorY"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.anchorY": {
+      "default": "0.5,1.15",
+      "defaultLabel": "New-window default",
+      "description": "\u22122..3",
+      "sourceFields": [
+        "anchorX",
+        "anchorY"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.overshoot": {
+      "default": "0.18",
+      "defaultLabel": "New-window default",
+      "description": "0..1",
+      "sourceFields": [
+        "overshoot"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.scatter": {
+      "default": "32",
+      "defaultLabel": "New-window default",
+      "description": "0..100",
+      "sourceFields": [
+        "scatter"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.bend": {
+      "default": "9",
+      "defaultLabel": "New-window default",
+      "description": "\u221240..40",
+      "sourceFields": [
+        "bend"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.folds": {
+      "default": "6",
+      "defaultLabel": "New-window default",
+      "description": "Integer1..32",
+      "sourceFields": [
+        "folds"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.meshColumns": {
+      "default": "12",
+      "defaultLabel": "New-window default",
+      "description": "Integer2..32",
+      "sourceFields": [
+        "meshColumns"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.meshRows": {
+      "default": "8",
+      "defaultLabel": "New-window default",
+      "description": "Integer2..24",
+      "sourceFields": [
+        "meshRows"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "window.seed": {
+      "default": "Scene seed",
+      "defaultLabel": "New-window default",
+      "description": "uint32",
+      "sourceFields": [
+        "seed"
+      ],
+      "section": "Readability and transition treatment"
+    },
+    "area.id": {
+      "default": "Required",
+      "defaultLabel": "New-area default",
+      "description": "Integer 1..65535; identifies one of the 16 area slots.",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.parent": {
+      "default": "0",
+      "defaultLabel": "New-area default",
+      "description": "Integer 0..65535; zero has no parent, otherwise the parent must exist. Self-parenting and cycles reject.",
+      "sourceFields": [
+        "parent"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.x": {
+      "default": "0",
+      "defaultLabel": "New-area default",
+      "description": "Integer layout coordinates \u22122147483648..2147483647; parent offsets and negative-y anchoring affect effective geometry.",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.y": {
+      "default": "0",
+      "defaultLabel": "New-area default",
+      "description": "Integer layout coordinates \u22122147483648..2147483647; parent offsets and negative-y anchoring affect effective geometry.",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.width": {
+      "default": "80",
+      "defaultLabel": "New-area default",
+      "description": "Positive integer through 2147483647; authored cell width, independent of clipping.",
+      "sourceFields": [
+        "width"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.height": {
+      "default": "4",
+      "defaultLabel": "New-area default",
+      "description": "Positive integer through 2147483647; authored cell height.",
+      "sourceFields": [
+        "height"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.padding": {
+      "default": "1",
+      "defaultLabel": "New-area default",
+      "description": "Integer 0..8; interior spacing.",
+      "sourceFields": [
+        "padding"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.margin": {
+      "default": "0",
+      "defaultLabel": "New-area default",
+      "description": "Integer 0..8; retained area margin setting.",
+      "sourceFields": [
+        "margin"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.alpha": {
+      "default": "0.4",
+      "defaultLabel": "New-area default",
+      "description": "0..1 coverage.",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.border": {
+      "default": "`rounded`",
+      "defaultLabel": "New-area default",
+      "description": "none, rounded, square, double or heavy.",
+      "sourceFields": [
+        "border"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.hideEmpty": {
+      "default": "false",
+      "defaultLabel": "New-area default",
+      "description": "Boolean; controls empty-area presentation rather than deleting ownership.",
+      "sourceFields": [
+        "hideEmpty"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.speedX": {
+      "default": "8",
+      "defaultLabel": "New-area default",
+      "description": "\u2212100..100; horizontal notification motion control.",
+      "sourceFields": [
+        "speedX"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.speedY": {
+      "default": "1",
+      "defaultLabel": "New-area default",
+      "description": "\u221230..30; vertical notification motion control.",
+      "sourceFields": [
+        "speedY"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.material": {
+      "default": "2",
+      "defaultLabel": "New-area default",
+      "description": "Integer 0..15; native material slot.",
+      "sourceFields": [
+        "material"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.fadeMs": {
+      "default": "500",
+      "defaultLabel": "New-area default",
+      "description": "0..60000 milliseconds; retained notification fade timing.",
+      "sourceFields": [
+        "fadeMs"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.gapMs": {
+      "default": "300",
+      "defaultLabel": "New-area default",
+      "description": "0..60000 milliseconds; retained notification gap timing.",
+      "sourceFields": [
+        "gapMs"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "area.layout": {
+      "default": "`ordered`",
+      "defaultLabel": "New-area default",
+      "description": "ordered, queue or direct notification arrangement.",
+      "sourceFields": [
+        "layout"
+      ],
+      "section": "Areas, notifications, cursors and wait indicators"
+    },
+    "node.id": {
+      "default": "Required",
+      "defaultLabel": "New-node default",
+      "description": "Integer 1..65535; stable node resource identity.",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.label": {
+      "default": "Empty",
+      "defaultLabel": "New-node default",
+      "description": "Up to 256 Unicode scalars of retained label source.",
+      "sourceFields": [
+        "label"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.detail": {
+      "default": "Empty",
+      "defaultLabel": "New-node default",
+      "description": "Up to 512 Unicode scalars of retained detail source.",
+      "sourceFields": [
+        "detail"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.kind": {
+      "default": "Empty",
+      "defaultLabel": "New-node default",
+      "description": "Up to 47 UTF-8 bytes; source classification, not a reserved callback name.",
+      "sourceFields": [
+        "kind"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.status": {
+      "default": "Empty",
+      "defaultLabel": "New-node default",
+      "description": "Up to 127 UTF-8 bytes of retained status source.",
+      "sourceFields": [
+        "status"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.sha": {
+      "default": "Empty",
+      "defaultLabel": "New-node default",
+      "description": "Up to 128 UTF-8 bytes; display metadata, not automatic object-integrity verification.",
+      "sourceFields": [
+        "sha"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.position": {
+      "default": "Slot-dependent three-column grid",
+      "defaultLabel": "New-node default",
+      "description": "XYZ world coordinates, each \u221216000..16000; explicit placement resets the target pose.",
+      "sourceFields": [
+        "position"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.pinned": {
+      "default": "false",
+      "defaultLabel": "New-node default",
+      "description": "Boolean retained layout pin state.",
+      "sourceFields": [
+        "pinned"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.color": {
+      "default": "0",
+      "defaultLabel": "New-node default",
+      "description": "RGB24 integer 0..16777215; zero uses automatic kind-derived renderer color.",
+      "sourceFields": [
+        "color"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.minColumns": {
+      "default": "22",
+      "defaultLabel": "New-node default",
+      "description": "Integer 8..2147483647; must fit border/padding and not exceed maxColumns.",
+      "sourceFields": [
+        "minColumns"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.maxColumns": {
+      "default": "44",
+      "defaultLabel": "New-node default",
+      "description": "Integer 8..2147483647; upper card text-width control.",
+      "sourceFields": [
+        "maxColumns"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.padding": {
+      "default": "1",
+      "defaultLabel": "New-node default",
+      "description": "Integer 0..8; interior text spacing.",
+      "sourceFields": [
+        "padding"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.shaPrefix": {
+      "default": "0",
+      "defaultLabel": "New-node default",
+      "description": "Integer 0..128; zero displays the full retained hash text, otherwise limits the displayed prefix.",
+      "sourceFields": [
+        "shaPrefix"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.showKind": {
+      "default": "true",
+      "defaultLabel": "New-node default",
+      "description": "Boolean presentation flags; hiding a field preserves its retained source.",
+      "sourceFields": [
+        "showKind",
+        "showStatus",
+        "showSha",
+        "showDetail"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.showStatus": {
+      "default": "true",
+      "defaultLabel": "New-node default",
+      "description": "Boolean presentation flags; hiding a field preserves its retained source.",
+      "sourceFields": [
+        "showKind",
+        "showStatus",
+        "showSha",
+        "showDetail"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.showSha": {
+      "default": "true",
+      "defaultLabel": "New-node default",
+      "description": "Boolean presentation flags; hiding a field preserves its retained source.",
+      "sourceFields": [
+        "showKind",
+        "showStatus",
+        "showSha",
+        "showDetail"
+      ],
+      "section": "Graph card fields"
+    },
+    "node.showDetail": {
+      "default": "true",
+      "defaultLabel": "New-node default",
+      "description": "Boolean presentation flags; hiding a field preserves its retained source.",
+      "sourceFields": [
+        "showKind",
+        "showStatus",
+        "showSha",
+        "showDetail"
+      ],
+      "section": "Graph card fields"
+    },
+    "prompt.layout": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "`scalar`, `grapheme`, or `bidi`",
+      "sourceFields": [
+        "layout"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.direction": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "`ltr`, `rtl`, or `auto` for directional presentation",
+      "sourceFields": [
+        "direction"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.ambiguousWidth": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "1 or 2 terminal cells",
+      "sourceFields": [
+        "ambiguousWidth"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.mode": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "`marquee`, `grow`, `vim-inline`, or `vim-full`",
+      "sourceFields": [
+        "mode"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.alpha": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Prompt coverage",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.minRows": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Prompt row allocation bounds",
+      "sourceFields": [
+        "minRows",
+        "maxRows"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.maxRows": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Prompt row allocation bounds",
+      "sourceFields": [
+        "minRows",
+        "maxRows"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.border": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "`none`, `rounded`, `square`, `double`, or `heavy`",
+      "sourceFields": [
+        "border"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.padding": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Prompt interior spacing",
+      "sourceFields": [
+        "padding"
+      ],
+      "section": "Prompt options"
+    },
+    "prompt.active": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Prompt activation state",
+      "sourceFields": [
+        "active"
+      ],
+      "section": "Prompt options"
+    },
+    "indicator.id": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Required integer 1\u201365535; updates the same identified slot",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.area": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201365535; default 0",
+      "sourceFields": [
+        "area"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.x": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer layout coordinates; default 0",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.y": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer layout coordinates; default 0",
+      "sourceFields": [
+        "x",
+        "y"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.sequence": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Nonempty, at most 128 Unicode scalars; JSON default `\"/|\\\\-\"`",
+      "sourceFields": [
+        "sequence"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.stepMs": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Positive duration, at most 60000 ms, whole-microsecond representation; default 120 ms",
+      "sourceFields": [
+        "stepMs"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.material": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Integer 0\u201315; default 2",
+      "sourceFields": [
+        "material"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "indicator.cursor": {
+      "default": null,
+      "defaultLabel": null,
+      "description": "Boolean; default false",
+      "sourceFields": [
+        "cursor"
+      ],
+      "section": "Cursor and wait presentation"
+    },
+    "pause.paused": {
+      "default": "Required by the typed interface",
+      "defaultLabel": "Default or requirement",
+      "description": "Boolean; `true` stops clock advancement, `false` permits it. At the raw native command boundary omission retains the existing value.",
+      "sourceFields": [
+        "pause.paused"
+      ],
+      "section": "Scene clock and pause"
+    },
+    "time.timeUs": {
+      "default": "Existing target at the raw boundary",
+      "defaultLabel": "Default or requirement",
+      "description": "Integer microseconds, 0..86400000000, at least the current scene time. Supply an explicit target in application code.",
+      "sourceFields": [
+        "time.timeUs"
+      ],
+      "section": "Scene clock and pause"
+    },
+    "time.budget": {
+      "default": "240",
+      "defaultLabel": "Default or requirement",
+      "description": "Integer 1..4096; maximum simulation steps for this command.",
+      "sourceFields": [
+        "time.budget"
+      ],
+      "section": "Scene clock and pause"
+    },
+    "stop.id": {
+      "default": "Required",
+      "defaultLabel": "Default or requirement",
+      "description": "Integer 1..65535 identifying an existing emitter.",
+      "sourceFields": [
+        "stop.id",
+        "cancel.id",
+        "resume.id"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "stop.style": {
+      "default": "Emitter's existing end style",
+      "defaultLabel": "Default or requirement",
+      "description": "`drain`, `settle`, `dissolve`, `gust`, `quench` or `disperse`; the effect must support the selected ending.",
+      "sourceFields": [
+        "stop.style"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "stop.tailMs": {
+      "default": "Emitter's existing tail; base emitter default 3000",
+      "defaultLabel": "Default or requirement",
+      "description": "0..3600000 milliseconds; converted to retained microseconds.",
+      "sourceFields": [
+        "stop.tailMs",
+        "cancel.tailMs"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "cancel.id": {
+      "default": "Required",
+      "defaultLabel": "Default or requirement",
+      "description": "Integer 1..65535 identifying an existing emitter.",
+      "sourceFields": [
+        "stop.id",
+        "cancel.id",
+        "resume.id"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "cancel.style": {
+      "default": "Existing non-drain style; drain becomes dissolve",
+      "defaultLabel": "Default or requirement",
+      "description": "Same endings except `drain`, which rejects for cancel.",
+      "sourceFields": [
+        "cancel.style"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "cancel.tailMs": {
+      "default": "Emitter's existing tail; base emitter default 3000",
+      "defaultLabel": "Default or requirement",
+      "description": "0..3600000 milliseconds; converted to retained microseconds.",
+      "sourceFields": [
+        "stop.tailMs",
+        "cancel.tailMs"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "resume.id": {
+      "default": "Required",
+      "defaultLabel": "Default or requirement",
+      "description": "Integer 1..65535 identifying an existing emitter.",
+      "sourceFields": [
+        "stop.id",
+        "cancel.id",
+        "resume.id"
+      ],
+      "section": "Stop, cancel and resume an emitter"
+    },
+    "clear-instance.id": {
+      "default": "Required",
+      "defaultLabel": "Default or requirement",
+      "description": "Existing emitter ID, integer 1..65535; an allocated flow-spray emitter rejects.",
+      "sourceFields": [
+        "clear-instance.id"
+      ],
+      "section": "Release an emitter and clean its deposits"
+    },
+    "clear-deposits.emitterId": {
+      "default": "0",
+      "defaultLabel": "Default or requirement",
+      "description": "Integer 0..65535; zero selects all deposits and tiles, otherwise selects their recorded emitter identity.",
+      "sourceFields": [
+        "clear-deposits.emitterId"
+      ],
+      "section": "Release an emitter and clean its deposits"
+    },
+    "clear.scope": {
+      "default": "`weather`",
+      "defaultLabel": "Default",
+      "description": "`weather`, `deposits`, `graph`, `text` or `status`; the selected family has the retention/rejection rules below.",
+      "sourceFields": [
+        "clear.scope"
+      ],
+      "section": "Clear a selected family"
+    },
+    "reset.seed": {
+      "default": "Current scene seed",
+      "defaultLabel": "Default",
+      "description": "Integer 0..4294967295; replaces the seed used by scene defaults.",
+      "sourceFields": [
+        "reset.seed"
+      ],
+      "section": "Reset and start again"
+    },
+    "reset.preservePrompt": {
+      "default": "false",
+      "defaultLabel": "Default",
+      "description": "Boolean; copies the existing Prompt structure back after defaults initialize.",
+      "sourceFields": [
+        "reset.preservePrompt"
+      ],
+      "section": "Reset and start again"
+    },
+    "emitter.id": {
+      "default": "Required",
+      "defaultLabel": "Native default",
+      "description": "Integer 1..65535; unique existing emitter ownership",
+      "sourceFields": [
+        "id"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.effect": {
+      "default": "`weather/autumn-drift`",
+      "defaultLabel": "Native default",
+      "description": "A current native particle-effect catalogue identity",
+      "sourceFields": [
+        "effect"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.seed": {
+      "default": "Hash of scene seed XOR emitter ID",
+      "defaultLabel": "Native default",
+      "description": "uint32; explicit seeds reproduce the configured random sequence",
+      "sourceFields": [
+        "seed"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.count": {
+      "default": "100",
+      "defaultLabel": "Native default",
+      "description": "Integer 0..100000 scheduled births; not a guarantee that this many particles fit concurrently",
+      "sourceFields": [
+        "count"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.rate": {
+      "default": "0",
+      "defaultLabel": "Native default",
+      "description": "0..10000; a positive value selects rate-based emission; do not author together with `count`",
+      "sourceFields": [
+        "rate"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.runningTimeMs": {
+      "default": "8000",
+      "defaultLabel": "Native default",
+      "description": "0..86400000 milliseconds; zero supports burst schedules",
+      "sourceFields": [
+        "runningTimeMs"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.startTimeUs": {
+      "default": "Current scene time",
+      "defaultLabel": "Native default",
+      "description": "Microseconds, not before the current time, within the 24-hour scene range",
+      "sourceFields": [
+        "startTimeUs"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.cycles": {
+      "default": "1",
+      "defaultLabel": "Native default",
+      "description": "Integer 1..10000; rate-based emission requires one cycle",
+      "sourceFields": [
+        "cycles"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.gapMs": {
+      "default": "0",
+      "defaultLabel": "Native default",
+      "description": "0..60000 milliseconds between cycles",
+      "sourceFields": [
+        "gapMs"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.schedule": {
+      "default": "`uniform`",
+      "defaultLabel": "Native default",
+      "description": "`uniform` or `seeded-jitter`",
+      "sourceFields": [
+        "schedule"
+      ],
+      "section": "Identity and birth schedule"
+    },
+    "emitter.position": {
+      "default": "`[0,18,0]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each component \u221216000..16000; world-space pivot",
+      "sourceFields": [
+        "position"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.extent": {
+      "default": "`[28,6,22]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each 0..2000; shape extent in the birth frame",
+      "sourceFields": [
+        "extent"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.shape": {
+      "default": "`box`",
+      "defaultLabel": "Leaf default",
+      "description": "`point`, `box`, `sphere`, `disc`, `line`",
+      "sourceFields": [
+        "shape"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.distribution": {
+      "default": "`legacy`",
+      "defaultLabel": "Leaf default",
+      "description": "`legacy` or `uniform` shape sampling",
+      "sourceFields": [
+        "distribution"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.velocity": {
+      "default": "`[0,-1,0]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u2212256..256; initial scene units/second",
+      "sourceFields": [
+        "velocity"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.spread": {
+      "default": "`[1,1,1]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each 0..128; initial velocity variation",
+      "sourceFields": [
+        "spread"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.birthOrientation": {
+      "default": "`[0,0,0]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u22123600..3600 degrees; active X, then Y, then Z rotations",
+      "sourceFields": [
+        "birthOrientation"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.initialOrientation": {
+      "default": "Unauthored",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u22123600..3600 degrees; authored motion supported for leaves/snow",
+      "sourceFields": [
+        "initialOrientation"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.angularVelocity": {
+      "default": "Unauthored",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u2212720..720 degrees/second; authored motion supported for leaves/snow",
+      "sourceFields": [
+        "angularVelocity"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.tumble": {
+      "default": "`[45,65,90]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u2212720..720; procedural rotation control",
+      "sourceFields": [
+        "tumble"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.sizeMin": {
+      "default": "0.6,1.4",
+      "defaultLabel": "Leaf default",
+      "description": "0.005..64; minimum must not exceed maximum",
+      "sourceFields": [
+        "sizeMin",
+        "sizeMax"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.sizeMax": {
+      "default": "0.6,1.4",
+      "defaultLabel": "Leaf default",
+      "description": "0.005..64; minimum must not exceed maximum",
+      "sourceFields": [
+        "sizeMin",
+        "sizeMax"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.shapeWeights": {
+      "default": "`[1,0,0]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each 0..1; sum must be positive",
+      "sourceFields": [
+        "shapeWeights"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.radius": {
+      "default": "6",
+      "defaultLabel": "Leaf default",
+      "description": "0.1..200; effect-dependent radial scale",
+      "sourceFields": [
+        "radius"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.topology": {
+      "default": "0",
+      "defaultLabel": "Leaf default",
+      "description": "Integer 0..5; geometry treatment, with profile-specific defaults",
+      "sourceFields": [
+        "topology"
+      ],
+      "section": "Birth geometry and motion"
+    },
+    "emitter.gravity": {
+      "default": "`[0,-4,0]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u2212256..256; scene units/second\u00b2",
+      "sourceFields": [
+        "gravity"
+      ],
+      "section": "Forces"
+    },
+    "emitter.wind": {
+      "default": "`[1.5,0,0.8]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each \u2212256..256; air velocity in scene units/second",
+      "sourceFields": [
+        "wind"
+      ],
+      "section": "Forces"
+    },
+    "emitter.windVariation": {
+      "default": "`[0.8,0.15,1]`",
+      "defaultLabel": "Leaf default",
+      "description": "Each 0..128; variation amplitudes",
+      "sourceFields": [
+        "windVariation"
+      ],
+      "section": "Forces"
+    },
+    "emitter.drag": {
+      "default": "1.4",
+      "defaultLabel": "Leaf default",
+      "description": "0..30; native relative-air movement coefficient",
+      "sourceFields": [
+        "drag"
+      ],
+      "section": "Forces"
+    },
+    "emitter.lift": {
+      "default": "0.3",
+      "defaultLabel": "Leaf default",
+      "description": "0..20; native movement coefficient",
+      "sourceFields": [
+        "lift"
+      ],
+      "section": "Forces"
+    },
+    "emitter.flutterHz": {
+      "default": "1.4",
+      "defaultLabel": "Leaf default",
+      "description": "0..30 cycles/second",
+      "sourceFields": [
+        "flutterHz"
+      ],
+      "section": "Forces"
+    },
+    "emitter.flutterAmount": {
+      "default": "0.5",
+      "defaultLabel": "Leaf default",
+      "description": "0..10; effect-dependent flutter amount",
+      "sourceFields": [
+        "flutterAmount"
+      ],
+      "section": "Forces"
+    },
+    "emitter.windScale": {
+      "default": "12",
+      "defaultLabel": "Leaf default",
+      "description": "0.1..1000; spatial wind scale",
+      "sourceFields": [
+        "windScale"
+      ],
+      "section": "Forces"
+    },
+    "emitter.windPeriodSeconds": {
+      "default": "6",
+      "defaultLabel": "Leaf default",
+      "description": "0.1..120 seconds",
+      "sourceFields": [
+        "windPeriodSeconds"
+      ],
+      "section": "Forces"
+    },
+    "emitter.heat": {
+      "default": "12",
+      "defaultLabel": "Leaf default",
+      "description": "0..64; effect-dependent heat control",
+      "sourceFields": [
+        "heat"
+      ],
+      "section": "Forces"
+    },
+    "emitter.lifetimeMinMs": {
+      "default": "8000,14000",
+      "defaultLabel": "Leaf default",
+      "description": "Minimum at least 1 ms; maximum 3600000 ms; ordered bounds",
+      "sourceFields": [
+        "lifetimeMinMs",
+        "lifetimeMaxMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.lifetimeMaxMs": {
+      "default": "8000,14000",
+      "defaultLabel": "Leaf default",
+      "description": "Minimum at least 1 ms; maximum 3600000 ms; ordered bounds",
+      "sourceFields": [
+        "lifetimeMinMs",
+        "lifetimeMaxMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.endStyle": {
+      "default": "`drain`",
+      "defaultLabel": "Leaf default",
+      "description": "`drain`, `settle`, `dissolve`, `gust`, `quench`, `disperse`; the effect must support the selected ending",
+      "sourceFields": [
+        "endStyle"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.tailMs": {
+      "default": "3000",
+      "defaultLabel": "Leaf default",
+      "description": "0..3600000 milliseconds",
+      "sourceFields": [
+        "tailMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.trailMs": {
+      "default": "120",
+      "defaultLabel": "Leaf default",
+      "description": "0..2000 milliseconds",
+      "sourceFields": [
+        "trailMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.birthFadeMs": {
+      "default": "120",
+      "defaultLabel": "Leaf default",
+      "description": "0..60000 milliseconds",
+      "sourceFields": [
+        "birthFadeMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.deathFadeMs": {
+      "default": "700",
+      "defaultLabel": "Leaf default",
+      "description": "0..60000 milliseconds",
+      "sourceFields": [
+        "deathFadeMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.coreMs": {
+      "default": "120",
+      "defaultLabel": "Leaf default",
+      "description": "0..10000 milliseconds",
+      "sourceFields": [
+        "coreMs"
+      ],
+      "section": "Lifetime and ending"
+    },
+    "emitter.material": {
+      "default": "1",
+      "defaultLabel": "Leaf default",
+      "description": "Integer 0..15; native material slot",
+      "sourceFields": [
+        "material"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.alpha": {
+      "default": "0.95",
+      "defaultLabel": "Leaf default",
+      "description": "0..1",
+      "sourceFields": [
+        "alpha"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.sampling": {
+      "default": "`braille`",
+      "defaultLabel": "Leaf default",
+      "description": "`cell`, `half`, `braille`, `hybrid`",
+      "sourceFields": [
+        "sampling"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.surfaceAlpha": {
+      "default": "0.22",
+      "defaultLabel": "Leaf default",
+      "description": "0..1; leaf surface setting",
+      "sourceFields": [
+        "surfaceAlpha"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.veinContrast": {
+      "default": "0.75",
+      "defaultLabel": "Leaf default",
+      "description": "0..1",
+      "sourceFields": [
+        "veinContrast"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.curl": {
+      "default": "0",
+      "defaultLabel": "Leaf default",
+      "description": "\u22122..2",
+      "sourceFields": [
+        "curl"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.backTint": {
+      "default": "0.3",
+      "defaultLabel": "Leaf default",
+      "description": "0..1",
+      "sourceFields": [
+        "backTint"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.twoSided": {
+      "default": "`true`",
+      "defaultLabel": "Leaf default",
+      "description": "Boolean",
+      "sourceFields": [
+        "twoSided"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.nearDistance": {
+      "default": "0.001",
+      "defaultLabel": "Leaf default",
+      "description": "0.001..1000",
+      "sourceFields": [
+        "nearDistance"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.farDistance": {
+      "default": "10000",
+      "defaultLabel": "Leaf default",
+      "description": "0.01..10000; strictly beyond near distance",
+      "sourceFields": [
+        "farDistance"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.farFadeDistance": {
+      "default": "0",
+      "defaultLabel": "Leaf default",
+      "description": "0..10000; no greater than far minus near distance",
+      "sourceFields": [
+        "farFadeDistance"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.collision": {
+      "default": "`true`",
+      "defaultLabel": "Leaf default",
+      "description": "Boolean",
+      "sourceFields": [
+        "collision"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.deposit": {
+      "default": "`true`",
+      "defaultLabel": "Leaf default",
+      "description": "Boolean; requires collision enabled",
+      "sourceFields": [
+        "deposit"
+      ],
+      "section": "Appearance, depth and contact"
+    },
+    "emitter.colliders": {
+      "default": "Default floor selection",
+      "defaultLabel": "Leaf default",
+      "description": "Explicit object with `floor` Boolean and named surface ID array",
+      "sourceFields": [
+        "colliders"
+      ],
+      "section": "Appearance, depth and contact"
+    }
+  },
+  "documentedFields": 335,
+  "totalFields": 1673
+}

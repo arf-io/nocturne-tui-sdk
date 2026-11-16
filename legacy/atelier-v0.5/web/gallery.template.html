@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nocturne · Prompting surfaces</title>
+<style>
+:root{color-scheme:dark;--ink:#11100e;--paper:#dfd3c0;--muted:#958e82;--line:#353029;--lilac:#b6a4c4;--sage:#9fb9b0;--panel:#191713}
+*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--paper);font:14px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button,select,input[type=number],input[type=text],textarea{background:#201d18;color:var(--paper);border:1px solid #494238;border-radius:5px}button{padding:8px 13px;cursor:pointer}button:hover,button:focus-visible{border-color:var(--sage);background:#29251f}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--sage);outline-offset:3px}button.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}button.primary:hover{background:#eee2d0}button.on{color:var(--sage);border-color:var(--sage)}button.small{padding:5px 9px;font-size:11px}select{padding:7px 9px;max-width:100%}input[type=range]{width:100%;accent-color:var(--lilac);height:15px;margin:7px 0 0}input[type=checkbox]{accent-color:var(--sage)}input[type=color]{appearance:none;width:29px;height:29px;padding:0;overflow:hidden;border:1px solid #645848;border-radius:50%;cursor:pointer;background:transparent}input[type=color]::-webkit-color-swatch-wrapper{padding:0}input[type=color]::-webkit-color-swatch{border:none}input[type=number]{width:75px;padding:5px 7px}input[type=text]{padding:9px 12px}a{color:inherit}main{max-width:1536px;margin:auto;padding:0 38px 50px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:24px 0}.brand{display:flex;align-items:center;gap:15px}.mark{font:32px/1 Georgia,serif;color:var(--lilac)}.wordmark{font-size:14px;letter-spacing:.32em;font-weight:650}.edition{font:10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;color:var(--muted)}.mastnote{text-align:right;font:10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.11em;color:var(--muted)}.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;padding:39px 0 29px}.eyebrow{font:10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.18em;color:var(--sage);text-transform:uppercase}h1{font:normal 47px/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.028em;margin:10px 0 0}h1 em{font-weight:normal;color:var(--lilac)}.intro p{max-width:350px;margin:0 0 4px;color:var(--muted);font-size:13px;line-height:1.75}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 304px;gap:20px;align-items:start}.stage{min-width:0;border:1px solid var(--line);background:#15130f;border-radius:8px;overflow:hidden}.stagehead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 17px;border-bottom:1px solid var(--line)}.stagehead h2{font-size:13px;font-weight:500;margin:0}.tag{font:10px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--sage)}.canvaswrap{padding:14px 14px 4px;background:var(--ink);overflow:hidden;min-height:250px;display:flex;align-items:center;justify-content:center}.canvaswrap canvas{display:block;width:100%;height:auto;image-rendering:auto}.stageinfo{display:flex;justify-content:space-between;gap:20px;padding:7px 16px 13px;font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted);background:var(--ink)}.stagecontrols{padding:13px 16px;border-top:1px solid var(--line)}.transport{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.transport input[type=range]{flex:1;min-width:100px;margin:0 8px}.clock{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted);min-width:58px;text-align:right}.inputrow{display:flex;gap:9px;margin:13px 0 0}.inputrow input{flex:1;min-width:0;background:#171510}.inputrow button{white-space:nowrap}.readout{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}.readout b{font-weight:500;color:var(--sage)}.inspector{border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}.inspectorheader{padding:13px 17px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.inspectbody{padding:14px 17px}.field{margin:0 0 14px}.field label,.field .label{display:flex;justify-content:space-between;align-items:center;gap:9px;font-size:11px;color:#b2a898}.field output{font:10px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--paper)}.field select{width:100%;font-size:12px;margin-top:6px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.twocol .field{margin-bottom:12px}.sizefields{display:flex;gap:7px;align-items:center;font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}.swatches{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}.divider{height:1px;background:var(--line);margin:16px 0}.checkrow{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);margin:10px 0}.hint{font-size:10px;line-height:1.6;color:var(--muted);margin:9px 0}.selecteddesc{padding:12px 0 2px;font-size:12px;color:var(--muted);line-height:1.65;min-height:54px}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin:39px 0 18px}.sectionhead h2{font:normal 27px Georgia,serif;margin:5px 0 0}.sectionhead p{font-size:11px;color:var(--muted);margin:0}.atlas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.study{display:block;width:100%;text-align:left;padding:0;border:1px solid var(--line);background:#15130f;border-radius:7px;overflow:hidden}.study:hover{background:#1a1712;transform:translateY(-1px);border-color:#766957}.study.selected{border-color:var(--sage)}.studycanvas{padding:11px 11px 0;background:var(--ink)}.study canvas{display:block;width:100%;height:auto}.studycaption{padding:13px 15px 15px}.studycaption .eyebrow{font-size:8px;color:var(--muted)}.studycaption h3{font:normal 18px Georgia,serif;margin:5px 0 5px;color:var(--paper)}.studycaption p{font-size:10px;line-height:1.6;color:var(--muted);margin:0;min-height:34px}.grammar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;border-top:1px solid var(--line);margin-top:37px;padding-top:23px}.grammar h3{font-size:11px;font-weight:500;color:var(--sage);margin:0 0 8px}.glyphs{font:21px/1.7 "DejaVu Sans Mono",ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:3px;color:var(--lilac)}.grammar p{font-size:11px;color:var(--muted);line-height:1.8;margin:7px 0}details{border-top:1px solid var(--line);margin-top:23px;padding-top:15px}summary{cursor:pointer;color:var(--muted);font-size:11px}textarea{display:block;width:100%;min-height:270px;padding:13px;font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;margin:12px 0}.jsonactions{display:flex;gap:9px;align-items:center}.error{color:#d5a1a4;font-size:11px}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:27px;display:flex;justify-content:space-between;gap:20px;font:10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}.footer b{color:var(--paper);font-weight:400}.skeleton{padding:50px;text-align:center;color:var(--muted)}@media(min-width:1450px){.workspace{grid-template-columns:minmax(0,1fr) 326px}}@media(max-width:1080px){main{padding:0 23px 35px}.workspace{grid-template-columns:minmax(0,1fr) 270px}.intro p{max-width:265px}h1{font-size:39px}}@media(max-width:820px){.workspace{grid-template-columns:1fr}.inspector .inspectbody{display:grid;grid-template-columns:1fr 1fr;gap:8px 25px}.inspector .divider{display:none}.atlas{grid-template-columns:1fr 1fr}.intro{display:block}.intro p{max-width:none;margin-top:18px}.mastnote{display:none}.grammar{grid-template-columns:1fr}.stageinfo{font-size:9px}.readout{flex-wrap:wrap}}@media(max-width:500px){main{padding:0 13px 26px}.atlas{grid-template-columns:1fr}h1{font-size:34px}.inspector .inspectbody{display:block}.inputrow{flex-wrap:wrap}.inputrow input{flex-basis:100%}.sectionhead{display:block}.sectionhead p{margin-top:8px}.footer{display:block}}
+</style>
+</head>
+<body>
+<main>
+<header class="masthead"><div class="brand"><span class="mark" aria-hidden="true">⁕</span><div><div class="wordmark">NOCTURNE</div><div class="edition">CELL MATERIALS / VOL. 01</div></div></div><div class="mastnote">BRAILLE · BLOCKS · TRUE COLOR<br>ONE RENDERER / SIXTEEN STUDIES</div></header>
+<section class="intro"><div><div class="eyebrow">Prompting surfaces · an interactive sketchbook</div><h1>Make room for a little <em>starlight.</em></h1></div><p>Braille dust. Liquid color. Chromatic type.<br>Art made from terminal cells, with a pulse of its own.</p></section>
+<div class="workspace">
+<div>
+<section class="stage" aria-label="Interactive terminal-cell preview">
+<div class="stagehead"><h2 id="stageTitle">Black Creme / stardust</h2><span class="tag" id="motionTag">30 FPS TARGET</span></div>
+<div class="canvaswrap"><canvas id="hero" role="img" aria-label="Animated terminal material with prompting text"></canvas></div>
+<div class="stageinfo"><span id="cellInfo">84 × 28 CELLS</span><span>GLYPH + FOREGROUND + BACKGROUND</span></div>
+<div class="stagecontrols"><div class="transport"><button id="pause" class="small">Pause motion</button><button id="step" class="small">+1 frame</button><label for="timeline" class="edition">TIME</label><input id="timeline" type="range" min="0" max="30000" step="33" value="0" aria-label="Animation time"><span id="timeLabel" class="clock">0.000 s</span></div>
+<div class="inputrow"><input id="promptInput" type="text" value="Make something that feels alive." maxlength="512" aria-label="Live prompt text" spellcheck="false"><button id="submitPrompt" class="small">Send a thought ↵</button></div>
+<div class="readout"><span>MOTION SAMPLES <b id="motionCount">0</b> &nbsp; DATA COMMITS <b id="dataCount">0</b></span><span id="latency">Type while motion is paused.</span></div></div></section>
+<p id="selectedDescription" class="selecteddesc"></p>
+</div>
+<aside class="inspector" aria-label="Material controls"><div class="inspectorheader"><span class="eyebrow">Material desk</span><button class="small" id="reset">Reset</button></div><div class="inspectbody">
+<div class="field"><label for="presetSelect">Study</label><select id="presetSelect"></select></div>
+<div class="twocol"><div class="field"><label for="effect">Field</label><select id="effect"><option value="0">Solid</option><option value="1">Linear</option><option value="2">Diagonal</option><option value="3">Wave</option><option value="4">Rotation</option><option value="5">Plasma</option></select></div><div class="field"><label for="layout">Composition</label><select id="layout"><option value="0">Material only</option><option value="1">Prompt</option><option value="2">Controls</option><option value="3">Hue ribbon</option><option value="4">Scope</option></select></div></div>
+<div class="field"><div class="label">Size / cells <div class="sizefields"><input id="width" type="number" min="12" max="160" value="84" aria-label="Width in cells"><span>×</span><input id="height" type="number" min="6" max="60" value="28" aria-label="Height in cells"></div></div></div>
+<div class="field"><label for="gradientPeriodMs">Cycle duration <output id="out-gradientPeriodMs"></output></label><input id="gradientPeriodMs" type="range" min="300" max="20000" step="100"></div>
+<div class="twocol"><div class="field"><label for="saturationPermille">Saturation <output id="out-saturationPermille"></output></label><input id="saturationPermille" type="range" min="0" max="1000" step="10"></div><div class="field"><label for="brightnessPermille">Brightness <output id="out-brightnessPermille"></output></label><input id="brightnessPermille" type="range" min="0" max="1000" step="10"></div></div>
+<div class="field"><span class="label">Gradient palette <span class="edition">CLICK TO EDIT</span></span><div class="swatches" id="gradientSwatches"></div></div>
+<div class="divider"></div>
+<div><label class="checkrow"><input id="stars" type="checkbox"> Twinkling star layer</label><div class="field"><label for="densityPermille">Star density <output id="out-densityPermille"></output></label><input id="densityPermille" type="range" min="0" max="650" step="5"></div><div class="swatches" id="starSwatches"></div></div>
+<div class="divider"></div>
+<div class="twocol"><div class="field"><label for="hueStepDegrees">Hue step <output id="out-hueStepDegrees"></output></label><input id="hueStepDegrees" type="range" min="-90" max="90" step="1"></div><div class="field"><label for="valuePermille">Live value <output id="out-valuePermille"></output></label><input id="valuePermille" type="range" min="0" max="1000" step="1"></div></div>
+<div><label class="checkrow"><input id="feed" type="checkbox"> Independent data feed / ~80 Hz target</label><button class="small" id="modal">Toggle modal</button> <button class="small" id="selection">Next selection</button><p class="hint">Pause motion, then type or drag Live value. Data draws immediately without waiting for a motion tick. View the controls or scope study to see the live value.</p></div>
+</div></aside>
+</div>
+<section aria-labelledby="atlasHeading"><div class="sectionhead"><div><div class="eyebrow">The material atlas</div><h2 id="atlasHeading">Small worlds, made of cells.</h2></div><p>Choose a study. Change everything.</p></div><div class="atlas" id="atlas"></div></section>
+<section class="grammar"><div><h3>01 / MARKS AS LIGHT</h3><div class="glyphs">⠁ ⠈ ⠂ ⠐ · ∙ ⋅ ⋆ +</div><p>Each star has its own phase, period, glyph, and peak color. The seed binds it to the surface, not the viewport size.</p></div><div><h3>02 / THE CELL IS THE MEDIUM</h3><div class="glyphs">▀ ▄ ▌ ▐ ░ ▒ ▓ ▏ ▎</div><p>Whole cells, half cells, fractional rails, and braille subcells. The canvas adds no blur, bloom, shadows, or extra colors to the rendered cells.</p></div><div><h3>03 / TWO KINDS OF TIME</h3><div class="glyphs">1 → ½ → ¼ → ⅛</div><p>Motion targets 30 samples per second. Input and data take an independent path. Actual presentation remains limited by your display and host.</p></div></section>
+<details id="advanced"><summary>Full configuration / JSON / palettes / glyphs / row falloff / origins / seed</summary><p class="hint">Every integer material setting is represented below. Permille values are thousandths. Exported settings are portable between the supplied bindings. Glyphs use the deliberately narrow demo profile; this is not a full Unicode text editor.</p><textarea id="configJson" spellcheck="false" aria-label="Full surface configuration JSON"></textarea><div class="jsonactions"><button id="applyJson">Apply JSON</button><button id="exportJson">Save configuration</button><button id="copyJson">Copy JSON</button><span id="jsonError" class="error" role="status"></span></div></details>
+<footer class="footer"><span><b>NOCTURNE / 0.1</b><br>Portable material kernel · native + WebAssembly</span><span>Dark Black Creme <b>#11100E</b><br>Local, self-contained, no network requests.</span><span>Controls and graphs are visual studies.<br>Framework integration is a separate layer.</span></footer>
+</main>
+<script type="module">
+/*__BINDING__*/
+const SCHEMA=/*__SCHEMA__*/;
+const PRESETS=/*__PRESETS__*/;
+const WASM_BASE64='/*__WASM__*/';
+const bytes=Uint8Array.from(atob(WASM_BASE64),c=>c.charCodeAt(0));
+const byId=id=>document.getElementById(id);
+const clone=value=>JSON.parse(JSON.stringify(value));
+const engine=await NocturneEngine.create(bytes,SCHEMA);
+let selected=0,config=engine.defaults(),lastMotionMs=0,playing=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+let motionSamples=0,dataCommits=0,epoch=performance.now(),offsetMs=0,lastTick=-1,feedTimer=null,lastFrame=null;
+const thumbs=[];
+const paletteCache=new Map();
+function colorString(color){let text=paletteCache.get(color);if(!text){text='#'+color.toString(16).padStart(6,'0');if(paletteCache.size>30000)paletteCache.clear();paletteCache.set(color,text);}return text;}
+/** Draw ONLY the renderer's cells. Block glyph geometry follows its Unicode shape. */
+function paint(canvas,frame,cellWidth=10,cellHeight=20){
+  const width=frame.width*cellWidth,height=frame.height*cellHeight,displayWidth=canvas.getBoundingClientRect().width;
+  const ratio=Math.min(devicePixelRatio||1,2)*(displayWidth>0&&width>0?displayWidth/width:1);
+  if(canvas.width!==Math.round(width*ratio)||canvas.height!==Math.round(height*ratio)){canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);}
+  const ctx=canvas.getContext('2d',{alpha:false});ctx.setTransform(ratio,0,0,ratio,0,0);ctx.font=`${Math.round(cellHeight*.77)}px "DejaVu Sans Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace`;ctx.textBaseline='middle';ctx.textAlign='center';
+  const a=frame.cells;
+  for(let y=0;y<frame.height;y++)for(let x=0;x<frame.width;x++){
+    const i=(y*frame.width+x)*4,glyph=a[i],px=x*cellWidth,py=y*cellHeight;
+    ctx.fillStyle=colorString(a[i+2]);ctx.fillRect(px,py,cellWidth,cellHeight);
+    if(glyph===32||glyph===0x2800)continue;
+    ctx.fillStyle=colorString(a[i+1]);
+    if(glyph===0x2580)ctx.fillRect(px,py,cellWidth,cellHeight/2);
+    else if(glyph>=0x2581&&glyph<=0x2588){let amount=(glyph-0x2580)/8;ctx.fillRect(px,py+cellHeight*(1-amount),cellWidth,cellHeight*amount);}
+    else if(glyph>=0x2589&&glyph<=0x258f)ctx.fillRect(px,py,cellWidth*(0x2590-glyph)/8,cellHeight);
+    else if(glyph===0x2590)ctx.fillRect(px+cellWidth/2,py,cellWidth/2,cellHeight);
+    else ctx.fillText(String.fromCodePoint(glyph),px+cellWidth/2,py+cellHeight*.52);
+  }
+}
+function presetConfig(preset,width=84,height=28){
+  const c=engine.defaults({...preset.values,width,height});
+  if(preset.palette)c.palette=[...preset.palette];if(preset.starPalette)c.starPalette=[...preset.starPalette];return c;
+}
+function paintHero(){
+  lastFrame=engine.render(config,lastMotionMs,byId('promptInput').value);paint(byId('hero'),lastFrame);
+  byId('cellInfo').textContent=`${config.values.width} × ${config.values.height} CELLS`;
+  byId('timeLabel').textContent=(lastMotionMs/1000).toFixed(3)+' s';byId('timeline').value=lastMotionMs%30000;
+  byId('motionCount').textContent=String(motionSamples);byId('dataCount').textContent=String(dataCommits);
+}
+function paintThumbs(all=false){for(const item of thumbs){if(all||item.visible){paint(item.canvas,engine.render(item.config,lastMotionMs,item.text),8,16);}}}
+function updateMotionLabel(){byId('pause').textContent=playing?'Pause motion':'Resume motion';byId('motionTag').textContent=playing?'30 FPS TARGET':'MOTION HELD / DATA LIVE';byId('pause').classList.toggle('on',!playing);}
+function setPlaying(value){playing=value;offsetMs=lastMotionMs;epoch=performance.now();lastTick=-1;updateMotionLabel();}
+function dataPaint(){const start=performance.now();dataCommits++;paintHero();const cost=performance.now()-start;byId('latency').textContent=`${cost.toFixed(2)} ms to draw · motion unchanged`;}
+function refreshOutputs(){for(const key of ['gradientPeriodMs','saturationPermille','brightnessPermille','densityPermille','hueStepDegrees','valuePermille']){const n=config.values[key];byId('out-'+key).textContent=key==='gradientPeriodMs'?(n/1000).toFixed(1)+' s':key==='hueStepDegrees'?n+'°':(n/10).toFixed(key==='valuePermille'?1:0)+'%';}}
+function refreshJson(){byId('configJson').value=JSON.stringify({schemaVersion:1,...config},null,2);}
+function swatches(id,colors){const el=byId(id);el.replaceChildren();colors.forEach((color,i)=>{const input=document.createElement('input');input.type='color';input.value=color;input.title=`${id==='gradientSwatches'?'Gradient':'Star peak'} ${i+1}: ${color}`;input.setAttribute('aria-label',input.title);input.addEventListener('input',()=>{colors[i]=input.value;dataPaint();refreshJson();});el.append(input);});}
+function syncControls(){
+  for(const key of ['width','height','effect','layout','gradientPeriodMs','saturationPermille','brightnessPermille','densityPermille','hueStepDegrees','valuePermille'])byId(key).value=config.values[key];
+  byId('stars').checked=!!config.values.stars;byId('presetSelect').value=String(selected);
+  swatches('gradientSwatches',config.palette);swatches('starSwatches',config.starPalette);refreshOutputs();refreshJson();
+}
+function selectStudy(index){selected=index;config=presetConfig(PRESETS[index]);byId('stageTitle').textContent=PRESETS[index].name;byId('selectedDescription').textContent=PRESETS[index].description;byId('promptInput').value=PRESETS[index].text||'Make something that feels alive.';thumbs.forEach((item,i)=>item.button.classList.toggle('selected',i===index));syncControls();dataPaint();}
+PRESETS.forEach((preset,index)=>{
+  const option=document.createElement('option');option.value=index;option.textContent=preset.name;byId('presetSelect').append(option);
+  const button=document.createElement('button');button.className='study';button.setAttribute('aria-label','Open '+preset.name);
+  const holder=document.createElement('div');holder.className='studycanvas';const canvas=document.createElement('canvas');canvas.setAttribute('aria-hidden','true');holder.append(canvas);
+  const caption=document.createElement('div');caption.className='studycaption';const family=document.createElement('div');family.className='eyebrow';family.textContent=preset.family;const title=document.createElement('h3');title.textContent=preset.name;const desc=document.createElement('p');desc.textContent=preset.description;caption.append(family,title,desc);button.append(holder,caption);byId('atlas').append(button);button.addEventListener('click',()=>{selectStudy(index);byId('stageTitle').scrollIntoView({block:'start',behavior:'instant'});});
+  const isWidget=preset.values.layout===2||preset.values.layout===4;thumbs.push({canvas,button,config:presetConfig(preset,isWidget?84:64,isWidget?28:20),text:preset.text||'leave room for wonder.',visible:false});
+});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{const item=thumbs.find(t=>t.canvas===entry.target);if(item)item.visible=entry.isIntersecting;});},{rootMargin:'100px'});thumbs.forEach(item=>observer.observe(item.canvas));
+for(const key of ['width','height','effect','layout','gradientPeriodMs','saturationPermille','brightnessPermille','densityPermille','hueStepDegrees','valuePermille']){
+  const input=byId(key);input.addEventListener('input',()=>{const value=Number(input.value),field=SCHEMA.fields.find(f=>f.name===key);if(!Number.isInteger(value)||value<field.minimum||value>field.maximum)return;config.values[key]=value;refreshOutputs();dataPaint();refreshJson();});
+}
+byId('stars').addEventListener('change',()=>{config.values.stars=Number(byId('stars').checked);dataPaint();refreshJson();});
+byId('presetSelect').addEventListener('change',()=>selectStudy(Number(byId('presetSelect').value)));
+byId('reset').addEventListener('click',()=>selectStudy(selected));
+byId('pause').addEventListener('click',()=>setPlaying(!playing));
+byId('step').addEventListener('click',()=>{setPlaying(false);lastMotionMs=Math.floor((Math.round(lastMotionMs*30/1000)+1)*1000/30);motionSamples++;paintHero();paintThumbs();});
+byId('timeline').addEventListener('input',()=>{setPlaying(false);lastMotionMs=Number(byId('timeline').value);motionSamples++;paintHero();paintThumbs();});
+byId('promptInput').addEventListener('input',dataPaint);
+byId('promptInput').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();byId('submitPrompt').click();}});
+byId('submitPrompt').addEventListener('click',()=>{dataPaint();byId('latency').textContent='Thought received locally. No request was sent.';});
+byId('modal').addEventListener('click',()=>{config.values.layout=2;config.values.modalOpen=1-config.values.modalOpen;syncControls();dataPaint();});
+byId('selection').addEventListener('click',()=>{config.values.layout=2;config.values.selection=(config.values.selection+1)%6;syncControls();dataPaint();});
+byId('feed').addEventListener('change',()=>{if(feedTimer){clearInterval(feedTimer);feedTimer=null;}if(byId('feed').checked)feedTimer=setInterval(()=>{config.values.valuePermille=Math.round(500+470*Math.sin(performance.now()/750));byId('valuePermille').value=config.values.valuePermille;refreshOutputs();dataPaint();},12.5);});
+byId('advanced').addEventListener('toggle',()=>{if(byId('advanced').open)refreshJson();});
+byId('applyJson').addEventListener('click',()=>{try{const parsed=JSON.parse(byId('configJson').value);if(parsed.schemaVersion!==1)throw Error('Unsupported schemaVersion');const proposed={values:parsed.values,palette:parsed.palette,starPalette:parsed.starPalette,glyphs:parsed.glyphs};engine.validate(proposed);config=clone(proposed);syncControls();dataPaint();byId('jsonError').textContent='Applied.';}catch(error){byId('jsonError').textContent=error.message;}});
+byId('exportJson').addEventListener('click',()=>{refreshJson();const blob=new Blob([byId('configJson').value+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nocturne-'+PRESETS[selected].id+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+byId('copyJson').addEventListener('click',async()=>{try{refreshJson();await navigator.clipboard.writeText(byId('configJson').value);byId('jsonError').textContent='Copied.';}catch{byId('configJson').select();byId('jsonError').textContent='Clipboard unavailable here. Copy the selected text.';}});
+selectStudy(0);paintThumbs(true);updateMotionLabel();
+function tick(now){if(playing&&!document.hidden){const elapsed=offsetMs+now-epoch,index=Math.floor(elapsed*30/1000);if(index!==lastTick){lastTick=index;lastMotionMs=Math.floor(index*1000/30);motionSamples++;paintHero();paintThumbs();}}requestAnimationFrame(tick);}requestAnimationFrame(tick);
+// Public inspection hooks for fixture tests, artwork capture, and host experiments.
+window.__nocturne={engine,SCHEMA,PRESETS,paint,presetConfig,selectStudy,setPlaying,
+  getState:()=>({lastMotionMs,motionSamples,dataCommits,playing,config:clone(config),frame:lastFrame?Array.from(lastFrame.cells):null}),
+  renderAt:(index,timeMs)=>{setPlaying(false);selectStudy(index);lastMotionMs=timeMs;paintHero();paintThumbs(true);return byId('hero').toDataURL('image/png');},
+  setData:(text,value)=>{byId('promptInput').value=text;config.values.valuePermille=value;dataPaint();},
+  getFrame:()=>lastFrame,
+};
+</script>
+</body>
+</html>

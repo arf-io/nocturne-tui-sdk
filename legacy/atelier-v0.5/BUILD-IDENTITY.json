@@ -1,0 +1,12 @@
+{
+  "version": "0.5.0-source-preview",
+  "sourceCommit": "5b01a7c607453da13ce39b1d7deb947c66511c45",
+  "branch": "feature/vol5-spatial-atelier",
+  "gallerySourceBuild": "f78b1d8ae6a53edd59e0b2345a8335614a902ddf",
+  "executionReport": "docs/atelier/TEST_REPORT.md",
+  "fontAssetsIncluded": false,
+  "realAgentsConnected": false,
+  "physicalSensorsTested": false,
+  "rustCompiledLocally": false,
+  "optionalHeadlessIntegrationTestedLocally": false
+}

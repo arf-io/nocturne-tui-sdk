@@ -1,0 +1,6 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {NativeScene} from '../bindings/typescript/native_scene.mjs';
+const wasm=fs.readFileSync(new URL('../dist/nocturne_native.wasm',import.meta.url));const s=await NativeScene.create(wasm,100);
+let text='';for(let i=0;i<105;i++){const ch=String.fromCodePoint(0x410+i);s.command({op:'input',text:ch});text+=ch;}
+for(let i=0;i<100;i++)s.command({op:'key',key:'z',ctrl:true});assert.equal(s.textRunSource(0,0),text.slice(0,5));s.command({op:'key',key:'z',ctrl:true});assert.equal(s.textRunSource(0,0),text.slice(0,5));
+const saved=s.snapshot();const r=await NativeScene.create(wasm,1);r.restore(saved);for(let i=0;i<100;i++)r.command({op:'key',key:'r',ctrl:true});assert.equal(r.textRunSource(0,0),text);s.close();r.close();
+const big=await NativeScene.create(wasm,2);const values=Array.from({length:101},(_,i)=>'界'.repeat(5000+i)+i);for(const text of values)big.command({op:'draft',text,emitWeather:false});assert(big.exports.nrPromptMemoryCapacity(big.context)<25n*1024n*1024n);for(const text of values.slice(0,-1).reverse()){big.command({op:'key',key:'z',ctrl:true});assert.equal(big.textRunSource(0,0),text);}big.close();console.log('PASS original100undo/redo,105edit eviction,100variable large histories,packed allocation<25MiB,snapshot fresh-context replay');

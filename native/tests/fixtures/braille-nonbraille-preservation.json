@@ -1,0 +1,42 @@
+{
+  "schema": "nocturne.braille-nonbraille-preservation.v1",
+  "provenance": {
+    "actualSourceHead": "52fd7e277489468f398a555e41c5816cecc48029",
+    "actualWasmSha256": "802087f709d68260f8c15559cb3ca1d85545cb5d0e41ef127bfaf6057fb3bdde",
+    "frameBytes": 61440,
+    "seed": 42,
+    "description": "Actual unchanged runtime frames retained in operator regression evidence. Original explicit cell/half/hybrid policies, not constructed pixels."
+  },
+  "cases": [
+    {
+      "kind": "leaf",
+      "sampling": "cell",
+      "sha256": "c8a8ec652e976fe65bc95d02c0197a5d695375e0ab31ce18defc72054e70ec5c"
+    },
+    {
+      "kind": "floor",
+      "sampling": "cell",
+      "sha256": "9f46e867e6fec87b2a642ae982845e30ebe5ff82b2abf5c3c87221cba96ed0b0"
+    },
+    {
+      "kind": "leaf",
+      "sampling": "half",
+      "sha256": "c33351417faa3cb8ced8111fa4a63364bbae511e59cbad04a5b98d7071a43669"
+    },
+    {
+      "kind": "floor",
+      "sampling": "half",
+      "sha256": "3371687d48f0a3c4757ddeab1167220e2bb1b79b90984f1a1d1aeaddc004f653"
+    },
+    {
+      "kind": "leaf",
+      "sampling": "hybrid",
+      "sha256": "4ca677736658152cc9caa151e9d1236bd64c4a7852bba0696970ff09893d22a4"
+    },
+    {
+      "kind": "floor",
+      "sampling": "hybrid",
+      "sha256": "3d34b756717333a061ae48e090fa70ba481f06bd755d1693c23e379ba13c09de"
+    }
+  ]
+}

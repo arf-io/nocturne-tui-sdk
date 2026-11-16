@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {NativeScene} from './native_scene.mjs';
+const scene=await NativeScene.create(readFileSync(new URL('../../dist/nocturne_native.wasm',import.meta.url)));
+const v=scene.waveSample([[2,3,4,5,.2]],.1,.2,.3);
+assert.ok(Math.abs(v[0]-2*Math.cos(-.2))<1e-11);
+assert.deepEqual(scene.waveSample([],0,0,0),[0,-0,1,-0,0,0]);
+assert.throws(()=>scene.waveSample([[NaN,0,0,0,0]],0,0,0));
+scene.command({op:'surface',id:1});scene.command({op:'surface-waves',surfaceId:1,waves:[[2,0,0,0,0]]});assert.equal(scene.surfaceWaveSample(1,0,0)[0],2);
+scene.command({op:'floor',enabled:false});scene.command({op:'surface',id:1,restitution:1,friction:0,settleSpeed:0});
+scene.command({op:'mesh',triangles:[{a:[-10,0,-10],b:[10,0,-10],c:[0,0,10],surfaceId:1}]});
+scene.command({op:'surface-waves',surfaceId:1,waves:[[1,0,0,1,Math.PI/2]]});
+scene.command({op:'emitter',id:1,effect:'weather/autumn-drift',count:1,runningTimeMs:0,shape:'point',position:[0,1,0],velocity:[0,-240,0],extent:[0,0,0],spread:[0,0,0],gravity:[0,0,0],wind:[0,0,0],windVariation:[0,0,0],drag:0,lift:0,flutterHz:0,flutterAmount:0,tumble:[0,0,0],deposit:false,collision:true,lifetimeMinMs:10000,lifetimeMaxMs:10000,sizeMin:.1,sizeMax:.1,colliders:{surfaces:[1]}});
+scene.advanceTo(8333);
+let low=0,high=1/120;for(let i=0;i<60;i++){const mid=(low+high)/2;if(1-240*mid>Math.sin(mid))low=mid;else high=mid;}
+assert.ok(Math.abs(scene.particles()[0][7]/65536-(240+2*Math.cos((low+high)/2)))<2/65536);
+function sweepCase(height,omega,waves){
+ scene.command({op:'reset',seed:2030});scene.command({op:'floor',enabled:false});scene.command({op:'surface',id:1,restitution:1,friction:0,settleSpeed:0});
+ scene.command({op:'mesh',triangles:[{a:[-10,0,-10],b:[10,0,-10],c:[0,0,10],surfaceId:1}]});
+ scene.command({op:'surface-waves',surfaceId:1,waves:waves??[[1,0,0,omega,Math.PI/2]]});
+ scene.command({op:'emitter',id:1,effect:'weather/autumn-drift',count:1,runningTimeMs:0,shape:'point',position:[0,height,0],velocity:[0,0,0],extent:[0,0,0],spread:[0,0,0],gravity:[0,0,0],wind:[0,0,0],windVariation:[0,0,0],drag:0,lift:0,flutterHz:0,flutterAmount:0,tumble:[0,0,0],deposit:false,collision:true,lifetimeMinMs:10000,lifetimeMaxMs:10000,sizeMin:.1,sizeMax:.1,colliders:{surfaces:[1]}});
+}
+sweepCase(.004,1);scene.advanceTo(8333);
+const y0=Math.round(.004*65536)/65536,impact=Math.asin(y0),response=2*Math.cos(impact);
+assert.ok(Math.abs(scene.particles()[0][7]/65536-response)<2/65536);
+assert.ok(Math.abs(scene.particles()[0][4]/65536-(y0+.001+response*(1/120-impact)))<3/65536);
+sweepCase(.5,240*Math.PI);scene.advanceTo(8333);
+assert.ok(Math.abs(scene.particles()[0][7]/65536-480*Math.PI*Math.sqrt(.75))<3/65536);
+sweepCase(.01,1,[[1,0,0,1000000,0],[-1,0,0,1000000,0]]);
+const before=scene.snapshot();assert.throws(()=>scene.advanceTo(8333),/solver budget exhausted/);assert.deepEqual(scene.snapshot(),before);
+scene.command({op:'reset',seed:2030});scene.command({op:'surface',id:1});
+scene.command({op:'mesh',triangles:[{a:[-10,0,-10],b:[10,0,-10],c:[0,0,10],surfaceId:1}]});
+scene.command({op:'float-body',id:1,surfaceId:1,position:[0,-2,0],mass:1000,radius:1,drag:0});
+const held=scene.snapshot();scene.render();assert.deepEqual(scene.snapshot(),held);
+scene.advanceTo(8333);assert.ok(Math.abs(scene.floatBody(1)[4]-(9.81*4*Math.PI/3-9.81)/120)<1e-10);
+scene.command({op:'remove-float-body',id:1});assert.equal(scene.floatBody(1),null);
+scene.command({op:'surface-waves',surfaceId:1,waves:[[1,1,0,0,0]]});
+scene.command({op:'surface-foam',surfaceId:1,sourceRate:2,curvatureThreshold:0,decay:1,impactGain:0});
+scene.advanceTo(16666);
+const foam=scene.surfaceFoam(1)[0];
+assert.ok(Math.abs(foam[1]-1/121)<1e-12);
+assert.ok(Math.abs(foam[2]-foam[1]-foam[3]-foam[4])<1e-12);
+const foamSaved=scene.snapshot();scene.render();assert.deepEqual(scene.snapshot(),foamSaved);
+scene.command({op:'clear-surface-foam',surfaceId:1});assert.deepEqual(scene.surfaceFoam(1)[0],[0,0,0,0,0]);
+scene.close();console.log('PASS native WASM wave field');

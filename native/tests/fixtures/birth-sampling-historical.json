@@ -1,0 +1,140 @@
+{
+  "sourceCommit": "888d3d777e3bfe66138db04b72cb8b859f3fe0bc",
+  "sourceFiles": {
+    "native/freestanding/string.h": "33c06ac714b26b166e3af21e55f75aad9639e00afa3278578f862553de268103",
+    "native/include/nocturne_native.h": "5523d587d75a5fe1d50dc814b513cd0406fb365a0dcc82aad6527d99c056935f",
+    "native/src/blend.c": "44204713babce763b7d631d424ea9ea1eff4d02dd6539c10f02b8461762043b3",
+    "native/src/catalog.c": "52c5ebb6a07ae50428ef28bf095a118e7304d585b66827d6e588da0caa9e9b13",
+    "native/src/catalog.inc": "7bdc6c4a0d772e785d22ba9a7af914fea2271e96b1ab7cd84dbc42b631ecb824",
+    "native/src/commands.c": "fc2358eecc7868774d366d98f1da87e13b186d5386412956d97dcc85c25c6b83",
+    "native/src/conditions.c": "bf7984cb9abf0478b448f9faa68c785d70e970d7a0c8b425bdf731a36d580351",
+    "native/src/geometry.c": "bcc07dd845c1ba58e01fd2a862f05b5dd7e165d182fc21854f51175fbfc3b34f",
+    "native/src/internal.h": "761d258b81ef66554499c67fcdcc1d896e44e29f9b363e821edc7b282d70029c",
+    "native/src/json.c": "1b63b88790e8a4629fe2c65abbd539460d1588740122adc529846386e78c8d7a",
+    "native/src/math.c": "1063f1841347d9112e183ad0dc3ffabce77e24ad7c6d269e12cbba81858b16de",
+    "native/src/motion.c": "4eefb428195343a4d56afa08a27d37f556c53d55b2eb50d6483da74432858a09",
+    "native/src/notifications.c": "608c045219a663d8d67e39ec23a2683ae9541ab51e61dbf6572044abb901e3c6",
+    "native/src/plots.c": "093806ccf14a673d7b9597221f4f978ac45109a9b83916a0bf182074373242cc",
+    "native/src/render.c": "b897150be9b0f107f6d7b0e3665d2b461b816e1159eb2baced74ec4809f89f28",
+    "native/src/sampling.c": "62d1fe48d5eb40037087f87fc2bd4a0cc089ee7097dd28f3ecc637c895866590",
+    "native/src/state.c": "83436d2d316f9e087b2207d21a3f975e81f8e5a59df3cf08bf391435173c71d4",
+    "native/src/status.c": "062782b16f6b0b1bb09a1636d52ea2a5f517aa14eaf0e11614ee0493573f23a5",
+    "native/src/styles.c": "274ed1427e90e3f885fdb3c282a250afb8f2e57930b7b03fd0eeb5d659f50938",
+    "native/src/tables.inc": "b8cf06c8a24f5b286ff89c017fb68d8b97740a12d03ce6a17743ff46f262c2f8",
+    "native/src/text_transition.c": "6b49eb36bb6f2b5deb959831ee6e0f43c9c2d32dd6559502ad64b575cf6ab9b4",
+    "native/src/transactions.c": "316a97bd01ed3dfe016a48d6be95bb49108cd6f337a9fd5c5e1a6ac254b89a89",
+    "native/src/ui.c": "0c6051fcbc0d335e10eccd0ed707c20867b3f900a9e189ac8e67b400f99c75a7",
+    "native/src/validate.c": "6846a0afbf13279d7abbd7fc63156c8f99ef1530dea4962cc9755451910c664b",
+    "native/src/values.c": "0e4d9533106df643a4436e1140649985664ea5542194e03ab0c7ba948ad32fcf",
+    "native/src/wasm_mem.c": "95750ce81c0d514508bac288738028a02357214a5637197299c1bed804d085e7",
+    "native/src/weather.c": "7d7ad319a96a268ff618a72a6198cccfd71ff56caf8445e7641cc9523bc33d23",
+    "native/src/window_transition.c": "8974fb79f2b8c8e16c1967070569a1b146787819272829ae2151226d1da756fd"
+  },
+  "compiler": "/opt/homebrew/opt/llvm/bin/clang",
+  "compilerVersion": "Homebrew clang version 23.1.3",
+  "compileFlags": [
+    "-std=c11",
+    "-O2",
+    "-ffp-contract=off",
+    "-fno-fast-math",
+    "-fno-math-errno",
+    "-fno-strict-aliasing",
+    "-fPIC"
+  ],
+  "historicalLibrarySha256": "2eabf174b69ad1de49827d1ac26c503dca296a0c34bec922549dbfa8be3467f6",
+  "originalDefaultFrameVerified": true,
+  "seed": 991,
+  "commands": [
+    {
+      "op": "emitter",
+      "id": 1,
+      "count": 2048,
+      "runningTimeMs": 0,
+      "lifetimeMinMs": 300,
+      "lifetimeMaxMs": 300,
+      "collision": false,
+      "deposit": false
+    },
+    {
+      "op": "emitter",
+      "id": 2,
+      "seed": 991,
+      "count": 5000,
+      "runningTimeMs": 100,
+      "cycles": 2,
+      "gapMs": 50,
+      "schedule": "seeded-jitter",
+      "collision": false,
+      "deposit": false
+    },
+    {
+      "op": "emitter",
+      "id": 3,
+      "seed": 82,
+      "rate": 200,
+      "runningTimeMs": 0,
+      "lifetimeMinMs": 1000,
+      "lifetimeMaxMs": 1000,
+      "initialOrientation": [
+        10,
+        20,
+        30
+      ],
+      "angularVelocity": [
+        0,
+        45,
+        0
+      ],
+      "collision": false,
+      "deposit": false
+    }
+  ],
+  "timeUs": 600000,
+  "cases": [
+    {
+      "sampling": "cell",
+      "frameSha256": "30ac3738914c4499af77e1613d44eaafb4e700e1314892db4d75df8f7a811810",
+      "cells": 7680,
+      "fragmentOverflow": 1199,
+      "particles": {
+        "active": 59,
+        "deposited": 0,
+        "aggregated": 0,
+        "born": 2107,
+        "rejected": 10061,
+        "depositRejected": 0
+      }
+    },
+    {
+      "sampling": "half",
+      "frameSha256": "e15d8bd8eb3ee5d58fe16e9b14c3217818051b7d35c4a5c5a1fab5eb090ff7e3",
+      "cells": 7680,
+      "fragmentOverflow": 1199,
+      "particles": {
+        "active": 59,
+        "deposited": 0,
+        "aggregated": 0,
+        "born": 2107,
+        "rejected": 10061,
+        "depositRejected": 0
+      }
+    },
+    {
+      "sampling": "hybrid",
+      "frameSha256": "66b7aae3287087c74c852dce8101de3f720a6fa28ecc38bbe1fc11a989e6d482",
+      "cells": 7680,
+      "fragmentOverflow": 1199,
+      "particles": {
+        "active": 59,
+        "deposited": 0,
+        "aggregated": 0,
+        "born": 2107,
+        "rejected": 10061,
+        "depositRejected": 0
+      }
+    }
+  ],
+  "referenceKind": "Newly executed immutable historical source, not a downloaded original frame",
+  "originalDefaultFrameSha256": "1a65927cab1da8bc487d45ee98cd36bc46e23a304d5c5381a8bb562645db94b6",
+  "overflowProbeLibrarySha256": "d5502e856e5d9f9641c07028654a130d096512ed95d4005aaa6fc75496ee385b"
+}

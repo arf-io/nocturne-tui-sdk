@@ -1,0 +1,189 @@
+{
+  "schema": 80,
+  "stateBytes": 18426008,
+  "footerOffset": 18419096,
+  "footerBytes": 6912,
+  "cameraOffset": 18416192,
+  "cameraBytes": 2904,
+  "windowApplicationBytes": 20384,
+  "viewport": [
+    136,
+    44
+  ],
+  "seed": 2030,
+  "commands": [
+    {
+      "op": "resize",
+      "width": 136,
+      "height": 44
+    },
+    {
+      "op": "environment",
+      "stars": 0,
+      "presentation": "canvas"
+    },
+    {
+      "op": "floor",
+      "visible": false
+    },
+    {
+      "op": "prompt",
+      "active": false
+    },
+    {
+      "op": "draft",
+      "text": "",
+      "emitWeather": false
+    },
+    {
+      "op": "camera",
+      "profile": "original",
+      "position": [
+        0,
+        0,
+        100.81414585886633
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "roll": 0,
+      "fov": 68,
+      "near": 0.2,
+      "far": 20000
+    },
+    {
+      "op": "window",
+      "id": 1,
+      "title": "PEARL / SIGNAL",
+      "shape": "rounded",
+      "effect": "window-transition/ribbon-genie",
+      "position": [
+        -37.0,
+        3.0,
+        0
+      ],
+      "width": 52,
+      "height": 46,
+      "durationMs": 0,
+      "alpha": 0.88,
+      "overshoot": 0.18,
+      "scatter": 24,
+      "bend": 9,
+      "seed": 6001
+    },
+    {
+      "op": "window-content",
+      "id": 1,
+      "profile": "atelier",
+      "label": "w1",
+      "sourceIndex": 0,
+      "brightness": 0.16
+    },
+    {
+      "op": "window",
+      "id": 1,
+      "durationMs": 950
+    },
+    {
+      "op": "window",
+      "id": 2,
+      "title": "ATLAS / OPS",
+      "shape": "hexagon",
+      "effect": "window-transition/ribbon-genie",
+      "position": [
+        14.0,
+        -7.0,
+        -5
+      ],
+      "width": 56,
+      "height": 42,
+      "durationMs": 0,
+      "alpha": 0.88,
+      "overshoot": 0.18,
+      "scatter": 24,
+      "bend": 9,
+      "seed": 6001
+    },
+    {
+      "op": "window-content",
+      "id": 2,
+      "profile": "atelier",
+      "label": "w2",
+      "sourceIndex": 1,
+      "brightness": 0.16
+    },
+    {
+      "op": "window",
+      "id": 2,
+      "durationMs": 950
+    },
+    {
+      "op": "window",
+      "id": 3,
+      "title": "IRIS / ARCHIVE",
+      "shape": "ellipse",
+      "effect": "window-transition/ribbon-genie",
+      "position": [
+        39.0,
+        12.0,
+        -14
+      ],
+      "width": 42,
+      "height": 36,
+      "durationMs": 0,
+      "alpha": 0.88,
+      "overshoot": 0.18,
+      "scatter": 24,
+      "bend": 9,
+      "seed": 6001
+    },
+    {
+      "op": "window-content",
+      "id": 3,
+      "profile": "atelier",
+      "label": "w3",
+      "sourceIndex": 2,
+      "brightness": 0.16
+    },
+    {
+      "op": "window",
+      "id": 3,
+      "durationMs": 950
+    },
+    {
+      "op": "window-action",
+      "id": 1,
+      "action": "restore",
+      "durationMs": 0
+    },
+    {
+      "op": "window",
+      "id": 1,
+      "durationMs": 950
+    },
+    {
+      "op": "window-application",
+      "paletteWindowId": 1,
+      "scene": "atelier-windows",
+      "starDensity": 0.024,
+      "novaRegularity": 0
+    }
+  ],
+  "actions": [
+    {
+      "timeUs": 1000000,
+      "command": {
+        "op": "window-action",
+        "id": 1,
+        "action": "minimize"
+      }
+    }
+  ],
+  "timeUs": 1425000,
+  "snapshotSha256": "1b8954fe70ed3348779fa8dea00e3e013b07f0606f5b3bd3bdca6dce8c7d7e04",
+  "frameSha256": "adf386789823d71cc0354b0606e20ff4a644872fe1790155cea2f2d6ebc537f3"
+}

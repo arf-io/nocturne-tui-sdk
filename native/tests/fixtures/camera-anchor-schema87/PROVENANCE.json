@@ -1,0 +1,10 @@
+{
+  "writerHead": "52fd7e277489468f398a555e41c5816cecc48029",
+  "candidateSourceBase": "8b38b1e5daf743ec3b32f1533e9754854cf7e85f",
+  "sourceChangeSinceWriter": "manual CI context only; production source bytes unchanged",
+  "writerLibrarySha256": "69581dc8871512e8266c3f133c80163591727171f8be4d2dcee14540846c009f",
+  "schema": 539365511,
+  "snapshotSha256": "df73c602c3d2c2026cae777dfd760a9f252d5a94f2f901147973324894c23755",
+  "frameSha256": "0047a2f9e2869708e888f70c93994e21bb241040b604226b918c07859f8054aa",
+  "fixtureKind": "genuine unchanged schema87 writer, no relabeling"
+}

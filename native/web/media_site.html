@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nocturne capture evidence</title>
+<style>
+:root{color-scheme:dark;scrollbar-color:#2b3949 #0b1016}body{margin:0;background:#0b1016;color:#dfd8c9;font-family:ui-monospace,monospace}
+canvas{display:block;max-width:100%;height:auto;margin:12px auto;cursor:pointer;outline-offset:3px}canvas:focus-visible{outline:2px solid #a3cabe}
+.accessible{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}#status.failure{position:static;width:auto;height:auto;clip-path:none;padding:16px}
+</style>
+<canvas tabindex="0" aria-label="Recorded Nocturne evidence. Left and right change captures, Space plays video, down changes screenshot."></canvas>
+<nav class="accessible" aria-label="Capture controls"><button onclick="mediaSite.previous()">Previous capture</button><button onclick="mediaSite.next()">Next capture</button><button onclick="mediaSite.play()">Play or pause video</button><button onclick="mediaSite.photo()">Next screenshot</button></nav>
+<p id="status" class="accessible" role="status" aria-live="polite">Loading captured evidence</p>
+<nav id="originals" class="accessible" aria-label="Original full resolution evidence"></nav>
+<script>
+@@BINDING@@
+const data=@@DATA@@,canvas=document.querySelector('canvas'),context=canvas.getContext('2d'),cw=10,ch=17;
+const sample=document.createElement('canvas');sample.width=80;sample.height=40;const pixels=sample.getContext('2d',{willReadFrequently:true});
+const video=document.createElement('video');video.preload='metadata';video.playsInline=true;
+const site={ready:false,error:null,scene:null,current:null,originalVerified:false,videoFrames:0};window.mediaSite=site;
+let index=0,photo=0,request=0,playing=false,videoUrl=null,lastVideoPaint=0;
+const hash=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(v=>v.toString(16).padStart(2,'0')).join('');
+function failure(error){site.error=String(error.message??error);const status=document.querySelector('#status');status.textContent=site.error;status.classList.add('failure');}
+async function verified(record){const response=await fetch(record.path,{cache:'no-store'});if(!response.ok)throw Error('Capture file unavailable');const bytes=await response.arrayBuffer();if(bytes.byteLength!==record.bytes||await hash(bytes)!==record.sha256)throw Error('Recorded capture integrity differs');return bytes;}
+function draw(){const frame=site.scene.render();canvas.width=frame.width*cw;canvas.height=frame.height*ch;context.font='14px ui-monospace, monospace';context.textBaseline='top';for(let y=0;y<frame.height;y++)for(let x=0;x<frame.width;x++){const i=(y*frame.width+x)*4;context.fillStyle='#'+frame.cells[i+2].toString(16).padStart(6,'0');context.fillRect(x*cw,y*ch,cw,ch);if(frame.cells[i]){context.fillStyle='#'+frame.cells[i+1].toString(16).padStart(6,'0');context.fillText(String.fromCodePoint(frame.cells[i]),x*cw,y*ch);}}}
+function importImage(image){
+ const width=image.videoWidth||image.width,height=image.videoHeight||image.height;
+ const scale=Math.min(80*cw/width,40*ch/height),w=width*scale/cw,h=height*scale/ch;
+ pixels.fillStyle='#0b1016';pixels.fillRect(0,0,80,40);pixels.drawImage(image,(80-w)/2,(40-h)/2,w,h);const rgba=pixels.getImageData(0,0,80,40).data;
+ for(let tile=0;tile<2;tile++){const cells=[];for(let y=0;y<40;y++)for(let x=0;x<40;x++){const at=(y*80+x+tile*40)*4,rgb=rgba[at]*65536+rgba[at+1]*256+rgba[at+2];cells.push([32,rgb,rgb]);}site.scene.command({op:'cell-art',id:tile+1,width:40,height:40,x:2+tile*40,y:6,alpha:1,layer:'background',cells});}draw();
+}
+function chrome(mode='Screenshot'){site.scene.command({op:'batch',commands:[{op:'widget',id:1,kind:'text',x:2,y:1,width:80,height:1,text:site.current.recipe.name||site.current.id,alpha:1},
+ {op:'widget',id:7,kind:'text',x:2,y:47,width:80,height:2,text:'80x40-cell preview. Originals and source hashes retained.\nCapture '+(index+1)+'/'+data.cases.length+' / '+mode+' '+(mode==='Screenshot'?photo+1:''),alpha:1}]});const originals=document.querySelector('#originals');originals.replaceChildren();for(const record of [site.current.samples[photo].screenshot,site.current.video]){const link=document.createElement('a');link.href=record.path;link.textContent=record.mimeType==='image/png'?'Original screenshot':'Original video';link.onfocus=()=>focusControl(record.mimeType==='image/png'?8:9);originals.append(link,document.createTextNode(' '));}}
+function stop(){playing=false;video.pause();if(videoUrl){URL.revokeObjectURL(videoUrl);videoUrl=null;}}
+function focusControl(id){if(!site.ready)return;site.scene.command({op:'batch',commands:[2,3,4,5,8,9].map(value=>({op:'widget',id:value,selected:value===id}))});draw();}
+site.original=async kind=>{if(!site.ready)return;const record=kind==='video'?site.current.video:site.current.samples[photo].screenshot;if(!record.path.startsWith('data:')){window.open(record.path,'_blank','noopener');return;}try{const bytes=await verified(record),url=URL.createObjectURL(new Blob([bytes],{type:record.mimeType})),link=document.createElement('a');link.href=url;link.download=record.filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),60000);}catch(error){failure(error);}};
+async function show(){const token=++request;stop();document.querySelector('#status').textContent='Loading capture';try{const candidate=data.cases[index],bytes=await verified(candidate.samples[photo].screenshot),image=await createImageBitmap(new Blob([bytes]));if(token!==request){image.close();return;}site.current=candidate;site.originalVerified=true;chrome();importImage(image);image.close();site.ready=true;site.error=null;document.querySelector('#status').classList.remove('failure');document.querySelector('#status').textContent=candidate.id+'; downsampled preview loaded';}catch(error){if(token===request)failure(error);}}
+site.previous=()=>{index=(index-1+data.cases.length)%data.cases.length;photo=0;show();};site.next=()=>{index=(index+1)%data.cases.length;photo=0;show();};site.photo=()=>{photo=(photo+1)%data.cases[index].samples.length;show();};
+site.play=async()=>{if(playing){stop();return;}const token=++request;try{const bytes=await verified(site.current.video);if(token!==request)return;stop();videoUrl=URL.createObjectURL(new Blob([bytes],{type:'video/webm'}));video.src=videoUrl;await video.play();if(token!==request){stop();return;}playing=true;chrome('Video');
+ const next=callback=>video.requestVideoFrameCallback?video.requestVideoFrameCallback(callback):requestAnimationFrame(callback);
+ const update=()=>{if(!playing||token!==request)return;if(performance.now()-lastVideoPaint>=125){importImage(video);site.videoFrames++;lastVideoPaint=performance.now();}next(update);};next(update);
+ }catch(error){if(token===request)failure(error);}};
+video.onended=()=>{playing=false;};window.addEventListener('pagehide',()=>{request++;stop();site.scene?.close();});
+canvas.onclick=event=>{const box=canvas.getBoundingClientRect(),x=(event.clientX-box.left)*canvas.width/box.width,y=(event.clientY-box.top)*canvas.height/box.height;if(y>=3*ch&&y<5*ch)[site.previous,site.next,site.play,site.photo][Math.floor(x/(21*cw))]?.();if(y>=50*ch&&y<51*ch&&x>=2*cw&&x<82*cw)site.original(x<42*cw?'image':'video');};
+window.addEventListener('keydown',event=>{const action={ArrowLeft:site.previous,ArrowRight:site.next,ArrowDown:site.photo,' ':site.play}[event.key];if(action&&site.ready){event.preventDefault();action();}});
+(async()=>{try{const bytes=Uint8Array.from(atob('@@WASM@@'),c=>c.charCodeAt(0));if(await hash(bytes)!==data.viewerWasmSha256)throw Error('Viewer runtime identity differs');site.scene=await NativeScene.create(bytes,2030);site.scene.command({op:'batch',commands:[{op:'resize',width:84,height:52},{op:'prompt',active:false},{op:'environment',background:0x0b1016,stars:0,style:'solid'},{op:'widget',id:8,kind:'button',x:2,y:50,width:40,height:1,text:'Original screenshot',alpha:1},{op:'widget',id:9,kind:'button',x:42,y:50,width:40,height:1,text:'Original video',alpha:1}]});['< Capture','Capture >','Play / pause','Screenshot >'].forEach((text,i)=>site.scene.command({op:'widget',id:i+2,kind:'button',x:i*21,y:3,width:21,height:2,text,alpha:1}));document.querySelectorAll('nav button').forEach((button,i)=>{button.onfocus=()=>focusControl(i+2);});await show();canvas.focus();}catch(error){failure(error);}})();
+</script></html>

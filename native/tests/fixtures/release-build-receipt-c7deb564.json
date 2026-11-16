@@ -1,0 +1,438 @@
+{
+  "schema": "nocturne.native.verification.v2",
+  "complete": true,
+  "sourceBefore": "b01cab23bf84d4d4c1dca24b8a0940be730ffbba5c0a2e92dc512f5c1cf3c86e",
+  "sourceAfter": "b01cab23bf84d4d4c1dca24b8a0940be730ffbba5c0a2e92dc512f5c1cf3c86e",
+  "sourceUnchanged": true,
+  "sourceChanges": [],
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "toolchains": {
+    "cc": {
+      "exitCode": 0,
+      "output": [
+        "cc (Debian 14.2.0-19) 14.2.0",
+        "Copyright (C) 2024 Free Software Foundation, Inc.",
+        "This is free software; see the source for copying conditions.  There is NO",
+        "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        ""
+      ]
+    },
+    "clang": {
+      "exitCode": 0,
+      "output": [
+        "clang version 17.0.0 (https://github.com/swiftlang/llvm-project.git 10999b6d034fe318f3d56c83bddb6572593a8bb0)",
+        "Target: x86_64-unknown-linux-gnu",
+        "Thread model: posix",
+        "InstalledDir: /usr/local/swift/usr/bin"
+      ]
+    },
+    "node": {
+      "exitCode": 0,
+      "output": [
+        "v22.16.0"
+      ]
+    },
+    "go": {
+      "exitCode": 0,
+      "output": [
+        "go version go1.23.2 linux/amd64"
+      ]
+    },
+    "rust": {
+      "exitCode": 0,
+      "output": [
+        "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "binary: rustc",
+        "commit-hash: 48a229ceaefd4985c50990b14116b6d856af0985",
+        "commit-date: 2026-09-01",
+        "host: x86_64-unknown-linux-gnu",
+        "release: 1.98.1",
+        "LLVM version: 22.1.8"
+      ]
+    },
+    "cargo": {
+      "exitCode": 0,
+      "output": [
+        "cargo 1.98.1 (797e8a9bc 2026-08-05)"
+      ]
+    },
+    "typescript": {
+      "exitCode": 0,
+      "output": [
+        "Version 5.8.3"
+      ]
+    }
+  },
+  "commands": [
+    {
+      "id": "build",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/build.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/build.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 10009,
+      "seconds": 9.627,
+      "logSha256": "a18ce989c6e84509e0ad168826c681409364a4591d0a743f4cfb3d1e0c0c4722"
+    },
+    {
+      "id": "gallery",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/build_gallery.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/gallery.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 10099,
+      "seconds": 0.702,
+      "logSha256": "d36dc4baead1d637c2bb785a9555ed1d6e23e99f9e8966e35b8d4beeb6a97397"
+    },
+    {
+      "id": "python-contracts",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/python-contracts.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 10109,
+      "seconds": 14.545,
+      "logSha256": "0d749f69c4939ee91682bf52b7138623d7b08678add24874ca904df3bb760b5b"
+    },
+    {
+      "id": "go-contracts",
+      "argv": [
+        "go",
+        "test",
+        "./..."
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/bindings/go",
+      "log": "logs/go-contracts.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 10371,
+      "seconds": 5.753,
+      "logSha256": "ddbe1210419591011d81e4534ea4ee26e7b16282775b29384b95724c92f646c7"
+    },
+    {
+      "id": "typescript-types",
+      "argv": [
+        "tsc",
+        "--noEmit",
+        "--strict",
+        "--target",
+        "es2022",
+        "--module",
+        "nodenext",
+        "--moduleResolution",
+        "nodenext",
+        "examples/typed.ts"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/typescript-types.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 11931,
+      "seconds": 1.104,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "rust-contracts",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "bindings/rust/Cargo.toml",
+        "--all-targets"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/rust-contracts.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 11938,
+      "seconds": 0.101,
+      "logSha256": "1261b5c1c485d3f7681ac5f4c121d916df01bf1ecec82d06a5abc9dbce1a2a4a"
+    },
+    {
+      "id": "rust-doctests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "bindings/rust/Cargo.toml",
+        "--doc"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/rust-doctests.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 11949,
+      "seconds": 0.202,
+      "logSha256": "331744560316e54d4f60c31cf6e0e6eae4721d984e155d490b8855dd4dde92a6"
+    },
+    {
+      "id": "rust-docs",
+      "argv": [
+        "cargo",
+        "doc",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "bindings/rust/Cargo.toml",
+        "--no-deps"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/rust-docs.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 11972,
+      "seconds": 0.102,
+      "logSha256": "5430ba2a63d0ad3ad97518e7c7e4362be460b839487e349e375df8ca36479090"
+    },
+    {
+      "id": "parity",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/parity.py",
+        "--require-rust"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/parity.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 11976,
+      "seconds": 83.939,
+      "logSha256": "706439588c64bbb308a8cdeaf5a1913556c0a82f38fdfaaccbc6a0712159a29d"
+    },
+    {
+      "id": "source-examples",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/check_examples.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/source-examples.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12194,
+      "seconds": 1.812,
+      "logSha256": "7b0f7cf5bd44bf99e59fb4dc9ed5d0c6a39c10906554609e46b6bc72b739bc21"
+    },
+    {
+      "id": "field-equation-error",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/check_field_error.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/field-equation-error.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12346,
+      "seconds": 5.629,
+      "logSha256": "1db178bab09569821360f4e52c3b0a96cabf97e25d7e38d377e4840f9f3fce0d"
+    },
+    {
+      "id": "native-dependencies",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/dependencies.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/native-dependencies.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12399,
+      "seconds": 1.61,
+      "logSha256": "06d0ab6e34a2222d1c0181ae9067a607383a257cc9994e2c29b213c11f93fa19"
+    },
+    {
+      "id": "sanitizer-build",
+      "argv": [
+        "/usr/bin/cc",
+        "-std=c11",
+        "-O1",
+        "-g",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fno-strict-aliasing",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-Iinclude",
+        "-Isrc",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/blend.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/catalog.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/commands.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/conditions.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/json.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/math.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/motion.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/notifications.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/plots.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/render.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/sampling.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/state.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/status.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/text_transition.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/transactions.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/ui.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/validate.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/values.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/weather.c",
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/src/window_transition.c",
+        "tests/safety.c",
+        "-o",
+        "dist/native-safety"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/sanitizer-build.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12474,
+      "seconds": 16.237,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "sanitizer-run",
+      "argv": [
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/dist/native-safety"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/sanitizer-run.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12539,
+      "seconds": 28.872,
+      "logSha256": "2e2259a17817e06b14048852cca4167e6c6a62ca92fc95717cda91339fbfb751"
+    },
+    {
+      "id": "c-example-build",
+      "argv": [
+        "/usr/bin/cc",
+        "-std=c11",
+        "-Iinclude",
+        "examples/native_smoke.c",
+        "-Ldist",
+        "-lnocturne_native",
+        "-Wl,-rpath,/mnt/data/rc4-contracts6-work/nocturne-sdk/native/dist",
+        "-o",
+        "dist/c-smoke"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/c-example-build.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12570,
+      "seconds": 0.101,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "c-example-run",
+      "argv": [
+        "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/dist/c-smoke"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/c-example-run.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12575,
+      "seconds": 0.102,
+      "logSha256": "93d3296dc75cde6652533f4401dae1ddfa39657fff8c6df658801dcf53118eb5"
+    },
+    {
+      "id": "browser",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/check_browser.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/browser.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12576,
+      "seconds": 28.691,
+      "logSha256": "c20ed071cb08adba0271d0f8be769030f51c53047d460e408c40e234ab906851"
+    },
+    {
+      "id": "terminal",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/check_terminal.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/terminal.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12737,
+      "seconds": 2.506,
+      "logSha256": "0edee7a52e5237afe78e0c3b071e6c23539c3cefe4e8165d8a246af9a2191bc8"
+    },
+    {
+      "id": "prompt-toolkit-host",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/check_framework.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/prompt-toolkit-host.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12757,
+      "seconds": 2.711,
+      "logSha256": "2b3806714f0976c9cfb6b1fab67bb86c9e19790aa1a77a991dfeab4f446d2996"
+    },
+    {
+      "id": "benchmark",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/benchmark.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/benchmark.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12777,
+      "seconds": 3.609,
+      "logSha256": "9bba7423c72e0dce67059b319da477820e1b613fcad2e0cf90288cd04f723c8c"
+    },
+    {
+      "id": "capture",
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/capture.py"
+      ],
+      "cwd": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native",
+      "log": "logs/capture.log",
+      "status": "PASS",
+      "exitCode": 0,
+      "childPid": 12788,
+      "seconds": 93.777,
+      "logSha256": "278cd96a6d02c971fca597fbd09bafca04610b63071fe6db3b93b2cc4440a021"
+    }
+  ],
+  "localBuildVerified": true,
+  "fourRuntimeVerified": true,
+  "fullRC4Qualified": false,
+  "seconds": 301.784,
+  "runDirectory": "/mnt/data/rc4-contracts6-work/nocturne-sdk/native/evidence/contracts6-frozen-3",
+  "remainingReleaseGates": [
+    "Historical side-by-side artistic acceptance",
+    "Remaining bounded capability scope and real framework/platform qualification"
+  ]
+}

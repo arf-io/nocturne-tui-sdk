@@ -1,0 +1,167 @@
+{
+  "version": 4,
+  "recipes": [
+    {
+      "id": "velvet",
+      "name": "Velvet circuitry",
+      "scene": "chat",
+      "palette": "smart-dark",
+      "options": {
+        "backgroundStyle": "double-axis",
+        "brightness": 0.18,
+        "gradientScreens": 1.2,
+        "starDensity": 0.025
+      }
+    },
+    {
+      "id": "hyperlane",
+      "name": "Oblique hyperlane",
+      "scene": "warp",
+      "palette": "stellar",
+      "options": {
+        "backgroundStyle": "warp",
+        "starCount": 1200,
+        "starSpeed": 24,
+        "trailMs": 210,
+        "travelYaw": 22,
+        "travelPitch": -8,
+        "cameraYaw": -10,
+        "cameraPitch": 5,
+        "brightness": 0.07
+      }
+    },
+    {
+      "id": "copper-orbit",
+      "name": "Copper orbital",
+      "scene": "dag",
+      "palette": "copper",
+      "options": {
+        "backgroundStyle": "double-axis",
+        "brightness": 0.18,
+        "rotationSpeed": 7,
+        "secondAxisSpeed": -4,
+        "cameraYaw": 12,
+        "gradientScreens": 1.4
+      }
+    },
+    {
+      "id": "pearl-wave",
+      "name": "Pearl signal",
+      "scene": "scope",
+      "palette": "pearl",
+      "options": {
+        "backgroundStyle": "wave",
+        "gradientScreens": 0.55,
+        "brightness": 0.14,
+        "scopeGain": 1.2,
+        "sampling": "half"
+      }
+    },
+    {
+      "id": "neon-bbs",
+      "name": "Neon exchange",
+      "scene": "bbs",
+      "palette": "neon-dreams",
+      "options": {
+        "backgroundStyle": "plasma",
+        "brightness": 0.3,
+        "chroma": 0.24,
+        "gradientScreens": 0.45,
+        "weatherStyle": "sparks"
+      }
+    },
+    {
+      "id": "millennial",
+      "name": "Millennial maintenance",
+      "scene": "bbs-config",
+      "palette": "millennial-gray",
+      "options": {
+        "backgroundStyle": "linear",
+        "brightness": 0.18,
+        "chroma": 0.012,
+        "gradientScreens": 2,
+        "weatherStyle": "ripples"
+      }
+    },
+    {
+      "id": "gold-glass",
+      "name": "Gold glass",
+      "scene": "windows",
+      "palette": "gold",
+      "options": {
+        "backgroundStyle": "caustics",
+        "brightness": 0.22,
+        "windowOpacity": 0.65,
+        "gradientScreens": 0.8
+      }
+    },
+    {
+      "id": "blueprint",
+      "name": "Software after hours",
+      "scene": "tmux",
+      "palette": "saas-blue",
+      "options": {
+        "backgroundStyle": "contours",
+        "brightness": 0.2,
+        "gradientScreens": 0.5,
+        "chroma": 0.12
+      }
+    },
+    {
+      "id": "winterfall",
+      "name": "Winterfall",
+      "scene": "text",
+      "palette": "winter",
+      "options": {
+        "backgroundStyle": "aurora",
+        "brightness": 0.17,
+        "weatherStyle": "snow",
+        "weatherIntensity": 0.75,
+        "hueStep": 5,
+        "fallMs": 1800
+      }
+    },
+    {
+      "id": "hotline",
+      "name": "Hotline signal",
+      "scene": "sensors",
+      "palette": "hotline",
+      "options": {
+        "backgroundStyle": "moire",
+        "brightness": 0.17,
+        "weatherStyle": "embers",
+        "chroma": 0.2
+      }
+    },
+    {
+      "id": "opal-pendulum",
+      "name": "Opal pendulum",
+      "scene": "spatial-menu",
+      "palette": "opal",
+      "options": {
+        "backgroundStyle": "double-axis",
+        "orbitMode": "pendulum",
+        "pivotX": -1.1,
+        "pivotY": 0.7,
+        "swingAngle": 85,
+        "secondAxisSpeed": 4,
+        "gradientScreens": 1.6,
+        "brightness": 0.19
+      }
+    },
+    {
+      "id": "phosphor",
+      "name": "Phosphor correspondence",
+      "scene": "pico",
+      "palette": "phosphor",
+      "options": {
+        "backgroundStyle": "woven",
+        "brightness": 0.11,
+        "textChroma": 0.07,
+        "hueStep": 0,
+        "textHueSpeed": 0,
+        "weatherStyle": "rain"
+      }
+    }
+  ]
+}

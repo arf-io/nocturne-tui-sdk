@@ -1,0 +1,247 @@
+[
+  {
+    "id": "study-weather-pearl-bloom-isolated",
+    "name": "Pearl Bloom / isolated",
+    "subtitle": "Public native commands; independent scene time and retained source.",
+    "mode": "isolated",
+    "demonstrates": {
+      "effect": "weather/pearl-bloom",
+      "contract": "ParticleEmitter"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          24,
+          16,
+          36
+        ],
+        "yaw": -33,
+        "pitch": -12,
+        "fov": 67
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/pearl-bloom",
+        "count": 0,
+        "runningTimeMs": 0,
+        "position": [
+          -0.2430007859470365,
+          8.97469229831892,
+          -1.3309475280092349
+        ],
+        "extent": [
+          26,
+          5,
+          23
+        ],
+        "wind": [
+          2.2,
+          0.1,
+          1.3
+        ],
+        "gravity": [
+          0,
+          -4,
+          0
+        ],
+        "sizeMin": 0.9,
+        "sizeMax": 2.1,
+        "lifetimeMinMs": 3000,
+        "lifetimeMaxMs": 4000,
+        "alpha": 1
+      },
+      {
+        "op": "studio-style",
+        "id": 1,
+        "paint": "source",
+        "seed": 1,
+        "novaDurationMs": 3600,
+        "rippleSpeed": 2304,
+        "rippleOpacity": 700,
+        "rippleRings": 3,
+        "strength": 1000
+      }
+    ],
+    "sampleTimesUs": [
+      0,
+      500000,
+      2000000
+    ],
+    "catalogueEffect": "weather/pearl-bloom",
+    "sourceIdentity": "weather/studio.nova",
+    "originalWorldWeatherRoute": true
+  },
+  {
+    "id": "study-weather-pearl-bloom-application",
+    "name": "Pearl Bloom / application",
+    "subtitle": "Public native commands; independent scene time and retained source.",
+    "mode": "application",
+    "demonstrates": {
+      "effect": "weather/pearl-bloom",
+      "contract": "ParticleEmitter"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          24,
+          16,
+          36
+        ],
+        "yaw": -33,
+        "pitch": -12,
+        "fov": 67
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            210
+          ],
+          [
+            0.7,
+            0.15,
+            310
+          ]
+        ],
+        "alpha": 0.8
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / activity",
+        "text": "A complete screen composition\nBackdrop, content, prompt and activity\nEach layer has its own lifetime",
+        "position": [
+          0,
+          -4,
+          -4
+        ],
+        "width": 40,
+        "height": 16,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "NOCTURNE / operation console",
+        "x": 4,
+        "y": 3,
+        "width": 90,
+        "effect": "text/ink-dissolve",
+        "durationMs": 700
+      },
+      {
+        "op": "draft",
+        "text": "Type a command here",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 34,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/pearl-bloom",
+        "count": 0,
+        "runningTimeMs": 0,
+        "position": [
+          -0.2430007859470365,
+          8.97469229831892,
+          -1.3309475280092349
+        ],
+        "extent": [
+          26,
+          5,
+          23
+        ],
+        "wind": [
+          2.2,
+          0.1,
+          1.3
+        ],
+        "gravity": [
+          0,
+          -4,
+          0
+        ],
+        "sizeMin": 0.9,
+        "sizeMax": 2.1,
+        "lifetimeMinMs": 3000,
+        "lifetimeMaxMs": 4000,
+        "alpha": 1
+      },
+      {
+        "op": "studio-style",
+        "id": 1,
+        "paint": "source",
+        "seed": 1,
+        "novaDurationMs": 3600,
+        "rippleSpeed": 2304,
+        "rippleOpacity": 700,
+        "rippleRings": 3,
+        "strength": 1000
+      }
+    ],
+    "sampleTimesUs": [
+      0,
+      500000,
+      2000000
+    ],
+    "catalogueEffect": "weather/pearl-bloom",
+    "sourceIdentity": "weather/studio.nova",
+    "originalWorldWeatherRoute": true
+  },
+  {
+    "id": "study-surface-field-silk-tide-isolated",
+    "name": "Silk Tide / isolated",
+    "subtitle": "Public native commands; independent scene time and retained source.",
+    "mode": "isolated",
+    "demonstrates": {
+      "effect": "surface-field/silk-tide",
+      "contract": "SurfaceField"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "field",
+        "effect": "surface-field/silk-tide",
+        "x": 50,
+        "y": 20,
+        "optics": "source",
+        "paint": "source"
+      }
+    ],
+    "sampleTimesUs": [
+      0,
+      500000,
+      2000000
+    ],
+    "catalogueEffect": "surface-field/silk-tide",
+    "sourceIdentity": "weather/studio.ripples"
+  }
+]

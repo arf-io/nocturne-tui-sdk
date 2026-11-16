@@ -1,0 +1,23 @@
+[
+  {
+    "sourceCommit": "6a702d9d7d4270e9175877e835815891d8d8ddc4",
+    "sourcePath": "dist/nocturne.wasm",
+    "path": "<workspace>/recovery-20261014/original-obj-model-prototype-20261015/original/world.wasm",
+    "sha256": "aa04c1705a5982b924d420971bfcbc7bbedd49f1ea527a9900531b61b0c92a09",
+    "bytes": 93662
+  },
+  {
+    "sourceCommit": "6a702d9d7d4270e9175877e835815891d8d8ddc4",
+    "sourcePath": "bindings/chromatic/mesh-obj.js",
+    "path": "<workspace>/recovery-20261014/original-obj-model-prototype-20261015/original/mesh-obj.cjs",
+    "sha256": "b4f6af7b9498453dd855bd9e3386990c87634a9f1a17ef4bd7d3c615a1aa4966",
+    "bytes": 7922
+  },
+  {
+    "sourceCommit": "6a702d9d7d4270e9175877e835815891d8d8ddc4",
+    "sourcePath": "bindings/continuity/continuity-example-mesh.js",
+    "path": "<workspace>/recovery-20261014/original-obj-model-prototype-20261015/original/continuity-example-mesh.mjs",
+    "sha256": "282569a2b3615a70a4f42177d0cb87e5c10ef76312a1078f274b61d875c79afc",
+    "bytes": 214468
+  }
+]

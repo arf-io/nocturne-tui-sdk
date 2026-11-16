@@ -1,0 +1,17 @@
+{
+  "build": "1.0.0",
+  "sourceBaseline": "89a79dc3dfccd182c1f3e46b12d82ff3dc7c504a",
+  "abi": 1,
+  "snapshotSchema": "0x20261098",
+  "verification": "native/evidence/BUILD-VERIFICATION.json",
+  "fullRC4Qualified": false,
+  "state": "RELEASE",
+  "scope": "C11 terminal UI SDK with C, WebAssembly/TypeScript, Python, Go and Rust bindings; Gallery, Workshop, configurable cameras, prompt surfaces, cursors and typing weather.",
+  "governingContractResolved": true,
+  "governingContract": "docs/current/Contract.md",
+  "releasePolicy": "docs/current/Contract.md",
+  "qualificationProfile": "rc2",
+  "documentation": "docs/current/README.md",
+  "compiledArtifactSnapshotSchema": "0x20261098",
+  "currentImplementationVerification": "native/evidence/BUILD-VERIFICATION.json"
+}

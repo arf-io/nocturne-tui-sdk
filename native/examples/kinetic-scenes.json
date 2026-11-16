@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "kinetic-embers-isolated",
+    "name": "Kinetic source / embers / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "embers",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "embers"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/hearth-spray",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-embers-application",
+    "name": "Kinetic source / embers / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "embers",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "embers"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/hearth-spray",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-sparks-isolated",
+    "name": "Kinetic source / sparks / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "sparks",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "sparks"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/branchlight",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-sparks-application",
+    "name": "Kinetic source / sparks / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "sparks",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "sparks"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/branchlight",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-nova-isolated",
+    "name": "Kinetic source / nova / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "nova",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "nova"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/chrysanthemum",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-nova-application",
+    "name": "Kinetic source / nova / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "nova",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "nova"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/chrysanthemum",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-rain-isolated",
+    "name": "Kinetic source / rain / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "rain",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "rain"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/wire-rain",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-rain-application",
+    "name": "Kinetic source / rain / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "rain",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "rain"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/wire-rain",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-snow-isolated",
+    "name": "Kinetic source / snow / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "snow",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "snow"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/pearl-flurry",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "kinetic-snow-application",
+    "name": "Kinetic source / snow / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "snow",
+    "demonstrates": {
+      "feature": "kinetic-source",
+      "profile": "snow"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/pearl-flurry",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "shockwave": 0.4
+      },
+      {
+        "op": "draft",
+        "text": "Kinetic source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Kinetic source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "count": 0
+      },
+      {
+        "op": "kinetic-style",
+        "id": 65535
+      }
+    ]
+  }
+]

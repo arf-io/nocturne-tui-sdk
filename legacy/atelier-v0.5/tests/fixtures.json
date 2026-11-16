@@ -1,0 +1,1075 @@
+[
+  {
+    "name": "black-creme-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 165
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "9f5e4c5a546420fca54d2e701cf99962aa446622bc5eec18f8a9074b7cbe9242"
+  },
+  {
+    "name": "black-creme-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 165
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "53b76247974f0e4a2393aa2a2c231f99d62f74b058120cdbe14e2896e81160eb"
+  },
+  {
+    "name": "black-creme-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 165
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "fca832087257b3fc383102cc1a9afe5a3a918263595f3e679c11199c49ff6963"
+  },
+  {
+    "name": "lavender-hush-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 1,
+      "densityPermille": 280,
+      "starPeriodMinMs": 2800,
+      "starPeriodRangeMs": 8200,
+      "starDutyPermille": 660
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "starPalette": [
+      "#B8A6C8",
+      "#969DBA",
+      "#BCB0BF",
+      "#98A8BA"
+    ],
+    "sha256": "def73fee851157161f820b2b50b1714b69332bc984388a13d562e36fbcb6992f"
+  },
+  {
+    "name": "lavender-hush-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 1,
+      "densityPermille": 280,
+      "starPeriodMinMs": 2800,
+      "starPeriodRangeMs": 8200,
+      "starDutyPermille": 660
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "starPalette": [
+      "#B8A6C8",
+      "#969DBA",
+      "#BCB0BF",
+      "#98A8BA"
+    ],
+    "sha256": "a1ed88b807fc9ad6be9379e77413b19998cc12df6eeb6fbc03467c1a562a5ebc"
+  },
+  {
+    "name": "lavender-hush-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 1,
+      "densityPermille": 280,
+      "starPeriodMinMs": 2800,
+      "starPeriodRangeMs": 8200,
+      "starDutyPermille": 660
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "starPalette": [
+      "#B8A6C8",
+      "#969DBA",
+      "#BCB0BF",
+      "#98A8BA"
+    ],
+    "sha256": "fc5f2a50e73c9af21090e388abfa13a3cba00b45068fb82a59ac620fb46ca413"
+  },
+  {
+    "name": "sage-embers-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 2,
+      "densityPermille": 170,
+      "starAttackPermille": 190,
+      "starDutyPermille": 400,
+      "starPeriodMinMs": 1800,
+      "starPeriodRangeMs": 5800
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "starPalette": [
+      "#A8B7A3",
+      "#C5B69E",
+      "#B5A092",
+      "#A3B7B1"
+    ],
+    "sha256": "00529cf7462e0ba159e51d674a84a18e1c74baa707c43c985ccb792952eb53c2"
+  },
+  {
+    "name": "sage-embers-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 2,
+      "densityPermille": 170,
+      "starAttackPermille": 190,
+      "starDutyPermille": 400,
+      "starPeriodMinMs": 1800,
+      "starPeriodRangeMs": 5800
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "starPalette": [
+      "#A8B7A3",
+      "#C5B69E",
+      "#B5A092",
+      "#A3B7B1"
+    ],
+    "sha256": "e70861145410922c89b0c7a827573c1867dc34794afca67af33eb08f75dd93fb"
+  },
+  {
+    "name": "sage-embers-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 2,
+      "densityPermille": 170,
+      "starAttackPermille": 190,
+      "starDutyPermille": 400,
+      "starPeriodMinMs": 1800,
+      "starPeriodRangeMs": 5800
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "starPalette": [
+      "#A8B7A3",
+      "#C5B69E",
+      "#B5A092",
+      "#A3B7B1"
+    ],
+    "sha256": "15daf290d12426a3c05ad704cf87caa089e2ad5774ccbd0936d3401f16979d8d"
+  },
+  {
+    "name": "liquid-linen-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 1,
+      "stars": 0,
+      "gradientPeriodMs": 1800,
+      "brightnessPermille": 720,
+      "scaleCells": 65
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#416D78",
+      "#896273"
+    ],
+    "sha256": "c9f4f6e84c690ce2ee9deb4bcd726ceed54625a43d9beec47c07126e89ec63b5"
+  },
+  {
+    "name": "liquid-linen-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 1,
+      "stars": 0,
+      "gradientPeriodMs": 1800,
+      "brightnessPermille": 720,
+      "scaleCells": 65
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#416D78",
+      "#896273"
+    ],
+    "sha256": "895221139e9cd8f2f68afee061a14024efec934b59cb009e3d9567fc08c527d5"
+  },
+  {
+    "name": "liquid-linen-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 1,
+      "stars": 0,
+      "gradientPeriodMs": 1800,
+      "brightnessPermille": 720,
+      "scaleCells": 65
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#416D78",
+      "#896273"
+    ],
+    "sha256": "d9dc659d84b1210fe776da3a25dbe62a83f34e04840b73f2aeac29d8e43cbd51"
+  },
+  {
+    "name": "diagonal-silk-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 2,
+      "stars": 0,
+      "gradientPeriodMs": 2400,
+      "angleDegrees": 38,
+      "brightnessPermille": 690,
+      "scaleCells": 45
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#686A8F",
+      "#43827B",
+      "#906A7D"
+    ],
+    "sha256": "2f15a0b940713eadd5880fa3ab2ef7e9f2e99594ea3284ddc5c6a463785abbf4"
+  },
+  {
+    "name": "diagonal-silk-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 2,
+      "stars": 0,
+      "gradientPeriodMs": 2400,
+      "angleDegrees": 38,
+      "brightnessPermille": 690,
+      "scaleCells": 45
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#686A8F",
+      "#43827B",
+      "#906A7D"
+    ],
+    "sha256": "f1e593d3d8581314f8eec5c22b061485eadc69ae0f869106fa4e3ed9376cad25"
+  },
+  {
+    "name": "diagonal-silk-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 2,
+      "stars": 0,
+      "gradientPeriodMs": 2400,
+      "angleDegrees": 38,
+      "brightnessPermille": 690,
+      "scaleCells": 45
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#686A8F",
+      "#43827B",
+      "#906A7D"
+    ],
+    "sha256": "d63cbd4f920c26449f76ebdf1e403421db5b90752d94b5d0df40f7cc9d9f6dc6"
+  },
+  {
+    "name": "tidepool-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 3,
+      "stars": 0,
+      "gradientPeriodMs": 2200,
+      "brightnessPermille": 700,
+      "waveAmplitudePermille": 1100
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#526C91",
+      "#497D73",
+      "#8A6489"
+    ],
+    "sha256": "b885021edb54d5853cace613e40d69590cb27f71e5fbee0e8a5665070cc90d1b"
+  },
+  {
+    "name": "tidepool-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 3,
+      "stars": 0,
+      "gradientPeriodMs": 2200,
+      "brightnessPermille": 700,
+      "waveAmplitudePermille": 1100
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#526C91",
+      "#497D73",
+      "#8A6489"
+    ],
+    "sha256": "43bca8897bcf673e602164dcd11fb50a79d4c2cf6e7d88d2aff0cce1ad5812fd"
+  },
+  {
+    "name": "tidepool-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 3,
+      "stars": 0,
+      "gradientPeriodMs": 2200,
+      "brightnessPermille": 700,
+      "waveAmplitudePermille": 1100
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#526C91",
+      "#497D73",
+      "#8A6489"
+    ],
+    "sha256": "f4cd6ea3f0e43aa81d6393447ca66f55aa8eef2cc9ec693670075a732288bc85"
+  },
+  {
+    "name": "iris-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 4,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 9400,
+      "brightnessPermille": 770,
+      "saturationPermille": 850,
+      "scaleCells": 70
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#61639A",
+      "#488980",
+      "#AA7583",
+      "#94815B"
+    ],
+    "sha256": "4c57524882093396078c0e42b34ee658bc36ac0153034176646db7140c2f9d54"
+  },
+  {
+    "name": "iris-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 4,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 9400,
+      "brightnessPermille": 770,
+      "saturationPermille": 850,
+      "scaleCells": 70
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#61639A",
+      "#488980",
+      "#AA7583",
+      "#94815B"
+    ],
+    "sha256": "6cf69d7aae45257f9b4fad5942da8377b63b4a2cec00b1c87a6bfe4a1ef4e19c"
+  },
+  {
+    "name": "iris-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 4,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 9400,
+      "brightnessPermille": 770,
+      "saturationPermille": 850,
+      "scaleCells": 70
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#61639A",
+      "#488980",
+      "#AA7583",
+      "#94815B"
+    ],
+    "sha256": "322c7bab29a0b9a41d7b2e8c059c5ccd35a51d68a41331362a339886494139e7"
+  },
+  {
+    "name": "dusk-plasma-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 16000,
+      "brightnessPermille": 720,
+      "saturationPermille": 920,
+      "scaleCells": 54
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#775583",
+      "#426F76",
+      "#806579",
+      "#807247"
+    ],
+    "sha256": "f93eaf06ae0ae34e6a5582afddad893567efba3d42245e65b6e0273363411aea"
+  },
+  {
+    "name": "dusk-plasma-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 16000,
+      "brightnessPermille": 720,
+      "saturationPermille": 920,
+      "scaleCells": 54
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#775583",
+      "#426F76",
+      "#806579",
+      "#807247"
+    ],
+    "sha256": "4d704b292a58ea2c3f1d820629c0d15d493899d82d9601fbfa7ed2818c9ee5c9"
+  },
+  {
+    "name": "dusk-plasma-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 16000,
+      "brightnessPermille": 720,
+      "saturationPermille": 920,
+      "scaleCells": 54
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#775583",
+      "#426F76",
+      "#806579",
+      "#807247"
+    ],
+    "sha256": "8b9636b74647526bc1b28d8233ef5a1c328b47c881f332919623f3022cf36963"
+  },
+  {
+    "name": "nebula-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 220,
+      "pixelMode": 0,
+      "gradientPeriodMs": 13000,
+      "brightnessPermille": 490,
+      "neighborBrightnessPermille": 1000,
+      "neighborSaturationPermille": 1000,
+      "neighborSpeedPermille": 1000
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "b0dc8cda307e0f4a4220e6529b8042e1674e89d30ad541c60ea1c24adc41bf88"
+  },
+  {
+    "name": "nebula-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 220,
+      "pixelMode": 0,
+      "gradientPeriodMs": 13000,
+      "brightnessPermille": 490,
+      "neighborBrightnessPermille": 1000,
+      "neighborSaturationPermille": 1000,
+      "neighborSpeedPermille": 1000
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "28c702523a4b8e9a21cb6d2152d981a27c1f9c22a159cb68ea7ac7f551e7d790"
+  },
+  {
+    "name": "nebula-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 1,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 220,
+      "pixelMode": 0,
+      "gradientPeriodMs": 13000,
+      "brightnessPermille": 490,
+      "neighborBrightnessPermille": 1000,
+      "neighborSaturationPermille": 1000,
+      "neighborSpeedPermille": 1000
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "3581c4dbb75920cfa4252a92a9d31f99ec889f200c4792c01a836188c5808e04"
+  },
+  {
+    "name": "chromatic-type-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 3,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 80,
+      "hueStepDegrees": 27,
+      "hueDegreesPerSecond": 24,
+      "hueSaturationPermille": 470,
+      "cursorMode": 3
+    },
+    "timeMs": 0,
+    "text": "the world is your burrito.",
+    "sha256": "938fd0d268e4325c10bb969539b6afbe74b92b2c3ddf5ce8dcb899d48316eca5"
+  },
+  {
+    "name": "chromatic-type-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 3,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 80,
+      "hueStepDegrees": 27,
+      "hueDegreesPerSecond": 24,
+      "hueSaturationPermille": 470,
+      "cursorMode": 3
+    },
+    "timeMs": 1201,
+    "text": "the world is your burrito.",
+    "sha256": "810d7a357c89d7ffaba254e11c036cc105251655e7ec74f173b21aaffa24c148"
+  },
+  {
+    "name": "chromatic-type-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 3,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 80,
+      "hueStepDegrees": 27,
+      "hueDegreesPerSecond": 24,
+      "hueSaturationPermille": 470,
+      "cursorMode": 3
+    },
+    "timeMs": 6399,
+    "text": "the world is your burrito.",
+    "sha256": "b0a2b66055940cb477fda795df8b8cd43224387bc255eb855a7d2f9d1a72df53"
+  },
+  {
+    "name": "quiet-machinery-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 45,
+      "brightnessPermille": 160,
+      "gradientPeriodMs": 18000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 12
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "669aa0090172d501fd9d9f0d44905341a235a6e030ed4a418e91b75adf65e33e"
+  },
+  {
+    "name": "quiet-machinery-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 45,
+      "brightnessPermille": 160,
+      "gradientPeriodMs": 18000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 12
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "3f5e3049ef02aa5b8c0b2f6a8c236adff77f8abe3151543646e264f3afb16ee4"
+  },
+  {
+    "name": "quiet-machinery-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 45,
+      "brightnessPermille": 160,
+      "gradientPeriodMs": 18000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 12
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "a2ade4b78123d7e3683bf896389cd7bd5be669d3ad108e5e5236859698a81424"
+  },
+  {
+    "name": "small-pocket-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 120,
+      "brightnessPermille": 330,
+      "gradientPeriodMs": 14000,
+      "modalOpen": 1,
+      "hueStepDegrees": 10,
+      "hueDegreesPerSecond": 20
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "a43c642a14cf0b753b22eea71e4830f5edfbaf2374c216dfe51a0fc5f0c068d0"
+  },
+  {
+    "name": "small-pocket-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 120,
+      "brightnessPermille": 330,
+      "gradientPeriodMs": 14000,
+      "modalOpen": 1,
+      "hueStepDegrees": 10,
+      "hueDegreesPerSecond": 20
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "a02ecc36f23e773b351873fc2ad80011f4e0e47486b8b4193098e115798725cf"
+  },
+  {
+    "name": "small-pocket-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 120,
+      "brightnessPermille": 330,
+      "gradientPeriodMs": 14000,
+      "modalOpen": 1,
+      "hueStepDegrees": 10,
+      "hueDegreesPerSecond": 20
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "af50b5e7ad3f04e75341a539e043290a2ee67698e03a9212b470f1fa0377e4b0"
+  },
+  {
+    "name": "pearl-signal-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 4,
+      "effect": 1,
+      "stars": 0,
+      "brightnessPermille": 140,
+      "gradientPeriodMs": 20000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 15
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "15786ec79e9a5859b9b045b97c7276b5fe0429e463d0875b0309e6c89b9c829a"
+  },
+  {
+    "name": "pearl-signal-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 4,
+      "effect": 1,
+      "stars": 0,
+      "brightnessPermille": 140,
+      "gradientPeriodMs": 20000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 15
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "11219d520d8f4f416deb8b655c094f869954e21d6c494decc8f9c5ee08aa826f"
+  },
+  {
+    "name": "pearl-signal-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 4,
+      "effect": 1,
+      "stars": 0,
+      "brightnessPermille": 140,
+      "gradientPeriodMs": 20000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 15
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "2a36680c6d7e8b100a7ac018e9e798579599f76e8eb00f912f613e18632a744c"
+  },
+  {
+    "name": "split-light-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 2,
+      "stars": 0,
+      "pixelMode": 2,
+      "gradientPeriodMs": 7000,
+      "brightnessPermille": 730,
+      "scaleCells": 28,
+      "saturationPermille": 950
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#457987",
+      "#9A6786",
+      "#9A824B",
+      "#4E7E71"
+    ],
+    "sha256": "f756203e5f8760c8937ba9296517cd00eb53a4e560a16e0ace3e5b8f40e9928f"
+  },
+  {
+    "name": "split-light-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 2,
+      "stars": 0,
+      "pixelMode": 2,
+      "gradientPeriodMs": 7000,
+      "brightnessPermille": 730,
+      "scaleCells": 28,
+      "saturationPermille": 950
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#457987",
+      "#9A6786",
+      "#9A824B",
+      "#4E7E71"
+    ],
+    "sha256": "d8efbbd44c7c2b155399fb1eae63218810a5e28b9786ad7096f1337f7d29d83e"
+  },
+  {
+    "name": "split-light-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 2,
+      "stars": 0,
+      "pixelMode": 2,
+      "gradientPeriodMs": 7000,
+      "brightnessPermille": 730,
+      "scaleCells": 28,
+      "saturationPermille": 950
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "palette": [
+      "#457987",
+      "#9A6786",
+      "#9A824B",
+      "#4E7E71"
+    ],
+    "sha256": "721f488ee94ef47b5a9e80154bceee9635851a0c9d3d4f4de4a1de3cf8133444"
+  },
+  {
+    "name": "braille-field-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 4,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 430,
+      "scaleCells": 38
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "9ca8fc9a8b307fde1caf4d792994360bce58b1f0a6b9136bcdc675d3a7ea182e"
+  },
+  {
+    "name": "braille-field-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 4,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 430,
+      "scaleCells": 38
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "f827e77be850ac8e77c526ce6d1a0462cb7abea0398735a56c61dab06083ae33"
+  },
+  {
+    "name": "braille-field-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 4,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 430,
+      "scaleCells": 38
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "85c0c10151f66b8a6ebc028e872c380e9272f7a9f205c22517fd4678b707970c"
+  },
+  {
+    "name": "plasma-360-0",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "colorMode": 2,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 570,
+      "saturationPermille": 480,
+      "scaleCells": 60
+    },
+    "timeMs": 0,
+    "text": "Parity across bindings.",
+    "sha256": "ed6b5cc97d28bf4c2800d01291898f2e2705e17eac258188955cc0c2cd93d0be"
+  },
+  {
+    "name": "plasma-360-1201",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "colorMode": 2,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 570,
+      "saturationPermille": 480,
+      "scaleCells": 60
+    },
+    "timeMs": 1201,
+    "text": "Parity across bindings.",
+    "sha256": "9c7f440e17c34efb3063e7c40a249d51e15e8ad5886a8f7e4aef559f2aae5247"
+  },
+  {
+    "name": "plasma-360-6399",
+    "values": {
+      "width": 84,
+      "height": 28,
+      "layout": 0,
+      "effect": 5,
+      "colorMode": 2,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 570,
+      "saturationPermille": 480,
+      "scaleCells": 60
+    },
+    "timeMs": 6399,
+    "text": "Parity across bindings.",
+    "sha256": "599ed3f38452f28d13c1eac5250dfa0ba6db2108a74cc4c474c74740cc64954d"
+  },
+  {
+    "name": "empty",
+    "values": {
+      "width": 0,
+      "height": 0
+    },
+    "timeMs": 0,
+    "text": "",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "one-cell",
+    "values": {
+      "width": 1,
+      "height": 1,
+      "layout": 2
+    },
+    "timeMs": 55,
+    "text": "x",
+    "sha256": "49fa10753ed5a22c61e3930c5e4b67276b76b3c1f613c13e232ce34db1bc7596"
+  },
+  {
+    "name": "negative-origin",
+    "values": {
+      "width": 31,
+      "height": 14,
+      "effect": 5,
+      "originX": -810,
+      "originY": -91,
+      "pixelMode": 1
+    },
+    "timeMs": 7316,
+    "text": "origins",
+    "sha256": "9bc6695731235bec6f6ee3989b3193127a9557374f2c484295c383e851d11192"
+  },
+  {
+    "name": "after-u32-time",
+    "values": {
+      "width": 45,
+      "height": 16,
+      "effect": 5,
+      "colorMode": 1,
+      "layout": 1
+    },
+    "timeMs": 5000000017,
+    "text": "long-running clock",
+    "sha256": "2be4ca419f270fa50c87fbdbe639d3053b986dc28328b9916319d39b9305b02d"
+  },
+  {
+    "name": "full-hue-wheel",
+    "values": {
+      "width": 53,
+      "height": 17,
+      "effect": 5,
+      "colorMode": 1,
+      "pixelMode": 1,
+      "stars": 0
+    },
+    "timeMs": 7733,
+    "text": "",
+    "sha256": "d003f7ca1d0716288c8f77f34450238fd10433bc6b98e6f29cd677c1eff68ddb"
+  },
+  {
+    "name": "custom-glyphs",
+    "values": {
+      "width": 51,
+      "height": 13,
+      "densityPermille": 600,
+      "starFloorPermille": 120
+    },
+    "timeMs": 1527,
+    "text": "",
+    "glyphs": [
+      ".",
+      "·",
+      "⠁",
+      "⋅"
+    ],
+    "starPalette": [
+      "#BB99AA",
+      "#AABBAA"
+    ],
+    "sha256": "167315227ddfe17dc69563a939a1c455ecea4c54ebcfa954f0fc03f12cdc2dbc"
+  },
+  {
+    "name": "unsafe-demo-text",
+    "values": {
+      "width": 49,
+      "height": 18,
+      "layout": 1
+    },
+    "timeMs": 331,
+    "text": "a\u001b[31m\n世界",
+    "sha256": "3b598e2a8aca48ed04a818756445da69f9b534b03b9aea99b472bbd9c3bb2501"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "archive": "Nocturne-Workbench-v0.9.0-rc.2-SDK.zip",
+  "member": "nocturne-continuity/bindings/continuity/observatory.js",
+  "sha256": "c221beb6e719f47f2c4744fce7cf70fcf918a31b436b6f0f1fca4df63f283904",
+  "scope": "Actual original JS model is executed as the sample oracle. Current Pearl widget layout is retained; this does not claim historical whole-frame identity."
+}

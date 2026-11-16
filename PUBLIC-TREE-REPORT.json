@@ -1,0 +1,1313 @@
+{
+ "schema": "nocturne.public-tree.v3",
+ "files": 2205,
+ "bytes": 111736028,
+ "license": "LICENSE",
+ "stagedOnly": false,
+ "selectedFiles": 2568,
+ "selectedBytes": 145476346,
+ "fixtureSource": "native/evidence/provenance-census-20261114/PROVENANCE-CENSUS.json",
+ "fixtureGenerators": {
+  "count": 109,
+  "sha256": "0121c1e077badaf8780afc2d94502e1b778ed0abab7da7e60cd1b6b041e4f673"
+ },
+ "fixtureEntries": 5446,
+ "excludedByReason": {
+  "fixtureData": 46,
+  "fixtureGenerator": 109,
+  "fixtureHelper": 1,
+  "importsExcludedModule": 73,
+  "privateOnly": 10,
+  "readsExcludedFile": 73,
+  "selectsFixtureEntries": 51,
+  "testHarness": 1
+ },
+ "excludedListed": 231,
+ "excludedNotListed": 133,
+ "excluded": [
+  {
+   "path": "native/bindings/typescript/alpha-clock-contexts.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names alpha-clock-scenes.json",
+   "cause": "alpha-clock-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/appearance-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names appearance-gallery-scenes.json",
+   "cause": "appearance-gallery-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/binding-transition-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names binding-transition-scenes.json",
+   "cause": "binding-transition-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/boolean-truth-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names boolean-truth-scenes.json",
+   "cause": "boolean-truth-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/cargo-wrapper-lock.test.mjs",
+   "reason": "privateOnly",
+   "detail": "asserts the lock message of a private build wrapper that a public tree does not have"
+  },
+  {
+   "path": "native/bindings/typescript/condition-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names condition-gallery-scenes.json",
+   "cause": "condition-gallery-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/curve-choice-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names curve-choice-scenes.json",
+   "cause": "curve-choice-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/define-alias-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names define-alias-scenes.json",
+   "cause": "define-alias-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/draft-weather-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names draft-weather-scenes.json",
+   "cause": "draft-weather-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/end-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names end-policy-scenes.json",
+   "cause": "end-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/field-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names field-policy-scenes.json",
+   "cause": "field-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/flight-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names flight-policy-scenes.json",
+   "cause": "flight-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/floor-collider-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names floor-collider-scenes.json",
+   "cause": "floor-collider-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/floor-float.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names floor-float-scenes.json",
+   "cause": "floor-float-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/geometry-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names geometry-policy-scenes.json",
+   "cause": "geometry-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/ink-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names ink-policy-scenes.json",
+   "cause": "ink-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/input-window-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names input-window-scenes.json",
+   "cause": "input-window-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/lifecycle-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names lifecycle-policy-scenes.json",
+   "cause": "lifecycle-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/material-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names material-gallery-scenes.json",
+   "cause": "material-gallery-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/mesh-pointer-contexts.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names mesh-pointer-scenes.json",
+   "cause": "mesh-pointer-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/node-status-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names node-status-scenes.json",
+   "cause": "node-status-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/particle-choice-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names particle-choice-scenes.json",
+   "cause": "particle-choice-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/path-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names path-policy-scenes.json",
+   "cause": "path-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/pointer-cancel-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names pointer-cancel-scenes.json",
+   "cause": "pointer-cancel-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/presentation-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names presentation-gallery-scenes.json",
+   "cause": "presentation-gallery-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/presentation-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names presentation-policy-scenes.json",
+   "cause": "presentation-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/prompt-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names prompt-policy-scenes.json",
+   "cause": "prompt-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/resource-ownership-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names resource-ownership-scenes.json",
+   "cause": "resource-ownership-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/retained-guard-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names retained-guard-scenes.json",
+   "cause": "retained-guard-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/scenic-appearance.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names scenic-appearance-scenes.json",
+   "cause": "scenic-appearance-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/selector-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names selector-policy-scenes.json",
+   "cause": "selector-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/source-options-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names source-option-scenes.json",
+   "cause": "source-option-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/status-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names status-policy-scenes.json",
+   "cause": "status-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/surface-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names surface-policy-scenes.json",
+   "cause": "surface-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/text-alphabet-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names text-alphabet-scenes.json",
+   "cause": "text-alphabet-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/text-controls-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names text-control-scenes.json",
+   "cause": "text-control-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/text-curve-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names text-curve-scenes.json",
+   "cause": "text-curve-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/text-seed-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names text-seed-scenes.json",
+   "cause": "text-seed-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/text-trails-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names text-trail-scenes.json",
+   "cause": "text-trail-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/typed-set-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names typed-set-scenes.json",
+   "cause": "typed-set-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/unit-guard-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names unit-guard-scenes.json",
+   "cause": "unit-guard-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/weather-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names weather-gallery-scenes.json",
+   "cause": "weather-gallery-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/window-policy-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names window-policy-scenes.json",
+   "cause": "window-policy-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/window-source-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names window-source-scenes.json",
+   "cause": "window-source-scenes.json"
+  },
+  {
+   "path": "native/bindings/typescript/world-particle-gallery.test.mjs",
+   "reason": "readsExcludedFile",
+   "detail": "names world-particle-scenes.json",
+   "cause": "world-particle-scenes.json"
+  },
+  {
+   "path": "native/examples/alpha-clock-scenes.json",
+   "reason": "fixtureData",
+   "detail": "8 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/appearance-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "34 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/binding-transition-scenes.json",
+   "reason": "fixtureData",
+   "detail": "136 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/boolean-truth-scenes.json",
+   "reason": "fixtureData",
+   "detail": "80 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/condition-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "36 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/curve-choice-scenes.json",
+   "reason": "fixtureData",
+   "detail": "70 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/define-alias-scenes.json",
+   "reason": "fixtureData",
+   "detail": "56 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/draft-weather-scenes.json",
+   "reason": "fixtureData",
+   "detail": "4 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/end-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "22 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/field-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "32 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/flight-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "4 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/floor-collider-scenes.json",
+   "reason": "fixtureData",
+   "detail": "8 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/floor-float-scenes.json",
+   "reason": "fixtureData",
+   "detail": "12 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/geometry-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "48 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/ink-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "4 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/input-window-scenes.json",
+   "reason": "fixtureData",
+   "detail": "10 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/lifecycle-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "8 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/material-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "8 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/mesh-pointer-scenes.json",
+   "reason": "fixtureData",
+   "detail": "16 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/node-status-scenes.json",
+   "reason": "fixtureData",
+   "detail": "16 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/ownership-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "36 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/particle-choice-scenes.json",
+   "reason": "fixtureData",
+   "detail": "96 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/path-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "24 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/pointer-cancel-scenes.json",
+   "reason": "fixtureData",
+   "detail": "4 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/presentation-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "12 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/presentation-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "14 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/prompt-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "40 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/resource-ownership-scenes.json",
+   "reason": "fixtureData",
+   "detail": "1294 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/resource_ownership_specs.py",
+   "reason": "fixtureHelper",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/examples/retained-guard-scenes.json",
+   "reason": "fixtureData",
+   "detail": "58 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/scenic-appearance-scenes.json",
+   "reason": "fixtureData",
+   "detail": "6 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/selection-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "6 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/selector-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "24 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/source-option-scenes.json",
+   "reason": "fixtureData",
+   "detail": "4 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/status-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "14 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/surface-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "8 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/tdf_specimens.json",
+   "reason": "privateOnly",
+   "detail": "pre-rendered cells of a wordmark; the Gallery withholds them, and the TheDraw fonts that would re-render them are not distributed"
+  },
+  {
+   "path": "native/examples/text-alphabet-scenes.json",
+   "reason": "fixtureData",
+   "detail": "32 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/text-control-scenes.json",
+   "reason": "fixtureData",
+   "detail": "280 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/text-curve-scenes.json",
+   "reason": "fixtureData",
+   "detail": "40 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/text-seed-scenes.json",
+   "reason": "fixtureData",
+   "detail": "32 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/text-trail-scenes.json",
+   "reason": "fixtureData",
+   "detail": "100 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/typed-set-scenes.json",
+   "reason": "fixtureData",
+   "detail": "72 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/unit-guard-scenes.json",
+   "reason": "fixtureData",
+   "detail": "30 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/weather-gallery-scenes.json",
+   "reason": "fixtureData",
+   "detail": "20 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/window-policy-scenes.json",
+   "reason": "fixtureData",
+   "detail": "12 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/window-source-scenes.json",
+   "reason": "fixtureData",
+   "detail": "86 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/examples/world-particle-scenes.json",
+   "reason": "fixtureData",
+   "detail": "12 cases, every one a fixture entry"
+  },
+  {
+   "path": "native/scripts/check_alpha_clock_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by alpha-clock-",
+   "cause": "alpha-clock-"
+  },
+  {
+   "path": "native/scripts/check_appearance_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by appearance-gallery-",
+   "cause": "appearance-gallery-"
+  },
+  {
+   "path": "native/scripts/check_bidi_prompt_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by bidi-prompt-",
+   "cause": "bidi-prompt-"
+  },
+  {
+   "path": "native/scripts/check_binding_transition_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by binding-transition-",
+   "cause": "binding-transition-"
+  },
+  {
+   "path": "native/scripts/check_boolean_truth_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names boolean-truth-scenes.json",
+   "cause": "boolean-truth-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_cleanup_workflow_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by cleanup-workflow-",
+   "cause": "cleanup-workflow-"
+  },
+  {
+   "path": "native/scripts/check_color_fields_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by color-field-",
+   "cause": "color-field-"
+  },
+  {
+   "path": "native/scripts/check_condition_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by condition-gallery-",
+   "cause": "condition-gallery-"
+  },
+  {
+   "path": "native/scripts/check_controller_workflow_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by controller-workflow-",
+   "cause": "controller-workflow-"
+  },
+  {
+   "path": "native/scripts/check_curve_choice_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by curve-choice-",
+   "cause": "curve-choice-"
+  },
+  {
+   "path": "native/scripts/check_default_clock_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by mesh-pointer-named-model-",
+   "cause": "mesh-pointer-named-model-"
+  },
+  {
+   "path": "native/scripts/check_define_alias_browser.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/scripts/check_draft_weather_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names draft-weather-scenes.json",
+   "cause": "draft-weather-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_electrical_graph_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by electrical-graphs-",
+   "cause": "electrical-graphs-"
+  },
+  {
+   "path": "native/scripts/check_emitter_control_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by emitter-control-",
+   "cause": "emitter-control-"
+  },
+  {
+   "path": "native/scripts/check_end_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names end-policy-scenes.json",
+   "cause": "end-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_event_example_guards_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by flow-value-flux-, widget-data-entry-",
+   "cause": "flow-value-flux-"
+  },
+  {
+   "path": "native/scripts/check_field_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names field-policy-scenes.json",
+   "cause": "field-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_firework_stage_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by firework-stages-",
+   "cause": "firework-stages-"
+  },
+  {
+   "path": "native/scripts/check_flight_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names flight-policy-scenes.json",
+   "cause": "flight-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_floor_collider_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names floor-collider-scenes.json",
+   "cause": "floor-collider-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_floor_float_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by floor-float-",
+   "cause": "floor-float-"
+  },
+  {
+   "path": "native/scripts/check_fluid_lifecycle_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by fluid-lifecycle-",
+   "cause": "fluid-lifecycle-"
+  },
+  {
+   "path": "native/scripts/check_gallery_studies_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by component-widget-donut-application, component-widget-progress-application, expression-intent-atUs-application, large-geometry-billion-cell-binding-application, lifetime-trigger-application, material-value-hsl-lightness-application, panel-value-area-fadeMs-application, panel-value-window-width-application, scenic-spatial-water-application, screen-flight-turn-application, screen-input-application, screen-prompt-, screen-prompt-grow-isolated, screen-prompt-vim-inline-isolated, value-camera-fov-application",
+   "cause": "component-widget-donut-application"
+  },
+  {
+   "path": "native/scripts/check_garden_composition_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by garden-composition-",
+   "cause": "garden-composition-"
+  },
+  {
+   "path": "native/scripts/check_geometry_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names geometry-policy-scenes.json",
+   "cause": "geometry-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_graph_weather_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by graph-weather-",
+   "cause": "graph-weather-"
+  },
+  {
+   "path": "native/scripts/check_ink_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names ink-policy-scenes.json",
+   "cause": "ink-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_input_window_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by input-window-",
+   "cause": "input-window-"
+  },
+  {
+   "path": "native/scripts/check_input_workflow_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by input-workflow-",
+   "cause": "input-workflow-"
+  },
+  {
+   "path": "native/scripts/check_lifecycle_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names lifecycle-policy-scenes.json",
+   "cause": "lifecycle-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_material_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by material-gallery-",
+   "cause": "material-gallery-"
+  },
+  {
+   "path": "native/scripts/check_mesh_pointer_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by mesh-pointer-",
+   "cause": "mesh-pointer-"
+  },
+  {
+   "path": "native/scripts/check_node_status_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by node-status-",
+   "cause": "node-status-"
+  },
+  {
+   "path": "native/scripts/check_ownership_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by ownership-gallery-",
+   "cause": "ownership-gallery-"
+  },
+  {
+   "path": "native/scripts/check_particle_choice_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names particle-choice-scenes.json",
+   "cause": "particle-choice-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_path_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names path-policy-scenes.json",
+   "cause": "path-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_pointer_cancel_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names pointer-cancel-scenes.json",
+   "cause": "pointer-cancel-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_presentation_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by presentation-gallery-",
+   "cause": "presentation-gallery-"
+  },
+  {
+   "path": "native/scripts/check_presentation_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names presentation-policy-scenes.json",
+   "cause": "presentation-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_prompt_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names prompt-policy-scenes.json",
+   "cause": "prompt-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_prompt_presentation_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by prompt-presentation-",
+   "cause": "prompt-presentation-"
+  },
+  {
+   "path": "native/scripts/check_resource_animation_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by resource-animation-",
+   "cause": "resource-animation-"
+  },
+  {
+   "path": "native/scripts/check_resource_ownership_browser.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/scripts/check_retained_guard_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by retained-guard-",
+   "cause": "retained-guard-"
+  },
+  {
+   "path": "native/scripts/check_retained_treatment_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by retained-treatment-",
+   "cause": "retained-treatment-"
+  },
+  {
+   "path": "native/scripts/check_road_composition_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by road-composition-",
+   "cause": "road-composition-"
+  },
+  {
+   "path": "native/scripts/check_scenic_appearance_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by scenic-appearance-",
+   "cause": "scenic-appearance-"
+  },
+  {
+   "path": "native/scripts/check_selection_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by selection-gallery-",
+   "cause": "selection-gallery-"
+  },
+  {
+   "path": "native/scripts/check_selector_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names selector-policy-scenes.json",
+   "cause": "selector-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_soft_fronts_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by soft-front-",
+   "cause": "soft-front-"
+  },
+  {
+   "path": "native/scripts/check_source_optics_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by source-optics-",
+   "cause": "source-optics-"
+  },
+  {
+   "path": "native/scripts/check_source_options_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names source-option-scenes.json",
+   "cause": "source-option-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_state_workflow_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by state-workflow-",
+   "cause": "state-workflow-"
+  },
+  {
+   "path": "native/scripts/check_status_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names status-policy-scenes.json",
+   "cause": "status-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_status_workflow_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by status-workflow-",
+   "cause": "status-workflow-"
+  },
+  {
+   "path": "native/scripts/check_surface_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names surface-policy-scenes.json",
+   "cause": "surface-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_text_alphabet_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names text-alphabet-scenes.json",
+   "cause": "text-alphabet-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_text_controls_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names text-control-scenes.json",
+   "cause": "text-control-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_text_curve_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names text-curve-scenes.json",
+   "cause": "text-curve-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_text_seed_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names text-seed-scenes.json",
+   "cause": "text-seed-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_text_trails_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names text-trail-scenes.json",
+   "cause": "text-trail-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_typed_set_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by typed-set-",
+   "cause": "typed-set-"
+  },
+  {
+   "path": "native/scripts/check_unit_guard_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by unit-guard-",
+   "cause": "unit-guard-"
+  },
+  {
+   "path": "native/scripts/check_waterfall_composition_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by waterfall-composition-",
+   "cause": "waterfall-composition-"
+  },
+  {
+   "path": "native/scripts/check_weather_gallery_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by weather-gallery-",
+   "cause": "weather-gallery-"
+  },
+  {
+   "path": "native/scripts/check_widget_numeric_browser.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by expression-transform-convert-",
+   "cause": "expression-transform-convert-"
+  },
+  {
+   "path": "native/scripts/check_window_policy_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names window-policy-scenes.json",
+   "cause": "window-policy-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_window_source_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names window-source-scenes.json",
+   "cause": "window-source-scenes.json"
+  },
+  {
+   "path": "native/scripts/check_world_particle_browser.py",
+   "reason": "readsExcludedFile",
+   "detail": "names world-particle-scenes.json",
+   "cause": "world-particle-scenes.json"
+  },
+  {
+   "path": "native/tests/gallery_attract_built.test.mjs",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by garden-composition, road-composition, scenic-shared-ocean-isolated, shared-ocean, waterfall-composition, waterfall-composition-delayed-application",
+   "cause": "garden-composition"
+  },
+  {
+   "path": "native/tests/test_appearance_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_binding_transition_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_boolean_truth_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_composition_gallery.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by electrical-graphs-connected-leaders-isolated, scenic-shared-ocean-isolated, scenic-spatial-water-isolated, screen-flight-cruise-eased-isolated",
+   "cause": "electrical-graphs-connected-leaders-isolated"
+  },
+  {
+   "path": "native/tests/test_condition_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_curve_choice_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_define_alias_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_draft_weather_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_end_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_event_example_guards.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_field_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_flight_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_floor_collider_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_floor_float_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_gallery_cases.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by angular-fluid-reciprocity, cell-art-removal-recreation, surface-pose-rotation",
+   "cause": "angular-fluid-reciprocity"
+  },
+  {
+   "path": "native/tests/test_gallery_deep_links.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by waterfall-composition, waterfall-composition-delayed-isolated",
+   "cause": "waterfall-composition"
+  },
+  {
+   "path": "native/tests/test_gallery_export_path.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by particle-choice, particle-choice-topology-1-nested-application, resource-ownership-emitter-alpha-isolated, text-curve, text-curve-bounce-hide-application",
+   "cause": "particle-choice"
+  },
+  {
+   "path": "native/tests/test_gallery_presentation.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by waterfall-composition",
+   "cause": "waterfall-composition"
+  },
+  {
+   "path": "native/tests/test_gallery_site_bundle.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by road-composition-straight-isolated, scenic-shared-ocean-isolated, waterfall-composition-delayed-isolated",
+   "cause": "road-composition-straight-isolated"
+  },
+  {
+   "path": "native/tests/test_geometry_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_ink_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_input_window_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_lifecycle_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_material_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_node_status_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_nullification_private.py",
+   "reason": "privateOnly",
+   "detail": "needs the artwork inventory, the mechanism document and the fixture Gallery entries, which the public tree does not carry"
+  },
+  {
+   "path": "native/tests/test_original_camera.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_ownership_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_panel_value_bindings.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_particle_choice_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_path_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_pointer_cancel_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_presentation_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_presentation_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_prompt_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_public_prose_lint.py",
+   "reason": "privateOnly",
+   "detail": "tests the export it belongs to, which needs the census; it plants the internal names it looks for"
+  },
+  {
+   "path": "native/tests/test_public_tree_fixtures.py",
+   "reason": "privateOnly",
+   "detail": "checks this export against git history and the provenance census, which the public tree does not carry"
+  },
+  {
+   "path": "native/tests/test_public_tree_private_strings.py",
+   "reason": "privateOnly",
+   "detail": "tests the export it belongs to, which needs the census, and reads the private pattern file"
+  },
+  {
+   "path": "native/tests/test_qualification_execution.py",
+   "reason": "readsExcludedFile",
+   "detail": "names check_cleanup_workflow_browser.py, check_color_fields_browser.py, check_controller_workflow_browser.py, check_emitter_control_browser.py, check_fluid_lifecycle_browser.py, check_graph_weather_browser.py, check_input_workflow_browser.py, check_retained_treatment_browser.py, check_soft_fronts_browser.py, check_source_optics_browser.py, check_state_workflow_browser.py, check_status_workflow_browser.py",
+   "cause": "check_cleanup_workflow_browser.py"
+  },
+  {
+   "path": "native/tests/test_qualification_shard_discovery.py",
+   "reason": "readsExcludedFile",
+   "detail": "names resource-ownership-scenes.json",
+   "cause": "resource-ownership-scenes.json"
+  },
+  {
+   "path": "native/tests/test_queued_expression_ownership.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_rc2_release_plan.py",
+   "reason": "privateOnly",
+   "detail": "asserts the exact private qualification plan, which the public tree filters by its report"
+  },
+  {
+   "path": "native/tests/test_resource_ownership_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_resource_public_retarget_sequences.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_resource_reference_histories.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_resource_value_bindings.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_retained_guard_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_scene_media_capture.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by waterfall-composition, waterfall-composition-delayed-isolated",
+   "cause": "waterfall-composition"
+  },
+  {
+   "path": "native/tests/test_scenic_appearance_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_selection_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_selector_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_source_option_switches.py",
+   "reason": "readsExcludedFile",
+   "detail": "names source-option-scenes.json",
+   "cause": "source-option-scenes.json"
+  },
+  {
+   "path": "native/tests/test_status_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_surface_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_text_curve_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_typed_set_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_typed_values.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_unit_guard_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_value_descriptors.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_weather_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_widget_numeric_readback.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_window_policy_gallery.py",
+   "reason": "importsExcludedModule",
+   "detail": "refers to an excluded fixture generator"
+  },
+  {
+   "path": "native/tests/test_workshop_help.py",
+   "reason": "selectsFixtureEntries",
+   "detail": "selects fixture Gallery entries by waterfall-composition",
+   "cause": "waterfall-composition"
+  },
+  {
+   "path": "tools/release/private_strings.json",
+   "reason": "privateOnly",
+   "detail": "is the pattern of private strings the tree must not carry, so it spells them"
+  },
+  {
+   "path": "tools/release/prose_lint.py",
+   "reason": "privateOnly",
+   "detail": "lints the tree before publication; its phrase list names the internal hosts and accounts"
+  },
+  {
+   "path": "tools/release/prose_lint_phrases.json",
+   "reason": "privateOnly",
+   "detail": "names the internal hosts and accounts the public prose must not carry"
+  },
+  {
+   "path": "native/Nocturne-Test-Harness.html",
+   "reason": "testHarness",
+   "detail": "generated by build_gallery.py with every study and no admission; a test artefact, never shipped"
+  }
+ ],
+ "privateStringFiles": 0,
+ "proseLint": {
+  "total": 0,
+  "files": {}
+ }
+}

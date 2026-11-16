@@ -1,0 +1,33 @@
+{
+  "format": "nocturne.snapshot-layout-fixture-provenance.v1",
+  "baseline": "50c938c1483f06b3c0df5991f8ae036eb0c3dbbc",
+  "incomingCodeUpdateSha256": "d8ce24ba96292b95aa5bf79a687c388e8f25b6657118aa394a2fcc36e897edf9",
+  "fixtures": [
+    {
+      "fixture": "schema-20261003-contracts7-registered-style.snapshot.gz",
+      "compressedSha256": "4104dae44baf5b524e77c3b01e5f5d2616685e34db2b7db0856e3c31ef896fc8",
+      "compressedBytes": 4893,
+      "rawSha256": "ddbbc3c9edc9206bb4ea6db7b168416703fcee65058f76c6c7c62d05436e4a97",
+      "rawBytes": 4498632,
+      "schema": "0x20261003",
+      "payloadBytes": 4498608,
+      "source": "Nocturne-RC4-Contracts7-SDK.zip",
+      "sourceCommit": "495f7b8761cfce6a1012ca3a44971220c93289df",
+      "engineLibrarySha256": "481d69cde98a6b5331a31c52a4a45cf4b4a3e6d5a8f36b8d2d6ce6d6bb8764d0",
+      "description": "Built by original incoming Contracts 7 library; widget registration and appearance rule retained."
+    },
+    {
+      "fixture": "schema-20261004-intent-action.snapshot.gz",
+      "compressedSha256": "28e7f8be85e38d2598038415a0e3d844e705df98bd7c53bbf3be90b7a24361cd",
+      "compressedBytes": 4707,
+      "rawSha256": "d23901a37fb89d829db72110791cbf2fbf28fbb49d0428ee969be4a94f896722",
+      "rawBytes": 4414400,
+      "schema": "0x20261004",
+      "payloadBytes": 4414376,
+      "source": "local source checkout",
+      "sourceCommit": "81058ccfd64722dc82eea60c587d00779390857b",
+      "engineLibrarySha256": "ea6d4e5cd13c70fd880ffe5688b46cf2e4dcd7bd41476a9ef1a71ebfec47fcc6",
+      "description": "Built by local pre-merge C source; /enabled and /out values plus event-gated valueFrom intentValue trigger retained."
+    }
+  ]
+}

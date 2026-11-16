@@ -1,0 +1,54 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {NativeScene} from './native_scene.mjs';
+const scene=await NativeScene.create(readFileSync(new URL('../../dist/nocturne_native.wasm',import.meta.url)));
+const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+const faces=[[0,2,1],[0,3,2],[4,5,6],[4,6,7],[0,1,5],[0,5,4],[3,7,6],[3,6,2],[0,4,7],[0,7,3],[1,2,6],[1,6,5]];
+try {
+ scene.command({op:'surface',id:1});scene.command({op:'mesh',triangles:[{a:[-20,0,-20],b:[20,0,-20],c:[20,0,20],surfaceId:1},{a:[-20,0,-20],b:[20,0,20],c:[-20,0,20],surfaceId:1}]});
+ scene.command({op:'float-body',id:1,surfaceId:1,mass:4000,gravity:10,drag:0});assert.equal(scene.floatHull(1),null);
+ scene.command({op:'float-hull',id:1,vertices,faces,inertia:[100,100,100]});
+ const expected=[0,0,0,1,0,0,0,100,100,100,0,0,0,8],start=scene.snapshot();
+ const row=scene.floatHull(1);assert.deepEqual(row,expected);row[13]=999;assert.deepEqual(scene.floatHull(1),expected);assert.deepEqual(scene.snapshot(),start);
+ scene.advanceTo(500000);const body=scene.floatBody(1);body.forEach((x,i)=>assert.ok(Math.abs(x-[0,0,0,0,0,0,0,1,0,.5,40000,4000][i])<1e-8));
+ const saved=scene.snapshot();scene.render();assert.deepEqual(scene.snapshot(),saved);scene.restore(start);
+ const output=scene.checkpoint;new Float64Array(scene.exports.memory.buffer,output,14).fill(777);
+ assert.equal(scene.exports.nrFloatHull(scene.context,1,output,13),-1);assert.deepEqual(Array.from(new Float64Array(scene.exports.memory.buffer,output,14)),Array(14).fill(777));
+ assert.equal(scene.exports.nrFloatHull(scene.context,1,scene.context,14),-1);assert.deepEqual(scene.snapshot(),start);
+ scene.command({op:'remove-float-hull',id:1});assert.equal(scene.floatHull(1),null);scene.restore(start);assert.deepEqual(scene.floatHull(1),expected);
+ scene.command({op:'remove-float-body',id:1});assert.equal(scene.floatHull(1),null);scene.restore(scene.snapshot());
+ scene.command({op:'float-body',id:1,surfaceId:1});
+ scene.command({op:'schedule',id:1,atUs:500000,command:{op:'float-hull',id:1,vertices,faces,inertia:[100,100,100]}});
+ scene.command({op:'remove-float-body',id:1});const blocked=scene.snapshot();scene.restore(blocked);
+ assert.throws(()=>scene.advanceTo(500000));assert.deepEqual(scene.snapshot(),blocked);scene.restore(blocked);scene.command({op:'cancel-schedule',id:1});scene.advanceTo(500000);
+ const region=(x0,x1,height)=>{const a=[x0,height(x0),-2],b=[x1,height(x1),-2],c=[x1,height(x1),2],d=[x0,height(x0),2];return [[...a,...b,...c],[...a,...c,...d]];};
+ const water=region(-2,0,x=>-x).concat(region(0,2,x=>x)),meshBefore=scene.snapshot();
+ const immersed=scene.hullMeshImmersion(vertices,faces,water);immersed.forEach((x,i)=>assert.ok(Math.abs(x-[8,6,0,-2/9,0][i])<1e-8));
+ immersed[1]=999;assert.ok(Math.abs(scene.hullMeshImmersion(vertices,faces,water)[1]-6)<1e-8);
+ assert.throws(()=>scene.hullMeshImmersion(vertices,faces,water.concat(water)));assert.deepEqual(scene.snapshot(),meshBefore);
+ const hullFaces=scene.input+vertices.length*24,waterPointer=Math.ceil((hullFaces+faces.length*12)/8)*8;
+ scene.hullMeshImmersion(vertices,faces,water);new Float64Array(scene.exports.memory.buffer,scene.particleBuffer,5).fill(777);
+ assert.equal(scene.exports.nrHullMeshImmersion(scene.input,vertices.length,hullFaces,faces.length,waterPointer,water.length,scene.particleBuffer,4),-1);
+ assert.deepEqual(Array.from(new Float64Array(scene.exports.memory.buffer,scene.particleBuffer,5)),Array(5).fill(777));
+ scene.command({op:'float-body',id:1,surfaceId:1});scene.command({op:'float-hull',id:1,vertices,faces,inertia:[100,100,100]});
+ for(const [field,value,index] of [['hull.angularVelocity.x',2,4],['hull.angularVelocity.y',-3,5],['hull.angularVelocity.z',4,6],['hull.inertia.x',1e10,7],['hull.inertia.y',200,8],['hull.inertia.z',300,9]]){
+  scene.command({op:'define',path:'/'+field,value,binding:{family:'float-body',id:1,field}});assert.equal(scene.floatHull(1)[index],value);
+  const before=scene.snapshot();assert.throws(()=>scene.command({op:'set',path:'/'+field,value:field.includes('angularVelocity')?1001:0}));assert.deepEqual(scene.snapshot(),before);
+  if(value>1e6)scene.command({op:'set',path:'/'+field,value:500});
+ }
+ scene.command({op:'schedule',id:2,atUs:1000000,command:{op:'set',path:'/hull.inertia.x',value:500}});scene.command({op:'remove-float-hull',id:1});const dormant=scene.snapshot();scene.restore(dormant);assert.throws(()=>scene.advanceTo(1000000));assert.deepEqual(scene.snapshot(),dormant);scene.command({op:'cancel-schedule',id:2});
+ for(const field of ['hull.angularVelocity.x','hull.angularVelocity.y','hull.angularVelocity.z','hull.inertia.x','hull.inertia.y','hull.inertia.z'])scene.command({op:'bind',path:'/'+field,binding:null});
+ scene.command({op:'set',path:'/hull.inertia.x',value:1});scene.advanceTo(1000000);
+ const discoveryBefore=scene.snapshot(),contract=scene.info().contract;
+ assert.deepEqual(contract.queryContracts.nrFloatHull,{capacityUnit:'double',rowWords:14,alignmentBytes:8,ownedBindings:true,pure:true,absentReturn:0,presentReturn:1,invalidReturn:-1,contextOverlapAllowed:false,fields:['orientation.x','orientation.y','orientation.z','orientation.w','angularVelocity.x','angularVelocity.y','angularVelocity.z','inertia.x','inertia.y','inertia.z','centerOfMass.x','centerOfMass.y','centerOfMass.z','volume']});
+ for(const feature of ['retained-convex-hulls','hull-pose-inspection','hull-value-bindings'])assert.ok(contract.features.includes(feature));assert.deepEqual(scene.snapshot(),discoveryBefore);
+ const dragBefore=scene.snapshot(),bodyVelocity=scene.input,waterVelocity=scene.input+24,exchangeOutput=scene.checkpoint;
+ new Float64Array(scene.exports.memory.buffer,bodyVelocity,6).set([5,-2,1,-1,3,0]);
+ assert.equal(scene.exports.nrFluidDragExchange(2,3,4,.5,bodyVelocity,waterVelocity,exchangeOutput,10),1);
+ const exchange=Array.from(new Float64Array(scene.exports.memory.buffer,exchangeOutput,10)),fraction=-Math.expm1(-4*.5*(1/2+1/3)),relative=[6,-5,1],impulse=relative.map(x=>1.2*fraction*x);
+ const exchangeExpected=[5-impulse[0]/2,-2-impulse[1]/2,1-impulse[2]/2,-1+impulse[0]/3,3+impulse[1]/3,impulse[2]/3,...impulse,.6*62*fraction*(2-fraction)];
+ exchange.forEach((x,i)=>assert.ok(Math.abs(x-exchangeExpected[i])<1e-9));
+ for(let i=0;i<3;i++)assert.ok(Math.abs(2*exchange[i]+3*exchange[i+3]-(2*[5,-2,1][i]+3*[-1,3,0][i]))<1e-9);
+ new Float64Array(scene.exports.memory.buffer,exchangeOutput,10).fill(777);assert.equal(scene.exports.nrFluidDragExchange(2,3,4,.5,bodyVelocity,waterVelocity,exchangeOutput,9),-1);assert.deepEqual(Array.from(new Float64Array(scene.exports.memory.buffer,exchangeOutput,10)),Array(10).fill(777));assert.deepEqual(scene.snapshot(),dragBefore);
+}finally{scene.close();}
+console.log('PASS retained hull ownership, neutral buoyancy, replay, rendering and raw output purity');

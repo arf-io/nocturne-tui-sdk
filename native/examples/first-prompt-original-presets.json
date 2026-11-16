@@ -1,0 +1,297 @@
+[
+  {
+    "id": "black-creme",
+    "name": "Black Creme / stardust",
+    "family": "01 / TWINKLE",
+    "description": "Sparse braille and punctuation. A warm near-black field. Independent, unhurried twinkles.",
+    "values": {
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 165
+    }
+  },
+  {
+    "id": "lavender-hush",
+    "name": "Lavender hush",
+    "family": "02 / TWINKLE",
+    "description": "A denser sky of braille pinpricks, softened lavender and blue. Long, overlapping breaths.",
+    "values": {
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 1,
+      "densityPermille": 280,
+      "starPeriodMinMs": 2800,
+      "starPeriodRangeMs": 8200,
+      "starDutyPermille": 660
+    },
+    "starPalette": [
+      "#B8A6C8",
+      "#969DBA",
+      "#BCB0BF",
+      "#98A8BA"
+    ]
+  },
+  {
+    "id": "sage-embers",
+    "name": "Sage embers",
+    "family": "03 / TWINKLE",
+    "description": "Sage, shell pink, and oat. Fewer stars, a quicker arrival, a longer fade.",
+    "values": {
+      "layout": 1,
+      "effect": 0,
+      "stars": 1,
+      "glyphSet": 2,
+      "densityPermille": 170,
+      "starAttackPermille": 190,
+      "starDutyPermille": 400,
+      "starPeriodMinMs": 1800,
+      "starPeriodRangeMs": 5800
+    },
+    "starPalette": [
+      "#A8B7A3",
+      "#C5B69E",
+      "#B5A092",
+      "#A3B7B1"
+    ]
+  },
+  {
+    "id": "liquid-linen",
+    "name": "Focus / liquid linen",
+    "family": "04 / PROMPT",
+    "description": "A quick two-color current on the active line. Each adjacent row is slower and less saturated.",
+    "values": {
+      "layout": 1,
+      "effect": 1,
+      "stars": 0,
+      "gradientPeriodMs": 1800,
+      "brightnessPermille": 720,
+      "scaleCells": 65
+    },
+    "palette": [
+      "#416D78",
+      "#896273"
+    ]
+  },
+  {
+    "id": "diagonal-silk",
+    "name": "Diagonal silk",
+    "family": "05 / PROMPT",
+    "description": "An oblique color field crossing a quiet prompt. Focus falls off symmetrically above and below.",
+    "values": {
+      "layout": 1,
+      "effect": 2,
+      "stars": 0,
+      "gradientPeriodMs": 2400,
+      "angleDegrees": 38,
+      "brightnessPermille": 690,
+      "scaleCells": 45
+    },
+    "palette": [
+      "#686A8F",
+      "#43827B",
+      "#906A7D"
+    ]
+  },
+  {
+    "id": "tidepool",
+    "name": "Wave / tidepool",
+    "family": "06 / PROMPT",
+    "description": "A gently distorted wave with independent row clocks. Color moves; the text stays put.",
+    "values": {
+      "layout": 1,
+      "effect": 3,
+      "stars": 0,
+      "gradientPeriodMs": 2200,
+      "brightnessPermille": 700,
+      "waveAmplitudePermille": 1100
+    },
+    "palette": [
+      "#526C91",
+      "#497D73",
+      "#8A6489"
+    ]
+  },
+  {
+    "id": "iris",
+    "name": "Rotation / iris",
+    "family": "07 / BACKGROUND",
+    "description": "A rotating gradient rendered with two horizontal samples per cell. No browser-only effects.",
+    "values": {
+      "layout": 0,
+      "effect": 4,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 9400,
+      "brightnessPermille": 770,
+      "saturationPermille": 850,
+      "scaleCells": 70
+    },
+    "palette": [
+      "#61639A",
+      "#488980",
+      "#AA7583",
+      "#94815B"
+    ]
+  },
+  {
+    "id": "dusk-plasma",
+    "name": "Plasma / dusk",
+    "family": "08 / BACKGROUND",
+    "description": "Four interfering waves moving through a closed palette. Soft, slow, and fully cell-rendered.",
+    "values": {
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 16000,
+      "brightnessPermille": 720,
+      "saturationPermille": 920,
+      "scaleCells": 54
+    },
+    "palette": [
+      "#775583",
+      "#426F76",
+      "#806579",
+      "#807247"
+    ]
+  },
+  {
+    "id": "nebula",
+    "name": "Nebula / layered sky",
+    "family": "09 / COMPOSITE",
+    "description": "Low-luminance plasma under coordinate-anchored pastel stars. Two materials, one cell surface.",
+    "values": {
+      "layout": 1,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 220,
+      "pixelMode": 0,
+      "gradientPeriodMs": 13000,
+      "brightnessPermille": 490,
+      "neighborBrightnessPermille": 1000,
+      "neighborSaturationPermille": 1000,
+      "neighborSpeedPermille": 1000
+    }
+  },
+  {
+    "id": "chromatic-type",
+    "name": "Demoscene / chromatic type",
+    "family": "10 / HUE",
+    "description": "Every character advances around the color wheel by a configurable angle. A sine-bent half-block ribbon below.",
+    "values": {
+      "layout": 3,
+      "effect": 0,
+      "stars": 1,
+      "densityPermille": 80,
+      "hueStepDegrees": 27,
+      "hueDegreesPerSecond": 24,
+      "hueSaturationPermille": 470,
+      "cursorMode": 3
+    },
+    "text": "the world is your burrito."
+  },
+  {
+    "id": "quiet-machinery",
+    "name": "Controls / quiet machinery",
+    "family": "11 / COMPONENTS",
+    "description": "A breathing border, a menu selection, fractional bars, a half-cell rail, a braille scope, and a live prompt.",
+    "values": {
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 45,
+      "brightnessPermille": 160,
+      "gradientPeriodMs": 18000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 12
+    }
+  },
+  {
+    "id": "small-pocket",
+    "name": "Modal / small pocket",
+    "family": "12 / COMPONENTS",
+    "description": "A dimmed world behind a chromatic modal. The data value keeps updating while motion is paused.",
+    "values": {
+      "layout": 2,
+      "effect": 5,
+      "stars": 1,
+      "densityPermille": 120,
+      "brightnessPermille": 330,
+      "gradientPeriodMs": 14000,
+      "modalOpen": 1,
+      "hueStepDegrees": 10,
+      "hueDegreesPerSecond": 20
+    }
+  },
+  {
+    "id": "pearl-signal",
+    "name": "Scope / pearl signal",
+    "family": "13 / COMPONENTS",
+    "description": "Two synthetic signals share braille cells. Color is per cell; signal amplitude follows the live data value.",
+    "values": {
+      "layout": 4,
+      "effect": 1,
+      "stars": 0,
+      "brightnessPermille": 140,
+      "gradientPeriodMs": 20000,
+      "hueStepDegrees": 8,
+      "hueDegreesPerSecond": 15
+    }
+  },
+  {
+    "id": "split-light",
+    "name": "Split light / vertical",
+    "family": "14 / SUBCELLS",
+    "description": "Left-half blocks encode two independent horizontal color samples. Foreground and background trade places.",
+    "values": {
+      "layout": 0,
+      "effect": 2,
+      "stars": 0,
+      "pixelMode": 2,
+      "gradientPeriodMs": 7000,
+      "brightnessPermille": 730,
+      "scaleCells": 28,
+      "saturationPermille": 950
+    },
+    "palette": [
+      "#457987",
+      "#9A6786",
+      "#9A824B",
+      "#4E7E71"
+    ]
+  },
+  {
+    "id": "braille-field",
+    "name": "Braille / interference",
+    "family": "15 / SUBCELLS",
+    "description": "A textured braille field, using one foreground and background color per terminal cell.",
+    "values": {
+      "layout": 0,
+      "effect": 5,
+      "stars": 0,
+      "pixelMode": 4,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 430,
+      "scaleCells": 38
+    }
+  },
+  {
+    "id": "plasma-360",
+    "name": "Plasma 360 / pearlescence",
+    "family": "16 / COLOR FIELD",
+    "description": "Three RGB sine waves, 120 degrees apart, follow a full-turn plasma field. Saturation and brightness stay independent.",
+    "values": {
+      "layout": 0,
+      "effect": 5,
+      "colorMode": 2,
+      "stars": 0,
+      "pixelMode": 1,
+      "gradientPeriodMs": 14000,
+      "brightnessPermille": 570,
+      "saturationPermille": 480,
+      "scaleCells": 60
+    }
+  }
+]

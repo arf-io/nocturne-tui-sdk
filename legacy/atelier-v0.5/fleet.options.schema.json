@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pearl Fleet visual policy",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "expandMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4000,
+      "default": 560
+    },
+    "arrivalMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4000,
+      "default": 520
+    },
+    "horizonRows": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32,
+      "default": 6
+    },
+    "horizonMinimum": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000,
+      "default": 760
+    },
+    "backgroundBrightness": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000,
+      "default": 110
+    },
+    "scopeColorSpeed": {
+      "type": "integer",
+      "minimum": -120,
+      "maximum": 120,
+      "default": 8
+    },
+    "dense": {
+      "type": "boolean",
+      "default": false
+    },
+    "readMode": {
+      "type": "boolean",
+      "default": false
+    },
+    "reducedMotion": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

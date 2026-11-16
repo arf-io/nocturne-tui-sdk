@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 2,
+  "abiVersion": 2,
+  "configBytes": 704,
+  "eventBytes": 32,
+  "nodeBytes": 128,
+  "maxEvents": 128,
+  "maxNodes": 512,
+  "maxText": 32768,
+  "maxData": 16384,
+  "fields": [
+    {
+      "name": "width",
+      "index": 0,
+      "default": 100,
+      "minimum": 0,
+      "maximum": 512,
+      "description": "Width in terminal cells."
+    },
+    {
+      "name": "height",
+      "index": 1,
+      "default": 32,
+      "minimum": 0,
+      "maximum": 256,
+      "description": "Height in terminal cells."
+    },
+    {
+      "name": "pattern",
+      "index": 2,
+      "default": 5,
+      "minimum": 0,
+      "maximum": 11,
+      "description": "0 solid; 1 linear; 2 diagonal; 3 wave; 4 rotating linear; 5 plasma; 6 concentric; 7 moire; 8 aurora; 9 interference; 10 chevrons; 11 diamond."
+    },
+    {
+      "name": "focusMode",
+      "index": 3,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4,
+      "description": "0 none; 1 row; 2 column; 3 radial; 4 diagonal band."
+    },
+    {
+      "name": "focusX",
+      "index": 4,
+      "default": 12800,
+      "minimum": -1048576,
+      "maximum": 1048576,
+      "description": "Focus x in Q8 cells (256 = one column)."
+    },
+    {
+      "name": "focusY",
+      "index": 5,
+      "default": 4096,
+      "minimum": -1048576,
+      "maximum": 1048576,
+      "description": "Focus y in Q8 cells."
+    },
+    {
+      "name": "periodMs",
+      "index": 6,
+      "default": 5000,
+      "minimum": 50,
+      "maximum": 3600000,
+      "description": "Color field cycle in milliseconds."
+    },
+    {
+      "name": "saturation",
+      "index": 7,
+      "default": 700,
+      "minimum": 0,
+      "maximum": 2000,
+      "description": "Color saturation in thousandths."
+    },
+    {
+      "name": "brightness",
+      "index": 8,
+      "default": 260,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Field brightness blended from base, in thousandths."
+    },
+    {
+      "name": "speedFalloff",
+      "index": 9,
+      "default": 500,
+      "minimum": 10,
+      "maximum": 1000,
+      "description": "Speed multiplier for each cell away from focus."
+    },
+    {
+      "name": "saturationFalloff",
+      "index": 10,
+      "default": 760,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Saturation multiplier per cell away from focus."
+    },
+    {
+      "name": "brightnessFalloff",
+      "index": 11,
+      "default": 940,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Brightness multiplier per cell away from focus."
+    },
+    {
+      "name": "cellAspect",
+      "index": 12,
+      "default": 2000,
+      "minimum": 500,
+      "maximum": 4000,
+      "description": "Cell height / width in thousandths; circles compensate for this."
+    },
+    {
+      "name": "scale",
+      "index": 13,
+      "default": 6144,
+      "minimum": 64,
+      "maximum": 262144,
+      "description": "Gradient wavelength in Q8 cells."
+    },
+    {
+      "name": "angle",
+      "index": 14,
+      "default": 0,
+      "minimum": -360000,
+      "maximum": 360000,
+      "description": "Gradient angle in millidegrees."
+    },
+    {
+      "name": "pivotX",
+      "index": 15,
+      "default": 12800,
+      "minimum": -1048576,
+      "maximum": 1048576,
+      "description": "Rotation axis x in Q8 cells; may lie offscreen."
+    },
+    {
+      "name": "pivotY",
+      "index": 16,
+      "default": 4096,
+      "minimum": -1048576,
+      "maximum": 1048576,
+      "description": "Rotation axis y in Q8 cells; may lie offscreen."
+    },
+    {
+      "name": "rotationPeriodMs",
+      "index": 17,
+      "default": 18000,
+      "minimum": 100,
+      "maximum": 3600000,
+      "description": "Independent axis rotation / pendulum period."
+    },
+    {
+      "name": "rotationMode",
+      "index": 18,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 2,
+      "description": "0 fixed axis; 1 continuous rotation; 2 eased pendulum."
+    },
+    {
+      "name": "swing",
+      "index": 19,
+      "default": 65000,
+      "minimum": 0,
+      "maximum": 360000,
+      "description": "Pendulum half-amplitude in millidegrees."
+    },
+    {
+      "name": "phase",
+      "index": 20,
+      "default": 0,
+      "minimum": -65536,
+      "maximum": 65536,
+      "description": "Color phase in 1/1024 turns."
+    },
+    {
+      "name": "pixelMode",
+      "index": 21,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 3,
+      "description": "0 whole cell; 1 upper/lower half; 2 left/right half; 3 braille dither."
+    },
+    {
+      "name": "seed",
+      "index": 22,
+      "default": 7319,
+      "minimum": 0,
+      "maximum": 2147483647,
+      "description": "Deterministic seed. Stable under resize."
+    },
+    {
+      "name": "baseColor",
+      "index": 23,
+      "default": 1118222,
+      "minimum": 0,
+      "maximum": 16777215,
+      "description": "Opaque bottom color, packed RGB."
+    },
+    {
+      "name": "inkColor",
+      "index": 24,
+      "default": 14866889,
+      "minimum": 0,
+      "maximum": 16777215,
+      "description": "Default foreground, packed RGB."
+    },
+    {
+      "name": "paletteCount",
+      "index": 25,
+      "default": 5,
+      "minimum": 1,
+      "maximum": 32,
+      "description": "Number of configured gradient colors (binding-managed)."
+    },
+    {
+      "name": "gradientWrap",
+      "index": 26,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "description": "0 seamless loop; 1 mirrored forward/back; 2 hard cyclic stops."
+    },
+    {
+      "name": "interpolation",
+      "index": 27,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "0 encoded RGB linear; 1 eased RGB interpolation."
+    },
+    {
+      "name": "colorMode",
+      "index": 28,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "description": "0 palette; 1 full HSV wheel; 2 three phase-separated RGB sine channels."
+    },
+    {
+      "name": "hueOffset",
+      "index": 29,
+      "default": 0,
+      "minimum": -3600,
+      "maximum": 3600,
+      "description": "Hue-wheel offset in degrees."
+    },
+    {
+      "name": "stars",
+      "index": 30,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Enable stable-glyph twinkling stars."
+    },
+    {
+      "name": "starDensity",
+      "index": 31,
+      "default": 38,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Chance per cell, in thousandths."
+    },
+    {
+      "name": "starMinMs",
+      "index": 32,
+      "default": 4400,
+      "minimum": 100,
+      "maximum": 3600000,
+      "description": "Minimum independent star period."
+    },
+    {
+      "name": "starRangeMs",
+      "index": 33,
+      "default": 8200,
+      "minimum": 0,
+      "maximum": 3600000,
+      "description": "Additional deterministic period range."
+    },
+    {
+      "name": "starDuty",
+      "index": 34,
+      "default": 540,
+      "minimum": 1,
+      "maximum": 1000,
+      "description": "Visible portion of a star cycle, in thousandths."
+    },
+    {
+      "name": "starPeak",
+      "index": 35,
+      "default": 730,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Peak star opacity relative to its configured peak color."
+    },
+    {
+      "name": "starGlyphCount",
+      "index": 36,
+      "default": 12,
+      "minimum": 1,
+      "maximum": 32,
+      "description": "Number of chosen ordinary star glyphs."
+    },
+    {
+      "name": "starColorCount",
+      "index": 37,
+      "default": 6,
+      "minimum": 1,
+      "maximum": 32,
+      "description": "Number of star peak colors."
+    },
+    {
+      "name": "novaChance",
+      "index": 38,
+      "default": 30,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Per world-tile chance per nova cycle, in thousandths. Zero disables automatic novae."
+    },
+    {
+      "name": "novaCycleMs",
+      "index": 39,
+      "default": 45000,
+      "minimum": 1000,
+      "maximum": 3600000,
+      "description": "Stable world-tile nova opportunity cycle."
+    },
+    {
+      "name": "novaDurationMs",
+      "index": 40,
+      "default": 3600,
+      "minimum": 100,
+      "maximum": 30000,
+      "description": "Nova glyph evolution and shockwave duration."
+    },
+    {
+      "name": "novaGlyphCount",
+      "index": 41,
+      "default": 5,
+      "minimum": 1,
+      "maximum": 16,
+      "description": "Ordered expansion glyph sequence; contracts on fade."
+    },
+    {
+      "name": "rippleSpeed",
+      "index": 42,
+      "default": 2560,
+      "minimum": 1,
+      "maximum": 262144,
+      "description": "Shockwave propagation in Q8 cells per second."
+    },
+    {
+      "name": "rippleWidth",
+      "index": 43,
+      "default": 384,
+      "minimum": 16,
+      "maximum": 8192,
+      "description": "Soft ring thickness in Q8 cells."
+    },
+    {
+      "name": "rippleLifeMs",
+      "index": 44,
+      "default": 3200,
+      "minimum": 100,
+      "maximum": 30000,
+      "description": "Lifetime of a user/data ripple."
+    },
+    {
+      "name": "rippleOpacity",
+      "index": 45,
+      "default": 280,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Peak background ring opacity."
+    },
+    {
+      "name": "rippleRings",
+      "index": 46,
+      "default": 2,
+      "minimum": 1,
+      "maximum": 6,
+      "description": "Number of trailing concentric wavefronts."
+    },
+    {
+      "name": "motion",
+      "index": 47,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "0 evaluates decorative fields at time zero; host pause holds explicit time instead."
+    },
+    {
+      "name": "quantize",
+      "index": 48,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "description": "0 RGB; 1 canonical ANSI16 approximation; 2 xterm256 approximation."
+    },
+    {
+      "name": "originX",
+      "index": 49,
+      "default": 0,
+      "minimum": -4096,
+      "maximum": 4096,
+      "description": "World origin x in whole cells; stable sky coordinates."
+    },
+    {
+      "name": "originY",
+      "index": 50,
+      "default": 0,
+      "minimum": -4096,
+      "maximum": 4096,
+      "description": "World origin y in whole cells."
+    },
+    {
+      "name": "waveAmplitude",
+      "index": 51,
+      "default": 640,
+      "minimum": 0,
+      "maximum": 4000,
+      "description": "Wave deformation in thousandths."
+    },
+    {
+      "name": "starAttack",
+      "index": 52,
+      "default": 340,
+      "minimum": 10,
+      "maximum": 990,
+      "description": "Fraction of visible star lifetime used for brightening."
+    },
+    {
+      "name": "reverse",
+      "index": 53,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Reverse decorative phase and continuous rotation."
+    }
+  ],
+  "nodeFields": [
+    "kind",
+    "id",
+    "x",
+    "y",
+    "width",
+    "height",
+    "state",
+    "value",
+    "fromValue",
+    "changedLo",
+    "changedHi",
+    "durationMs",
+    "fg",
+    "bg",
+    "fgOpacity",
+    "bgOpacity",
+    "style",
+    "textOffset",
+    "textLength",
+    "dataOffset",
+    "dataLength",
+    "hueStep",
+    "hueSpeed",
+    "hueBase",
+    "revealMs",
+    "reserved",
+    "hueSaturation",
+    "hueBrightness",
+    "colorAnimation",
+    "glyph",
+    "zoom",
+    "reserved2"
+  ],
+  "kinds": [
+    "text",
+    "box",
+    "rule",
+    "button",
+    "item",
+    "cursor",
+    "progress",
+    "bars",
+    "pie",
+    "donut",
+    "scatter",
+    "line",
+    "digits",
+    "edge"
+  ],
+  "palette": [
+    "#28304f",
+    "#785c89",
+    "#367876",
+    "#ae7357",
+    "#504565"
+  ],
+  "starPalette": [
+    "#b6a4c4",
+    "#9fb9b0",
+    "#c7bca7",
+    "#9cacca",
+    "#c6a0aa",
+    "#adbdbb"
+  ],
+  "glyphs": [
+    ".",
+    "\u00b7",
+    "\u2219",
+    "\u22c5",
+    "\u2801",
+    "\u2802",
+    "\u2804",
+    "\u2840",
+    "\u2808",
+    "\u2810",
+    "\u2820",
+    "\u2880"
+  ],
+  "novaGlyphs": [
+    "\u00b7",
+    "\u2219",
+    "*",
+    "\u2726",
+    "\u2727"
+  ]
+}

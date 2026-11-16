@@ -1,0 +1,319 @@
+{
+  "schema": "nocturne.example-garden/v1",
+  "commands": [
+    {
+      "op": "material",
+      "id": 7,
+      "gradient": [
+        [
+          0.65,
+          0.16,
+          45
+        ],
+        [
+          0.55,
+          0.13,
+          95
+        ],
+        [
+          0.72,
+          0.15,
+          25
+        ]
+      ],
+      "alpha": 1
+    },
+    {
+      "op": "material",
+      "id": 8,
+      "gradient": [
+        [
+          0.72,
+          0.08,
+          225
+        ],
+        [
+          0.9,
+          0.04,
+          200
+        ]
+      ],
+      "alpha": 0.65
+    },
+    {
+      "op": "material",
+      "id": 9,
+      "gradient": [
+        [
+          0.75,
+          0.18,
+          40
+        ],
+        [
+          0.55,
+          0.19,
+          20
+        ]
+      ],
+      "alpha": 1
+    },
+    {
+      "op": "surface",
+      "id": 1,
+      "restitution": 0,
+      "friction": 0.9,
+      "settleSpeed": 30,
+      "retentionMs": 20000,
+      "fadeMs": 5000,
+      "wetnessGain": 1,
+      "evaporation": 0.1,
+      "heatGain": 1,
+      "cooling": 0.1,
+      "wetnessDarkening": 0.5,
+      "heatTintStrength": 0.4,
+      "heatColor": 15827269
+    },
+    {
+      "op": "mesh",
+      "append": true,
+      "triangles": [
+        {
+          "a": [
+            -6.0,
+            0,
+            -6.0
+          ],
+          "b": [
+            -6.0,
+            0,
+            6.0
+          ],
+          "c": [
+            6.0,
+            0,
+            -6.0
+          ],
+          "surfaceId": 1,
+          "color": 4614983,
+          "alpha": 1
+        },
+        {
+          "a": [
+            6.0,
+            0,
+            -6.0
+          ],
+          "b": [
+            -6.0,
+            0,
+            6.0
+          ],
+          "c": [
+            6.0,
+            0,
+            6.0
+          ],
+          "surfaceId": 1,
+          "color": 4614983,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "op": "emitter",
+      "id": 1,
+      "effect": "weather/autumn-drift",
+      "seed": 73,
+      "count": 24,
+      "runningTimeMs": 500,
+      "gravity": [
+        0,
+        -6,
+        0
+      ],
+      "wind": [
+        0.4,
+        0,
+        0
+      ],
+      "windVariation": [
+        0.2,
+        0,
+        0.2
+      ],
+      "lift": 0,
+      "collision": true,
+      "deposit": true,
+      "colliders": {
+        "floor": false,
+        "surfaces": [
+          1
+        ]
+      },
+      "lifetimeMinMs": 10000,
+      "lifetimeMaxMs": 10000,
+      "shape": "box",
+      "position": [
+        0,
+        3,
+        0
+      ],
+      "extent": [
+        4.0,
+        0.25,
+        4.0
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "spread": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "drag": 0.35,
+      "material": 7,
+      "twoSided": true,
+      "veinContrast": 0.7,
+      "surfaceAlpha": 0.8
+    },
+    {
+      "op": "emitter",
+      "id": 2,
+      "effect": "weather/rain-threads",
+      "seed": 74,
+      "count": 8,
+      "runningTimeMs": 500,
+      "gravity": [
+        0,
+        -6,
+        0
+      ],
+      "wind": [
+        0,
+        0,
+        0
+      ],
+      "windVariation": [
+        0,
+        0,
+        0
+      ],
+      "lift": 0,
+      "collision": true,
+      "deposit": true,
+      "colliders": {
+        "floor": false,
+        "surfaces": [
+          1
+        ]
+      },
+      "lifetimeMinMs": 10000,
+      "lifetimeMaxMs": 10000,
+      "shape": "box",
+      "position": [
+        0,
+        4,
+        0
+      ],
+      "extent": [
+        4.0,
+        0,
+        4.0
+      ],
+      "velocity": [
+        0,
+        -6,
+        0
+      ],
+      "spread": [
+        0.1,
+        0,
+        0.1
+      ],
+      "drag": 0,
+      "material": 8
+    },
+    {
+      "op": "emitter",
+      "id": 3,
+      "effect": "weather/thermal-cinders",
+      "seed": 75,
+      "count": 2,
+      "runningTimeMs": 500,
+      "gravity": [
+        0,
+        -6,
+        0
+      ],
+      "wind": [
+        0,
+        0,
+        0
+      ],
+      "windVariation": [
+        0,
+        0,
+        0
+      ],
+      "lift": 0,
+      "collision": true,
+      "deposit": true,
+      "colliders": {
+        "floor": false,
+        "surfaces": [
+          1
+        ]
+      },
+      "lifetimeMinMs": 10000,
+      "lifetimeMaxMs": 10000,
+      "shape": "point",
+      "position": [
+        0,
+        0.2,
+        0
+      ],
+      "extent": [
+        0,
+        0,
+        0
+      ],
+      "velocity": [
+        0,
+        -4,
+        0
+      ],
+      "spread": [
+        0.1,
+        0,
+        0.1
+      ],
+      "drag": 0.1,
+      "heat": 0.25,
+      "radius": 1.5,
+      "material": 9
+    },
+    {
+      "op": "define",
+      "path": "/garden/windX",
+      "value": 0.4,
+      "binding": {
+        "family": "emitter",
+        "id": 1,
+        "field": "wind.x"
+      }
+    },
+    {
+      "op": "define",
+      "path": "/garden/heat",
+      "value": 0.25,
+      "binding": {
+        "family": "emitter",
+        "id": 3,
+        "field": "heat"
+      }
+    }
+  ]
+}

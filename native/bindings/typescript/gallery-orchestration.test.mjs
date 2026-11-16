@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {runStudies} from '../../scripts/gallery_execution.mjs';
+const observed=[],updates=[];
+const report=runStudies([{id:'broken'},{id:'later'}],study=>{observed.push(study.id);if(study.id==='broken')throw Error('oracle failed');},row=>updates.push(structuredClone(row)));
+assert.deepEqual(observed,['broken','later']);assert.equal(report.passed,false);assert.equal(report.complete,true);
+assert.deepEqual(report.cases.map(row=>row.status),['FAIL','PASS']);assert.equal(report.cases[0].error,'oracle failed');
+assert.equal(updates[0].status,'RUNNING');assert.equal(updates.at(-1).status,'FAIL');
+for(const studies of [[],[{id:'same'},{id:'same'}],[{id:''}]])assert.throws(()=>runStudies(studies,()=>assert.fail('invalid inventory executed')));
+const pass=runStudies([{id:'one'},{id:'two'}],()=>{});assert.equal(pass.passed,true);assert.deepEqual(pass.expectedCaseIds,pass.cases.map(row=>row.id));
+console.log('Synthetic gallery orchestration passes; no WASM/native runtime acceptance claimed');

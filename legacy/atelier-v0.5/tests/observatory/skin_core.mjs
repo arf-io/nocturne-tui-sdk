@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';import {skinCell,ansiColor,rowAnsi} from '../../integrations/pty/skin_core.mjs';
+function cell(chars,{fg=0,bg=0,df=true,db=true,inverse=false,hidden=false,width=1}={}){return {getChars:()=>chars,getWidth:()=>width,getFgColor:()=>fg,getBgColor:()=>bg,isFgDefault:()=>df,isBgDefault:()=>db,isFgRGB:()=>true,isBgRGB:()=>true,isInverse:()=>inverse,isInvisible:()=>hidden};}
+const frame={cells:new Uint32Array([0x2580,0x222222,0x444444,0])};
+assert.equal(skinCell(cell('a'),frame,0).bg,0x333333);assert.equal(skinCell(cell(' '),frame,0).chars,'▀');assert.equal(skinCell(cell('a',{fg:0x123456,df:false}),frame,0).fg,0x123456);assert.equal(skinCell(cell('a',{bg:0x111122,db:false}),frame,0).bg,0x111122);assert.equal(skinCell(cell('a',{inverse:true}),frame,0).bg,0x101319);assert.equal(skinCell(cell('秘密',{width:2}),frame,0).width,2);assert.equal(skinCell(cell('x\x1b]52;',{}),frame,0).chars.includes('\x1b'),false);assert.equal(skinCell(cell(' ',{hidden:true}),frame,0).attrs,'8');assert.equal(ansiColor(196),0xff0000);assert.equal(ansiColor(255),0xeeeeee);assert.equal(rowAnsi([{chars:'',width:0}]),'');
+const underlined=cell(' ');underlined.isUnderline=()=>true;assert.equal(skinCell(underlined,frame,0).chars,' ');assert.equal(skinCell(underlined,frame,0).attrs,'4');
+console.log('PTY skin composition: 13 assertions passed');

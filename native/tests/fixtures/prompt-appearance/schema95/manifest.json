@@ -1,0 +1,9 @@
+{
+  "schema": "0x20261095",
+  "runtimeSha256": "df98dc64381fc1d95b76787402007ced28ba0b61e1b24348bb29540e5d7fd9f1",
+  "sdkSha256": "534ed94b7f68724f193fa9d70b337e739fb5e84a264da4d8059cf4e7baffda49",
+  "snapshotSha256": "e54c5ab0024616000cbcb2c868ba9440873c19f0c1f8f98931f808caa690ffe7",
+  "frameSha256": "e552dd5302102e39f56a423e3c1f98f49099c1c07062f93dafb86207cf445435",
+  "text": "\u03b1\u754ce\u0301 cursor",
+  "actualRuntimeExecution": true
+}

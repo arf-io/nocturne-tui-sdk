@@ -1,0 +1,1912 @@
+[
+  {
+    "id": "atelier-embers-isolated",
+    "name": "Atelier source / embers / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "embers",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "embers"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/copper-cinders",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-embers-application",
+    "name": "Atelier source / embers / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "embers",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "embers"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/copper-cinders",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-sparks-isolated",
+    "name": "Atelier source / sparks / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "sparks",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "sparks"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/livewire",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-sparks-application",
+    "name": "Atelier source / sparks / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "sparks",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "sparks"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/livewire",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-nova-isolated",
+    "name": "Atelier source / nova / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "nova",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "nova"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/fractured-sun",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-nova-application",
+    "name": "Atelier source / nova / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "nova",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "nova"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/fractured-sun",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-rain-isolated",
+    "name": "Atelier source / rain / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "rain",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "rain"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/slantfall",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-rain-application",
+    "name": "Atelier source / rain / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "rain",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "rain"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/slantfall",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-snow-isolated",
+    "name": "Atelier source / snow / isolated",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "isolated",
+    "profile": "snow",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "snow"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/crystalline-drift",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  },
+  {
+    "id": "atelier-snow-application",
+    "name": "Atelier source / snow / application",
+    "subtitle": "Original seeded analytic points, connected segments, trails and core/shockwave at a projected world emitter center.",
+    "mode": "application",
+    "profile": "snow",
+    "demonstrates": {
+      "feature": "atelier-source",
+      "profile": "snow"
+    },
+    "commands": [
+      {
+        "op": "resize",
+        "width": 100,
+        "height": 40
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          6,
+          30
+        ],
+        "yaw": 0,
+        "pitch": -8,
+        "roll": 0,
+        "near": 0.1,
+        "far": 200,
+        "fov": 70,
+        "span": 40,
+        "orthographic": false
+      },
+      {
+        "op": "environment",
+        "background": 726312,
+        "stars": 180,
+        "starFar": 130,
+        "style": "solid"
+      },
+      {
+        "op": "floor",
+        "height": -6,
+        "visible": true,
+        "enabled": false,
+        "alpha": 0.45
+      },
+      {
+        "op": "mesh",
+        "triangles": [
+          {
+            "a": [
+              -8,
+              -4,
+              0
+            ],
+            "b": [
+              0,
+              8,
+              0
+            ],
+            "c": [
+              8,
+              -4,
+              0
+            ],
+            "color": 4372668,
+            "alpha": 0.75
+          },
+          {
+            "a": [
+              -14,
+              -3,
+              -6
+            ],
+            "b": [
+              -10,
+              6,
+              -6
+            ],
+            "c": [
+              -6,
+              -3,
+              -6
+            ],
+            "color": 12945121,
+            "alpha": 0.6
+          }
+        ]
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "gradient": [
+          [
+            0.78,
+            0.12,
+            205
+          ],
+          [
+            0.68,
+            0.15,
+            320
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.25,
+          "min": 0,
+          "max": 1,
+          "boundary": "reverse"
+        },
+        "alpha": 0.75
+      },
+      {
+        "op": "window",
+        "id": 90,
+        "title": "Application / mission control",
+        "text": "Shared world, camera and local controls\nLayered content remains readable\nPrompt source survives scene motion",
+        "position": [
+          10,
+          4,
+          -4
+        ],
+        "width": 32,
+        "height": 15,
+        "material": 2,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "text",
+        "id": 90,
+        "text": "MISSION / OPERATION CONSOLE",
+        "x": 4,
+        "y": 3,
+        "effect": "text/ink-dissolve",
+        "durationMs": 800
+      },
+      {
+        "op": "prompt",
+        "active": true,
+        "alpha": 0.22
+      },
+      {
+        "op": "draft",
+        "text": "A retained application draft",
+        "emitWeather": false
+      },
+      {
+        "op": "indicator",
+        "id": 90,
+        "x": 4,
+        "y": 32,
+        "sequence": "\u25d0\u25d3\u25d1\u25d2",
+        "stepMs": 150
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          0,
+          40
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/crystalline-drift",
+        "count": 32,
+        "runningTimeMs": 0
+      },
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "seed": 2030,
+        "eventId": 1,
+        "lifeMs": 4200,
+        "count": 64,
+        "speed": 20,
+        "gravity": 9,
+        "rise": 10,
+        "drag": 0.22,
+        "turbulence": 1.3,
+        "glitterHz": 14,
+        "trailMs": 100,
+        "branches": 7,
+        "jaggedness": 2.2,
+        "coreMs": 280,
+        "coreRadius": 3,
+        "ejecta": 1,
+        "shockwave": 0.4,
+        "intensity": 0.8,
+        "reducedMotion": false
+      },
+      {
+        "op": "draft",
+        "text": "Atelier source draft",
+        "emitWeather": false
+      }
+    ],
+    "actions": [],
+    "expectedPrompt": "Atelier source draft",
+    "sampleTimesUs": [
+      0,
+      90000,
+      260000,
+      520000,
+      1000000,
+      5000000
+    ],
+    "rejectedCommands": [
+      {
+        "op": "atelier-style",
+        "id": 1,
+        "count": 257
+      },
+      {
+        "op": "atelier-style",
+        "id": 65535
+      }
+    ]
+  }
+]

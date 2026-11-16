@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {NativeScene} from './native_scene.mjs';
+const wasm=readFileSync(new URL('../../dist/nocturne_native.wasm',import.meta.url));
+const a=await NativeScene.create(wasm),b=await NativeScene.create(wasm);
+for(const scene of [a,b])scene.command({op:'reset',seed:17});
+a.command({op:'ribbon',points:[[0,0,0],[4,0,0]],width:2});
+b.command({op:'mesh',triangles:[{a:[0,0,-1],b:[0,0,1],c:[4,0,-1]},{a:[0,0,1],b:[4,0,1],c:[4,0,-1]}]});
+assert.deepEqual(a.snapshot(),b.snapshot());
+const before=a.snapshot();a.render();assert.deepEqual(a.snapshot(),before);
+assert.throws(()=>a.command({op:'ribbon',points:[[0,0,0],[0,0,0]]}));assert.deepEqual(a.snapshot(),before);
+assert.deepEqual(a.pathSample([[0,0,0],[3,0,0],[3,4,0]],5),[3,2,0,0,1,0,7,5]);
+assert.deepEqual(a.pathSample([[0,0,0],[3,0,0]],4,{mode:'reverse'}),[2,0,0,-1,-0,-0,3,2]);
+const tiny=a.pathSample([[0,0,0],[1e-8,0,0]],1e12,{mode:'loop'});assert.ok(tiny.every(Number.isFinite));assert.ok(tiny[7]>=0&&tiny[7]<tiny[6]);
+a.command({op:'path-travel',id:1,target:{family:'camera',id:0},points:[[0,0,0],[4,0,0]],speed:2});
+a.advanceTo(1000000);assert.deepEqual(a.info().camera.position,[2,0,0]);const travelSaved=a.snapshot();a.render();assert.deepEqual(a.snapshot(),travelSaved);
+a.command({op:'ribbon',points:[[0,0,5],[4,0,5]],width:2,append:true});assert.equal(a.info().geometry.triangles,4);
+const extra={a:[0,1,0],b:[1,1,0],c:[0,1,1]};
+a.command({op:'mesh',triangles:[extra],append:true});assert.equal(a.info().geometry.triangles,5);
+a.command({op:'model-import',schema:'nocturne.model/v1',units:'meters',coordinates:'right-handed-y-up',vertices:[extra.a,extra.b,extra.c],materials:[{color:0x809caa}],triangles:[{indices:[0,1,2],material:0}],append:true});assert.equal(a.info().geometry.triangles,6);
+const composed=a.snapshot();a.command({op:'mesh',triangles:[],append:true});assert.deepEqual(a.snapshot(),composed);
+a.close();b.close();console.log('PASS native WASM ribbon compiler');
+
+const spline=await NativeScene.create(wasm),polyline=await NativeScene.create(wasm);
+spline.command({op:'ribbon',points:[[0,0,0],[2,0,0],[2,0,2]],width:1,color:0x123456,interpolation:'catmull-rom',subdivisions:2});
+polyline.command({op:'ribbon',points:[[0,0,0],[1,0,-.125],[2,0,0],[2.125,0,1],[2,0,2]],width:1,color:0x123456});
+assert.deepEqual(spline.snapshot(),polyline.snapshot());assert.deepEqual(spline.render(),polyline.render());spline.close();polyline.close();console.log('PASS native WASM spline ribbon compilation');

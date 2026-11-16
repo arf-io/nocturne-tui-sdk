@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+node_modules/
+bindings/rust/target/
+.DS_Store
+dist/libnocturne.so
+dist/libnocturne.dylib
+dist/nocturne.dll
+dist/tty-debug.bin
+SOURCE-CONTENTS.md
+SHA256SUMS.txt

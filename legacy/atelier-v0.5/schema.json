@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "abiVersion": 1,
+  "description": "All integers. Permille means parts per thousand. Palette colors are #RRGGBB.",
+  "fields": [
+    {
+      "name": "width",
+      "index": 0,
+      "default": 84,
+      "minimum": 0,
+      "maximum": 512,
+      "description": "Surface width in terminal cells."
+    },
+    {
+      "name": "height",
+      "index": 1,
+      "default": 28,
+      "minimum": 0,
+      "maximum": 256,
+      "description": "Surface height in terminal cells."
+    },
+    {
+      "name": "effect",
+      "index": 2,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 5,
+      "description": "0 solid; 1 linear; 2 diagonal; 3 wave; 4 rotation; 5 plasma."
+    },
+    {
+      "name": "layout",
+      "index": 3,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4,
+      "description": "0 material only; 1 prompt; 2 controls; 3 hue ribbon; 4 scope."
+    },
+    {
+      "name": "seed",
+      "index": 4,
+      "default": 73419,
+      "minimum": 0,
+      "maximum": 2147483647,
+      "description": "Coordinate-hashed star and grain seed."
+    },
+    {
+      "name": "stars",
+      "index": 5,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Enable the star foreground layer."
+    },
+    {
+      "name": "densityPermille",
+      "index": 6,
+      "default": 135,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Probability per cell of containing a star, in thousandths."
+    },
+    {
+      "name": "glyphSet",
+      "index": 7,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4,
+      "description": "0 mixed; 1 braille; 2 punctuation; 3 mathematical; 4 custom."
+    },
+    {
+      "name": "starPeriodMinMs",
+      "index": 8,
+      "default": 1600,
+      "minimum": 80,
+      "maximum": 120000,
+      "description": "Minimum individual twinkle cycle in milliseconds."
+    },
+    {
+      "name": "starPeriodRangeMs",
+      "index": 9,
+      "default": 6400,
+      "minimum": 0,
+      "maximum": 120000,
+      "description": "Additional coordinate-hashed cycle range."
+    },
+    {
+      "name": "starDutyPermille",
+      "index": 10,
+      "default": 500,
+      "minimum": 1,
+      "maximum": 1000,
+      "description": "Active fraction of each individual twinkle cycle."
+    },
+    {
+      "name": "starFloorPermille",
+      "index": 11,
+      "default": 25,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Minimum star intensity relative to its peak color."
+    },
+    {
+      "name": "starPeakPermille",
+      "index": 12,
+      "default": 1000,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Maximum star intensity relative to its peak color."
+    },
+    {
+      "name": "gradientPeriodMs",
+      "index": 13,
+      "default": 3200,
+      "minimum": 80,
+      "maximum": 120000,
+      "description": "Time for one full material cycle, in milliseconds."
+    },
+    {
+      "name": "saturationPermille",
+      "index": 14,
+      "default": 700,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Palette saturation, in thousandths."
+    },
+    {
+      "name": "brightnessPermille",
+      "index": 15,
+      "default": 500,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Material contribution over the base color."
+    },
+    {
+      "name": "focusRow",
+      "index": 16,
+      "default": -1,
+      "minimum": -1,
+      "maximum": 255,
+      "description": "Active row; -1 selects the middle row."
+    },
+    {
+      "name": "neighborSpeedPermille",
+      "index": 17,
+      "default": 500,
+      "minimum": 1,
+      "maximum": 1000,
+      "description": "Speed multiplier per row away from focus."
+    },
+    {
+      "name": "neighborSaturationPermille",
+      "index": 18,
+      "default": 620,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Saturation multiplier per row away from focus."
+    },
+    {
+      "name": "neighborBrightnessPermille",
+      "index": 19,
+      "default": 860,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Brightness multiplier per row away from focus."
+    },
+    {
+      "name": "angleDegrees",
+      "index": 20,
+      "default": 32,
+      "minimum": 0,
+      "maximum": 359,
+      "description": "Static diagonal angle in degrees."
+    },
+    {
+      "name": "scaleCells",
+      "index": 21,
+      "default": 42,
+      "minimum": 2,
+      "maximum": 512,
+      "description": "Spatial wavelength in terminal columns."
+    },
+    {
+      "name": "hueStepDegrees",
+      "index": 22,
+      "default": 23,
+      "minimum": -360,
+      "maximum": 360,
+      "description": "Hue offset per character."
+    },
+    {
+      "name": "hueDegreesPerSecond",
+      "index": 23,
+      "default": 35,
+      "minimum": -360,
+      "maximum": 360,
+      "description": "Signed rotation speed of character hues."
+    },
+    {
+      "name": "baseHueDegrees",
+      "index": 24,
+      "default": 220,
+      "minimum": 0,
+      "maximum": 359,
+      "description": "Starting hue for character effects."
+    },
+    {
+      "name": "pixelMode",
+      "index": 25,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 4,
+      "description": "0 whole cell; 1 upper half; 2 left half; 3 shade; 4 braille contour."
+    },
+    {
+      "name": "originX",
+      "index": 26,
+      "default": 0,
+      "minimum": -1000000,
+      "maximum": 1000000,
+      "description": "World-space horizontal origin for stable resize and scrolling."
+    },
+    {
+      "name": "originY",
+      "index": 27,
+      "default": 0,
+      "minimum": -1000000,
+      "maximum": 1000000,
+      "description": "World-space vertical origin for stable resize and scrolling."
+    },
+    {
+      "name": "valuePermille",
+      "index": 28,
+      "default": 630,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Immediate demonstration data value; not interpolated."
+    },
+    {
+      "name": "motion",
+      "index": 29,
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "0 renders the zero-time state; host pause instead preserves last motion time."
+    },
+    {
+      "name": "phaseDegrees",
+      "index": 30,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 359,
+      "description": "Initial material phase."
+    },
+    {
+      "name": "grainPermille",
+      "index": 31,
+      "default": 12,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Subtle fixed spatial grain amplitude."
+    },
+    {
+      "name": "cursorMode",
+      "index": 32,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 3,
+      "description": "0 block; 1 underline; 2 bar; 3 orbiting dots."
+    },
+    {
+      "name": "borderStyle",
+      "index": 33,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 3,
+      "description": "0 rounded; 1 square; 2 double; 3 heavy."
+    },
+    {
+      "name": "selection",
+      "index": 34,
+      "default": 2,
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Immediate selected demonstration menu index."
+    },
+    {
+      "name": "foregroundColor",
+      "index": 35,
+      "default": 14077116,
+      "minimum": 0,
+      "maximum": 16777215,
+      "description": "Default text color as packed RGB."
+    },
+    {
+      "name": "baseColor",
+      "index": 36,
+      "default": 1118222,
+      "minimum": 0,
+      "maximum": 16777215,
+      "description": "Dark Black Creme, packed RGB."
+    },
+    {
+      "name": "waveAmplitudePermille",
+      "index": 37,
+      "default": 650,
+      "minimum": 0,
+      "maximum": 2000,
+      "description": "Wave distortion strength."
+    },
+    {
+      "name": "starAttackPermille",
+      "index": 38,
+      "default": 350,
+      "minimum": 1,
+      "maximum": 999,
+      "description": "Fraction of active twinkle spent brightening."
+    },
+    {
+      "name": "paletteCount",
+      "index": 39,
+      "default": 4,
+      "minimum": 1,
+      "maximum": 8,
+      "description": "Number of active gradient colors."
+    },
+    {
+      "name": "starPaletteCount",
+      "index": 40,
+      "default": 6,
+      "minimum": 1,
+      "maximum": 8,
+      "description": "Number of active star peak colors."
+    },
+    {
+      "name": "glyphCount",
+      "index": 41,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 32,
+      "description": "Number of custom star code points."
+    },
+    {
+      "name": "modalOpen",
+      "index": 42,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Show the demonstration modal."
+    },
+    {
+      "name": "hueSaturationPermille",
+      "index": 43,
+      "default": 430,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Saturation of character hue-wheel effects."
+    },
+    {
+      "name": "hueBrightnessPermille",
+      "index": 44,
+      "default": 780,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Brightness of character hue-wheel effects."
+    },
+    {
+      "name": "cellAspectPermille",
+      "index": 45,
+      "default": 2000,
+      "minimum": 500,
+      "maximum": 4000,
+      "description": "Physical cell height / width, in thousandths."
+    },
+    {
+      "name": "textScrimPermille",
+      "index": 46,
+      "default": 180,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Text-cell background blend toward the base color."
+    },
+    {
+      "name": "promptBands",
+      "index": 47,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Apply focused row falloff even without the prompt demonstration layout."
+    },
+    {
+      "name": "colorMode",
+      "index": 48,
+      "default": 0,
+      "minimum": 0,
+      "maximum": 2,
+      "description": "0 predefined palette; 1 full 360-degree hue wheel; 2 120-degree-offset RGB sine waves."
+    }
+  ],
+  "gradientPalette": [
+    "#654F72",
+    "#356A6A",
+    "#735569",
+    "#817451"
+  ],
+  "starPalette": [
+    "#B6A4C4",
+    "#9FB9B0",
+    "#C7BCA7",
+    "#9CACCA",
+    "#C6A0AA",
+    "#ADBDBB"
+  ]
+}

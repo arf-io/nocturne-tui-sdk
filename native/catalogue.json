@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "weather/pearl-bloom",
+    "name": "Pearl Bloom",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/studio.nova",
+    "profile": 0
+  },
+  {
+    "id": "surface-field/silk-tide",
+    "name": "Silk Tide",
+    "contract": "SurfaceField",
+    "family": 1,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/studio.ripples",
+    "profile": 0
+  },
+  {
+    "id": "weather/corona-flare",
+    "name": "Corona Flare",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/observatory.nova",
+    "profile": 0
+  },
+  {
+    "id": "weather/pinfire",
+    "name": "Pinfire",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/observatory.sparks",
+    "profile": 0
+  },
+  {
+    "id": "weather/lantern-motes",
+    "name": "Lantern Motes",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/observatory.embers",
+    "profile": 0
+  },
+  {
+    "id": "surface-field/satin-rings",
+    "name": "Satin Rings",
+    "contract": "SurfaceField",
+    "family": 1,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/observatory.ripples",
+    "profile": 0
+  },
+  {
+    "id": "weather/rain-threads",
+    "name": "Rain Threads",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/observatory.rain",
+    "profile": 0
+  },
+  {
+    "id": "weather/snow-dust",
+    "name": "Snow Dust",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/observatory.snow",
+    "profile": 0
+  },
+  {
+    "id": "weather/chrysanthemum",
+    "name": "Chrysanthemum",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/kinetic.nova",
+    "profile": 0
+  },
+  {
+    "id": "weather/branchlight",
+    "name": "Branchlight",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/kinetic.sparks",
+    "profile": 0
+  },
+  {
+    "id": "weather/hearth-spray",
+    "name": "Hearth Spray",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/kinetic.embers",
+    "profile": 0
+  },
+  {
+    "id": "surface-field/opal-fronts",
+    "name": "Opal Fronts",
+    "contract": "SurfaceField",
+    "family": 1,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/kinetic.ripples",
+    "profile": 0
+  },
+  {
+    "id": "weather/wire-rain",
+    "name": "Wire Rain",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/kinetic.rain",
+    "profile": 0
+  },
+  {
+    "id": "weather/pearl-flurry",
+    "name": "Pearl Flurry",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/kinetic.snow",
+    "profile": 0
+  },
+  {
+    "id": "weather/fractured-sun",
+    "name": "Fractured Sun",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/atelier.nova",
+    "profile": 0
+  },
+  {
+    "id": "weather/livewire",
+    "name": "Livewire",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/atelier.sparks",
+    "profile": 0
+  },
+  {
+    "id": "weather/copper-cinders",
+    "name": "Copper Cinders",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/atelier.embers",
+    "profile": 0
+  },
+  {
+    "id": "surface-field/interference-tide",
+    "name": "Interference Tide",
+    "contract": "SurfaceField",
+    "family": 1,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/atelier.ripples",
+    "profile": 0
+  },
+  {
+    "id": "weather/slantfall",
+    "name": "Slantfall",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/atelier.rain",
+    "profile": 0
+  },
+  {
+    "id": "weather/crystalline-drift",
+    "name": "Crystalline Drift",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/atelier.snow",
+    "profile": 0
+  },
+  {
+    "id": "weather/ejecta-shell",
+    "name": "Ejecta Shell",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 5,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.nova",
+    "profile": 0
+  },
+  {
+    "id": "weather/starburst",
+    "name": "Starburst",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.firework",
+    "profile": 0
+  },
+  {
+    "id": "weather/forked-voltage",
+    "name": "Forked Voltage",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.sparks",
+    "profile": 0
+  },
+  {
+    "id": "weather/solar-cinders",
+    "name": "Solar Cinders",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.embers",
+    "profile": 0
+  },
+  {
+    "id": "weather/leaf-ribbon",
+    "name": "Leaf Ribbon",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.leaves",
+    "profile": 0
+  },
+  {
+    "id": "weather/storm-volume",
+    "name": "Storm Volume",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.rain",
+    "profile": 0
+  },
+  {
+    "id": "weather/snowfall-volume",
+    "name": "Snowfall Volume",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.snow",
+    "profile": 0
+  },
+  {
+    "id": "weather/pressure-shell",
+    "name": "Pressure Shell",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 5,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/world.ripples",
+    "profile": 0
+  },
+  {
+    "id": "weather/thermal-cinders",
+    "name": "Thermal Cinders",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/thermal.embers",
+    "profile": 0
+  },
+  {
+    "id": "weather/autumn-drift",
+    "name": "Autumn Drift",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "weather/thermal.leaves",
+    "profile": 0
+  },
+  {
+    "id": "text/direct-ink",
+    "name": "Direct Ink",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/immediate",
+    "profile": 0
+  },
+  {
+    "id": "text/ink-dissolve",
+    "name": "Ink Dissolve",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/fade",
+    "profile": 0
+  },
+  {
+    "id": "text/glyph-rain",
+    "name": "Glyph Rain",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/rain",
+    "profile": 0
+  },
+  {
+    "id": "text/cipher-resolve",
+    "name": "Cipher Resolve",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/scramble",
+    "profile": 0
+  },
+  {
+    "id": "text/station-board",
+    "name": "Station Board",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/flipboard",
+    "profile": 0
+  },
+  {
+    "id": "text/ribbon-left",
+    "name": "Ribbon Left",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 5,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/sweep-left",
+    "profile": 0
+  },
+  {
+    "id": "text/ribbon-right",
+    "name": "Ribbon Right",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/sweep-right",
+    "profile": 0
+  },
+  {
+    "id": "text/travelling-line",
+    "name": "Travelling Line",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 7,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/marquee",
+    "profile": 0
+  },
+  {
+    "id": "text/satellite-type",
+    "name": "Satellite Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 8,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/orbit",
+    "profile": 0
+  },
+  {
+    "id": "text/star-map-type",
+    "name": "Star Map Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 9,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/constellation",
+    "profile": 0
+  },
+  {
+    "id": "text/prism-stitch",
+    "name": "Prism Stitch",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 10,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/prism-stitch",
+    "profile": 0
+  },
+  {
+    "id": "text/gravity-loom",
+    "name": "Gravity Loom",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 11,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/gravity-loom",
+    "profile": 0
+  },
+  {
+    "id": "text/scanline-type",
+    "name": "Scanline Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 12,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/scanline",
+    "profile": 0
+  },
+  {
+    "id": "text/elastic-type",
+    "name": "Elastic Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 13,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/elastic",
+    "profile": 0
+  },
+  {
+    "id": "text/keystep",
+    "name": "Keystep",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 14,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/typewriter",
+    "profile": 0
+  },
+  {
+    "id": "text/curtain-type",
+    "name": "Curtain Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 15,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/curtain",
+    "profile": 0
+  },
+  {
+    "id": "text/glyph-fall",
+    "name": "Glyph Fall",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 16,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/fall",
+    "profile": 0
+  },
+  {
+    "id": "text/ash-type",
+    "name": "Ash Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 17,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/kinetic/ash",
+    "profile": 0
+  },
+  {
+    "id": "text/instant-ink",
+    "name": "Instant Ink",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/instant",
+    "profile": 1
+  },
+  {
+    "id": "text/velvet-dissolve",
+    "name": "Velvet Dissolve",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/fade",
+    "profile": 1
+  },
+  {
+    "id": "text/skyfall-type",
+    "name": "Skyfall Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/rain",
+    "profile": 1
+  },
+  {
+    "id": "text/static-resolve",
+    "name": "Static Resolve",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/scramble",
+    "profile": 1
+  },
+  {
+    "id": "text/departure-board",
+    "name": "Departure Board",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/flipboard",
+    "profile": 1
+  },
+  {
+    "id": "text/weft-left",
+    "name": "Weft Left",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 5,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/sweep-left",
+    "profile": 1
+  },
+  {
+    "id": "text/weft-right",
+    "name": "Weft Right",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/sweep-right",
+    "profile": 1
+  },
+  {
+    "id": "text/rising-ink",
+    "name": "Rising Ink",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 18,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/lift",
+    "profile": 1
+  },
+  {
+    "id": "text/falling-ink",
+    "name": "Falling Ink",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 16,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/fall",
+    "profile": 1
+  },
+  {
+    "id": "text/ticker-type",
+    "name": "Ticker Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 7,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/marquee",
+    "profile": 1
+  },
+  {
+    "id": "text/iris-type",
+    "name": "Iris Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 19,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/iris",
+    "profile": 1
+  },
+  {
+    "id": "text/constellation-type",
+    "name": "Constellation Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 9,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/constellation",
+    "profile": 1
+  },
+  {
+    "id": "text/prism-weave",
+    "name": "Prism Weave",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 20,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/prism-weave",
+    "profile": 1
+  },
+  {
+    "id": "text/ink-tide",
+    "name": "Ink Tide",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 21,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/ink-tide",
+    "profile": 1
+  },
+  {
+    "id": "text/comet-stitch",
+    "name": "Comet Stitch",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 22,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/comet-stitch",
+    "profile": 1
+  },
+  {
+    "id": "text/orbital-type",
+    "name": "Orbital Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 8,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/orbit",
+    "profile": 1
+  },
+  {
+    "id": "text/folded-type",
+    "name": "Folded Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 23,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/fold",
+    "profile": 1
+  },
+  {
+    "id": "text/zipper-type",
+    "name": "Zipper Type",
+    "contract": "TextTransition",
+    "family": 2,
+    "algorithm": 24,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "text/atelier/zipper",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/glass-dissolve",
+    "name": "Glass Dissolve",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/fade",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/elastic-pop",
+    "name": "Elastic Pop",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/bounce",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/lamp-genie",
+    "name": "Lamp Genie",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/genie",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/scroll-up",
+    "name": "Scroll Up",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/roll-up",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/scroll-down",
+    "name": "Scroll Down",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/roll-down",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/rail-left",
+    "name": "Rail Left",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 5,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/drawer-left",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/rail-right",
+    "name": "Rail Right",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/drawer-right",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/rail-top",
+    "name": "Rail Top",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 7,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/drawer-top",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/rail-bottom",
+    "name": "Rail Bottom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 8,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/drawer-bottom",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/center-aperture",
+    "name": "Center Aperture",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 9,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/center",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/northwest-aperture",
+    "name": "Northwest Aperture",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 10,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/top-left",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/northeast-aperture",
+    "name": "Northeast Aperture",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 11,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/top-right",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/southwest-aperture",
+    "name": "Southwest Aperture",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 12,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/bottom-left",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/southeast-aperture",
+    "name": "Southeast Aperture",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 13,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/bottom-right",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/circular-iris",
+    "name": "Circular Iris",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 14,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/iris",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/shard-burst",
+    "name": "Shard Burst",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 15,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/explosion",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/concertina",
+    "name": "Concertina",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 16,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/accordion",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/portal-fold",
+    "name": "Portal Fold",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 17,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/portal",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/orbital-bloom",
+    "name": "Orbital Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 18,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/orbital-bloom",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/venetian",
+    "name": "Venetian",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 19,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/venetian",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/ribbon-unfurl",
+    "name": "Ribbon Unfurl",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 20,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/kinetic/ribbon-unfurl",
+    "profile": 0
+  },
+  {
+    "id": "window-transition/silk-dissolve",
+    "name": "Silk Dissolve",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 0,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/fade",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/center-bloom",
+    "name": "Center Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 9,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/expand-center",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/northwest-bloom",
+    "name": "Northwest Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 10,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/expand-nw",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/northeast-bloom",
+    "name": "Northeast Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 11,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/expand-ne",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/southwest-bloom",
+    "name": "Southwest Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 12,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/expand-sw",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/southeast-bloom",
+    "name": "Southeast Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 13,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/expand-se",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/circle-bloom",
+    "name": "Circle Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 14,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/circle",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/reel-up",
+    "name": "Reel Up",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 3,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/roll-up",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/reel-down",
+    "name": "Reel Down",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 4,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/roll-down",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/pocket-left",
+    "name": "Pocket Left",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 5,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/drawer-left",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/pocket-right",
+    "name": "Pocket Right",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 6,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/drawer-right",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/pocket-top",
+    "name": "Pocket Top",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 7,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/drawer-top",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/pocket-bottom",
+    "name": "Pocket Bottom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 8,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/drawer-bottom",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/spring-pop",
+    "name": "Spring Pop",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/bounce",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/ribbon-genie",
+    "name": "Ribbon Genie",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/genie",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/fragment-scatter",
+    "name": "Fragment Scatter",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 15,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/explode",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/accordion-fold",
+    "name": "Accordion Fold",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 16,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/accordion",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/origami",
+    "name": "Origami",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 21,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/origami",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/vortex-fold",
+    "name": "Vortex Fold",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 22,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/vortex",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/ribbon-unspool",
+    "name": "Ribbon Unspool",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 23,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/ribbon-unspool",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/petal-bloom",
+    "name": "Petal Bloom",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 24,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/petal-bloom",
+    "profile": 1
+  },
+  {
+    "id": "window-transition/gravity-well",
+    "name": "Gravity Well",
+    "contract": "WindowTransition",
+    "family": 3,
+    "algorithm": 25,
+    "visualAcceptance": "pending",
+    "sourceIdentity": "window/atelier/gravity-well",
+    "profile": 1
+  },
+  {
+    "id": "weather/silver-squall",
+    "name": "Silver Squall",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 1,
+    "visualAcceptance": "pending",
+    "sourceIdentity": null,
+    "profile": 0
+  },
+  {
+    "id": "weather/snowglobe",
+    "name": "Snowglobe",
+    "contract": "ParticleEmitter",
+    "family": 0,
+    "algorithm": 2,
+    "visualAcceptance": "pending",
+    "sourceIdentity": null,
+    "profile": 0
+  }
+]

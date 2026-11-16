@@ -1,0 +1,182 @@
+[
+  {
+    "id": "pearl-observatory-bbs-config",
+    "canvas2d": {
+      "renderMs": 3.9373333334426084,
+      "paintMs": 8.815999999692043,
+      "totalMs": 12.753333333134652,
+      "fps": 78.41087297560733
+    },
+    "webgl": {
+      "renderMs": 3.7290000001092753,
+      "paintMs": 0.1706666665772597,
+      "totalMs": 3.8996666666865347,
+      "fps": 256.4321736887525
+    },
+    "paintSpeedup": 51.65625002525667,
+    "totalSpeedup": 3.270364988392942,
+    "name": "Observatory BBS Config (Text Dense)"
+  },
+  {
+    "id": "pearl-observatory-scope",
+    "canvas2d": {
+      "renderMs": 3.692666666954756,
+      "paintMs": 8.895999999667207,
+      "totalMs": 12.588666666621963,
+      "fps": 79.43653021264241
+    },
+    "webgl": {
+      "renderMs": 3.7353333335121475,
+      "paintMs": 0.16,
+      "totalMs": 3.895333333512147,
+      "fps": 256.7174396596172
+    },
+    "paintSpeedup": 55.599999997920044,
+    "totalSpeedup": 3.2317302753835575,
+    "name": "Observatory Scope (Dense Text)"
+  },
+  {
+    "id": "source-modal-drawer-right-application",
+    "canvas2d": {
+      "renderMs": 5.436333333104849,
+      "paintMs": 4.443666667068998,
+      "totalMs": 9.880000000173847,
+      "fps": 101.21457489700447
+    },
+    "webgl": {
+      "renderMs": 5.398666666646799,
+      "paintMs": 0.13033333351214726,
+      "totalMs": 5.529000000158946,
+      "fps": 180.86453245998416
+    },
+    "paintSpeedup": 34.09462911232023,
+    "totalSpeedup": 1.7869415807360862,
+    "name": "Modal Drawer Right (Layered Windows)"
+  },
+  {
+    "id": "pearl-observatory-tmux",
+    "canvas2d": {
+      "renderMs": 7.511000000337759,
+      "paintMs": 23.059999999925495,
+      "totalMs": 30.571000000263254,
+      "fps": 32.71073893531088
+    },
+    "webgl": {
+      "renderMs": 4.271999999806285,
+      "paintMs": 0.20366666706899803,
+      "totalMs": 4.475666666875283,
+      "fps": 223.43040141954017
+    },
+    "paintSpeedup": 113.2242223618912,
+    "totalSpeedup": 6.830490801855582,
+    "name": "Observatory tmux (Terminal Multiplexer)"
+  },
+  {
+    "id": "rc2-window-drawer-top-application",
+    "canvas2d": {
+      "renderMs": 4.68599999991556,
+      "paintMs": 9.198666667143504,
+      "totalMs": 13.884666667059063,
+      "fps": 72.02189465394
+    },
+    "webgl": {
+      "renderMs": 4.261000000014901,
+      "paintMs": 0.16733333331843217,
+      "totalMs": 4.428333333333334,
+      "fps": 225.8185923974407
+    },
+    "paintSpeedup": 54.97211156152979,
+    "totalSpeedup": 3.1354158826629424,
+    "name": "Window Drawer Top (Window Animation)"
+  },
+  {
+    "id": "original-copper-causeway",
+    "canvas2d": {
+      "renderMs": 1.955999999990066,
+      "paintMs": 11.140333333387971,
+      "totalMs": 13.096333333378038,
+      "fps": 76.35725012063834
+    },
+    "webgl": {
+      "renderMs": 1.9590000002334516,
+      "paintMs": 0.19233333349227905,
+      "totalMs": 2.1513333337257308,
+      "fps": 464.8280135501717
+    },
+    "paintSpeedup": 57.922010351030416,
+    "totalSpeedup": 6.087542608145012,
+    "name": "Copper Causeway (Scenic Diorama)"
+  },
+  {
+    "id": "pearl-observatory-pico",
+    "canvas2d": {
+      "renderMs": 6.747666667029262,
+      "paintMs": 18.020333333139618,
+      "totalMs": 24.76800000016888,
+      "fps": 40.37467700230869
+    },
+    "webgl": {
+      "renderMs": 4.159666666388512,
+      "paintMs": 0.19500000009934107,
+      "totalMs": 4.354666666487852,
+      "fps": 229.6387017853022
+    },
+    "paintSpeedup": 92.41196576389392,
+    "totalSpeedup": 5.687691365857146,
+    "name": "Observatory pico (Full-Screen Editor)"
+  },
+  {
+    "id": "rc2-window-orbital-bloom-application",
+    "canvas2d": {
+      "renderMs": 4.629666666612029,
+      "paintMs": 8.929333333397905,
+      "totalMs": 13.559000000009934,
+      "fps": 73.75175160404656
+    },
+    "webgl": {
+      "renderMs": 4.377666666482885,
+      "paintMs": 0.17666666686534882,
+      "totalMs": 4.554333333348234,
+      "fps": 219.57110444193697
+    },
+    "paintSpeedup": 50.54339616993868,
+    "totalSpeedup": 2.9771646051304046,
+    "name": "Window Orbital Bloom (Modal Geometry)"
+  },
+  {
+    "id": "pearl-fleet-original",
+    "canvas2d": {
+      "renderMs": 6.24866666679581,
+      "paintMs": 11.836666666517655,
+      "totalMs": 18.085333333313464,
+      "fps": 55.293423768860514
+    },
+    "webgl": {
+      "renderMs": 6.980666666875283,
+      "paintMs": 0.2649999999751647,
+      "totalMs": 7.245666666850448,
+      "fps": 138.0135253219813
+    },
+    "paintSpeedup": 44.66666667029043,
+    "totalSpeedup": 2.49602060995373,
+    "name": "Fleet Workspace (Multi-Agent Windows)"
+  },
+  {
+    "id": "autumn",
+    "canvas2d": {
+      "renderMs": 7.0746666666617,
+      "paintMs": 8.337666666631897,
+      "totalMs": 15.412333333293597,
+      "fps": 64.88310227756418
+    },
+    "webgl": {
+      "renderMs": 7.064000000307957,
+      "paintMs": 0.1733333332836628,
+      "totalMs": 7.237333333591621,
+      "fps": 138.17243919919562
+    },
+    "paintSpeedup": 48.10192309050661,
+    "totalSpeedup": 2.1295596904122456,
+    "name": "Autumn Drift (Subcell Braille Weather)"
+  }
+]

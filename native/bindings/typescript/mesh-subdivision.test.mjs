@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {NativeScene} from './native_scene.mjs';
+const wasm=readFileSync(new URL('../../dist/nocturne_native.wasm',import.meta.url)),s=await NativeScene.create(wasm),r=await NativeScene.create(wasm);
+const parent={a:[0,0,0],b:[8,0,0],c:[0,0,8],surfaceId:1,color:0x5599cc,alpha:.7};
+function setup(x){x.command({op:'reset'});x.command({op:'floor',enabled:false});x.command({op:'surface',id:1,reentrainWindSpeed:0,evaporation:0,cooling:0,thermalEvaporation:0});}
+function reference(n){const p=(i,j)=>[8*i/n,0,8*j/n],faces=[];for(let i=0;i<n;i++)for(let j=0;j<n-i;j++){faces.push([...p(i,j),...p(i+1,j),...p(i,j+1)]);if(i+j<n-1)faces.push([...p(i+1,j),...p(i+1,j+1),...p(i,j+1)]);}return faces;}
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-10,`${a} != ${b}`);
+function crc32(bytes){let crc=0xffffffff;for(const byte of bytes){crc^=byte;for(let i=0;i<8;i++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}return (crc^0xffffffff)>>>0;}
+// Explicitly test-constructed fixed schema45, not a genuine archived writer fixture.
+// Exact fieldControls prefix is asserted by state.c and the real C layout helper test.
+function constructedSchema45(snapshot){const bytes=13478952;assert.ok(snapshot.length>=24+bytes);const old=snapshot.slice(0,24+bytes),view=new DataView(old.buffer,old.byteOffset,old.byteLength);view.setUint32(12,0x20261045,true);view.setUint32(28,0x20261045,true);view.setUint32(16,bytes,true);view.setUint32(20,crc32(old.subarray(24)),true);return old;}
+try{
+ for(const n of [1,2,3,4,16]){setup(s);s.command({op:'mesh',triangles:[parent],subdivisions:n});const rows=s.surfaceTriangles(1),faces=reference(n);assert.equal(rows.length,n*n);let area=0;for(let i=0;i<rows.length;i++){const row=rows[i];assert.equal(row[0],i);row.slice(1,10).forEach((v,k)=>near(v,faces[i][k]));assert.deepEqual(row.slice(10),[parent.color,parent.alpha]);const cross=(row[6]-row[3])*(row[7]-row[1])-(row[4]-row[1])*(row[9]-row[3]);assert.ok(cross<0);near(-cross/2,32/(n*n));area-=cross/2;}near(area,32);const before=s.snapshot();s.render();assert.deepEqual(s.snapshot(),before);}
+ for(const x of [s,r])setup(x);s.command({op:'mesh',triangles:[parent]});r.command({op:'mesh',triangles:[parent],subdivisions:1});assert.deepEqual(s.snapshot(),r.snapshot());assert.deepEqual(s.render().bytes,r.render().bytes);
+ setup(s);s.command({op:'mesh',triangles:[parent],subdivisions:1});const before=s.snapshot();for(const command of [0,1.5,17,'two'].map(subdivisions=>({op:'mesh',triangles:[parent],subdivisions})).concat([{op:'mesh',triangles:[parent,parent],subdivisions:16},{op:'mesh',sampling:'braille',subdivisions:2},{op:'mesh',triangles:[{a:[0,0,0],b:[.001,0,0],c:[0,0,.001]}],subdivisions:16}])){assert.throws(()=>s.command(command));assert.deepEqual(s.snapshot(),before);}
+ s.command({op:'surface-water',surfaceId:1,capacity:1});s.command({op:'surface-water-add',triangleIndex:0,volume:.5});s.command({op:'surface-thermal',triangleIndex:0,temperature:300,capacity:100});const water=s.waterSample(0);s.command({op:'mesh',triangles:[parent],subdivisions:2,append:true});assert.deepEqual(s.waterSample(0),water);assert.equal(s.thermalSample(0)[1],30000);for(let i=1;i<5;i++){assert.equal(s.waterSample(i)[2],0);assert.equal(s.thermalSample(i),null);}s.command({op:'mesh',triangles:[parent],subdivisions:4});near(s.info().surfaceWater[0].exportedVolume,.5);assert.equal(s.info().surfaceThermal.exportedEnergy,30000);
+ setup(s);s.command({op:'schedule',id:1,atUs:500000,command:{op:'batch',commands:[{op:'mesh',triangles:[parent],subdivisions:3}]}});const start=s.snapshot();s.advanceTo(1000000);const done=s.snapshot();assert.equal(s.surfaceTriangles(1).length,9);s.restore(start);for(const t of [100000,499999,500000,750000,1000000])s.advanceTo(t);assert.deepEqual(s.snapshot(),done);const old=constructedSchema45(start);assert.throws(()=>s.restore(old));assert.deepEqual(s.snapshot(),done);
+ // Positive control: completed legacy-compatible state must load under the same old layout.
+ const compatible=constructedSchema45(done),doneFrame=s.render().bytes.slice();s.restore(compatible);assert.deepEqual(s.snapshot().slice(32,13478976),done.slice(32,13478976));assert.deepEqual(s.render().bytes,doneFrame);
+ console.log('PASS actual WASM refined physical geometry, independent lattice/area, default equivalence, ownership/exports, rejection and scheduled replay');
+}finally{s.close();r.close();}

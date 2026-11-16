@@ -1,0 +1,265 @@
+{
+  "schema": "nocturne.ratatui.bounded-assessment.v1",
+  "date": "2026-09-30",
+  "inputCommit": "1bb2e79a3b5242d0278c4dc3c0f4a38d0b1911fd",
+  "inputArchiveSha256": "81e1417733a9aa4e3a4c848042a7858792e2167d19dd751bc35401d341a53e5c",
+  "status": "BLOCKED",
+  "ratatuiQualified": false,
+  "fullRC4Qualified": false,
+  "compiler": {
+    "status": "PASS",
+    "rustc": "1.98.1",
+    "host": "x86_64-unknown-linux-gnu",
+    "programAndTestExecuted": true,
+    "inventoryMembersVerified": 166,
+    "fullOuterArchiveVerified": false,
+    "priorFleetCompilerNotRerun": "The input merge TDD records fleet Rust 1.88; this turn executed recovered 1.98.1."
+  },
+  "framework": {
+    "status": "BLOCKED",
+    "executed": false,
+    "dependencyResolutionExitCode": 101,
+    "reason": "No matching package named ratatui in the offline crates.io cache.",
+    "pins": {
+      "ratatui": "=0.29.0",
+      "unicode-width": "=0.2.0"
+    },
+    "manifestUnchanged": true,
+    "lockInitiallyPresent": false,
+    "lockCreated": false,
+    "adapterChanged": false,
+    "newAdapterTestsCompiled": false,
+    "newExampleCompiled": false,
+    "ptyCasesExecuted": 0
+  },
+  "observedPasses": {
+    "nativeRustTests": 12,
+    "nativeRustDoctests": 1,
+    "nativeRustDocumentation": true,
+    "nativeRustSnapshotExample": true,
+    "rustHelperTests": 7,
+    "pythonHarnessTests": 16,
+    "focusedNativePythonTests": 99,
+    "typescriptStatic": "PASS with TypeScript 5.8.3",
+    "wasmSnapshotRuntime": "PASS",
+    "browserChecks": {
+      "merged": 192,
+      "selectors": 22
+    }
+  },
+  "commands": [
+    {
+      "id": "rust-native-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "native/bindings/rust/Cargo.toml",
+        "--all-targets"
+      ],
+      "cwd": "/mnt/data/ratatui-work/source",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 5.789,
+      "log": "rust-native-tests.log",
+      "logSha256": "10d87ceb0e2906d45a5a084110669ac9322e43d261db57da31604414f2a5ac40"
+    },
+    {
+      "id": "rust-native-doctests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "native/bindings/rust/Cargo.toml",
+        "--doc"
+      ],
+      "cwd": "/mnt/data/ratatui-work/source",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.164,
+      "log": "rust-native-doctests.log",
+      "logSha256": "5a9032d8ac7579cccff4e5c88b098a09916117ab98fea4d7a5ee4b60273d1d7c"
+    },
+    {
+      "id": "rust-native-docs",
+      "argv": [
+        "cargo",
+        "doc",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "native/bindings/rust/Cargo.toml",
+        "--no-deps"
+      ],
+      "cwd": "/mnt/data/ratatui-work/source",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.315,
+      "log": "rust-native-docs.log",
+      "logSha256": "f1799a75d62af066cbe37496ae60a3110521aa167072a952087c4f80d9a872fb"
+    },
+    {
+      "id": "rust-native-example",
+      "argv": [
+        "cargo",
+        "run",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "native/bindings/rust/Cargo.toml",
+        "--example",
+        "snapshot"
+      ],
+      "cwd": "/mnt/data/ratatui-work/source",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.165,
+      "log": "rust-native-example.log",
+      "logSha256": "16ec65a0560be92250d397e63745fc9581b7c343d7aa1559f317af8a9a2672e6"
+    },
+    {
+      "id": "helper-final-run",
+      "argv": [
+        "/mnt/data/ratatui-work/target/qualification-support-tests"
+      ],
+      "cwd": "/mnt/data/ratatui-work/source",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.004,
+      "log": "helper-final-run.log",
+      "logSha256": "3d6fcb9885ac555b3041a138a9dab6426af4f913633f3052c937fb149970d87f"
+    },
+    {
+      "id": "harness-preconditions-green",
+      "argv": [
+        "python3",
+        "native/hosts/ratatui/test_qualification.py"
+      ],
+      "cwd": "/mnt/data/ratatui-work/source",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 3.545,
+      "log": "harness-preconditions-green.log",
+      "logSha256": "9f45669c4e682f4e7fd0b8d4d80bcd55af8c7296e46deaf2eaf67f4cc493ad62"
+    },
+    {
+      "id": "preserved-merge-python",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "-v",
+        "test_state_selectors",
+        "test_snapshot_layout_merge",
+        "test_weather_authoring",
+        "test_compound_conditions"
+      ],
+      "cwd": "/mnt/data/ratatui-work/regression/native/tests",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 3.023,
+      "log": "preserved-merge-python.log",
+      "logSha256": "59218de7466761e39ee98cc66c0a4e9bbb5a57b9df8187915d2ce0fba1464767"
+    },
+    {
+      "id": "typescript-static",
+      "argv": [
+        "tsc",
+        "--noEmit",
+        "--strict",
+        "--target",
+        "es2022",
+        "--module",
+        "nodenext",
+        "--moduleResolution",
+        "nodenext",
+        "native/examples/typed.ts",
+        "native/examples/selectors.ts"
+      ],
+      "cwd": "/mnt/data/ratatui-work/regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 1.018,
+      "log": "typescript-static.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "wasm-snapshot-runtime",
+      "argv": [
+        "node",
+        "native/bindings/typescript/snapshot-layout.test.mjs"
+      ],
+      "cwd": "/mnt/data/ratatui-work/regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.265,
+      "log": "wasm-snapshot-runtime.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "browser-merged-runtime",
+      "argv": [
+        "python3",
+        "native/scripts/check_browser.py"
+      ],
+      "cwd": "/mnt/data/ratatui-work/regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 25.56,
+      "log": "browser-merged-runtime.log",
+      "logSha256": "5b2e5b071a9ccc04df4f2dadc54a4d162fad7c58b73adf3f8b30969e146e2fd5"
+    },
+    {
+      "id": "browser-selectors-runtime-rerun",
+      "argv": [
+        "python3",
+        "native/scripts/check_selectors_browser.py"
+      ],
+      "cwd": "/mnt/data/ratatui-work/regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 4.693,
+      "log": "browser-selectors-runtime-rerun.log",
+      "logSha256": "59467852f1aba9daf99f6bcd5c110329dac963a3cc6b63fa4027e7ab351dd808"
+    }
+  ],
+  "dependencyCommand": {
+    "id": "initial-lock",
+    "argv": [
+      "cargo",
+      "generate-lockfile",
+      "--offline",
+      "--manifest-path",
+      "/mnt/data/ratatui-work/source/native/hosts/ratatui/Cargo.toml"
+    ],
+    "cwd": "/mnt/data/ratatui-work/source",
+    "status": "BLOCKED",
+    "exitCode": 101,
+    "seconds": 0.015853,
+    "log": "initial-lock.log",
+    "logSha256": "3b7328413d9b73d049de1ab5d588679b5c027aff5e8ac5e8784747e438927078"
+  },
+  "evidenceArchive": "Nocturne-Ratatui-Qualification-Evidence.tar.gz",
+  "evidenceLayout": "commands/ contains complete command JSON/logs; gate-final-2/ contains actual final gate receipt; setup/ contains recovery/environment evidence, not compiler binaries.",
+  "interruptedAttempt": {
+    "id": "browser-selectors-runtime",
+    "status": "ABANDONED",
+    "reason": "Outer execution was interrupted before its owner wrote an exit receipt; printed checks are not counted. A separate completed rerun is authoritative."
+  },
+  "preservedBoundaries": [
+    "C11 core and ABI 1 unchanged",
+    "Snapshot schema 0x20261005 unchanged",
+    "Existing Rust/Python/Go direct FFI and import-free TypeScript WASM unchanged",
+    "Local Contracts 6 intent-value/weather additions and Contracts 7 merge retained",
+    "Existing Bubble Tea result preserved, not rerun",
+    "Terminal Kit remains unqualified",
+    "Platform/Unicode/editor/accessibility and render fidelity remain open",
+    "User-designated TUI/GUI/cloud shared-SDK work remains open",
+    "Root controls browser submission and supplies the original verbatim Rust execution prompt"
+  ],
+  "adversarialHarnessCorrection": "A non-Ratatui child exiting before raw mode now fails partial-startup qualification. RED/GREEN logs retained; not a framework PASS."
+}

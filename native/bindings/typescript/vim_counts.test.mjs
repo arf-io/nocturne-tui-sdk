@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {NativeScene} from './native_scene.mjs';
+const s=await NativeScene.create(readFileSync(new URL('../../dist/nocturne_native.wasm',import.meta.url)));
+s.command({op:'prompt',mode:'vim-inline'});s.command({op:'draft',text:'abcdef',caret:0,emitWeather:false});s.command({op:'key',key:'Escape'});
+s.command({op:'key',key:'3'});const pending=s.snapshot();s.command({op:'key',key:'x'});assert.equal(s.info().prompt.text,'def');s.command({op:'key',key:'u'});assert.equal(s.info().prompt.text,'abcdef');
+s.restore(pending);s.command({op:'key',key:'x'});assert.equal(s.info().prompt.text,'def');
+s.command({op:'draft',text:'one two three',caret:0,emitWeather:false});s.command({op:'key',key:'Escape'});
+s.command({op:'key',key:'d'});const operator=s.snapshot();s.command({op:'key',key:'w'});assert.equal(s.info().prompt.text,'two three');const deleted=s.snapshot();s.restore(operator);s.command({op:'key',key:'w'});assert.deepEqual(s.snapshot(),deleted);
+assert.deepEqual(s.info().vimRegister,{text:'one ',linewise:false});s.command({op:'key',key:'P'});assert.equal(s.info().prompt.text,'one two three');
+s.command({op:'key',key:'y'});s.command({op:'key',key:'w'});assert.equal(s.info().prompt.text,'one two three');const heldRegister=s.snapshot();s.render();assert.deepEqual(s.snapshot(),heldRegister);
+s.command({op:'draft',text:'aa\nbb\ncc',caret:0,emitWeather:false});s.command({op:'key',key:'Escape'});s.command({op:'key',key:'d'});s.command({op:'key',key:'j'});assert.equal(s.info().prompt.text,'cc');
+s.command({op:'draft',text:'saved',caret:0,emitWeather:false});s.command({op:'key',key:'Escape'});for(const key of ['"','a','y','w'])s.command({op:'key',key});assert.equal(s.info().namedRegisters.a.text,'saved');
+s.command({op:'draft',text:'Z',caret:0,emitWeather:false});s.command({op:'key',key:'Escape'});for(const key of ['"','a','P'])s.command({op:'key',key});assert.equal(s.info().prompt.text,'savedZ');
+s.command({op:'draft',text:'abcdef',caret:0,emitWeather:false});s.command({op:'key',key:'Escape'});for(const key of ['x','x','x','2','u'])s.command({op:'key',key});assert.equal(s.info().prompt.text,'bcdef');
+s.command({op:'key',key:'u'});assert.equal(s.info().prompt.text,'abcdef');s.command({op:'key',key:'r',ctrl:true});assert.equal(s.info().prompt.text,'bcdef');
+s.command({op:'draft',text:'abcdef',caret:0,emitWeather:false});for(const key of ['Escape','2','x','1','.'])s.command({op:'key',key});assert.equal(s.info().prompt.text,'def');const repeat=s.snapshot();s.command({op:'key',key:'.'});const repeated=s.snapshot();assert.equal(s.info().prompt.text,'ef');s.restore(repeat);s.command({op:'key',key:'.'});assert.deepEqual(s.snapshot(),repeated);
+s.close();console.log('PASS native WASM counted Vim commands');

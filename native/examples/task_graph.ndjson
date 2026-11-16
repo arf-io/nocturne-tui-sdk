@@ -1,0 +1,23 @@
+{"op":"resize","width":160,"height":48}
+{"op":"camera","position":[0,8,162],"yaw":0,"pitch":0,"fov":64,"profile":"original"}
+{"op":"environment","stars":0}
+{"op":"node","id":1,"kind":"Project","label":"Project: Standalone SDK delivery","status":"ready","sha":"3991229a0b98e76fb9b4bc652166699e525c800cb75a8326fc1901f85c3b841d","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":2,"kind":"Session","label":"Session: integration evidence","status":"ready","sha":"e9c3c355755856d9eee596a670840f942220f80005d24c513b5e4d1184da2721","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":3,"kind":"Turn","label":"Turn: qualify current source","status":"ready","sha":"13bdad43effd2a9243011f3e824a8416f873f53bc4d0525919bf7176bba0f300","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":4,"kind":"Request","label":"Request: compile and execute","status":"waiting","sha":"8940afe43a185c462f4acfa218ca9b832b2543255b19aa65a412e4afc5db87ee","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":5,"kind":"Request","label":"Request: inspect evidence","status":"ready","sha":"2427beaf43284ab2d8d0a05e49d161c0887341624923ba14a7b9b9dc0dd446ab","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":6,"kind":"Action","label":"Action: run contract tests","status":"ready","sha":"ae3d82ccb34a7abac109e8b1e24d63d704128bcdfc71efd4d3a70331254e1ccc","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":7,"kind":"Action","label":"Action: verify shared artifact","status":"ready","sha":"16ff0676140926e384e1c45fb58dca14e6583a2f28c3397a3a682899d7b3af45","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"node","id":8,"kind":"Action","label":"Action: review preserved source","status":"ready","sha":"cd3a0c7b33e01ac6f403e12dcc58c3c173e596e05bd0129ae72d823902dc45d4","detail":"Synthetic SDK consumer record. No provider action or external project dependency.","shaPrefix":10,"maxColumns":38,"padding":0,"showKind":false,"showDetail":false}
+{"op":"edge","from":1,"to":2,"kind":"contains"}
+{"op":"edge","from":2,"to":3,"kind":"contains"}
+{"op":"edge","from":3,"to":4,"kind":"contains"}
+{"op":"edge","from":3,"to":5,"kind":"contains"}
+{"op":"edge","from":4,"to":6,"kind":"contains"}
+{"op":"edge","from":4,"to":7,"kind":"contains"}
+{"op":"edge","from":5,"to":7,"kind":"contains"}
+{"op":"edge","from":5,"to":8,"kind":"contains"}
+{"op":"layout","profile":"source","dimensions":3,"mode":"layered"}
+{"op":"camera-action","action":"view","name":"iso"}
+{"op":"camera-action","action":"fit"}
+{"op":"status","text":"TASK / WORK GRAPH | Drag look, wheel dolly, 2D/3D controls, click any visible card. Full metadata stays retained.","durationMs":0,"mode":"horizontal"}

@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "aabf4d23",
+  "method": "PublicNativeScene snapshot and render after original default window application commands; not reconstructed",
+  "schema": "0x20261069",
+  "payloadBytes": 15408936,
+  "snapshotSha256": "60e9d65aba10c1bd02207e74f1aba7c8fed57e140d187206fbb152083300d81e",
+  "frameSha256": "06a0e1d66a9a4a9db7338156834ea0309fad8330b18d9d81c0de43ab74e20c8d"
+}

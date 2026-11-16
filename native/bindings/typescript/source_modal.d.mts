@@ -1,0 +1,10 @@
+import type {NativeScene} from './native_scene.mjs';
+import type {SourceModalEntry,SourceModalInfo,SourceModalKind,SourceStageComponentOptions} from './contracts.js';
+export const SOURCE_MODAL_KINDS:readonly SourceModalKind[];
+export interface ModalAction {kind:string;value:string|number;extra?:string;}
+export interface ModalView {nodes:(Omit<SourceStageComponentOptions,'id'> & {id?:number})[];semantics:{id:number;label:string}[];actions:Record<number,ModalAction>;}
+export interface ModalGraph {node(id:string|number|undefined):{id:string|number;label?:string;metadata?:Record<string,unknown>};neighborhood(id:string|number):{parents:(string|number)[];children:(string|number)[];siblings:(string|number)[]};}
+export interface ModalSource {motion?:boolean;modalOpacity?:number;textLightness?:number;textChroma?:number;palette?:{ink:string|number};}
+export interface ModalControllerOptions {timeMs?:()=>number;workspace?:()=>string;source?:ModalSource|(()=>ModalSource);graph?:()=>ModalGraph;windows?:()=>{id:string|number;title:string;state:string}[];commands?:()=>{id:string;chord:string;label?:string}[];windowMode?:()=>string;modalNode?:()=>string|number;onAction?:(action:ModalAction)=>void;}
+export function composeSourceModal(options:{state:SourceModalInfo;width:number;height:number;timeMs:number;motion?:boolean;modalOpacity?:number;palette?:{ink:string|number};ink:(hue:number)=>number;graph?:ModalGraph;windows?:{id:string|number;title:string;state:string}[];commands?:{id:string;chord:string;label?:string}[];windowMode?:string;modalNode?:string|number}):ModalView;
+export class SourceModalController {constructor(scene:NativeScene,options?:ModalControllerOptions);state():SourceModalInfo;current():SourceModalInfo;view:ModalView;push(kind?:SourceModalKind,context?:string,extra?:Partial<SourceModalEntry>):ModalView;edit(patch:{context?:string;query?:string;workspace?:string;selected?:number}):ModalView;dismiss():ModalView;clear():ModalView;compose():ModalView;hit(x:number,y:number):({id:number;item:number;action:ModalAction})|null;activate(x:number,y:number):boolean;key(key:string):boolean;}

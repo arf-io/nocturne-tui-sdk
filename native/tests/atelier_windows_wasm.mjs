@@ -1,0 +1,3 @@
+import fs from 'node:fs';import {NativeScene} from '../bindings/typescript/native_scene.mjs';
+const wasm=fs.readFileSync(process.argv[2]),cases=JSON.parse(fs.readFileSync(process.argv[3],'utf8')),out=[];
+for(const c of cases){const scene=await NativeScene.create(wasm,2030);try{for(const command of c.commands)scene.command(command);for(const a of c.actions){if(a.at>c.timeUs)continue;scene.advanceTo(a.at);scene.command({op:'window-action',id:1,action:a.action})}scene.advanceTo(c.timeUs);const f=scene.render();out.push(Array.from(new Uint32Array(f.bytes.buffer,f.bytes.byteOffset,f.bytes.byteLength/4)))}finally{scene.close()}}process.stdout.write(JSON.stringify(out));

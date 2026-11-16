@@ -1,0 +1,12 @@
+[package]
+name = "nocturne-native"
+version = "1.0.0"
+edition = "2021"
+build = "build.rs"
+publish = false
+license = "MIT"
+
+[lib]
+path = "src/lib.rs"
+
+# Intentionally zero crate dependencies. This compiles the current C core locally.

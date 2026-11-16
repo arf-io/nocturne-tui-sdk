@@ -1,0 +1,11 @@
+{
+  "schema": "nocturne.original-frame-companion.v1",
+  "writer": "<workspace>/rc2-20261016/rc1-runtime.dylib",
+  "writerSha256": "df98dc64381fc1d95b76787402007ced28ba0b61e1b24348bb29540e5d7fd9f1",
+  "existingManifestSha256": "c65545d858625884a8e66d1cb7fed506db2f996a181dd0d58f994f305ff4d913",
+  "frames": 6,
+  "frameBytes": 61440,
+  "decodedSha256": "8533625168d76b2a015112a15af8c3977996a197df71459646d5d4040683df11",
+  "compressedSha256": "e2bb3eea58076358dbe02bc1bf7ee8d1ae6c55c135c93ef8046241b6354fc20c",
+  "method": "Actual retained RC1 writer; each generated frame matches the pre-existing immutable historical frame SHA exactly."
+}

@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+node_modules/
+bindings/rust/target/
+.DS_Store
+dist/libnocturne.so
+dist/libnocturne.dylib
+dist/nocturne.dll
+dist/tty-debug.bin
+SOURCE-CONTENTS.md
+SHA256SUMS.txt
+
+# Rebuilt local sanitizer binary and transient test process IDs.
+dist/restoration/world-safety
+dist/restoration/*.pid
+
+# Rebuilt current native sanitizer and transient acceptance exit stamps.
+dist/continuity-evidence/native-safety
+dist/continuity-evidence/*.exit
+
+.venv/
+.nocturne-tools/
+preview.cells
+
+# RC3 consolidation: generated qualification/output, never runtime source.
+apps/*/target/
+apps/*/dist/
+.nocturne-tools/
+git/*.bundle
+Nocturne-RC3.html
+RELEASE.json
+BUILD-IDENTITY.json
+PACKAGE-MANIFEST.json
+SOURCE-CONTENTS.md
+qualify-results/
+
+# Deterministic release exports; never interpreted as uncommitted runtime source.
+/MANIFEST.json
+/NATIVE-SOURCE-CONTENTS.md
+/Nocturne-RC4.html
+/evidence/publication/
+
+# Optional generated font view media; receipts retain exact hashes.
+/native/evidence/font-document-view-20261011/gallery.html
+/native/evidence/font-document-view-20261011/browser.png

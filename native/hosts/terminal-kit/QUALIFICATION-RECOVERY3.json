@@ -1,0 +1,145 @@
+{
+  "schema": "nocturne.host-qualification.recovery3.v1",
+  "status": "PASS",
+  "qualified": true,
+  "scope": "Node 22.16.0, Terminal Kit 3.1.4, wcwidth 1.0.1; C/WASM",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "baselineSourceSha256": "e7321dcb469834fefb255ae74ee7dcfa74b4d1f1b88196c83e066f828a56b9a0",
+  "codeAndLockSha256": {
+    "native/hosts/terminal-kit/host.test.mjs": "0c8ef8f4bfb9f5a0af9c9c53350391625cae43ef54946ef7347ea3b9fa21a1ab",
+    "native/hosts/terminal-kit/qualification.mjs": "3c8f684f7a1159d5f03daa1ddbb2792565d41bafad9e531a5f4e46c1cfe86e9e",
+    "native/hosts/terminal-kit/package.json": "46a8299a381e92b2097c5bd5c533ea4d7ca0106f935c4bee9468285f84ac3e6f",
+    "native/hosts/terminal-kit/host.mjs": "1d4e7273b5cf667d01b58876dd46fa31b559f8528c4356328b90833ba41d28bf",
+    "native/hosts/terminal-kit/package-lock.json": "c39e4d0907f26cb49f0b35c72364721ae84977ccacd674cd8b0aab967ab88ba8"
+  },
+  "testedAt": "2026-10-01T05:21:34.746291+00:00",
+  "testCases": 6,
+  "frameworkPtyCases": 11,
+  "cases": [
+    {
+      "id": "terminal-kit-cli-ctrlq",
+      "status": "PASS",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "3f351cedc4495abdf8d2e2f009e7b431671e37e84bc8946fe67f32c4f9fa6689"
+    },
+    {
+      "id": "terminal-kit-cli-ctrlc",
+      "status": "PASS",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "3f351cedc4495abdf8d2e2f009e7b431671e37e84bc8946fe67f32c4f9fa6689"
+    },
+    {
+      "id": "terminal-kit-normal",
+      "status": "PASS",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "82a910fbc6b2212f939ee4c940eb541fd9c6a7c15fe7e7c041570e5479d15fd8"
+    },
+    {
+      "id": "terminal-kit-input",
+      "status": "PASS",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "6b0a6fdc6d32853920766641db846b56bbdcae82a04ea4f5f4e09d188e659c19"
+    },
+    {
+      "id": "terminal-kit-pointer",
+      "status": "PASS",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "b553570d4e56cd1752a5f31581ffed97bd86156ca4c1a1af12f36db633470f56"
+    },
+    {
+      "id": "terminal-kit-ctrlc",
+      "status": "PASS",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "e8d258c7faa9b92289180670c9d0de9dd7c3242a75d12dcead8ccfaa950b92be"
+    },
+    {
+      "id": "terminal-kit-paste-reject",
+      "status": "PASS",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "8b407c56a2a1e5905d1480b939efc7a61438241176e54367038d1d1bd051ca3f"
+    },
+    {
+      "id": "terminal-kit-error",
+      "status": "PASS",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "1b06eb047d3e1f805836307377c1b2304aab1a560ecda05a31da8bba0a316adf"
+    },
+    {
+      "id": "terminal-kit-exception",
+      "status": "PASS",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "1293b549c9067fc91b41744a795aa21b1426031cf1d13bc057cb9dc953510c65"
+    },
+    {
+      "id": "terminal-kit-rejection",
+      "status": "PASS",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "7d5c0b03f7c7fe728e93d3faade8161b735f0b7d8478f089da98523da290e00b"
+    },
+    {
+      "id": "terminal-kit-setup",
+      "status": "PASS",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "rawModeObserved": true,
+      "terminalAttributesRestoredByChild": true,
+      "parentForcedCleanup": false,
+      "transcriptSha256": "728d538fee6e652f9c97a6b3f41f74cfdbcfcd733b377988f99d4ac255095351"
+    }
+  ],
+  "evidence": {
+    "archive": "Nocturne-SDK-Recovery3-Evidence.zip",
+    "qualification": "current/host-gate-first/QUALIFICATION.json",
+    "pty": "current/host-gate-first/terminal-kit-pty/QUALIFICATION.json",
+    "ptySha256": "f07cdd80e265f619c888d69204bb910484b90472274862dd52a30d27709fa0e9"
+  },
+  "fullRC4Qualified": false,
+  "stableRelease": false,
+  "notQualified": [
+    "Rust 1.88/MSRV",
+    "macOS/Windows or physical terminal implementations",
+    "Full Unicode/IME/bidi/editor/accessibility",
+    "Forced kill, panic-abort, arbitrary worker-thread failures and all asynchronous signals",
+    "Whole historical rendering and complete 1.0 scope"
+  ]
+}

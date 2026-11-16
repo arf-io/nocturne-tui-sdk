@@ -1,0 +1,762 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nocturne Studio export envelope",
+  "description": "Structural validation for gallery exports; native aggregate bounds/relationships remain authoritative. Does not describe palette/scene catalogue input shorthand.",
+  "type": "object",
+  "required": [
+    "config",
+    "nodes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 2
+    },
+    "sceneId": {
+      "type": "string"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "values",
+        "palette",
+        "starPalette",
+        "glyphs",
+        "novaGlyphs"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "values": {
+          "type": "object",
+          "required": [
+            "width",
+            "height",
+            "pattern",
+            "focusMode",
+            "focusX",
+            "focusY",
+            "periodMs",
+            "saturation",
+            "brightness",
+            "speedFalloff",
+            "saturationFalloff",
+            "brightnessFalloff",
+            "cellAspect",
+            "scale",
+            "angle",
+            "pivotX",
+            "pivotY",
+            "rotationPeriodMs",
+            "rotationMode",
+            "swing",
+            "phase",
+            "pixelMode",
+            "seed",
+            "baseColor",
+            "inkColor",
+            "paletteCount",
+            "gradientWrap",
+            "interpolation",
+            "colorMode",
+            "hueOffset",
+            "stars",
+            "starDensity",
+            "starMinMs",
+            "starRangeMs",
+            "starDuty",
+            "starPeak",
+            "starGlyphCount",
+            "starColorCount",
+            "novaChance",
+            "novaCycleMs",
+            "novaDurationMs",
+            "novaGlyphCount",
+            "rippleSpeed",
+            "rippleWidth",
+            "rippleLifeMs",
+            "rippleOpacity",
+            "rippleRings",
+            "motion",
+            "quantize",
+            "originX",
+            "originY",
+            "waveAmplitude",
+            "starAttack",
+            "reverse"
+          ],
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 512,
+              "description": "Width in terminal cells.",
+              "default": 100
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 256,
+              "description": "Height in terminal cells.",
+              "default": 32
+            },
+            "pattern": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 11,
+              "description": "0 solid; 1 linear; 2 diagonal; 3 wave; 4 rotating linear; 5 plasma; 6 concentric; 7 moire; 8 aurora; 9 interference; 10 chevrons; 11 diamond.",
+              "default": 5
+            },
+            "focusMode": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4,
+              "description": "0 none; 1 row; 2 column; 3 radial; 4 diagonal band.",
+              "default": 0
+            },
+            "focusX": {
+              "type": "integer",
+              "minimum": -1048576,
+              "maximum": 1048576,
+              "description": "Focus x in Q8 cells (256 = one column).",
+              "default": 12800
+            },
+            "focusY": {
+              "type": "integer",
+              "minimum": -1048576,
+              "maximum": 1048576,
+              "description": "Focus y in Q8 cells.",
+              "default": 4096
+            },
+            "periodMs": {
+              "type": "integer",
+              "minimum": 50,
+              "maximum": 3600000,
+              "description": "Color field cycle in milliseconds.",
+              "default": 5000
+            },
+            "saturation": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2000,
+              "description": "Color saturation in thousandths.",
+              "default": 700
+            },
+            "brightness": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Field brightness blended from base, in thousandths.",
+              "default": 260
+            },
+            "speedFalloff": {
+              "type": "integer",
+              "minimum": 10,
+              "maximum": 1000,
+              "description": "Speed multiplier for each cell away from focus.",
+              "default": 500
+            },
+            "saturationFalloff": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Saturation multiplier per cell away from focus.",
+              "default": 760
+            },
+            "brightnessFalloff": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Brightness multiplier per cell away from focus.",
+              "default": 940
+            },
+            "cellAspect": {
+              "type": "integer",
+              "minimum": 500,
+              "maximum": 4000,
+              "description": "Cell height / width in thousandths; circles compensate for this.",
+              "default": 2000
+            },
+            "scale": {
+              "type": "integer",
+              "minimum": 64,
+              "maximum": 262144,
+              "description": "Gradient wavelength in Q8 cells.",
+              "default": 6144
+            },
+            "angle": {
+              "type": "integer",
+              "minimum": -360000,
+              "maximum": 360000,
+              "description": "Gradient angle in millidegrees.",
+              "default": 0
+            },
+            "pivotX": {
+              "type": "integer",
+              "minimum": -1048576,
+              "maximum": 1048576,
+              "description": "Rotation axis x in Q8 cells; may lie offscreen.",
+              "default": 12800
+            },
+            "pivotY": {
+              "type": "integer",
+              "minimum": -1048576,
+              "maximum": 1048576,
+              "description": "Rotation axis y in Q8 cells; may lie offscreen.",
+              "default": 4096
+            },
+            "rotationPeriodMs": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 3600000,
+              "description": "Independent axis rotation / pendulum period.",
+              "default": 18000
+            },
+            "rotationMode": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "description": "0 fixed axis; 1 continuous rotation; 2 eased pendulum.",
+              "default": 1
+            },
+            "swing": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 360000,
+              "description": "Pendulum half-amplitude in millidegrees.",
+              "default": 65000
+            },
+            "phase": {
+              "type": "integer",
+              "minimum": -65536,
+              "maximum": 65536,
+              "description": "Color phase in 1/1024 turns.",
+              "default": 0
+            },
+            "pixelMode": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "0 whole cell; 1 upper/lower half; 2 left/right half; 3 braille dither.",
+              "default": 1
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647,
+              "description": "Deterministic seed. Stable under resize.",
+              "default": 7319
+            },
+            "baseColor": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 16777215,
+              "description": "Opaque bottom color, packed RGB.",
+              "default": 1118222
+            },
+            "inkColor": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 16777215,
+              "description": "Default foreground, packed RGB.",
+              "default": 14866889
+            },
+            "paletteCount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32,
+              "description": "Number of configured gradient colors (binding-managed).",
+              "default": 5
+            },
+            "gradientWrap": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "description": "0 seamless loop; 1 mirrored forward/back; 2 hard cyclic stops.",
+              "default": 0
+            },
+            "interpolation": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "0 encoded RGB linear; 1 eased RGB interpolation.",
+              "default": 1
+            },
+            "colorMode": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "description": "0 palette; 1 full HSV wheel; 2 three phase-separated RGB sine channels.",
+              "default": 0
+            },
+            "hueOffset": {
+              "type": "integer",
+              "minimum": -3600,
+              "maximum": 3600,
+              "description": "Hue-wheel offset in degrees.",
+              "default": 0
+            },
+            "stars": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Enable stable-glyph twinkling stars.",
+              "default": 1
+            },
+            "starDensity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Chance per cell, in thousandths.",
+              "default": 38
+            },
+            "starMinMs": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 3600000,
+              "description": "Minimum independent star period.",
+              "default": 4400
+            },
+            "starRangeMs": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3600000,
+              "description": "Additional deterministic period range.",
+              "default": 8200
+            },
+            "starDuty": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000,
+              "description": "Visible portion of a star cycle, in thousandths.",
+              "default": 540
+            },
+            "starPeak": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Peak star opacity relative to its configured peak color.",
+              "default": 730
+            },
+            "starGlyphCount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32,
+              "description": "Number of chosen ordinary star glyphs.",
+              "default": 12
+            },
+            "starColorCount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32,
+              "description": "Number of star peak colors.",
+              "default": 6
+            },
+            "novaChance": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Per world-tile chance per nova cycle, in thousandths. Zero disables automatic novae.",
+              "default": 30
+            },
+            "novaCycleMs": {
+              "type": "integer",
+              "minimum": 1000,
+              "maximum": 3600000,
+              "description": "Stable world-tile nova opportunity cycle.",
+              "default": 45000
+            },
+            "novaDurationMs": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 30000,
+              "description": "Nova glyph evolution and shockwave duration.",
+              "default": 3600
+            },
+            "novaGlyphCount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 16,
+              "description": "Ordered expansion glyph sequence; contracts on fade.",
+              "default": 5
+            },
+            "rippleSpeed": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 262144,
+              "description": "Shockwave propagation in Q8 cells per second.",
+              "default": 2560
+            },
+            "rippleWidth": {
+              "type": "integer",
+              "minimum": 16,
+              "maximum": 8192,
+              "description": "Soft ring thickness in Q8 cells.",
+              "default": 384
+            },
+            "rippleLifeMs": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 30000,
+              "description": "Lifetime of a user/data ripple.",
+              "default": 3200
+            },
+            "rippleOpacity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000,
+              "description": "Peak background ring opacity.",
+              "default": 280
+            },
+            "rippleRings": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6,
+              "description": "Number of trailing concentric wavefronts.",
+              "default": 2
+            },
+            "motion": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "0 evaluates decorative fields at time zero; host pause holds explicit time instead.",
+              "default": 1
+            },
+            "quantize": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "description": "0 RGB; 1 canonical ANSI16 approximation; 2 xterm256 approximation.",
+              "default": 0
+            },
+            "originX": {
+              "type": "integer",
+              "minimum": -4096,
+              "maximum": 4096,
+              "description": "World origin x in whole cells; stable sky coordinates.",
+              "default": 0
+            },
+            "originY": {
+              "type": "integer",
+              "minimum": -4096,
+              "maximum": 4096,
+              "description": "World origin y in whole cells.",
+              "default": 0
+            },
+            "waveAmplitude": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4000,
+              "description": "Wave deformation in thousandths.",
+              "default": 640
+            },
+            "starAttack": {
+              "type": "integer",
+              "minimum": 10,
+              "maximum": 990,
+              "description": "Fraction of visible star lifetime used for brightening.",
+              "default": 340
+            },
+            "reverse": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Reverse decorative phase and continuous rotation.",
+              "default": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "palette": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 16777215
+              },
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            ]
+          }
+        },
+        "starPalette": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 16777215
+              },
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            ]
+          }
+        },
+        "glyphs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1
+          }
+        },
+        "novaGlyphs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1
+          }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "maxItems": 512,
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "x",
+          "y",
+          "width",
+          "height"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "text",
+              "box",
+              "rule",
+              "button",
+              "item",
+              "cursor",
+              "progress",
+              "bars",
+              "pie",
+              "donut",
+              "scatter",
+              "line",
+              "digits",
+              "edge"
+            ]
+          },
+          "x": {
+            "type": "integer",
+            "minimum": -4096,
+            "maximum": 4096
+          },
+          "y": {
+            "type": "integer",
+            "minimum": -4096,
+            "maximum": 4096
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 512
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 256
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 32768
+          },
+          "data": {
+            "type": "array",
+            "maxItems": 16384,
+            "items": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "changedMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "state": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "value": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "fromValue": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "durationMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3600000
+          },
+          "fgOpacity": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "bgOpacity": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "style": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+          },
+          "hueStep": {
+            "type": "integer",
+            "minimum": -3600,
+            "maximum": 3600
+          },
+          "hueSpeed": {
+            "type": "integer",
+            "minimum": -3600,
+            "maximum": 3600
+          },
+          "hueBase": {
+            "type": "integer",
+            "minimum": -360000,
+            "maximum": 360000
+          },
+          "revealMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3600000
+          },
+          "hueSaturation": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "hueBrightness": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "colorAnimation": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "glyph": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1114111
+          },
+          "zoom": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "fg": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 16777215
+              },
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            ]
+          },
+          "bg": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 16777215
+              },
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "timeMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "events": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "required": [
+          "x",
+          "y",
+          "atMs"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "x": {
+            "type": "number",
+            "minimum": -4096,
+            "maximum": 4096
+          },
+          "y": {
+            "type": "number",
+            "minimum": -4096,
+            "maximum": 4096
+          },
+          "atMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "strength": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "kind": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "description": "Composite scene for bounded prompt sources: the flight-banked oblique starfield in a coordinated turn, a braille line widget, an agent window, a prompt growing from 1 to 4 rows, and ember typing weather. 160x48, seed 2030.",
+ "seed": 2030,
+ "typeBeforeUs": 400000,
+ "typed": "stream the agent window",
+ "commands": [
+  {"op": "resize", "width": 160, "height": 48},
+  {"op": "camera", "profile": "original", "navigation": "fly", "position": [0, 0, 0], "yaw": -18, "pitch": 8, "roll": 12, "fov": 70, "near": 0.1, "far": 1000},
+  {"op": "environment", "starProfile": "source", "worldSeed": 2030, "skyDensity": 9, "skyRadius": 280, "skyExposure": 6500, "trailMs": 100, "textLightness": 0.83, "textChroma": 0.1},
+  {"op": "flight", "profile": "original", "steps": [{"kind": "turn", "durationMs": 18000, "yaw": -90, "speed": 9, "coordinated": true, "bank": 32}]},
+  {"op": "status", "text": "OBLIQUE FLIGHT / BANKED TURN | flight remains active while looking or panning. Brake is explicit", "durationMs": 0, "mode": "horizontal"},
+  {"op": "widget", "id": 1, "kind": "line", "x": 104, "y": 4, "width": 50, "height": 10, "border": "rounded", "data": [0.2, 0.5, 0.35, 0.8, 0.6, 0.95, 0.7, 0.4], "sampling": "braille"},
+  {"op": "window", "id": 1, "title": "AGENT / stream", "text": "Reading the plan.\nTurning with the stars.\nThe prompt stays bounded.", "position": [-30, 8, -20], "width": 30, "height": 14, "material": 1},
+  {"op": "prompt", "mode": "grow", "minRows": 1, "maxRows": 4},
+  {"op": "prompt-appearance", "weather": {"style": "embers", "intensity": 0.8, "lifeMs": 1800, "speed": 8}}
+ ]
+}

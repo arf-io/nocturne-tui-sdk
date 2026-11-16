@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pearl Fleet inbound event version 1",
+  "description": "Known fields are normalized; extra properties are not retained. Runtime checks also enforce identity, sequence, stream lifecycle and aggregate capacity.",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "agentId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "maxLength": 96
+    },
+    "atMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "type": {
+      "enum": [
+        "telemetry",
+        "status",
+        "message.start",
+        "message.delta",
+        "message.end"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "seq",
+    "agentId",
+    "atMs",
+    "type",
+    "payload"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "telemetry"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "tokenRate": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "latencyMs": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "contextPermille": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "queue": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "tools": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "progressPermille": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000
+              }
+            },
+            "required": [
+              "tokenRate",
+              "latencyMs",
+              "contextPermille",
+              "queue",
+              "tools",
+              "progressPermille"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "status"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "running",
+                  "waiting",
+                  "idle",
+                  "offline",
+                  "error"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "message.start"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "messageId": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_.:-]+$",
+                "maxLength": 96
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 16384
+              },
+              "role": {
+                "enum": [
+                  "agent",
+                  "operator",
+                  "tool",
+                  "system"
+                ]
+              },
+              "severity": {
+                "enum": [
+                  "normal",
+                  "warning",
+                  "error"
+                ]
+              }
+            },
+            "required": [
+              "messageId",
+              "role"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "message.delta"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "messageId": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_.:-]+$",
+                "maxLength": 96
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 16384
+              }
+            },
+            "required": [
+              "messageId",
+              "text"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "message.end"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "messageId": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_.:-]+$",
+                "maxLength": 96
+              }
+            },
+            "required": [
+              "messageId"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

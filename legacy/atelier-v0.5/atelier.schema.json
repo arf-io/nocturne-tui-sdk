@@ -1,0 +1,564 @@
+{
+  "version": "0.5.0",
+  "settingsVersion": 5,
+  "entrypoint": "START-HERE.html",
+  "language": "TypeScript high-level modules over the shared C/native/WASM foundation",
+  "scenes": [
+    {
+      "id": "warp",
+      "name": "Oblique Hyperlane",
+      "detail": "Fly, look, strafe, brake. The camera is yours."
+    },
+    {
+      "id": "dag",
+      "name": "Graph Observatory",
+      "detail": "Automatic 2D / 3D layout with shared node identity."
+    },
+    {
+      "id": "weather",
+      "name": "Electrical Garden",
+      "detail": "Nova ejecta, electrical forks, rising and falling embers."
+    },
+    {
+      "id": "text",
+      "name": "Typography Foundry",
+      "detail": "Reveal / conceal with independent per-character choreography."
+    },
+    {
+      "id": "windows",
+      "name": "Impossible Windows",
+      "detail": "Spatial glass, shaped surfaces, large tools and a recovery dock."
+    },
+    {
+      "id": "museum",
+      "name": "Motion Cabinet",
+      "detail": "A shelf of original text and window compositions."
+    },
+    {
+      "id": "chat",
+      "name": "AI CHAT / Pearl conversation"
+    },
+    {
+      "id": "scope",
+      "name": "PEARL / reactive signal"
+    },
+    {
+      "id": "spatial-menu",
+      "name": "MENU / spatial constellation"
+    },
+    {
+      "id": "bbs",
+      "name": "BBS / Starfall exchange"
+    },
+    {
+      "id": "bbs-config",
+      "name": "BBS / configuration desk"
+    },
+    {
+      "id": "lynx",
+      "name": "LYNX / text browser study"
+    },
+    {
+      "id": "nano",
+      "name": "NANO / editor study"
+    },
+    {
+      "id": "pico",
+      "name": "PICO / correspondence study"
+    },
+    {
+      "id": "tmux",
+      "name": "TMUX / pane composition"
+    },
+    {
+      "id": "controls",
+      "name": "ATELIER / controls + rules"
+    },
+    {
+      "id": "sensors",
+      "name": "SENSORS / modulation routing"
+    },
+    {
+      "id": "logs",
+      "name": "LOG WATCH / observability"
+    }
+  ],
+  "limits": {
+    "graphNodes": 256,
+    "graphEdges": 2048,
+    "windows": 12,
+    "textScalars": 2048,
+    "activeWeatherEvents": 16,
+    "columns": [
+      36,
+      240
+    ],
+    "rows": [
+      18,
+      100
+    ]
+  },
+  "layout": {
+    "defaults": {
+      "dimensions": 3,
+      "algorithm": "layered",
+      "seed": 7341,
+      "iterations": 180,
+      "rankGap": 7,
+      "nodeGap": 3,
+      "depthGap": 5,
+      "repulsion": 42,
+      "spring": 0.055,
+      "damping": 0.76,
+      "cyclePolicy": "condense"
+    },
+    "algorithms": [
+      "layered",
+      "force",
+      "radial"
+    ],
+    "dimensions": [
+      2,
+      3
+    ],
+    "cyclePolicies": [
+      "condense",
+      "reject"
+    ]
+  },
+  "text": {
+    "defaults": {
+      "effect": "rain",
+      "durationMs": 1200,
+      "delayMs": 0,
+      "staggerMs": 28,
+      "batchSize": 1,
+      "seed": 6137,
+      "travelRows": 13,
+      "spreadColumns": 8,
+      "drift": 2,
+      "speedJitter": 0.55,
+      "alphabet": " 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!?+-*/",
+      "cycleHz": 18,
+      "easing": "smooth",
+      "reverseOrder": false,
+      "randomOrder": false,
+      "trailLength": 2,
+      "overshoot": 1.2,
+      "turns": 1.5,
+      "hueSpread": 110,
+      "local": false
+    },
+    "ranges": {
+      "durationMs": [
+        0,
+        10000,
+        25
+      ],
+      "delayMs": [
+        0,
+        5000,
+        25
+      ],
+      "staggerMs": [
+        0,
+        500,
+        5
+      ],
+      "batchSize": [
+        1,
+        64,
+        1
+      ],
+      "seed": [
+        0,
+        4294967295,
+        1
+      ],
+      "travelRows": [
+        0,
+        80,
+        0.5
+      ],
+      "spreadColumns": [
+        0,
+        80,
+        0.5
+      ],
+      "drift": [
+        -30,
+        30,
+        0.25
+      ],
+      "speedJitter": [
+        0,
+        0.95,
+        0.05
+      ],
+      "cycleHz": [
+        1,
+        60,
+        1
+      ],
+      "trailLength": [
+        0,
+        8,
+        1
+      ],
+      "overshoot": [
+        0,
+        3,
+        0.1
+      ],
+      "turns": [
+        0,
+        8,
+        0.1
+      ],
+      "hueSpread": [
+        0,
+        360,
+        5
+      ]
+    },
+    "effects": [
+      "instant",
+      "fade",
+      "rain",
+      "scramble",
+      "flipboard",
+      "sweep-left",
+      "sweep-right",
+      "lift",
+      "fall",
+      "marquee",
+      "iris",
+      "constellation",
+      "prism-weave",
+      "ink-tide",
+      "comet-stitch",
+      "orbit",
+      "fold",
+      "zipper"
+    ],
+    "phases": [
+      "show",
+      "hide"
+    ],
+    "units": "milliseconds, cell rows/columns, degrees; see API docs"
+  },
+  "particles": {
+    "defaults": {
+      "lifeMs": 4200,
+      "count": 64,
+      "speed": 20,
+      "gravity": 9,
+      "rise": 10,
+      "drag": 0.22,
+      "turbulence": 1.3,
+      "glitterHz": 14,
+      "trailMs": 100,
+      "branches": 7,
+      "jaggedness": 2.2,
+      "coreMs": 280,
+      "coreRadius": 3,
+      "ejecta": 1,
+      "shockwave": 0,
+      "intensity": 0.8,
+      "seed": 4711,
+      "reducedMotion": false
+    },
+    "ranges": {
+      "lifeMs": [
+        200,
+        10000,
+        50
+      ],
+      "count": [
+        0,
+        256,
+        1
+      ],
+      "speed": [
+        0,
+        70,
+        0.5
+      ],
+      "gravity": [
+        0,
+        35,
+        0.5
+      ],
+      "rise": [
+        0,
+        40,
+        0.5
+      ],
+      "drag": [
+        0,
+        3,
+        0.05
+      ],
+      "turbulence": [
+        0,
+        8,
+        0.1
+      ],
+      "glitterHz": [
+        1,
+        30,
+        1
+      ],
+      "trailMs": [
+        0,
+        400,
+        10
+      ],
+      "branches": [
+        1,
+        20,
+        1
+      ],
+      "jaggedness": [
+        0,
+        8,
+        0.1
+      ],
+      "coreMs": [
+        0,
+        600,
+        10
+      ],
+      "coreRadius": [
+        0,
+        6,
+        0.1
+      ],
+      "ejecta": [
+        0,
+        2,
+        0.05
+      ],
+      "shockwave": [
+        0,
+        1,
+        0.02
+      ],
+      "intensity": [
+        0,
+        1,
+        0.02
+      ],
+      "seed": [
+        0,
+        4294967295,
+        1
+      ]
+    },
+    "kinds": [
+      "nova",
+      "sparks",
+      "embers",
+      "rain",
+      "snow",
+      "ripples"
+    ],
+    "units": "milliseconds, rows or cell-widths per second, degrees where stated"
+  },
+  "windows": {
+    "defaults": {
+      "effect": "genie",
+      "durationMs": 950,
+      "chrome": "mac",
+      "customSide": "right",
+      "customGlyphs": [
+        "–",
+        "□",
+        "◌",
+        "×"
+      ],
+      "customOrder": [
+        "minimize",
+        "maximize",
+        "fade",
+        "close"
+      ],
+      "toolColors": {
+        "minimize": 15318885,
+        "maximize": 8377259,
+        "fade": 12294885,
+        "close": 15698841
+      },
+      "toolWidth": 6,
+      "toolHeight": 2,
+      "shape": "rounded",
+      "opacity": 0.88,
+      "depth": 0,
+      "yaw": 0,
+      "pitch": 0,
+      "roll": 0,
+      "fadeFloor": 0.16,
+      "bounce": 0.18,
+      "scatter": 24,
+      "genieBend": 9,
+      "seed": 6001,
+      "polygon": [
+        [
+          0.05,
+          0.2
+        ],
+        [
+          0.35,
+          0
+        ],
+        [
+          0.9,
+          0.12
+        ],
+        [
+          1,
+          0.8
+        ],
+        [
+          0.65,
+          1
+        ],
+        [
+          0,
+          0.85
+        ]
+      ]
+    },
+    "ranges": {
+      "durationMs": [
+        0,
+        5000,
+        25
+      ],
+      "toolWidth": [
+        5,
+        10,
+        1
+      ],
+      "toolHeight": [
+        2,
+        4,
+        1
+      ],
+      "opacity": [
+        0,
+        1,
+        0.02
+      ],
+      "depth": [
+        -12,
+        70,
+        1
+      ],
+      "yaw": [
+        -70,
+        70,
+        1
+      ],
+      "pitch": [
+        -65,
+        65,
+        1
+      ],
+      "roll": [
+        -60,
+        60,
+        1
+      ],
+      "fadeFloor": [
+        0,
+        1,
+        0.02
+      ],
+      "bounce": [
+        0,
+        0.6,
+        0.02
+      ],
+      "scatter": [
+        0,
+        80,
+        1
+      ],
+      "genieBend": [
+        -30,
+        30,
+        1
+      ],
+      "seed": [
+        0,
+        4294967295,
+        1
+      ]
+    },
+    "effects": [
+      "fade",
+      "expand-center",
+      "expand-nw",
+      "expand-ne",
+      "expand-sw",
+      "expand-se",
+      "circle",
+      "roll-up",
+      "roll-down",
+      "drawer-left",
+      "drawer-right",
+      "drawer-top",
+      "drawer-bottom",
+      "bounce",
+      "genie",
+      "explode",
+      "accordion",
+      "origami",
+      "vortex",
+      "ribbon-unspool",
+      "petal-bloom",
+      "gravity-well"
+    ],
+    "shapes": [
+      "rectangle",
+      "rounded",
+      "ellipse",
+      "hexagon",
+      "diamond",
+      "capsule",
+      "ticket",
+      "cloud",
+      "polygon"
+    ],
+    "chrome": [
+      "mac",
+      "windows",
+      "gnome",
+      "custom"
+    ],
+    "units": "cell rectangles, world depth, angles in degrees; opacity 0..1"
+  },
+  "camera": {
+    "angles": "degrees",
+    "coordinates": "world units",
+    "look": "rotate without moving eye",
+    "orbit": "rotate around target",
+    "pan": "translate eye and target",
+    "travel": "independent signed starfield velocity, world units/second",
+    "defaults": {
+      "yaw": 0,
+      "pitch": 0,
+      "roll": 0,
+      "distance": 38,
+      "fov": 68
+    }
+  },
+  "invariants": [
+    "Local input presents immediately; local=true bypasses all text reveals/hides.",
+    "Motion is elapsed-time sampled; 30/60 FPS changes sampling only.",
+    "Graph solving never runs from render().",
+    "Window close/minimize retains identity and recovery dock.",
+    "No shader, alpha channel or hardware capture is required."
+  ]
+}

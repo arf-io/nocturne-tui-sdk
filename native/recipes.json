@@ -1,0 +1,3970 @@
+[
+  {
+    "id": "autumn",
+    "name": "Autumn Drift",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          24,
+          16,
+          36
+        ],
+        "yaw": -33,
+        "pitch": -12,
+        "fov": 67
+      },
+      {
+        "op": "material",
+        "id": 1,
+        "hueStep": 0,
+        "scope": "characters",
+        "gradient": [
+          [
+            0.74,
+            0.11,
+            35
+          ],
+          [
+            0.85,
+            0.12,
+            70
+          ],
+          [
+            0.63,
+            0.13,
+            22
+          ],
+          [
+            0.78,
+            0.08,
+            110
+          ],
+          [
+            0.63,
+            0.045,
+            340
+          ]
+        ],
+        "index": {
+          "initial": 0,
+          "rate": 0.02,
+          "step": 0.071,
+          "boundary": "loop"
+        }
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/autumn-drift",
+        "count": 180,
+        "runningTimeMs": 18000,
+        "position": [
+          -6,
+          17,
+          0
+        ],
+        "extent": [
+          26,
+          5,
+          23
+        ],
+        "wind": [
+          2.2,
+          0.1,
+          1.3
+        ],
+        "gravity": [
+          0,
+          -4,
+          0
+        ],
+        "sizeMin": 0.9,
+        "sizeMax": 2.1,
+        "lifetimeMinMs": 24000,
+        "lifetimeMaxMs": 40000
+      },
+      {
+        "op": "floor",
+        "visible": true,
+        "alpha": 0.16,
+        "maxIndividual": 100,
+        "overflow": "merge-to-field"
+      },
+      {
+        "op": "status",
+        "text": "AUTUMN DRIFT | Drag orbit · Shift-drag pan · Wheel travel · Floor and wind are independent",
+        "durationMs": 0,
+        "mode": "horizontal"
+      },
+      {
+        "op": "environment",
+        "stars": 100,
+        "style": "plasma"
+      }
+    ]
+  },
+  {
+    "id": "rain",
+    "name": "Silver Squall",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          27,
+          14,
+          43
+        ],
+        "yaw": -33,
+        "pitch": -12,
+        "fov": 67
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/silver-squall",
+        "count": 1800,
+        "runningTimeMs": 20000,
+        "position": [
+          0,
+          25,
+          0
+        ],
+        "extent": [
+          50,
+          4,
+          42
+        ],
+        "wind": [
+          4,
+          0,
+          2
+        ],
+        "windVariation": [
+          1.5,
+          0.2,
+          1.8
+        ],
+        "material": 2,
+        "trailMs": 70
+      },
+      {
+        "op": "floor",
+        "visible": true,
+        "alpha": 0.28,
+        "maxIndividual": 160
+      },
+      {
+        "op": "status",
+        "text": "SILVER SQUALL / explicit particles and real floor contacts; stop emission without deleting impacts",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "snow",
+    "name": "Snowglobe",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          24,
+          15,
+          40
+        ],
+        "yaw": -30,
+        "pitch": -10
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "channels": {
+          "l": 0.86,
+          "c": 0.024,
+          "h": 230
+        }
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/snowglobe",
+        "count": 500,
+        "runningTimeMs": 26000,
+        "position": [
+          0,
+          20,
+          1
+        ],
+        "extent": [
+          37,
+          10,
+          30
+        ],
+        "wind": [
+          0.35,
+          0.02,
+          0.8
+        ],
+        "windVariation": [
+          1.3,
+          0.3,
+          1.5
+        ],
+        "sizeMin": 0.2,
+        "sizeMax": 0.7
+      },
+      {
+        "op": "floor",
+        "visible": true,
+        "alpha": 0.1
+      },
+      {
+        "op": "status",
+        "text": "SNOWGLOBE / 3D flake geometry. The camera never creates or destroys weather",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "embers",
+    "name": "Thermal Cinders",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          20,
+          11,
+          37
+        ],
+        "yaw": -27,
+        "pitch": -7
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/thermal-cinders",
+        "count": 700,
+        "runningTimeMs": 17000,
+        "position": [
+          0,
+          0.5,
+          0
+        ],
+        "heat": 15,
+        "radius": 7,
+        "gravity": [
+          0,
+          -7,
+          0
+        ],
+        "wind": [
+          1.3,
+          0,
+          0.4
+        ],
+        "lifetimeMinMs": 1800,
+        "lifetimeMaxMs": 9500
+      },
+      {
+        "op": "floor",
+        "visible": true,
+        "alpha": 0.08
+      },
+      {
+        "op": "environment",
+        "style": "wave"
+      }
+    ]
+  },
+  {
+    "id": "chrysanthemum",
+    "name": "Chrysanthemum",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          16,
+          12,
+          42
+        ],
+        "yaw": -22,
+        "pitch": -4
+      },
+      {
+        "op": "material",
+        "id": 1,
+        "scope": "characters",
+        "hueStep": 2,
+        "channels": {
+          "l": 0.82,
+          "c": 0.13,
+          "h": 15
+        }
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/chrysanthemum",
+        "count": 220,
+        "position": [
+          0,
+          10,
+          0
+        ],
+        "runningTimeMs": 0,
+        "lifetimeMinMs": 2400,
+        "lifetimeMaxMs": 6200,
+        "topology": 0,
+        "trailMs": 170,
+        "alpha": 1
+      },
+      {
+        "op": "environment",
+        "stars": 160
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "paint": "source",
+        "seed": 2030,
+        "eventId": 1
+      }
+    ]
+  },
+  {
+    "id": "shell",
+    "name": "Ejecta Shell",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          23,
+          13,
+          42
+        ],
+        "yaw": -30,
+        "pitch": -6
+      },
+      {
+        "op": "material",
+        "id": 3,
+        "channels": {
+          "l": 0.72,
+          "c": 0.075,
+          "h": 290
+        }
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/ejecta-shell",
+        "count": 300,
+        "position": [
+          0,
+          8,
+          0
+        ],
+        "material": 3,
+        "radius": 7,
+        "lifetimeMinMs": 4500,
+        "lifetimeMaxMs": 6800
+      },
+      {
+        "op": "environment",
+        "stars": 200
+      }
+    ]
+  },
+  {
+    "id": "arcs",
+    "name": "Branchlight",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          18,
+          11,
+          30
+        ],
+        "yaw": -28,
+        "pitch": -5
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/branchlight",
+        "count": 22,
+        "position": [
+          0,
+          9,
+          0
+        ],
+        "extent": [
+          15,
+          10,
+          10
+        ],
+        "lifetimeMinMs": 750,
+        "lifetimeMaxMs": 1800,
+        "alpha": 1
+      },
+      {
+        "op": "kinetic-style",
+        "id": 1,
+        "paint": "source",
+        "seed": 2030,
+        "eventId": 1
+      }
+    ]
+  },
+  {
+    "id": "silk",
+    "name": "Silk Tide",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "stars": 180,
+        "style": "plasma"
+      },
+      {
+        "op": "field",
+        "effect": "surface-field/silk-tide",
+        "x": 30,
+        "y": 18,
+        "lifeMs": 7000,
+        "strength": 0.68,
+        "width": 1.7,
+        "speed": 9
+      },
+      {
+        "op": "field",
+        "effect": "surface-field/opal-fronts",
+        "x": 92,
+        "y": 25,
+        "lifeMs": 8000,
+        "strength": 0.52,
+        "width": 1.2,
+        "speed": 7
+      },
+      {
+        "op": "prompt",
+        "alpha": 0.12
+      },
+      {
+        "op": "draft",
+        "text": "Every letter keeps the moving background. Type here; data is immediate.",
+        "emitWeather": false
+      }
+    ]
+  },
+  {
+    "id": "flight",
+    "name": "Oblique Flight",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "profile": "original",
+        "navigation": "fly",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "yaw": -18,
+        "pitch": 8,
+        "roll": 12,
+        "fov": 70,
+        "near": 0.1,
+        "far": 1000
+      },
+      {
+        "op": "environment",
+        "starProfile": "source",
+        "worldSeed": 2030,
+        "skyDensity": 9,
+        "skyRadius": 280,
+        "skyExposure": 6500,
+        "trailMs": 100,
+        "textLightness": 0.83,
+        "textChroma": 0.1
+      },
+      {
+        "op": "flight",
+        "profile": "original",
+        "cruise": {
+          "speed": 14,
+          "heading": {
+            "yaw": 28,
+            "pitch": 12
+          }
+        }
+      },
+      {
+        "op": "status",
+        "text": "OBLIQUE FLIGHT | flight remains active while looking or panning. Brake is explicit",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "text",
+    "name": "Ink Choreography",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "style": "plasma",
+        "stars": 160
+      },
+      {
+        "op": "text",
+        "id": 1,
+        "text": "THE WORLD IS YOUR BURRITO",
+        "effect": "text/prism-weave",
+        "x": 12,
+        "y": 10,
+        "width": 90,
+        "durationMs": 2200,
+        "staggerMs": 28,
+        "jitterMs": 300,
+        "scatter": 13,
+        "distance": 12
+      },
+      {
+        "op": "text",
+        "id": 2,
+        "text": "Native geometry. Shared contracts. No hidden runtime",
+        "effect": "text/comet-stitch",
+        "x": 12,
+        "y": 16,
+        "width": 94,
+        "durationMs": 1700,
+        "staggerMs": 15,
+        "scatter": 9,
+        "distance": 6,
+        "material": 3
+      }
+    ]
+  },
+  {
+    "id": "windows",
+    "name": "Readable Windows",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          0,
+          12,
+          48
+        ],
+        "yaw": 0,
+        "pitch": -9
+      },
+      {
+        "op": "environment",
+        "stars": 250,
+        "style": "plasma"
+      },
+      {
+        "op": "window",
+        "id": 1,
+        "title": "ATLAS / orchestration",
+        "text": "Requests keep their identity.\nProgress is authoritative.\nPerspective never shreds text",
+        "position": [
+          -17,
+          9,
+          0
+        ],
+        "width": 25,
+        "height": 20,
+        "material": 2,
+        "yaw": -15,
+        "effect": "window-transition/ribbon-genie"
+      },
+      {
+        "op": "window",
+        "id": 2,
+        "title": "IRIS / evidence",
+        "text": "Source: explicit record\nState: waiting for review\nHash: full value in metadata",
+        "position": [
+          13,
+          10,
+          -8
+        ],
+        "width": 26,
+        "height": 19,
+        "material": 3,
+        "yaw": 18,
+        "effect": "window-transition/orbital-bloom"
+      },
+      {
+        "op": "window",
+        "id": 3,
+        "title": "PEARL / signal",
+        "text": "Native status and geometry.\nAll channels share time.\n[foreground / background]",
+        "position": [
+          1,
+          -7,
+          5
+        ],
+        "width": 24,
+        "height": 18,
+        "material": 1,
+        "effect": "window-transition/petal-bloom"
+      }
+    ]
+  },
+  {
+    "id": "work-graph",
+    "name": "Work Graph",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          0,
+          8,
+          162
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "fov": 64
+      },
+      {
+        "op": "environment",
+        "stars": 70
+      },
+      {
+        "op": "node",
+        "id": 1,
+        "kind": "Project",
+        "label": "Project / Human-centered operations",
+        "status": "ready",
+        "sha": "1b07bf8b234eeafd6ce21970a6d1d48570608f057d449cd553a53fc2180e65d0"
+      },
+      {
+        "op": "node",
+        "id": 2,
+        "kind": "Session",
+        "label": "Session: provenance reconciliation",
+        "status": "ready",
+        "sha": "eafa40ca91cbfb7fdcd2b5a6542a42b06175ec2556a51cd086af27595a3b49a2"
+      },
+      {
+        "op": "node",
+        "id": 3,
+        "kind": "Turn",
+        "label": "Turn: inspect the pending requests",
+        "status": "ready",
+        "sha": "63a73ec068795df217078f0d9a7c254e064b5ca9cc76c12af1289feb8bbf42d0"
+      },
+      {
+        "op": "node",
+        "id": 4,
+        "kind": "Request",
+        "label": "Request: validate the supplied source records",
+        "status": "waiting",
+        "sha": "daa4daf91882ef8a43fb9962f01d049b128a98708ff7bcf2a77c889be2c3861c"
+      },
+      {
+        "op": "node",
+        "id": 5,
+        "kind": "Request",
+        "label": "Request: reconcile conflicting evidence",
+        "status": "ready",
+        "sha": "d1c9888ca65ad656374141076394dec159df37a45c036b4761e29c7b72d27a0f"
+      },
+      {
+        "op": "node",
+        "id": 6,
+        "kind": "Action",
+        "label": "Action: read explicit evidence",
+        "status": "ready",
+        "sha": "dacd757bf3bc450f5881609c05b85f4c17aee255bd3d68f86d0095f5a4f29e50"
+      },
+      {
+        "op": "node",
+        "id": 7,
+        "kind": "Action",
+        "label": "Action: calculate manifest hashes",
+        "status": "ready",
+        "sha": "9bd50fa056ee28c0aa710dcdb8f07c260e096bd3b2b612a5d9f7e58a8b93f9a9"
+      },
+      {
+        "op": "node",
+        "id": 8,
+        "kind": "Action",
+        "label": "Action: report unverified claims",
+        "status": "ready",
+        "sha": "a1166ce615092faff73c491f38a1ebb0b26b551011efc85ad93fbe89122b7f96"
+      },
+      {
+        "op": "edge",
+        "from": 1,
+        "to": 2,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 2,
+        "to": 3,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 3,
+        "to": 4,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 3,
+        "to": 5,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 4,
+        "to": 6,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 4,
+        "to": 7,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 5,
+        "to": 7,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 5,
+        "to": 8,
+        "kind": "contains"
+      },
+      {
+        "op": "layout",
+        "dimensions": 3,
+        "mode": "layered",
+        "spacing": 30
+      },
+      {
+        "op": "status",
+        "text": "CONTEXT GRAPH / click any visible card while the inspector is open. Shared actions keep one identity",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "git",
+    "name": "Git Relationships",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          0,
+          8,
+          162
+        ],
+        "pitch": 0,
+        "fov": 64
+      },
+      {
+        "op": "node",
+        "id": 1,
+        "kind": "Repository",
+        "label": "Nocturne / current contracts",
+        "status": "synthetic example",
+        "sha": "176118ba5e6c92d2cad50d4c338ada2b7c22e0d7f7ddd6c7e410010e2fcf11fa"
+      },
+      {
+        "op": "node",
+        "id": 2,
+        "kind": "Branch",
+        "label": "trunk",
+        "status": "synthetic example",
+        "sha": "10dee8825c5a0785cc5b5569822ca523b0a12954ac990cf82e102f622c42a745"
+      },
+      {
+        "op": "node",
+        "id": 3,
+        "kind": "Branch",
+        "label": "feature/native-core",
+        "status": "synthetic example",
+        "sha": "aaa36c1f0bc393497dd58b9aa77b211231f831b6be13bd09c6c7833dc8724088"
+      },
+      {
+        "op": "node",
+        "id": 4,
+        "kind": "Commit",
+        "label": "Introduce native scene ownership",
+        "status": "synthetic example",
+        "sha": "46441760c4abf7aab5b7c0dc61b4158a1b0eb4fd7602949416851a5dd7bd17ec"
+      },
+      {
+        "op": "node",
+        "id": 5,
+        "kind": "Commit",
+        "label": "Port stateful weather and checkpoints",
+        "status": "synthetic example",
+        "sha": "34d4b10ff4cc39f49b6477062469707831b99c36931928f825f128a6feda76e3"
+      },
+      {
+        "op": "node",
+        "id": 6,
+        "kind": "Commit",
+        "label": "Reconcile input ownership",
+        "status": "synthetic example",
+        "sha": "424691874f517a94b943d6ab66bfbb6359a9164636ae7d9277974d7ddfd85f91"
+      },
+      {
+        "op": "node",
+        "id": 7,
+        "kind": "Commit",
+        "label": "Merge validated contract changes",
+        "status": "synthetic example",
+        "sha": "1263e1c646a3f0d932a9ea76ecca64ffd7135055722f32698f8f5b1ad542a806"
+      },
+      {
+        "op": "edge",
+        "from": 1,
+        "to": 2,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 1,
+        "to": 3,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 2,
+        "to": 7,
+        "kind": "reference"
+      },
+      {
+        "op": "edge",
+        "from": 3,
+        "to": 6,
+        "kind": "reference"
+      },
+      {
+        "op": "edge",
+        "from": 7,
+        "to": 6,
+        "kind": "parent"
+      },
+      {
+        "op": "edge",
+        "from": 7,
+        "to": 5,
+        "kind": "parent"
+      },
+      {
+        "op": "edge",
+        "from": 6,
+        "to": 4,
+        "kind": "parent"
+      },
+      {
+        "op": "edge",
+        "from": 5,
+        "to": 4,
+        "kind": "parent"
+      },
+      {
+        "op": "layout",
+        "dimensions": 3,
+        "mode": "layered",
+        "spacing": 30
+      }
+    ]
+  },
+  {
+    "id": "status",
+    "name": "Status Orchestra",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "style": "wave",
+        "stars": 60
+      },
+      {
+        "op": "area",
+        "id": 2,
+        "x": 8,
+        "y": 5,
+        "width": 100,
+        "height": 8,
+        "padding": 1,
+        "border": "rounded",
+        "alpha": 0.5,
+        "speedX": 10,
+        "speedY": 1
+      },
+      {
+        "op": "status",
+        "id": 2,
+        "area": 2,
+        "text": "STATUS AREA",
+        "durationMs": 30000,
+        "mode": "horizontal"
+      },
+      {
+        "op": "area",
+        "id": 3,
+        "parent": 2,
+        "x": 3,
+        "y": 3,
+        "width": 90,
+        "height": 3,
+        "border": "double",
+        "alpha": 0.25,
+        "speedX": 7,
+        "material": 3
+      },
+      {
+        "op": "status",
+        "id": 3,
+        "area": 3,
+        "text": "A nested message drifts independently inside its parent clipping region",
+        "durationMs": 30000,
+        "mode": "horizontal-fade"
+      },
+      {
+        "op": "area",
+        "id": 4,
+        "x": 20,
+        "y": 18,
+        "width": 77,
+        "height": 6,
+        "border": "rounded",
+        "alpha": 0.72,
+        "fadeMs": 800
+      },
+      {
+        "op": "status",
+        "id": 4,
+        "area": 4,
+        "text": "TOAST / Waiting for native contract qualification.\n",
+        "durationMs": 12000,
+        "mode": "fade"
+      },
+      {
+        "op": "indicator",
+        "id": 2,
+        "x": 10,
+        "y": 27,
+        "sequence": "◐◓◑◒",
+        "stepMs": 150
+      },
+      {
+        "op": "indicator",
+        "id": 3,
+        "x": 15,
+        "y": 27,
+        "sequence": "⠁⠂⠄⡀⢀⠠⠐⠈",
+        "stepMs": 90
+      }
+    ]
+  },
+  {
+    "id": "instruments",
+    "name": "Pearl Instruments",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "style": "solid",
+        "stars": 35
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "scope": "characters",
+        "channels": {
+          "h": {
+            "initial": 180,
+            "rate": 12,
+            "periodMs": 1000,
+            "boundary": "loop"
+          }
+        },
+        "hueStep": 6
+      },
+      {
+        "op": "area",
+        "id": 1,
+        "x": 1,
+        "y": -2,
+        "width": 138,
+        "height": 1
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 1,
+        "kind": "digits",
+        "x": 3,
+        "y": 4,
+        "width": 30,
+        "height": 11,
+        "value": 67,
+        "max": 100,
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 2,
+        "kind": "line",
+        "x": 38,
+        "y": 4,
+        "width": 65,
+        "height": 11,
+        "border": "rounded",
+        "data": [
+          0.5,
+          0.6462862692947298,
+          0.7504366008163709,
+          0.7889606450470346,
+          0.7669413955115254,
+          0.7146251480785545,
+          0.6723222520633884,
+          0.670758465292111,
+          0.716148297736021,
+          0.7870314915223546,
+          0.8443710678281047,
+          0.8501634538218513,
+          0.785797052908701,
+          0.6615036303831416,
+          0.5124267086137807,
+          0.38311737699353826,
+          0.30770437109411486,
+          0.2950153933778117,
+          0.3255958289964186,
+          0.36197557061658253,
+          0.3673062245162567,
+          0.3235587565505165,
+          0.24068483445826794,
+          0.15240317798429864,
+          0.10057215295662195,
+          0.11548827126116193,
+          0.20137717278848616,
+          0.33391233535632026,
+          0.47095020341142113,
+          0.5714638577396813,
+          0.6138094031549922,
+          0.6047793283740648,
+          0.5752343803371127,
+          0.5644199127100332,
+          0.6003943544704138,
+          0.6858235351953985,
+          0.7958663671444369,
+          0.8891840912949716,
+          0.9269248770790283,
+          0.8907751308658653,
+          0.7915974249065072,
+          0.6645914058901677,
+          0.5532417312847968,
+          0.4895804741857407,
+          0.4800155277980294,
+          0.5033508696968291,
+          0.5218843546013385,
+          0.5003139653383734,
+          0.4235090182693697,
+          0.3047369227434605,
+          0.18042752497399936,
+          0.09389332390547771,
+          0.07562468407562156,
+          0.12939826257562026,
+          0.23071236674234452,
+          0.3382758219344036,
+          0.4131484783052241,
+          0.43654355251085836,
+          0.4179415732783344,
+          0.38973152879942824,
+          0.3909391129373086,
+          0.4477405691739711,
+          0.5599765035405083,
+          0.7000600623741449,
+          0.8248442424808309,
+          0.8949156014429206,
+          0.8922841288514783,
+          0.8281866662581439,
+          0.7373626976286372,
+          0.6615139996111485,
+          0.6297362044841489,
+          0.6451236596046312,
+          0.6838348295738463,
+          0.7070349175099737,
+          0.6800668478596315,
+          0.589794373692283,
+          0.45191473153509965,
+          0.30475174126351207,
+          0.19239689260852422,
+          0.1450762241547094,
+          0.16592825965425012,
+          0.2303678828093514,
+          0.29829842333964923,
+          0.3333998894295358,
+          0.3204028898009104,
+          0.2722156110772883,
+          0.22355431431742856,
+          0.21408614685427776,
+          0.2690357375657148,
+          0.38640899358613057,
+          0.5368830473814074,
+          0.6764601568682689,
+          0.7659841938400374,
+          0.7883924973413684,
+          0.7556404147840773,
+          0.7020901558651966,
+          0.6675167112949217,
+          0.6777600186663656,
+          0.7321511300599399,
+          0.803644545068524,
+          0.8516024801633424,
+          0.8412156054278698,
+          0.7604128330743775,
+          0.6262835629342326,
+          0.47795916751330747,
+          0.35926129077534896,
+          0.29923149656473286,
+          0.29964940301039966,
+          0.3353580113290983,
+          0.3671921519886714
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 3,
+        "kind": "progress",
+        "x": 4,
+        "y": 17,
+        "width": 45,
+        "height": 3,
+        "border": "rounded",
+        "value": 0.67,
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 4,
+        "kind": "bars",
+        "x": 56,
+        "y": 17,
+        "width": 46,
+        "height": 10,
+        "data": [
+          0.3,
+          0.68,
+          0.81,
+          0.45,
+          0.91,
+          0.54,
+          0.24,
+          0.65,
+          0.8,
+          0.37
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 5,
+        "kind": "donut",
+        "x": 107,
+        "y": 4,
+        "width": 25,
+        "height": 11,
+        "data": [
+          32,
+          18,
+          27,
+          23
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 6,
+        "kind": "pie",
+        "x": 107,
+        "y": 17,
+        "width": 25,
+        "height": 10,
+        "data": [
+          12,
+          20,
+          11,
+          9
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 7,
+        "kind": "item",
+        "x": 4,
+        "y": 22,
+        "width": 40,
+        "height": 3,
+        "text": "ACTIVE / native semantic selection",
+        "selected": true,
+        "border": "rounded"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 8,
+        "kind": "checkbox",
+        "x": 4,
+        "y": 26,
+        "width": 40,
+        "height": 3,
+        "text": "Enable sampled waveform",
+        "selected": true
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 9,
+        "kind": "radio",
+        "x": 4,
+        "y": 30,
+        "width": 40,
+        "height": 3,
+        "text": "Camera owns the scene",
+        "selected": true
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 10,
+        "kind": "button",
+        "x": 56,
+        "y": 30,
+        "width": 25,
+        "height": 3,
+        "text": "Click to select",
+        "border": "double",
+        "padding": 0
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 11,
+        "kind": "select",
+        "x": 84,
+        "y": 30,
+        "width": 23,
+        "height": 3,
+        "text": "Unavailable",
+        "enabled": false,
+        "border": "rounded"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 12,
+        "kind": "scrollbar",
+        "x": 136,
+        "y": 4,
+        "width": 1,
+        "height": 25,
+        "value": 0.63,
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 13,
+        "kind": "rule",
+        "x": 4,
+        "y": 35,
+        "width": 126,
+        "height": 2,
+        "mode": 8
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 14,
+        "kind": "cursor",
+        "x": 109,
+        "y": 31,
+        "width": 2,
+        "height": 2,
+        "mode": 1
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 15,
+        "kind": "scatter",
+        "x": 106,
+        "y": 28,
+        "width": 25,
+        "height": 6,
+        "data": [
+          0.0,
+          0.45,
+          0.07692307692307693,
+          0.8354232741668772,
+          0.15384615384615385,
+          0.6562005487285857,
+          0.23076923076923078,
+          0.17489353632641036,
+          0.3076923076923077,
+          0.09661813771193872,
+          0.38461538461538464,
+          0.5360479952351263,
+          0.46153846153846156,
+          0.849417338149842,
+          0.5384615384615384,
+          0.5776393449397409,
+          0.6153846153846154,
+          0.1188694123657385,
+          0.6923076923076923,
+          0.14520656643238716,
+          0.7692307692307693,
+          0.6180668147306564,
+          0.8461538461538461,
+          0.8447087857098454,
+          0.9230769230769231,
+          0.4931014609197769,
+          1.0,
+          0.07835039490625212
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 16,
+        "kind": "edge",
+        "x": 134,
+        "y": 5,
+        "width": 2,
+        "height": 23,
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 17,
+        "kind": "text",
+        "x": 4,
+        "y": 2,
+        "width": 125,
+        "height": 1,
+        "text": "PEARL INSTRUMENTS"
+      },
+      {
+        "op": "widget",
+        "material": 2,
+        "id": 18,
+        "kind": "box",
+        "x": 55,
+        "y": 28,
+        "width": 47,
+        "height": 1,
+        "alpha": 0.18
+      },
+      {
+        "op": "define",
+        "path": "/demo/level",
+        "value": 0.67,
+        "binding": {
+          "family": "widget",
+          "id": 3,
+          "field": "value"
+        }
+      },
+      {
+        "op": "define",
+        "path": "/demo/temperature",
+        "value": 20
+      },
+      {
+        "op": "define",
+        "path": "/colors/level",
+        "value": 190,
+        "binding": {
+          "family": "material",
+          "id": 2,
+          "field": "hue"
+        }
+      },
+      {
+        "op": "trigger",
+        "id": 1,
+        "source": "/demo/temperature",
+        "target": "/colors/level",
+        "comparison": "above",
+        "threshold": 50,
+        "hysteresis": 5,
+        "value": 30
+      }
+    ]
+  },
+  {
+    "id": "notifications",
+    "name": "Notification Atelier",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "style": "plasma",
+        "stars": 90
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "channels": {
+          "l": 0.82,
+          "c": 0.065,
+          "h": 180
+        }
+      },
+      {
+        "op": "material",
+        "id": 3,
+        "channels": {
+          "l": 0.8,
+          "c": 0.09,
+          "h": 325
+        }
+      },
+      {
+        "op": "text",
+        "id": 1,
+        "text": "NOTIFICATIONS / every action leaves a intention",
+        "effect": "text/instant-ink",
+        "x": 5,
+        "y": 3,
+        "width": 146,
+        "material": 2
+      },
+      {
+        "op": "area",
+        "id": 2,
+        "x": 7,
+        "y": 7,
+        "width": 103,
+        "height": 10,
+        "padding": 1,
+        "border": "rounded",
+        "alpha": 0.58,
+        "layout": "queue",
+        "material": 2
+      },
+      {
+        "op": "status",
+        "id": 40,
+        "area": 2,
+        "text": "The latest build is ready for inspection.\nThis important record stays available until explicitly acknowledged",
+        "mode": "pop",
+        "durationMs": 0,
+        "important": true,
+        "priority": 80,
+        "actions": [
+          {
+            "id": 1,
+            "label": "Inspect evidence",
+            "event": "/build/inspect",
+            "value": 40
+          },
+          {
+            "id": 2,
+            "label": "Keep reading",
+            "event": "/build/defer",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "op": "area",
+        "id": 3,
+        "x": 13,
+        "y": 19,
+        "width": 123,
+        "height": 7,
+        "padding": 1,
+        "border": "double",
+        "alpha": 0.37,
+        "layout": "queue",
+        "material": 3,
+        "gapMs": 700
+      },
+      {
+        "op": "status",
+        "id": 50,
+        "area": 3,
+        "text": "Telemetry: identical updates share this record; repetitions are counted",
+        "mode": "horizontal-fade",
+        "durationMs": 14000,
+        "key": "agent-health",
+        "coalesce": "count"
+      },
+      {
+        "op": "status",
+        "area": 3,
+        "text": "Telemetry: identical updates share this record; repetitions are counted",
+        "mode": "horizontal-fade",
+        "durationMs": 14000,
+        "key": "agent-health",
+        "coalesce": "count"
+      },
+      {
+        "op": "status",
+        "area": 3,
+        "text": "Telemetry: identical updates share this record; repetitions are counted",
+        "mode": "horizontal-fade",
+        "durationMs": 14000,
+        "key": "agent-health",
+        "coalesce": "count"
+      },
+      {
+        "op": "status",
+        "id": 51,
+        "area": 3,
+        "text": "This message derives its dwell from its complete length",
+        "mode": "fade",
+        "dwellPerCharacterMs": 90,
+        "minDurationMs": 2000,
+        "maxDurationMs": 10000
+      },
+      {
+        "op": "indicator",
+        "id": 10,
+        "x": 8,
+        "y": 29,
+        "sequence": "◐◓◑◒",
+        "stepMs": 160,
+        "material": 2
+      },
+      {
+        "op": "text",
+        "id": 2,
+        "text": "Click an action above; inspect its event below the canvas",
+        "effect": "text/instant-ink",
+        "x": 12,
+        "y": 29,
+        "width": 132
+      },
+      {
+        "op": "status",
+        "id": 99,
+        "text": "Action buttons queue intentions only. Neither a shell nor a provider is invoked",
+        "mode": "horizontal",
+        "durationMs": 0
+      }
+    ]
+  },
+  {
+    "id": "pearl-curves",
+    "name": "Pearl Curves",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "stars": 0,
+        "style": "solid",
+        "sampling": "braille",
+        "background": 1053211
+      },
+      {
+        "op": "widget",
+        "id": 1,
+        "kind": "text",
+        "x": 6,
+        "y": 3,
+        "width": 145,
+        "height": 2,
+        "alpha": 0,
+        "text": "PEARL"
+      },
+      {
+        "op": "widget",
+        "id": 2,
+        "kind": "donut",
+        "x": 6,
+        "y": 7,
+        "width": 38,
+        "height": 19,
+        "data": [
+          18,
+          32,
+          25,
+          25
+        ],
+        "innerRadius": 0.86,
+        "startAngle": -90,
+        "alpha": 0.08,
+        "revealMs": 1800,
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "id": 3,
+        "kind": "donut",
+        "x": 52,
+        "y": 7,
+        "width": 38,
+        "height": 19,
+        "data": [
+          8,
+          13,
+          21,
+          34,
+          24
+        ],
+        "innerRadius": 0.58,
+        "startAngle": -90,
+        "alpha": 0.08,
+        "revealMs": 1800,
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "id": 4,
+        "kind": "donut",
+        "x": 98,
+        "y": 7,
+        "width": 38,
+        "height": 19,
+        "data": [
+          28,
+          32,
+          40
+        ],
+        "innerRadius": 0.79,
+        "startAngle": -135,
+        "sweepAngle": 270,
+        "alpha": 0.08,
+        "revealMs": 1800,
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "id": 5,
+        "kind": "text",
+        "x": 10,
+        "y": 27,
+        "width": 35,
+        "height": 1,
+        "alpha": 0,
+        "text": "THIN RING • 2 × 4 SAMPLES"
+      },
+      {
+        "op": "widget",
+        "id": 6,
+        "kind": "text",
+        "x": 57,
+        "y": 27,
+        "width": 35,
+        "height": 1,
+        "alpha": 0,
+        "text": "WEIGHTED SECTORS"
+      },
+      {
+        "op": "widget",
+        "id": 7,
+        "kind": "text",
+        "x": 104,
+        "y": 27,
+        "width": 34,
+        "height": 1,
+        "alpha": 0,
+        "text": "270° ARC • EASED REVEAL"
+      },
+      {
+        "op": "widget",
+        "id": 8,
+        "kind": "line",
+        "x": 6,
+        "y": 31,
+        "width": 130,
+        "height": 10,
+        "border": "rounded",
+        "data": [
+          0.5,
+          0.5965982819275085,
+          0.6815939333532071,
+          0.745343911118806,
+          0.7817714731676324,
+          0.7893312925276751,
+          0.7711608634500265,
+          0.7343939530233871,
+          0.6887640427312346,
+          0.644754525659548,
+          0.6116344335850376,
+          0.5957387459127478,
+          0.5993072018491883,
+          0.6200932304758526,
+          0.6518137732199951,
+          0.6853570581533702,
+          0.7105267979686144,
+          0.7180030708518003,
+          0.7011602011825449,
+          0.6574075698290849,
+          0.5888057992797566,
+          0.5018424340098254,
+          0.4064041039713712,
+          0.3141283906966339,
+          0.23643158867560948,
+          0.18256769961720223,
+          0.1580685420315978,
+          0.1638457905846324,
+          0.1961156457747839,
+          0.24715753334154,
+          0.3067669153586753,
+          0.3641364977216471,
+          0.40982273063919317,
+          0.43743959415336053,
+          0.4447719373399282,
+          0.43410692795649486,
+          0.41172510168134036,
+          0.38664603855266544,
+          0.36885987076796045,
+          0.36736983523065936,
+          0.388405799918295,
+          0.43413778666720515,
+          0.5021276057366763,
+          0.5856223576456739,
+          0.6746402072773785,
+          0.7576544162803288,
+          0.8235724308766458,
+          0.8636527499479115,
+          0.8730131965500098,
+          0.8514581115597774,
+          0.8034754396227991,
+          0.7374052224144354,
+          0.6639312580846158,
+          0.5941702897126853,
+          0.537705743328826,
+          0.5009225347062279,
+          0.48594408954261714,
+          0.49036257009006534,
+          0.5078084408510312,
+          0.5292523224643261,
+          0.5447984756032904,
+          0.5456395584512083,
+          0.5258128481336397,
+          0.48343427317905363,
+          0.4211817874098215,
+          0.3459364929602222,
+          0.26764356507008924,
+          0.19759746240378775,
+          0.14646118192969526,
+          0.12237825790791199,
+          0.12951988650495105,
+          0.16733093747924482,
+          0.23061199110605413,
+          0.3104229502542294,
+          0.39564480775537114,
+          0.47491690495725,
+          0.5385991943028313,
+          0.5804049515177072,
+          0.5984097996475252,
+          0.5952567971679551,
+          0.5775239613311468,
+          0.5543732448003438,
+          0.535730862366886,
+          0.530334144864852,
+          0.5440042536146896,
+          0.5784627264558017,
+          0.6309104825715123,
+          0.6944486836661257,
+          0.759267093426785,
+          0.814385301913497,
+          0.8496309400247493,
+          0.8574952492437058,
+          0.8345280764095802,
+          0.7820175965384214,
+          0.7058296904915108,
+          0.615434333599373,
+          0.5222938482075089,
+          0.4379035963406418,
+          0.3718385805132586,
+          0.33015804043255026,
+          0.31445474003238055,
+          0.3217181444597979,
+          0.3450324854032823,
+          0.3749787887277975,
+          0.40148194931185155,
+          0.41576318243855714,
+          0.4120393551292746,
+          0.38865722284880727,
+          0.3484539856976141,
+          0.29827699687287945,
+          0.24774914274344967,
+          0.20750437167017532,
+          0.18721494414978285,
+          0.1937705159475017,
+          0.22994211606785514,
+          0.29377635243486544,
+          0.37883272851573885,
+          0.4752238859133393,
+          0.571272758940624,
+          0.6554885790858587,
+          0.7185057935594104,
+          0.7546367951946784,
+          0.7627596547015923,
+          0.7463830028547376,
+          0.7128798102839375,
+          0.6720328241517486,
+          0.6341593575068674,
+          0.6081592514323901
+        ],
+        "alpha": 0.1,
+        "revealMs": 2000,
+        "sampling": "braille"
+      },
+      {
+        "op": "status",
+        "text": "PEARL • Stable braille | Change sampling deliberately | Hold time, replay, inspect every dot",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "leaf-anatomy",
+    "name": "Leaf Anatomy",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "style": "plasma",
+        "stars": 0,
+        "sampling": "hybrid"
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          8,
+          40
+        ],
+        "pitch": -8,
+        "orthographic": true,
+        "span": 50
+      },
+      {
+        "op": "floor",
+        "visible": true,
+        "alpha": 0.14,
+        "sampling": "half"
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/autumn-drift",
+        "count": 1,
+        "runningTimeMs": 0,
+        "position": [
+          -14,
+          2,
+          0
+        ],
+        "extent": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "tumble": [
+          0,
+          0,
+          0
+        ],
+        "flutterHz": 0,
+        "flutterAmount": 0,
+        "sizeMin": 4.8,
+        "sizeMax": 4.8,
+        "lifetimeMinMs": 120000,
+        "lifetimeMaxMs": 120000,
+        "birthFadeMs": 0,
+        "deposit": false,
+        "collision": false,
+        "surfaceAlpha": 0.12,
+        "veinContrast": 1,
+        "shapeWeights": [
+          1,
+          0,
+          0
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "id": 1,
+        "kind": "text",
+        "x": 8,
+        "y": 4,
+        "width": 45,
+        "height": 2,
+        "text": "OVATE / stem, midrib, veins",
+        "material": 1,
+        "alpha": 0
+      },
+      {
+        "op": "emitter",
+        "id": 2,
+        "effect": "weather/autumn-drift",
+        "count": 1,
+        "runningTimeMs": 0,
+        "position": [
+          0,
+          2,
+          0
+        ],
+        "extent": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "tumble": [
+          0,
+          0,
+          0
+        ],
+        "flutterHz": 0,
+        "flutterAmount": 0,
+        "sizeMin": 4.8,
+        "sizeMax": 4.8,
+        "lifetimeMinMs": 120000,
+        "lifetimeMaxMs": 120000,
+        "birthFadeMs": 0,
+        "deposit": false,
+        "collision": false,
+        "surfaceAlpha": 0.12,
+        "veinContrast": 1,
+        "shapeWeights": [
+          0,
+          1,
+          0
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "id": 2,
+        "kind": "text",
+        "x": 57,
+        "y": 4,
+        "width": 45,
+        "height": 2,
+        "text": "MAPLE / stem, midrib, veins",
+        "material": 1,
+        "alpha": 0
+      },
+      {
+        "op": "emitter",
+        "id": 3,
+        "effect": "weather/autumn-drift",
+        "count": 1,
+        "runningTimeMs": 0,
+        "position": [
+          14,
+          2,
+          0
+        ],
+        "extent": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "tumble": [
+          0,
+          0,
+          0
+        ],
+        "flutterHz": 0,
+        "flutterAmount": 0,
+        "sizeMin": 4.8,
+        "sizeMax": 4.8,
+        "lifetimeMinMs": 120000,
+        "lifetimeMaxMs": 120000,
+        "birthFadeMs": 0,
+        "deposit": false,
+        "collision": false,
+        "surfaceAlpha": 0.12,
+        "veinContrast": 1,
+        "shapeWeights": [
+          0,
+          0,
+          1
+        ],
+        "sampling": "braille"
+      },
+      {
+        "op": "widget",
+        "id": 3,
+        "kind": "text",
+        "x": 106,
+        "y": 4,
+        "width": 45,
+        "height": 2,
+        "text": "LANCEOLATE / stem, midrib, veins",
+        "material": 1,
+        "alpha": 0
+      },
+      {
+        "op": "status",
+        "text": "LEAF ANATOMY | Orbit the scene. Blade opacity and veins are separate from the half-block ground",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "mixed-materials",
+    "name": "Mixed Materials",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "style": "wave",
+        "stars": 75,
+        "sampling": "hybrid"
+      },
+      {
+        "op": "widget",
+        "id": 1,
+        "kind": "text",
+        "x": 6,
+        "y": 4,
+        "width": 140,
+        "height": 2,
+        "text": "MIXED MATERIALS / a renderer may not silently restyle its neighbours",
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 2,
+        "kind": "donut",
+        "x": 6,
+        "y": 9,
+        "width": 42,
+        "height": 20,
+        "data": [
+          5,
+          2,
+          3
+        ],
+        "sampling": "cell",
+        "innerRadius": 0.74,
+        "revealMs": 1600,
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 12,
+        "kind": "text",
+        "x": 6,
+        "y": 6,
+        "width": 42,
+        "height": 2,
+        "text": "CELL / independently selected",
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 3,
+        "kind": "donut",
+        "x": 56,
+        "y": 9,
+        "width": 42,
+        "height": 20,
+        "data": [
+          5,
+          2,
+          3
+        ],
+        "sampling": "half",
+        "innerRadius": 0.74,
+        "revealMs": 1600,
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 13,
+        "kind": "text",
+        "x": 56,
+        "y": 6,
+        "width": 42,
+        "height": 2,
+        "text": "HALF / independently selected",
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 4,
+        "kind": "donut",
+        "x": 106,
+        "y": 9,
+        "width": 42,
+        "height": 20,
+        "data": [
+          5,
+          2,
+          3
+        ],
+        "sampling": "braille",
+        "innerRadius": 0.74,
+        "revealMs": 1600,
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 14,
+        "kind": "text",
+        "x": 106,
+        "y": 6,
+        "width": 42,
+        "height": 2,
+        "text": "BRAILLE / independently selected",
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 21,
+        "kind": "progress",
+        "x": 6,
+        "y": 33,
+        "width": 70,
+        "height": 3,
+        "value": 0.67,
+        "sampling": "cell",
+        "alpha": 0.1
+      },
+      {
+        "op": "widget",
+        "id": 22,
+        "kind": "line",
+        "x": 84,
+        "y": 32,
+        "width": 62,
+        "height": 7,
+        "data": [
+          0.5,
+          0.597521668198242,
+          0.6863320162203617,
+          0.7584978801770694,
+          0.8075728983691847,
+          0.829173345579338,
+          0.8213697181898045,
+          0.7848590909941283,
+          0.7229028495818799,
+          0.6410353604771639,
+          0.5465696026597562,
+          0.44794392093272806,
+          0.3539682537126988,
+          0.27303716746928863,
+          0.2123799951035159,
+          0.17741506117051797,
+          0.17126567908417256,
+          0.1944811548318483,
+          0.24498771910652406,
+          0.3182737709427796,
+          0.40779288559435445,
+          0.5055485871598354,
+          0.6028086499594147,
+          0.6908851222481058,
+          0.7619103950702204,
+          0.8095399923356639,
+          0.8295193039736197,
+          0.8200636375788786,
+          0.7820176396691325,
+          0.7187798459271205,
+          0.6359991001297797,
+          0.541069959757331,
+          0.4424721621964167,
+          0.349013155054144,
+          0.269041353094131,
+          0.20970039920934885,
+          0.1762910440780579,
+          0.17179764589268354,
+          0.19662158653065698,
+          0.24854541730671897,
+          0.3229309370598564,
+          0.4131335088492851,
+          0.5110956055829751,
+          0.6080665649154386,
+          0.6953842598533836,
+          0.7652488607620349,
+          0.8114195709165544,
+          0.8297720982868129,
+          0.8186670662612617,
+          0.7790964542771683,
+          0.7145949872518486,
+          0.6309243891331026,
+          0.5355587052588165,
+          0.4370166681465181,
+          0.34410074448850614,
+          0.2651108370181894,
+          0.20710287891810347,
+          0.17525854832305787,
+          0.17242240444469104,
+          0.19884779156890908,
+          0.2521742085653469,
+          0.3276381654231786,
+          0.418498691626914,
+          0.5166394869762477,
+          0.6132939265105655,
+          0.6998281570074684,
+          0.7685123333773447,
+          0.8132111027038049,
+          0.8299316570470808,
+          0.8171803990856985,
+          0.7760963607168985,
+          0.7103494567295788,
+          0.6258126622461313,
+          0.5300373973459498,
+          0.4315789811997696,
+          0.33923241088803185,
+          0.26124673050539915,
+          0.20458816861950552,
+          0.17431786582018594,
+          0.17313977810393832
+        ],
+        "sampling": "braille",
+        "alpha": 0
+      },
+      {
+        "op": "status",
+        "text": "Cell blocks + half blocks + eight-dot curves. Color, opacity, and reveal do not choose the glyph family",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "condition-console",
+    "name": "Condition Console",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "stars": 30,
+        "style": "solid",
+        "sampling": "hybrid"
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "channels": {
+          "h": 180,
+          "l": 0.8,
+          "c": 0.12
+        }
+      },
+      {
+        "op": "widget",
+        "id": 1,
+        "kind": "digits",
+        "x": 8,
+        "y": 10,
+        "width": 36,
+        "height": 12,
+        "value": 0,
+        "sampling": "braille",
+        "material": 2,
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 2,
+        "kind": "text",
+        "x": 8,
+        "y": 4,
+        "width": 140,
+        "height": 2,
+        "text": "CONDITION CONSOLE / intentions + bounded native value guards",
+        "alpha": 0
+      },
+      {
+        "op": "widget",
+        "id": 3,
+        "kind": "text",
+        "x": 52,
+        "y": 10,
+        "width": 85,
+        "height": 10,
+        "text": "ALL: temperature above 50\nANY: enabled, or pressure below 5\nEVENT PAYLOAD: value at least 7\n\nClick Inspect, then open the guard.\nSelected action value appears at left.\nRender never consumes the event",
+        "alpha": 0
+      },
+      {
+        "op": "define",
+        "path": "/demo/heat",
+        "value": 20
+      },
+      {
+        "op": "define",
+        "path": "/demo/enabled",
+        "value": 1
+      },
+      {
+        "op": "define",
+        "path": "/demo/pressure",
+        "value": 10
+      },
+      {
+        "op": "define",
+        "path": "/demo/approved",
+        "value": 0,
+        "binding": {
+          "family": "widget",
+          "id": 1,
+          "field": "value"
+        }
+      },
+      {
+        "op": "define",
+        "path": "/demo/hue",
+        "value": 180,
+        "binding": {
+          "family": "material",
+          "id": 2,
+          "field": "hue"
+        }
+      },
+      {
+        "op": "trigger",
+        "id": 1,
+        "when": {
+          "all": [
+            {
+              "path": "/demo/heat",
+              "comparison": "above",
+              "value": 50,
+              "hysteresis": 5
+            },
+            {
+              "any": [
+                {
+                  "path": "/demo/enabled",
+                  "comparison": "equal",
+                  "value": 1
+                },
+                {
+                  "path": "/demo/pressure",
+                  "comparison": "below",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "intentValue": {
+                "comparison": "at-least",
+                "value": 7
+              }
+            }
+          ]
+        },
+        "event": "/demo/approve",
+        "target": "/demo/approved",
+        "action": "set",
+        "valueFrom": "intentValue"
+      },
+      {
+        "op": "trigger",
+        "id": 2,
+        "when": {
+          "all": [
+            {
+              "path": "/demo/heat",
+              "comparison": "above",
+              "value": 50,
+              "hysteresis": 5
+            },
+            {
+              "any": [
+                {
+                  "path": "/demo/enabled",
+                  "comparison": "equal",
+                  "value": 1
+                },
+                {
+                  "path": "/demo/pressure",
+                  "comparison": "below",
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "target": "/demo/hue",
+        "value": 55
+      },
+      {
+        "op": "trigger",
+        "id": 3,
+        "when": {
+          "all": [
+            {
+              "path": "/demo/heat",
+              "comparison": "above",
+              "value": 50,
+              "hysteresis": 5
+            },
+            {
+              "any": [
+                {
+                  "path": "/demo/enabled",
+                  "comparison": "equal",
+                  "value": 1
+                },
+                {
+                  "path": "/demo/pressure",
+                  "comparison": "below",
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "edge": "falling",
+        "target": "/demo/hue",
+        "value": 180
+      },
+      {
+        "op": "area",
+        "id": 12,
+        "x": 8,
+        "y": 25,
+        "width": 128,
+        "height": 10,
+        "padding": 1,
+        "border": "rounded",
+        "alpha": 0.35,
+        "material": 2
+      },
+      {
+        "op": "status",
+        "id": 600,
+        "area": 12,
+        "text": "APPROVAL EVENT / click Inspect; it remains pending until the guard allows it",
+        "mode": "pop",
+        "durationMs": 0,
+        "actions": [
+          {
+            "id": 1,
+            "label": "Inspect",
+            "event": "/demo/approve",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "op": "status",
+        "id": 601,
+        "area": 0,
+        "text": "CONDITIONS / Local input remains immediate. Explicit acknowledgement belongs to the host",
+        "durationMs": 0
+      }
+    ]
+  },
+  {
+    "id": "weather-authoring",
+    "name": "Nested Weather Authoring",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          0,
+          15,
+          35
+        ],
+        "yaw": 0,
+        "pitch": -10
+      },
+      {
+        "op": "weather-author",
+        "schema": "nocturne.weather-authoring/v1",
+        "id": 9,
+        "effect": "weather/silver-squall",
+        "emission": {
+          "rate": 12,
+          "runningTimeMs": 1000
+        },
+        "birth": {
+          "position": [
+            0,
+            12,
+            0
+          ],
+          "extent": [
+            2,
+            1,
+            2
+          ],
+          "velocity": [
+            0,
+            -5,
+            0
+          ]
+        },
+        "forces": {
+          "gravity": [
+            0,
+            -9,
+            0
+          ],
+          "wind": [
+            0,
+            0,
+            0
+          ]
+        },
+        "collision": {
+          "enabled": false,
+          "deposit": false
+        }
+      },
+      {
+        "op": "status",
+        "text": "NESTED WEATHER AUTHORING / compiled by the native emitter runtime",
+        "durationMs": 0
+      }
+    ]
+  },
+  {
+    "id": "selector-studio",
+    "name": "Selector Studio",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "environment",
+        "stars": 25,
+        "style": "plasma",
+        "sampling": "hybrid"
+      },
+      {
+        "op": "material",
+        "id": 1,
+        "channels": {
+          "h": 42,
+          "l": 0.82,
+          "c": 0.13
+        }
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "channels": {
+          "h": 174,
+          "l": 0.82,
+          "c": 0.13
+        }
+      },
+      {
+        "op": "material",
+        "id": 3,
+        "channels": {
+          "h": 292,
+          "l": 0.82,
+          "c": 0.13
+        }
+      },
+      {
+        "op": "material",
+        "id": 4,
+        "channels": {
+          "h": 235,
+          "l": 0.68,
+          "c": 0.035
+        }
+      },
+      {
+        "op": "material",
+        "id": 5,
+        "channels": {
+          "h": 84,
+          "l": 0.82,
+          "c": 0.13
+        }
+      },
+      {
+        "op": "material",
+        "id": 6,
+        "channels": {
+          "h": 18,
+          "l": 0.82,
+          "c": 0.13
+        }
+      },
+      {
+        "op": "widget",
+        "id": 10,
+        "kind": "text",
+        "x": 8,
+        "y": 4,
+        "width": 144,
+        "height": 3,
+        "alpha": 0,
+        "text": "SELECTOR STUDIO / native state, reversible appearance\nHover. Press. Select. Edit the authored color without losing it"
+      },
+      {
+        "op": "widget",
+        "id": 1,
+        "kind": "button",
+        "x": 8,
+        "y": 11,
+        "width": 42,
+        "height": 5,
+        "text": "ONE / click to select",
+        "border": "rounded",
+        "alpha": 0.2,
+        "material": 1,
+        "active": true
+      },
+      {
+        "op": "state-register",
+        "id": 1,
+        "path": "/studio/controls/one",
+        "role": "control",
+        "target": {
+          "family": "widget",
+          "id": 1
+        }
+      },
+      {
+        "op": "widget",
+        "id": 2,
+        "kind": "button",
+        "x": 55,
+        "y": 11,
+        "width": 42,
+        "height": 5,
+        "text": "TWO / click to select",
+        "border": "rounded",
+        "alpha": 0.2,
+        "material": 1,
+        "active": true
+      },
+      {
+        "op": "state-register",
+        "id": 2,
+        "path": "/studio/controls/two",
+        "role": "control",
+        "target": {
+          "family": "widget",
+          "id": 2
+        }
+      },
+      {
+        "op": "widget",
+        "id": 3,
+        "kind": "button",
+        "x": 102,
+        "y": 11,
+        "width": 42,
+        "height": 5,
+        "text": "THREE / click to select",
+        "border": "rounded",
+        "alpha": 0.2,
+        "material": 1,
+        "active": true
+      },
+      {
+        "op": "state-register",
+        "id": 3,
+        "path": "/studio/controls/three",
+        "role": "control",
+        "target": {
+          "family": "widget",
+          "id": 3
+        }
+      },
+      {
+        "op": "widget",
+        "id": 20,
+        "kind": "progress",
+        "x": 8,
+        "y": 23,
+        "width": 136,
+        "height": 4,
+        "value": 35,
+        "min": 0,
+        "max": 100,
+        "material": 2,
+        "alpha": 0.1,
+        "sampling": "half",
+        "border": "rounded"
+      },
+      {
+        "op": "state-register",
+        "id": 20,
+        "path": "/studio/gauge",
+        "role": "gauge",
+        "target": {
+          "family": "widget",
+          "id": 20
+        }
+      },
+      {
+        "op": "widget",
+        "id": 21,
+        "kind": "text",
+        "x": 8,
+        "y": 19,
+        "width": 136,
+        "height": 3,
+        "alpha": 0,
+        "text": "COPPER authored / TEAL hover / GOLD pressed / VIOLET selected\nFAULT overrides the controls. Disable the middle control for its separate dimmed treatment"
+      },
+      {
+        "op": "widget",
+        "id": 22,
+        "kind": "text",
+        "x": 8,
+        "y": 30,
+        "width": 136,
+        "height": 6,
+        "alpha": 0,
+        "text": "The load value drives the gauge and its background alpha.\nAll appearance is resolved in C, including conditions and state selectors.\nRemoving rules restores the CURRENT authored style, not an old captured copy.\nUse the Selector Studio panel below. All values are synthetic"
+      },
+      {
+        "op": "define",
+        "path": "/studio/load",
+        "value": 35,
+        "binding": {
+          "family": "widget",
+          "id": 20,
+          "field": "value"
+        }
+      },
+      {
+        "op": "define",
+        "path": "/studio/fault",
+        "value": 0
+      },
+      {
+        "op": "style-rule",
+        "id": 1,
+        "selector": {
+          "family": "widget",
+          "role": "control",
+          "states": {
+            "selected": true
+          }
+        },
+        "style": {
+          "material": 3
+        },
+        "priority": 0
+      },
+      {
+        "op": "style-rule",
+        "id": 2,
+        "selector": {
+          "family": "widget",
+          "role": "control",
+          "states": {
+            "hover": true
+          }
+        },
+        "style": {
+          "material": 2
+        },
+        "priority": 10
+      },
+      {
+        "op": "style-rule",
+        "id": 3,
+        "selector": {
+          "family": "widget",
+          "role": "control",
+          "states": {
+            "pressed": true
+          }
+        },
+        "style": {
+          "material": 5
+        },
+        "priority": 20
+      },
+      {
+        "op": "style-rule",
+        "id": 4,
+        "selector": {
+          "family": "widget",
+          "role": "control",
+          "states": {
+            "disabled": true
+          }
+        },
+        "style": {
+          "material": 4
+        },
+        "priority": 40
+      },
+      {
+        "op": "style-rule",
+        "id": 5,
+        "selector": {
+          "family": "widget",
+          "pathPrefix": "/studio/controls"
+        },
+        "style": {
+          "material": 6
+        },
+        "priority": 30,
+        "when": {
+          "path": "/studio/fault",
+          "comparison": "equal",
+          "value": 1
+        }
+      },
+      {
+        "op": "style-rule",
+        "id": 6,
+        "selector": {
+          "family": "widget",
+          "role": "gauge"
+        },
+        "style": {
+          "alpha": {
+            "path": "/studio/load",
+            "inputMin": 0,
+            "inputMax": 100,
+            "outputMin": 0.1,
+            "outputMax": 0.9
+          }
+        }
+      },
+      {
+        "op": "status",
+        "text": "SELECTORS | Authored data survives appearance changes. Rendering does not consume an intention or advance a clock",
+        "durationMs": 0
+      }
+    ]
+  },
+  {
+    "id": "task-graph",
+    "name": "Task / Work Dependencies",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "resize",
+        "width": 160,
+        "height": 48
+      },
+      {
+        "op": "camera",
+        "position": [
+          0,
+          8,
+          162
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "fov": 64,
+        "profile": "original"
+      },
+      {
+        "op": "environment",
+        "stars": 0
+      },
+      {
+        "op": "node",
+        "id": 1,
+        "kind": "Project",
+        "label": "Project: Standalone SDK delivery",
+        "status": "ready",
+        "sha": "3991229a0b98e76fb9b4bc652166699e525c800cb75a8326fc1901f85c3b841d",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 2,
+        "kind": "Session",
+        "label": "Session: integration evidence",
+        "status": "ready",
+        "sha": "e9c3c355755856d9eee596a670840f942220f80005d24c513b5e4d1184da2721",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 3,
+        "kind": "Turn",
+        "label": "Turn: qualify current source",
+        "status": "ready",
+        "sha": "13bdad43effd2a9243011f3e824a8416f873f53bc4d0525919bf7176bba0f300",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 4,
+        "kind": "Request",
+        "label": "Request: compile and execute",
+        "status": "waiting",
+        "sha": "8940afe43a185c462f4acfa218ca9b832b2543255b19aa65a412e4afc5db87ee",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 5,
+        "kind": "Request",
+        "label": "Request: inspect evidence",
+        "status": "ready",
+        "sha": "2427beaf43284ab2d8d0a05e49d161c0887341624923ba14a7b9b9dc0dd446ab",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 6,
+        "kind": "Action",
+        "label": "Action: run contract tests",
+        "status": "ready",
+        "sha": "ae3d82ccb34a7abac109e8b1e24d63d704128bcdfc71efd4d3a70331254e1ccc",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 7,
+        "kind": "Action",
+        "label": "Action: verify shared artifact",
+        "status": "ready",
+        "sha": "16ff0676140926e384e1c45fb58dca14e6583a2f28c3397a3a682899d7b3af45",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "node",
+        "id": 8,
+        "kind": "Action",
+        "label": "Action: review preserved source",
+        "status": "ready",
+        "sha": "cd3a0c7b33e01ac6f403e12dcc58c3c173e596e05bd0129ae72d823902dc45d4",
+        "detail": "Synthetic SDK consumer record. No provider action or external project dependency.",
+        "shaPrefix": 10,
+        "maxColumns": 38,
+        "padding": 0,
+        "showKind": false,
+        "showDetail": false
+      },
+      {
+        "op": "edge",
+        "from": 1,
+        "to": 2,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 2,
+        "to": 3,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 3,
+        "to": 4,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 3,
+        "to": 5,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 4,
+        "to": 6,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 4,
+        "to": 7,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 5,
+        "to": 7,
+        "kind": "contains"
+      },
+      {
+        "op": "edge",
+        "from": 5,
+        "to": 8,
+        "kind": "contains"
+      },
+      {
+        "op": "layout",
+        "profile": "source",
+        "dimensions": 3,
+        "mode": "layered"
+      },
+      {
+        "op": "camera-action",
+        "action": "view",
+        "name": "iso"
+      },
+      {
+        "op": "camera-action",
+        "action": "fit"
+      },
+      {
+        "op": "status",
+        "text": "TASK / WORK GRAPH | Drag look, wheel dolly, 2D/3D controls, click any visible card. Full metadata stays",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "surface-lab",
+    "name": "Surface Lab",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          22,
+          18,
+          38
+        ],
+        "yaw": -28,
+        "pitch": -17,
+        "fov": 65
+      },
+      {
+        "op": "environment",
+        "stars": 0,
+        "style": "solid",
+        "background": 1119519,
+        "sampling": "half"
+      },
+      {
+        "op": "floor",
+        "enabled": false,
+        "visible": false
+      },
+      {
+        "op": "material",
+        "id": 1,
+        "channels": {
+          "l": 0.81,
+          "c": 0.11,
+          "h": 55
+        }
+      },
+      {
+        "op": "material",
+        "id": 2,
+        "channels": {
+          "l": 0.88,
+          "c": 0.035,
+          "h": 225
+        }
+      },
+      {
+        "op": "surface",
+        "id": 1,
+        "renderVisible": true,
+        "restitution": 0.25,
+        "friction": 0.4,
+        "maxIndividual": 8,
+        "maxTiles": 8,
+        "overflow": "merge-to-field",
+        "reentrainWindSpeed": 0,
+        "wetnessGain": 0.05,
+        "evaporation": 0.025,
+        "heatGain": 0.3,
+        "cooling": 0.06,
+        "thermalEvaporation": 0.1,
+        "wetnessDarkening": 0.55,
+        "heatTintStrength": 0.55
+      },
+      {
+        "op": "surface",
+        "id": 2,
+        "renderVisible": false,
+        "restitution": 0.25,
+        "friction": 0.4,
+        "maxIndividual": 8,
+        "maxTiles": 8,
+        "overflow": "merge-to-field",
+        "reentrainWindSpeed": 0,
+        "wetnessGain": 0.05,
+        "evaporation": 0.025,
+        "heatGain": 0.3,
+        "cooling": 0.06,
+        "thermalEvaporation": 0.1,
+        "wetnessDarkening": 0.55,
+        "heatTintStrength": 0.55
+      },
+      {
+        "op": "mesh",
+        "sampling": "half",
+        "triangles": [
+          {
+            "a": [
+              -14,
+              0,
+              -8
+            ],
+            "b": [
+              -2,
+              3,
+              -8
+            ],
+            "c": [
+              -2,
+              3,
+              8
+            ],
+            "surfaceId": 1,
+            "color": 5402488,
+            "alpha": 0.72
+          },
+          {
+            "a": [
+              -14,
+              0,
+              -8
+            ],
+            "b": [
+              -2,
+              3,
+              8
+            ],
+            "c": [
+              -14,
+              0,
+              8
+            ],
+            "surfaceId": 1,
+            "color": 5402488,
+            "alpha": 0.72
+          },
+          {
+            "a": [
+              2,
+              0,
+              -8
+            ],
+            "b": [
+              14,
+              3,
+              -8
+            ],
+            "c": [
+              14,
+              3,
+              8
+            ],
+            "surfaceId": 2,
+            "color": 5402488,
+            "alpha": 0.72
+          },
+          {
+            "a": [
+              2,
+              0,
+              -8
+            ],
+            "b": [
+              14,
+              3,
+              8
+            ],
+            "c": [
+              2,
+              0,
+              8
+            ],
+            "surfaceId": 2,
+            "color": 5402488,
+            "alpha": 0.72
+          }
+        ]
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "count": 40,
+        "runningTimeMs": 6000,
+        "position": [
+          -8,
+          10,
+          0
+        ],
+        "shape": "box",
+        "extent": [
+          10,
+          0,
+          10
+        ],
+        "velocity": [
+          0,
+          -9,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          -2,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "flutterAmount": 0,
+        "colliders": {
+          "floor": false,
+          "surfaces": [
+            1
+          ]
+        },
+        "lifetimeMinMs": 10000,
+        "lifetimeMaxMs": 10000,
+        "birthFadeMs": 120,
+        "effect": "weather/autumn-drift",
+        "deposit": true,
+        "material": 1,
+        "sizeMin": 0.65,
+        "sizeMax": 1.15,
+        "sampling": "braille",
+        "surfaceAlpha": 0.12,
+        "veinContrast": 0.85,
+        "tumble": [
+          17,
+          33,
+          24
+        ]
+      },
+      {
+        "op": "emitter",
+        "id": 3,
+        "count": 180,
+        "runningTimeMs": 6000,
+        "position": [
+          -8,
+          13,
+          0
+        ],
+        "shape": "box",
+        "extent": [
+          10,
+          0,
+          10
+        ],
+        "velocity": [
+          0,
+          -18,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          -2,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "flutterAmount": 0,
+        "colliders": {
+          "floor": false,
+          "surfaces": [
+            1
+          ]
+        },
+        "lifetimeMinMs": 10000,
+        "lifetimeMaxMs": 10000,
+        "birthFadeMs": 120,
+        "effect": "weather/silver-squall",
+        "deposit": false,
+        "material": 2,
+        "sizeMin": 0.06,
+        "sizeMax": 0.12,
+        "trailMs": 45,
+        "sampling": "half"
+      },
+      {
+        "op": "emitter",
+        "id": 2,
+        "count": 40,
+        "runningTimeMs": 6000,
+        "position": [
+          8,
+          10,
+          0
+        ],
+        "shape": "box",
+        "extent": [
+          10,
+          0,
+          10
+        ],
+        "velocity": [
+          0,
+          -9,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          -2,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "flutterAmount": 0,
+        "colliders": {
+          "floor": false,
+          "surfaces": [
+            2
+          ]
+        },
+        "lifetimeMinMs": 10000,
+        "lifetimeMaxMs": 10000,
+        "birthFadeMs": 120,
+        "effect": "weather/autumn-drift",
+        "deposit": true,
+        "material": 1,
+        "sizeMin": 0.65,
+        "sizeMax": 1.15,
+        "sampling": "braille",
+        "surfaceAlpha": 0.12,
+        "veinContrast": 0.85,
+        "tumble": [
+          17,
+          33,
+          24
+        ]
+      },
+      {
+        "op": "emitter",
+        "id": 4,
+        "count": 180,
+        "runningTimeMs": 6000,
+        "position": [
+          8,
+          13,
+          0
+        ],
+        "shape": "box",
+        "extent": [
+          10,
+          0,
+          10
+        ],
+        "velocity": [
+          0,
+          -18,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          -2,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "lift": 0,
+        "flutterAmount": 0,
+        "colliders": {
+          "floor": false,
+          "surfaces": [
+            2
+          ]
+        },
+        "lifetimeMinMs": 10000,
+        "lifetimeMaxMs": 10000,
+        "birthFadeMs": 120,
+        "effect": "weather/silver-squall",
+        "deposit": false,
+        "material": 2,
+        "sizeMin": 0.06,
+        "sizeMax": 0.12,
+        "trailMs": 45,
+        "sampling": "half"
+      },
+      {
+        "op": "emitter",
+        "id": 5,
+        "effect": "weather/thermal-cinders",
+        "count": 30,
+        "runningTimeMs": 6000,
+        "shape": "box",
+        "position": [
+          -8,
+          4,
+          0
+        ],
+        "extent": [
+          8,
+          0,
+          8
+        ],
+        "velocity": [
+          0,
+          -6,
+          0
+        ],
+        "spread": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0,
+          0,
+          0
+        ],
+        "wind": [
+          0,
+          0,
+          0
+        ],
+        "windVariation": [
+          0,
+          0,
+          0
+        ],
+        "drag": 0,
+        "heat": 0,
+        "deposit": false,
+        "sizeMin": 0.12,
+        "sizeMax": 0.24,
+        "lifetimeMinMs": 10000,
+        "lifetimeMaxMs": 10000,
+        "colliders": {
+          "floor": false,
+          "surfaces": [
+            1
+          ]
+        },
+        "sampling": "half"
+      },
+      {
+        "op": "status",
+        "text": "SURFACE LAB / Left collector visible; right collector invisible. Rain and leaves contact both",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "chrysanthemum-generic",
+    "name": "Chrysanthemum / generic",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          16,
+          12,
+          42
+        ],
+        "yaw": -22,
+        "pitch": -4
+      },
+      {
+        "op": "material",
+        "id": 1,
+        "scope": "characters",
+        "hueStep": 2,
+        "channels": {
+          "l": 0.82,
+          "c": 0.13,
+          "h": 15
+        }
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/chrysanthemum",
+        "count": 220,
+        "position": [
+          0,
+          10,
+          0
+        ],
+        "runningTimeMs": 0,
+        "lifetimeMinMs": 2400,
+        "lifetimeMaxMs": 6200,
+        "topology": 0,
+        "trailMs": 170
+      },
+      {
+        "op": "environment",
+        "stars": 160
+      }
+    ]
+  },
+  {
+    "id": "arcs-generic",
+    "name": "Branchlight / generic",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          18,
+          11,
+          30
+        ],
+        "yaw": -28,
+        "pitch": -5
+      },
+      {
+        "op": "emitter",
+        "id": 1,
+        "effect": "weather/branchlight",
+        "count": 22,
+        "position": [
+          0,
+          9,
+          0
+        ],
+        "extent": [
+          15,
+          10,
+          10
+        ],
+        "lifetimeMinMs": 750,
+        "lifetimeMaxMs": 1800
+      }
+    ]
+  },
+  {
+    "id": "flight-eased",
+    "name": "Oblique Flight / Eased Sequence",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "position": [
+          0,
+          10,
+          46
+        ],
+        "yaw": -24,
+        "pitch": 4,
+        "fov": 74
+      },
+      {
+        "op": "environment",
+        "stars": 450,
+        "starFar": 155
+      },
+      {
+        "op": "flight",
+        "steps": [
+          {
+            "kind": "cruise",
+            "durationMs": 7000,
+            "speed": 12
+          },
+          {
+            "kind": "turn",
+            "durationMs": 14000,
+            "speed": 12,
+            "yaw": 90,
+            "bank": 26,
+            "coordinated": true
+          },
+          {
+            "kind": "climb",
+            "durationMs": 12000,
+            "speed": 8,
+            "pitch": 25
+          },
+          {
+            "kind": "turn",
+            "durationMs": 15000,
+            "speed": 10,
+            "yaw": -110,
+            "bank": 0,
+            "coordinated": false
+          }
+        ]
+      },
+      {
+        "op": "status",
+        "text": "OBLIQUE FLIGHT | Cruise → coordinated 90° turn → climb → flat turn. Brake is explicit",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "flight-banked",
+    "name": "Oblique Flight / Banked Turn",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "profile": "original",
+        "navigation": "fly",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "yaw": -18,
+        "pitch": 8,
+        "roll": 12,
+        "fov": 70,
+        "near": 0.1,
+        "far": 1000
+      },
+      {
+        "op": "environment",
+        "starProfile": "source",
+        "worldSeed": 2030,
+        "skyDensity": 9,
+        "skyRadius": 280,
+        "skyExposure": 6500,
+        "trailMs": 100,
+        "textLightness": 0.83,
+        "textChroma": 0.1
+      },
+      {
+        "op": "flight",
+        "profile": "original",
+        "steps": [
+          {
+            "kind": "turn",
+            "durationMs": 18000,
+            "yaw": -90,
+            "speed": 9,
+            "coordinated": true,
+            "bank": 32
+          }
+        ]
+      },
+      {
+        "op": "status",
+        "text": "OBLIQUE FLIGHT / BANKED TURN | flight remains active while looking or panning. Brake is explicit",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "flight-flat",
+    "name": "Oblique Flight / Flat Turn",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "profile": "original",
+        "navigation": "fly",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "yaw": -18,
+        "pitch": 8,
+        "roll": 12,
+        "fov": 70,
+        "near": 0.1,
+        "far": 1000
+      },
+      {
+        "op": "environment",
+        "starProfile": "source",
+        "worldSeed": 2030,
+        "skyDensity": 9,
+        "skyRadius": 280,
+        "skyExposure": 6500,
+        "trailMs": 100,
+        "textLightness": 0.83,
+        "textChroma": 0.1
+      },
+      {
+        "op": "flight",
+        "profile": "original",
+        "steps": [
+          {
+            "kind": "turn",
+            "durationMs": 18000,
+            "yaw": 90,
+            "speed": 9,
+            "coordinated": false,
+            "bank": 32
+          }
+        ]
+      },
+      {
+        "op": "status",
+        "text": "OBLIQUE FLIGHT / FLAT TURN | flight remains active while looking or panning. Brake is explicit",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  },
+  {
+    "id": "flight-climb-roll-dive",
+    "name": "Oblique Flight / Climb, Roll and Dive",
+    "subtitle": "",
+    "commands": [
+      {
+        "op": "camera",
+        "profile": "original",
+        "navigation": "fly",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "yaw": -18,
+        "pitch": 8,
+        "roll": 12,
+        "fov": 70,
+        "near": 0.1,
+        "far": 1000
+      },
+      {
+        "op": "environment",
+        "starProfile": "source",
+        "worldSeed": 2030,
+        "skyDensity": 9,
+        "skyRadius": 280,
+        "skyExposure": 6500,
+        "trailMs": 100,
+        "textLightness": 0.83,
+        "textChroma": 0.1
+      },
+      {
+        "op": "flight",
+        "profile": "original",
+        "steps": [
+          {
+            "kind": "climb",
+            "durationMs": 9000,
+            "pitch": 22,
+            "speed": 9
+          },
+          {
+            "kind": "roll",
+            "durationMs": 6000,
+            "roll": 60,
+            "speed": 9
+          },
+          {
+            "kind": "dive",
+            "durationMs": 12000,
+            "pitch": 35,
+            "speed": 9
+          }
+        ]
+      },
+      {
+        "op": "status",
+        "text": "OBLIQUE FLIGHT / CLIMB, ROLL AND DIVE | flight remains active while looking or panning. Brake is explicit",
+        "durationMs": 0,
+        "mode": "horizontal"
+      }
+    ]
+  }
+]

@@ -1,0 +1,470 @@
+{
+  "schema": "nocturne.ratatui.bounded-assessment.v2",
+  "attempt": "offline-vendor recovery 2",
+  "inputSourceArchiveSha256": "6fb892c64c76e1566f0ab6deca000ded6c4c572e74e03557e20d3107f229ab25",
+  "inputSourceFiles": 509,
+  "status": "PASS",
+  "ratatuiQualified": true,
+  "fullRC4Qualified": false,
+  "stableRelease": false,
+  "scope": "Current dependency-backed Ratatui adapter and synthetic POSIX fixture only",
+  "compiler": {
+    "rustc": "1.98.1",
+    "host": "x86_64-unknown-linux-gnu",
+    "programAndTestExecuted": true,
+    "inventoryMembersVerified": 166,
+    "fullOuterArchiveVerified": false,
+    "rust188Executed": false
+  },
+  "dependencies": {
+    "ratatui": "=0.29.0",
+    "unicode-width": "=0.2.0",
+    "vendorPackagesVerified": 70,
+    "vendorFileChecksumsVerified": 6673,
+    "cargoLockSha256": "33d2228dbb4537eef2988fb2f3e1be70c3f72c37ca46d96e9c4a6ab9efb8a6f0",
+    "vendorArchiveSha256": "2ffeae783e93d4e023193c16d075150d06e972eabbdc1857c35d032fb7341fc9"
+  },
+  "frameworkTests": {
+    "adapterUnitTests": 1,
+    "adapterIntegrationTests": 11,
+    "separateExecutedDoctests": 1,
+    "fixtureHelperTests": 7,
+    "helperTestsAreNotFrameworkQualification": true,
+    "ptyCasesExecuted": 6
+  },
+  "commands": [
+    {
+      "id": "rust-identity",
+      "argv": [
+        "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "-vV"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.457057+00:00",
+      "status": "PASS",
+      "pid": 8387,
+      "exitCode": 0,
+      "seconds": 0.007781,
+      "finishedAt": "2026-10-01T03:55:41.464953+00:00",
+      "log": "rust-identity.log",
+      "logSha256": "778fbc643a806f0dd123c056e66201d7e8a56a61928ec0a33171be8d6c2d5a37"
+    },
+    {
+      "id": "cargo-identity",
+      "argv": [
+        "cargo",
+        "--version"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.465335+00:00",
+      "status": "PASS",
+      "pid": 8389,
+      "exitCode": 0,
+      "seconds": 0.003647,
+      "finishedAt": "2026-10-01T03:55:41.469074+00:00",
+      "log": "cargo-identity.log",
+      "logSha256": "9950bbb2d5c3417b1a068f0e81f6d3cac991a363193bdf2a22d447f5acf8b503"
+    },
+    {
+      "id": "rustdoc-identity",
+      "argv": [
+        "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "--version"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.469417+00:00",
+      "status": "PASS",
+      "pid": 8390,
+      "exitCode": 0,
+      "seconds": 0.00767,
+      "finishedAt": "2026-10-01T03:55:41.477176+00:00",
+      "log": "rustdoc-identity.log",
+      "logSha256": "7b3536f4f4cceee8577f977a53540f0893b77b77b0fd2616db9e81d6d29b4dca"
+    },
+    {
+      "id": "sysroot",
+      "argv": [
+        "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "--print",
+        "sysroot"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.477497+00:00",
+      "status": "PASS",
+      "pid": 8391,
+      "exitCode": 0,
+      "seconds": 0.007666,
+      "finishedAt": "2026-10-01T03:55:41.485252+00:00",
+      "log": "sysroot.log",
+      "logSha256": "33e0eb791031cb5602fd5f457958ff45e29f416c65a2ed8ac91a55b9dcca16b3"
+    },
+    {
+      "id": "dependency-metadata",
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "/mnt/data/nocturne-recovery2/source/native/hosts/ratatui/Cargo.toml",
+        "--format-version",
+        "1"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.485645+00:00",
+      "status": "PASS",
+      "pid": 8395,
+      "exitCode": 0,
+      "seconds": 0.032124,
+      "finishedAt": "2026-10-01T03:55:41.517849+00:00",
+      "log": "dependency-metadata.log",
+      "logSha256": "645b8be6e5054bb9164ad80545deb2c88aec2d3e3819289d53efd674a6cfde0e"
+    },
+    {
+      "id": "host-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "/mnt/data/nocturne-recovery2/source/native/hosts/ratatui/Cargo.toml",
+        "--all-targets"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.518525+00:00",
+      "status": "PASS",
+      "pid": 8397,
+      "exitCode": 0,
+      "seconds": 0.468621,
+      "finishedAt": "2026-10-01T03:55:41.987228+00:00",
+      "log": "host-tests.log",
+      "logSha256": "9d010280781df92d13f1ac962066b56a9253bf93d11bd82d7736feababee0bc0"
+    },
+    {
+      "id": "host-doctests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "/mnt/data/nocturne-recovery2/source/native/hosts/ratatui/Cargo.toml",
+        "--doc"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:41.987770+00:00",
+      "status": "PASS",
+      "pid": 8616,
+      "exitCode": 0,
+      "seconds": 0.164433,
+      "finishedAt": "2026-10-01T03:55:42.152290+00:00",
+      "log": "host-doctests.log",
+      "logSha256": "690e2598753a827e94dbd5b5dfb9ba923bf435f562dc14abb0b2a982447f6dd2"
+    },
+    {
+      "id": "host-docs",
+      "argv": [
+        "cargo",
+        "doc",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "/mnt/data/nocturne-recovery2/source/native/hosts/ratatui/Cargo.toml",
+        "--no-deps"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:42.152790+00:00",
+      "status": "PASS",
+      "pid": 8639,
+      "exitCode": 0,
+      "seconds": 0.415182,
+      "finishedAt": "2026-10-01T03:55:42.568093+00:00",
+      "log": "host-docs.log",
+      "logSha256": "cd1f5af64dcb73f11ff10683895068eda818d369ccedf031f82f3fb49a54a88a"
+    },
+    {
+      "id": "fixture-build",
+      "argv": [
+        "cargo",
+        "build",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "/mnt/data/nocturne-recovery2/source/native/hosts/ratatui/Cargo.toml",
+        "--example",
+        "qualification",
+        "--message-format=json-render-diagnostics"
+      ],
+      "cwd": "/mnt/data/nocturne-recovery2/source",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "/mnt/data/nocturne-recovery2/compiler/bin:/mnt/data/nocturne-recovery2/compiler/bin:/opt/apply_patch/bin:/opt/imagemagick/bin:/opt/pyvenv/bin:/usr/local/swift/usr/bin:/usr/local/go/bin:/opt/nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.sdkman/candidates/kotlin/current/bin",
+        "RUSTC": "/mnt/data/nocturne-recovery2/compiler/bin/rustc",
+        "RUSTDOC": "/mnt/data/nocturne-recovery2/compiler/bin/rustdoc",
+        "CARGO_HOME": "/mnt/data/nocturne-recovery2/cargo-home",
+        "CARGO_TARGET_DIR": "/mnt/data/nocturne-recovery2/target",
+        "CARGO_NET_OFFLINE": "true",
+        "CC": "/usr/bin/cc",
+        "AR": "/usr/bin/ar"
+      },
+      "startedAt": "2026-10-01T03:55:42.568643+00:00",
+      "status": "PASS",
+      "pid": 8650,
+      "exitCode": 0,
+      "seconds": 0.214581,
+      "finishedAt": "2026-10-01T03:55:42.783332+00:00",
+      "log": "fixture-build.log",
+      "logSha256": "2e1acbbad7b878ba23de9fafa054bd10358763e07773acbbd22d5f8b2c982e5c"
+    }
+  ],
+  "pty": [
+    {
+      "id": "pty-input-resize-ctrlq",
+      "status": "PASS",
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "native edit committed: 'abc', caret 3",
+        "native edit committed: 'abc', caret 0",
+        "native edit committed: '\u00e9abc', caret 1",
+        "native edit committed: '\u00e9abc', caret 4",
+        "native edit committed: '\u00e9abc \\\\\"Z', caret 8",
+        "native edit committed: '\u00e9abc \\\\\"', caret 7",
+        "typed Unicode appears in actual terminal output",
+        "PTY resize reached current native frame",
+        "native title repainted after resize",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "parentForcedCleanup": false,
+      "seconds": 0.090695,
+      "traceSha256": "49d9a941375661446eb5a8225b0d4a6244239cad65abe8cb063790cd457def73"
+    },
+    {
+      "id": "pty-pointer-focus",
+      "status": "PASS",
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "native hover=True",
+        "native pressed=True",
+        "native pressed=False",
+        "native hover=False",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "parentForcedCleanup": false,
+      "seconds": 0.075292,
+      "traceSha256": "ca8fa7667a8e56437117ed49249b91800fadd60c843f24aecbabc71c424c1eb8"
+    },
+    {
+      "id": "pty-ctrlc",
+      "status": "PASS",
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "parentForcedCleanup": false,
+      "seconds": 0.064701,
+      "traceSha256": "3fe3c0aba0c2b95d319fb61bd572bd48dab10c183528c5587b2f40fee8fe8135"
+    },
+    {
+      "id": "pty-error",
+      "status": "PASS",
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 1,
+      "exitCode": 1,
+      "parentForcedCleanup": false,
+      "seconds": 0.064822,
+      "traceSha256": "cbaaeb00e234fbf63ac05fcdf3224d5ee5b27e34efa340fbe7a8aadbb783fec0"
+    },
+    {
+      "id": "pty-panic",
+      "status": "PASS",
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 101,
+      "exitCode": 101,
+      "parentForcedCleanup": false,
+      "seconds": 0.075428,
+      "traceSha256": "0bf405943b9bd1fe64de4729a25f2504960293b31be66b20910e9ea190184737"
+    },
+    {
+      "id": "pty-partial-setup",
+      "status": "PASS",
+      "checks": [
+        "raw partial setup was observed before authorizing its failure",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 1,
+      "exitCode": 1,
+      "parentForcedCleanup": false,
+      "seconds": 0.104093,
+      "traceSha256": "b35702dfa4d8dbe4a89ec2640efe878a479f33d8f28fd14af7f298e6af4ff6a2"
+    }
+  ],
+  "sourceHashesAtExecution": {
+    "native/bindings/rust/Cargo.lock": "8978d0ee7d1dea8b4ed4e28d613d348dbca5439ef09e1c59ca11b6c931e60cc2",
+    "native/bindings/rust/Cargo.toml": "2df9f45201750235cd5c408da277186d8bbbc5dfefb54fcfb846e24bce0895a8",
+    "native/bindings/rust/build.rs": "94b66d0d74fa208ee22f3ab875b8066c5203fc73d4407e53d65a58e465083e18",
+    "native/bindings/rust/examples/replay.rs": "69a19b57349241c5eff255f19cd24cf0fca29d9934d5edb5098d02d7152180e3",
+    "native/bindings/rust/examples/snapshot.rs": "a94ac8848ac24b5fa55002412f608e95a84311d5ae307c5664cdee9b8755c131",
+    "native/bindings/rust/src/lib.rs": "5db7da316408abd39e6969b4e805c1c9644c4ea8fab4a1bd1146a24640816539",
+    "native/bindings/rust/tests/selectors.rs": "ce23cf17fbfbf4e1f9c61ffad2dbb2fcac9b48343cc2d990e04735483de2b99a",
+    "native/bindings/rust/tests/snapshot_layout.rs": "bd02d88c5b069ae5f54a816432574d01dc5cd7352ff97973fdb664c41aab23ec",
+    "native/hosts/ratatui/Cargo.lock": "33d2228dbb4537eef2988fb2f3e1be70c3f72c37ca46d96e9c4a6ab9efb8a6f0",
+    "native/hosts/ratatui/Cargo.toml": "3bb7eaa5fc6ea7c84d0a59d8fd6e3a3c633b84f4356f301bce608beaf8d74e59",
+    "native/hosts/ratatui/examples/qualification.rs": "260d7292f459ae48db941da801ea643b446ec848b4c35be5aa5534a247d750b3",
+    "native/hosts/ratatui/examples/support/mod.rs": "5e4a6a1136d7f210ecd7a253ef902a3f1e4558d9560d8544eff4bce29f1102a4",
+    "native/hosts/ratatui/qualify.py": "b252e0e18efa4ba794e28b2a2cb4169e3ae64c5f1de396c451e70a7a345b97ac",
+    "native/hosts/ratatui/src/lib.rs": "f5f16de53f323da7c20f845901ae95abc1454692c1310a4dd6ca568cdf6cb163",
+    "native/hosts/ratatui/test_qualification.py": "fb738d38584ce5ec29f2f29de94f010c02fb7b6dcea9e7f10e4616f533e71297",
+    "native/hosts/ratatui/tests/adapter_contract.rs": "a719cc869bac56e168c186622e8b677ca5378f2adc0977db090c8c5949743ed4",
+    "native/include/nocturne_native.h": "f96dc53cb8be9b947210aa48580e3272de53ff8c80bf9e0288479d70079c6d28",
+    "native/src/blend.c": "44204713babce763b7d631d424ea9ea1eff4d02dd6539c10f02b8461762043b3",
+    "native/src/catalog.c": "52c5ebb6a07ae50428ef28bf095a118e7304d585b66827d6e588da0caa9e9b13",
+    "native/src/commands.c": "411a705d2bca5701de3f3fc589425f9094b84ebe28f7852ae40d896834d0f600",
+    "native/src/conditions.c": "bf7984cb9abf0478b448f9faa68c785d70e970d7a0c8b425bdf731a36d580351",
+    "native/src/internal.h": "7360a7237327171ebc29eac1f6cb83aad19554ed4dd3fcb9fbdcd6d575941a2f",
+    "native/src/json.c": "1b63b88790e8a4629fe2c65abbd539460d1588740122adc529846386e78c8d7a",
+    "native/src/math.c": "1063f1841347d9112e183ad0dc3ffabce77e24ad7c6d269e12cbba81858b16de",
+    "native/src/motion.c": "4eefb428195343a4d56afa08a27d37f556c53d55b2eb50d6483da74432858a09",
+    "native/src/notifications.c": "608c045219a663d8d67e39ec23a2683ae9541ab51e61dbf6572044abb901e3c6",
+    "native/src/plots.c": "093806ccf14a673d7b9597221f4f978ac45109a9b83916a0bf182074373242cc",
+    "native/src/render.c": "20177a36e462e0762128e4bc600bb28de30ad7bc5bda854a66d31ee37e530976",
+    "native/src/sampling.c": "62d1fe48d5eb40037087f87fc2bd4a0cc089ee7097dd28f3ecc637c895866590",
+    "native/src/state.c": "1241529053a705c85f9bac95e348bc4a8dcff74abfc5dff2f61ffe64312889a2",
+    "native/src/status.c": "062782b16f6b0b1bb09a1636d52ea2a5f517aa14eaf0e11614ee0493573f23a5",
+    "native/src/styles.c": "274ed1427e90e3f885fdb3c282a250afb8f2e57930b7b03fd0eeb5d659f50938",
+    "native/src/text_transition.c": "6b49eb36bb6f2b5deb959831ee6e0f43c9c2d32dd6559502ad64b575cf6ab9b4",
+    "native/src/transactions.c": "316a97bd01ed3dfe016a48d6be95bb49108cd6f337a9fd5c5e1a6ac254b89a89",
+    "native/src/ui.c": "605c8e91f1ec20e7852276856a41a2215cfe08dc5ee0a1a63988de7cc12f2183",
+    "native/src/validate.c": "82cac5e2f05fcb37d5a7075e07dab7a83de1f36e4b8383109064f676a4ad325c",
+    "native/src/values.c": "0e4d9533106df643a4436e1140649985664ea5542194e03ab0c7ba948ad32fcf",
+    "native/src/wasm_mem.c": "95750ce81c0d514508bac288738028a02357214a5637197299c1bed804d085e7",
+    "native/src/weather.c": "f516a3373a406a4b89a0191b961627382b4738fb621b1459a86acc047c5e57c9",
+    "native/src/window_transition.c": "8974fb79f2b8c8e16c1967070569a1b146787819272829ae2151226d1da756fd"
+  },
+  "finishedAt": "2026-10-01T03:55:43.336303+00:00",
+  "evidenceBundlePaths": [
+    "current/gate-current/QUALIFICATION.json",
+    "current/gate-final/QUALIFICATION.json",
+    "current/sdk-final-strict/EXECUTION.json"
+  ],
+  "evidenceNote": "gate-current is the completed pre-freeze result summarized here. Final candidate/extraction reruns are separate receipts; their success is not inferred by this source file.",
+  "historicalBlockedAssessment": "QUALIFICATION-20260930.json",
+  "remaining": [
+    "Ratatui target-platform, Rust 1.88, Unicode/editor/accessibility acceptance",
+    "Terminal Kit dependency-backed execution",
+    "Bubble Tea preserved prior PTY result; new environment lacks its Go modules",
+    "Historical rendering review and remaining standalone shared TUI/GUI/cloud SDK architecture"
+  ]
+}

@@ -1,0 +1,9 @@
+import type {NativeScene} from './native_scene.mjs';
+import type {NativeCommand} from './contracts.js';
+import type {PearlConfig,PearlNode,PearlPalette} from './pearl_authored_data.mjs';
+import type {FleetController,FleetScene} from './pearl_fleet_original.mjs';
+import type {StudioDataSource,StudioDataSnapshot} from './pearl_data.mjs';
+export function pearlStageDefaults(overrides?:Record<string,number>):PearlConfig;
+export function pearlStageConfig(config:PearlConfig):{values:Record<string,number>;palette:number[];starPalette:number[];glyphs:number[];novaGlyphs:number[]};
+export function pearlStageNodes(nodes:PearlNode[],firstId?:number):NativeCommand[];
+export class PearlStageSession {constructor(scene:NativeScene,family:'studio'|'fleet',options?:{studioScene?:string;revision?:'initial'|'later'});scene:NativeScene;family:'studio'|'fleet';elapsedMs:number;nextMs:number;fleet?:FleetController;studio?:StudioDataSource;compose():FleetScene|{timeMs:number;config:PearlConfig;nodes:PearlNode[];events:unknown[]};commit():ReturnType<PearlStageSession['compose']>;advanceTo(elapsedMs:number):ReturnType<PearlStageSession['compose']>;advanceBudgetedTo(elapsedMs:number,budget?:number):0|1;click(x:number,y:number):string;setValue(value:number):ReturnType<PearlStageSession['compose']>;promptCommit(text:string):ReturnType<PearlStageSession['compose']>;resize(width:number,height:number):ReturnType<PearlStageSession['compose']>;applyStudioPalette(palette:PearlPalette):void;checkpoint():{schema:'nocturne.pearl-fleet-checkpoint.v1';family:'fleet';elapsedMs:number;nextMs:number;source:FleetScene;host:{controller:Record<string,unknown>;model:Record<string,unknown>};native:Uint8Array};restoreCheckpoint(value:unknown):ReturnType<PearlStageSession['snapshot']>;snapshot():{family:'studio'|'fleet';elapsedMs:number;nextMs:number;source:ReturnType<PearlStageSession['compose']>;data?:StudioDataSnapshot;[field:string]:unknown};}

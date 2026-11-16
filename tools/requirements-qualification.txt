@@ -1,0 +1,8 @@
+prompt_toolkit==3.0.52
+playwright==1.55.0
+Pillow==11.3.0
+numpy==2.2.6
+PyYAML==6.0.2
+Markdown==3.11.1
+reportlab==5.0.1
+pypdf==6.21.0

@@ -1,0 +1,21 @@
+{
+  "op": "batch",
+  "commands": [
+    {
+      "op": "resize",
+      "width": 80,
+      "height": 24
+    },
+    {
+      "op": "widget",
+      "id": 1,
+      "kind": "progress",
+      "x": 5,
+      "y": 6,
+      "width": 60,
+      "height": 3,
+      "value": 0.65,
+      "border": "rounded"
+    }
+  ]
+}

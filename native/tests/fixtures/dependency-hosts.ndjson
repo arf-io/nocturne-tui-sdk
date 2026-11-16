@@ -1,0 +1,7 @@
+{"op":"resize","width":80,"height":24}
+{"op":"environment","style":"solid","stars":0,"background":1118224}
+{"op":"widget","id":2,"kind":"text","text":"NOCTURNE HOST QUALIFICATION","x":4,"y":3,"width":64,"height":1,"alpha":0}
+{"op":"widget","id":1,"kind":"button","text":"Inspect","x":8,"y":9,"width":18,"height":3,"border":"rounded"}
+{"op":"state-register","id":1,"path":"/test/button","role":"button","target":{"family":"widget","id":1}}
+{"op":"style-rule","id":1,"selector":{"family":"widget","path":"/test/button","states":{"hover":true}},"style":{"material":3}}
+{"op":"draft","text":"","emitWeather":false}

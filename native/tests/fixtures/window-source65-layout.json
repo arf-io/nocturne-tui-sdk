@@ -1,0 +1,15 @@
+{
+  "schema": 539365477,
+  "stateBytes": 13578928,
+  "windowsOffset": 2966920,
+  "windowBytes": 9592,
+  "identitiesOffset": 12508520,
+  "identityBytes": 16400,
+  "windowCount": 12,
+  "sourceCommit": "c26597708ba22507143aaab44a82eb53db7e0a27",
+  "sourceFiles": {
+    "native/src/internal.h": "1f34d758980667520070045ba6ed4ee2baee116973daa7f8b645584d6766bdc6",
+    "native/include/nocturne_native.h": "17da1d9d6dff1c7b052c8984603756ab9f02edd9f510c88991ae93991350aa3e"
+  },
+  "proof": "Compiled actual historical source65 headers; snapshots constructed by tests are not historical writer fixtures."
+}

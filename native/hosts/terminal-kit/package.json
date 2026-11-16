@@ -1,0 +1,4 @@
+{
+ "name":"nocturne-terminal-kit-host","version":"0.9.0-rc.4","private":true,"type":"module",
+ "scripts":{"start":"node host.mjs"},"dependencies":{"terminal-kit":"3.1.4","wcwidth":"1.0.1"}
+}

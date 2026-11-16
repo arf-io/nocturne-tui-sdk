@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Actual original reference execution only",
+  "rows": 180,
+  "fullCompositionRows": 6,
+  "cellWords": 2068992,
+  "decodedBytes": 12327599,
+  "decodedSha256": "e98317bdb28f85e8b2faf2a572b90ef59ad8d633f2560a5958a40dcc14318ea3"
+}

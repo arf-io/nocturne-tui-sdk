@@ -1,0 +1,416 @@
+name: Nocturne qualification
+'on':
+  push:
+    paths-ignore:
+    - tools/ci/coverage-ratchet.json
+  pull_request: null
+  workflow_dispatch: null
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: ${{ github.workspace }}
+      CARGO_NET_OFFLINE: 'true'
+      CARGO_BUILD_JOBS: '2'
+      CARGO_TERM_COLOR: never
+      GOTOOLCHAIN: local
+      CC: clang
+      NOCTURNE_GALLERY_WORKERS: '4'
+      NOCTURNE_JOB_KIND: native
+      NOCTURNE_COVERAGE: '1'
+    steps:
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        ref: ${{ github.sha }}
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+      with:
+        python-version: '3.13'
+    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+      with:
+        node-version: 22.16.0
+    - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+      with:
+        go-version: 1.23.2
+        cache: false
+    - name: Task-scoped hosted-runner paths
+      run: |2
+
+        set -euo pipefail
+        nocturne_job_root="$RUNNER_TEMP/nocturne-$GITHUB_REPOSITORY/$GITHUB_SHA/$RUNNER_ARCH/$NOCTURNE_JOB_KIND"
+        mkdir -p "$nocturne_job_root/evidence/profiles" "$nocturne_job_root/targets"
+        printf 'NOCTURNE_JOB_ROOT=%s\n' "$nocturne_job_root" >> "$GITHUB_ENV"
+        if [ "$NOCTURNE_JOB_KIND" = native ]; then
+          printf 'LLVM_PROFILE_FILE=%s\n' "$nocturne_job_root/evidence/profiles/core-%p-%m.profraw" >> "$GITHUB_ENV"
+        fi
+        printf 'CARGO_HOME=%s\nCARGO_TARGET_DIR=%s\nGOMODCACHE=%s\nGOCACHE=%s\n' \
+          "$nocturne_job_root/cargo" "$nocturne_job_root/targets/native" \
+          "$nocturne_job_root/go-modules" "$nocturne_job_root/go-build" >> "$GITHUB_ENV"
+    - name: Linux native prerequisites
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential clang llvm lld ffmpeg cmake
+    - name: Exact Rust 1.88 compiler
+      shell: bash
+      run: |
+        rustup toolchain install 1.88.0 --profile minimal --component rustfmt --component clippy
+        rustBin="$(dirname "$(rustup which --toolchain 1.88.0 rustc)")"
+        export PATH="$rustBin:$PATH"
+        printf '%s\n' "$rustBin" >> "$GITHUB_PATH"
+        printf 'RUSTC=%s\nRUSTDOC=%s\nNOCTURNE_RUST_BIN=%s\n' \
+          "$rustBin/rustc" "$rustBin/rustdoc" "$rustBin" >> "$GITHUB_ENV"
+        test "$(rustc --version | cut -d ' ' -f 2)" = 1.88.0
+        test "$(cargo --version | cut -d ' ' -f 2)" = 1.88.0
+        rustc -vV
+        cargo --version
+        rustdoc --version
+    - name: Pinned qualification packages
+      shell: bash
+      run: |
+        python3 -m pip install -r tools/requirements-qualification.txt
+        if [ "$RUNNER_OS" = Linux ]; then
+          python3 -m playwright install --with-deps chromium
+        else
+          python3 -m playwright install chromium
+        fi
+        npm install --global typescript@5.8.3
+        npm ci --prefix native/hosts/terminal-kit
+    - name: Provision locked dependency closures
+      shell: bash
+      run: |
+        CARGO_NET_OFFLINE=false cargo fetch --locked --manifest-path native/hosts/ratatui/Cargo.toml
+        (
+          cd native/hosts/bubbletea
+          go mod download
+          nocturne_verify_workspace="$(mktemp -d "$RUNNER_TEMP/nocturne-go-verify.XXXXXX")"
+          nocturne_bubbletea_source="$(pwd -P)"
+          (
+            cd "$nocturne_verify_workspace"
+            GOWORK=off go work init "$nocturne_bubbletea_source" "$nocturne_bubbletea_source/../../bindings/go"
+          )
+          GOWORK="$nocturne_verify_workspace/go.work" go mod verify
+        )
+        git diff --exit-code -- native/hosts/ratatui/Cargo.toml native/hosts/ratatui/Cargo.lock \
+          native/hosts/bubbletea/go.mod native/hosts/bubbletea/go.sum \
+          native/hosts/terminal-kit/package.json native/hosts/terminal-kit/package-lock.json \
+          tools/requirements-qualification.txt
+    - name: Actual source and tool identity
+      run: |2
+
+        set -euo pipefail
+        python3 - <<'PYIDENTITY'
+        import hashlib,json,os,platform,subprocess,sys
+        from pathlib import Path
+        root=Path.cwd();sys.path.insert(0,str(root/'native/scripts'))
+        from release_identity import loadReleaseIdentity
+        from qualify import fingerprint
+        release=loadReleaseIdentity(root)
+        if release['sourceCommit']!=os.environ['GITHUB_SHA']:raise SystemExit('Checkout differs from event SHA')
+        tools={name:subprocess.check_output(argv,text=True,stderr=subprocess.STDOUT).strip() for name,argv in {'python':['python3','--version'],'node':['node','--version'],'go':['go','version'],'rust':['rustc','-vV'],'cargo':['cargo','--version'],'clang':['clang','--version'],'typescript':['tsc','--version']}.items()}
+        record={'eventHead':os.environ['GITHUB_SHA'],'head':release['sourceCommit'],'sourceBaseline':release['sourceBaseline'],'sourceFingerprint':fingerprint(),'host':list(platform.uname()),'uid':os.getuid(),'tools':tools,'cargoBuildJobs':os.environ['CARGO_BUILD_JOBS'],'executionContext':'isolated GitHub-hosted runner; no fleet credentials/services','jobRoot':os.environ['NOCTURNE_JOB_ROOT'],'filesystem':subprocess.check_output(['df','-PT',str(root)],text=True)}
+        Path(os.environ['NOCTURNE_JOB_ROOT']+'/evidence/SOURCE-IDENTITY.json').write_text(json.dumps(record,indent=2)+'\n')
+        PYIDENTITY
+    - name: Release CI policy
+      run: |
+        python3 native/tests/test_release_ci_policy.py
+        python3 -m unittest discover -s tools/ci -p 'test_*.py' -v
+    - name: Provision verified external shaping fixtures
+      run: python3 tools/ci/prepare_shaping.py "$NOCTURNE_JOB_ROOT/shaping"
+    - name: Build external shaping dependency
+      run: |
+        sh native/scripts/build_external_shaping.sh "$NOCTURNE_JOB_ROOT/shaping/harfbuzz-11.2.1" "$NOCTURNE_JOB_ROOT/shaping/install"
+        printf 'NOCTURNE_HARFBUZZ_LIBRARY=%s\nNOCTURNE_SHAPING_FONT=%s\n' "$NOCTURNE_JOB_ROOT/shaping/install/lib/libharfbuzz.so" "$NOCTURNE_JOB_ROOT/shaping/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf" >> "$GITHUB_ENV"
+    - name: Strict native and four-language checks
+      run: |
+        sh qualify-native.sh --strict --capture --step-timeout 7200 \
+          --rust-bin "$NOCTURNE_RUST_BIN" \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/native"
+    - name: Native coverage floor and ratchet
+      run: python3 tools/ci/coverage_gate.py --profiles "$NOCTURNE_JOB_ROOT/evidence/profiles" --output "$NOCTURNE_JOB_ROOT/evidence/coverage"
+      if: always()
+    - name: Retain actual runtime identity
+      if: always()
+      run: |2
+
+        python3 - <<'PYRUNTIME'
+        import hashlib,json,os,subprocess,sys
+        from pathlib import Path
+        root=Path.cwd();sys.path.insert(0,str(root/'native/scripts'))
+        from qualify import fingerprint
+        out=Path(os.environ['NOCTURNE_JOB_ROOT'])/'evidence';out.mkdir(parents=True,exist_ok=True)
+        paths=['native/dist/libnocturne_native.so','native/dist/nocturne_native.wasm','native/Nocturne-RC4-Source-Build.html','Nocturne-RC4.html']
+        record={'head':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'eventHead':os.environ['GITHUB_SHA'],'files':{name:({'sha256':hashlib.sha256((root/name).read_bytes()).hexdigest(),'bytes':(root/name).stat().st_size} if (root/name).is_file() else {'missing':True}) for name in paths}}
+        record['sourceFingerprint']=fingerprint()
+        before=out/'SOURCE-IDENTITY.json'
+        record['sourceUnchanged']=before.is_file() and json.loads(before.read_text())['sourceFingerprint']==record['sourceFingerprint'] and record['head']==record['eventHead']
+        (out/'RUNTIME-IDENTITY.json').write_text(json.dumps(record,indent=2)+'\n')
+        if not record['sourceUnchanged']:raise SystemExit('Source identity changed or initial identity unavailable')
+        PYRUNTIME
+    - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: nocturne-native-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
+        path: |
+          ${{ env.NOCTURNE_JOB_ROOT }}/evidence/
+          native/evidence/
+        if-no-files-found: error
+      name: Retain receipts on failure
+      if: always()
+    - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: nocturne-coverage-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
+        path: ${{ env.NOCTURNE_JOB_ROOT }}/evidence/coverage/
+        if-no-files-found: error
+      name: Retain native coverage policy
+      if: always()
+  supplemental:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: ${{ github.workspace }}
+      CARGO_NET_OFFLINE: 'true'
+      CARGO_BUILD_JOBS: '2'
+      CARGO_TERM_COLOR: never
+      GOTOOLCHAIN: local
+      CC: clang
+      NOCTURNE_GALLERY_WORKERS: '4'
+      NOCTURNE_JOB_KIND: supplemental
+    steps:
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        ref: ${{ github.sha }}
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+      with:
+        python-version: '3.13'
+    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+      with:
+        node-version: 22.16.0
+    - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+      with:
+        go-version: 1.23.2
+        cache: false
+    - name: Task-scoped hosted-runner paths
+      run: |2
+
+        set -euo pipefail
+        nocturne_job_root="$RUNNER_TEMP/nocturne-$GITHUB_REPOSITORY/$GITHUB_SHA/$RUNNER_ARCH/$NOCTURNE_JOB_KIND"
+        mkdir -p "$nocturne_job_root/evidence/profiles" "$nocturne_job_root/targets"
+        printf 'NOCTURNE_JOB_ROOT=%s\n' "$nocturne_job_root" >> "$GITHUB_ENV"
+        if [ "$NOCTURNE_JOB_KIND" = native ]; then
+          printf 'LLVM_PROFILE_FILE=%s\n' "$nocturne_job_root/evidence/profiles/core-%p-%m.profraw" >> "$GITHUB_ENV"
+        fi
+        printf 'CARGO_HOME=%s\nCARGO_TARGET_DIR=%s\nGOMODCACHE=%s\nGOCACHE=%s\n' \
+          "$nocturne_job_root/cargo" "$nocturne_job_root/targets/native" \
+          "$nocturne_job_root/go-modules" "$nocturne_job_root/go-build" >> "$GITHUB_ENV"
+    - name: Linux native prerequisites
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential clang llvm lld ffmpeg cmake
+    - name: Exact Rust 1.88 compiler
+      shell: bash
+      run: |
+        rustup toolchain install 1.88.0 --profile minimal --component rustfmt --component clippy
+        rustBin="$(dirname "$(rustup which --toolchain 1.88.0 rustc)")"
+        export PATH="$rustBin:$PATH"
+        printf '%s\n' "$rustBin" >> "$GITHUB_PATH"
+        printf 'RUSTC=%s\nRUSTDOC=%s\nNOCTURNE_RUST_BIN=%s\n' \
+          "$rustBin/rustc" "$rustBin/rustdoc" "$rustBin" >> "$GITHUB_ENV"
+        test "$(rustc --version | cut -d ' ' -f 2)" = 1.88.0
+        test "$(cargo --version | cut -d ' ' -f 2)" = 1.88.0
+        rustc -vV
+        cargo --version
+        rustdoc --version
+    - name: Pinned qualification packages
+      shell: bash
+      run: |
+        python3 -m pip install -r tools/requirements-qualification.txt
+        if [ "$RUNNER_OS" = Linux ]; then
+          python3 -m playwright install --with-deps chromium
+        else
+          python3 -m playwright install chromium
+        fi
+        npm install --global typescript@5.8.3
+        npm ci --prefix native/hosts/terminal-kit
+    - name: Provision locked dependency closures
+      shell: bash
+      run: |
+        CARGO_NET_OFFLINE=false cargo fetch --locked --manifest-path native/hosts/ratatui/Cargo.toml
+        (
+          cd native/hosts/bubbletea
+          go mod download
+          nocturne_verify_workspace="$(mktemp -d "$RUNNER_TEMP/nocturne-go-verify.XXXXXX")"
+          nocturne_bubbletea_source="$(pwd -P)"
+          (
+            cd "$nocturne_verify_workspace"
+            GOWORK=off go work init "$nocturne_bubbletea_source" "$nocturne_bubbletea_source/../../bindings/go"
+          )
+          GOWORK="$nocturne_verify_workspace/go.work" go mod verify
+        )
+        git diff --exit-code -- native/hosts/ratatui/Cargo.toml native/hosts/ratatui/Cargo.lock \
+          native/hosts/bubbletea/go.mod native/hosts/bubbletea/go.sum \
+          native/hosts/terminal-kit/package.json native/hosts/terminal-kit/package-lock.json \
+          tools/requirements-qualification.txt
+    - name: Actual source and tool identity
+      run: |2
+
+        set -euo pipefail
+        python3 - <<'PYIDENTITY'
+        import hashlib,json,os,platform,subprocess,sys
+        from pathlib import Path
+        root=Path.cwd();sys.path.insert(0,str(root/'native/scripts'))
+        from release_identity import loadReleaseIdentity
+        from qualify import fingerprint
+        release=loadReleaseIdentity(root)
+        if release['sourceCommit']!=os.environ['GITHUB_SHA']:raise SystemExit('Checkout differs from event SHA')
+        tools={name:subprocess.check_output(argv,text=True,stderr=subprocess.STDOUT).strip() for name,argv in {'python':['python3','--version'],'node':['node','--version'],'go':['go','version'],'rust':['rustc','-vV'],'cargo':['cargo','--version'],'clang':['clang','--version'],'typescript':['tsc','--version']}.items()}
+        record={'eventHead':os.environ['GITHUB_SHA'],'head':release['sourceCommit'],'sourceBaseline':release['sourceBaseline'],'sourceFingerprint':fingerprint(),'host':list(platform.uname()),'uid':os.getuid(),'tools':tools,'cargoBuildJobs':os.environ['CARGO_BUILD_JOBS'],'executionContext':'isolated GitHub-hosted runner; no fleet credentials/services','jobRoot':os.environ['NOCTURNE_JOB_ROOT'],'filesystem':subprocess.check_output(['df','-PT',str(root)],text=True)}
+        Path(os.environ['NOCTURNE_JOB_ROOT']+'/evidence/SOURCE-IDENTITY.json').write_text(json.dumps(record,indent=2)+'\n')
+        PYIDENTITY
+    - name: Release CI policy
+      run: |
+        python3 native/tests/test_release_ci_policy.py
+        python3 -m unittest discover -s tools/ci -p 'test_*.py' -v
+    - name: Provision verified external shaping fixtures
+      run: python3 tools/ci/prepare_shaping.py "$NOCTURNE_JOB_ROOT/shaping"
+    - name: Build external shaping dependency
+      run: |
+        sh native/scripts/build_external_shaping.sh "$NOCTURNE_JOB_ROOT/shaping/harfbuzz-11.2.1" "$NOCTURNE_JOB_ROOT/shaping/install"
+        printf 'NOCTURNE_HARFBUZZ_LIBRARY=%s\nNOCTURNE_SHAPING_FONT=%s\n' "$NOCTURNE_JOB_ROOT/shaping/install/lib/libharfbuzz.so" "$NOCTURNE_JOB_ROOT/shaping/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf" >> "$GITHUB_ENV"
+    - name: Ordinary native WASM and gallery build
+      run: |
+        sh build-native.sh
+    - name: Actual TDF isolated and application scenes
+      if: ${{ vars.NOCTURNE_TDFIGLET_REPOSITORY != '' }}
+      env:
+        NOCTURNE_TDFIGLET_REPOSITORY: ${{ vars.NOCTURNE_TDFIGLET_REPOSITORY }}
+      shell: bash
+      run: |
+        set -euo pipefail
+        nocturne_tdf_source="$NOCTURNE_JOB_ROOT/tdfiglet"
+        nocturne_tdf_evidence="$NOCTURNE_JOB_ROOT/evidence/tdfiglet"
+        mkdir -p "$nocturne_tdf_evidence"
+        git init "$nocturne_tdf_source"
+        git -C "$nocturne_tdf_source" remote add origin "https://github.com/$NOCTURNE_TDFIGLET_REPOSITORY.git"
+        git -C "$nocturne_tdf_source" fetch --depth 1 origin 94e212569244229f78b23aade9053940e6dcb6fa
+        git -C "$nocturne_tdf_source" checkout --detach FETCH_HEAD
+        test "$(git -C "$nocturne_tdf_source" rev-parse HEAD)" = 94e212569244229f78b23aade9053940e6dcb6fa
+        export NOCTURNE_TDF_FONT="$nocturne_tdf_source/unused-fonts/tdfonts-2.tdf"
+        python3 - <<'PYTDF'
+        import hashlib, os
+        from pathlib import Path
+        font = Path(os.environ['NOCTURNE_TDF_FONT'])
+        if hashlib.sha256(font.read_bytes()).hexdigest() != 'a947aadf36337988a5961846dd0cfe51454d478ed7e2862e12e44f5c80c251af':
+            raise SystemExit('TDF font digest mismatch')
+        PYTDF
+        make -C "$nocturne_tdf_source" > "$nocturne_tdf_evidence/build.log" 2>&1
+        git -C "$nocturne_tdf_source" rev-parse HEAD > "$nocturne_tdf_evidence/source-commit.txt"
+        sha256sum "$nocturne_tdf_source/tdfiglet" "$NOCTURNE_TDF_FONT" > "$nocturne_tdf_evidence/input-sha256.txt"
+        python3 tools/ci/check_tdfiglet.py --binary "$nocturne_tdf_source/tdfiglet" \
+          --font "$NOCTURNE_TDF_FONT" --output "$nocturne_tdf_evidence/scenes"
+    - name: Real Terminal Kit and Bubble Tea hosts
+      run: |
+        python3 native/scripts/qualify_dependency_hosts.py \
+          --target-dir "$NOCTURNE_JOB_ROOT/targets/dependency-hosts" \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/dependency-hosts"
+    - name: Real Ratatui host
+      run: |
+        python3 native/hosts/ratatui/qualify.py \
+          --rust-bin "$NOCTURNE_RUST_BIN" \
+          --target-dir "$NOCTURNE_JOB_ROOT/targets/ratatui" \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/ratatui" \
+          --timeout 180
+    - name: Real host input contracts
+      run: |
+        nocturne_ratatui_executable="$(python3 tools/ci/cargo_artifact.py "$NOCTURNE_JOB_ROOT/evidence/ratatui/fixture-build.log" --target qualification)"
+        python3 native/scripts/check_host_inputs.py --host prompt-toolkit \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/input-prompt-toolkit"
+        python3 native/scripts/check_host_inputs.py --host terminal-kit \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/input-terminal-kit"
+        python3 native/scripts/check_host_inputs.py --host bubbletea \
+          --binary "$NOCTURNE_JOB_ROOT/targets/dependency-hosts/bubbletea-fixture" \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/input-bubbletea"
+        python3 native/scripts/check_host_inputs.py --host ratatui \
+          --binary "$nocturne_ratatui_executable" \
+          --evidence-dir "$NOCTURNE_JOB_ROOT/evidence/input-ratatui"
+    - name: All retained root test entry points
+      run: python3 tools/ci/run_historical_tests.py "$NOCTURNE_JOB_ROOT/evidence/historical-tests"
+      if: always()
+    - name: Retain actual runtime identity
+      if: always()
+      run: |2
+
+        python3 - <<'PYRUNTIME'
+        import hashlib,json,os,subprocess,sys
+        from pathlib import Path
+        root=Path.cwd();sys.path.insert(0,str(root/'native/scripts'))
+        from qualify import fingerprint
+        out=Path(os.environ['NOCTURNE_JOB_ROOT'])/'evidence';out.mkdir(parents=True,exist_ok=True)
+        paths=['native/dist/libnocturne_native.so','native/dist/nocturne_native.wasm','native/Nocturne-RC4-Source-Build.html','Nocturne-RC4.html']
+        record={'head':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'eventHead':os.environ['GITHUB_SHA'],'files':{name:({'sha256':hashlib.sha256((root/name).read_bytes()).hexdigest(),'bytes':(root/name).stat().st_size} if (root/name).is_file() else {'missing':True}) for name in paths}}
+        record['sourceFingerprint']=fingerprint()
+        before=out/'SOURCE-IDENTITY.json'
+        record['sourceUnchanged']=before.is_file() and json.loads(before.read_text())['sourceFingerprint']==record['sourceFingerprint'] and record['head']==record['eventHead']
+        (out/'RUNTIME-IDENTITY.json').write_text(json.dumps(record,indent=2)+'\n')
+        if not record['sourceUnchanged']:raise SystemExit('Source identity changed or initial identity unavailable')
+        PYRUNTIME
+    - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: nocturne-supplemental-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
+        path: |
+          ${{ env.NOCTURNE_JOB_ROOT }}/evidence/
+          native/evidence/
+        if-no-files-found: error
+      name: Retain receipts on failure
+      if: always()
+  qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    needs:
+    - native
+    - supplemental
+    if: always()
+    steps:
+    - name: Require both actual qualifications
+      run: |
+        test "${{ needs.native.result }}" = success
+        test "${{ needs.supplemental.result }}" = success
+  ratchet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    needs:
+    - native
+    - supplemental
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/integration')
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        ref: ${{ github.sha }}
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+      with:
+        python-version: '3.13'
+    - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+      with:
+        name: nocturne-coverage-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
+        path: ${{ runner.temp }}/accepted-native
+    - name: Ratchet accepted protected-branch coverage
+      env:
+        NOCTURNE_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python3 tools/ci/ratchet_coverage.py "$RUNNER_TEMP/accepted-native/coverage-ratchet.next.json"

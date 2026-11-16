@@ -1,0 +1,757 @@
+{
+  "build": "1.0.0",
+  "contract": {
+    "metadataProfile": "nocturne.metadata/v1",
+    "commandProfile": "nocturne.commands/v1",
+    "abiVersion": 1,
+    "snapshotSchema": 539365512,
+    "sourceSchema": 539365512,
+    "snapshotCapacityBytes": 30490472,
+    "bindingFamilies": [
+      "material",
+      "emitter",
+      "widget",
+      "camera",
+      "window",
+      "text",
+      "area",
+      "floor",
+      "state",
+      "node",
+      "indicator",
+      "prompt",
+      "environment",
+      "field",
+      "flow",
+      "surface",
+      "surface-wave",
+      "float-body",
+      "surface-foam",
+      "mesh",
+      "triangle",
+      "cell-art",
+      "accessibility",
+      "electrical-arc"
+    ],
+    "features": [
+      "typed-values",
+      "host-payloads",
+      "character-rules",
+      "character-regions",
+      "queued-transactions",
+      "panel-metadata",
+      "graph-readback",
+      "electrical-graphs",
+      "firework-stages",
+      "resource-animation-bindings",
+      "electrical-selectors",
+      "character-cell-inspection",
+      "surface-foam-transport",
+      "flow-thickness",
+      "surface-geometry-inspection",
+      "mesh-cell-refinement",
+      "declared-color-fields",
+      "resolved-area-geometry",
+      "persistent-run-clusters",
+      "thermal-cell-inspection",
+      "thermal-response-settings",
+      "thermal-value-bindings",
+      "shortcut-negotiation",
+      "water-cell-inspection",
+      "water-volume-authoring",
+      "water-response-settings",
+      "water-value-bindings",
+      "retained-convex-hulls",
+      "hull-pose-inspection",
+      "hull-value-bindings",
+      "finite-water-motion",
+      "reciprocal-fluid-drag",
+      "finite-water-ledger",
+      "script-itemization",
+      "explicit-bidi-lines",
+      "unicode-line-breaks",
+      "source-scene-art",
+      "canvas-presentation",
+      "source-stage-components",
+      "source-window-presentation",
+      "window-cell-textures",
+      "source-window-content"
+    ],
+    "queryContracts": {
+      "nrAreaGeometry": {
+        "capacityUnit": "double",
+        "rowWords": 12,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "absentReturn": 0,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "coordinates": "screen-cells",
+        "fields": [
+          "x",
+          "y",
+          "width",
+          "height",
+          "clipX",
+          "clipY",
+          "clipWidth",
+          "clipHeight",
+          "contentX",
+          "contentY",
+          "contentWidth",
+          "contentHeight"
+        ]
+      },
+      "nrFieldSample": {
+        "capacityUnit": "double",
+        "rowWords": 4,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "absentReturn": 0,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "coordinates": "screen-cells",
+        "fields": [
+          "intensity",
+          "rgb",
+          "centerX",
+          "centerY"
+        ]
+      },
+      "nrLineBreaks": {
+        "capacityUnit": "offset",
+        "rowWords": 1,
+        "alignmentBytes": 4,
+        "maxSourceScalars": 2048,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "invalidOutputUnchanged": true,
+        "inputOutputAliasAllowed": true,
+        "nullOutputSizeProbe": true,
+        "profile": "unicode-17.0.0-uax14-55-default",
+        "offsetUnit": "unicode-scalar",
+        "endOfTextIncluded": true,
+        "fields": [
+          "offset"
+        ]
+      },
+      "nrLineBreakDetails": {
+        "capacityUnit": "row",
+        "rowWords": 2,
+        "alignmentBytes": 4,
+        "maxSourceScalars": 2048,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "invalidOutputUnchanged": true,
+        "inputOutputAliasAllowed": true,
+        "nullOutputSizeProbe": true,
+        "profile": "unicode-17.0.0-uax14-55-default",
+        "offsetUnit": "unicode-scalar",
+        "endOfTextIncluded": true,
+        "fields": [
+          "offset",
+          "mandatory"
+        ],
+        "mandatoryValues": [
+          0,
+          1
+        ]
+      },
+      "nrSurfaceWaveSample": {
+        "capacityUnit": "double",
+        "rowWords": 6,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "invalidOutputUnchanged": true,
+        "fields": [
+          "height",
+          "normal.x",
+          "normal.y",
+          "normal.z",
+          "verticalVelocity",
+          "laplacian"
+        ],
+        "modeSelector": "surfaceFluidAngular[].pose",
+        "analyticMode": {
+          "coverage": "infinite-authored-wave-field",
+          "normalFrame": "world-unrotated",
+          "verticalVelocity": "wave-plus-reservoir-vertical-translation",
+          "laplacian": "analytic-authored-xz"
+        },
+        "posedMode": {
+          "coverage": "topmost-world-facet",
+          "normalFrame": "world-upward",
+          "verticalVelocity": "material-world-y",
+          "laplacian": "within-facet-zero",
+          "equalHeightTie": "source-order",
+          "verticalFacet": "no-height",
+          "uncoveredReturn": -1
+        }
+      },
+      "nrSurfaceFluidAngular": {
+        "capacityUnit": "double",
+        "rowWords": 12,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "presentReturn": 1,
+        "absentReturn": 0,
+        "contextOverlapAllowed": false,
+        "frame": "world",
+        "inertiaModel": "isotropic",
+        "fields": [
+          "inertia",
+          "omega.x",
+          "omega.y",
+          "omega.z",
+          "initialMomentum.x",
+          "initialMomentum.y",
+          "initialMomentum.z",
+          "bodyImpulse.x",
+          "bodyImpulse.y",
+          "bodyImpulse.z",
+          "dissipatedEnergy",
+          "initialEnergy"
+        ]
+      },
+      "nrAngularDragExchange": {
+        "capacityUnit": "double",
+        "rowWords": 10,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "presentReturn": 1,
+        "inputOutputAliasAllowed": true,
+        "frame": "explicit-shared-principal",
+        "fields": [
+          "bodyOmega.x",
+          "bodyOmega.y",
+          "bodyOmega.z",
+          "waterOmega.x",
+          "waterOmega.y",
+          "waterOmega.z",
+          "waterAngularImpulse.x",
+          "waterAngularImpulse.y",
+          "waterAngularImpulse.z",
+          "dissipatedEnergy"
+        ]
+      },
+      "nrHullImmersionPlane": {
+        "capacityUnit": "double",
+        "rowWords": 5,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "presentReturn": 1,
+        "inputOutputAliasAllowed": true,
+        "fields": [
+          "totalVolume",
+          "submergedVolume",
+          "centroid.x",
+          "centroid.y",
+          "centroid.z"
+        ]
+      },
+      "nrHullBuoyancyPlane": {
+        "capacityUnit": "double",
+        "rowWords": 11,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "presentReturn": 1,
+        "inputOutputAliasAllowed": true,
+        "liftDirection": "vertical",
+        "fields": [
+          "totalVolume",
+          "submergedVolume",
+          "centroid.x",
+          "centroid.y",
+          "centroid.z",
+          "netForce.x",
+          "netForce.y",
+          "netForce.z",
+          "torque.x",
+          "torque.y",
+          "torque.z"
+        ]
+      },
+      "nrFluidDragExchange": {
+        "capacityUnit": "double",
+        "rowWords": 10,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "presentReturn": 1,
+        "inputOutputAliasAllowed": true,
+        "fields": [
+          "bodyVelocity.x",
+          "bodyVelocity.y",
+          "bodyVelocity.z",
+          "waterVelocity.x",
+          "waterVelocity.y",
+          "waterVelocity.z",
+          "waterImpulse.x",
+          "waterImpulse.y",
+          "waterImpulse.z",
+          "dissipatedEnergy"
+        ]
+      },
+      "nrScriptRuns": {
+        "capacityUnit": "row",
+        "rowWords": 3,
+        "alignmentBytes": 4,
+        "maxSourceScalars": 2048,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "inputOutputAliasAllowed": true,
+        "profile": "nr-script-grapheme-v1",
+        "fields": [
+          "start",
+          "end",
+          "iso15924TagBigEndian"
+        ]
+      },
+      "nrBidiClusterLines": {
+        "capacityUnit": "row",
+        "rowWords": 7,
+        "alignmentBytes": 4,
+        "maxSourceScalars": 2048,
+        "ownedBindings": true,
+        "pure": true,
+        "invalidReturn": -1,
+        "inputOutputAliasAllowed": true,
+        "fullParagraphResolution": true,
+        "wholeGraphemeLines": true,
+        "crossHardBreakAllowed": false,
+        "widthUnit": "terminalCellAnnotation",
+        "fields": [
+          "start",
+          "end",
+          "column",
+          "line",
+          "width",
+          "level",
+          "mappedFirstScalar"
+        ]
+      },
+      "nrThermalSample": {
+        "capacityUnit": "double",
+        "rowWords": 10,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "absentReturn": 0,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "fields": [
+          "temperature",
+          "energy",
+          "initialEnergy",
+          "appliedEnergy",
+          "environmentEnergy",
+          "importedEnergy",
+          "transferredEnergy",
+          "capacity",
+          "power",
+          "ambientTemperature"
+        ]
+      },
+      "nrWaterSample": {
+        "capacityUnit": "double",
+        "rowWords": 8,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "absentReturn": 0,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "fields": [
+          "surfaceId",
+          "receivedVolume",
+          "retainedVolume",
+          "wetness",
+          "importedVolume",
+          "transferredVolume",
+          "evaporatedVolume",
+          "capacity"
+        ]
+      },
+      "nrFloatHull": {
+        "capacityUnit": "double",
+        "rowWords": 14,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "absentReturn": 0,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "fields": [
+          "orientation.x",
+          "orientation.y",
+          "orientation.z",
+          "orientation.w",
+          "angularVelocity.x",
+          "angularVelocity.y",
+          "angularVelocity.z",
+          "inertia.x",
+          "inertia.y",
+          "inertia.z",
+          "centerOfMass.x",
+          "centerOfMass.y",
+          "centerOfMass.z",
+          "volume"
+        ]
+      },
+      "nrSurfaceFluid": {
+        "capacityUnit": "double",
+        "rowWords": 15,
+        "alignmentBytes": 8,
+        "ownedBindings": true,
+        "pure": true,
+        "absentReturn": 0,
+        "presentReturn": 1,
+        "invalidReturn": -1,
+        "contextOverlapAllowed": false,
+        "fields": [
+          "mass",
+          "velocity.x",
+          "velocity.y",
+          "velocity.z",
+          "offset.x",
+          "offset.y",
+          "offset.z",
+          "initialMomentum.x",
+          "initialMomentum.y",
+          "initialMomentum.z",
+          "bodyImpulse.x",
+          "bodyImpulse.y",
+          "bodyImpulse.z",
+          "dissipatedEnergy",
+          "initialEnergy"
+        ],
+        "lifecycleProperty": "surfaceFluids[].active",
+        "stoppedRecordPresent": true
+      }
+    }
+  },
+  "textProfile": "nr-cell-scalar-v1",
+  "graphemeProfile": "unicode-17.0.0-uax29-47",
+  "widthProfile": "nr-grapheme-cell-width-v1-unicode-17.0.0",
+  "clock": {
+    "timeUs": 900000,
+    "targetUs": 900000,
+    "step": 108,
+    "paused": false
+  },
+  "particles": {
+    "active": 0,
+    "deposited": 0,
+    "aggregated": 0,
+    "born": 0,
+    "rejected": 0,
+    "depositRejected": 0
+  },
+  "sourceSky": {
+    "worldSeed": 2030,
+    "skyDensity": 9,
+    "skyRadius": 280.0,
+    "skyExposure": 6500.0,
+    "trailMs": 100.0,
+    "textLightness": 0.83,
+    "textChroma": 0.1
+  },
+  "graph": {
+    "dimensions": 3,
+    "layoutMode": "layered",
+    "lastLayoutUnresolvedNodes": 0,
+    "layoutProfile": "source",
+    "sourceLayout": {
+      "seed": 2030,
+      "dimensions": 3,
+      "mode": "layered",
+      "iterations": 180,
+      "sweeps": 8,
+      "orientation": "LR",
+      "nodeGap": 14.0,
+      "layerGap": 17.0,
+      "depthGap": 4.0,
+      "repulsion": 65.0,
+      "spring": 0.04,
+      "linkLength": 13.0,
+      "damping": 0.76,
+      "timeStep": 0.3,
+      "collision": 1.0,
+      "nodeSizes": [
+        {
+          "id": 1,
+          "width": 8.0,
+          "height": 4.0
+        },
+        {
+          "id": 2,
+          "width": 5.0,
+          "height": 3.0
+        },
+        {
+          "id": 3,
+          "width": 5.0,
+          "height": 3.0
+        }
+      ],
+      "edgeWeights": [
+        {
+          "from": 1,
+          "to": 2,
+          "kind": "contains",
+          "weight": 2.5
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "kind": "contains",
+          "weight": 1.0
+        }
+      ]
+    },
+    "edges": [
+      {
+        "from": 1,
+        "to": 2,
+        "kind": "contains"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "kind": "contains"
+      }
+    ]
+  },
+  "camera": {
+    "position": [
+      18.126364,
+      23.922191,
+      51.150457
+    ],
+    "yaw": -24.736,
+    "pitch": -19.856,
+    "roll": 0.0,
+    "near": 0.1,
+    "far": 1000.0,
+    "fov": 70.0,
+    "span": 65.0,
+    "orthographic": false,
+    "flightActive": false,
+    "profile": "original",
+    "navigation": "orbit",
+    "target": [
+      -22.291327,
+      10.174647,
+      7.310732
+    ],
+    "moveSpeed": 12.0,
+    "turnSpeed": 75.0,
+    "sensitivity": 0.32,
+    "grabbed": [
+      -22.291327,
+      10.174647,
+      7.310732
+    ]
+  },
+  "environment": {
+    "background": 461588,
+    "stars": 0,
+    "starFar": 150.0,
+    "sampling": "hybrid",
+    "style": "solid",
+    "presentation": "canvas"
+  },
+  "sceneArt": null,
+  "sourceStageComponents": [],
+  "prompt": {
+    "layout": "scalar",
+    "direction": "ltr",
+    "ambiguousWidth": 1,
+    "presentation": "compact",
+    "sourceVimState": 0,
+    "minimizedRestoreMode": 0,
+    "normalMode": 0,
+    "sourceOptions": null,
+    "sourceCommand": "",
+    "sourceSearch": "",
+    "sourceMessage": "",
+    "sourceCheckpoint": null,
+    "text": "",
+    "caret": 0,
+    "anchor": -1,
+    "mode": 0,
+    "vimMode": "normal",
+    "revision": 0
+  },
+  "materialPatterns": [],
+  "selection": 0,
+  "inspectorScroll": 0,
+  "selectedWindow": 0,
+  "modal": 0,
+  "inputOwner": "prompt",
+  "render": {
+    "fragmentOverflow": 0,
+    "contentNeedsReader": 0
+  },
+  "fields": [],
+  "fieldCount": 0,
+  "textRuns": [],
+  "windows": [],
+  "windowApplication": null,
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Original source layout",
+      "detail": "",
+      "kind": "",
+      "status": "",
+      "sha": "",
+      "position": [
+        -21.0,
+        0.0,
+        4.0
+      ],
+      "pinned": false,
+      "targetPosition": [
+        -21.0,
+        0.0,
+        4.0
+      ],
+      "card": {
+        "minColumns": 22,
+        "maxColumns": 44,
+        "padding": 1,
+        "shaPrefix": 0,
+        "showKind": true,
+        "showStatus": true,
+        "showSha": true,
+        "showDetail": true,
+        "width": 26,
+        "height": 5
+      }
+    },
+    {
+      "id": 2,
+      "label": "Native graph identity",
+      "detail": "",
+      "kind": "",
+      "status": "",
+      "sha": "",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pinned": false,
+      "targetPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "card": {
+        "minColumns": 22,
+        "maxColumns": 44,
+        "padding": 1,
+        "shaPrefix": 0,
+        "showKind": true,
+        "showStatus": true,
+        "showSha": true,
+        "showDetail": true,
+        "width": 25,
+        "height": 5
+      }
+    },
+    {
+      "id": 3,
+      "label": "Shared contract",
+      "detail": "",
+      "kind": "",
+      "status": "",
+      "sha": "",
+      "position": [
+        21.0,
+        0.0,
+        -4.0
+      ],
+      "pinned": false,
+      "targetPosition": [
+        21.0,
+        0.0,
+        -4.0
+      ],
+      "card": {
+        "minColumns": 22,
+        "maxColumns": 44,
+        "padding": 1,
+        "shaPrefix": 0,
+        "showKind": true,
+        "showStatus": true,
+        "showSha": true,
+        "showDetail": true,
+        "width": 22,
+        "height": 5
+      }
+    }
+  ],
+  "widgets": [],
+  "areas": [],
+  "messages": [],
+  "intents": [],
+  "registeredStates": [],
+  "styleRules": [],
+  "characterRules": [],
+  "characterRegions": [],
+  "values": {},
+  "valueDescriptors": {},
+  "triggers": [],
+  "accessibility": {
+    "reducedMotion": false,
+    "screenReader": false
+  },
+  "floor": {
+    "wetness": 0.0,
+    "collisionEnabled": true,
+    "renderVisible": false
+  },
+  "geometry": {
+    "triangles": 0,
+    "collisionTriangles": 0,
+    "bvhNodes": 0,
+    "meshGeneration": 0,
+    "contactBudgetExhausted": 0,
+    "collisionQueries": 0,
+    "triangleTests": 0
+  },
+  "surfaces": [],
+  "aggregateReemittedCount": 0,
+  "electricalArcs": [],
+  "aggregateMaterials": [],
+  "contacts": [],
+  "surfaceTiles": [],
+  "pending": [],
+  "emitters": [],
+  "deposits": []
+}

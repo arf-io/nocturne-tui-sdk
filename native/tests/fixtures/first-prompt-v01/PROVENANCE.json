@@ -1,0 +1,22 @@
+{
+  "originalCommit": "7dccd5ec04a6b6cb81c67e765bae4c23954a6b0a",
+  "files": {
+    "presets.json": "fa35f795ce75241d8709866c603e93297bbdf6ca16cef268a712efd4fa389d51",
+    "include/nocturne.h": "cf591200d62adc38b6f848d3dfed3d0bb5d81afd6515e9d1770ecc217ab0b219",
+    "src/nocturne.c": "11911d3466a9fe9a29c5c2672089c7a24fa6a288bf02296eb13aa1ffcae32302",
+    "src/sine.inc": "4b953da325588655fe63eb700dff0aa78c32274e048de36f9daf966d50677d96",
+    "src/defaults.inc": "5b3705655b10cb99d76b2766bd40e9210cfb2b4fb5cc98e0fd7b4d49dfd6963b"
+  },
+  "kernel": {
+    "originalSha256": "11911d3466a9fe9a29c5c2672089c7a24fa6a288bf02296eb13aa1ffcae32302",
+    "adaptedSha256": "a5666209791d6ad0e20ebcb4f8e914d0d4a21b10327bd63bcf5ef643ff8b3fd7",
+    "changes": [
+      "include nocturne.h -> ../../include/nocturne.h",
+      "include defaults.inc -> ../../src/defaults.inc",
+      "include sine.inc -> ../../src/sine.inc"
+    ],
+    "functionBodyChanges": false
+  },
+  "sourceDefaultsMatch": true,
+  "sourceSineMatch": true
+}

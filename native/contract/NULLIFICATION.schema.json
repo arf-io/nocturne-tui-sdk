@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nocturne operator nullification decisions",
+  "description": "Decisions that strike artwork, or artwork and its rendering outputs, from the final contract. Keys are exact strings, whitespace included. A historical-definition key is a definitionId of native/evidence/artwork-inventory-20261031/INVENTORY.json and strikes every instance of that definition. A historical-instance key is the instance's file#locator#identifier; where that names more than one instance (a palette and a composite on one line), append #<kind>. A current-identity key is a native/catalogue.json id and strikes its catalogue entry, its native/port-ledger.json entry, the recipes and Gallery studies that name it, its component captures and its catalogue documentation. A rendering-output key is recipe:<native/recipes.json id> or capture:<component>/<state> of docs/current/images/CAPTURES.json. Each (scope, key) pair occurs once, every key must resolve, and no string may hold a lone surrogate, which has no UTF-8 form; native/scripts/nullification.py enforces all three, which JSON Schema cannot express. Nullification deletes nothing from the native core, its fixtures or evidence; removal from the core is a later, separately qualified step (native/docs/NULLIFICATION.md).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "decisions"],
+  "properties": {
+    "schema": {"const": "nocturne.nullification.v1"},
+    "decisions": {"type": "array", "items": {"$ref": "#/$defs/decision"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "pattern": "\\S"},
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "key", "name", "reason", "decidedBy", "decidedAt"],
+      "properties": {
+        "scope": {"enum": ["historical-definition", "historical-instance", "current-identity", "rendering-output"]},
+        "key": {"type": "string", "minLength": 1},
+        "name": {"$ref": "#/$defs/text"},
+        "reason": {"$ref": "#/$defs/text"},
+        "decidedBy": {"$ref": "#/$defs/text"},
+        "decidedAt": {
+          "type": "string",
+          "description": "ISO-8601 date-time with seconds and a UTC offset, as Date.prototype.toISOString() writes it.",
+          "pattern": "^(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2}):(\\d{2}):(\\d{2})(\\.\\d{1,9})?(Z|[+-]\\d{2}:\\d{2})$"
+        }
+      },
+      "allOf": [
+        {"if": {"properties": {"scope": {"const": "historical-definition"}}}, "then": {"properties": {"key": {"pattern": "^[0-9a-f]{16}$"}}}},
+        {"if": {"properties": {"scope": {"const": "historical-instance"}}}, "then": {"properties": {"key": {"pattern": "^[^#]+#.+#.+$"}}}},
+        {"if": {"properties": {"scope": {"const": "current-identity"}}}, "then": {"properties": {"key": {"pattern": "^[a-z][a-z0-9-]*/[a-z0-9][a-z0-9.-]*$"}}}},
+        {"if": {"properties": {"scope": {"const": "rendering-output"}}}, "then": {"properties": {"key": {"pattern": "^(recipe:\\S+|capture:[^/\\s]+/[^/\\s]+)$"}}}}
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[package]
+name="nocturne-reference-panel"
+version="0.1.0"
+edition="2021"
+
+[dependencies]
+nocturne-native={path="../../../../native/bindings/rust"}

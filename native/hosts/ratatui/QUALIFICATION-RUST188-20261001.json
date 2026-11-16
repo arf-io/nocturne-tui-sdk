@@ -1,0 +1,1407 @@
+{
+  "schema": "nocturne.ratatui.qualification.v1",
+  "status": "PASS",
+  "ratatuiQualified": true,
+  "fullRC4Qualified": false,
+  "scope": "Current dependency-backed Ratatui adapter and synthetic POSIX fixture only",
+  "commands": [
+    {
+      "id": "rust-identity",
+      "argv": [
+        "<toolchain>/cargo/bin/rustc",
+        "-vV"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:57.432596+00:00",
+      "status": "PASS",
+      "pid": 1262436,
+      "exitCode": 0,
+      "seconds": 0.032298,
+      "finishedAt": "2026-10-01T06:03:57.465069+00:00",
+      "log": "rust-identity.log",
+      "logSha256": "2775ffb86baebfb4c9959501cdd336fe315dd8e1229ffaede4f428f33862f10d"
+    },
+    {
+      "id": "cargo-identity",
+      "argv": [
+        "cargo",
+        "--version"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:57.465823+00:00",
+      "status": "PASS",
+      "pid": 1262447,
+      "exitCode": 0,
+      "seconds": 0.016132,
+      "finishedAt": "2026-10-01T06:03:57.482106+00:00",
+      "log": "cargo-identity.log",
+      "logSha256": "6c2df3721232c841c6af639c7b1c37c3032fcbf711e4f2914435f97ab5f4dff1"
+    },
+    {
+      "id": "rustdoc-identity",
+      "argv": [
+        "<toolchain>/cargo/bin/rustdoc",
+        "--version"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:57.482874+00:00",
+      "status": "PASS",
+      "pid": 1262457,
+      "exitCode": 0,
+      "seconds": 0.032225,
+      "finishedAt": "2026-10-01T06:03:57.515298+00:00",
+      "log": "rustdoc-identity.log",
+      "logSha256": "46831018fdb9026b99da2c2f166dad6e981f8221ed481d8145a864e48fc56b99"
+    },
+    {
+      "id": "sysroot",
+      "argv": [
+        "<toolchain>/cargo/bin/rustc",
+        "--print",
+        "sysroot"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:57.516097+00:00",
+      "status": "PASS",
+      "pid": 1262466,
+      "exitCode": 0,
+      "seconds": 0.032198,
+      "finishedAt": "2026-10-01T06:03:57.548466+00:00",
+      "log": "sysroot.log",
+      "logSha256": "37ed3a0675f3dec35d58e6dabf06557ba1ef31c836e95e3b78b09b29ae812824"
+    },
+    {
+      "id": "dependency-metadata",
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "<workspace>/wt-nocturne-contracts6-intents-20260930/native/hosts/ratatui/Cargo.toml",
+        "--format-version",
+        "1"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:57.549266+00:00",
+      "status": "PASS",
+      "pid": 1262479,
+      "exitCode": 0,
+      "seconds": 0.265325,
+      "finishedAt": "2026-10-01T06:03:57.814736+00:00",
+      "log": "dependency-metadata.log",
+      "logSha256": "85d86a0a9a8a64fd988983de0f02f1a63328ba0f9e70266bb1b8cb7cc3c8ffd8"
+    },
+    {
+      "id": "host-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "<workspace>/wt-nocturne-contracts6-intents-20260930/native/hosts/ratatui/Cargo.toml",
+        "--all-targets"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:57.818015+00:00",
+      "status": "PASS",
+      "pid": 1262519,
+      "exitCode": 0,
+      "seconds": 0.264766,
+      "finishedAt": "2026-10-01T06:03:58.082955+00:00",
+      "log": "host-tests.log",
+      "logSha256": "a0185d4c65fa909e3b78258d663a2928d5357a4f11e57ed106560f8188e98dc4"
+    },
+    {
+      "id": "host-doctests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "<workspace>/wt-nocturne-contracts6-intents-20260930/native/hosts/ratatui/Cargo.toml",
+        "--doc"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:58.083860+00:00",
+      "status": "PASS",
+      "pid": 1262561,
+      "exitCode": 0,
+      "seconds": 0.164542,
+      "finishedAt": "2026-10-01T06:03:58.248575+00:00",
+      "log": "host-doctests.log",
+      "logSha256": "695a72a8a22411c85cbd387227a2b531f0db41913824c6935a8b0a1fe7114a9e"
+    },
+    {
+      "id": "host-docs",
+      "argv": [
+        "cargo",
+        "doc",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "<workspace>/wt-nocturne-contracts6-intents-20260930/native/hosts/ratatui/Cargo.toml",
+        "--no-deps"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:58.249458+00:00",
+      "status": "PASS",
+      "pid": 1262589,
+      "exitCode": 0,
+      "seconds": 0.164582,
+      "finishedAt": "2026-10-01T06:03:58.414215+00:00",
+      "log": "host-docs.log",
+      "logSha256": "b1c78ab63202085e7767cf449d5724ce248b3b9f8a3487636b54cf7ffd211069"
+    },
+    {
+      "id": "fixture-build",
+      "argv": [
+        "cargo",
+        "build",
+        "--offline",
+        "--locked",
+        "--manifest-path",
+        "<workspace>/wt-nocturne-contracts6-intents-20260930/native/hosts/ratatui/Cargo.toml",
+        "--example",
+        "qualification",
+        "--message-format=json-render-diagnostics"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "timeoutSeconds": 180.0,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true"
+      },
+      "startedAt": "2026-10-01T06:03:58.415123+00:00",
+      "status": "PASS",
+      "pid": 1262608,
+      "exitCode": 0,
+      "seconds": 0.114416,
+      "finishedAt": "2026-10-01T06:03:58.529718+00:00",
+      "log": "fixture-build.log",
+      "logSha256": "f5ca17659ffe741bbfb35eb3a825ad655473c91e466431b469750bfe57b63700"
+    }
+  ],
+  "pty": [
+    {
+      "id": "pty-input-resize-ctrlq",
+      "argv": [
+        "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux/debug/examples/qualification",
+        "--trace",
+        "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/qualification-1/pty-input-resize-ctrlq.trace.jsonl",
+        "--hold",
+        "--failure",
+        "none"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "status": "PASS",
+      "startedAt": "2026-10-01T06:03:58.534922+00:00",
+      "timeoutSeconds": 30,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true",
+        "TERM": "xterm-256color"
+      },
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "native edit committed: 'abc', caret 3",
+        "native edit committed: 'abc', caret 0",
+        "native edit committed: 'éabc', caret 1",
+        "native edit committed: 'éabc', caret 4",
+        "native edit committed: 'éabc \\\\\"Z', caret 8",
+        "native edit committed: 'éabc \\\\\"', caret 7",
+        "typed Unicode appears in actual terminal output",
+        "PTY resize reached current native frame",
+        "native title repainted after resize",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "pid": 1262623,
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 0,
+      "finalInfo": {
+        "build": "rc4-contracts.7",
+        "clock": {
+          "timeUs": 0,
+          "targetUs": 0,
+          "step": 0,
+          "paused": true
+        },
+        "particles": {
+          "active": 0,
+          "deposited": 0,
+          "aggregated": 0,
+          "born": 0,
+          "rejected": 0,
+          "depositRejected": 0
+        },
+        "camera": {
+          "position": [
+            0.0,
+            10.0,
+            48.0
+          ],
+          "yaw": 0.0,
+          "pitch": -8.0,
+          "roll": 0.0,
+          "flightActive": false
+        },
+        "prompt": {
+          "text": "éabc \\\"",
+          "caret": 7,
+          "mode": 1,
+          "revision": 6
+        },
+        "selection": 0,
+        "inspectorScroll": 0,
+        "modal": 0,
+        "render": {
+          "fragmentOverflow": 0,
+          "contentNeedsReader": 0
+        },
+        "fields": [
+          {
+            "id": 1,
+            "x": 2.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 2,
+            "x": 3.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 3,
+            "x": 4.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 4,
+            "x": 2.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 5,
+            "x": 6.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 6,
+            "x": 7.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 7,
+            "x": 8.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          },
+          {
+            "id": 8,
+            "x": 9.0,
+            "y": 20.0,
+            "atUs": 0,
+            "width": 1.4
+          }
+        ],
+        "fieldCount": 8,
+        "windows": [],
+        "nodes": [],
+        "widgets": [
+          {
+            "id": 90,
+            "text": "RATATUI NATIVE PTY  █ ▀ ⣿",
+            "value": 0.0,
+            "kind": 0,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          },
+          {
+            "id": 91,
+            "text": "Native selection",
+            "value": 0.0,
+            "kind": 3,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          }
+        ],
+        "messages": [],
+        "intents": [],
+        "registeredStates": [
+          {
+            "id": 1,
+            "path": "/qualification/button",
+            "role": "control",
+            "family": "widget",
+            "targetId": 91,
+            "exists": true,
+            "states": {
+              "active": false,
+              "selected": false,
+              "hover": false,
+              "pressed": false,
+              "disabled": false
+            },
+            "authored": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            },
+            "effective": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            }
+          }
+        ],
+        "styleRules": [],
+        "values": {},
+        "triggers": [],
+        "accessibility": {
+          "reducedMotion": false,
+          "screenReader": false
+        },
+        "floor": {
+          "wetness": 0.0,
+          "collisionEnabled": true,
+          "renderVisible": false
+        },
+        "pending": [],
+        "emitters": [],
+        "deposits": []
+      },
+      "exitCode": 0,
+      "parentForcedCleanup": false,
+      "seconds": 0.20531,
+      "finishedAt": "2026-10-01T06:03:58.740444+00:00",
+      "transcript": "pty-input-resize-ctrlq.terminal.bin",
+      "transcriptSha256": "1a13a368880bf79b457d74b976d8273c5dc4b4b7a4868901d5223e0368c6eb6d",
+      "trace": "pty-input-resize-ctrlq.trace.jsonl",
+      "traceSha256": "49d9a941375661446eb5a8225b0d4a6244239cad65abe8cb063790cd457def73",
+      "binarySha256": "0828e568e6e84ff1eafa80bc0f1ddc87b6ff5493c12c1428e5fe022bb0f3aa11"
+    },
+    {
+      "id": "pty-pointer-focus",
+      "argv": [
+        "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux/debug/examples/qualification",
+        "--trace",
+        "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/qualification-1/pty-pointer-focus.trace.jsonl",
+        "--hold",
+        "--failure",
+        "none"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "status": "PASS",
+      "startedAt": "2026-10-01T06:03:58.824803+00:00",
+      "timeoutSeconds": 30,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true",
+        "TERM": "xterm-256color"
+      },
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "native hover=True",
+        "native pressed=True",
+        "native pressed=False",
+        "native hover=False",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "pid": 1262634,
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 0,
+      "finalInfo": {
+        "build": "rc4-contracts.7",
+        "clock": {
+          "timeUs": 0,
+          "targetUs": 0,
+          "step": 0,
+          "paused": true
+        },
+        "particles": {
+          "active": 0,
+          "deposited": 0,
+          "aggregated": 0,
+          "born": 0,
+          "rejected": 0,
+          "depositRejected": 0
+        },
+        "camera": {
+          "position": [
+            0.0,
+            10.0,
+            48.0
+          ],
+          "yaw": 0.0,
+          "pitch": -8.0,
+          "roll": 0.0,
+          "flightActive": false
+        },
+        "prompt": {
+          "text": "",
+          "caret": 0,
+          "mode": 1,
+          "revision": 0
+        },
+        "selection": 0,
+        "inspectorScroll": 0,
+        "modal": 0,
+        "render": {
+          "fragmentOverflow": 0,
+          "contentNeedsReader": 0
+        },
+        "fields": [],
+        "fieldCount": 0,
+        "windows": [],
+        "nodes": [],
+        "widgets": [
+          {
+            "id": 90,
+            "text": "RATATUI NATIVE PTY  █ ▀ ⣿",
+            "value": 0.0,
+            "kind": 0,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          },
+          {
+            "id": 91,
+            "text": "Native selection",
+            "value": 0.0,
+            "kind": 3,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          }
+        ],
+        "messages": [],
+        "intents": [],
+        "registeredStates": [
+          {
+            "id": 1,
+            "path": "/qualification/button",
+            "role": "control",
+            "family": "widget",
+            "targetId": 91,
+            "exists": true,
+            "states": {
+              "active": false,
+              "selected": true,
+              "hover": false,
+              "pressed": false,
+              "disabled": false
+            },
+            "authored": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            },
+            "effective": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            }
+          }
+        ],
+        "styleRules": [],
+        "values": {},
+        "triggers": [],
+        "accessibility": {
+          "reducedMotion": false,
+          "screenReader": false
+        },
+        "floor": {
+          "wetness": 0.0,
+          "collisionEnabled": true,
+          "renderVisible": false
+        },
+        "pending": [],
+        "emitters": [],
+        "deposits": []
+      },
+      "exitCode": 0,
+      "parentForcedCleanup": false,
+      "seconds": 0.121707,
+      "finishedAt": "2026-10-01T06:03:58.946728+00:00",
+      "transcript": "pty-pointer-focus.terminal.bin",
+      "transcriptSha256": "c8a6b6790613935cbaba750f1d6646e9a2dce1c97a9399e71c4bbe5a4ff3705a",
+      "trace": "pty-pointer-focus.trace.jsonl",
+      "traceSha256": "ca8fa7667a8e56437117ed49249b91800fadd60c843f24aecbabc71c424c1eb8",
+      "binarySha256": "0828e568e6e84ff1eafa80bc0f1ddc87b6ff5493c12c1428e5fe022bb0f3aa11"
+    },
+    {
+      "id": "pty-ctrlc",
+      "argv": [
+        "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux/debug/examples/qualification",
+        "--trace",
+        "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/qualification-1/pty-ctrlc.trace.jsonl",
+        "--hold",
+        "--failure",
+        "none"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "status": "PASS",
+      "startedAt": "2026-10-01T06:03:58.999304+00:00",
+      "timeoutSeconds": 30,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true",
+        "TERM": "xterm-256color"
+      },
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "pid": 1262640,
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 0,
+      "finalInfo": {
+        "build": "rc4-contracts.7",
+        "clock": {
+          "timeUs": 0,
+          "targetUs": 0,
+          "step": 0,
+          "paused": true
+        },
+        "particles": {
+          "active": 0,
+          "deposited": 0,
+          "aggregated": 0,
+          "born": 0,
+          "rejected": 0,
+          "depositRejected": 0
+        },
+        "camera": {
+          "position": [
+            0.0,
+            10.0,
+            48.0
+          ],
+          "yaw": 0.0,
+          "pitch": -8.0,
+          "roll": 0.0,
+          "flightActive": false
+        },
+        "prompt": {
+          "text": "",
+          "caret": 0,
+          "mode": 1,
+          "revision": 0
+        },
+        "selection": 0,
+        "inspectorScroll": 0,
+        "modal": 0,
+        "render": {
+          "fragmentOverflow": 0,
+          "contentNeedsReader": 0
+        },
+        "fields": [],
+        "fieldCount": 0,
+        "windows": [],
+        "nodes": [],
+        "widgets": [
+          {
+            "id": 90,
+            "text": "RATATUI NATIVE PTY  █ ▀ ⣿",
+            "value": 0.0,
+            "kind": 0,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          },
+          {
+            "id": 91,
+            "text": "Native selection",
+            "value": 0.0,
+            "kind": 3,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          }
+        ],
+        "messages": [],
+        "intents": [],
+        "registeredStates": [
+          {
+            "id": 1,
+            "path": "/qualification/button",
+            "role": "control",
+            "family": "widget",
+            "targetId": 91,
+            "exists": true,
+            "states": {
+              "active": false,
+              "selected": false,
+              "hover": false,
+              "pressed": false,
+              "disabled": false
+            },
+            "authored": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            },
+            "effective": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            }
+          }
+        ],
+        "styleRules": [],
+        "values": {},
+        "triggers": [],
+        "accessibility": {
+          "reducedMotion": false,
+          "screenReader": false
+        },
+        "floor": {
+          "wetness": 0.0,
+          "collisionEnabled": true,
+          "renderVisible": false
+        },
+        "pending": [],
+        "emitters": [],
+        "deposits": []
+      },
+      "exitCode": 0,
+      "parentForcedCleanup": false,
+      "seconds": 0.092165,
+      "finishedAt": "2026-10-01T06:03:59.091714+00:00",
+      "transcript": "pty-ctrlc.terminal.bin",
+      "transcriptSha256": "c5d970d67226db8914bc35cfc24217be96295e609fdb3684c7f5fc91b943d158",
+      "trace": "pty-ctrlc.trace.jsonl",
+      "traceSha256": "3fe3c0aba0c2b95d319fb61bd572bd48dab10c183528c5587b2f40fee8fe8135",
+      "binarySha256": "0828e568e6e84ff1eafa80bc0f1ddc87b6ff5493c12c1428e5fe022bb0f3aa11"
+    },
+    {
+      "id": "pty-error",
+      "argv": [
+        "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux/debug/examples/qualification",
+        "--trace",
+        "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/qualification-1/pty-error.trace.jsonl",
+        "--hold",
+        "--failure",
+        "error"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "status": "PASS",
+      "startedAt": "2026-10-01T06:03:59.144520+00:00",
+      "timeoutSeconds": 30,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true",
+        "TERM": "xterm-256color"
+      },
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "pid": 1262646,
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 1,
+      "finalInfo": {
+        "build": "rc4-contracts.7",
+        "clock": {
+          "timeUs": 0,
+          "targetUs": 0,
+          "step": 0,
+          "paused": true
+        },
+        "particles": {
+          "active": 0,
+          "deposited": 0,
+          "aggregated": 0,
+          "born": 0,
+          "rejected": 0,
+          "depositRejected": 0
+        },
+        "camera": {
+          "position": [
+            0.0,
+            10.0,
+            48.0
+          ],
+          "yaw": 0.0,
+          "pitch": -8.0,
+          "roll": 0.0,
+          "flightActive": false
+        },
+        "prompt": {
+          "text": "",
+          "caret": 0,
+          "mode": 1,
+          "revision": 0
+        },
+        "selection": 0,
+        "inspectorScroll": 0,
+        "modal": 0,
+        "render": {
+          "fragmentOverflow": 0,
+          "contentNeedsReader": 0
+        },
+        "fields": [],
+        "fieldCount": 0,
+        "windows": [],
+        "nodes": [],
+        "widgets": [
+          {
+            "id": 90,
+            "text": "RATATUI NATIVE PTY  █ ▀ ⣿",
+            "value": 0.0,
+            "kind": 0,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          },
+          {
+            "id": 91,
+            "text": "Native selection",
+            "value": 0.0,
+            "kind": 3,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          }
+        ],
+        "messages": [],
+        "intents": [],
+        "registeredStates": [
+          {
+            "id": 1,
+            "path": "/qualification/button",
+            "role": "control",
+            "family": "widget",
+            "targetId": 91,
+            "exists": true,
+            "states": {
+              "active": false,
+              "selected": false,
+              "hover": false,
+              "pressed": false,
+              "disabled": false
+            },
+            "authored": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            },
+            "effective": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            }
+          }
+        ],
+        "styleRules": [],
+        "values": {},
+        "triggers": [],
+        "accessibility": {
+          "reducedMotion": false,
+          "screenReader": false
+        },
+        "floor": {
+          "wetness": 0.0,
+          "collisionEnabled": true,
+          "renderVisible": false
+        },
+        "pending": [],
+        "emitters": [],
+        "deposits": []
+      },
+      "exitCode": 1,
+      "parentForcedCleanup": false,
+      "seconds": 0.091861,
+      "finishedAt": "2026-10-01T06:03:59.236595+00:00",
+      "transcript": "pty-error.terminal.bin",
+      "transcriptSha256": "94d51018714fbb09198eb4231ba768c3260a7c169e8f43bef4172f39753f2fab",
+      "trace": "pty-error.trace.jsonl",
+      "traceSha256": "cbaaeb00e234fbf63ac05fcdf3224d5ee5b27e34efa340fbe7a8aadbb783fec0",
+      "binarySha256": "0828e568e6e84ff1eafa80bc0f1ddc87b6ff5493c12c1428e5fe022bb0f3aa11"
+    },
+    {
+      "id": "pty-panic",
+      "argv": [
+        "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux/debug/examples/qualification",
+        "--trace",
+        "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/qualification-1/pty-panic.trace.jsonl",
+        "--hold",
+        "--failure",
+        "panic"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "status": "PASS",
+      "startedAt": "2026-10-01T06:03:59.291604+00:00",
+      "timeoutSeconds": 30,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true",
+        "TERM": "xterm-256color"
+      },
+      "checks": [
+        "raw PTY and actual first native frame precede input",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "pid": 1262659,
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 101,
+      "finalInfo": {
+        "build": "rc4-contracts.7",
+        "clock": {
+          "timeUs": 0,
+          "targetUs": 0,
+          "step": 0,
+          "paused": true
+        },
+        "particles": {
+          "active": 0,
+          "deposited": 0,
+          "aggregated": 0,
+          "born": 0,
+          "rejected": 0,
+          "depositRejected": 0
+        },
+        "camera": {
+          "position": [
+            0.0,
+            10.0,
+            48.0
+          ],
+          "yaw": 0.0,
+          "pitch": -8.0,
+          "roll": 0.0,
+          "flightActive": false
+        },
+        "prompt": {
+          "text": "",
+          "caret": 0,
+          "mode": 1,
+          "revision": 0
+        },
+        "selection": 0,
+        "inspectorScroll": 0,
+        "modal": 0,
+        "render": {
+          "fragmentOverflow": 0,
+          "contentNeedsReader": 0
+        },
+        "fields": [],
+        "fieldCount": 0,
+        "windows": [],
+        "nodes": [],
+        "widgets": [
+          {
+            "id": 90,
+            "text": "RATATUI NATIVE PTY  █ ▀ ⣿",
+            "value": 0.0,
+            "kind": 0,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          },
+          {
+            "id": 91,
+            "text": "Native selection",
+            "value": 0.0,
+            "kind": 3,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          }
+        ],
+        "messages": [],
+        "intents": [],
+        "registeredStates": [
+          {
+            "id": 1,
+            "path": "/qualification/button",
+            "role": "control",
+            "family": "widget",
+            "targetId": 91,
+            "exists": true,
+            "states": {
+              "active": false,
+              "selected": false,
+              "hover": false,
+              "pressed": false,
+              "disabled": false
+            },
+            "authored": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            },
+            "effective": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            }
+          }
+        ],
+        "styleRules": [],
+        "values": {},
+        "triggers": [],
+        "accessibility": {
+          "reducedMotion": false,
+          "screenReader": false
+        },
+        "floor": {
+          "wetness": 0.0,
+          "collisionEnabled": true,
+          "renderVisible": false
+        },
+        "pending": [],
+        "emitters": [],
+        "deposits": []
+      },
+      "exitCode": 101,
+      "parentForcedCleanup": false,
+      "seconds": 0.091991,
+      "finishedAt": "2026-10-01T06:03:59.383816+00:00",
+      "transcript": "pty-panic.terminal.bin",
+      "transcriptSha256": "372e57e47821308c8b81f11aea9440bbc67fcdfad5223edbec0b50127a0bb37b",
+      "trace": "pty-panic.trace.jsonl",
+      "traceSha256": "0bf405943b9bd1fe64de4729a25f2504960293b31be66b20910e9ea190184737",
+      "binarySha256": "0828e568e6e84ff1eafa80bc0f1ddc87b6ff5493c12c1428e5fe022bb0f3aa11"
+    },
+    {
+      "id": "pty-partial-setup",
+      "argv": [
+        "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux/debug/examples/qualification",
+        "--trace",
+        "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/qualification-1/pty-partial-setup.trace.jsonl",
+        "--hold",
+        "--failure",
+        "setup"
+      ],
+      "cwd": "<workspace>/wt-nocturne-contracts6-intents-20260930",
+      "status": "PASS",
+      "startedAt": "2026-10-01T06:03:59.437544+00:00",
+      "timeoutSeconds": 30,
+      "environment": {
+        "PATH": "<toolchain>/cargo/bin:<toolchain>/cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/games",
+        "RUSTC": "<toolchain>/cargo/bin/rustc",
+        "RUSTDOC": "<toolchain>/cargo/bin/rustdoc",
+        "CARGO_HOME": "<workspace>/tasks/nocturne-ratatui-qualify-40cfe248-20261001/private/cargo-home",
+        "CARGO_TARGET_DIR": "<build>/wt-nocturne-contracts6-intents-20260930/x86_64-linux",
+        "CARGO_NET_OFFLINE": "true",
+        "TERM": "xterm-256color"
+      },
+      "checks": [
+        "raw partial setup was observed before authorizing its failure",
+        "child reached terminal exit",
+        "exact termios and enabled terminal protocols restored by child"
+      ],
+      "pid": 1262667,
+      "terminalAttributesRestoredByChild": true,
+      "expectedExitCode": 1,
+      "finalInfo": {
+        "build": "rc4-contracts.7",
+        "clock": {
+          "timeUs": 0,
+          "targetUs": 0,
+          "step": 0,
+          "paused": true
+        },
+        "particles": {
+          "active": 0,
+          "deposited": 0,
+          "aggregated": 0,
+          "born": 0,
+          "rejected": 0,
+          "depositRejected": 0
+        },
+        "camera": {
+          "position": [
+            0.0,
+            10.0,
+            48.0
+          ],
+          "yaw": 0.0,
+          "pitch": -8.0,
+          "roll": 0.0,
+          "flightActive": false
+        },
+        "prompt": {
+          "text": "",
+          "caret": 0,
+          "mode": 1,
+          "revision": 0
+        },
+        "selection": 0,
+        "inspectorScroll": 0,
+        "modal": 0,
+        "render": {
+          "fragmentOverflow": 0,
+          "contentNeedsReader": 0
+        },
+        "fields": [],
+        "fieldCount": 0,
+        "windows": [],
+        "nodes": [],
+        "widgets": [
+          {
+            "id": 90,
+            "text": "RATATUI NATIVE PTY  █ ▀ ⣿",
+            "value": 0.0,
+            "kind": 0,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          },
+          {
+            "id": 91,
+            "text": "Native selection",
+            "value": 0.0,
+            "kind": 3,
+            "plot": {
+              "sampling": "inherit",
+              "cellAspect": 2.0,
+              "innerRadius": 0.616441,
+              "startAngle": 0.0,
+              "sweepAngle": 360.0,
+              "revealUs": 0,
+              "revealAtUs": 0
+            }
+          }
+        ],
+        "messages": [],
+        "intents": [],
+        "registeredStates": [
+          {
+            "id": 1,
+            "path": "/qualification/button",
+            "role": "control",
+            "family": "widget",
+            "targetId": 91,
+            "exists": true,
+            "states": {
+              "active": false,
+              "selected": false,
+              "hover": false,
+              "pressed": false,
+              "disabled": false
+            },
+            "authored": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            },
+            "effective": {
+              "material": 2.0,
+              "backgroundMaterial": -1.0,
+              "alpha": 0.2,
+              "sampling": -1.0
+            }
+          }
+        ],
+        "styleRules": [],
+        "values": {},
+        "triggers": [],
+        "accessibility": {
+          "reducedMotion": false,
+          "screenReader": false
+        },
+        "floor": {
+          "wetness": 0.0,
+          "collisionEnabled": true,
+          "renderVisible": false
+        },
+        "pending": [],
+        "emitters": [],
+        "deposits": []
+      },
+      "exitCode": 1,
+      "parentForcedCleanup": false,
+      "seconds": 0.103961,
+      "finishedAt": "2026-10-01T06:03:59.541748+00:00",
+      "transcript": "pty-partial-setup.terminal.bin",
+      "transcriptSha256": "0536a198d56009a20619f9ef39a8d0835309c5b6e4b7aef725617859f0dc53e9",
+      "trace": "pty-partial-setup.trace.jsonl",
+      "traceSha256": "b35702dfa4d8dbe4a89ec2640efe878a479f33d8f28fd14af7f298e6af4ff6a2",
+      "binarySha256": "0828e568e6e84ff1eafa80bc0f1ddc87b6ff5493c12c1428e5fe022bb0f3aa11"
+    }
+  ],
+  "sourceBefore": {
+    "native/bindings/rust/Cargo.lock": "8978d0ee7d1dea8b4ed4e28d613d348dbca5439ef09e1c59ca11b6c931e60cc2",
+    "native/bindings/rust/Cargo.toml": "2df9f45201750235cd5c408da277186d8bbbc5dfefb54fcfb846e24bce0895a8",
+    "native/bindings/rust/build.rs": "94b66d0d74fa208ee22f3ab875b8066c5203fc73d4407e53d65a58e465083e18",
+    "native/bindings/rust/examples/replay.rs": "69a19b57349241c5eff255f19cd24cf0fca29d9934d5edb5098d02d7152180e3",
+    "native/bindings/rust/examples/snapshot.rs": "a94ac8848ac24b5fa55002412f608e95a84311d5ae307c5664cdee9b8755c131",
+    "native/bindings/rust/src/lib.rs": "5db7da316408abd39e6969b4e805c1c9644c4ea8fab4a1bd1146a24640816539",
+    "native/bindings/rust/tests/selectors.rs": "ce23cf17fbfbf4e1f9c61ffad2dbb2fcac9b48343cc2d990e04735483de2b99a",
+    "native/bindings/rust/tests/snapshot_layout.rs": "bd02d88c5b069ae5f54a816432574d01dc5cd7352ff97973fdb664c41aab23ec",
+    "native/hosts/ratatui/Cargo.lock": "33d2228dbb4537eef2988fb2f3e1be70c3f72c37ca46d96e9c4a6ab9efb8a6f0",
+    "native/hosts/ratatui/Cargo.toml": "3bb7eaa5fc6ea7c84d0a59d8fd6e3a3c633b84f4356f301bce608beaf8d74e59",
+    "native/hosts/ratatui/examples/qualification.rs": "260d7292f459ae48db941da801ea643b446ec848b4c35be5aa5534a247d750b3",
+    "native/hosts/ratatui/examples/support/mod.rs": "5e4a6a1136d7f210ecd7a253ef902a3f1e4558d9560d8544eff4bce29f1102a4",
+    "native/hosts/ratatui/qualify.py": "b252e0e18efa4ba794e28b2a2cb4169e3ae64c5f1de396c451e70a7a345b97ac",
+    "native/hosts/ratatui/src/lib.rs": "9383e051537ed585cdd3d3bc201248af97c9cc7d97a57799452882715bfeb965",
+    "native/hosts/ratatui/test_qualification.py": "fb738d38584ce5ec29f2f29de94f010c02fb7b6dcea9e7f10e4616f533e71297",
+    "native/hosts/ratatui/tests/adapter_contract.rs": "c46ce3664f117384c2a56a5cfa6247fb44f440c2247c6c5d287d2ba683a51cff",
+    "native/include/nocturne_native.h": "f96dc53cb8be9b947210aa48580e3272de53ff8c80bf9e0288479d70079c6d28",
+    "native/src/blend.c": "44204713babce763b7d631d424ea9ea1eff4d02dd6539c10f02b8461762043b3",
+    "native/src/catalog.c": "52c5ebb6a07ae50428ef28bf095a118e7304d585b66827d6e588da0caa9e9b13",
+    "native/src/commands.c": "411a705d2bca5701de3f3fc589425f9094b84ebe28f7852ae40d896834d0f600",
+    "native/src/conditions.c": "bf7984cb9abf0478b448f9faa68c785d70e970d7a0c8b425bdf731a36d580351",
+    "native/src/internal.h": "7360a7237327171ebc29eac1f6cb83aad19554ed4dd3fcb9fbdcd6d575941a2f",
+    "native/src/json.c": "1b63b88790e8a4629fe2c65abbd539460d1588740122adc529846386e78c8d7a",
+    "native/src/math.c": "1063f1841347d9112e183ad0dc3ffabce77e24ad7c6d269e12cbba81858b16de",
+    "native/src/motion.c": "4eefb428195343a4d56afa08a27d37f556c53d55b2eb50d6483da74432858a09",
+    "native/src/notifications.c": "608c045219a663d8d67e39ec23a2683ae9541ab51e61dbf6572044abb901e3c6",
+    "native/src/plots.c": "093806ccf14a673d7b9597221f4f978ac45109a9b83916a0bf182074373242cc",
+    "native/src/render.c": "20177a36e462e0762128e4bc600bb28de30ad7bc5bda854a66d31ee37e530976",
+    "native/src/sampling.c": "62d1fe48d5eb40037087f87fc2bd4a0cc089ee7097dd28f3ecc637c895866590",
+    "native/src/state.c": "1241529053a705c85f9bac95e348bc4a8dcff74abfc5dff2f61ffe64312889a2",
+    "native/src/status.c": "062782b16f6b0b1bb09a1636d52ea2a5f517aa14eaf0e11614ee0493573f23a5",
+    "native/src/styles.c": "274ed1427e90e3f885fdb3c282a250afb8f2e57930b7b03fd0eeb5d659f50938",
+    "native/src/text_transition.c": "6b49eb36bb6f2b5deb959831ee6e0f43c9c2d32dd6559502ad64b575cf6ab9b4",
+    "native/src/transactions.c": "316a97bd01ed3dfe016a48d6be95bb49108cd6f337a9fd5c5e1a6ac254b89a89",
+    "native/src/ui.c": "605c8e91f1ec20e7852276856a41a2215cfe08dc5ee0a1a63988de7cc12f2183",
+    "native/src/validate.c": "82cac5e2f05fcb37d5a7075e07dab7a83de1f36e4b8383109064f676a4ad325c",
+    "native/src/values.c": "0e4d9533106df643a4436e1140649985664ea5542194e03ab0c7ba948ad32fcf",
+    "native/src/wasm_mem.c": "95750ce81c0d514508bac288738028a02357214a5637197299c1bed804d085e7",
+    "native/src/weather.c": "f516a3373a406a4b89a0191b961627382b4738fb621b1459a86acc047c5e57c9",
+    "native/src/window_transition.c": "8974fb79f2b8c8e16c1967070569a1b146787819272829ae2151226d1da756fd"
+  },
+  "unexecuted": [],
+  "lockInitiallyPresent": true,
+  "sourceAfter": {
+    "native/bindings/rust/Cargo.lock": "8978d0ee7d1dea8b4ed4e28d613d348dbca5439ef09e1c59ca11b6c931e60cc2",
+    "native/bindings/rust/Cargo.toml": "2df9f45201750235cd5c408da277186d8bbbc5dfefb54fcfb846e24bce0895a8",
+    "native/bindings/rust/build.rs": "94b66d0d74fa208ee22f3ab875b8066c5203fc73d4407e53d65a58e465083e18",
+    "native/bindings/rust/examples/replay.rs": "69a19b57349241c5eff255f19cd24cf0fca29d9934d5edb5098d02d7152180e3",
+    "native/bindings/rust/examples/snapshot.rs": "a94ac8848ac24b5fa55002412f608e95a84311d5ae307c5664cdee9b8755c131",
+    "native/bindings/rust/src/lib.rs": "5db7da316408abd39e6969b4e805c1c9644c4ea8fab4a1bd1146a24640816539",
+    "native/bindings/rust/tests/selectors.rs": "ce23cf17fbfbf4e1f9c61ffad2dbb2fcac9b48343cc2d990e04735483de2b99a",
+    "native/bindings/rust/tests/snapshot_layout.rs": "bd02d88c5b069ae5f54a816432574d01dc5cd7352ff97973fdb664c41aab23ec",
+    "native/hosts/ratatui/Cargo.lock": "33d2228dbb4537eef2988fb2f3e1be70c3f72c37ca46d96e9c4a6ab9efb8a6f0",
+    "native/hosts/ratatui/Cargo.toml": "3bb7eaa5fc6ea7c84d0a59d8fd6e3a3c633b84f4356f301bce608beaf8d74e59",
+    "native/hosts/ratatui/examples/qualification.rs": "260d7292f459ae48db941da801ea643b446ec848b4c35be5aa5534a247d750b3",
+    "native/hosts/ratatui/examples/support/mod.rs": "5e4a6a1136d7f210ecd7a253ef902a3f1e4558d9560d8544eff4bce29f1102a4",
+    "native/hosts/ratatui/qualify.py": "b252e0e18efa4ba794e28b2a2cb4169e3ae64c5f1de396c451e70a7a345b97ac",
+    "native/hosts/ratatui/src/lib.rs": "9383e051537ed585cdd3d3bc201248af97c9cc7d97a57799452882715bfeb965",
+    "native/hosts/ratatui/test_qualification.py": "fb738d38584ce5ec29f2f29de94f010c02fb7b6dcea9e7f10e4616f533e71297",
+    "native/hosts/ratatui/tests/adapter_contract.rs": "c46ce3664f117384c2a56a5cfa6247fb44f440c2247c6c5d287d2ba683a51cff",
+    "native/include/nocturne_native.h": "f96dc53cb8be9b947210aa48580e3272de53ff8c80bf9e0288479d70079c6d28",
+    "native/src/blend.c": "44204713babce763b7d631d424ea9ea1eff4d02dd6539c10f02b8461762043b3",
+    "native/src/catalog.c": "52c5ebb6a07ae50428ef28bf095a118e7304d585b66827d6e588da0caa9e9b13",
+    "native/src/commands.c": "411a705d2bca5701de3f3fc589425f9094b84ebe28f7852ae40d896834d0f600",
+    "native/src/conditions.c": "bf7984cb9abf0478b448f9faa68c785d70e970d7a0c8b425bdf731a36d580351",
+    "native/src/internal.h": "7360a7237327171ebc29eac1f6cb83aad19554ed4dd3fcb9fbdcd6d575941a2f",
+    "native/src/json.c": "1b63b88790e8a4629fe2c65abbd539460d1588740122adc529846386e78c8d7a",
+    "native/src/math.c": "1063f1841347d9112e183ad0dc3ffabce77e24ad7c6d269e12cbba81858b16de",
+    "native/src/motion.c": "4eefb428195343a4d56afa08a27d37f556c53d55b2eb50d6483da74432858a09",
+    "native/src/notifications.c": "608c045219a663d8d67e39ec23a2683ae9541ab51e61dbf6572044abb901e3c6",
+    "native/src/plots.c": "093806ccf14a673d7b9597221f4f978ac45109a9b83916a0bf182074373242cc",
+    "native/src/render.c": "20177a36e462e0762128e4bc600bb28de30ad7bc5bda854a66d31ee37e530976",
+    "native/src/sampling.c": "62d1fe48d5eb40037087f87fc2bd4a0cc089ee7097dd28f3ecc637c895866590",
+    "native/src/state.c": "1241529053a705c85f9bac95e348bc4a8dcff74abfc5dff2f61ffe64312889a2",
+    "native/src/status.c": "062782b16f6b0b1bb09a1636d52ea2a5f517aa14eaf0e11614ee0493573f23a5",
+    "native/src/styles.c": "274ed1427e90e3f885fdb3c282a250afb8f2e57930b7b03fd0eeb5d659f50938",
+    "native/src/text_transition.c": "6b49eb36bb6f2b5deb959831ee6e0f43c9c2d32dd6559502ad64b575cf6ab9b4",
+    "native/src/transactions.c": "316a97bd01ed3dfe016a48d6be95bb49108cd6f337a9fd5c5e1a6ac254b89a89",
+    "native/src/ui.c": "605c8e91f1ec20e7852276856a41a2215cfe08dc5ee0a1a63988de7cc12f2183",
+    "native/src/validate.c": "82cac5e2f05fcb37d5a7075e07dab7a83de1f36e4b8383109064f676a4ad325c",
+    "native/src/values.c": "0e4d9533106df643a4436e1140649985664ea5542194e03ab0c7ba948ad32fcf",
+    "native/src/wasm_mem.c": "95750ce81c0d514508bac288738028a02357214a5637197299c1bed804d085e7",
+    "native/src/weather.c": "f516a3373a406a4b89a0191b961627382b4738fb621b1459a86acc047c5e57c9",
+    "native/src/window_transition.c": "8974fb79f2b8c8e16c1967070569a1b146787819272829ae2151226d1da756fd"
+  },
+  "sourceChanges": [],
+  "finishedAt": "2026-10-01T06:03:59.603414+00:00"
+}

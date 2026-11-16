@@ -1,0 +1,21 @@
+{
+  "schema": "0x20261096",
+  "sourceCommit": "0edf36f805fe79e35569f915eb026fbf831ac4d7",
+  "runtimeSha256": "242aa4806ef03d29ee998ac615702341fab3c5fd82022a12d498f41a5075521c",
+  "snapshotSha256": "2c42ccaf7df85baeb8314336b60db1d4dbe74c0060f8b4df864a67cfc5c82719",
+  "frameSha256": "4b483eb25bf37341a126d12315df83f444da7d4d964c17b4f0d4bed933c193ed",
+  "recipe": "autumn",
+  "seed": 2030,
+  "width": 160,
+  "height": 48,
+  "timeUs": 30000000,
+  "environment": {
+    "background": 1118232,
+    "stars": 100,
+    "starFar": 150.0,
+    "sampling": "hybrid",
+    "style": "plasma",
+    "presentation": "workbench"
+  },
+  "actualRuntimeExecution": true
+}

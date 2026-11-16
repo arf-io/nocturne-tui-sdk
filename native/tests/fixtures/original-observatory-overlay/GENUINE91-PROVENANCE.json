@@ -1,0 +1,12 @@
+{
+  "sourceHead": "e63612ac119bf32f010ca1acb559eb4099cd1ec9",
+  "schema": 539365521,
+  "writer": "<workspace>/wt-source-stage-fleet-20261015/native/dist/libnocturne_native.dylib",
+  "writerSha256": "335053779d839cf1955ddc4055d07587737f4bfe21eb8eca0b2d53685a83005a",
+  "snapshotSha256": "37195929b91565491e09a81d581c85be4c579cb7f24ed1ad73989810f976fab8",
+  "frameSha256": "d9bbf14b81b066c7725a6021058271e0b0885e9db513146c194931a91bebf8d3",
+  "modelSha256": "39a58a50a29f7b94a014178595ed6b45907a12e246b9680600ea18ecd9bd91b2",
+  "documentScalars": 70005,
+  "fixedPrefix": 30494208,
+  "fixtureConstruction": "actual unmodified91 writer after restoring genuine91 source scene/model/prompt; no relabel or byte mutation"
+}

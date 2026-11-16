@@ -1,0 +1,3477 @@
+{
+ "schema": "nocturne.gallery-admission.v1",
+ "policy": "The Gallery admits an entry only when its provenance resolves to the original series of explorations (class original), or when it is RC4-era work the operator admitted by name. Synthetic contract fixtures, unresolved claims and originals wrapped in the invented application frame are not admitted. They stay executable as tests (gallery_cases.py --execute); they are not artwork.",
+ "corpusSha256": {
+  "Nocturne-Black-Hole.html": "c5b71e77f571450c3f88e27ae621ad07a1533b6aa2b80ccccf4c7325b04a4357",
+  "Nocturne-Continuity.html": "d94788005fa0340a037378eb9261b5fb0d4a843855cd99155351e01734d5aea2",
+  "Nocturne-Gallery.html": "5652232ef98f3527bbe250aa0a4d5d9bfca344152593db637979c4e8a1bc9ded",
+  "Nocturne-Kinetic.html": "a74e2c1563c5cc668ceb5f499ca08a6fb2e438a1e5c808969e52101d48be1dc2",
+  "Nocturne-Observatory.html": "a88faf3da29fd01d7b357b30c129c54faac831cbced123e665d95c8931cbb3c0",
+  "Nocturne-Pearl-Fleet.html": "8f1ec52d0f7fab7ea9bf95d27094c53bb87b0be571cc2b7a0e5825c00bc10300",
+  "Nocturne-RC3.html": "03ecbde227ee37d06791f51518e6103992a3ad4677b1268b6a791622699a83a9",
+  "Nocturne-Restoration.html": "46003835e559c1e2bea4c282e0caab69b730fbee62cfd13d3181cfbcfb233b65",
+  "Nocturne-Studio.html": "799dc2f8c68f971e072ab904ee59beafef35980a7c10c5d784e38b876d706975",
+  "Nocturne-Workbench-Docs.html": "c3e4c6e8ea48440e2c1ff1d3078a5238cf43abb9ac0e14add7c53ad59d0b2ae7",
+  "Nocturne-Workbench.html": "2634cc6586722fb1211c982adceddd60a8d36c2f740770d2277d68d7803a5987",
+  "bindings/continuity/atelier-particles.js": "4709c6ee032836ea3115c6e81a7875b9802655361efa637c8d0382c2ea80aeba",
+  "bindings/continuity/atelier-text.js": "94ecb216860c5256ea3b9b565a9d740f32cec65db8f8458f6dc52999cf78cb47",
+  "bindings/continuity/black-hole-config.js": "b5c2a6f692d5047d1ea51f88b2e6508a8793805b1faf0a2eb795e14aea0632cc",
+  "bindings/continuity/black-hole-controls.js": "88e2babff655e829a72dac35da4a74e42f9e39a6ecd4365cbddf05e41135f053",
+  "bindings/continuity/black-hole-flight.js": "827c40a7e518fe2aa0643f818ab96d46db6d39af0ae46b26068060362d8b2b9a",
+  "bindings/continuity/black-hole-gpu.js": "d8d5b051e047f6d1a8a16865e02f0f807baeec51cafc2f8634d40f3e2cbf5082",
+  "bindings/continuity/black-hole-graph.js": "dca3cf0f1a109a76b126ef161f1533fa42272e1a6f96d6e04fe82f1f4c024039",
+  "bindings/continuity/black-hole-keys.js": "afae177ffcd0391386cc864a383e0341f0ed44bd52bb1fbbaf1fe85a5e65eb3c",
+  "bindings/continuity/black-hole-model.js": "1f2e89a23bfbebe064dc393a1011a85c3cc92ee59a58b491764e7a6c95f9917b",
+  "bindings/continuity/black-hole-renderer.js": "255bbc86a633b4a4dd31fea4018a54ec1b67435b7486385538ad3ec22a744476",
+  "bindings/continuity/black-hole-space.js": "82648ac1299ef9747779fd9a6097aba1f3d4663ae6b3c7ffa3a16a009ae7c7bd",
+  "bindings/continuity/continuity-example-mesh.js": "282569a2b3615a70a4f42177d0cb87e5c10ef76312a1078f274b61d875c79afc",
+  "bindings/continuity/continuity-ink.js": "015919eeea7e28662fface23469251863747a3a01cef3fa1ce1eba613d310e0c",
+  "bindings/continuity/continuity-input.js": "2bf68842e07cf847364250fdf15324cd64e52d4dd72cc463eaebcc89b3fce01b",
+  "bindings/continuity/continuity-presets.js": "005d12322e5d876b74f200877764b96c7a9426534ee1af70afc4fc7a326e58cd",
+  "bindings/continuity/effect-catalog.js": "ec4bded3d23772f56abdebd16193153c47f2d1f09fa8eb01aadef404b6ad0b91",
+  "bindings/continuity/effect-painter.js": "6eb435312c9d93109a9a517af2879a724e93219aee96040e3bbed73e82d5307a",
+  "bindings/continuity/graph-layout.js": "b1de68e838511f43d2cec5eecd1700689d14ff7152b9c2ef886b80063ca36d06",
+  "bindings/continuity/kinetic-camera.js": "392f4579adcce306361566eba88267b32c18c3923b5783e8ae21ef3faa4a7a86",
+  "bindings/continuity/kinetic-model.js": "59ed54684283aab535f5111f9cd092c9b98021bd54af35efa01f55822dfb98a6",
+  "bindings/continuity/kinetic-particles.js": "59c5fe16081047012ff01a352ee62bf632e417e0c0b782033026ce2fda744065",
+  "bindings/continuity/kinetic-renderer.js": "584f04c8ef452222b1c9cbf29edbdc9e738828a26c2e988f4006f3d654e4e5ce",
+  "bindings/continuity/kinetic-text.js": "287223684ca60ceedae1bc187ec80b9e27558a21cc9f944e479e5a102d60d7fb",
+  "bindings/continuity/kinetic-windows.js": "b81a33c320177de29aca912e4e16b3ec4f165c3e95a6d447fca30d9d472545c2",
+  "bindings/continuity/mesh-obj.js": "9ec4b3117e3406285e4f2fb212d2e067034a32da2446cd9c3f0d0ef9abe6e3c8",
+  "bindings/continuity/observatory.js": "c221beb6e719f47f2c4744fce7cf70fcf918a31b436b6f0f1fca4df63f283904",
+  "bindings/continuity/prompt.js": "e78c58f70e4c2bd54163ea718dede9eb4a334f79f11f151457615d56c0d4df0e",
+  "bindings/continuity/restoration-config.js": "191baa2e7dd9b4b0d397641553e713364fe9d6f875f69834203601f47963c73a",
+  "bindings/continuity/restoration-graph.js": "279fa617bed1002f3264382d2f012a4d780f828fe343a4544bad4ad92545836e",
+  "bindings/continuity/restoration-model.js": "a5850e016a7b8af6acbc0d28d8540c27c91dd577794274aff6b0f36e3e0fcb06",
+  "bindings/continuity/restoration-renderer.js": "ea65ec34887d5ee3d9d2a3c06bd9e2c557c4bee935db01b95d10b58fd8e430d0",
+  "bindings/continuity/studio.js": "4ff4f4da44c897df587a386fa45072a2d511394e52ce920f8ceac9f8952fff80",
+  "bindings/continuity/styles.js": "f2dc2b309f5fa51f1b402210be796232a1af0140a21d756c40292938c75d51b1",
+  "bindings/continuity/webgl-presenter.js": "a06eec49d947c0ec07a8b33e439762ebf3ffee2b048be45ad7212e792b4513ac",
+  "bindings/continuity/workbench-config.js": "aa1d5f1ec2e45109d0541812fa01a415e4246c684ddf375a4fe632538445ad82",
+  "bindings/continuity/workbench.js": "ea6cfebbbeb684fba58a07d87d8073788c6331fb12fd8925b0af7c5a29cf6192",
+  "bindings/continuity/world-detail-fields.js": "7b4033b6605bdb28c6d63e65ae3fbbf14f6276004c8d50b493c49f6c34215365",
+  "bindings/continuity/world-fields.js": "7dd987c19aa5f8d7ca9701dbc032799c39ac7cef3adca60ed6489432ae4a1b83",
+  "bindings/continuity/world.js": "9a0162ff91b33bac2416129d96b1e9e833d9900f6f94d4d946e573fd4f0bb712",
+  "legacy/Nocturne-Gallery-v0.1.html": "4fed2af5a9e64f41e2bd33a5b90b0fdab688f94a30abf0dbd47d37e65f2c512d",
+  "legacy/atelier-v0.5/AGENTS.md": "48bcf4a66a38b9a56a3e1a302988a6489f40b3ea42236e30e68347d257c29462",
+  "legacy/atelier-v0.5/BUILD-IDENTITY.json": "432cb116ac12cdaf8694bd0e6cc884d1a15f730b0f8984c8bfcd0d32f211d1ab",
+  "legacy/atelier-v0.5/CHANGELOG.md": "94e7d26a78c3f51e32b0ca483fde6536e187d24772819d1afd1afd22e5fab952",
+  "legacy/atelier-v0.5/LLM-HANDOFF.md": "0767f859dbef482b40944a4b60b6def7faf51b264febe61d1b818b4194d01b54",
+  "legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html": "01500ccd3106f40a7f0b3e21fe4a580f1e0666980e998930feaf94bff730aced",
+  "legacy/atelier-v0.5/README.md": "de75d3f96db67b2a99b777748c911b5ee69fa32b9fe49b304c4a1f9e9d61acc9",
+  "legacy/atelier-v0.5/RESTORATION-PROVENANCE.json": "8a2b4cd6c39580bd3589879fa5a15b2df8f01d1da0d68f8a84ab428bbf096cf6",
+  "legacy/atelier-v0.5/atelier.schema.json": "82563f6cae5bff6ec99ecba71b1a781d6ede3d957a86ec3ffc8f335985177ae9",
+  "legacy/atelier-v0.5/bindings/go/cmd/fleet-scene/main.go": "9caf304a7bc9c6a18ea88fd6f9ee15d20fd9413e7cc9cbeb0d9a9f816fb14d06",
+  "legacy/atelier-v0.5/bindings/go/cmd/snapshot/main.go": "e45e18c35f75b9da13562ebfa0fd8a21f1623ef746ab9de96a79d817e7356f76",
+  "legacy/atelier-v0.5/bindings/go/cmd/studio/main.go": "87a315359a35280894a39744341cbd0591741b25aa8653520c678adb7bc7874f",
+  "legacy/atelier-v0.5/bindings/go/fields.go": "ec05e260f42e122f8d8c1134605de843640f9e79e9402cce79b9e611686d524d",
+  "legacy/atelier-v0.5/bindings/go/fleet_scene.go": "a9ef218e56117ab11c242f07ac363b746554a4bdfed59c1dab2dcfa2b0c7373f",
+  "legacy/atelier-v0.5/bindings/go/fleet_test.go": "006ca26ab1990524b7942f3f3d052d5c3d6bd84163b57fe9f833a65a2c7670be",
+  "legacy/atelier-v0.5/bindings/go/nocturne.go": "20abfea1447092558607c78e100f99485bc8826c2cf03395a1708103c63aab98",
+  "legacy/atelier-v0.5/bindings/go/nocturne_test.go": "829cf0277c5fe4cb6639d3cacdeb80b69f79955438ba8566798f6871e3d2330b",
+  "legacy/atelier-v0.5/bindings/go/observatory_test.go": "fb1c26e8de38b6b3192f7f142a4fdc112b5f0aeb3e38b0f45b8fdc634f314ae7",
+  "legacy/atelier-v0.5/bindings/go/renderer.c": "a4f877c4c9080969a56328ab6013e10546183ea3ef29a5064b453487c342d8d5",
+  "legacy/atelier-v0.5/bindings/go/studio.go": "6a72c14caafc0f9299d0cc0bb43be8910897e016664975d5debf0dd357f1e34b",
+  "legacy/atelier-v0.5/bindings/go/studio_fields.go": "b28d350aaac5b3bcdbe9b3077ed71c080e04849ba529f53257f1a17955b2f6c3",
+  "legacy/atelier-v0.5/bindings/go/studio_fixtures_test.go": "59dc59ee6d21034c85b8d3a64328779cd066cba8af293509d1f47ab65e8578c2",
+  "legacy/atelier-v0.5/bindings/go/studio_test.go": "597ee9937d68c9472c9d6f6df0d34dba12af91a955b4d1cba82ab503c9e9a747",
+  "legacy/atelier-v0.5/bindings/python/fleet_scene.py": "2bd4c1c504a2d31237ba6213cac9d08094dd5d2f0a2e77b757f8a2f0efb20352",
+  "legacy/atelier-v0.5/bindings/python/interaction.py": "c7f568a3058198f0ca680176c5fca923278b06be47333d7cd7d5eb478dc874a7",
+  "legacy/atelier-v0.5/bindings/python/nocturne.py": "55cf857d2703baeced354227eed0ea708b0c1e9330296c5a8250f52ec06348c1",
+  "legacy/atelier-v0.5/bindings/python/studio.py": "4b7930bec78d598c289b602f4ed75f83f0ec5528c65836894e7f900d953f4799",
+  "legacy/atelier-v0.5/bindings/python/terminal.py": "cce45ed9532349153b24e74548e8dbc1b1121448c679f1d0e2a7aa0d159240cb",
+  "legacy/atelier-v0.5/bindings/rust/build.rs": "1cce4bac23754acfef7a240bca51a31f81b07b5d9c4b7e51b3c3ec6a57f856e5",
+  "legacy/atelier-v0.5/bindings/rust/examples/fleet_ink.rs": "147d0a73ef847ef9c57fc7759ec24549fbc2d380619a10bb094236a4ffe7e07a",
+  "legacy/atelier-v0.5/bindings/rust/examples/observatory_palette.rs": "3c346b9f8c1417fc0d5d34868a4815e0e2d18e6f59ddd65369fd56bd95a1a52e",
+  "legacy/atelier-v0.5/bindings/rust/examples/snapshot.rs": "7aff4f3d3ab622e4470705dd21c2a68ee1a45f4cc2ec843829483894034ea517",
+  "legacy/atelier-v0.5/bindings/rust/examples/studio.rs": "4b6d020de60ad7b5e0a01c377cb08cb9b82eacd09e6472fe0c99d6daf5cf0d12",
+  "legacy/atelier-v0.5/bindings/rust/src/keys.rs": "f5841614b8095807d1401e3775e5ee19b75750954819994d12cdc96e97808374",
+  "legacy/atelier-v0.5/bindings/rust/src/lib.rs": "5b1b7565f97131de3d8dd67172e85e6ba94362399bc1828ff441cabd632f153d",
+  "legacy/atelier-v0.5/bindings/rust/src/studio.rs": "97aa51d7b17725f57317a472798a474deafed32d18ccb52c7e04c7447e7830eb",
+  "legacy/atelier-v0.5/bindings/rust/src/studio_keys.rs": "ca1f910f59ac4c0c171017ade5b56f34ebf002b05b5d8511480817f65f13690b",
+  "legacy/atelier-v0.5/bindings/rust/tests/fleet_fixtures.rs": "b48020a03170c056b0da675d4c397442e2ebb213fc5c7aad3c6b3e3e1aec14bf",
+  "legacy/atelier-v0.5/bindings/rust/tests/observatory_color.rs": "d155ee54640ea229da822ef1bb54c3723ab8db9392bca306c377f64c0aad3e4c",
+  "legacy/atelier-v0.5/bindings/rust/tests/studio_fixtures.rs": "8682975bddbc45c6eb9b54febd315388f899f6742530faa3378c70e64e877fd6",
+  "legacy/atelier-v0.5/bindings/typescript/atelier.ts": "6abd6dded4bff7623b7c471773b4485f08d42c4bc0c0ae447b0506e5f61e4fad",
+  "legacy/atelier-v0.5/bindings/typescript/atelier_settings.ts": "15aa7229c69b965722366bddbf368f0378e50252f71d3a7fc0f8fea44d5ceddb",
+  "legacy/atelier-v0.5/bindings/typescript/cell_profile.ts": "509b825a3b71543cf8fb5506ce782e2bc410cc8932594dc3267197fd35e6348f",
+  "legacy/atelier-v0.5/bindings/typescript/fleet-model.ts": "07a7b40d0c27b0d337c5caae743b6da495336576f1887ad98602b8d680ff49c3",
+  "legacy/atelier-v0.5/bindings/typescript/fleet-view.ts": "dcc7a1bc0c83cab8b2d97e50dc9bb432a57608ead292c967d942c75a62a2154c",
+  "legacy/atelier-v0.5/bindings/typescript/fleet.ts": "d9be22cb8f42440bb7f9d266362b299204b34525bb84c0d385482c81e7e89b85",
+  "legacy/atelier-v0.5/bindings/typescript/nocturne.ts": "b534cdaa0d991ab84dd4f203237d0bce44225fd4db1866cb336113ca850ec989",
+  "legacy/atelier-v0.5/bindings/typescript/observatory.ts": "9a44e625aed6294e335af2cbed50c918e516de97805e2cc44b804315742cd5f4",
+  "legacy/atelier-v0.5/bindings/typescript/particles.ts": "357db8ed8debc58c4bdde2e8c43bf4da0ed5a1fbad4d571b6523221ee16ed224",
+  "legacy/atelier-v0.5/bindings/typescript/spatial.ts": "b6285934e436113fcc80e585b813de990a26d9e115a003a29e36f3d3440fdf15",
+  "legacy/atelier-v0.5/bindings/typescript/studio.ts": "4cfb6161148b00d76fcee4a6d5c10d96c18a58c68d4f6377fd693716845459b4",
+  "legacy/atelier-v0.5/bindings/typescript/text_fx.ts": "72fb04cbdab7b242c69e7b9d6cda0485c8110e149a23502b016dc7e06dd32862",
+  "legacy/atelier-v0.5/bindings/typescript/window_fx.ts": "8845b78de8fe76e98145483667b695d47fcc9d8e71c4f12ca2b329140a04488a",
+  "legacy/atelier-v0.5/component-catalog.json": "7e878f128789275699e3fb359f6dffc4eea18f188fc6094fbaa4ccf65c33fe8f",
+  "legacy/atelier-v0.5/dist/typescript/atelier.d.ts": "7395d273920174ff69fe02bd6d9c91e7b8e59f4f131445d91b55855efea42988",
+  "legacy/atelier-v0.5/dist/typescript/atelier.js": "e823bbace1392b7f2410b226a2c04055d86e5932ddd4d6a7f1fa7724f504da70",
+  "legacy/atelier-v0.5/dist/typescript/atelier_settings.d.ts": "e6c99b2364ab0fc4e3afccac3dc5b7ee0787a8904cf276b8845682154587cf0c",
+  "legacy/atelier-v0.5/dist/typescript/atelier_settings.js": "823653a6b3f2d6ef21adb074bb796b3016fa7bb59be622cf228967f3b12723e5",
+  "legacy/atelier-v0.5/dist/typescript/cell_profile.d.ts": "40fa3f65e316bc984da8e6ac2ea2dfcc35de0c012e569222e9efa64cf4da35f6",
+  "legacy/atelier-v0.5/dist/typescript/cell_profile.js": "abcce39b11f3b7f465b191bb8106ce47a152f555e07a69535e52760cfd3d49ff",
+  "legacy/atelier-v0.5/dist/typescript/fleet-model.d.ts": "681d6c1d579eed17d7d677f2c45fe530534f4077d016408fcd8382e06d4ebdca",
+  "legacy/atelier-v0.5/dist/typescript/fleet-model.js": "5c3b239932f29055e937bc57af4cdbbb5646b581a3554e56e8e132f3b8945369",
+  "legacy/atelier-v0.5/dist/typescript/fleet-view.d.ts": "e1b40feb8049c4f6e83003bcdbc76df3394bb1eac5391e7e2e77f8bf597ae705",
+  "legacy/atelier-v0.5/dist/typescript/fleet-view.js": "a3ab8091f8a873aef864f81c9a6fb711e7a9ac9c7b652fc20d1fcbe4ba4823db",
+  "legacy/atelier-v0.5/dist/typescript/fleet.d.ts": "ce2ba91d16b2808e26289a0d79681b9eecfc6b2308ffcb3183ece2912d70c800",
+  "legacy/atelier-v0.5/dist/typescript/fleet.js": "f53e85c61b851a06031f6f4a73aa2f06b4e68ec5a9ffaf1b518db8d0946b4007",
+  "legacy/atelier-v0.5/dist/typescript/nocturne.d.ts": "37e0fa7ffd56d6f110fe9ddf8b3334fac0c8ca250fdb9ba9c1ca5e871e76c9ec",
+  "legacy/atelier-v0.5/dist/typescript/nocturne.js": "164d8c9dec493e1c05cc5a962a30ea718726fedcd718b2694349cee3cdcc24f6",
+  "legacy/atelier-v0.5/dist/typescript/observatory.d.ts": "a3cb52861ab721d91a1101c05d7747aac869adeddff8c38c6de57477a0b10a36",
+  "legacy/atelier-v0.5/dist/typescript/observatory.js": "8c44bef69522572b65fb32ab07e6e2271a3e3f7c6950518e7dc245096c4e9189",
+  "legacy/atelier-v0.5/dist/typescript/particles.d.ts": "8d536cabb5db4b7e88fcfd2b4c95d7dd1b64b0b1a5c04e7d9cc30e735ec1e510",
+  "legacy/atelier-v0.5/dist/typescript/particles.js": "cc4816e5ed4d1e40c0740c5c2198d33c705e734f9af08c402806451ddd6f9c29",
+  "legacy/atelier-v0.5/dist/typescript/spatial.d.ts": "36e4a30c085eed29d6df28fbb44c8cd8ae6db4c95ae9087e22552c78f571f5f5",
+  "legacy/atelier-v0.5/dist/typescript/spatial.js": "b9fa8c796d6679dc7695e60edd595fb2ce9ebfcbe93cae7b372b202e9ca5f991",
+  "legacy/atelier-v0.5/dist/typescript/studio.d.ts": "1fa8b7909269210a3546f56eb56c47f9c98ad85ac5bec63ae54887f9527a4f87",
+  "legacy/atelier-v0.5/dist/typescript/studio.js": "9e15a8f1f7fb49cd7fb71327dcb99573cbece9febcf38debf9595ad18d60f934",
+  "legacy/atelier-v0.5/dist/typescript/text_fx.d.ts": "44a1ed57a38a31804441ca1c5e99e5c1e3914965c8f91f315f9626c615cdb694",
+  "legacy/atelier-v0.5/dist/typescript/text_fx.js": "bcbc6ee7a72839ffbebcd73da51271302f76679ed3b857b974be89651d0fa6ca",
+  "legacy/atelier-v0.5/dist/typescript/window_fx.d.ts": "2b94edec0632dc06025886500ac126eb19a13a51a2f45196edd37a2ae8f432a2",
+  "legacy/atelier-v0.5/dist/typescript/window_fx.js": "350c7ea92211e7fc6c785e3923cc9f3e9ff8401f0fb810abfc94b6815985e5e7",
+  "legacy/atelier-v0.5/docs/CONFIGURATION.md": "261feac1bf9d2f91fedd23c25dcb961ce666d0996de38fa10b3e344896952342",
+  "legacy/atelier-v0.5/docs/DESIGN.md": "ef1746f0b8dc10f85ed914fab1eeaa58e38d70bb625804c95f8b58aa01dc8ddf",
+  "legacy/atelier-v0.5/docs/INTEGRATION.md": "87e10060f90f2c01a6be4f7893842a1a0a6f2b6b2b63487f44d68cfff34acc0a",
+  "legacy/atelier-v0.5/docs/PR_BODY.md": "396f396ead2be01ef0946216dbfeab441e891031205111ecef127e15d9f47e5d",
+  "legacy/atelier-v0.5/docs/RUST_REVIEW.md": "36a68803fee1fb1f478fcdb87b52e627cab06d405c5629b310bccc4dfcb131ed",
+  "legacy/atelier-v0.5/docs/STUDIO_API.md": "3eee0a0473f897f9102dd17c342fb1f441971f5bb1ed99b0beaca056045de935",
+  "legacy/atelier-v0.5/docs/TEST_REPORT.md": "463ee704bf89bd586cb7ffc43358ba2842e0f73e0b67fc7d442b6fa446821529",
+  "legacy/atelier-v0.5/docs/TEST_REPORT_STUDIO.md": "9e398ec4686065afeb08549b82775e26cbb10371bf63168d2505014da60cc51b",
+  "legacy/atelier-v0.5/docs/TMUX.md": "3ad68d8f85ff0cabc00937925aa2ce0fbcb748f44a0ae664e562c44879fa1873",
+  "legacy/atelier-v0.5/docs/TYPOGRAPHY.md": "be3e8d0a6c06a6f51719bbd71f77ef71ac5d24e0ebad36becb75e45a1a8fa358",
+  "legacy/atelier-v0.5/docs/USER_STORIES.md": "489af2cf78c52d63a125d599d409ee8ac67113b39243abbc64fdffe3dc0cc5f8",
+  "legacy/atelier-v0.5/docs/VOLUME_I_README.md": "63b5f450a02fa69f4bb2c8530d0e73d2e630e14f57d36c5ed3270efbad9511cc",
+  "legacy/atelier-v0.5/docs/atelier/API.md": "3c756fdc6af9abf249d19d5c371f878ac7cb0587897ff29efefb655238b80ccb",
+  "legacy/atelier-v0.5/docs/atelier/CONTROLS.md": "c1a50891a2ce3514b4a3f63ab48da809b1a2125b54191ff9e866ce474519aac1",
+  "legacy/atelier-v0.5/docs/atelier/EXPERIENCE.md": "1ae5d1c763acea770f37c2914a8a7f9b99ba47fc113fd74a591950105505fdc9",
+  "legacy/atelier-v0.5/docs/atelier/PR_BODY.md": "2956233646f50a29b74f0e8b6a0a5a2c1804d4f4434867b58876f19878127d80",
+  "legacy/atelier-v0.5/docs/atelier/TEST_REPORT.md": "61000d61edafb0ec1f90988062a0140f909980068227397d86575037f40cbe62",
+  "legacy/atelier-v0.5/docs/fleet/EXPERIENCE.md": "41c4c12ea51d5d168554ebde491aefd43f4c7f82bc5df448b1fef84ee034250e",
+  "legacy/atelier-v0.5/docs/fleet/INTEGRATION.md": "dd304f30bf67fe05212eafc5a346f91a2ab2f1cb917618f0c4d2608ce9e71b6b",
+  "legacy/atelier-v0.5/docs/fleet/PR_BODY.md": "b699f55b57d12b78b84c22d49b366c107163d52767db8833b49cd357831ea6a3",
+  "legacy/atelier-v0.5/docs/fleet/README-v0.3.md": "ca44162bf67499cc5bde0912d7799336ea12c0b7ad4ffd5db34ca8f4e56cd6f9",
+  "legacy/atelier-v0.5/docs/fleet/RUST_REVIEW.md": "b49b12f42de28360599213899151f0d26a36f32d8239c4cf421de209cd6dd4bc",
+  "legacy/atelier-v0.5/docs/fleet/TEST_REPORT.md": "c4284b3710361aadd17c88ffde3e0def4e2ee40dd2e8d5f408af47929d5e5062",
+  "legacy/atelier-v0.5/docs/observatory/ACCEPTANCE.md": "df23fdebffe435052210a3f676bbb4276d988f6d8f4e9f32a2e5469807d13802",
+  "legacy/atelier-v0.5/docs/observatory/CONTROLS.md": "537e0f53695531771a06b1dfbd2fef8082a2afef4d00cc5b626234dd94e2c9ee",
+  "legacy/atelier-v0.5/docs/observatory/INTEGRATION.md": "4bfd8b8ebed4776933179476f3c429bfe52a12a43c965038af4ec72c79610e1c",
+  "legacy/atelier-v0.5/docs/observatory/LLM-HANDOFF-v0.4.md": "32df8761f9bdcb443e557e48c7c6d55067acddc799a6a36e3014f0776737f8ec",
+  "legacy/atelier-v0.5/docs/observatory/PTY.md": "71445b20019cd4f665d008b99953b7aef79f88e81d9e04991e67731d29276bdf",
+  "legacy/atelier-v0.5/docs/observatory/README-v0.4.md": "a40de0e9c5b876e503ee0b8aa57299b3b72516c33b9085eb425c0a525c883390",
+  "legacy/atelier-v0.5/docs/observatory/RUST_REVIEW.md": "90d36485019212c58b761a8c4e431720e099935b01e13d20f00fc61bc72db29b",
+  "legacy/atelier-v0.5/docs/observatory/SENSORS.md": "353f7e7995bf191eff205dd77fce9c52f8dcc128b0663089b1ccadf99bf79c00",
+  "legacy/atelier-v0.5/docs/observatory/TEST_REPORT.md": "794217b255df418c4b0e354ab3fc7de735e3b17d453abc04c18850b0d22a8dc1",
+  "legacy/atelier-v0.5/examples/fleet_agents.json": "8b1f147bb2a5c1abd4b891cf7bace6fab45689a9afaf8cb2822f9f3690b8681c",
+  "legacy/atelier-v0.5/examples/fleet_event_source.py": "7b66d6d4f2cf6956dcffb19986ceb63203dfbfe13c1a76d38e99c4514fd40dfd",
+  "legacy/atelier-v0.5/examples/fleet_scene.py": "48665c97684b5a7252b6423098a6a730582c3c6a4153f3d62235ba36fe4e855b",
+  "legacy/atelier-v0.5/examples/studio_terminal.py": "4439183982bcf9b0f48e307ae9f4b682d7a20bd945e9ea7532d78f904498406d",
+  "legacy/atelier-v0.5/examples/terminal_demo.py": "e7df74ab0d14c1f11331d7a1186312037505b15b46af4206fd369df98a5f7318",
+  "legacy/atelier-v0.5/fleet.events.schema.json": "7e992e117db8c28d25a81d7f919846f2c04ad724c7c0692df3ee68093cad805c",
+  "legacy/atelier-v0.5/fleet.options.schema.json": "9444203a38f9aa6bbd788730d11400118e421ab966920e325e194c20915c9789",
+  "legacy/atelier-v0.5/include/nocturne.h": "cf591200d62adc38b6f848d3dfed3d0bb5d81afd6515e9d1770ecc217ab0b219",
+  "legacy/atelier-v0.5/include/nocturne_studio.h": "8018936cc86106f5e09d445b2d8ecb0407daa169a3110bce75b1b33292cf2e62",
+  "legacy/atelier-v0.5/integrations/afd_bridge.py": "2aa65d984f6f26384e6ca17547fb831675d83913a3923dd25be583dd090b0f53",
+  "legacy/atelier-v0.5/integrations/pty/package.json": "2fcfb20d166b49d637859eaa855af1fad42866ffee2b853706c40429ce16fa23",
+  "legacy/atelier-v0.5/integrations/pty/pty_broker.py": "10e01877043dafa2206fd0357b3cfb8c73f515899542137f256727e5e186bbef",
+  "legacy/atelier-v0.5/integrations/tdfiglet_bridge.py": "f78ba2c5be2b9e41831ddd6aab95d219311f097ec0364df988e860ac80b5496a",
+  "legacy/atelier-v0.5/observatory.recipes.json": "9341cb142c234409e35ec5d04664fbb25ea8928d504c16129cbad367d4e990b2",
+  "legacy/atelier-v0.5/observatory.schema.json": "9e2c729a6f8a5b03edb5c95933edaba9a24eaa142bb720ae9ae19b16e5e15bf4",
+  "legacy/atelier-v0.5/package.json": "676fef758e0ea946cbe9044d57e348cfaabb7c670d51ab1ce9e24113cc5842a3",
+  "legacy/atelier-v0.5/palettes.json": "0a2d60fddf0e85c7ba8e0c3e95dce6db71775640b8e347175f468dc2fc876ec0",
+  "legacy/atelier-v0.5/presets.json": "fa35f795ce75241d8709866c603e93297bbdf6ca16cef268a712efd4fa389d51",
+  "legacy/atelier-v0.5/scene.jsonschema.json": "6dc6d1aeb816da7221211a52c4ef5d3b077f1092af3e479f0e207ff665b1bfbd",
+  "legacy/atelier-v0.5/schema.json": "8c947b145b0985271400264ec97be869e7dd4951e205ed44408d43fc09dc780d",
+  "legacy/atelier-v0.5/scripts/benchmark.py": "5de5c96f1806b9f08a5c198514f33847e442bac2b6d63eff4d3230e02f9213ff",
+  "legacy/atelier-v0.5/scripts/build_atelier_gallery.py": "9e3e73e34e3fe2d646660b945b2fc46d8a2cfe713e19ccf844b2d5cf19b1aceb",
+  "legacy/atelier-v0.5/scripts/build_atelier_previews.py": "c2eff8ace8588094c114d5a557b539a43c9e5db797cd20360e16778921597b4b",
+  "legacy/atelier-v0.5/scripts/build_fleet_gallery.py": "8a7a95b62e8dc2721d6882c7a8739fa93e785edb436f50a38a0c393ac5727592",
+  "legacy/atelier-v0.5/scripts/build_fleet_previews.py": "126721b79cf6cf35bc37ff2332c174d9829e174f398f922ae3662a6814dfe61e",
+  "legacy/atelier-v0.5/scripts/build_gallery.py": "ebc13e409dae684d040efd0d481867643ade578de05df38fd14f6dff422ea34a",
+  "legacy/atelier-v0.5/scripts/build_observatory_gallery.py": "14225dd0824ec611aa49a47e61a85aa6da23242a3757d0cc636e62d189d15132",
+  "legacy/atelier-v0.5/scripts/build_observatory_previews.py": "0f183954d7c8bc86c0fb57623ffa3d403d197adf87ddb38a6701fb41dc8a4012",
+  "legacy/atelier-v0.5/scripts/build_previews.py": "efb3b1ae0399d4b5cadfc3587544fdebbf912cd1b687853384f8d6fe1ddd6e8a",
+  "legacy/atelier-v0.5/scripts/build_studio_gallery.py": "255f54655d63b809047fa0e15457ff7ea446c2bb5a75c87c322978034b201429",
+  "legacy/atelier-v0.5/scripts/build_studio_previews.py": "2c469011f9412450b03a16d9e3ca3d65d5877398a69da404295c737caa149a6a",
+  "legacy/atelier-v0.5/scripts/check_atelier_browser.py": "11402bb897ecddb2a12ce2509bb300f50a458a298a8f5495d6ce90732c736301",
+  "legacy/atelier-v0.5/scripts/check_atelier_tty.py": "afe74cdeda27e2e241f3b04d5967031f968bb0580374624259a73a35c5b84fa1",
+  "legacy/atelier-v0.5/scripts/check_browser.py": "550ea4c8b25d228c55210d16f60024be60f8c1c5c36c55b3dbe7bdb8ed29b08a",
+  "legacy/atelier-v0.5/scripts/check_fleet_browser.py": "361be76ea80c3300942c19683d3e7f05cb8af6bcd690b9c9d0b1725011ee36e3",
+  "legacy/atelier-v0.5/scripts/check_fleet_tty.py": "7de807c25153792a37a85392671898517a3c6894786d96b93ef8e705c05eb5bc",
+  "legacy/atelier-v0.5/scripts/check_observatory_browser.py": "3baaa33360dfeafe1d8f118e38be041799f9c925d7c9348e8208321b43d42e4b",
+  "legacy/atelier-v0.5/scripts/check_observatory_media.py": "7346be5fcbea4e207eae701a8af000fd598f248acd78b27a096cb2cf148c226a",
+  "legacy/atelier-v0.5/scripts/check_observatory_tty.py": "302ecd8495218c95c4fdfdcad896e45b7c7303d8dd6dc8757dfd0d72516858d9",
+  "legacy/atelier-v0.5/scripts/check_studio_browser.py": "ae752f777c2de3d994ac9e2418f1a9b5872ff9c9bbe1af8ed51374b525903715",
+  "legacy/atelier-v0.5/scripts/check_studio_tty.py": "17e11ae7cd5157742b6e961df7445df980e99b84b46b5eff10a2a17a2f40f8bb",
+  "legacy/atelier-v0.5/scripts/check_tmux.py": "5dfaf40784ef40846c27fcd3b6fcb2d4bf0a54c542cb20fc2eecd6e1dd324763",
+  "legacy/atelier-v0.5/scripts/check_tty.py": "0a8a4a2a9816e685fd358e00fe233f1a8aea0f536bd583b1d2cc66795a68b635",
+  "legacy/atelier-v0.5/scripts/create_schema.py": "09069e3802e2b419915e8ae390870ebb75c81a6987041f6343d922f85bdc9a45",
+  "legacy/atelier-v0.5/scripts/freeze_studio_fixtures.py": "4a4ccf45b841ed1a51d948761434643f49a1f866d59ef32884c24e936e88928a",
+  "legacy/atelier-v0.5/scripts/generate_binding_keys.py": "34d9b59964cf528c849d46293a0ddd414ee2b1262632ea1bcea55135f663e895",
+  "legacy/atelier-v0.5/scripts/package_atelier.py": "3fa7447f7f6fafdeb28503d9ab63a6f8abb84764f06bc6b1da55e3e5cb0a6730",
+  "legacy/atelier-v0.5/scripts/package_fleet.py": "7a0f6e6c6786c850f38ce1cc245cd6a256fd8a41ea76a3c8ae4ab3c5de6cb693",
+  "legacy/atelier-v0.5/scripts/package_observatory.py": "71c61f1a53ede58560ebfce93d1fbfcf7426aa33779c9974b56b02bcf025d6d7",
+  "legacy/atelier-v0.5/scripts/package_release.py": "cf745cf9c622d640878469d6d9d51addc3367f5f0573bc2b82b716d40a31ca6a",
+  "legacy/atelier-v0.5/scripts/package_studio.py": "9237a290f5c7735d37f78177710ba1bf6b0a72a3295ed876845571454906496f",
+  "legacy/atelier-v0.5/scripts/serve_observatory.py": "2f60c853794d3b281ff0e3129b4fc666652c7cd4b514bf04fa33461292c630de",
+  "legacy/atelier-v0.5/scripts/update_fixtures.py": "eadf051224691394dbb03c0824e7cc7692285aad896d3a37114e51a5e97bf8f4",
+  "legacy/atelier-v0.5/scripts/verify_atelier_release.py": "fc25501d846a2099025dcfd06c74bb69d9b4ee674dc1471e0e24a95399dceaa0",
+  "legacy/atelier-v0.5/sensors/audio_sensors.py": "54eb4f9d5015ba6c4a6146014fce5ac60a54ddfa95e315e14f9127d5299a0c9a",
+  "legacy/atelier-v0.5/sensors/system_sensors.py": "64195941ed74fd5757aba4aad1bcc5f70c84968619826aa022ba45a8431ee6f5",
+  "legacy/atelier-v0.5/src/defaults.inc": "5b3705655b10cb99d76b2766bd40e9210cfb2b4fb5cc98e0fd7b4d49dfd6963b",
+  "legacy/atelier-v0.5/src/nocturne.c": "997f5baf3d47be76504c55a817842ab9dcfe8b1bf2cd11463b111ca66da4f745",
+  "legacy/atelier-v0.5/src/ok_color.inc": "9a2bd7e5fc4c7824140467160ee4676fc51ed5dac2bd9cc412fed1ac963c3833",
+  "legacy/atelier-v0.5/src/ok_tables.inc": "d0bd25e582443b1f308d4d70b54564ee507d5a996a9e58531737ace141f1e96f",
+  "legacy/atelier-v0.5/src/sine.inc": "4b953da325588655fe63eb700dff0aa78c32274e048de36f9daf966d50677d96",
+  "legacy/atelier-v0.5/src/studio.inc": "8fbb4e3b7efef930b21a338e70339e137f0d1f3286437973ed11543d6b8a1766",
+  "legacy/atelier-v0.5/src/studio_defaults.inc": "9b2c5afba73c1bd4fe77fb9c0dcb4182cd977f4a31a9b2ad0343517a979c8a04",
+  "legacy/atelier-v0.5/src/studio_widgets.inc": "fa806b7d8877119399c75a207d98e97225a6b866da405963a9c70ce2c4fe8cef",
+  "legacy/atelier-v0.5/src/wasm.c": "ce02881ec73dbd3ff2089469f6b1a85065c6543d2302bc141587968d70ce5ec3",
+  "legacy/atelier-v0.5/studio.scenes.json": "b920fbd91bdac05c4f836927c7acadf7c448f3285b849554ee55e436672d6793",
+  "legacy/atelier-v0.5/studio.schema.json": "5c8e3081327b4c4a7371ae451c9ac57794d638a9791195f083c5459397969ccc",
+  "legacy/atelier-v0.5/tests/fixtures.json": "fac5ac8c1edab0817c2103f5e2913d90f7d359827ec9c76a1b74ea59fc360cf4",
+  "legacy/atelier-v0.5/tests/fleet/fade_safety.c": "f9c29bb81eb744baf22fc5ff78f9d3b164907af36f29c39f15e775c64eb75e8b",
+  "legacy/atelier-v0.5/tests/fleet/fixtures.json": "7a262804c58567f2d6b75356847dbc6b3415e742fa6728991b378b9974ce0d1c",
+  "legacy/atelier-v0.5/tests/native_safety.c": "3fe4d12302678ebaa05d75afe7e53c9e440aa2817c769704776f90d4c84bdfc4",
+  "legacy/atelier-v0.5/tests/observatory/color_safety.c": "e64b5eb6cf2996b0cec5405dc9d5a5b32ecc26b6420d4e21ca92003833fcb719",
+  "legacy/atelier-v0.5/tests/observatory/test_audio_features.py": "64e2ec523101c4d019d1749da21600a936891454eee30e282b5bdf0d0e42045b",
+  "legacy/atelier-v0.5/tests/observatory/test_pty_broker.py": "be8f64da054a89d1178b29ff311aa00b5443081a04f0504f67e765acd10b000b",
+  "legacy/atelier-v0.5/tests/observatory/test_sensors.py": "be0d0e298eeefe42923902f6952af325d7f46d690e472f33faf7967aad2b5f45",
+  "legacy/atelier-v0.5/tests/observatory/test_server.py": "3fc9e90c8265e39b3b720537f40d6e79a70efb5e9289dbcccb57dc67e73b86c1",
+  "legacy/atelier-v0.5/tests/studio.fixtures.json": "d590bc9156a225249c0da1b231b95862bc03f0bd157c7ec7139f9e45dc8f2a96",
+  "legacy/atelier-v0.5/tests/studio_safety.c": "435eb3ab90309c21ddc684c2a7d0b0aaf5fc4fdcb0ab82dd7954da270ffc2f89",
+  "legacy/atelier-v0.5/tests/test_core.py": "6795ce65d3510539bb086f3b78be8930273bb647289d7e994f2aece7aa9fba3e",
+  "legacy/atelier-v0.5/tests/test_fixtures.py": "aa4a015a921565f98cb007166eee46eee4e4769b96cd41393f2b3cac3a0a83fd",
+  "legacy/atelier-v0.5/tests/test_fleet.py": "c64a5d0c6e219b4977e05e4a8e82dd4a3d4f8f56c48615b14132fc306179fc26",
+  "legacy/atelier-v0.5/tests/test_integrations.py": "d0cfa57f1e3ded5cb0a260b2b3675f9ec291000476731b7193c53cc4bf537812",
+  "legacy/atelier-v0.5/tests/test_observatory_color.py": "b590c72b4a94d3e6bdb826ee1646982f41a3b2efcb68c9cda6ce5bc4b3a51a3b",
+  "legacy/atelier-v0.5/tests/test_scheduler.py": "da6711fda27637fa3fc5b61bc247b1a3dbe51e14c769454b567b06bfe5cd3737",
+  "legacy/atelier-v0.5/tests/test_studio.py": "664f196ca92700312ce61df50d2514ad0da9f797063372590446be5bc853e48a",
+  "legacy/atelier-v0.5/tests/test_studio_fixtures.py": "481fd55cbaf9b018a0b2c1938a51e30ba4fef0c8e0df397f976a92f13d1b6982",
+  "legacy/atelier-v0.5/tmux/observatory_preview.py": "a40692eeeb0842e69866b414bd650f6a0b509c6d50809cb5d5eb6dc9e74abb21",
+  "legacy/atelier-v0.5/tmux/preview.py": "b3c611f3cdc04f91fa769d3e4c53bcb232f183c29aeb84ccd7401dc934800a2d",
+  "legacy/atelier-v0.5/tmux/status.py": "441e341518ba7d2afa8ffa83ab8b430dbc135d87eed1286cf0d2fa0554f49ec2",
+  "legacy/atelier-v0.5/tsconfig.json": "86c58cf15cc51f1c48c8f9dca66e4e7450da203dda8d4dbec3ff21bf9a3ab37b",
+  "legacy/atelier-v0.5/web/atelier.template.html": "210783aed3e1f2f622f1dccf608349c794309f3f6f970eed3cc721413a5f7c80",
+  "legacy/atelier-v0.5/web/fleet.template.html": "3a80e7c02d4a8026076b9366dd15b5b3f4a7fd224ee094e6acb872b8e7e98079",
+  "legacy/atelier-v0.5/web/gallery.template.html": "35ce3bcf1e9f070834c48b060f60ce7aadae9e7d0b9f58019966e0b3ff5945ed",
+  "legacy/atelier-v0.5/web/observatory.template.html": "da764d7cb2c823b14e5d367f3007cf95f5986dd7ce91e90c029df6b89ebe76b8",
+  "legacy/atelier-v0.5/web/studio.template.html": "b4d328db9f797e9d0fc69b1ef762fe9dadaa2904d6de2a25dda904facc09e223",
+  "legacy/editions/0.1-Nocturne-Gallery.html": "4fed2af5a9e64f41e2bd33a5b90b0fdab688f94a30abf0dbd47d37e65f2c512d",
+  "legacy/editions/0.2-Nocturne-Gallery.html": "c01dd90079bcdbcfd737517fa381d1778edf70ff0e3cd6ec7639133f1c368476",
+  "legacy/editions/0.2-Nocturne-Studio.html": "2bb94c0e7a806c202e5382cfa7211476669654f8ce1ba2d46509d1963558f7ee",
+  "legacy/editions/0.3-Nocturne-Gallery.html": "c8f16484f11d95bfeaee11053132bad39b9c66128d4d5d7325331d96d4908059",
+  "legacy/editions/0.3-Nocturne-Pearl-Fleet.html": "1253681a9166715a1f4fe11454fb5fc52fdf7d481b4e0200809bb1fd24cae9ae",
+  "legacy/editions/0.3-Nocturne-Studio.html": "dd814be94d765369c1a92b44e5abe5c028e00d88425520a5efbfdedd88631af4",
+  "legacy/editions/0.4-Nocturne-Gallery.html": "366f780fe92d5508d5c96e0511a247278ddfe8cc9909b07eeaae98952b43bddf",
+  "legacy/editions/0.4-Nocturne-Observatory.html": "0fd92cbabb0778f66a342993cb2f238d1d03ae8b56d9db75da2beb8d63148f41",
+  "legacy/editions/0.4-Nocturne-Pearl-Fleet.html": "29867af933d9712b8ac397fc98d00cb46366dd7d75de0de4210021fbbc882410",
+  "legacy/editions/0.4-Nocturne-Studio.html": "4fac5acba10892cae72a5abe2fba357f7c2db75b0ae8fbb984445ffcdb0722f7",
+  "legacy/editions/0.5-atelier-Nocturne-Gallery.html": "366f780fe92d5508d5c96e0511a247278ddfe8cc9909b07eeaae98952b43bddf",
+  "legacy/editions/0.5-atelier-Nocturne-Observatory.html": "ef643c06631f9f492c049b63c1b1c7839f025464585c4f0dd47bb05d978d25de",
+  "legacy/editions/0.5-atelier-Nocturne-Pearl-Fleet.html": "29867af933d9712b8ac397fc98d00cb46366dd7d75de0de4210021fbbc882410",
+  "legacy/editions/0.5-atelier-Nocturne-Spatial-Atelier.html": "01500ccd3106f40a7f0b3e21fe4a580f1e0666980e998930feaf94bff730aced",
+  "legacy/editions/0.5-atelier-Nocturne-Studio.html": "4fac5acba10892cae72a5abe2fba357f7c2db75b0ae8fbb984445ffcdb0722f7",
+  "legacy/editions/0.5-atelier-START-HERE.html": "01500ccd3106f40a7f0b3e21fe4a580f1e0666980e998930feaf94bff730aced",
+  "legacy/editions/0.5-kinetic-Nocturne-Gallery.html": "366f780fe92d5508d5c96e0511a247278ddfe8cc9909b07eeaae98952b43bddf",
+  "legacy/editions/0.5-kinetic-Nocturne-Kinetic.html": "5eb979c695b66e681a605ea0bc8c5638a5f4b8ee6f46af0619ae6c1f86ca1212",
+  "legacy/editions/0.5-kinetic-Nocturne-Observatory.html": "0fd92cbabb0778f66a342993cb2f238d1d03ae8b56d9db75da2beb8d63148f41",
+  "legacy/editions/0.5-kinetic-Nocturne-Pearl-Fleet.html": "29867af933d9712b8ac397fc98d00cb46366dd7d75de0de4210021fbbc882410",
+  "legacy/editions/0.5-kinetic-Nocturne-Studio.html": "4fac5acba10892cae72a5abe2fba357f7c2db75b0ae8fbb984445ffcdb0722f7",
+  "legacy/editions/0.7-Nocturne-Black-Hole.html": "f2e9bc9162f5c176c6157201875155c5d7c428ea7575dfdfe872586dc813cb34",
+  "legacy/editions/0.7-Nocturne-Gallery.html": "366f780fe92d5508d5c96e0511a247278ddfe8cc9909b07eeaae98952b43bddf",
+  "legacy/editions/0.7-Nocturne-Kinetic.html": "cb289fadbf898166ce0028cb60a5a5898f22d63974abaf75e98e046b5b921080",
+  "legacy/editions/0.7-Nocturne-Observatory.html": "0fd92cbabb0778f66a342993cb2f238d1d03ae8b56d9db75da2beb8d63148f41",
+  "legacy/editions/0.7-Nocturne-Pearl-Fleet.html": "29867af933d9712b8ac397fc98d00cb46366dd7d75de0de4210021fbbc882410",
+  "legacy/editions/0.7-Nocturne-Studio.html": "4fac5acba10892cae72a5abe2fba357f7c2db75b0ae8fbb984445ffcdb0722f7",
+  "legacy/editions/0.8-Nocturne-Restoration.html": "bc103edc7a9db54221e28bdc04cc8852c59171e213df45303018c52bc0541f0d",
+  "legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html": "375c4468c886728bc790b8d8cc3bdddc2a046532a4d792cde190f1b522a66385",
+  "legacy/editions/Continuity-v0.9-preview.html": "d6883400657a3292f58202fa2bcf2461568845622bd3b4d5b647ae457d3f288e",
+  "legacy/editions/index.html": "4961a5f1d740b30914ab91fe4d43c706cf8472c193ac04c8dca73801f89a2db0",
+  "native/tests/fixtures/first-prompt-v01/PROVENANCE.json": "aa8682344a2e6c1903bd2f5b918cc5624f0e544abc5850e4027ccbf6ba55ce1f",
+  "native/tests/fixtures/first-prompt-v01/include/nocturne.h": "cf591200d62adc38b6f848d3dfed3d0bb5d81afd6515e9d1770ecc217ab0b219",
+  "native/tests/fixtures/first-prompt-v01/presets.json": "fa35f795ce75241d8709866c603e93297bbdf6ca16cef268a712efd4fa389d51",
+  "native/tests/fixtures/first-prompt-v01/src/defaults.inc": "5b3705655b10cb99d76b2766bd40e9210cfb2b4fb5cc98e0fd7b4d49dfd6963b",
+  "native/tests/fixtures/first-prompt-v01/src/nocturne.c": "11911d3466a9fe9a29c5c2672089c7a24fa6a288bf02296eb13aa1ffcae32302",
+  "native/tests/fixtures/first-prompt-v01/src/sine.inc": "4b953da325588655fe63eb700dff0aa78c32274e048de36f9daf966d50677d96",
+  "src/defaults.inc": "5b3705655b10cb99d76b2766bd40e9210cfb2b4fb5cc98e0fd7b4d49dfd6963b",
+  "src/ok_color.inc": "9a2bd7e5fc4c7824140467160ee4676fc51ed5dac2bd9cc412fed1ac963c3833",
+  "src/ok_tables.inc": "d0bd25e582443b1f308d4d70b54564ee507d5a996a9e58531737ace141f1e96f",
+  "src/sine.inc": "4b953da325588655fe63eb700dff0aa78c32274e048de36f9daf966d50677d96",
+  "src/studio.inc": "8fbb4e3b7efef930b21a338e70339e137f0d1f3286437973ed11543d6b8a1766",
+  "src/studio_defaults.inc": "9b2c5afba73c1bd4fe77fb9c0dcb4182cd977f4a31a9b2ad0343517a979c8a04",
+  "src/studio_widgets.inc": "fa806b7d8877119399c75a207d98e97225a6b866da405963a9c70ce2c4fe8cef",
+  "src/world.inc": "d27c74dd3c05372a81454a3deebcb1ddc0cb7e985e67994ae6cfdd4cf7c7ff14",
+  "src/world_detail_fields.inc": "a8823e3bc20474b358d08d08264384bc1b717fa91ba9def52ebca199adba1be2",
+  "src/world_fields.inc": "6d7f54db42a0c2d0cedc0cac77f2ec00ec2970cf12e8a0312cad76550ab55df8"
+ },
+ "libraryEntries": 6039,
+ "byClass": {
+  "original": 314,
+  "original-framed": 165,
+  "original-placeholder": 43,
+  "original-substitute": 30,
+  "rc4-authored": 26,
+  "synthetic": 5446,
+  "unresolved-claim": 9,
+  "withheld": 6
+ },
+ "admittedCount": 322,
+ "excludedByClass": {
+  "original-framed": 165,
+  "original-placeholder": 43,
+  "original-substitute": 30,
+  "rc4-authored": 18,
+  "synthetic": 5446,
+  "unresolved-claim": 9,
+  "withheld": 6
+ },
+ "operatorDecisions": [
+  {
+   "id": "arcs",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "arcs-generic",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "autumn",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "chrysanthemum",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "chrysanthemum-generic",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "condition-console",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "embers",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "flight",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "flight-banked",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "flight-climb-roll-dive",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "flight-eased",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "flight-flat",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "git",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "instruments",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "leaf-anatomy",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "mixed-materials",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "notifications",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "pearl-curves",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "selector-studio",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "shell",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "silk",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "status",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "task-graph",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "text",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "windows",
+   "decision": "admit",
+   "reason": "RC4 composition whose subject is a ported original effect with a verified port-ledger source",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  },
+  {
+   "id": "work-graph",
+   "decision": "exclude",
+   "reason": "RC4 showcase composition with no original source (formerly a project-specific work-unit example; replaced by neutral labels for the public SDK)",
+   "decidedBy": "Claude, provisional default recommended to the operator on 2026-11-14 (no operator answer within 10 minutes); reversible by editing this decision",
+   "decidedAt": "2026-11-14T19:50:00Z"
+  }
+ ],
+ "workshopExamples": {
+  "policy": "RC4-era SDK feature recipes that the Workshop panels open (condition console, selector studio, plots, notifications, anatomy, materials, graphs, flight). They are labelled SDK examples, never in the Gallery picker or attract rotation, and are not artwork. Nullified recipes are dropped at build.",
+  "ids": [
+   "flight",
+   "work-graph",
+   "git",
+   "status",
+   "instruments",
+   "notifications",
+   "pearl-curves",
+   "leaf-anatomy",
+   "mixed-materials",
+   "condition-console",
+   "selector-studio",
+   "task-graph",
+   "chrysanthemum-generic",
+   "arcs-generic",
+   "flight-eased",
+   "flight-banked",
+   "flight-flat",
+   "flight-climb-roll-dive"
+  ]
+ },
+ "admitted": [
+  {
+   "id": "autumn",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['weather/autumn-drift']"
+   ]
+  },
+  {
+   "id": "embers",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['weather/thermal-cinders']"
+   ]
+  },
+  {
+   "id": "chrysanthemum",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['weather/chrysanthemum']"
+   ]
+  },
+  {
+   "id": "shell",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['weather/ejecta-shell']"
+   ]
+  },
+  {
+   "id": "arcs",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['weather/branchlight']"
+   ]
+  },
+  {
+   "id": "silk",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['surface-field/opal-fronts', 'surface-field/silk-tide']"
+   ]
+  },
+  {
+   "id": "text",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['text/comet-stitch', 'text/prism-weave']"
+   ]
+  },
+  {
+   "id": "windows",
+   "class": "rc4-authored",
+   "generator": "native/recipes.json",
+   "evidence": [
+    "RC4 composition around ported original effects ['window-transition/orbital-bloom', 'window-transition/petal-bloom', 'window-transition/ribbon-genie']"
+   ]
+  },
+  {
+   "id": "study-weather-pearl-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/studio.nova -> src/studio.inc"
+   ]
+  },
+  {
+   "id": "study-surface-field-silk-tide-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/studio.ripples -> src/studio.inc"
+   ]
+  },
+  {
+   "id": "study-weather-corona-flare-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/observatory.nova -> bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "study-weather-pinfire-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/observatory.sparks -> bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "study-weather-lantern-motes-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/observatory.embers -> bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "study-surface-field-satin-rings-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/observatory.ripples -> bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "study-weather-rain-threads-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/observatory.rain -> bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "study-weather-snow-dust-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/observatory.snow -> bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "study-weather-chrysanthemum-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/kinetic.nova -> bindings/continuity/kinetic-particles.js"
+   ]
+  },
+  {
+   "id": "study-weather-branchlight-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/kinetic.sparks -> bindings/continuity/kinetic-particles.js"
+   ]
+  },
+  {
+   "id": "study-weather-hearth-spray-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/kinetic.embers -> bindings/continuity/kinetic-particles.js"
+   ]
+  },
+  {
+   "id": "study-surface-field-opal-fronts-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/kinetic.ripples -> bindings/continuity/kinetic-particles.js"
+   ]
+  },
+  {
+   "id": "study-weather-wire-rain-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/kinetic.rain -> bindings/continuity/kinetic-particles.js"
+   ]
+  },
+  {
+   "id": "study-weather-pearl-flurry-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/kinetic.snow -> bindings/continuity/kinetic-particles.js"
+   ]
+  },
+  {
+   "id": "study-weather-fractured-sun-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/atelier.nova -> legacy/atelier-v0.5/bindings/typescript/particles.ts"
+   ]
+  },
+  {
+   "id": "study-weather-livewire-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/atelier.sparks -> legacy/atelier-v0.5/bindings/typescript/particles.ts"
+   ]
+  },
+  {
+   "id": "study-weather-copper-cinders-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/atelier.embers -> legacy/atelier-v0.5/bindings/typescript/particles.ts"
+   ]
+  },
+  {
+   "id": "study-surface-field-interference-tide-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/atelier.ripples -> legacy/atelier-v0.5/bindings/typescript/particles.ts"
+   ]
+  },
+  {
+   "id": "study-weather-slantfall-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/atelier.rain -> legacy/atelier-v0.5/bindings/typescript/particles.ts"
+   ]
+  },
+  {
+   "id": "study-weather-crystalline-drift-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/atelier.snow -> legacy/atelier-v0.5/bindings/typescript/particles.ts"
+   ]
+  },
+  {
+   "id": "study-weather-ejecta-shell-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.nova -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-starburst-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.firework -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-forked-voltage-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.sparks -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-solar-cinders-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.embers -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-leaf-ribbon-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.leaves -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-storm-volume-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.rain -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-snowfall-volume-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.snow -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-pressure-shell-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/world.ripples -> bindings/continuity/black-hole-space.js"
+   ]
+  },
+  {
+   "id": "study-weather-thermal-cinders-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/thermal.embers -> bindings/continuity/effect-catalog.js"
+   ]
+  },
+  {
+   "id": "study-weather-autumn-drift-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity weather/thermal.leaves -> bindings/continuity/effect-catalog.js"
+   ]
+  },
+  {
+   "id": "study-text-direct-ink-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/immediate -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-ink-dissolve-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/fade -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-glyph-rain-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/rain -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-cipher-resolve-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/scramble -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-station-board-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/flipboard -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-ribbon-left-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/sweep-left -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-ribbon-right-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/sweep-right -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-travelling-line-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/marquee -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-satellite-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/orbit -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-star-map-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/constellation -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-prism-stitch-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/prism-stitch -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-gravity-loom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/gravity-loom -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-scanline-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/scanline -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-elastic-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/elastic -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-keystep-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/typewriter -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-curtain-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/curtain -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-glyph-fall-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/fall -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-ash-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/kinetic/ash -> bindings/continuity/kinetic-text.js"
+   ]
+  },
+  {
+   "id": "study-text-instant-ink-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/instant -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-velvet-dissolve-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/fade -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-skyfall-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/rain -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-static-resolve-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/scramble -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-departure-board-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/flipboard -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-weft-left-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/sweep-left -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-weft-right-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/sweep-right -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-rising-ink-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/lift -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-falling-ink-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/fall -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-ticker-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/marquee -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-iris-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/iris -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-constellation-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/constellation -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-prism-weave-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/prism-weave -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-ink-tide-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/ink-tide -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-comet-stitch-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/comet-stitch -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-orbital-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/orbit -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-folded-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/fold -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-text-zipper-type-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity text/atelier/zipper -> bindings/continuity/atelier-text.js"
+   ]
+  },
+  {
+   "id": "study-window-transition-glass-dissolve-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/fade -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'fade' in 123 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-glass-dissolve-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/fade -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'fade' in 123 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-elastic-pop-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/bounce -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'bounce' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-elastic-pop-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/bounce -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'bounce' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-lamp-genie-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/genie -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'genie' in 29 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-lamp-genie-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/genie -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'genie' in 29 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-scroll-up-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/roll-up -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'roll-up' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-scroll-up-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/roll-up -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'roll-up' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-scroll-down-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/roll-down -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'roll-down' in 21 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-scroll-down-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/roll-down -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'roll-down' in 21 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-left-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-left -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-left' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-left-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-left -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-left' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-right-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-right -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-right' in 24 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-right-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-right -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-right' in 24 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-top-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-top -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-top' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-top-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-top -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-top' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-bottom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-bottom -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-bottom' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-rail-bottom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/drawer-bottom -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'drawer-bottom' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-center-aperture-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/center -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'center' in 75 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-center-aperture-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/center -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'center' in 75 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northwest-aperture-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/top-left -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'top-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northwest-aperture-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/top-left -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'top-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northeast-aperture-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/top-right -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'top-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northeast-aperture-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/top-right -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'top-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southwest-aperture-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/bottom-left -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'bottom-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southwest-aperture-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/bottom-left -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'bottom-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southeast-aperture-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/bottom-right -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'bottom-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southeast-aperture-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/bottom-right -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'bottom-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-circular-iris-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/iris -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'iris' in 49 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-circular-iris-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/iris -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'iris' in 49 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-shard-burst-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/explosion -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'explosion' in 20 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-shard-burst-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/explosion -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'explosion' in 20 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-concertina-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/accordion -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'accordion' in 22 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-concertina-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/accordion -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'accordion' in 22 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-portal-fold-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/portal -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'portal' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-portal-fold-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/portal -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'portal' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-orbital-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/orbital-bloom -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'orbital-bloom' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-orbital-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/orbital-bloom -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'orbital-bloom' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-venetian-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/venetian -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'venetian' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-venetian-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/venetian -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'venetian' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-ribbon-unfurl-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/ribbon-unfurl -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'ribbon-unfurl' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-ribbon-unfurl-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/kinetic/ribbon-unfurl -> bindings/continuity/kinetic-windows.js",
+    "originalEffect 'ribbon-unfurl' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-silk-dissolve-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/fade -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'fade' in 123 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-silk-dissolve-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/fade -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'fade' in 123 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-center-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-center -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-center' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-center-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-center -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-center' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northwest-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-nw -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-nw' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northwest-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-nw -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-nw' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northeast-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-ne -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-ne' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-northeast-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-ne -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-ne' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southwest-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-sw -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-sw' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southwest-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-sw -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-sw' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southeast-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-se -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-se' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-southeast-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/expand-se -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'expand-se' in 7 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-circle-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/circle -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'circle' in 42 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-circle-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/circle -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'circle' in 42 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-reel-up-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/roll-up -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'roll-up' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-reel-up-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/roll-up -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'roll-up' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-reel-down-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/roll-down -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'roll-down' in 21 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-reel-down-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/roll-down -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'roll-down' in 21 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-left-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-left -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-left' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-left-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-left -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-left' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-right-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-right -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-right' in 24 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-right-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-right -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-right' in 24 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-top-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-top -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-top' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-top-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-top -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-top' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-bottom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-bottom -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-bottom' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-pocket-bottom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/drawer-bottom -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'drawer-bottom' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-spring-pop-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/bounce -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'bounce' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-spring-pop-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/bounce -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'bounce' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-ribbon-genie-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/genie -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'genie' in 29 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-ribbon-genie-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/genie -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'genie' in 29 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-fragment-scatter-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/explode -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'explode' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-fragment-scatter-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/explode -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'explode' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-accordion-fold-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/accordion -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'accordion' in 22 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-accordion-fold-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/accordion -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'accordion' in 22 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-origami-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/origami -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'origami' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-origami-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/origami -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'origami' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-vortex-fold-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/vortex -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'vortex' in 32 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-vortex-fold-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/vortex -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'vortex' in 32 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-ribbon-unspool-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/ribbon-unspool -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'ribbon-unspool' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-ribbon-unspool-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/ribbon-unspool -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'ribbon-unspool' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-petal-bloom-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/petal-bloom -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'petal-bloom' in 10 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-petal-bloom-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/petal-bloom -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'petal-bloom' in 10 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-gravity-well-isolated",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/gravity-well -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'gravity-well' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "study-window-transition-gravity-well-application",
+   "class": "original",
+   "generator": "gallery_cases.catalogue",
+   "evidence": [
+    "sourceIdentity window/atelier/gravity-well -> legacy/atelier-v0.5/bindings/typescript/window_fx.ts",
+    "originalEffect 'gravity-well' in 8 original files (e.g. legacy/atelier-v0.5/Nocturne-Spatial-Atelier.html)",
+    "htmlSha256 01500ccd3106 = legacy/editions/0.5-atelier-START-HERE.html"
+   ]
+  },
+  {
+   "id": "world-shell-clumpy-fibonacci-isolated",
+   "class": "original",
+   "generator": "world_shell_studies",
+   "evidence": [
+    "source route world_shell_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'fibonacci'"
+   ]
+  },
+  {
+   "id": "world-shell-uniform-fibonacci-isolated",
+   "class": "original",
+   "generator": "world_shell_studies",
+   "evidence": [
+    "source route world_shell_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'fibonacci'"
+   ]
+  },
+  {
+   "id": "world-nova-optics-clumpy-fibonacci-isolated",
+   "class": "original",
+   "generator": "world_nova_optics_studies",
+   "evidence": [
+    "source route world_nova_optics_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'nova'"
+   ]
+  },
+  {
+   "id": "corona-cell-isolated",
+   "class": "original",
+   "generator": "corona_studies",
+   "evidence": [
+    "source route corona_studies: bindings/continuity/observatory.js contains 'nova'"
+   ]
+  },
+  {
+   "id": "corona-half-isolated",
+   "class": "original",
+   "generator": "corona_studies",
+   "evidence": [
+    "source route corona_studies: bindings/continuity/observatory.js contains 'nova'"
+   ]
+  },
+  {
+   "id": "observatory-rain-isolated",
+   "class": "original",
+   "generator": "observatory_studies",
+   "evidence": [
+    "source route observatory_studies: legacy/editions/0.4-Nocturne-Observatory.html contains 'ripples' and profile 'rain'"
+   ]
+  },
+  {
+   "id": "observatory-snow-isolated",
+   "class": "original",
+   "generator": "observatory_studies",
+   "evidence": [
+    "source route observatory_studies: legacy/editions/0.4-Nocturne-Observatory.html contains 'ripples' and profile 'snow'"
+   ]
+  },
+  {
+   "id": "observatory-embers-isolated",
+   "class": "original",
+   "generator": "observatory_studies",
+   "evidence": [
+    "source route observatory_studies: legacy/editions/0.4-Nocturne-Observatory.html contains 'ripples' and profile 'embers'"
+   ]
+  },
+  {
+   "id": "observatory-sparks-isolated",
+   "class": "original",
+   "generator": "observatory_studies",
+   "evidence": [
+    "source route observatory_studies: legacy/editions/0.4-Nocturne-Observatory.html contains 'ripples' and profile 'sparks'"
+   ]
+  },
+  {
+   "id": "rc2-windows-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-windows-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-shapes-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalScene 'shapes' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-shapes-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalScene 'shapes' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-fade-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'fade' in 123 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-fade-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'fade' in 123 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-bounce-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'bounce' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-bounce-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'bounce' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-genie-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'genie' in 29 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-genie-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'genie' in 29 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-roll-up-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'roll-up' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-roll-up-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'roll-up' in 30 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-roll-down-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'roll-down' in 21 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-roll-down-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'roll-down' in 21 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-left-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-left' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-left-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-left' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-right-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-right' in 24 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-right-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-right' in 24 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-top-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-top' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-top-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-top' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-bottom-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-bottom' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-drawer-bottom-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'drawer-bottom' in 23 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-center-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'center' in 75 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-center-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'center' in 75 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-top-left-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'top-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-top-left-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'top-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-top-right-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'top-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-top-right-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'top-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-bottom-left-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'bottom-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-bottom-left-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'bottom-left' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-bottom-right-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'bottom-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-bottom-right-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'bottom-right' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-iris-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'iris' in 49 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-iris-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'iris' in 49 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-explosion-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'explosion' in 20 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-explosion-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'explosion' in 20 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-accordion-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'accordion' in 22 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-accordion-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'accordion' in 22 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-portal-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'portal' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-portal-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'portal' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-orbital-bloom-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'orbital-bloom' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-orbital-bloom-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'orbital-bloom' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-venetian-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'venetian' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-venetian-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'venetian' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-ribbon-unfurl-isolated",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'ribbon-unfurl' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "rc2-window-ribbon-unfurl-application",
+   "class": "original",
+   "generator": "rc2_window_studies",
+   "evidence": [
+    "originalEffect 'ribbon-unfurl' in 14 original files (e.g. Nocturne-Black-Hole.html)",
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "studio-nova-isolated",
+   "class": "original",
+   "generator": "studio_nova_studies",
+   "evidence": [
+    "source route studio_nova_studies: src/studio.inc contains 'NOVA'"
+   ]
+  },
+  {
+   "id": "world-shell-source-nova-2030-isolated",
+   "class": "original",
+   "generator": "world_shell_source_studies",
+   "evidence": [
+    "source route world_shell_source_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'nova' and profile 'nova'"
+   ]
+  },
+  {
+   "id": "world-shell-source-nova-4294967295-isolated",
+   "class": "original",
+   "generator": "world_shell_source_studies",
+   "evidence": [
+    "source route world_shell_source_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'nova' and profile 'nova'"
+   ]
+  },
+  {
+   "id": "world-shell-source-ripples-2030-isolated",
+   "class": "original",
+   "generator": "world_shell_source_studies",
+   "evidence": [
+    "source route world_shell_source_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'nova' and profile 'ripples'"
+   ]
+  },
+  {
+   "id": "world-shell-source-ripples-4294967295-isolated",
+   "class": "original",
+   "generator": "world_shell_source_studies",
+   "evidence": [
+    "source route world_shell_source_studies: legacy/editions/0.7-Nocturne-Black-Hole.html contains 'nova' and profile 'ripples'"
+   ]
+  },
+  {
+   "id": "thermal-embers-isolated",
+   "class": "original",
+   "generator": "thermal_studies",
+   "evidence": [
+    "source route thermal_studies: bindings/continuity/effect-catalog.js contains 'embers' and profile 'embers'"
+   ]
+  },
+  {
+   "id": "thermal-leaves-isolated",
+   "class": "original",
+   "generator": "thermal_studies",
+   "evidence": [
+    "source route thermal_studies: bindings/continuity/effect-catalog.js contains 'embers' and profile 'leaves'"
+   ]
+  },
+  {
+   "id": "atelier-embers-isolated",
+   "class": "original",
+   "generator": "atelier_studies",
+   "evidence": [
+    "source route atelier_studies: legacy/editions/0.5-atelier-Nocturne-Spatial-Atelier.html contains 'embers' and profile 'embers'"
+   ]
+  },
+  {
+   "id": "atelier-sparks-isolated",
+   "class": "original",
+   "generator": "atelier_studies",
+   "evidence": [
+    "source route atelier_studies: legacy/editions/0.5-atelier-Nocturne-Spatial-Atelier.html contains 'embers' and profile 'sparks'"
+   ]
+  },
+  {
+   "id": "atelier-nova-isolated",
+   "class": "original",
+   "generator": "atelier_studies",
+   "evidence": [
+    "source route atelier_studies: legacy/editions/0.5-atelier-Nocturne-Spatial-Atelier.html contains 'embers' and profile 'nova'"
+   ]
+  },
+  {
+   "id": "atelier-rain-isolated",
+   "class": "original",
+   "generator": "atelier_studies",
+   "evidence": [
+    "source route atelier_studies: legacy/editions/0.5-atelier-Nocturne-Spatial-Atelier.html contains 'embers' and profile 'rain'"
+   ]
+  },
+  {
+   "id": "atelier-snow-isolated",
+   "class": "original",
+   "generator": "atelier_studies",
+   "evidence": [
+    "source route atelier_studies: legacy/editions/0.5-atelier-Nocturne-Spatial-Atelier.html contains 'embers' and profile 'snow'"
+   ]
+  },
+  {
+   "id": "kinetic-embers-isolated",
+   "class": "original",
+   "generator": "kinetic_studies",
+   "evidence": [
+    "source route kinetic_studies: legacy/editions/0.5-kinetic-Nocturne-Kinetic.html contains 'embers' and profile 'embers'"
+   ]
+  },
+  {
+   "id": "kinetic-sparks-isolated",
+   "class": "original",
+   "generator": "kinetic_studies",
+   "evidence": [
+    "source route kinetic_studies: legacy/editions/0.5-kinetic-Nocturne-Kinetic.html contains 'embers' and profile 'sparks'"
+   ]
+  },
+  {
+   "id": "kinetic-nova-isolated",
+   "class": "original",
+   "generator": "kinetic_studies",
+   "evidence": [
+    "source route kinetic_studies: legacy/editions/0.5-kinetic-Nocturne-Kinetic.html contains 'embers' and profile 'nova'"
+   ]
+  },
+  {
+   "id": "kinetic-rain-isolated",
+   "class": "original",
+   "generator": "kinetic_studies",
+   "evidence": [
+    "source route kinetic_studies: legacy/editions/0.5-kinetic-Nocturne-Kinetic.html contains 'embers' and profile 'rain'"
+   ]
+  },
+  {
+   "id": "kinetic-snow-isolated",
+   "class": "original",
+   "generator": "kinetic_studies",
+   "evidence": [
+    "source route kinetic_studies: legacy/editions/0.5-kinetic-Nocturne-Kinetic.html contains 'embers' and profile 'snow'"
+   ]
+  },
+  {
+   "id": "original-background-linear",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-double-axis",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-wave",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-plasma",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-caustics",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-vortex",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-contours",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-aurora",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-woven",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-moire",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-tunnel",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-diamond",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-bilinear",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-checker",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-background-warp",
+   "class": "original",
+   "generator": "gallery_cases.inline",
+   "evidence": [
+    "originalScene 'windows' in 76 original files (e.g. Nocturne-Black-Hole.html)",
+    "htmlSha256 375c4468c886 = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-composition-embers",
+   "class": "original",
+   "generator": "original_composition_studies",
+   "evidence": [
+    "componentSources 'windows/background/input-weather/text-fade' = legacy/editions/0.5-atelier-START-HERE.html",
+    "componentSources 'Oblique Flight and world-sector star trails' = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-composition-sparks",
+   "class": "original",
+   "generator": "original_composition_studies",
+   "evidence": [
+    "componentSources 'windows/background/input-weather/text-fade' = legacy/editions/0.5-atelier-START-HERE.html",
+    "componentSources 'Oblique Flight and world-sector star trails' = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-composition-nova",
+   "class": "original",
+   "generator": "original_composition_studies",
+   "evidence": [
+    "componentSources 'windows/background/input-weather/text-fade' = legacy/editions/0.5-atelier-START-HERE.html",
+    "componentSources 'Oblique Flight and world-sector star trails' = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-composition-rain",
+   "class": "original",
+   "generator": "original_composition_studies",
+   "evidence": [
+    "componentSources 'windows/background/input-weather/text-fade' = legacy/editions/0.5-atelier-START-HERE.html",
+    "componentSources 'Oblique Flight and world-sector star trails' = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-composition-snow",
+   "class": "original",
+   "generator": "original_composition_studies",
+   "evidence": [
+    "componentSources 'windows/background/input-weather/text-fade' = legacy/editions/0.5-atelier-START-HERE.html",
+    "componentSources 'Oblique Flight and world-sector star trails' = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "original-composition-ripples",
+   "class": "original",
+   "generator": "original_composition_studies",
+   "evidence": [
+    "componentSources 'windows/background/input-weather/text-fade' = legacy/editions/0.5-atelier-START-HERE.html",
+    "componentSources 'Oblique Flight and world-sector star trails' = legacy/editions/0.9-rc.2-Nocturne-Workbench-Docs.html"
+   ]
+  },
+  {
+   "id": "first-prompt-black-creme",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'black-creme' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-lavender-hush",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'lavender-hush' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-sage-embers",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'sage-embers' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-liquid-linen",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'liquid-linen' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-diagonal-silk",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'diagonal-silk' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-tidepool",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'tidepool' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-iris",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'iris' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-dusk-plasma",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'dusk-plasma' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-nebula",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'nebula' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-chromatic-type",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'chromatic-type' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-quiet-machinery",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'quiet-machinery' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-small-pocket",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'small-pocket' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-pearl-signal",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'pearl-signal' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-split-light",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'split-light' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-braille-field",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'braille-field' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "first-prompt-plasma-360",
+   "class": "original",
+   "generator": "first_prompt_studies",
+   "evidence": [
+    "kernelSha256 11911d3466a9 = native/tests/fixtures/first-prompt-v01/src/nocturne.c",
+    "subject 'plasma-360' present in native/tests/fixtures/first-prompt-v01/src/nocturne.c"
+   ]
+  },
+  {
+   "id": "original-orbital-loom",
+   "class": "original",
+   "generator": "source_model_studies",
+   "evidence": [
+    "sourceObjectSha256 282569a2b361 = bindings/continuity/continuity-example-mesh.js"
+   ]
+  },
+  {
+   "id": "pearl-studio-original",
+   "class": "original",
+   "generator": "pearl_data_studies",
+   "evidence": [
+    "sourceSha256 b4d328db9f79 = legacy/atelier-v0.5/web/studio.template.html",
+    "subject 'studio' present in legacy/atelier-v0.5/web/studio.template.html"
+   ]
+  },
+  {
+   "id": "pearl-fleet-original",
+   "class": "original",
+   "generator": "pearl_data_studies",
+   "evidence": [
+    "sourceSha256 29867af933d9 = legacy/editions/0.7-Nocturne-Pearl-Fleet.html",
+    "subject 'fleet' present in legacy/editions/0.7-Nocturne-Pearl-Fleet.html"
+   ]
+  },
+  {
+   "id": "pearl-observatory-chat",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'chat' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-scope",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'scope' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-warp",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'warp' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-dag",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'dag' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-spatial-menu",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'spatial-menu' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-bbs",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'bbs' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-bbs-config",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'bbs-config' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-windows",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'windows' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-lynx",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'lynx' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-nano",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'nano' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-pico",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'pico' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-tmux",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'tmux' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-controls",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'controls' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-sensors",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'sensors' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-logs",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'logs' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "pearl-observatory-text",
+   "class": "original",
+   "generator": "pearl_observatory_studies",
+   "evidence": [
+    "sourceSha256 c221beb6e719 = bindings/continuity/observatory.js",
+    "subject 'text' present in bindings/continuity/observatory.js"
+   ]
+  },
+  {
+   "id": "source-modal-center",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-fullscreen",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-left",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-right",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-top",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-bottom",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-corner",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-toast",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-error",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-confirmation",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-dropdown",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-eight-layers",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-dismiss",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-clear",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-nondismissible",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-center-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-fullscreen-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-left-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-right-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-top-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-drawer-bottom-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-corner-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-toast-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-error-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-confirmation-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-dropdown-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-eight-layers-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-dismiss-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-clear-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "source-modal-nondismissible-application",
+   "class": "original",
+   "generator": "source_modal_studies",
+   "evidence": [
+    "sourceSha256 ea6cfebbbeb6 = bindings/continuity/workbench.js"
+   ]
+  },
+  {
+   "id": "original-pearl-cascade",
+   "class": "original",
+   "generator": "original_scenic_routes",
+   "evidence": [
+    "originalScenic 'pearl-cascade' in 11 original files (e.g. Nocturne-Continuity.html)",
+    "sourceSha256 ea65ec34887d = bindings/continuity/restoration-renderer.js"
+   ]
+  },
+  {
+   "id": "original-copper-causeway",
+   "class": "original",
+   "generator": "original_scenic_routes",
+   "evidence": [
+    "originalScenic 'copper-causeway' in 10 original files (e.g. Nocturne-Continuity.html)",
+    "sourceSha256 ea65ec34887d = bindings/continuity/restoration-renderer.js"
+   ]
+  },
+  {
+   "id": "original-tidal-glass",
+   "class": "original",
+   "generator": "original_scenic_routes",
+   "evidence": [
+    "originalScenic 'tidal-glass' in 38 original files (e.g. Nocturne-Black-Hole.html)",
+    "sourceSha256 ea65ec34887d = bindings/continuity/restoration-renderer.js"
+   ]
+  },
+  {
+   "id": "original-silt",
+   "class": "original",
+   "generator": "original_scenic_routes",
+   "evidence": [
+    "originalScenic 'silt' in 10 original files (e.g. Nocturne-Continuity.html)",
+    "sourceSha256 ea65ec34887d = bindings/continuity/restoration-renderer.js"
+   ]
+  }
+ ]
+}

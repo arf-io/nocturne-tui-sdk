@@ -1,0 +1,21 @@
+{
+  "purpose": "RC2 explicit-half preservation companion; original snapshot and braille frame unchanged",
+  "actualWriter": "<workspace>/rc2-20261016/rc1-runtime.dylib",
+  "actualWriterSha256": "df98dc64381fc1d95b76787402007ced28ba0b61e1b24348bb29540e5d7fd9f1",
+  "actualWriterSchema": 539365525,
+  "genuine94SnapshotSha256": "9460d47c3581f9b775e0245775fa6d307bd7319ad3c707abe1859ffeb48060e6",
+  "genuine94BrailleFrameSha256": "b59a8e79608fb2624060c22dc319adb6244a791a64d73bd13f5a23a00bc9c933",
+  "originalBrailleFrameVerifiedBeforeCommand": true,
+  "commandsAfterRestore": [
+    {
+      "op": "scene-art",
+      "controls": {
+        "sampling": 0
+      }
+    }
+  ],
+  "frameSha256": "cff13a84c86ff2d9594852225775be96101ac2ac9e2114d93a12fa39b60de7d4",
+  "width": 80,
+  "height": 32,
+  "bytes": 40960
+}

@@ -1,0 +1,3 @@
+use nocturne_native::NativeScene;
+#[test]
+fn owned_resolved_area_geometry(){let mut s=NativeScene::new(42).unwrap();for c in [r#"{"op":"resize","width":60,"height":24}"#,r#"{"op":"area","id":1,"x":5,"y":4,"width":10,"height":5,"padding":0,"border":"none"}"#,r#"{"op":"area","id":2,"parent":1,"x":8,"y":1,"width":10,"height":5,"padding":1,"border":"double"}"#]{s.command(c).unwrap();}let before=s.snapshot().unwrap();let mut row=s.area_geometry(2).unwrap().unwrap();assert_eq!(row,[13.,5.,10.,5.,13.,5.,2.,4.,15.,7.,6.,1.]);row[0]=-99.;assert_eq!(s.area_geometry(2).unwrap().unwrap()[0],13.);assert_eq!(before,s.snapshot().unwrap());assert!(s.area_geometry(0).is_err());assert!(s.area_geometry(999).unwrap().is_none());}
